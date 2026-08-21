@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Ponlly uses the camera so you can capture graffiti artwork for battles and creative rooms.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Ponlly uses the microphone so you can speak in graffiti voice rooms and creative calls.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Ponlly uses your photo library so you can choose graffiti artwork for challenges and profile spaces.</string>
+</dict>
+</plist>
