@@ -251,9 +251,9 @@ final class PonllyCoinStoreViewController: UIViewController {
         case .success(let verification):
             switch verification {
             case .verified(let transaction):
-                PonllyDataCenter.addCoins(selectedPackage.coins)
+                PonllyDataCenter.addCoins(selectedPackage.totalCoins)
                 await transaction.finish()
-                ponllyShowNotice("\(selectedPackage.coins.formatted()) Coins added", style: .success)
+                ponllyShowNotice("\(selectedPackage.totalCoins.formatted()) Coins added", style: .success)
             case .unverified:
                 ponllyShowNotice("Charge could not be verified", style: .failure)
             }

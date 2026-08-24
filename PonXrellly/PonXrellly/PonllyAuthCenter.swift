@@ -11,8 +11,13 @@ final class PonllyAuthCenter {
     private let consentKey = "ponllyEulaConsent"
     private let emailKey = "ponllyEmail"
     private let registeredAccountsKey = "ponllyRegisteredAccounts"
+    private let testEmail = "ponlly@gmail.com"
 
     var isLoggedIn: Bool { defaults.bool(forKey: loginKey) }
+    var currentEmail: String? { defaults.string(forKey: emailKey) }
+    var isTestAccountActive: Bool {
+        isLoggedIn && currentEmail == testEmail
+    }
     var hasConsent: Bool {
         get { defaults.bool(forKey: consentKey) }
         set { defaults.set(newValue, forKey: consentKey) }
@@ -28,9 +33,10 @@ final class PonllyAuthCenter {
                 completion(false, "Password is required")
                 return
             }
-            if email == "ponlly@gmail.com", password == "555666" {
+            if email == self.testEmail, password == "555666" {
                 self.defaults.set(true, forKey: self.loginKey)
                 self.defaults.set(email, forKey: self.emailKey)
+                PonllyDataCenter.resetStoredProfileFields()
                 completion(true, nil)
             } else if self.registeredAccounts[email] == nil {
                 completion(false, "Account not found")
@@ -39,6 +45,7 @@ final class PonllyAuthCenter {
             } else {
                 self.defaults.set(true, forKey: self.loginKey)
                 self.defaults.set(email, forKey: self.emailKey)
+                PonllyDataCenter.resetFreshAccountProfile()
                 completion(true, nil)
             }
         }
@@ -56,6 +63,7 @@ final class PonllyAuthCenter {
             self.defaults.set(accounts, forKey: self.registeredAccountsKey)
             self.defaults.set(true, forKey: self.loginKey)
             self.defaults.set(cleanedEmail, forKey: self.emailKey)
+            PonllyDataCenter.resetFreshAccountProfile()
             completion(true, nil)
         }
     }
@@ -68,7 +76,7 @@ final class PonllyAuthCenter {
         guard password.count >= 6 else {
             return "Password needs at least 6 characters"
         }
-        guard cleanedEmail != "ponlly@gmail.com", registeredAccounts[cleanedEmail] == nil else {
+        guard cleanedEmail != testEmail, registeredAccounts[cleanedEmail] == nil else {
             return "Account already exists"
         }
         return nil

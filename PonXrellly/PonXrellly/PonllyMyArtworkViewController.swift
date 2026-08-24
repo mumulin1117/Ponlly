@@ -216,7 +216,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         outer.spacing = 10
         let artworks = PonllyDataCenter.profileArtworks(for: currentUser.id)
         guard !artworks.isEmpty else {
-            outer.addArrangedSubview(emptyPanel(title: "No Artwork Yet", subtitle: "Your finished pieces will appear here."))
+            outer.addArrangedSubview(emptyPanel(title: "No Artwork Yet", subtitle: "Your published wall pieces will appear here."))
             return outer
         }
         for index in stride(from: 0, to: artworks.count, by: 2) {
@@ -236,13 +236,18 @@ final class PonllyMyArtworkViewController: UIViewController {
     }
 
     private func artworkTile(_ artwork: PonllyArtwork) -> UIView {
-        let card = UIView()
+        let card = UIControl()
         card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
         card.layer.cornerRadius = 16
         card.layer.borderWidth = 1
         card.layer.borderColor = PonllyPalette.line.cgColor
         card.clipsToBounds = true
+        card.accessibilityIdentifier = artwork.id
+        card.addAction(UIAction { [weak self] _ in
+            self?.openArtworkDetail(artwork)
+        }, for: .touchUpInside)
         let image = PonllyArtworkView(artwork: artwork)
+        image.isUserInteractionEnabled = false
         image.layer.cornerRadius = 14
         image.layer.borderWidth = 0
         card.addSubview(image)
@@ -257,7 +262,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         if let battle = PonllyDataCenter.battle(containing: artwork) {
             meta.text = "\(artwork.style)  •  \(battle.status == .hot ? "PK Live" : "Waiting")  •  \(PonllyDataCenter.noteCount(for: artwork)) notes"
         } else {
-            meta.text = "\(artwork.style)  •  Studio Vault  •  \(PonllyDataCenter.noteCount(for: artwork)) notes"
+            meta.text = "\(artwork.style)  •  Published Piece  •  \(PonllyDataCenter.noteCount(for: artwork)) notes"
         }
         meta.textColor = PonllyPalette.muted
         meta.font = PonllyFonts.body(size: 11, weight: .medium)
@@ -277,6 +282,16 @@ final class PonllyMyArtworkViewController: UIViewController {
             meta.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 6)
         ])
         return card
+    }
+
+    private func openArtworkDetail(_ artwork: PonllyArtwork) {
+        guard artwork.ownerId == currentUser.id else {
+            ponllyShowNotice("Artwork is unavailable", style: .failure)
+            return
+        }
+        let detail = PonllyArtworkDetailViewController(artwork: artwork, owner: currentUser)
+        detail.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detail, animated: true)
     }
 
     private func videoList() -> UIStackView {

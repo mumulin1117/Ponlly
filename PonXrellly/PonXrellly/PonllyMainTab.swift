@@ -6,6 +6,20 @@ struct PonllyCoinPackage {
     let coins: Int
     let fallbackPrice: String
     let bonus: String?
+
+    var totalCoins: Int {
+        coins + bonusCoins
+    }
+
+    private var bonusCoins: Int {
+        guard
+            let bonus,
+            let percent = Int(bonus.replacingOccurrences(of: "+", with: "").replacingOccurrences(of: "%", with: ""))
+        else {
+            return 0
+        }
+        return Int((Double(coins) * Double(percent) / 100.0).rounded())
+    }
 }
 
 enum PonllyCoinStoreCatalog {

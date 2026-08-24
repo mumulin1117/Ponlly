@@ -13,7 +13,7 @@ final class PonllyBattleHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Ponlly"
+      
         view.backgroundColor = PonllyPalette.background
         navigationController?.navigationBar.isHidden = true
         setupUI()
@@ -173,7 +173,13 @@ final class PonllyBattleHomeViewController: UIViewController {
         let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
             PonllyAuthCenter.shared.requireLogin(from: self) {
-                self.ponllyShowToast("Report submitted")
+                let report = PonllyReportRoomViewController(battle: battle)
+                report.onReportSubmitted = { [weak self] in
+                    self?.ponllyShowNotice("Report submitted", style: .success)
+                }
+                report.modalPresentationStyle = .overFullScreen
+                report.modalTransitionStyle = .crossDissolve
+                self.present(report, animated: true)
             }
         })
         alert.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in

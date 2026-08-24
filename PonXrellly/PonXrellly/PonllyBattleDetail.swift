@@ -128,16 +128,42 @@ final class PonllyBattleDetailViewController: UIViewController {
         let row = UIStackView()
         row.axis = .horizontal
         row.distribution = .equalSpacing
-        row.addArrangedSubview(creatorBlock(PonllyDataCenter.user(battle.creatorAId), alignRight: false))
-        row.addArrangedSubview(creatorBlock(PonllyDataCenter.user(battle.creatorBId), alignRight: true))
+        row.addArrangedSubview(creatorBlock(userId: battle.creatorAId, alignRight: false))
+        row.addArrangedSubview(creatorBlock(userId: battle.creatorBId, alignRight: true))
         return row
     }
 
-    private func creatorBlock(_ user: PonllyUser, alignRight: Bool) -> UIView {
+    private func creatorBlock(userId: String?, alignRight: Bool) -> UIView {
+        guard let userId, !userId.isEmpty else {
+            let placeholder = UIStackView()
+            placeholder.axis = .vertical
+            placeholder.alignment = alignRight ? .trailing : .leading
+            placeholder.spacing = 4
+            let name = UILabel()
+            name.text = "WAITING ARTIST"
+            name.textColor = PonllyPalette.muted
+            name.font = PonllyFonts.display(size: 14)
+            let level = UILabel()
+            level.text = "Open challenge slot"
+            level.textColor = PonllyPalette.muted
+            level.font = PonllyFonts.body(size: 11, weight: .semibold)
+            placeholder.addArrangedSubview(name)
+            placeholder.addArrangedSubview(level)
+            return placeholder
+        }
+
+        let user = PonllyDataCenter.user(userId)
+        let control = UIControl()
+        control.addAction(UIAction { [weak self] _ in
+            self?.openArtist(user)
+        }, for: .touchUpInside)
         let row = UIStackView()
         row.axis = alignRight ? .horizontal : .horizontal
         row.alignment = .center
         row.spacing = 10
+        row.isUserInteractionEnabled = false
+        row.translatesAutoresizingMaskIntoConstraints = false
+        control.addSubview(row)
         let text = UIStackView()
         text.axis = .vertical
         text.alignment = alignRight ? .trailing : .leading
@@ -158,7 +184,14 @@ final class PonllyBattleDetailViewController: UIViewController {
             row.addArrangedSubview(PonllyAvatarView(user: user, size: 48))
             row.addArrangedSubview(text)
         }
-        return row
+        NSLayoutConstraint.activate([
+            row.leadingAnchor.constraint(equalTo: control.leadingAnchor),
+            row.trailingAnchor.constraint(equalTo: control.trailingAnchor),
+            row.topAnchor.constraint(equalTo: control.topAnchor),
+            row.bottomAnchor.constraint(equalTo: control.bottomAnchor),
+            control.heightAnchor.constraint(equalToConstant: 56)
+        ])
+        return control
     }
 
     private func voteButtons() -> UIView {
@@ -240,7 +273,22 @@ final class PonllyBattleDetailViewController: UIViewController {
         row.alignment = .top
         row.spacing = 10
         let user = PonllyDataCenter.user(comment.userId)
-        row.addArrangedSubview(PonllyAvatarView(user: user, size: 34))
+        let avatarButton = UIControl()
+        avatarButton.addAction(UIAction { [weak self] _ in
+            self?.openArtist(user)
+        }, for: .touchUpInside)
+        let avatar = PonllyAvatarView(user: user, size: 34)
+        avatar.isUserInteractionEnabled = false
+        avatarButton.addSubview(avatar)
+        NSLayoutConstraint.activate([
+            avatar.leadingAnchor.constraint(equalTo: avatarButton.leadingAnchor),
+            avatar.trailingAnchor.constraint(equalTo: avatarButton.trailingAnchor),
+            avatar.topAnchor.constraint(equalTo: avatarButton.topAnchor),
+            avatar.bottomAnchor.constraint(equalTo: avatarButton.bottomAnchor),
+            avatarButton.widthAnchor.constraint(equalToConstant: 34),
+            avatarButton.heightAnchor.constraint(equalToConstant: 34)
+        ])
+        row.addArrangedSubview(avatarButton)
         let text = UIStackView()
         text.axis = .vertical
         let title = UILabel()
@@ -257,6 +305,13 @@ final class PonllyBattleDetailViewController: UIViewController {
         text.addArrangedSubview(body)
         row.addArrangedSubview(text)
         return row
+    }
+
+    private func openArtist(_ user: PonllyUser) {
+        guard user.id != PonllyDataCenter.currentUserId else { return }
+        let profile = PonllyArtistProfileViewController(user: user)
+        profile.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(profile, animated: true)
     }
 
     private func commentInput() -> UIView {
@@ -341,7 +396,13 @@ final class PonllyBattleDetailViewController: UIViewController {
         let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
             PonllyAuthCenter.shared.requireLogin(from: self) {
-                self.ponllyShowToast("Report submitted")
+                let report = PonllyReportRoomViewController(battle: self.battle)
+                report.onReportSubmitted = { [weak self] in
+                    self?.ponllyShowNotice("Report submitted", style: .success)
+                }
+                report.modalPresentationStyle = .overFullScreen
+                report.modalTransitionStyle = .crossDissolve
+                self.present(report, animated: true)
             }
         })
         alert.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in

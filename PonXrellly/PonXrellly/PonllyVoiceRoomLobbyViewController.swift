@@ -13,7 +13,7 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = ""
+      
         view.backgroundColor = PonllyPalette.background
         setup()
         reloadRooms()
@@ -151,9 +151,15 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
         card.addSubview(more)
 
         let host = PonllyDataCenter.user(room.hostId)
+        let avatarButton = UIControl()
+        avatarButton.translatesAutoresizingMaskIntoConstraints = false
+        avatarButton.addAction(UIAction { [weak self] _ in
+            self?.openArtist(host)
+        }, for: .touchUpInside)
+        card.addSubview(avatarButton)
         let avatar = PonllyAvatarView(user: host, size: 44)
         avatar.isUserInteractionEnabled = false
-        card.addSubview(avatar)
+        avatarButton.addSubview(avatar)
         let title = UILabel()
         title.text = room.title
         title.textColor = .white
@@ -192,9 +198,15 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
             more.topAnchor.constraint(equalTo: card.topAnchor, constant: 14),
             more.widthAnchor.constraint(equalToConstant: 40),
             more.heightAnchor.constraint(equalToConstant: 40),
-            avatar.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
-            avatar.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -18),
-            title.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 12),
+            avatarButton.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
+            avatarButton.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -18),
+            avatarButton.widthAnchor.constraint(equalToConstant: 44),
+            avatarButton.heightAnchor.constraint(equalToConstant: 44),
+            avatar.leadingAnchor.constraint(equalTo: avatarButton.leadingAnchor),
+            avatar.trailingAnchor.constraint(equalTo: avatarButton.trailingAnchor),
+            avatar.topAnchor.constraint(equalTo: avatarButton.topAnchor),
+            avatar.bottomAnchor.constraint(equalTo: avatarButton.bottomAnchor),
+            title.leadingAnchor.constraint(equalTo: avatarButton.trailingAnchor, constant: 12),
             title.trailingAnchor.constraint(equalTo: more.leadingAnchor, constant: -12),
             title.topAnchor.constraint(greaterThanOrEqualTo: card.topAnchor, constant: 94),
             topic.leadingAnchor.constraint(equalTo: title.leadingAnchor),
@@ -202,7 +214,7 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
             topic.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8),
             meta.leadingAnchor.constraint(equalTo: title.leadingAnchor),
             meta.trailingAnchor.constraint(equalTo: topic.trailingAnchor),
-            meta.bottomAnchor.constraint(equalTo: avatar.bottomAnchor)
+            meta.bottomAnchor.constraint(equalTo: avatarButton.bottomAnchor)
         ])
         return card
     }
@@ -244,6 +256,13 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
             detail.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(detail, animated: true)
         }
+    }
+
+    private func openArtist(_ user: PonllyUser) {
+        guard user.id != PonllyDataCenter.currentUserId else { return }
+        let profile = PonllyArtistProfileViewController(user: user)
+        profile.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(profile, animated: true)
     }
 
     private func presentReport(for room: PonllyVoiceRoom) {

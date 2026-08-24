@@ -26,7 +26,7 @@ final class PonllyCoinPackageCard: UIControl {
         addSubview(icon)
 
         let amount = UILabel()
-        amount.text = package.coins.formatted()
+        amount.text = package.totalCoins.formatted()
         amount.textColor = .white
         amount.textAlignment = .center
         amount.font = PonllyFonts.mono(size: 20)
@@ -81,7 +81,7 @@ final class PonllyCoinPackageCard: UIControl {
         }
 
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 160),
+            heightAnchor.constraint(equalToConstant: 190),
             icon.centerXAnchor.constraint(equalTo: centerXAnchor),
             icon.topAnchor.constraint(equalTo: topAnchor, constant: 26),
             icon.widthAnchor.constraint(equalToConstant: 44),
@@ -93,7 +93,7 @@ final class PonllyCoinPackageCard: UIControl {
             caption.topAnchor.constraint(equalTo: amount.bottomAnchor, constant: 5),
             priceLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
             priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
-            priceLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18),
+            priceLabel.topAnchor.constraint(equalTo: caption.bottomAnchor, constant: 15),
             priceLabel.heightAnchor.constraint(equalToConstant: 34)
         ])
     }

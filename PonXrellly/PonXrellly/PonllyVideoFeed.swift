@@ -44,7 +44,13 @@ extension PonllyVideoFeedViewController: UICollectionViewDataSource, UICollectio
         cell.onReport = { [weak self] in
             guard let self else { return }
             self.requireVideoLogin {
-                self.ponllyShowToast("Report submitted")
+                let report = PonllyReportRoomViewController(video: video)
+                report.onReportSubmitted = { [weak self] in
+                    self?.ponllyShowNotice("Report submitted", style: .success)
+                }
+                report.modalPresentationStyle = .overFullScreen
+                report.modalTransitionStyle = .crossDissolve
+                self.present(report, animated: true)
             }
         }
         return cell

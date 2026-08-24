@@ -121,7 +121,14 @@ final class PonllyArtistProfileViewController: UIViewController {
     private func heroHeader() -> UIView {
         let header = UIView()
         header.translatesAutoresizingMaskIntoConstraints = false
-        let art = PonllyArtworkView(artwork: PonllyDataCenter.profileArtworks(for: user.id).first!)
+        let art = PonllyArtworkView(artwork: PonllyDataCenter.profileArtworks(for: user.id).first ?? PonllyArtwork(
+            id: "\(user.id)_profile_empty",
+            ownerId: user.id,
+            title: "Wall Study",
+            style: "Graffiti",
+            imageName: nil,
+            colors: user.colors
+        ))
         art.layer.cornerRadius = 0
         art.layer.borderWidth = 0
         art.translatesAutoresizingMaskIntoConstraints = false
@@ -340,20 +347,25 @@ final class PonllyArtistProfileViewController: UIViewController {
         let outer = UIStackView()
         outer.axis = .vertical
         outer.spacing = 10
-        let artworks = PonllyDataCenter.profileArtworks(for: user.id)
-        for rowIndex in 0..<2 {
-            let row = UIStackView()
-            row.axis = .horizontal
-            row.spacing = 10
-            row.distribution = .fillEqually
-            for col in 0..<3 {
-                let art = PonllyArtworkView(artwork: artworks[rowIndex * 3 + col])
-                art.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
-                art.heightAnchor.constraint(equalTo: art.widthAnchor).isActive = true
-                row.addArrangedSubview(art)
-            }
-            outer.addArrangedSubview(row)
+        let artworks = Array(PonllyDataCenter.profileArtworks(for: user.id).prefix(2))
+        guard !artworks.isEmpty else {
+            outer.addArrangedSubview(emptyProfilePanel(title: "No artwork yet", subtitle: "Published pieces from this artist will appear here."))
+            return outer
         }
+        let row = UIStackView()
+        row.axis = .horizontal
+        row.spacing = 10
+        row.distribution = .fillEqually
+        artworks.forEach { artwork in
+            let art = PonllyArtworkView(artwork: artwork)
+            art.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
+            art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.92).isActive = true
+            row.addArrangedSubview(art)
+        }
+        if artworks.count == 1 {
+            row.addArrangedSubview(UIView())
+        }
+        outer.addArrangedSubview(row)
         return outer
     }
 
@@ -420,20 +432,25 @@ final class PonllyArtistProfileViewController: UIViewController {
         let outer = UIStackView()
         outer.axis = .vertical
         outer.spacing = 10
-        let artworks = Array(PonllyDataCenter.profileArtworks(for: user.id).suffix(4))
-        for rowIndex in 0..<2 {
-            let row = UIStackView()
-            row.axis = .horizontal
-            row.spacing = 10
-            row.distribution = .fillEqually
-            for col in 0..<2 {
-                let art = PonllyArtworkView(artwork: artworks[rowIndex * 2 + col])
-                art.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.45).cgColor
-                art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.76).isActive = true
-                row.addArrangedSubview(art)
-            }
-            outer.addArrangedSubview(row)
+        let artworks = Array(PonllyDataCenter.profileArtworks(for: user.id).suffix(2))
+        guard !artworks.isEmpty else {
+            outer.addArrangedSubview(emptyProfilePanel(title: "No favorites yet", subtitle: "Saved wall inspiration from this artist will appear here."))
+            return outer
         }
+        let row = UIStackView()
+        row.axis = .horizontal
+        row.spacing = 10
+        row.distribution = .fillEqually
+        artworks.forEach { artwork in
+            let art = PonllyArtworkView(artwork: artwork)
+            art.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.45).cgColor
+            art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.76).isActive = true
+            row.addArrangedSubview(art)
+        }
+        if artworks.count == 1 {
+            row.addArrangedSubview(UIView())
+        }
+        outer.addArrangedSubview(row)
         return outer
     }
 

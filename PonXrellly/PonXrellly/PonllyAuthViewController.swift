@@ -10,7 +10,7 @@ final class PonllyAuthViewController: UIViewController {
     private let completion: () -> Void
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    private let backgroundImageView = UIImageView(image: UIImage(named: "voice_room_bg_08"))
+    private let backgroundImageView = UIImageView(image: UIImage(named: "wePPonllaylanding"))
     private let headerBackButton = UIButton(type: .system)
     private let headerTitleLabel = UILabel()
     private let heroView = UIView()
@@ -62,21 +62,10 @@ final class PonllyAuthViewController: UIViewController {
 
     private func setupUI() {
         backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.alpha = 0.5
+        backgroundImageView.frame = UIScreen.main.bounds
         view.addSubview(backgroundImageView)
-        backgroundImageView.pinToEdges(of: view)
-
-        let veil = PonllyGradientView(
-            colors: [
-                UIColor.black.withAlphaComponent(0.3),
-                UIColor(red: 3/255, green: 7/255, blue: 11/255, alpha: 0.58),
-                UIColor.black.withAlphaComponent(0.9)
-            ],
-            start: CGPoint(x: 0.5, y: 0),
-            end: CGPoint(x: 0.5, y: 1)
-        )
-        view.addSubview(veil)
-        veil.pinToEdges(of: view)
+        
+      
 
         scrollView.keyboardDismissMode = .onDrag
         scrollView.alwaysBounceVertical = true
@@ -511,8 +500,24 @@ final class PonllyAuthViewController: UIViewController {
                 return
             }
             view.endEditing(true)
-            let profile = PonllyCreateProfileViewController(email: email, password: password, completion: completion)
-            navigationController?.pushViewController(profile, animated: true)
+            submitButton.isEnabled = false
+            submitButton.setTitle("Creating...", for: .normal)
+            PonllyAuthCenter.shared.createAccount(email: email, password: password) { success, message in
+                self.submitButton.isEnabled = true
+                self.submitButton.setTitle("Next", for: .normal)
+                if success {
+                    let currentUser = PonllyDataCenter.currentUser()
+                    let avatarImage = currentUser.avatarName.flatMap { UIImage(named: $0) }
+                    let done = PonllyRegistrationCompleteViewController(
+                        userName: currentUser.name,
+                        avatar: avatarImage,
+                        completion: self.completion
+                    )
+                    self.navigationController?.pushViewController(done, animated: true)
+                } else {
+                    self.showInlineError(message ?? "Account could not be created")
+                }
+            }
             return
         }
 

@@ -124,7 +124,7 @@ final class PonllyBlacklistViewController: UIViewController {
         unblock.layer.borderColor = PonllyPalette.pink.cgColor
         unblock.translatesAutoresizingMaskIntoConstraints = false
         unblock.addAction(UIAction { [weak self] _ in
-            PonllyDataCenter.blockedUserIds.remove(user.id)
+            PonllyDataCenter.unblockUser(user.id)
             self?.ponllyShowToast("Artist unblocked")
             self?.reload()
         }, for: .touchUpInside)

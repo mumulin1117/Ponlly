@@ -122,6 +122,7 @@ final class PonllyBattleCardView: UIControl {
         row.axis = .horizontal
         row.alignment = .center
         row.spacing = 8
+        row.isUserInteractionEnabled = false
         row.translatesAutoresizingMaskIntoConstraints = false
         control.addSubview(row)
         row.addArrangedSubview(PonllyAvatarView(user: user, size: 38))

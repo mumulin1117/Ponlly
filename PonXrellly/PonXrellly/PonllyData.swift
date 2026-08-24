@@ -168,7 +168,14 @@ struct PonllyVoiceRoom {
 
 enum PonllyDataCenter {
     static var artworkImages: [String: UIImage] = [:]
-    static let currentUserId = "u01"
+    private static let testCurrentUserId = "u01"
+    private static let freshCurrentUserId = "freshCurrentUser"
+    static var currentUserId: String {
+        PonllyAuthCenter.shared.isTestAccountActive ? testCurrentUserId : freshCurrentUserId
+    }
+    static var isFreshCurrentAccount: Bool {
+        PonllyAuthCenter.shared.isLoggedIn && !PonllyAuthCenter.shared.isTestAccountActive
+    }
     private static let coinBalanceKey = "ponllyStreetCoinBalance"
     private static let profileNameKey = "ponllyCurrentProfileName"
     private static let profileBioKey = "ponllyCurrentProfileBio"
@@ -178,6 +185,8 @@ enum PonllyDataCenter {
     static var followedUserIds: Set<String> = ["u02", "u05", "u17", "u20"]
     static let followerUserIds: Set<String> = ["u02", "u05", "u09", "u17", "u20"]
     static var blockedUserIds: Set<String> = ["u16", "u18"]
+    private static var freshFollowedUserIds: Set<String> = []
+    private static var freshBlockedUserIds: Set<String> = []
     static var userReports: [PonllyUserReport] = []
     static var messageThreads: [PonllyMessageThread] = [
         .init(
@@ -398,6 +407,25 @@ enum PonllyDataCenter {
         .init(id: "v07", authorId: "u18", title: "Color fade map", details: "From sketch path to wall map: slow fade pressure, balanced color spacing, and final highlight strokes.", fileName: "ponlly_process_color_fade", reactionCount: 11, commentCount: 5, reportCount: 0, isLiked: false, isFollowingAuthor: false, comments: videoComments, colors: [.blue, .cyan, .white])
     ]
 
+    static var publishedArtworks: [PonllyArtwork] = [
+        .init(id: "pub_u01_01", ownerId: "u01", title: "Concrete Chrome Signal", style: "Chrome", imageName: "graffiti_challenge_wall_01", colors: [.systemPink, .cyan, .darkGray]),
+        .init(id: "pub_u01_02", ownerId: "u01", title: "Rough Wall Throw-Up", style: "Throw-Up", imageName: "graffiti_challenge_wall_06", colors: [.systemPink, .cyan, .black]),
+        .init(id: "pub_u01_03", ownerId: "u01", title: "Midnight Brick Draft", style: "Free Style", imageName: "graffiti_challenge_wall_03", colors: [.systemPink, .cyan, .purple]),
+        .init(id: "pub_u02_01", ownerId: "u02", title: "Pastel Block Flow", style: "Chrome", imageName: "graffiti_challenge_wall_02", colors: [.cyan, .gray, .black]),
+        .init(id: "pub_u03_01", ownerId: "u03", title: "Brick Layer Wildstyle", style: "Wildstyle", imageName: "graffiti_challenge_wall_03", colors: [.green, .systemPink, .black]),
+        .init(id: "pub_u04_01", ownerId: "u04", title: "Laneway Color Wall", style: "Character", imageName: "graffiti_challenge_wall_04", colors: [.cyan, .systemPink, .yellow]),
+        .init(id: "pub_u05_01", ownerId: "u05", title: "Stencil Night Layer", style: "Stencil", imageName: "graffiti_challenge_wall_04", colors: [.orange, .white, .darkGray]),
+        .init(id: "pub_u06_01", ownerId: "u06", title: "Rail Panel Sketch", style: "Chrome", imageName: "graffiti_challenge_wall_05", colors: [.purple, .cyan, .gray]),
+        .init(id: "pub_u07_01", ownerId: "u07", title: "Marker Flow Warmup", style: "Marker", imageName: "graffiti_challenge_wall_02", colors: [.systemPink, .purple, .white]),
+        .init(id: "pub_u08_01", ownerId: "u08", title: "Cyan Letter Run", style: "Black And White", imageName: "graffiti_challenge_wall_05", colors: [.brown, .orange, .darkGray]),
+        .init(id: "pub_u09_01", ownerId: "u09", title: "Cyan Wall Bloom", style: "Character", imageName: "graffiti_challenge_wall_02", colors: [.cyan, .blue, .black]),
+        .init(id: "pub_u12_01", ownerId: "u12", title: "Brick Texture Hold", style: "Brick", imageName: "graffiti_challenge_wall_06", colors: [.black, .gray, .cyan]),
+        .init(id: "pub_u13_01", ownerId: "u13", title: "Lime Fill Cleanup", style: "Bubble", imageName: "graffiti_challenge_wall_01", colors: [.green, .cyan, .systemPink]),
+        .init(id: "pub_u15_01", ownerId: "u15", title: "Neon Alley Starter", style: "Free Style", imageName: "graffiti_challenge_wall_04", colors: [.systemPink, .cyan, .purple]),
+        .init(id: "pub_u18_01", ownerId: "u18", title: "Color Fade Map", style: "Gradient", imageName: "graffiti_challenge_wall_03", colors: [.blue, .cyan, .white]),
+        .init(id: "pub_u20_01", ownerId: "u20", title: "Chrome Outline Pressure", style: "Chrome", imageName: "graffiti_challenge_wall_01", colors: [.cyan, .gray, .orange])
+    ]
+
     static let videoComments: [PonllyVideoComment] = [
         .init(userId: "u16", handle: "@spray_king", time: "2h ago", text: "That chrome technique is sharp. The way the light catches the letters feels next level.", likeCount: 2400, isLiked: true),
         .init(userId: "u17", handle: "@ink_flow", time: "5h ago", text: "Been trying to get my cap control this smooth for years. The outline is razor clean.", likeCount: 842, isLiked: false),
@@ -455,20 +483,31 @@ enum PonllyDataCenter {
     ]
 
     static func user(_ id: String?) -> PonllyUser {
-        users.first { $0.id == id } ?? users[0]
+        if id == freshCurrentUserId {
+            return freshCurrentUser()
+        }
+        return users.first { $0.id == id } ?? users[0]
     }
 
     static func isFollowing(_ id: String) -> Bool {
-        followedUserIds.contains(id)
+        activeFollowedUserIds.contains(id)
     }
 
     static func isMutual(_ id: String) -> Bool {
-        followedUserIds.contains(id) && followerUserIds.contains(id) && !blockedUserIds.contains(id)
+        activeFollowedUserIds.contains(id) && activeFollowerUserIds.contains(id) && !activeBlockedUserIds.contains(id)
     }
 
     @discardableResult
     static func toggleFollow(_ id: String) -> Bool {
-        guard !blockedUserIds.contains(id) else { return false }
+        guard !activeBlockedUserIds.contains(id) else { return false }
+        if isFreshCurrentAccount {
+            if freshFollowedUserIds.contains(id) {
+                freshFollowedUserIds.remove(id)
+                return false
+            }
+            freshFollowedUserIds.insert(id)
+            return true
+        }
         if followedUserIds.contains(id) {
             followedUserIds.remove(id)
             return false
@@ -478,12 +517,26 @@ enum PonllyDataCenter {
     }
 
     static func isBlocked(_ id: String) -> Bool {
-        blockedUserIds.contains(id)
+        activeBlockedUserIds.contains(id)
     }
 
     static func blockUser(_ id: String) {
-        blockedUserIds.insert(id)
-        followedUserIds.remove(id)
+        if isFreshCurrentAccount {
+            freshBlockedUserIds.insert(id)
+            freshFollowedUserIds.remove(id)
+        } else {
+            blockedUserIds.insert(id)
+            followedUserIds.remove(id)
+        }
+        NotificationCenter.default.post(name: .ponllyBlockListDidChange, object: id)
+    }
+
+    static func unblockUser(_ id: String) {
+        if isFreshCurrentAccount {
+            freshBlockedUserIds.remove(id)
+        } else {
+            blockedUserIds.remove(id)
+        }
         NotificationCenter.default.post(name: .ponllyBlockListDidChange, object: id)
     }
 
@@ -512,7 +565,10 @@ enum PonllyDataCenter {
 
     static var currentProfileInterests: [String] {
         get {
-            UserDefaults.standard.stringArray(forKey: profileInterestKey) ?? ["Wildstyle", "Chrome Letters", "Street Art"]
+            if isFreshCurrentAccount {
+                return UserDefaults.standard.stringArray(forKey: profileInterestKey) ?? []
+            }
+            return UserDefaults.standard.stringArray(forKey: profileInterestKey) ?? ["Wildstyle", "Chrome Letters", "Street Art"]
         }
         set {
             UserDefaults.standard.set(Array(newValue.prefix(5)), forKey: profileInterestKey)
@@ -521,6 +577,9 @@ enum PonllyDataCenter {
     }
 
     static func currentUser() -> PonllyUser {
+        if isFreshCurrentAccount {
+            return freshCurrentUser()
+        }
         let base = user(currentUserId)
         return PonllyUser(
             id: base.id,
@@ -532,6 +591,38 @@ enum PonllyDataCenter {
             bio: UserDefaults.standard.string(forKey: profileBioKey) ?? "SF street architect. Aerosol is my blood. Always scouting new raw concrete. Respect the tags.",
             avatarName: base.avatarName,
             colors: base.colors
+        )
+    }
+
+    static func resetFreshAccountProfile() {
+        resetStoredProfileFields()
+        UserDefaults.standard.set(0, forKey: coinBalanceKey)
+        freshFollowedUserIds.removeAll()
+        freshBlockedUserIds.removeAll()
+    }
+
+    static func resetStoredProfileFields() {
+        UserDefaults.standard.removeObject(forKey: profileNameKey)
+        UserDefaults.standard.removeObject(forKey: profileBioKey)
+        UserDefaults.standard.removeObject(forKey: profileInterestKey)
+        UserDefaults.standard.removeObject(forKey: profileAvatarPathKey)
+        UserDefaults.standard.removeObject(forKey: profileCoverPathKey)
+        NotificationCenter.default.post(name: .ponllyCurrentProfileDidChange, object: nil)
+    }
+
+    private static func freshCurrentUser() -> PonllyUser {
+        let email = PonllyAuthCenter.shared.currentEmail ?? ""
+        let fallbackName = email.split(separator: "@").first.map(String.init) ?? "newWriter"
+        return PonllyUser(
+            id: freshCurrentUserId,
+            name: UserDefaults.standard.string(forKey: profileNameKey) ?? fallbackName,
+            gender: "",
+            level: "",
+            city: "",
+            crew: "",
+            bio: UserDefaults.standard.string(forKey: profileBioKey) ?? "",
+            avatarName: nil,
+            colors: [.systemPink, .cyan, .darkGray]
         )
     }
 
@@ -583,34 +674,13 @@ enum PonllyDataCenter {
     }
 
     static func profileArtworks(for id: String) -> [PonllyArtwork] {
+        if id == currentUserId, isFreshCurrentAccount {
+            return []
+        }
         if id != currentUserId, isBlocked(id) {
             return []
         }
-        let battleArtworks = battleRecords(for: id).compactMap { battle -> PonllyArtwork? in
-            if battle.creatorAId == id { return battle.artworkA }
-            if battle.creatorBId == id { return battle.artworkB }
-            return nil
-        }
-        let imageNames = [
-            "graffiti_challenge_wall_01",
-            "graffiti_challenge_wall_02",
-            "graffiti_challenge_wall_03",
-            "graffiti_challenge_wall_04",
-            "graffiti_challenge_wall_05",
-            "graffiti_challenge_wall_06"
-        ]
-        let styles = ["Wildstyle", "Chrome", "Stencil", "Throw-Up", "Neon", "Brick"]
-        let profileSet = imageNames.enumerated().map { index, imageName in
-            PonllyArtwork(
-                id: "\(id)_profile_art_\(index)",
-                ownerId: id,
-                title: "\(styles[index]) Wall Study",
-                style: styles[index],
-                imageName: imageName,
-                colors: users.first(where: { $0.id == id })?.colors ?? [.systemPink, .cyan, .darkGray]
-            )
-        }
-        return Array((battleArtworks + profileSet).prefix(6))
+        return publishedArtworks.filter { $0.ownerId == id }
     }
 
     static func relatedUsers(kind: PonllyRelationshipKind) -> [PonllyUser] {
@@ -625,11 +695,11 @@ enum PonllyDataCenter {
     static func followers(for id: String) -> [PonllyUser] {
         let ids: [String]
         if id == currentUserId {
-            ids = Array(followerUserIds)
+            ids = Array(activeFollowerUserIds)
         } else {
             let index = users.firstIndex { $0.id == id } ?? 0
             ids = users
-                .filter { $0.id != id && !blockedUserIds.contains($0.id) }
+                .filter { $0.id != id && !activeBlockedUserIds.contains($0.id) }
                 .enumerated()
                 .filter { ($0.offset + index) % 4 == 0 }
                 .map { $0.element.id }
@@ -640,11 +710,11 @@ enum PonllyDataCenter {
     static func following(for id: String) -> [PonllyUser] {
         let ids: [String]
         if id == currentUserId {
-            ids = Array(followedUserIds)
+            ids = Array(activeFollowedUserIds)
         } else {
             let index = users.firstIndex { $0.id == id } ?? 0
             ids = users
-                .filter { $0.id != id && !blockedUserIds.contains($0.id) }
+                .filter { $0.id != id && !activeBlockedUserIds.contains($0.id) }
                 .enumerated()
                 .filter { ($0.offset + index) % 5 == 0 }
                 .map { $0.element.id }
@@ -653,10 +723,13 @@ enum PonllyDataCenter {
     }
 
     static func blockedUsers() -> [PonllyUser] {
-        blockedUserIds.map { user($0) }.sorted { $0.name < $1.name }
+        activeBlockedUserIds.map { user($0) }.sorted { $0.name < $1.name }
     }
 
     static func battleRecords(for id: String) -> [PonllyBattle] {
+        if id == currentUserId, isFreshCurrentAccount {
+            return []
+        }
         if id != currentUserId, isBlocked(id) {
             return []
         }
@@ -664,6 +737,9 @@ enum PonllyDataCenter {
     }
 
     static func profileVideos(for id: String) -> [PonllyVideo] {
+        if id == currentUserId, isFreshCurrentAccount {
+            return []
+        }
         if id != currentUserId, isBlocked(id) {
             return []
         }
@@ -700,10 +776,14 @@ enum PonllyDataCenter {
     }
 
     static func visibleMessageThreads() -> [PonllyMessageThread] {
-        messageThreads.filter { isMutual($0.userId) && !isBlocked($0.userId) }
+        guard !isFreshCurrentAccount else { return [] }
+        return messageThreads.filter { isMutual($0.userId) && !isBlocked($0.userId) }
     }
 
     static func thread(for id: String) -> PonllyMessageThread {
+        guard !isFreshCurrentAccount else {
+            return PonllyMessageThread(userId: id, lastText: "", lastTime: "now", unreadCount: 0, messages: [])
+        }
         if let thread = messageThreads.first(where: { $0.userId == id }) {
             return thread
         }
@@ -720,7 +800,7 @@ enum PonllyDataCenter {
             let extras = visibleRooms.filter { !featuredIds.contains($0.id) }.prefix(3 - featuredRooms.count)
             return featuredRooms + extras
         case .following:
-            return visibleRooms.filter { followedUserIds.contains($0.hostId) }
+            return visibleRooms.filter { activeFollowedUserIds.contains($0.hostId) }
         case .critique:
             return visibleRooms.filter { $0.category == .critique }
         case .lateWall:
@@ -762,6 +842,18 @@ enum PonllyDataCenter {
     static func image(for key: String?) -> UIImage? {
         guard let key else { return nil }
         return artworkImages[key] ?? UIImage(named: key)
+    }
+
+    private static var activeFollowedUserIds: Set<String> {
+        isFreshCurrentAccount ? freshFollowedUserIds : followedUserIds
+    }
+
+    private static var activeFollowerUserIds: Set<String> {
+        isFreshCurrentAccount ? [] : followerUserIds
+    }
+
+    private static var activeBlockedUserIds: Set<String> {
+        isFreshCurrentAccount ? freshBlockedUserIds : blockedUserIds
     }
 
     @discardableResult

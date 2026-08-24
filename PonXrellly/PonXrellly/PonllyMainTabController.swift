@@ -5,32 +5,33 @@ import StoreKit
 import UIKit
 
 final class PonllyMainTabController: UITabBarController {
+    private let tabNormalTitleAttributes: [NSAttributedString.Key: Any] = [
+        .foregroundColor: UIColor.white,
+        .font: PonllyFonts.display(size: 9)
+    ]
+    private let tabSelectedTitleAttributes: [NSAttributedString.Key: Any] = [
+        .foregroundColor: PonllyPalette.pink,
+        .font: PonllyFonts.display(size: 9)
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = PonllyPalette.panel
-        appearance.shadowColor = PonllyPalette.line
-        let unselectedColor = UIColor.white
-        [appearance.stackedLayoutAppearance, appearance.inlineLayoutAppearance, appearance.compactInlineLayoutAppearance].forEach { itemAppearance in
-            itemAppearance.normal.iconColor = unselectedColor
-            itemAppearance.normal.titleTextAttributes = [.foregroundColor: unselectedColor, .font: PonllyFonts.display(size: 9)]
-            itemAppearance.selected.iconColor = PonllyPalette.pink
-            itemAppearance.selected.titleTextAttributes = [.foregroundColor: PonllyPalette.pink, .font: PonllyFonts.display(size: 9)]
-        }
-        tabBar.standardAppearance = appearance
-        tabBar.scrollEdgeAppearance = appearance
-        tabBar.isTranslucent = false
-        tabBar.tintColor = PonllyPalette.pink
-        tabBar.unselectedItemTintColor = unselectedColor
-        tabBar.barTintColor = PonllyPalette.background
-        tabBar.backgroundColor = PonllyPalette.panel
+        configureTabBarAppearance()
 
         let feed = UINavigationController(rootViewController: PonllyBattleHomeViewController())
-        feed.tabBarItem = UITabBarItem(title: "FEED", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        feed.tabBarItem = UITabBarItem(
+            title: "FEED",
+            image: UIImage(named: "tab_feed_normal")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "tab_feed_selected")?.withRenderingMode(.alwaysOriginal)
+        )
+      
 
         let video = UINavigationController(rootViewController: PonllyVideoFeedViewController())
-        video.tabBarItem = UITabBarItem(title: "VIDEO", image: UIImage(systemName: "play.circle"), selectedImage: UIImage(systemName: "play.circle.fill"))
+        video.tabBarItem = UITabBarItem(
+            title: "FEED",
+            image: UIImage(named: "tab_video_normal")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "tab_video_selected")?.withRenderingMode(.alwaysOriginal)
+        )
 
         let create = UINavigationController(rootViewController: PonllyCreateLauncherViewController())
         let battleIcon = UIImage(named: "pk_battle_btn")?.withRenderingMode(.alwaysOriginal)
@@ -38,17 +39,53 @@ final class PonllyMainTabController: UITabBarController {
         create.tabBarItem.imageInsets = UIEdgeInsets(top: -12, left: 0, bottom: 12, right: 0)
 
         let voice = UINavigationController(rootViewController: PonllyVoiceRoomLobbyViewController())
-        voice.tabBarItem = UITabBarItem(title: "VOICE", image: UIImage(systemName: "mic"), selectedImage: UIImage(systemName: "mic.fill"))
+        voice.tabBarItem =  UITabBarItem(
+            title: "FEED",
+            image: UIImage(named: "tab_voice_normal")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "tab_voice_selected")?.withRenderingMode(.alwaysOriginal)
+        ) 
 
         let stash = UINavigationController(rootViewController: PonllyCurrentUserProfileViewController())
-        stash.tabBarItem = UITabBarItem(title: "STASH", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
-
+        stash.tabBarItem =  UITabBarItem(
+            title: "FEED",
+            image: UIImage(named: "tab_stash_normal")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "tab_stash_selected")?.withRenderingMode(.alwaysOriginal)
+        )
         viewControllers = [feed, video, create, voice, stash]
+      
     }
 
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.title == "" {
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+
+
+
+
+
+    private func configureTabBarAppearance() {
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = PonllyPalette.panel
+        appearance.shadowColor = PonllyPalette.line
+        [appearance.stackedLayoutAppearance, appearance.inlineLayoutAppearance, appearance.compactInlineLayoutAppearance].forEach { itemAppearance in
+            itemAppearance.normal.iconColor = .white
+            itemAppearance.normal.titleTextAttributes = tabNormalTitleAttributes
+            itemAppearance.selected.iconColor = PonllyPalette.pink
+            itemAppearance.selected.titleTextAttributes = tabSelectedTitleAttributes
+            itemAppearance.focused.iconColor = PonllyPalette.pink
+            itemAppearance.focused.titleTextAttributes = tabSelectedTitleAttributes
+            itemAppearance.disabled.iconColor = .white
+            itemAppearance.disabled.titleTextAttributes = tabNormalTitleAttributes
         }
+        tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = appearance
+        tabBar.isTranslucent = false
+        tabBar.tintColor = PonllyPalette.pink
+        tabBar.unselectedItemTintColor = .white
+        tabBar.backgroundColor = PonllyPalette.panel
     }
+
+
+   
+
+
+   
 }

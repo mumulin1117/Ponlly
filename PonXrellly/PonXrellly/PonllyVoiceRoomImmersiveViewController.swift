@@ -14,7 +14,18 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
     private var isMuted = true
 
     init(room: PonllyVoiceRoom) {
-        self.room = room
+        var preparedRoom = room
+        preparedRoom.speakerSeats = room.speakerSeats.map { seat in
+            guard seat.userId != PonllyDataCenter.currentUserId else { return seat }
+            var mutedSeat = seat
+            mutedSeat.isMuted = true
+            return mutedSeat
+        }
+        self.room = preparedRoom
+        if let currentSeat = preparedRoom.speakerSeats.first(where: { $0.userId == PonllyDataCenter.currentUserId }) {
+            isOnSeat = true
+            isMuted = currentSeat.isMuted
+        }
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -198,7 +209,7 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
             muted.heightAnchor.constraint(equalToConstant: 18).isActive = true
             stack.addArrangedSubview(muted)
             control.addAction(UIAction { [weak self] _ in
-                self?.navigationController?.pushViewController(PonllyArtistProfileViewController(user: user), animated: true)
+                self?.openArtist(user)
             }, for: .touchUpInside)
         }
         NSLayoutConstraint.activate([
@@ -265,7 +276,22 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
         row.axis = .horizontal
         row.alignment = .top
         row.spacing = 10
-        row.addArrangedSubview(PonllyAvatarView(user: user, size: 34))
+        let avatarButton = UIControl()
+        avatarButton.addAction(UIAction { [weak self] _ in
+            self?.openArtist(user)
+        }, for: .touchUpInside)
+        let avatar = PonllyAvatarView(user: user, size: 34)
+        avatar.isUserInteractionEnabled = false
+        avatarButton.addSubview(avatar)
+        NSLayoutConstraint.activate([
+            avatar.leadingAnchor.constraint(equalTo: avatarButton.leadingAnchor),
+            avatar.trailingAnchor.constraint(equalTo: avatarButton.trailingAnchor),
+            avatar.topAnchor.constraint(equalTo: avatarButton.topAnchor),
+            avatar.bottomAnchor.constraint(equalTo: avatarButton.bottomAnchor),
+            avatarButton.widthAnchor.constraint(equalToConstant: 34),
+            avatarButton.heightAnchor.constraint(equalToConstant: 34)
+        ])
+        row.addArrangedSubview(avatarButton)
         let textStack = UIStackView()
         textStack.axis = .vertical
         textStack.spacing = 4
@@ -279,6 +305,13 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
         textStack.addArrangedSubview(body)
         row.addArrangedSubview(textStack)
         return row
+    }
+
+    private func openArtist(_ user: PonllyUser) {
+        guard user.id != PonllyDataCenter.currentUserId else { return }
+        let profile = PonllyArtistProfileViewController(user: user)
+        profile.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(profile, animated: true)
     }
 
     private func roundButton(_ symbol: String, action: Selector) -> UIButton {

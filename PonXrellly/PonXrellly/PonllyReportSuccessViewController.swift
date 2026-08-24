@@ -18,10 +18,12 @@ final class PonllyReportSuccessViewController: UIViewController {
 
     private func setup() {
         view.backgroundColor = PonllyPalette.background
-        let bgArt = PonllyArtworkView(artwork: PonllyDataCenter.profileArtworks(for: PonllyDataCenter.currentUserId).first!)
-        bgArt.alpha = 0.18
-        view.addSubview(bgArt)
-        bgArt.pinToEdges(of: view)
+        if let artwork = PonllyDataCenter.profileArtworks(for: PonllyDataCenter.currentUserId).first {
+            let bgArt = PonllyArtworkView(artwork: artwork)
+            bgArt.alpha = 0.18
+            view.addSubview(bgArt)
+            bgArt.pinToEdges(of: view)
+        }
         let shade = PonllyGradientView(colors: [UIColor.black.withAlphaComponent(0.7), PonllyPalette.background.withAlphaComponent(0.95)])
         view.addSubview(shade)
         shade.pinToEdges(of: view)

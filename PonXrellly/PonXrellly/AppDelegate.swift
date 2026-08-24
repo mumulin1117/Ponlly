@@ -25,6 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
         UINavigationBar.appearance().compactAppearance = navigationAppearance
         UINavigationBar.appearance().tintColor = .white
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [.foregroundColor: UIColor.white, .font: PonllyFonts.display(size: 9)],
+            for: .normal
+        )
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [.foregroundColor: PonllyPalette.pink, .font: PonllyFonts.display(size: 9)],
+            for: .selected
+        )
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = PonllyMainTabController()

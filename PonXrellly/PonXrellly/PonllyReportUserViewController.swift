@@ -9,10 +9,8 @@ final class PonllyReportUserViewController: UIViewController, UITextViewDelegate
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
     private let detailView = UITextView()
-    private let evidenceButton = UIControl()
     private var reasonRows: [PonllyReportReasonRow] = []
     private var selectedReason = "Harassment"
-    private var hasEvidence = false
 
     private let reasons = [
         "Inappropriate Content",
@@ -94,8 +92,6 @@ final class PonllyReportUserViewController: UIViewController, UITextViewDelegate
         stack.addArrangedSubview(sectionLabel("ADDITIONAL DETAILS (OPTIONAL)"))
         configureDetailView()
         stack.addArrangedSubview(detailView)
-        stack.addArrangedSubview(sectionLabel("EVIDENCE (OPTIONAL)"))
-        stack.addArrangedSubview(evidenceRow())
         let submit = PonllyNeonButton(title: "Submit Report")
         submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
         stack.addArrangedSubview(submit)
@@ -193,57 +189,6 @@ final class PonllyReportUserViewController: UIViewController, UITextViewDelegate
         detailView.delegate = self
     }
 
-    private func evidenceRow() -> UIStackView {
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.spacing = 14
-        row.alignment = .top
-        evidenceButton.backgroundColor = PonllyPalette.panel
-        evidenceButton.layer.cornerRadius = 14
-        evidenceButton.layer.borderWidth = 1.2
-        evidenceButton.layer.borderColor = PonllyPalette.line.cgColor
-        evidenceButton.addTarget(self, action: #selector(evidenceTapped), for: .touchUpInside)
-        evidenceButton.translatesAutoresizingMaskIntoConstraints = false
-        evidenceButton.widthAnchor.constraint(equalToConstant: 92).isActive = true
-        evidenceButton.heightAnchor.constraint(equalToConstant: 92).isActive = true
-        row.addArrangedSubview(evidenceButton)
-        row.addArrangedSubview(evidencePreview())
-        refreshEvidenceButton()
-        return row
-    }
-
-    private func evidencePreview() -> UIView {
-        let art = PonllyArtworkView(artwork: PonllyDataCenter.profileArtworks(for: user.id)[1])
-        art.layer.borderColor = PonllyPalette.pink.cgColor
-        art.widthAnchor.constraint(equalToConstant: 92).isActive = true
-        art.heightAnchor.constraint(equalToConstant: 92).isActive = true
-        return art
-    }
-
-    private func refreshEvidenceButton() {
-        evidenceButton.subviews.forEach { $0.removeFromSuperview() }
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.spacing = 8
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        evidenceButton.addSubview(stack)
-        let icon = UIImageView(image: UIImage(systemName: hasEvidence ? "checkmark.circle.fill" : "plus"))
-        icon.tintColor = hasEvidence ? PonllyPalette.pink : .white
-        icon.widthAnchor.constraint(equalToConstant: 24).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        let label = UILabel()
-        label.text = hasEvidence ? "Added" : "Add"
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.body(size: 13)
-        stack.addArrangedSubview(icon)
-        stack.addArrangedSubview(label)
-        NSLayoutConstraint.activate([
-            stack.centerXAnchor.constraint(equalTo: evidenceButton.centerXAnchor),
-            stack.centerYAnchor.constraint(equalTo: evidenceButton.centerYAnchor)
-        ])
-    }
-
     private func selectReason(_ reason: String) {
         selectedReason = reason
         reasonRows.forEach { $0.isSelectedReason = $0.reason == reason }
@@ -263,13 +208,6 @@ final class PonllyReportUserViewController: UIViewController, UITextViewDelegate
         }
     }
 
-    @objc private func evidenceTapped() {
-        hasEvidence.toggle()
-        evidenceButton.layer.borderColor = (hasEvidence ? PonllyPalette.pink : PonllyPalette.line).cgColor
-        refreshEvidenceButton()
-        ponllyShowToast(hasEvidence ? "Evidence attached" : "Evidence removed")
-    }
-
     @objc private func submitTapped() {
         let rawDetails = detailView.textColor == PonllyPalette.muted ? "" : detailView.text ?? ""
         ponllyShowToast("Submitting report...")
@@ -278,7 +216,7 @@ final class PonllyReportUserViewController: UIViewController, UITextViewDelegate
                 targetUserId: self.user.id,
                 reason: self.selectedReason,
                 details: rawDetails.trimmingCharacters(in: .whitespacesAndNewlines),
-                hasEvidence: self.hasEvidence
+                hasEvidence: false
             )
             let success = PonllyReportSuccessViewController()
             success.hidesBottomBarWhenPushed = true

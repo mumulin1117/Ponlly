@@ -62,6 +62,7 @@ final class PonllyWaitingBattleCardView: UIControl {
         artistRow.axis = .horizontal
         artistRow.alignment = .center
         artistRow.spacing = 14
+        artistRow.isUserInteractionEnabled = false
         artistRow.translatesAutoresizingMaskIntoConstraints = false
         artist.addSubview(artistRow)
         let user = PonllyDataCenter.user(battle.creatorAId)
