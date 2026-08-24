@@ -1,11 +1,16 @@
 import UIKit
 
 final class PonllyCreateProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    private enum DesignMetrics {
+        static let width: CGFloat = 402
+        static let height: CGFloat = 874
+    }
+
     private let email: String
     private let password: String
     private let completion: () -> Void
-    private let scrollView = UIScrollView()
-    private let contentView = UIView()
+//    private let scrollView = UIScrollView()
+//    private let contentView = UIView()
     private let backgroundImageView = UIImageView(image: UIImage(named: "voice_room_bg_08"))
     private let avatarButton = UIButton(type: .system)
     private let avatarImageView = UIImageView()
@@ -14,9 +19,10 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
     private let chipsWrap = UIView()
     private let completeButton = PonllyNeonButton(title: "Complete Profile")
     private var chipButtons: [UIButton] = []
-    private var selectedInterests = Set(["Graffiti", "Wildstyle", "Street Art"])
+    private var selectedInterests = Set(["Wildstyle", "Street Art", "Character Art", "Battle"])
     private var selectedAvatar: UIImage?
     private let interests = ["Graffiti", "Wildstyle", "Street Art", "Mural", "Sketch", "Character Art", "Hip-Hop Culture", "Battle", "Street Photography", "Digital Art"]
+    private var didResetCanvasPosition = false
 
     init(email: String, password: String, completion: @escaping () -> Void) {
         self.email = email.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -36,9 +42,26 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
         navigationController?.setNavigationBarHidden(true, animated: false)
         setupUI()
         updateCounter()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        view.endEditing(true)
+//        scrollView.setContentOffset(.zero, animated: false)
+//    }
+
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        applyDesignCanvasScale()
+//        guard !didResetCanvasPosition else { return }
+//        didResetCanvasPosition = true
+//        scrollView.setContentOffset(.zero, animated: false)
+//    }
 
     private func setupUI() {
         backgroundImageView.contentMode = .scaleAspectFill
@@ -58,11 +81,15 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
         view.addSubview(veil)
         veil.pinToEdges(of: view)
 
-        scrollView.keyboardDismissMode = .onDrag
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(contentView)
+//        scrollView.keyboardDismissMode = .onDrag
+//        scrollView.contentInsetAdjustmentBehavior = .never
+//        scrollView.isScrollEnabled = false
+//        scrollView.alwaysBounceVertical = false
+//        scrollView.clipsToBounds = false
+//        scrollView.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(scrollView)
+//        contentView.translatesAutoresizingMaskIntoConstraints = false
+//        scrollView.addSubview(contentView)
 
         let backButton = UIButton(type: .system)
         backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
@@ -73,14 +100,14 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
         backButton.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        contentView.addSubview(backButton)
+        view.addSubview(backButton)
 
         let title = UILabel()
         title.text = "Create Profile"
         title.textColor = .white
         title.font = PonllyFonts.display(size: 16)
         title.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(title)
+        view.addSubview(title)
 
         avatarButton.backgroundColor = UIColor.black.withAlphaComponent(0.66)
         avatarButton.layer.cornerRadius = 55
@@ -91,7 +118,7 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
         avatarButton.layer.shadowRadius = 18
         avatarButton.translatesAutoresizingMaskIntoConstraints = false
         avatarButton.addTarget(self, action: #selector(avatarTapped), for: .touchUpInside)
-        contentView.addSubview(avatarButton)
+        view.addSubview(avatarButton)
 
         avatarImageView.image = UIImage(systemName: "camera")
         avatarImageView.tintColor = .white
@@ -107,62 +134,54 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
         uploadLabel.font = PonllyFonts.mono(size: 11)
         uploadLabel.textAlignment = .center
         uploadLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(uploadLabel)
+        view.addSubview(uploadLabel)
 
         let nicknameLabel = sectionLabel("Nickname")
-        contentView.addSubview(nicknameLabel)
+        view.addSubview(nicknameLabel)
         configureNicknameField()
-        contentView.addSubview(nicknameField)
-        contentView.addSubview(counterLabel)
+        view.addSubview(nicknameField)
+        view.addSubview(counterLabel)
 
         let interestsLabel = UILabel()
         interestsLabel.text = "Graffiti Interests"
         interestsLabel.textColor = .white
         interestsLabel.font = PonllyFonts.display(size: 13)
         interestsLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(interestsLabel)
+        view.addSubview(interestsLabel)
 
         chipsWrap.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(chipsWrap)
+        view.addSubview(chipsWrap)
         buildChips()
 
         completeButton.addTarget(self, action: #selector(completeTapped), for: .touchUpInside)
         completeButton.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(completeButton)
+        view.addSubview(completeButton)
 
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor),
-            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-            contentView.heightAnchor.constraint(greaterThanOrEqualTo: scrollView.frameLayoutGuide.heightAnchor),
+          
 
-            backButton.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            backButton.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 16),
+            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             backButton.widthAnchor.constraint(equalToConstant: 40),
             backButton.heightAnchor.constraint(equalToConstant: 40),
-            title.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            title.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             title.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
 
-            avatarButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            avatarButton.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 32),
+            avatarButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            avatarButton.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 50),
             avatarButton.widthAnchor.constraint(equalToConstant: 110),
             avatarButton.heightAnchor.constraint(equalToConstant: 110),
             avatarImageView.centerXAnchor.constraint(equalTo: avatarButton.centerXAnchor),
             avatarImageView.centerYAnchor.constraint(equalTo: avatarButton.centerYAnchor),
             avatarImageView.widthAnchor.constraint(equalToConstant: 80),
             avatarImageView.heightAnchor.constraint(equalToConstant: 80),
-            uploadLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            uploadLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
+            uploadLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            uploadLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             uploadLabel.topAnchor.constraint(equalTo: avatarButton.bottomAnchor, constant: 16),
 
-            nicknameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            nicknameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            nicknameLabel.topAnchor.constraint(equalTo: uploadLabel.bottomAnchor, constant: 26),
+            nicknameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            nicknameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            nicknameLabel.topAnchor.constraint(equalTo: uploadLabel.topAnchor, constant: 298),
             nicknameField.leadingAnchor.constraint(equalTo: nicknameLabel.leadingAnchor),
             nicknameField.trailingAnchor.constraint(equalTo: nicknameLabel.trailingAnchor),
             nicknameField.topAnchor.constraint(equalTo: nicknameLabel.bottomAnchor, constant: 8),
@@ -178,12 +197,19 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
             chipsWrap.topAnchor.constraint(equalTo: interestsLabel.bottomAnchor, constant: 12),
             chipsWrap.heightAnchor.constraint(equalToConstant: 128),
 
-            completeButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            completeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
+            completeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            completeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             completeButton.topAnchor.constraint(equalTo: chipsWrap.bottomAnchor, constant: 46),
             completeButton.heightAnchor.constraint(equalToConstant: 62),
-            completeButton.bottomAnchor.constraint(lessThanOrEqualTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -28)
+            completeButton.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -28)
         ])
+    }
+
+    private func applyDesignCanvasScale() {
+        let fitWidth = view.bounds.width / DesignMetrics.width
+        let fitHeight = view.bounds.height / DesignMetrics.height
+        let scale = min(fitWidth, fitHeight, 1)
+        view.transform = CGAffineTransform(scaleX: scale, y: scale)
     }
 
     private func sectionLabel(_ text: String) -> UILabel {
@@ -224,26 +250,45 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
         rows.forEach {
             $0.axis = .horizontal
             $0.alignment = .leading
-            $0.distribution = .fillEqually
+            $0.distribution = .fill
             $0.spacing = 8
             $0.translatesAutoresizingMaskIntoConstraints = false
             chipsWrap.addSubview($0)
         }
 
+        let rowGroups = [
+            ["Graffiti", "Wildstyle", "Street Art", "Mural"],
+            ["Sketch", "Character Art", "Hip-Hop Culture"],
+            ["Battle", "Street Photography", "Digital Art"]
+        ]
+        let chipWidths: [String: CGFloat] = [
+            "Graffiti": 73,
+            "Wildstyle": 93,
+            "Street Art": 96,
+            "Mural": 66,
+            "Sketch": 73,
+            "Character Art": 119,
+            "Hip-Hop Culture": 129,
+            "Battle": 72,
+            "Street Photography": 152,
+            "Digital Art": 94
+        ]
         for (index, interest) in interests.enumerated() {
             let button = UIButton(type: .system)
             button.setTitle(interest, for: .normal)
             button.titleLabel?.font = PonllyFonts.body(size: 13, weight: selectedInterests.contains(interest) ? .bold : .medium)
             button.titleLabel?.adjustsFontSizeToFitWidth = true
-            button.titleLabel?.minimumScaleFactor = 0.58
+            button.titleLabel?.minimumScaleFactor = 0.75
             var configuration = UIButton.Configuration.plain()
-            configuration.contentInsets = NSDirectionalEdgeInsets(top: 9, leading: 8, bottom: 9, trailing: 8)
+            configuration.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 15, bottom: 8, trailing: 15)
             button.configuration = configuration
-            button.layer.cornerRadius = 14
-            button.layer.borderWidth = 1
+            button.layer.cornerRadius = 18
+            button.layer.borderWidth = 2
             button.addTarget(self, action: #selector(chipTapped(_:)), for: .touchUpInside)
             chipButtons.append(button)
-            rows[min(index / 3, 2)].addArrangedSubview(button)
+            let rowIndex = rowGroups.firstIndex { $0.contains(interest) } ?? min(index / 3, 2)
+            rows[rowIndex].addArrangedSubview(button)
+            button.widthAnchor.constraint(equalToConstant: chipWidths[interest] ?? 88).isActive = true
         }
         refreshChips()
 
@@ -272,8 +317,11 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
             configuration.baseForegroundColor = selected ? PonllyPalette.pink : .white
             button.configuration = configuration
             button.titleLabel?.font = PonllyFonts.body(size: 13, weight: selected ? .bold : .medium)
-            button.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-            button.layer.borderColor = (selected ? PonllyPalette.pink : PonllyPalette.line).cgColor
+            button.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.76)
+            button.layer.borderColor = (selected ? PonllyPalette.pink : UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1)).cgColor
+            button.layer.shadowColor = (selected ? PonllyPalette.pink : UIColor.clear).cgColor
+            button.layer.shadowOpacity = selected ? 0.22 : 0
+            button.layer.shadowRadius = selected ? 12 : 0
         }
     }
 
@@ -295,6 +343,10 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
 
     @objc private func nicknameChanged() {
         updateCounter()
+    }
+
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @objc private func chipTapped(_ sender: UIButton) {
@@ -360,12 +412,15 @@ final class PonllyCreateProfileViewController: UIViewController, UIImagePickerCo
     @objc private func keyboardWillShow(_ note: Notification) {
         guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
         let bottom = max(frame.height - view.safeAreaInsets.bottom, 0) + 18
-        scrollView.contentInset.bottom = bottom
-        scrollView.verticalScrollIndicatorInsets.bottom = bottom
+//        scrollView.contentInset.bottom = bottom
+//        scrollView.verticalScrollIndicatorInsets.bottom = bottom
     }
 
-    @objc private func keyboardWillHide(_ note: Notification) {
-        scrollView.contentInset.bottom = 0
-        scrollView.verticalScrollIndicatorInsets.bottom = 0
-    }
+//    @objc private func keyboardWillHide(_ note: Notification) {
+//        scrollView.contentInset.bottom = 0
+//        scrollView.verticalScrollIndicatorInsets.bottom = 0
+//        scrollView.setContentOffset(.zero, animated: false)
+//        scrollView.isScrollEnabled = false
+//        scrollView.alwaysBounceVertical = false
+//    }
 }

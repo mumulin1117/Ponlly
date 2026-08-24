@@ -17,6 +17,7 @@ final class PonllyAuthViewController: UIViewController {
     private let loginButton = UIButton(type: .system)
     private let createButton = UIButton(type: .system)
     private let agreeButton = UIButton(type: .system)
+    private let agreementView = UIView()
     private let formStack = UIStackView()
     private let formBrandRow = UIStackView()
     private let formHeadlineLabel = UILabel()
@@ -26,6 +27,7 @@ final class PonllyAuthViewController: UIViewController {
     private let passwordEyeButton = UIButton(type: .system)
     private let errorLabel = UILabel()
     private let submitButton = PonllyNeonButton(title: "Login")
+    private var submitButtonBottomConstraint: NSLayoutConstraint?
     private var step: AuthStep = .landing
     private var agreed = PonllyAuthCenter.shared.hasConsent {
         didSet {
@@ -98,11 +100,13 @@ final class PonllyAuthViewController: UIViewController {
         createButton.addTarget(self, action: #selector(createChoiceTapped), for: .touchUpInside)
         contentView.addSubview(createButton)
 
-        let agreement = agreementRow()
-        contentView.addSubview(agreement)
+        setupAgreementRow()
+        contentView.addSubview(agreementView)
 
         setupFormStack()
         contentView.addSubview(formStack)
+        contentView.addSubview(submitButton)
+        submitButtonBottomConstraint = submitButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -22)
 
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -125,7 +129,7 @@ final class PonllyAuthViewController: UIViewController {
             heroView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
             heroView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
             heroView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 40),
-            heroView.heightAnchor.constraint(equalToConstant: 250),
+            heroView.heightAnchor.constraint(equalToConstant: 280),
 
             loginButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
             loginButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
@@ -133,16 +137,20 @@ final class PonllyAuthViewController: UIViewController {
             loginButton.heightAnchor.constraint(equalToConstant: 62),
             createButton.leadingAnchor.constraint(equalTo: loginButton.leadingAnchor),
             createButton.trailingAnchor.constraint(equalTo: loginButton.trailingAnchor),
-            createButton.bottomAnchor.constraint(equalTo: agreement.topAnchor, constant: -24),
+            createButton.bottomAnchor.constraint(equalTo: agreementView.topAnchor, constant: -16),
             createButton.heightAnchor.constraint(equalToConstant: 60),
-            agreement.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
-            agreement.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-            agreement.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -22),
+            agreementView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            agreementView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            agreementView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8),
 
             formStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
             formStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
             formStack.topAnchor.constraint(equalTo: headerBackButton.bottomAnchor, constant: 40),
-            formStack.bottomAnchor.constraint(lessThanOrEqualTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -24)
+            formStack.bottomAnchor.constraint(lessThanOrEqualTo: submitButton.topAnchor, constant: -20),
+            submitButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
+            submitButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
+            submitButtonBottomConstraint!,
+            submitButton.heightAnchor.constraint(equalToConstant: 62)
         ])
     }
 
@@ -164,58 +172,16 @@ final class PonllyAuthViewController: UIViewController {
     private func setupHero() {
         heroView.translatesAutoresizingMaskIntoConstraints = false
 
-        let iconWrap = UIView()
-        iconWrap.backgroundColor = .black
-        iconWrap.layer.cornerRadius = 34
-        iconWrap.layer.shadowColor = PonllyPalette.cyan.cgColor
-        iconWrap.layer.shadowOpacity = 0.24
-        iconWrap.layer.shadowRadius = 26
-        iconWrap.translatesAutoresizingMaskIntoConstraints = false
-        heroView.addSubview(iconWrap)
-
-        let icon = UIImageView(image: UIImage(named: "unghishdb"))
-        icon.contentMode = .scaleAspectFill
-        icon.clipsToBounds = true
-        icon.layer.cornerRadius = 34
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        iconWrap.addSubview(icon)
-
-        let title = UILabel()
-        title.text = "Ponlly"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 44)
-        title.layer.shadowColor = PonllyPalette.pink.cgColor
-        title.layer.shadowOpacity = 0.38
-        title.layer.shadowRadius = 12
-        title.layer.shadowOffset = CGSize(width: 0, height: 4)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        heroView.addSubview(title)
-
-        let tagline = UILabel()
-        tagline.text = "CREATE.  BATTLE.  CONNECT."
-        tagline.textColor = PonllyPalette.cyan
-        tagline.textAlignment = .center
-        tagline.font = PonllyFonts.mono(size: 13)
-        tagline.translatesAutoresizingMaskIntoConstraints = false
-        heroView.addSubview(tagline)
+        let heroImage = UIImageView(image: UIImage(named: "brand_hero_group"))
+        heroImage.contentMode = .scaleAspectFit
+        heroImage.translatesAutoresizingMaskIntoConstraints = false
+        heroView.addSubview(heroImage)
 
         NSLayoutConstraint.activate([
-            iconWrap.centerXAnchor.constraint(equalTo: heroView.centerXAnchor),
-            iconWrap.topAnchor.constraint(equalTo: heroView.topAnchor),
-            iconWrap.widthAnchor.constraint(equalToConstant: 120),
-            iconWrap.heightAnchor.constraint(equalToConstant: 120),
-            icon.leadingAnchor.constraint(equalTo: iconWrap.leadingAnchor),
-            icon.trailingAnchor.constraint(equalTo: iconWrap.trailingAnchor),
-            icon.topAnchor.constraint(equalTo: iconWrap.topAnchor),
-            icon.bottomAnchor.constraint(equalTo: iconWrap.bottomAnchor),
-            title.leadingAnchor.constraint(equalTo: heroView.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: heroView.trailingAnchor),
-            title.topAnchor.constraint(equalTo: iconWrap.bottomAnchor, constant: 28),
-            title.heightAnchor.constraint(equalToConstant: 55),
-            tagline.leadingAnchor.constraint(equalTo: heroView.leadingAnchor),
-            tagline.trailingAnchor.constraint(equalTo: heroView.trailingAnchor),
-            tagline.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 10)
+            heroImage.leadingAnchor.constraint(equalTo: heroView.leadingAnchor),
+            heroImage.trailingAnchor.constraint(equalTo: heroView.trailingAnchor),
+            heroImage.topAnchor.constraint(equalTo: heroView.topAnchor),
+            heroImage.bottomAnchor.constraint(equalTo: heroView.bottomAnchor)
         ])
     }
 
@@ -252,13 +218,11 @@ final class PonllyAuthViewController: UIViewController {
         errorLabel.translatesAutoresizingMaskIntoConstraints = false
         formStack.addArrangedSubview(errorLabel)
 
-        let spacer = UIView()
-        spacer.translatesAutoresizingMaskIntoConstraints = false
-        formStack.addArrangedSubview(spacer)
         submitButton.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
-        formStack.addArrangedSubview(submitButton)
+        submitButton.translatesAutoresizingMaskIntoConstraints = false
+        submitButton.isHidden = true
 
-        configure(field: emailField, placeholder: "vandal_tagger")
+        configure(field: emailField, placeholder: "Enter Email")
         configure(field: passwordField, placeholder: "Password")
         passwordField.isSecureTextEntry = true
         passwordEyeButton.setImage(UIImage(systemName: "eye"), for: .normal)
@@ -271,34 +235,27 @@ final class PonllyAuthViewController: UIViewController {
             formBrandRow.heightAnchor.constraint(equalToConstant: 60),
             emailField.heightAnchor.constraint(equalToConstant: 56),
             passwordField.heightAnchor.constraint(equalToConstant: 56),
-            errorLabel.heightAnchor.constraint(equalToConstant: 26),
-            spacer.heightAnchor.constraint(greaterThanOrEqualToConstant: 70),
-            submitButton.heightAnchor.constraint(equalToConstant: 62)
+            errorLabel.heightAnchor.constraint(equalToConstant: 26)
         ])
     }
 
     private func configureFormBrand() {
         formBrandRow.axis = .horizontal
         formBrandRow.alignment = .center
-        formBrandRow.spacing = 12
+        formBrandRow.spacing = 0
         formBrandRow.translatesAutoresizingMaskIntoConstraints = false
 
-        let icon = UIImageView(image: UIImage(named: "unghishdb"))
-        icon.contentMode = .scaleAspectFill
-        icon.clipsToBounds = true
-        icon.layer.cornerRadius = 12
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        formBrandRow.addArrangedSubview(icon)
-
-        let brand = UILabel()
-        brand.text = "Ponlly"
-        brand.textColor = .white
-        brand.font = PonllyFonts.display(size: 22)
-        formBrandRow.addArrangedSubview(brand)
+        let brandMark = UIImageView(image: UIImage(named: "brand_form_mark"))
+        brandMark.contentMode = .scaleAspectFit
+        brandMark.translatesAutoresizingMaskIntoConstraints = false
+        formBrandRow.addSubview(brandMark)
 
         NSLayoutConstraint.activate([
-            icon.widthAnchor.constraint(equalToConstant: 60),
-            icon.heightAnchor.constraint(equalToConstant: 60)
+            brandMark.leadingAnchor.constraint(equalTo: formBrandRow.leadingAnchor),
+            brandMark.topAnchor.constraint(equalTo: formBrandRow.topAnchor),
+            brandMark.bottomAnchor.constraint(equalTo: formBrandRow.bottomAnchor),
+            brandMark.widthAnchor.constraint(equalToConstant: 160),
+            brandMark.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
@@ -360,21 +317,20 @@ final class PonllyAuthViewController: UIViewController {
         createButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    private func agreementRow() -> UIView {
-        let row = UIView()
-        row.translatesAutoresizingMaskIntoConstraints = false
+    private func setupAgreementRow() {
+        agreementView.translatesAutoresizingMaskIntoConstraints = false
         agreeButton.setImage(UIImage(systemName: "square"), for: .normal)
         agreeButton.tintColor = PonllyPalette.cyan
         agreeButton.translatesAutoresizingMaskIntoConstraints = false
         agreeButton.addTarget(self, action: #selector(toggleAgree), for: .touchUpInside)
-        row.addSubview(agreeButton)
+        agreementView.addSubview(agreeButton)
 
         let prefix = UILabel()
         prefix.text = "I agree to"
         prefix.textColor = PonllyPalette.muted
         prefix.font = PonllyFonts.body(size: 12)
         prefix.translatesAutoresizingMaskIntoConstraints = false
-        row.addSubview(prefix)
+        agreementView.addSubview(prefix)
 
         let terms = agreementLink("User Agreement", action: #selector(userAgreementTapped))
         let middle = UILabel()
@@ -383,27 +339,26 @@ final class PonllyAuthViewController: UIViewController {
         middle.font = PonllyFonts.body(size: 12)
         middle.translatesAutoresizingMaskIntoConstraints = false
         let eula = agreementLink("EULA Agreement", action: #selector(eulaTapped))
-        row.addSubview(terms)
-        row.addSubview(middle)
-        row.addSubview(eula)
+        agreementView.addSubview(terms)
+        agreementView.addSubview(middle)
+        agreementView.addSubview(eula)
 
         NSLayoutConstraint.activate([
-            row.heightAnchor.constraint(equalToConstant: 42),
-            agreeButton.leadingAnchor.constraint(equalTo: row.leadingAnchor),
-            agreeButton.centerYAnchor.constraint(equalTo: row.centerYAnchor),
+            agreementView.heightAnchor.constraint(equalToConstant: 42),
+            agreeButton.leadingAnchor.constraint(equalTo: agreementView.leadingAnchor),
+            agreeButton.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
             agreeButton.widthAnchor.constraint(equalToConstant: 30),
             agreeButton.heightAnchor.constraint(equalToConstant: 30),
             prefix.leadingAnchor.constraint(equalTo: agreeButton.trailingAnchor, constant: 12),
-            prefix.centerYAnchor.constraint(equalTo: row.centerYAnchor),
+            prefix.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
             terms.leadingAnchor.constraint(equalTo: prefix.trailingAnchor, constant: 4),
-            terms.centerYAnchor.constraint(equalTo: row.centerYAnchor),
+            terms.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
             middle.leadingAnchor.constraint(equalTo: terms.trailingAnchor, constant: 4),
-            middle.centerYAnchor.constraint(equalTo: row.centerYAnchor),
+            middle.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
             eula.leadingAnchor.constraint(equalTo: middle.trailingAnchor, constant: 4),
-            eula.centerYAnchor.constraint(equalTo: row.centerYAnchor),
-            eula.trailingAnchor.constraint(lessThanOrEqualTo: row.trailingAnchor)
+            eula.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
+            eula.trailingAnchor.constraint(lessThanOrEqualTo: agreementView.trailingAnchor)
         ])
-        return row
     }
 
     private func agreementLink(_ title: String, action: Selector) -> UIButton {
@@ -420,34 +375,42 @@ final class PonllyAuthViewController: UIViewController {
 
     private func showLanding() {
         step = .landing
+        scrollView.isScrollEnabled = false
+        scrollView.alwaysBounceVertical = false
         headerTitleLabel.text = ""
         headerBackButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         heroView.isHidden = false
         loginButton.isHidden = false
         createButton.isHidden = false
+        agreementView.isHidden = false
         formStack.isHidden = true
+        submitButton.isHidden = true
         clearInlineError()
         view.endEditing(true)
     }
 
     private func showForm(_ nextStep: AuthStep) {
         step = nextStep
+        scrollView.isScrollEnabled = true
+        scrollView.alwaysBounceVertical = true
         headerBackButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         headerTitleLabel.text = nextStep == .login ? "Login" : "Creat Account"
         heroView.isHidden = true
         loginButton.isHidden = true
         createButton.isHidden = true
+        agreementView.isHidden = true
         formStack.isHidden = false
+        submitButton.isHidden = false
         formHeadlineLabel.text = nextStep == .login ? "Welcome Back" : "Create Your Account"
         formSubtitleLabel.text = nextStep == .login ? "Sign in to join the latest graffiti battles and show off your tags." : "Set your access details before building your street art profile."
         submitButton.setTitle(nextStep == .login ? "Login" : "Next", for: .normal)
-        if nextStep == .login {
-            emailField.text = "ponlly@gmail.com"
-            passwordField.text = "555666"
-        } else {
-            emailField.text = ""
-            passwordField.text = ""
-        }
+//        if nextStep == .login {
+//            emailField.text = "ponlly@gmail.com"
+//            passwordField.text = "555666"
+//        } else {
+//            emailField.text = ""
+//            passwordField.text = ""
+//        }
         clearInlineError()
         emailField.becomeFirstResponder()
     }
@@ -547,6 +510,7 @@ final class PonllyAuthViewController: UIViewController {
                 showInlineError(message)
                 return
             }
+            view.endEditing(true)
             let profile = PonllyCreateProfileViewController(email: email, password: password, completion: completion)
             navigationController?.pushViewController(profile, animated: true)
             return
@@ -570,10 +534,18 @@ final class PonllyAuthViewController: UIViewController {
         let bottom = max(frame.height - view.safeAreaInsets.bottom, 0) + 18
         scrollView.contentInset.bottom = bottom
         scrollView.verticalScrollIndicatorInsets.bottom = bottom
+        submitButtonBottomConstraint?.constant = -bottom
+        UIView.animate(withDuration: 0.22) {
+            self.view.layoutIfNeeded()
+        }
     }
 
     @objc private func keyboardWillHide(_ note: Notification) {
         scrollView.contentInset.bottom = 0
         scrollView.verticalScrollIndicatorInsets.bottom = 0
+        submitButtonBottomConstraint?.constant = -22
+        UIView.animate(withDuration: 0.22) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
