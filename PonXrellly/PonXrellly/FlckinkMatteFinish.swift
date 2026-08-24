@@ -4,8 +4,8 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyAuthCenter {
-    static let shared = PonllyAuthCenter()
+final class FlckinkMatteFinish {
+    static let shared = FlckinkMatteFinish()
     private let defaults = UserDefaults.standard
     private let loginKey = "ponllyLogin"
     private let consentKey = "ponllyEulaConsent"
@@ -87,7 +87,7 @@ final class PonllyAuthCenter {
             completion()
             return
         }
-        let auth = PonllyAuthViewController(completion: completion)
+        let auth = PflckinkSqueezeMarkerController(completion: completion)
         let nav = UINavigationController(rootViewController: auth)
         nav.modalPresentationStyle = .fullScreen
         controller.present(nav, animated: true)

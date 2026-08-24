@@ -115,7 +115,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         card.layer.borderWidth = 1
         card.layer.borderColor = PonllyPalette.line.cgColor
 
-        let avatar = PonllyAvatarView(user: currentUser, size: 54)
+        let avatar = ErErstPaintLabView(user: currentUser, size: 54)
         card.addSubview(avatar)
         let title = UILabel()
         title.text = "@\(currentUser.name.lowercased())"
@@ -246,7 +246,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         card.addAction(UIAction { [weak self] _ in
             self?.openArtworkDetail(artwork)
         }, for: .touchUpInside)
-        let image = PonllyArtworkView(artwork: artwork)
+        let image = PbruCiuClearCoatView(artwork: artwork)
         image.isUserInteractionEnabled = false
         image.layer.cornerRadius = 14
         image.layer.borderWidth = 0
@@ -289,7 +289,7 @@ final class PonllyMyArtworkViewController: UIViewController {
             ponllyShowNotice("Artwork is unavailable", style: .failure)
             return
         }
-        let detail = PonllyArtworkDetailViewController(artwork: artwork, owner: currentUser)
+        let detail = PaerErstPaintBaseController(artwork: artwork, owner: currentUser)
         detail.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detail, animated: true)
     }
@@ -351,7 +351,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         card.layer.cornerRadius = 18
         card.layer.borderWidth = 1
         card.layer.borderColor = PonllyPalette.line.cgColor
-        let image = PonllyArtworkView(artwork: artwork)
+        let image = PbruCiuClearCoatView(artwork: artwork)
         image.layer.borderColor = accent.withAlphaComponent(0.45).cgColor
         card.addSubview(image)
         let text = UIStackView()
@@ -440,7 +440,7 @@ final class PonllyMyArtworkViewController: UIViewController {
     @objc private func battleTapped(_ gesture: UITapGestureRecognizer) {
         guard let id = gesture.view?.accessibilityIdentifier,
               let battle = PonllyDataCenter.battles.first(where: { $0.id == id }) else { return }
-        let detail = PonllyBattleDetailViewController(battle: battle)
+        let detail = PbruCiuStencilLabController(battle: battle)
         detail.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detail, animated: true)
     }

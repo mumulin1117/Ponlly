@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyBattleHomeViewController: UIViewController {
+final class PbruCiuColorPlanController: UIViewController {
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
     private let hotButton = UIButton(type: .system)
@@ -121,7 +121,7 @@ final class PonllyBattleHomeViewController: UIViewController {
                 card.onJoin = { [weak self] in self?.joinBattle(battle) }
                 stack.addArrangedSubview(card)
             } else {
-                let card = PonllyBattleCardView(battle: battle)
+                let card = CkinkMuralLabView(battle: battle)
                 card.onTap = { [weak self] in self?.openBattle(battle) }
                 card.onMore = { [weak self] in self?.showReportSheet(for: battle) }
                 card.onArtist = { [weak self] user in self?.openArtist(user) }
@@ -150,20 +150,20 @@ final class PonllyBattleHomeViewController: UIViewController {
 
     private func openBattle(_ battle: PonllyBattle) {
         let latestBattle = PonllyDataCenter.visibleBattles().first { $0.id == battle.id } ?? battle
-        let detail = PonllyBattleDetailViewController(battle: latestBattle)
+        let detail = PbruCiuStencilLabController(battle: latestBattle)
         detail.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detail, animated: true)
     }
 
     private func openArtist(_ user: PonllyUser) {
-        let profile = PonllyArtistProfileViewController(user: user)
+        let profile = FlckinkPrimerCoatController(user: user)
         profile.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(profile, animated: true)
     }
 
     private func joinBattle(_ battle: PonllyBattle) {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
-            let accept = PonllyAcceptChallengeViewController(battle: battle)
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
+            let accept = BruCiuSilverSheenController(battle: battle)
             accept.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(accept, animated: true)
         }
@@ -172,7 +172,7 @@ final class PonllyBattleHomeViewController: UIViewController {
     private func showReportSheet(for battle: PonllyBattle) {
         let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
-            PonllyAuthCenter.shared.requireLogin(from: self) {
+            FlckinkMatteFinish.shared.requireLogin(from: self) {
                 let report = PonllyReportRoomViewController(battle: battle)
                 report.onReportSubmitted = { [weak self] in
                     self?.ponllyShowNotice("Report submitted", style: .success)
@@ -199,7 +199,7 @@ final class PonllyBattleHomeViewController: UIViewController {
     }
 
     @objc private func privateMessagingTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let inbox = PonllyDirectInboxViewController(keepsTabBarVisible: false)
             inbox.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(inbox, animated: true)

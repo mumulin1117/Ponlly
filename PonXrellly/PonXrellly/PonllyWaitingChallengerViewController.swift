@@ -25,7 +25,7 @@ final class PonllyWaitingChallengerViewController: UIViewController {
         stack.spacing = 30
         stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stack)
-        let arena = PonllyBattlePreviewArenaView(selectedImage: selectedImage)
+        let arena = PponllWallPlanView(selectedImage: selectedImage)
         arena.heightAnchor.constraint(equalToConstant: 220).isActive = true
         let status = UILabel()
         status.text = "Your Challenge Is Live! Waiting For A Creator To Accept."

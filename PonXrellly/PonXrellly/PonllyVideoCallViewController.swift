@@ -180,7 +180,7 @@ final class PonllyVideoCallViewController: UIViewController {
         }
         menu.onBlock = { [weak self] in
             guard let self else { return }
-            let confirm = PonllyBlockConfirmationViewController(user: self.user)
+            let confirm = PaerErstHighlightStrokeController(user: self.user)
             confirm.onConfirm = { [weak self] in
                 guard let self else { return }
                 PonllyDataCenter.blockUser(self.user.id)

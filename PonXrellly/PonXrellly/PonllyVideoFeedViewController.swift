@@ -218,7 +218,7 @@ final class PonllyVideoFeedViewController: UIViewController {
     }
 
     func requireVideoLogin(_ completion: @escaping () -> Void) {
-        PonllyAuthCenter.shared.requireLogin(from: self, completion: completion)
+        FlckinkMatteFinish.shared.requireLogin(from: self, completion: completion)
     }
 
     @objc private func followTapped() {

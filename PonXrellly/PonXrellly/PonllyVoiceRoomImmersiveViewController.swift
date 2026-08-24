@@ -199,7 +199,7 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
             control.addTarget(self, action: #selector(joinSeatTapped), for: .touchUpInside)
         } else {
             let user = PonllyDataCenter.user(seat.userId)
-            let avatar = PonllyAvatarView(user: user, size: 54)
+            let avatar = ErErstPaintLabView(user: user, size: 54)
             stack.addArrangedSubview(avatar)
             let name = smallLabel(user.name, color: .white)
             stack.addArrangedSubview(name)
@@ -280,7 +280,7 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
         avatarButton.addAction(UIAction { [weak self] _ in
             self?.openArtist(user)
         }, for: .touchUpInside)
-        let avatar = PonllyAvatarView(user: user, size: 34)
+        let avatar = ErErstPaintLabView(user: user, size: 34)
         avatar.isUserInteractionEnabled = false
         avatarButton.addSubview(avatar)
         NSLayoutConstraint.activate([
@@ -309,7 +309,7 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
 
     private func openArtist(_ user: PonllyUser) {
         guard user.id != PonllyDataCenter.currentUserId else { return }
-        let profile = PonllyArtistProfileViewController(user: user)
+        let profile = FlckinkPrimerCoatController(user: user)
         profile.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(profile, animated: true)
     }
@@ -361,7 +361,7 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
     }
 
     @objc private func joinSeatTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             self.ponllyShowToast("Requesting microphone...")
             self.requestMicrophone { allowed in
                 guard allowed else {
@@ -387,7 +387,7 @@ final class PonllyVoiceRoomImmersiveViewController: UIViewController, UITextFiel
     }
 
     @objc private func sendTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let text = (self.inputField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
             guard !text.isEmpty else {
                 self.ponllyShowNotice("Add a note before sending.", style: .failure)

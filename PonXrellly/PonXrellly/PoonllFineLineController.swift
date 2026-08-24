@@ -4,13 +4,13 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyCoinStoreViewController: UIViewController {
+final class PoonllFineLineController: UIViewController {
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
     private let chargeButton = PonllyNeonButton(title: "Charge")
     private var selectedPackage = PonllyCoinStoreCatalog.packages[3]
     private var productMap: [String: Product] = [:]
-    private var packageCards: [PonllyCoinPackageCard] = []
+    private var packageCards: [PNeonDripCard] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,7 +180,7 @@ final class PonllyCoinStoreViewController: UIViewController {
             for offset in 0..<2 {
                 let packageIndex = index + offset
                 if packageIndex < PonllyCoinStoreCatalog.packages.count {
-                    let card = PonllyCoinPackageCard(package: PonllyCoinStoreCatalog.packages[packageIndex])
+                    let card = PNeonDripCard(package: PonllyCoinStoreCatalog.packages[packageIndex])
                     card.addTarget(self, action: #selector(packageTapped(_:)), for: .touchUpInside)
                     packageCards.append(card)
                     row.addArrangedSubview(card)
@@ -218,7 +218,7 @@ final class PonllyCoinStoreViewController: UIViewController {
         packageCards.forEach { $0.setSelected($0.package.productId == selectedPackage.productId) }
     }
 
-    @objc private func packageTapped(_ sender: PonllyCoinPackageCard) {
+    @objc private func packageTapped(_ sender: PNeonDripCard) {
         selectedPackage = sender.package
         refreshSelection()
         UIImpactFeedbackGenerator(style: .light).impactOccurred()

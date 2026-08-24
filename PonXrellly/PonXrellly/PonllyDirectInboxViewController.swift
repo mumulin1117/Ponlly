@@ -92,14 +92,14 @@ final class PonllyDirectInboxViewController: UIViewController {
         control.layer.borderColor = PonllyPalette.line.cgColor
         control.addAction(UIAction { [weak self] _ in
             guard let self else { return }
-            PonllyAuthCenter.shared.requireLogin(from: self) {
-                let detail = PonllyConversationViewController(user: user, thread: thread)
+            FlckinkMatteFinish.shared.requireLogin(from: self) {
+                let detail = NckinkSkinnyCapController(user: user, thread: thread)
                 detail.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(detail, animated: true)
             }
         }, for: .touchUpInside)
 
-        let avatar = PonllyAvatarView(user: user, size: 48)
+        let avatar = ErErstPaintLabView(user: user, size: 48)
         avatar.isUserInteractionEnabled = false
         avatar.translatesAutoresizingMaskIntoConstraints = false
         control.addSubview(avatar)

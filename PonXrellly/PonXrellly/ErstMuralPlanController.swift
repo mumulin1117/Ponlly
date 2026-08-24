@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyBattlePreviewViewController: UIViewController {
+final class ErstMuralPlanController: UIViewController {
     private let selectedImage: UIImage
 
     init(selectedImage: UIImage) {
@@ -25,7 +25,7 @@ final class PonllyBattlePreviewViewController: UIViewController {
         stack.spacing = 26
         stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stack)
-        let arena = PonllyBattlePreviewArenaView(selectedImage: selectedImage)
+        let arena = PponllWallPlanView(selectedImage: selectedImage)
         arena.heightAnchor.constraint(equalToConstant: 220).isActive = true
         let card = UIView()
         card.backgroundColor = PonllyPalette.panel

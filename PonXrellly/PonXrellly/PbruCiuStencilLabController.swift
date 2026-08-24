@@ -1,7 +1,7 @@
 import UIKit
 
 @MainActor
-final class PonllyBattleDetailViewController: UIViewController {
+final class PbruCiuStencilLabController: UIViewController {
     private var battle: PonllyBattle
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
@@ -96,8 +96,8 @@ final class PonllyBattleDetailViewController: UIViewController {
     private func artArena() -> UIView {
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
-        let a = PonllyArtworkView(artwork: battle.artworkA)
-        let b = battle.artworkB.map(PonllyArtworkView.init) ?? PonllyEmptyOpponentView()
+        let a = PbruCiuClearCoatView(artwork: battle.artworkA)
+        let b = battle.artworkB.map(PbruCiuClearCoatView.init) ?? PonllyEmptyOpponentView()
         [a, b].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             container.addSubview($0)
@@ -179,9 +179,9 @@ final class PonllyBattleDetailViewController: UIViewController {
         text.addArrangedSubview(level)
         if alignRight {
             row.addArrangedSubview(text)
-            row.addArrangedSubview(PonllyAvatarView(user: user, size: 48))
+            row.addArrangedSubview(ErErstPaintLabView(user: user, size: 48))
         } else {
-            row.addArrangedSubview(PonllyAvatarView(user: user, size: 48))
+            row.addArrangedSubview(ErErstPaintLabView(user: user, size: 48))
             row.addArrangedSubview(text)
         }
         NSLayoutConstraint.activate([
@@ -277,7 +277,7 @@ final class PonllyBattleDetailViewController: UIViewController {
         avatarButton.addAction(UIAction { [weak self] _ in
             self?.openArtist(user)
         }, for: .touchUpInside)
-        let avatar = PonllyAvatarView(user: user, size: 34)
+        let avatar = ErErstPaintLabView(user: user, size: 34)
         avatar.isUserInteractionEnabled = false
         avatarButton.addSubview(avatar)
         NSLayoutConstraint.activate([
@@ -309,7 +309,7 @@ final class PonllyBattleDetailViewController: UIViewController {
 
     private func openArtist(_ user: PonllyUser) {
         guard user.id != PonllyDataCenter.currentUserId else { return }
-        let profile = PonllyArtistProfileViewController(user: user)
+        let profile = FlckinkPrimerCoatController(user: user)
         profile.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(profile, animated: true)
     }
@@ -344,7 +344,7 @@ final class PonllyBattleDetailViewController: UIViewController {
     }
 
     @objc private func voteTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             self.ponllyShowToast("Submitting vote...")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                 self.ponllyShowToast("Vote counted")
@@ -353,8 +353,8 @@ final class PonllyBattleDetailViewController: UIViewController {
     }
 
     @objc private func acceptChallengeTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
-            let accept = PonllyAcceptChallengeViewController(battle: self.battle)
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
+            let accept = BruCiuSilverSheenController(battle: self.battle)
             accept.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(accept, animated: true)
         }
@@ -366,7 +366,7 @@ final class PonllyBattleDetailViewController: UIViewController {
             ponllyShowNotice("Add a few words before sending.", style: .failure)
             return
         }
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             self.ponllyShowToast("Sending...")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                 self.battle.comments.append(PonllyBattleComment(userId: "u01", time: "Just now", text: text, reactionCount: 0))
@@ -395,7 +395,7 @@ final class PonllyBattleDetailViewController: UIViewController {
     @objc private func moreTapped() {
         let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
-            PonllyAuthCenter.shared.requireLogin(from: self) {
+            FlckinkMatteFinish.shared.requireLogin(from: self) {
                 let report = PonllyReportRoomViewController(battle: self.battle)
                 report.onReportSubmitted = { [weak self] in
                     self?.ponllyShowNotice("Report submitted", style: .success)

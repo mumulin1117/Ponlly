@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyArtworkView: UIView {
+final class PbruCiuClearCoatView: UIView {
     private let gradient = CAGradientLayer()
     private let imageView = UIImageView()
     private let titleLabel = UILabel()

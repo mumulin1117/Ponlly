@@ -105,7 +105,7 @@ final class PonllyVideoCommentsViewController: UIViewController {
         inputBar.translatesAutoresizingMaskIntoConstraints = false
         sheet.addSubview(inputBar)
 
-        let avatar = PonllyAvatarView(user: PonllyDataCenter.user("u01"), size: 32)
+        let avatar = ErErstPaintLabView(user: PonllyDataCenter.user("u01"), size: 32)
         inputBar.addSubview(avatar)
 
         let inputWrap = UIView()
@@ -198,7 +198,7 @@ final class PonllyVideoCommentsViewController: UIViewController {
         row.alignment = .top
         row.spacing = 12
 
-        row.addArrangedSubview(PonllyAvatarView(user: PonllyDataCenter.user(comment.userId), size: 36))
+        row.addArrangedSubview(ErErstPaintLabView(user: PonllyDataCenter.user(comment.userId), size: 36))
 
         let textStack = UIStackView()
         textStack.axis = .vertical

@@ -14,7 +14,7 @@ final class PonllyPublishVideoViewController: UIViewController, UIImagePickerCon
     private let titleField = UITextField()
     private let detailView = UITextView()
     private let publishButton = PonllyNeonButton(title: "Publish Video")
-    private var draft = PonllyVideoDraft(title: "", details: "", tags: ["#StreetArt", "#Graffiti", "#Wildstyle"], sourceURL: nil, thumbnail: nil, durationText: nil)
+    private var draft = ArErstFillPlan(title: "", details: "", tags: ["#StreetArt", "#Graffiti", "#Wildstyle"], sourceURL: nil, thumbnail: nil, durationText: nil)
     private let descriptionPlaceholder = "Tell The Story Behind This Piece..."
 
     override func viewDidLoad() {

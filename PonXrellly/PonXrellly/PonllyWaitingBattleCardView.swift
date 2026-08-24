@@ -35,7 +35,7 @@ final class PonllyWaitingBattleCardView: UIControl {
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
 
-        let artwork = PonllyArtworkView(artwork: battle.artworkA)
+        let artwork = PbruCiuClearCoatView(artwork: battle.artworkA)
         artwork.layer.cornerRadius = 14
         artwork.clipsToBounds = true
         artwork.heightAnchor.constraint(equalToConstant: 210).isActive = true
@@ -66,7 +66,7 @@ final class PonllyWaitingBattleCardView: UIControl {
         artistRow.translatesAutoresizingMaskIntoConstraints = false
         artist.addSubview(artistRow)
         let user = PonllyDataCenter.user(battle.creatorAId)
-        artistRow.addArrangedSubview(PonllyAvatarView(user: user, size: 44))
+        artistRow.addArrangedSubview(ErErstPaintLabView(user: user, size: 44))
         artistRow.addArrangedSubview(label(user.name, size: 13, color: .white, weight: .semibold))
         NSLayoutConstraint.activate([
             artistRow.leadingAnchor.constraint(equalTo: artist.leadingAnchor),

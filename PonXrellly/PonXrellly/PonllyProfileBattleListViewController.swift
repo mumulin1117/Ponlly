@@ -117,13 +117,13 @@ final class PonllyProfileBattleListViewController: UIViewController {
         control.layer.borderWidth = 1
         control.layer.borderColor = PonllyPalette.line.cgColor
         control.addAction(UIAction { [weak self] _ in
-            let detail = PonllyBattleDetailViewController(battle: battle)
+            let detail = PbruCiuStencilLabController(battle: battle)
             detail.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(detail, animated: true)
         }, for: .touchUpInside)
 
         let artwork = battle.creatorAId == user.id ? battle.artworkA : (battle.artworkB ?? battle.artworkA)
-        let image = PonllyArtworkView(artwork: artwork)
+        let image = PbruCiuClearCoatView(artwork: artwork)
         image.isUserInteractionEnabled = false
         control.addSubview(image)
 

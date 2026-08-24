@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyConversationViewController: UIViewController {
+final class NckinkSkinnyCapController: UIViewController {
     private let user: PonllyUser
     private var thread: PonllyMessageThread
     private let scrollView = UIScrollView()

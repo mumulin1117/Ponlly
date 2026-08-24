@@ -13,7 +13,7 @@ extension PonllyVideoFeedViewController: UICollectionViewDataSource, UICollectio
         cell.configure(video: video)
         cell.onAvatar = { [weak self] in
             guard let self else { return }
-            let profile = PonllyArtistProfileViewController(user: PonllyDataCenter.user(video.authorId))
+            let profile = FlckinkPrimerCoatController(user: PonllyDataCenter.user(video.authorId))
             profile.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(profile, animated: true)
         }

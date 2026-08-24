@@ -1,6 +1,6 @@
 import UIKit
 
-final class PonllyAuthViewController: UIViewController {
+final class PflckinkSqueezeMarkerController: UIViewController {
     private enum AuthStep {
         case landing
         case login
@@ -29,9 +29,9 @@ final class PonllyAuthViewController: UIViewController {
     private let submitButton = PonllyNeonButton(title: "Login")
     private var submitButtonBottomConstraint: NSLayoutConstraint?
     private var step: AuthStep = .landing
-    private var agreed = PonllyAuthCenter.shared.hasConsent {
+    private var agreed = FlckinkMatteFinish.shared.hasConsent {
         didSet {
-            PonllyAuthCenter.shared.hasConsent = agreed
+            FlckinkMatteFinish.shared.hasConsent = agreed
             refreshAgreementUI()
         }
     }
@@ -53,7 +53,7 @@ final class PonllyAuthViewController: UIViewController {
         setupUI()
         refreshAgreementUI()
         showLanding()
-        if !PonllyAuthCenter.shared.hasConsent {
+        if !FlckinkMatteFinish.shared.hasConsent {
             presentEula()
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -495,14 +495,14 @@ final class PonllyAuthViewController: UIViewController {
         let email = emailField.text ?? ""
         let password = passwordField.text ?? ""
         if step == .create {
-            if let message = PonllyAuthCenter.shared.validateNewAccount(email: email, password: password) {
+            if let message = FlckinkMatteFinish.shared.validateNewAccount(email: email, password: password) {
                 showInlineError(message)
                 return
             }
             view.endEditing(true)
             submitButton.isEnabled = false
             submitButton.setTitle("Creating...", for: .normal)
-            PonllyAuthCenter.shared.createAccount(email: email, password: password) { success, message in
+            FlckinkMatteFinish.shared.createAccount(email: email, password: password) { success, message in
                 self.submitButton.isEnabled = true
                 self.submitButton.setTitle("Next", for: .normal)
                 if success {
@@ -523,7 +523,7 @@ final class PonllyAuthViewController: UIViewController {
 
         submitButton.isEnabled = false
         submitButton.setTitle("Connecting...", for: .normal)
-        PonllyAuthCenter.shared.login(email: email, password: password) { success, message in
+        FlckinkMatteFinish.shared.login(email: email, password: password) { success, message in
             self.submitButton.isEnabled = true
             self.submitButton.setTitle("Login", for: .normal)
             if success {

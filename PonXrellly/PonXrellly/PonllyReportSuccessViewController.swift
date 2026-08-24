@@ -19,7 +19,7 @@ final class PonllyReportSuccessViewController: UIViewController {
     private func setup() {
         view.backgroundColor = PonllyPalette.background
         if let artwork = PonllyDataCenter.profileArtworks(for: PonllyDataCenter.currentUserId).first {
-            let bgArt = PonllyArtworkView(artwork: artwork)
+            let bgArt = PbruCiuClearCoatView(artwork: artwork)
             bgArt.alpha = 0.18
             view.addSubview(bgArt)
             bgArt.pinToEdges(of: view)
@@ -88,7 +88,7 @@ final class PonllyReportSuccessViewController: UIViewController {
     }
 
     @objc private func backToProfileTapped() {
-        if let profile = navigationController?.viewControllers.reversed().first(where: { $0 is PonllyArtistProfileViewController }) {
+        if let profile = navigationController?.viewControllers.reversed().first(where: { $0 is FlckinkPrimerCoatController }) {
             navigationController?.popToViewController(profile, animated: true)
         } else {
             navigationController?.popToRootViewController(animated: true)

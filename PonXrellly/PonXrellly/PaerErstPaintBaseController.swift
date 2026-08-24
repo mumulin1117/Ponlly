@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyArtworkDetailViewController: UIViewController {
+final class PaerErstPaintBaseController: UIViewController {
     private let artwork: PonllyArtwork
     private let owner: PonllyUser
 
@@ -48,7 +48,7 @@ final class PonllyArtworkDetailViewController: UIViewController {
         scrollView.addSubview(stack)
 
         let header = headerView()
-        let hero = PonllyArtworkView(artwork: artwork)
+        let hero = PbruCiuClearCoatView(artwork: artwork)
         hero.layer.cornerRadius = 24
         hero.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.65).cgColor
         stack.addArrangedSubview(header)
@@ -109,7 +109,7 @@ final class PonllyArtworkDetailViewController: UIViewController {
         card.layer.borderWidth = 1
         card.layer.borderColor = PonllyPalette.line.cgColor
 
-        let avatar = PonllyAvatarView(user: owner, size: 46)
+        let avatar = ErErstPaintLabView(user: owner, size: 46)
         card.addSubview(avatar)
         let title = UILabel()
         title.text = artwork.title

@@ -157,7 +157,7 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
             self?.openArtist(host)
         }, for: .touchUpInside)
         card.addSubview(avatarButton)
-        let avatar = PonllyAvatarView(user: host, size: 44)
+        let avatar = ErErstPaintLabView(user: host, size: 44)
         avatar.isUserInteractionEnabled = false
         avatarButton.addSubview(avatar)
         let title = UILabel()
@@ -260,13 +260,13 @@ final class PonllyVoiceRoomLobbyViewController: UIViewController {
 
     private func openArtist(_ user: PonllyUser) {
         guard user.id != PonllyDataCenter.currentUserId else { return }
-        let profile = PonllyArtistProfileViewController(user: user)
+        let profile = FlckinkPrimerCoatController(user: user)
         profile.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(profile, animated: true)
     }
 
     private func presentReport(for room: PonllyVoiceRoom) {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let report = PonllyReportRoomViewController(room: room)
             report.onReportSubmitted = { [weak self] in
                 self?.ponllyShowNotice("Report submitted", style: .success)

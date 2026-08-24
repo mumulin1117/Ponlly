@@ -5,10 +5,10 @@ import StoreKit
 import UIKit
 
 final class PonllyVoiceThemeConfirmViewController: UIViewController {
-    private let theme: PonllyVoiceTheme
-    private let onConfirm: (PonllyVoiceTheme) -> Void
+    private let theme: OnllPaintPlanTheme
+    private let onConfirm: (OnllPaintPlanTheme) -> Void
 
-    init(theme: PonllyVoiceTheme, onConfirm: @escaping (PonllyVoiceTheme) -> Void) {
+    init(theme: OnllPaintPlanTheme, onConfirm: @escaping (OnllPaintPlanTheme) -> Void) {
         self.theme = theme
         self.onConfirm = onConfirm
         super.init(nibName: nil, bundle: nil)

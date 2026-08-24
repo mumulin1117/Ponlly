@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyAcceptChallengeViewController: UIViewController {
+final class BruCiuSilverSheenController: UIViewController {
     private let battle: PonllyBattle
 
     init(battle: PonllyBattle) {
@@ -35,7 +35,7 @@ final class PonllyAcceptChallengeViewController: UIViewController {
         stack.spacing = 26
         stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stack)
-        let challenger = PonllyArtworkView(artwork: battle.artworkA)
+        let challenger = PbruCiuClearCoatView(artwork: battle.artworkA)
         challenger.heightAnchor.constraint(equalToConstant: 190).isActive = true
         let label = UILabel()
         label.text = "VS\n\nUpload Your Artwork"

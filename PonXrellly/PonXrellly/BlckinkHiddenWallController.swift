@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyBlacklistViewController: UIViewController {
+final class BlckinkHiddenWallController: UIViewController {
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
 

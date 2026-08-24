@@ -68,7 +68,7 @@ final class PonllyVideoFeedCell: UICollectionViewCell {
         likeButton.setImage(UIImage(systemName: video.isLiked ? "heart.fill" : "heart"), for: .normal)
 
         avatarButton.subviews.forEach { $0.removeFromSuperview() }
-        let avatar = PonllyAvatarView(user: user, size: 44)
+        let avatar = ErErstPaintLabView(user: user, size: 44)
         avatar.isUserInteractionEnabled = false
         avatarButton.addSubview(avatar)
         avatar.pinToEdges(of: avatarButton)

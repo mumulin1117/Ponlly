@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyBattleSettingsViewController: UIViewController {
+final class kKinkPaintRunController: UIViewController {
     private let titleField = UITextField()
     private let desc = UITextView()
     private let scrollView = UIScrollView()

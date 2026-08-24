@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyBattlePreviewArenaView: UIView {
+final class PponllWallPlanView: UIView {
     private let selectedImage: UIImage?
 
     init(selectedImage: UIImage? = nil) {
@@ -22,9 +22,9 @@ final class PonllyBattlePreviewArenaView: UIView {
     private func setup() {
         let left: UIView
         if let selectedImage {
-            left = PonllyUploadedArtworkView(image: selectedImage)
+            left = PbruCiuSprayCanView(image: selectedImage)
         } else {
-            left = PonllyArtworkView(artwork: .init(id: "preview", ownerId: "u01", title: "Wildstyle", style: "Wildstyle", imageName: "graffiti_challenge_wall_03", colors: [.systemPink, .cyan, .gray]))
+            left = PbruCiuClearCoatView(artwork: .init(id: "preview", ownerId: "u01", title: "Wildstyle", style: "Wildstyle", imageName: "graffiti_challenge_wall_03", colors: [.systemPink, .cyan, .gray]))
         }
         let right = PonllyEmptyOpponentView()
         [left, right].forEach {

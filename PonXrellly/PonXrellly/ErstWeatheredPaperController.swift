@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyCreateLauncherViewController: UIViewController {
+final class ErstWeatheredPaperController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
@@ -127,8 +127,8 @@ final class PonllyCreateLauncherViewController: UIViewController {
     }
 
     @objc private func start() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
-            let entry = PonllyCreateBattleEntryViewController()
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
+            let entry = BruCiuPrintLayerController()
             entry.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(entry, animated: true)
         }
@@ -139,7 +139,7 @@ final class PonllyCreateLauncherViewController: UIViewController {
     }
 
     @objc private func videoTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let publish = PonllyPublishVideoViewController()
             publish.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(publish, animated: true)
@@ -147,7 +147,7 @@ final class PonllyCreateLauncherViewController: UIViewController {
     }
 
     @objc private func voiceTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let room = PonllyCreateVoiceRoomViewController()
             room.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(room, animated: true)

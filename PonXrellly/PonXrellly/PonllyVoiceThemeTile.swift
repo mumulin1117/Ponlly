@@ -5,9 +5,9 @@ import StoreKit
 import UIKit
 
 final class PonllyVoiceThemeTile: UIControl {
-    let theme: PonllyVoiceTheme
+    let theme: OnllPaintPlanTheme
 
-    init(theme: PonllyVoiceTheme) {
+    init(theme: OnllPaintPlanTheme) {
         self.theme = theme
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel

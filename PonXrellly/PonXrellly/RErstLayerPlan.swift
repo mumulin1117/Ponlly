@@ -1,12 +1,12 @@
 import AVFoundation
 import UIKit
 
-enum PonllyArtworkSelectionMode {
+enum PonllStencilPlanMode {
     case create
     case accept(PonllyBattle)
 }
 
-struct PonllyVideoDraft {
+struct ArErstFillPlan {
     var title: String
     var details: String
     var tags: [String]
@@ -15,14 +15,14 @@ struct PonllyVideoDraft {
     var durationText: String?
 }
 
-struct PonllyVoiceRoomDraft {
+struct BruCiuOutlinePlan {
     var name: String
     var details: String
     var category: String
     var coverImage: UIImage?
 }
 
-struct PonllyVoiceTheme {
+struct OnllPaintPlanTheme {
     let id: String
     let name: String
     let subtitle: String
@@ -33,8 +33,8 @@ struct PonllyVoiceTheme {
     let cost: Int
 }
 
-enum PonllyVoiceRoomThemeSource {
-    static let themes: [PonllyVoiceTheme] = [
+enum RErstLayerPlan {
+    static let themes: [OnllPaintPlanTheme] = [
         .init(id: "voiceThemeShibuya", name: "Shibuya Underground", subtitle: "Transform your voice room into a Tokyo hyper-street style lounge.", imageName: "voice_room_bg_01", accent: PonllyPalette.pink, availability: "Spotlight Theme", capacity: "12 seats", cost: 1800),
         .init(id: "voiceThemeTokyo", name: "Tokyo Alley", subtitle: "Glowing signs, wet pavement, and quick critique energy.", imageName: "voice_room_bg_03", accent: PonllyPalette.cyan, availability: "Ready", capacity: "10 seats", cost: 1200),
         .init(id: "voiceThemeSubway", name: "Subway Yard", subtitle: "Concrete panels, low light, and rail-wall atmosphere.", imageName: "voice_room_bg_04", accent: .white, availability: "Ready", capacity: "8 seats", cost: 950),

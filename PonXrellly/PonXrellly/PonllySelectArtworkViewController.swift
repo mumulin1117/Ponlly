@@ -7,7 +7,7 @@ import UIKit
 final class PonllySelectArtworkViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     private let titleText: String
     private let submitTitle: String
-    private let mode: PonllyArtworkSelectionMode
+    private let mode: PonllStencilPlanMode
     private let artworkButton = UIButton(type: .system)
     private let previewImageView = UIImageView()
     private let actionButton: PonllyNeonButton
@@ -15,7 +15,7 @@ final class PonllySelectArtworkViewController: UIViewController, UIImagePickerCo
         didSet { updateSelectionState() }
     }
 
-    init(titleText: String, submitTitle: String, mode: PonllyArtworkSelectionMode) {
+    init(titleText: String, submitTitle: String, mode: PonllStencilPlanMode) {
         self.titleText = titleText
         self.submitTitle = submitTitle
         self.mode = mode
@@ -137,7 +137,7 @@ final class PonllySelectArtworkViewController: UIViewController, UIImagePickerCo
         }
         switch mode {
         case .create:
-            navigationController?.pushViewController(PonllyBattlePreviewViewController(selectedImage: selectedImage), animated: true)
+            navigationController?.pushViewController(ErstMuralPlanController(selectedImage: selectedImage), animated: true)
         case .accept(let battle):
             actionButton.isEnabled = false
             actionButton.alpha = 0.55
@@ -152,7 +152,7 @@ final class PonllySelectArtworkViewController: UIViewController, UIImagePickerCo
                     actionTitle: "View Challenge",
                     style: .success
                 ) {
-                    self.navigationController?.pushViewController(PonllyBattleDetailViewController(battle: updatedBattle), animated: true)
+                    self.navigationController?.pushViewController(PbruCiuStencilLabController(battle: updatedBattle), animated: true)
                 }
             }
         }

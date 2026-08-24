@@ -126,7 +126,7 @@ final class PonllyReportUserViewController: UIViewController, UITextViewDelegate
         card.layer.cornerRadius = 16
         card.layer.borderWidth = 1
         card.layer.borderColor = PonllyPalette.line.cgColor
-        let avatar = PonllyAvatarView(user: user, size: 54)
+        let avatar = ErErstPaintLabView(user: user, size: 54)
         card.addSubview(avatar)
         let textStack = UIStackView()
         textStack.axis = .vertical

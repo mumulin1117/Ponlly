@@ -65,7 +65,7 @@ final class PonllyRelationshipListViewController: UIViewController {
         control.layer.borderWidth = 1
         control.layer.borderColor = PonllyPalette.line.cgColor
         control.addAction(UIAction { [weak self] _ in
-            let profile = PonllyArtistProfileViewController(user: user)
+            let profile = FlckinkPrimerCoatController(user: user)
             profile.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(profile, animated: true)
         }, for: .touchUpInside)
@@ -75,7 +75,7 @@ final class PonllyRelationshipListViewController: UIViewController {
         row.spacing = 14
         row.translatesAutoresizingMaskIntoConstraints = false
         control.addSubview(row)
-        row.addArrangedSubview(PonllyAvatarView(user: user, size: 54))
+        row.addArrangedSubview(ErErstPaintLabView(user: user, size: 54))
         let text = UIStackView()
         text.axis = .vertical
         text.spacing = 4

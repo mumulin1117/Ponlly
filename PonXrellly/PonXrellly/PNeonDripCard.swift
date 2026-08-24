@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyCoinPackageCard: UIControl {
+final class PNeonDripCard: UIControl {
     let package: PonllyCoinPackage
     private let priceLabel = UILabel()
 

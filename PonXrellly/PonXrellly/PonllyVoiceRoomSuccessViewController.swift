@@ -5,10 +5,10 @@ import StoreKit
 import UIKit
 
 final class PonllyVoiceRoomSuccessViewController: UIViewController {
-    private let draft: PonllyVoiceRoomDraft
-    private let theme: PonllyVoiceTheme
+    private let draft: BruCiuOutlinePlan
+    private let theme: OnllPaintPlanTheme
 
-    init(draft: PonllyVoiceRoomDraft, theme: PonllyVoiceTheme) {
+    init(draft: BruCiuOutlinePlan, theme: OnllPaintPlanTheme) {
         self.draft = draft
         self.theme = theme
         super.init(nibName: nil, bundle: nil)

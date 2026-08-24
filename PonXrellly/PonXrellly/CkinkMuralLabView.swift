@@ -5,7 +5,7 @@ import StoreKit
 import UIKit
 
 @MainActor
-final class PonllyBattleCardView: UIControl {
+final class CkinkMuralLabView: UIControl {
     var onTap: (() -> Void)?
     var onMore: (() -> Void)?
     var onArtist: ((PonllyUser) -> Void)?
@@ -62,8 +62,8 @@ final class PonllyBattleCardView: UIControl {
 
         let artRow = UIView()
         artRow.translatesAutoresizingMaskIntoConstraints = false
-        let artA = PonllyArtworkView(artwork: battle.artworkA)
-        let artB = battle.artworkB.map(PonllyArtworkView.init) ?? PonllyEmptyOpponentView()
+        let artA = PbruCiuClearCoatView(artwork: battle.artworkA)
+        let artB = battle.artworkB.map(PbruCiuClearCoatView.init) ?? PonllyEmptyOpponentView()
         artA.translatesAutoresizingMaskIntoConstraints = false
         artB.translatesAutoresizingMaskIntoConstraints = false
         artRow.addSubview(artA)
@@ -125,7 +125,7 @@ final class PonllyBattleCardView: UIControl {
         row.isUserInteractionEnabled = false
         row.translatesAutoresizingMaskIntoConstraints = false
         control.addSubview(row)
-        row.addArrangedSubview(PonllyAvatarView(user: user, size: 38))
+        row.addArrangedSubview(ErErstPaintLabView(user: user, size: 38))
         row.addArrangedSubview(label(user.name, size: 17, color: .white, weight: .bold))
         NSLayoutConstraint.activate([
             control.heightAnchor.constraint(equalToConstant: 48),

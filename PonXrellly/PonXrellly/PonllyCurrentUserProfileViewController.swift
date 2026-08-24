@@ -61,7 +61,7 @@ final class PonllyCurrentUserProfileViewController: UIViewController {
             stack.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        if PonllyAuthCenter.shared.isLoggedIn {
+        if FlckinkMatteFinish.shared.isLoggedIn {
             loggedInContent().forEach(stack.addArrangedSubview)
         } else {
             stack.addArrangedSubview(signedOutPanel())
@@ -124,7 +124,7 @@ final class PonllyCurrentUserProfileViewController: UIViewController {
         let header = UIView()
         header.translatesAutoresizingMaskIntoConstraints = false
 
-        let avatar = PonllyAvatarView(user: currentUser, size: 92)
+        let avatar = ErErstPaintLabView(user: currentUser, size: 92)
         avatar.layer.borderWidth = 3
         avatar.layer.borderColor = PonllyPalette.pink.cgColor
         avatar.layer.shadowColor = PonllyPalette.pink.cgColor
@@ -407,13 +407,13 @@ final class PonllyCurrentUserProfileViewController: UIViewController {
     }
 
     @objc private func signInTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             self.reloadContent()
         }
     }
 
     @objc private func editTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let edit = PonllyEditProfileViewController()
             edit.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(edit, animated: true)
@@ -421,8 +421,8 @@ final class PonllyCurrentUserProfileViewController: UIViewController {
     }
 
     @objc private func rechargeTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
-            let store = PonllyCoinStoreViewController()
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
+            let store = PoonllFineLineController()
             store.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(store, animated: true)
         }
@@ -458,7 +458,7 @@ final class PonllyCurrentUserProfileViewController: UIViewController {
     }
 
     @objc private func blacklistTapped() {
-        let list = PonllyBlacklistViewController()
+        let list = BlckinkHiddenWallController()
         list.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(list, animated: true)
     }
@@ -479,14 +479,14 @@ final class PonllyCurrentUserProfileViewController: UIViewController {
 
     @objc private func logoutTapped() {
         ponllyShowThemeAlert(title: "Log Out", message: "Sign out of your Ponlly account on this device?", actionTitle: "Log Out", style: .info, showsCancel: true) {
-            PonllyAuthCenter.shared.logout()
+            FlckinkMatteFinish.shared.logout()
             self.reloadContent()
         }
     }
 
     @objc private func deleteAccountTapped() {
         ponllyShowThemeAlert(title: "Delete Account", message: "This removes the current account from this device and signs you out.", actionTitle: "Delete", style: .failure, showsCancel: true) {
-            PonllyAuthCenter.shared.deleteCurrentAccount()
+            FlckinkMatteFinish.shared.deleteCurrentAccount()
             self.reloadContent()
         }
     }

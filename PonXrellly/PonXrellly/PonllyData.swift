@@ -171,10 +171,10 @@ enum PonllyDataCenter {
     private static let testCurrentUserId = "u01"
     private static let freshCurrentUserId = "freshCurrentUser"
     static var currentUserId: String {
-        PonllyAuthCenter.shared.isTestAccountActive ? testCurrentUserId : freshCurrentUserId
+        FlckinkMatteFinish.shared.isTestAccountActive ? testCurrentUserId : freshCurrentUserId
     }
     static var isFreshCurrentAccount: Bool {
-        PonllyAuthCenter.shared.isLoggedIn && !PonllyAuthCenter.shared.isTestAccountActive
+        FlckinkMatteFinish.shared.isLoggedIn && !FlckinkMatteFinish.shared.isTestAccountActive
     }
     private static let coinBalanceKey = "ponllyStreetCoinBalance"
     private static let profileNameKey = "ponllyCurrentProfileName"
@@ -611,7 +611,7 @@ enum PonllyDataCenter {
     }
 
     private static func freshCurrentUser() -> PonllyUser {
-        let email = PonllyAuthCenter.shared.currentEmail ?? ""
+        let email = FlckinkMatteFinish.shared.currentEmail ?? ""
         let fallbackName = email.split(separator: "@").first.map(String.init) ?? "newWriter"
         return PonllyUser(
             id: freshCurrentUserId,

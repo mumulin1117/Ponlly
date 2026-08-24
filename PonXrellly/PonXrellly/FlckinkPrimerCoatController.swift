@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyArtistProfileViewController: UIViewController {
+final class FlckinkPrimerCoatController: UIViewController {
     private enum ProfileTab: Int, CaseIterable {
         case artwork
         case videos
@@ -121,7 +121,7 @@ final class PonllyArtistProfileViewController: UIViewController {
     private func heroHeader() -> UIView {
         let header = UIView()
         header.translatesAutoresizingMaskIntoConstraints = false
-        let art = PonllyArtworkView(artwork: PonllyDataCenter.profileArtworks(for: user.id).first ?? PonllyArtwork(
+        let art = PbruCiuClearCoatView(artwork: PonllyDataCenter.profileArtworks(for: user.id).first ?? PonllyArtwork(
             id: "\(user.id)_profile_empty",
             ownerId: user.id,
             title: "Wall Study",
@@ -163,7 +163,7 @@ final class PonllyArtistProfileViewController: UIViewController {
         container.translatesAutoresizingMaskIntoConstraints = false
         let header = heroHeader()
         container.addSubview(header)
-        let avatar = PonllyAvatarView(user: user, size: 82)
+        let avatar = ErErstPaintLabView(user: user, size: 82)
         avatar.layer.borderColor = PonllyPalette.pink.cgColor
         avatar.layer.shadowColor = PonllyPalette.pink.cgColor
         avatar.layer.shadowOpacity = 0.55
@@ -357,7 +357,7 @@ final class PonllyArtistProfileViewController: UIViewController {
         row.spacing = 10
         row.distribution = .fillEqually
         artworks.forEach { artwork in
-            let art = PonllyArtworkView(artwork: artwork)
+            let art = PbruCiuClearCoatView(artwork: artwork)
             art.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
             art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.92).isActive = true
             row.addArrangedSubview(art)
@@ -442,7 +442,7 @@ final class PonllyArtistProfileViewController: UIViewController {
         row.spacing = 10
         row.distribution = .fillEqually
         artworks.forEach { artwork in
-            let art = PonllyArtworkView(artwork: artwork)
+            let art = PbruCiuClearCoatView(artwork: artwork)
             art.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.45).cgColor
             art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.76).isActive = true
             row.addArrangedSubview(art)
@@ -461,7 +461,7 @@ final class PonllyArtistProfileViewController: UIViewController {
         card.layer.borderWidth = 1
         card.layer.borderColor = PonllyPalette.line.cgColor
 
-        let art = PonllyArtworkView(artwork: artwork)
+        let art = PbruCiuClearCoatView(artwork: artwork)
         art.layer.borderColor = accent.withAlphaComponent(0.45).cgColor
         card.addSubview(art)
 
@@ -537,7 +537,7 @@ final class PonllyArtistProfileViewController: UIViewController {
     }
 
     @objc private func moreTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             let menu = PonllyProfileActionMenuViewController(user: self.user)
             menu.onReport = { [weak self] in
                 guard let self else { return }
@@ -563,13 +563,13 @@ final class PonllyArtistProfileViewController: UIViewController {
     @objc private func pkBattleCardTapped(_ gesture: UITapGestureRecognizer) {
         guard let id = gesture.view?.accessibilityIdentifier,
               let battle = PonllyDataCenter.battles.first(where: { $0.id == id }) else { return }
-        let detail = PonllyBattleDetailViewController(battle: battle)
+        let detail = PbruCiuStencilLabController(battle: battle)
         detail.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detail, animated: true)
     }
 
     @objc private func followTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             guard !PonllyDataCenter.isBlocked(self.user.id) else {
                 self.ponllyShowThemeAlert(
                     title: "Action Unavailable",
@@ -586,7 +586,7 @@ final class PonllyArtistProfileViewController: UIViewController {
     }
 
     @objc private func messageTapped() {
-        PonllyAuthCenter.shared.requireLogin(from: self) {
+        FlckinkMatteFinish.shared.requireLogin(from: self) {
             guard !PonllyDataCenter.isBlocked(self.user.id) else {
                 self.ponllyShowThemeAlert(
                     title: "Cannot Send Message",
@@ -605,7 +605,7 @@ final class PonllyArtistProfileViewController: UIViewController {
                 )
                 return
             }
-            let chat = PonllyConversationViewController(user: self.user, thread: PonllyDataCenter.thread(for: self.user.id))
+            let chat = NckinkSkinnyCapController(user: self.user, thread: PonllyDataCenter.thread(for: self.user.id))
             chat.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(chat, animated: true)
         }
@@ -624,7 +624,7 @@ final class PonllyArtistProfileViewController: UIViewController {
     }
 
     private func presentBlockConfirmation() {
-        let confirm = PonllyBlockConfirmationViewController(user: user)
+        let confirm = PaerErstHighlightStrokeController(user: user)
         confirm.onConfirm = { [weak self] in
             guard let self else { return }
             PonllyDataCenter.blockUser(self.user.id)

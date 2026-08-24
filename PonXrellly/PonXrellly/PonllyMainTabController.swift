@@ -18,7 +18,7 @@ final class PonllyMainTabController: UITabBarController {
         super.viewDidLoad()
         configureTabBarAppearance()
 
-        let feed = UINavigationController(rootViewController: PonllyBattleHomeViewController())
+        let feed = UINavigationController(rootViewController: PbruCiuColorPlanController())
         feed.tabBarItem = UITabBarItem(
             title: "FEED",
             image: UIImage(named: "tab_feed_normal")?.withRenderingMode(.alwaysOriginal),
@@ -33,7 +33,7 @@ final class PonllyMainTabController: UITabBarController {
             selectedImage:UIImage(named: "tab_video_selected")?.withRenderingMode(.alwaysOriginal)
         )
 
-        let create = UINavigationController(rootViewController: PonllyCreateLauncherViewController())
+        let create = UINavigationController(rootViewController: ErstWeatheredPaperController())
         let battleIcon = UIImage(named: "pk_battle_btn")?.withRenderingMode(.alwaysOriginal)
         create.tabBarItem = UITabBarItem(title: "", image: battleIcon, selectedImage: battleIcon)
         create.tabBarItem.imageInsets = UIEdgeInsets(top: -12, left: 0, bottom: 12, right: 0)
@@ -43,7 +43,7 @@ final class PonllyMainTabController: UITabBarController {
             title: "FEED",
             image: UIImage(named: "tab_voice_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_voice_selected")?.withRenderingMode(.alwaysOriginal)
-        ) 
+        )
 
         let stash = UINavigationController(rootViewController: PonllyCurrentUserProfileViewController())
         stash.tabBarItem =  UITabBarItem(

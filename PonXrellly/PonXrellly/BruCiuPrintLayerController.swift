@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyCreateBattleEntryViewController: UIViewController {
+final class BruCiuPrintLayerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Battle"
@@ -29,7 +29,7 @@ final class PonllyCreateBattleEntryViewController: UIViewController {
         title.font = PonllyFonts.body(size: 16, weight: .semibold)
         title.textColor = PonllyPalette.muted
         title.numberOfLines = 0
-        let hero = PonllyArtworkView(artwork: .init(id: "hero", ownerId: "u01", title: "Neon Fury Chrome Clash", style: "Battle", imageName: "graffiti_challenge_wall_05", colors: [.cyan, .systemPink, .orange]))
+        let hero = PbruCiuClearCoatView(artwork: .init(id: "hero", ownerId: "u01", title: "Neon Fury Chrome Clash", style: "Battle", imageName: "graffiti_challenge_wall_05", colors: [.cyan, .systemPink, .orange]))
         hero.heightAnchor.constraint(equalToConstant: 240).isActive = true
         let how = UILabel()
         how.text = "How PK Battles Work"
@@ -52,6 +52,6 @@ final class PonllyCreateBattleEntryViewController: UIViewController {
     }
 
     @objc private func goNextTapped() {
-        navigationController?.pushViewController(PonllyBattleSettingsViewController(), animated: true)
+        navigationController?.pushViewController(PponllPaintMapController(), animated: true)
     }
 }

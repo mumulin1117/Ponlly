@@ -246,7 +246,7 @@ final class PonllyCreateVoiceRoomViewController: UIViewController, UIImagePicker
     }
 
     @objc private func nextTapped() {
-        let draft = PonllyVoiceRoomDraft(
+        let draft = BruCiuOutlinePlan(
             name: nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Vandal Street Legends",
             details: detailView.text == "What will you talk about..." ? "" : detailView.text,
             category: selectedCategory,

@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyAvatarView: UIView {
+final class ErErstPaintLabView: UIView {
     init(user: PonllyUser, size: CGFloat = 40) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
