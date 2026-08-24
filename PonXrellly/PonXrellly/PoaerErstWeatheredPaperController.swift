@@ -28,7 +28,7 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
 
         let video = UINavigationController(rootViewController: PasteupEchoController())
         video.tabBarItem = UITabBarItem(
-            title: "FEED",
+            title: "VIDEO",
             image: UIImage(named: "tab_video_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_video_selected")?.withRenderingMode(.alwaysOriginal)
         )
@@ -40,14 +40,14 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
 
         let voice = UINavigationController(rootViewController: PonllystencilBloomController())
         voice.tabBarItem =  UITabBarItem(
-            title: "FEED",
+            title: "VOICE",
             image: UIImage(named: "tab_voice_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_voice_selected")?.withRenderingMode(.alwaysOriginal)
         )
 
         let stash = UINavigationController(rootViewController: PonllymuralKickntroller())
         stash.tabBarItem =  UITabBarItem(
-            title: "FEED",
+            title: "STASH",
             image: UIImage(named: "tab_stash_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_stash_selected")?.withRenderingMode(.alwaysOriginal)
         )
