@@ -124,7 +124,7 @@ final class PponllPaintMapController: UIViewController {
     }
 
     @objc private func nextTapped() {
-        navigationController?.pushViewController(PonllySelectArtworkViewController(titleText: "Upload Your Artwork", submitTitle: "Continue", mode: .create), animated: true)
+        navigationController?.pushViewController(MarkerNibController(titleText: "Upload Your Artwork", submitTitle: "Continue", mode: .create), animated: true)
     }
 
     @objc private func keyboardWillShow(_ note: Notification) {

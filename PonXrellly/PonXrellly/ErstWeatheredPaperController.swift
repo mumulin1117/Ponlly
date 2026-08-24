@@ -140,7 +140,7 @@ final class ErstWeatheredPaperController: UIViewController {
 
     @objc private func videoTapped() {
         FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let publish = PonllyPublishVideoViewController()
+            let publish = DinkWallTextureController()
             publish.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(publish, animated: true)
         }
@@ -148,7 +148,7 @@ final class ErstWeatheredPaperController: UIViewController {
 
     @objc private func voiceTapped() {
         FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let room = PonllyCreateVoiceRoomViewController()
+            let room = PonllystencilCascadeTroller()
             room.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(room, animated: true)
         }

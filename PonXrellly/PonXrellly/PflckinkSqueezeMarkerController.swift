@@ -470,13 +470,13 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     }
 
     @objc private func userAgreementTapped() {
-        let doc = PonllyPolicyViewController()
+        let doc = SmuralLeanController()
         doc.title = "Terms Of Service"
         navigationController?.pushViewController(doc, animated: true)
     }
 
     @objc private func eulaTapped() {
-        let doc = PonllyPolicyViewController()
+        let doc = SmuralLeanController()
         doc.title = "EULA Agreement"
         navigationController?.pushViewController(doc, animated: true)
     }
@@ -508,7 +508,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
                 if success {
                     let currentUser = PonllyDataCenter.currentUser()
                     let avatarImage = currentUser.avatarName.flatMap { UIImage(named: $0) }
-                    let done = PonllyRegistrationCompleteViewController(
+                    let done = PonllycyanGlowController(
                         userName: currentUser.name,
                         avatar: avatarImage,
                         completion: self.completion

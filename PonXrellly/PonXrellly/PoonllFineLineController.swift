@@ -8,7 +8,7 @@ final class PoonllFineLineController: UIViewController {
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
     private let chargeButton = PonllyNeonButton(title: "Charge")
-    private var selectedPackage = PonllyCoinStoreCatalog.packages[3]
+    private var selectedPackage = PoncanShaketalog.packages[3]
     private var productMap: [String: Product] = [:]
     private var packageCards: [PNeonDripCard] = []
 
@@ -172,15 +172,15 @@ final class PoonllFineLineController: UIViewController {
         let grid = UIStackView()
         grid.axis = .vertical
         grid.spacing = 14
-        for index in stride(from: 0, to: PonllyCoinStoreCatalog.packages.count, by: 2) {
+        for index in stride(from: 0, to: PoncanShaketalog.packages.count, by: 2) {
             let row = UIStackView()
             row.axis = .horizontal
             row.spacing = 14
             row.distribution = .fillEqually
             for offset in 0..<2 {
                 let packageIndex = index + offset
-                if packageIndex < PonllyCoinStoreCatalog.packages.count {
-                    let card = PNeonDripCard(package: PonllyCoinStoreCatalog.packages[packageIndex])
+                if packageIndex < PoncanShaketalog.packages.count {
+                    let card = PNeonDripCard(package: PoncanShaketalog.packages[packageIndex])
                     card.addTarget(self, action: #selector(packageTapped(_:)), for: .touchUpInside)
                     packageCards.append(card)
                     row.addArrangedSubview(card)
@@ -197,7 +197,7 @@ final class PoonllFineLineController: UIViewController {
         ponllyShowNotice("Loading coin packages...", style: .loading, autoDismissAfter: 0.75)
         Task {
             do {
-                let ids = PonllyCoinStoreCatalog.packages.map(\.productId)
+                let ids = PoncanShaketalog.packages.map(\.productId)
                 let products = try await Product.products(for: ids)
                 await MainActor.run {
                     productMap = Dictionary(uniqueKeysWithValues: products.map { ($0.id, $0) })

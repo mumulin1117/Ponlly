@@ -5,10 +5,10 @@ import StoreKit
 import UIKit
 
 final class PNeonDripCard: UIControl {
-    let package: PonllyCoinPackage
+    let package: PonllycapRackge
     private let priceLabel = UILabel()
 
-    init(package: PonllyCoinPackage) {
+    init(package: PonllycapRackge) {
         self.package = package
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel

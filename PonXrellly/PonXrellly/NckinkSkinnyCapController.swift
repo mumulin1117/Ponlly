@@ -222,7 +222,7 @@ final class NckinkSkinnyCapController: UIViewController {
         FlckinkMatteFinish.shared.requireLogin(from: self) {
             self.ponllyShowToast("Connecting video...")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-                let call = PonllyVideoCallViewController(user: self.user)
+                let call = PonllystrokeWeightController(user: self.user)
                 call.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(call, animated: true)
             }

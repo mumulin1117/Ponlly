@@ -68,7 +68,7 @@ final class PbruCiuStencilLabController: UIViewController {
         } else {
             stack.addArrangedSubview(voteButtons())
         }
-        let progress = PonllyVoteProgressView(aVotes: battle.votesA, bVotes: battle.votesB)
+        let progress = PonllybruCiuUtilityBoxView(aVotes: battle.votesA, bVotes: battle.votesB)
         progress.heightAnchor.constraint(equalToConstant: 42).isActive = true
         stack.addArrangedSubview(progress)
         stack.addArrangedSubview(themeCard())
@@ -396,7 +396,7 @@ final class PbruCiuStencilLabController: UIViewController {
         let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
             FlckinkMatteFinish.shared.requireLogin(from: self) {
-                let report = PonllyReportRoomViewController(battle: self.battle)
+                let report = PonllyroughFillController(battle: self.battle)
                 report.onReportSubmitted = { [weak self] in
                     self?.ponllyShowNotice("Report submitted", style: .success)
                 }

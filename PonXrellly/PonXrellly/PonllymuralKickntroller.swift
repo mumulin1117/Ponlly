@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllyCurrentUserProfileViewController: UIViewController {
+final class PonllymuralKickntroller: UIViewController {
     private let scrollView = UIScrollView()
     private let stack = UIStackView()
     private let backgroundImageView = UIImageView()

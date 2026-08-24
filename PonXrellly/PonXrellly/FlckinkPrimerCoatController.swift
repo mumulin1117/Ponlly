@@ -538,10 +538,10 @@ final class FlckinkPrimerCoatController: UIViewController {
 
     @objc private func moreTapped() {
         FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let menu = PonllyProfileActionMenuViewController(user: self.user)
+            let menu = PaerosolGritMenuViewController(user: self.user)
             menu.onReport = { [weak self] in
                 guard let self else { return }
-                let report = PonllyReportUserViewController(user: self.user)
+                let report = PonllycolorFadeController(user: self.user)
                 report.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(report, animated: true)
             }
@@ -612,13 +612,13 @@ final class FlckinkPrimerCoatController: UIViewController {
     }
 
     @objc private func followersTapped() {
-        let list = PonllyRelationshipListViewController(kind: .followers)
+        let list = PonllyacidGreenFillfController(kind: .followers)
         list.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(list, animated: true)
     }
 
     @objc private func followingTapped() {
-        let list = PonllyRelationshipListViewController(kind: .following)
+        let list = PonllyacidGreenFillfController(kind: .following)
         list.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(list, animated: true)
     }

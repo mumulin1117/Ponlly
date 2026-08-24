@@ -88,7 +88,7 @@ final class CkinkMuralLabView: UIControl {
         meta.addArrangedSubview(votes)
         meta.addArrangedSubview(comments)
 
-        let progress = PonllyVoteProgressView(aVotes: battle.votesA, bVotes: battle.votesB)
+        let progress = PonllybruCiuUtilityBoxView(aVotes: battle.votesA, bVotes: battle.votesB)
 
         [top, artRow, theme, title, meta, progress].forEach(content.addArrangedSubview)
         [artRow, theme, title, meta, progress].forEach(attachDetailTap)

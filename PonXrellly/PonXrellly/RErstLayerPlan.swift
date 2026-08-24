@@ -1,7 +1,7 @@
 import AVFoundation
 import UIKit
 
-enum PonllStencilPlanMode {
+enum EbruCiuOutlinePlan {
     case create
     case accept(PonllyBattle)
 }

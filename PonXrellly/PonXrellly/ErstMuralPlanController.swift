@@ -25,7 +25,7 @@ final class ErstMuralPlanController: UIViewController {
         stack.spacing = 26
         stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stack)
-        let arena = PponllWallPlanView(selectedImage: selectedImage)
+        let arena = OnllBlankFacadeView(selectedImage: selectedImage)
         arena.heightAnchor.constraint(equalToConstant: 220).isActive = true
         let card = UIView()
         card.backgroundColor = PonllyPalette.panel
@@ -64,7 +64,7 @@ final class ErstMuralPlanController: UIViewController {
     @objc private func publishTapped() {
         ponllyShowToast("Publishing challenge...")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
-            self.navigationController?.pushViewController(PonllyWaitingChallengerViewController(selectedImage: self.selectedImage), animated: true)
+            self.navigationController?.pushViewController(NikTrafficBarrierController(selectedImage: self.selectedImage), animated: true)
         }
     }
 }

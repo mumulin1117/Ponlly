@@ -57,6 +57,6 @@ final class BruCiuSilverSheenController: UIViewController {
     }
 
     @objc private func submitTapped() {
-        navigationController?.pushViewController(PonllySelectArtworkViewController(titleText: "Upload Your Artwork", submitTitle: "Submit Challenge", mode: .accept(battle)), animated: true)
+        navigationController?.pushViewController(MarkerNibController(titleText: "Upload Your Artwork", submitTitle: "Submit Challenge", mode: .accept(battle)), animated: true)
     }
 }

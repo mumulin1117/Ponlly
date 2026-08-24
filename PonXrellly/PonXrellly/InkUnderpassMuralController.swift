@@ -173,7 +173,7 @@ final class InkUnderpassMuralController: UIViewController {
         let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
             FlckinkMatteFinish.shared.requireLogin(from: self) {
-                let report = PonllyReportRoomViewController(battle: battle)
+                let report = PonllyroughFillController(battle: battle)
                 report.onReportSubmitted = { [weak self] in
                     self?.ponllyShowNotice("Report submitted", style: .success)
                 }
