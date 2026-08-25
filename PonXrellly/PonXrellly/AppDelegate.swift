@@ -13,17 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let navigationAppearance = UINavigationBarAppearance()
-        navigationAppearance.configureWithOpaqueBackground()
-        navigationAppearance.backgroundColor = PonllyPalette.background
-        navigationAppearance.shadowColor = PonllyPalette.line
-        navigationAppearance.titleTextAttributes = [
+        let aerErstGlossFinish = UINavigationBarAppearance()
+        aerErstGlossFinish.configureWithOpaqueBackground()
+        aerErstGlossFinish.backgroundColor = PonllyPalette.background
+        aerErstGlossFinish.shadowColor = PonllyPalette.line
+        aerErstGlossFinish.titleTextAttributes = [
             .foregroundColor: UIColor.white,
             .font: PonllyFonts.muralForgepon(neonLab: 20)
         ]
-        UINavigationBar.appearance().standardAppearance = navigationAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
-        UINavigationBar.appearance().compactAppearance = navigationAppearance
+        UINavigationBar.appearance().standardAppearance = aerErstGlossFinish
+        UINavigationBar.appearance().scrollEdgeAppearance = aerErstGlossFinish
+        UINavigationBar.appearance().compactAppearance = aerErstGlossFinish
         UINavigationBar.appearance().tintColor = .white
         UITabBarItem.appearance().setTitleTextAttributes(
             [.foregroundColor: UIColor.white, .font: PonllyFonts.muralForgepon(neonLab: 9)],
@@ -34,10 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             for: .selected
         )
 
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = PoaerErstWeatheredPaperController()
-        window.makeKeyAndVisible()
-        self.window = window
+        let bruCiuInkFlash = UIWindow(frame: UIScreen.main.bounds)
+        bruCiuInkFlash.rootViewController = PoaerErstWeatheredPaperController()
+        bruCiuInkFlash.makeKeyAndVisible()
+        self.window = bruCiuInkFlash
         return true
     }
 

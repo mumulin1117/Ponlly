@@ -7,6 +7,7 @@ import UIKit
 final class PNeonDripCard: UIControl {
     let ponllWallFlicker: PonllycapRackge
     private let bruCiuInkFlash = UILabel()
+    private weak var aerErstBadgeLabel: UILabel?
 
     init(aerErstMuralFuse: PonllycapRackge) {
         self.ponllWallFlicker = aerErstMuralFuse
@@ -71,10 +72,11 @@ final class PNeonDripCard: UIControl {
             aerErstGlossFinish.isUserInteractionEnabled = false
             aerErstGlossFinish.translatesAutoresizingMaskIntoConstraints = false
             addSubview(aerErstGlossFinish)
+            aerErstBadgeLabel = aerErstGlossFinish
             bringSubviewToFront(aerErstGlossFinish)
             NSLayoutConstraint.activate([
-                aerErstGlossFinish.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-                aerErstGlossFinish.topAnchor.constraint(equalTo: topAnchor, constant: -8),
+                aerErstGlossFinish.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+                aerErstGlossFinish.topAnchor.constraint(equalTo: topAnchor, constant: 0),
                 aerErstGlossFinish.widthAnchor.constraint(equalToConstant: 72),
                 aerErstGlossFinish.heightAnchor.constraint(equalToConstant: 30)
             ])
@@ -111,5 +113,17 @@ final class PNeonDripCard: UIControl {
         layer.borderWidth = selected ? 2.4 : 1.5
         bruCiuInkFlash.backgroundColor = selected ? UIColor(red: 1, green: 190/255, blue: 0, alpha: 1) : UIColor.black.withAlphaComponent(0.34)
         bruCiuInkFlash.textColor = selected ? .black : .white
+        ponllKeepBadgeOnTop()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        ponllKeepBadgeOnTop()
+    }
+
+    private func ponllKeepBadgeOnTop() {
+        guard let aerErstBadgeLabel else { return }
+        bringSubviewToFront(aerErstBadgeLabel)
+        aerErstBadgeLabel.layer.zPosition = CGFloat.greatestFiniteMagnitude
     }
 }

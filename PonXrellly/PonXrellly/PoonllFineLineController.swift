@@ -5,12 +5,12 @@ import StoreKit
 import UIKit
 
 final class PoonllFineLineController: UIViewController {
-    private let ponllScrollCanvas = UIScrollView()
+    private let ponllbruCiuPressureFlows = UIScrollView()
     private let bruCiuStackPath = UIStackView()
-    private let flckinkChargeButton = PonllyNeonButton("Charge")
+    private let ponllAngleBreak = PonllyNeonButton("Charge")
     private var aerErstSelectedPackage = PoncanShaketalog.aerErstChromeNoise[3]
-    private var ponllProductMap: [String: Product] = [:]
-    private var bruCiuPackageCards: [PNeonDripCard] = []
+    private var flckinkPlasterDust: [String: Product] = [:]
+    private var bruCiuColorRack: [PNeonDripCard] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,14 @@ final class PoonllFineLineController: UIViewController {
     }
 
     private func bruCiuBridgePillar() {
-        ponllScrollCanvas.alwaysBounceVertical = true
-        ponllScrollCanvas.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(ponllScrollCanvas)
+        ponllbruCiuPressureFlows.alwaysBounceVertical = true
+        ponllbruCiuPressureFlows.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllbruCiuPressureFlows)
         bruCiuStackPath.axis = .vertical
         bruCiuStackPath.spacing = 24
+        bruCiuStackPath.clipsToBounds = false
         bruCiuStackPath.translatesAutoresizingMaskIntoConstraints = false
-        ponllScrollCanvas.addSubview(bruCiuStackPath)
+        ponllbruCiuPressureFlows.addSubview(bruCiuStackPath)
 
         let flckinkmuralAura = ponllmuralSurge()
         let aerErstBanner = bruCiuFirstBonusBanner()
@@ -50,27 +51,27 @@ final class PoonllFineLineController: UIViewController {
         aerErstmuralBurst.layer.borderColor = PonllyPalette.line.cgColor
         aerErstmuralBurst.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstmuralBurst)
-        flckinkChargeButton.addTarget(self, action: #selector(bruCiupaintKicked), for: .touchUpInside)
-        flckinkChargeButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
-        aerErstmuralBurst.addSubview(flckinkChargeButton)
+        ponllAngleBreak.addTarget(self, action: #selector(bruCiupaintKicked), for: .touchUpInside)
+        ponllAngleBreak.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstmuralBurst.addSubview(ponllAngleBreak)
 
         NSLayoutConstraint.activate([
-            ponllScrollCanvas.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            ponllScrollCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            ponllScrollCanvas.topAnchor.constraint(equalTo: view.topAnchor),
-            ponllScrollCanvas.bottomAnchor.constraint(equalTo: aerErstmuralBurst.topAnchor),
-            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.leadingAnchor, constant: 20),
-            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.trailingAnchor, constant: -20),
-            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor, constant: -56),
-            bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor, constant: -28),
+            ponllbruCiuPressureFlows.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            ponllbruCiuPressureFlows.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ponllbruCiuPressureFlows.topAnchor.constraint(equalTo: view.topAnchor),
+            ponllbruCiuPressureFlows.bottomAnchor.constraint(equalTo: aerErstmuralBurst.topAnchor),
+            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllbruCiuPressureFlows.frameLayoutGuide.leadingAnchor, constant: 20),
+            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllbruCiuPressureFlows.frameLayoutGuide.trailingAnchor, constant: -20),
+            bruCiuStackPath.topAnchor.constraint(equalTo: ponllbruCiuPressureFlows.contentLayoutGuide.topAnchor, constant: -56),
+            bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllbruCiuPressureFlows.contentLayoutGuide.bottomAnchor, constant: -28),
             aerErstmuralBurst.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             aerErstmuralBurst.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             aerErstmuralBurst.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             aerErstmuralBurst.heightAnchor.constraint(equalToConstant: 118),
-            flckinkChargeButton.leadingAnchor.constraint(equalTo: aerErstmuralBurst.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            flckinkChargeButton.trailingAnchor.constraint(equalTo: aerErstmuralBurst.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            flckinkChargeButton.topAnchor.constraint(equalTo: aerErstmuralBurst.topAnchor, constant: 22),
-            flckinkChargeButton.heightAnchor.constraint(equalToConstant: 58)
+            ponllAngleBreak.leadingAnchor.constraint(equalTo: aerErstmuralBurst.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllAngleBreak.trailingAnchor.constraint(equalTo: aerErstmuralBurst.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            ponllAngleBreak.topAnchor.constraint(equalTo: aerErstmuralBurst.topAnchor, constant: 22),
+            ponllAngleBreak.heightAnchor.constraint(equalToConstant: 58)
         ])
         ponllpaintWeaveon()
     }
@@ -135,13 +136,13 @@ final class PoonllFineLineController: UIViewController {
         aerErstIconWrap.addSubview(ponllIcon)
 
         let bruCiuwallQuest = UILabel()
-        bruCiuwallQuest.text = "+50% First-Time Bonus"
+        bruCiuwallQuest.text = "Power Up Your Stash"
         bruCiuwallQuest.textColor = .black
         bruCiuwallQuest.font = PonllyFonts.muralForgepon(neonLab: 12)
         bruCiuwallQuest.translatesAutoresizingMaskIntoConstraints = false
         flckinkwallContrast.addSubview(bruCiuwallQuest)
         let flckinkBannerBody = UILabel()
-        flckinkBannerBody.text = "Get extra coins on your initial top-up today."
+        flckinkBannerBody.text = "Choose a coin pack before unlocking premium room themes."
         flckinkBannerBody.textColor = UIColor.black.withAlphaComponent(0.82)
         flckinkBannerBody.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
         flckinkBannerBody.numberOfLines = 0
@@ -172,17 +173,19 @@ final class PoonllFineLineController: UIViewController {
         let aerErstGrid = UIStackView()
         aerErstGrid.axis = .vertical
         aerErstGrid.spacing = 14
+        aerErstGrid.clipsToBounds = false
         for ponllIndex in stride(from: 0, to: PoncanShaketalog.aerErstChromeNoise.count, by: 2) {
             let bruCiuRow = UIStackView()
             bruCiuRow.axis = .horizontal
             bruCiuRow.spacing = 14
             bruCiuRow.distribution = .fillEqually
+            bruCiuRow.clipsToBounds = false
             for flckinkOffset in 0..<2 {
                 let aerErstPackageIndex = ponllIndex + flckinkOffset
                 if aerErstPackageIndex < PoncanShaketalog.aerErstChromeNoise.count {
                     let ponllCard = PNeonDripCard(aerErstMuralFuse: PoncanShaketalog.aerErstChromeNoise[aerErstPackageIndex])
                     ponllCard.addTarget(self, action: #selector(ponllpaintTwisted(_:)), for: .touchUpInside)
-                    bruCiuPackageCards.append(ponllCard)
+                    bruCiuColorRack.append(ponllCard)
                     bruCiuRow.addArrangedSubview(ponllCard)
                 } else {
                     bruCiuRow.addArrangedSubview(UIView())
@@ -200,9 +203,9 @@ final class PoonllFineLineController: UIViewController {
                 let flckinkIds = PoncanShaketalog.aerErstChromeNoise.map(\.ponllPaintKick)
                 let aerErstProducts = try await Product.products(for: flckinkIds)
                 await MainActor.run {
-                    ponllProductMap = Dictionary(uniqueKeysWithValues: aerErstProducts.map { ($0.id, $0) })
-                    bruCiuPackageCards.forEach { ponllCard in
-                        let bruCiuPrice = ponllProductMap[ponllCard.ponllWallFlicker.ponllPaintKick]?.displayPrice ?? ponllCard.ponllWallFlicker.flckinkWallTwist
+                    flckinkPlasterDust = Dictionary(uniqueKeysWithValues: aerErstProducts.map { ($0.id, $0) })
+                    bruCiuColorRack.forEach { ponllCard in
+                        let bruCiuPrice = flckinkPlasterDust[ponllCard.ponllWallFlicker.ponllPaintKick]?.displayPrice ?? ponllCard.ponllWallFlicker.flckinkWallTwist
                         ponllCard.flckinkStencilTrace(bruCiuPrice)
                     }
                 }
@@ -215,7 +218,7 @@ final class PoonllFineLineController: UIViewController {
     }
 
     private func ponllpaintWeaveon() {
-        bruCiuPackageCards.forEach { $0.ponllChromeTrail($0.ponllWallFlicker.ponllPaintKick == aerErstSelectedPackage.ponllPaintKick) }
+        bruCiuColorRack.forEach { $0.ponllChromeTrail($0.ponllWallFlicker.ponllPaintKick == aerErstSelectedPackage.ponllPaintKick) }
     }
 
     @objc private func ponllpaintTwisted(_ bruCiuSender: PNeonDripCard) {
@@ -225,11 +228,11 @@ final class PoonllFineLineController: UIViewController {
     }
 
     @objc private func bruCiupaintKicked() {
-        guard let paintBend = ponllProductMap[aerErstSelectedPackage.ponllPaintKick] else {
+        guard let paintBend = flckinkPlasterDust[aerErstSelectedPackage.ponllPaintKick] else {
             aerErstSketchRush("Coin packages are unavailable right now", bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
-        flckinkChargeButton.isEnabled = false
+        ponllAngleBreak.isEnabled = false
         aerErstSketchRush("Processing charge...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.9)
         Task {
             do {
@@ -237,7 +240,7 @@ final class PoonllFineLineController: UIViewController {
                 await flckinkHandlepaintFlowline(aerErstpaintArc)
             } catch {
                 await MainActor.run {
-                    flckinkChargeButton.isEnabled = true
+                    ponllAngleBreak.isEnabled = true
                     aerErstSketchRush("Charge could not be completed", bruCiuLetterForm: .ponllWhiteEdge)
                 }
             }
@@ -246,7 +249,7 @@ final class PoonllFineLineController: UIViewController {
 
     @MainActor
     private func flckinkHandlepaintFlowline(_ ponllpaintMood: Product.PurchaseResult) async {
-        flckinkChargeButton.isEnabled = true
+        ponllAngleBreak.isEnabled = true
         switch ponllpaintMood {
         case .success(let bruCiupaintSpark):
             switch bruCiupaintSpark {

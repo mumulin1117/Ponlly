@@ -85,12 +85,51 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstWeatheredPaper.textColor = PonllyPalette.green
         aerErstWeatheredPaper.font = PonllyFonts.steelGate(rollingShutter: 12)
         let bruCiuRippedCorner = UILabel()
-        bruCiuRippedCorner.text = "◷ 23:47:12"
+        bruCiuRippedCorner.text = "◷ \(bruCiuRemainingWindow())"
         bruCiuRippedCorner.textColor = PonllyPalette.pink
         bruCiuRippedCorner.font = PonllyFonts.steelGate(rollingShutter: 12)
         aerErstWallPaste.addArrangedSubview(aerErstWeatheredPaper)
         aerErstWallPaste.addArrangedSubview(bruCiuRippedCorner)
         return aerErstWallPaste
+    }
+
+    private func bruCiuRemainingWindow() -> String {
+        let ponllHours = max(aerErstRemainingHours(), 1)
+        let flckinkDays = ponllHours / 24
+        let aerErstHours = ponllHours % 24
+        if flckinkDays > 0 && aerErstHours > 0 {
+            return "\(flckinkDays)d \(aerErstHours)h left"
+        }
+        if flckinkDays > 0 {
+            return "\(flckinkDays)d left"
+        }
+        return "\(aerErstHours)h left"
+    }
+
+    private func aerErstRemainingHours() -> Int {
+        let ponllText = ponllMuralBloom.sketchRush.lowercased()
+        if let bruCiuDays = bruCiuFirstNumber(in: ponllText, before: "d") {
+            let flckinkHours = bruCiuFirstNumber(in: ponllText, before: "h") ?? 0
+            return bruCiuDays * 24 + flckinkHours
+        }
+        if let aerErstHours = bruCiuFirstNumber(in: ponllText, before: "h") {
+            return aerErstHours
+        }
+        let flckinkDuration = ponllMuralBloom.dropShadow.lowercased()
+        if let ponllDurationDays = bruCiuFirstNumber(in: flckinkDuration, before: "d") {
+            return ponllDurationDays * 24
+        }
+        if let bruCiuDurationHours = bruCiuFirstNumber(in: flckinkDuration, before: "h") {
+            return bruCiuDurationHours
+        }
+        return 24
+    }
+
+    private func bruCiuFirstNumber(in ponllText: String, before bruCiuUnit: Character) -> Int? {
+        guard let flckinkUnitIndex = ponllText.firstIndex(of: bruCiuUnit) else { return nil }
+        let aerErstPrefix = ponllText[..<flckinkUnitIndex]
+        let ponllDigits = aerErstPrefix.reversed().prefix { $0.isNumber }.reversed()
+        return Int(String(ponllDigits))
     }
 
     private func aerErstMuralQuest() -> UIView {

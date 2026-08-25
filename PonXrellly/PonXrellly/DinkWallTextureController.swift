@@ -14,6 +14,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     private let aerErstCrackedWall = UITextField()
     private let ponllBrickCrack = UITextView()
     private let bruCiuCementRough = PonllyNeonButton("Publish Video")
+    private let flckinkFreightPanel = UIStackView()
     private var flckinkPlasterDust = AerErstFillPlan(ponllMetallicSpraypon: "", aerErstGlossFinishpon: "", flckinkMatteFinishpon: ["#StreetArt", "#Graffiti", "#Wildstyle"], bruCiuClearCoatpon: nil, ponllFinalCoatpon: nil, aerErstPaintBasepon: nil)
     private let aerErstRustStreak = "Tell The Story Behind This Piece..."
 
@@ -196,12 +197,10 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         bruCiuSteelGate.textColor = PonllyPalette.muted
         bruCiuSteelGate.font = PonllyFonts.muralForgepon(neonLab: 14)
         ponllWoodPanel.addArrangedSubview(bruCiuSteelGate)
-        let flckinkRollingShutter = UIStackView()
-        flckinkRollingShutter.axis = .horizontal
-        flckinkRollingShutter.spacing = 10
-        flckinkRollingShutter.distribution = .fillEqually
-        flckinkPlasterDust.flckinkMatteFinishpon.forEach { flckinkRollingShutter.addArrangedSubview(aerErstUtilityBox($0)) }
-        ponllWoodPanel.addArrangedSubview(flckinkRollingShutter)
+        flckinkFreightPanel.axis = .vertical
+        flckinkFreightPanel.spacing = 10
+        ponllWoodPanel.addArrangedSubview(flckinkFreightPanel)
+        bruCiuRefreshTags()
         let ponllTrafficBarrier = UIButton(type: .system)
         ponllTrafficBarrier.setTitle("+ Add Tag", for: .normal)
         ponllTrafficBarrier.setTitleColor(PonllyPalette.pink, for: .normal)
@@ -244,11 +243,9 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     }
 
     private func flckinkShutterPanel() {
-        let aerErstRainWall = !(aerErstCrackedWall.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-        let ponllSunlitWall = aerErstRainWall && flckinkPlasterDust.bruCiuClearCoatpon != nil
-        bruCiuCementRough.isEnabled = ponllSunlitWall
+        bruCiuCementRough.isEnabled = true
         bruCiuCementRough.alpha = 1
-        bruCiuCementRough.setTitleColor(ponllSunlitWall ? .black : UIColor.black.withAlphaComponent(0.45), for: .normal)
+        bruCiuCementRough.setTitleColor(.black, for: .normal)
     }
 
     @objc private func aerErstDrainCover() {
@@ -297,11 +294,53 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     }
 
     @objc private func bruCiuSignBack() {
-        flckinkPrimerCoatponlu("Tag added")
+        view.endEditing(true)
+        guard flckinkPlasterDust.flckinkMatteFinishpon.count < 5 else {
+            flckinkPrimerCoatponlu("Please keep up to five tags")
+            return
+        }
+        let ponllSheet = UIAlertController(title: "Add Tag", message: "Add a short graffiti tag for this video.", preferredStyle: .alert)
+        ponllSheet.addTextField { flckinkField in
+            flckinkField.placeholder = "#ChromeLetters"
+            flckinkField.textColor = .label
+            flckinkField.autocapitalizationType = .words
+            flckinkField.returnKeyType = .done
+        }
+        ponllSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ponllSheet.addAction(UIAlertAction(title: "Add", style: .default) { [weak self, weak ponllSheet] _ in
+            guard let self else { return }
+            let bruCiuRawTag = ponllSheet?.textFields?.first?.text ?? ""
+            guard let aerErstTag = self.aerErstNormalizedTag(bruCiuRawTag) else {
+                self.flckinkPrimerCoatponlu("Please enter a tag")
+                return
+            }
+            guard !self.flckinkPlasterDust.flckinkMatteFinishpon.contains(where: { $0.caseInsensitiveCompare(aerErstTag) == .orderedSame }) else {
+                self.flckinkPrimerCoatponlu("Tag already added")
+                return
+            }
+            self.flckinkPlasterDust.flckinkMatteFinishpon.append(aerErstTag)
+            self.bruCiuRefreshTags()
+            self.flckinkPrimerCoatponlu("Tag added")
+        })
+        present(ponllSheet, animated: true)
     }
 
     @objc private func bruCiuPaintedFence() {
         view.endEditing(true)
+        flckinkPlasterDust.ponllMetallicSpraypon = aerErstCrackedWall.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        flckinkPlasterDust.aerErstGlossFinishpon = ponllDescriptionText()
+        guard flckinkPlasterDust.bruCiuClearCoatpon != nil else {
+            flckinkPrimerCoatponlu("Please choose a video")
+            return
+        }
+        guard !flckinkPlasterDust.ponllMetallicSpraypon.isEmpty else {
+            flckinkPrimerCoatponlu("Please add a video title")
+            return
+        }
+        guard !flckinkPlasterDust.aerErstGlossFinishpon.isEmpty else {
+            flckinkPrimerCoatponlu("Please add a video description")
+            return
+        }
         bruCiuCementRough.isEnabled = false
         flckinkPrimerCoatponlu("Publishing video...")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
@@ -325,7 +364,48 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
             aerErstStyleMap.text = aerErstRustStreak
             aerErstStyleMap.textColor = PonllyPalette.muted
         }
-        flckinkPlasterDust.aerErstGlossFinishpon = aerErstStyleMap.text == aerErstRustStreak ? "" : aerErstStyleMap.text
+        flckinkPlasterDust.aerErstGlossFinishpon = ponllDescriptionText()
+    }
+
+    func textViewDidChange(_ flckinkWallMap: UITextView) {
+        flckinkPlasterDust.aerErstGlossFinishpon = ponllDescriptionText()
+    }
+
+    private func ponllDescriptionText() -> String {
+        let bruCiuText = ponllBrickCrack.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        return bruCiuText == aerErstRustStreak ? "" : bruCiuText
+    }
+
+    private func aerErstNormalizedTag(_ ponllRawTag: String) -> String? {
+        let bruCiuTag = ponllRawTag
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: "#", with: "")
+            .components(separatedBy: .whitespacesAndNewlines)
+            .joined()
+        guard !bruCiuTag.isEmpty else { return nil }
+        return "#\(String(bruCiuTag.prefix(22)))"
+    }
+
+    private func bruCiuRefreshTags() {
+        flckinkFreightPanel.arrangedSubviews.forEach { bruCiuView in
+            flckinkFreightPanel.removeArrangedSubview(bruCiuView)
+            bruCiuView.removeFromSuperview()
+        }
+        for ponllIndex in stride(from: 0, to: flckinkPlasterDust.flckinkMatteFinishpon.count, by: 2) {
+            let aerErstRow = UIStackView()
+            aerErstRow.axis = .horizontal
+            aerErstRow.spacing = 10
+            aerErstRow.distribution = .fillEqually
+            for bruCiuOffset in 0..<2 {
+                let flckinkTagIndex = ponllIndex + bruCiuOffset
+                if flckinkTagIndex < flckinkPlasterDust.flckinkMatteFinishpon.count {
+                    aerErstRow.addArrangedSubview(aerErstUtilityBox(flckinkPlasterDust.flckinkMatteFinishpon[flckinkTagIndex]))
+                } else {
+                    aerErstRow.addArrangedSubview(UIView())
+                }
+            }
+            flckinkFreightPanel.addArrangedSubview(aerErstRow)
+        }
     }
 
     @objc private func aerErstFreightPanel(_ ponllColorMap: Notification) {

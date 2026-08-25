@@ -54,7 +54,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         flckinkbruCiuColorSplash.contentMode = .scaleAspectFill
         flckinkbruCiuColorSplash.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkbruCiuColorSplash)
-        let aerErstVeil = PonllyponllCyanGlowView(bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.45), PonllyPalette.background.withAlphaComponent(0.96)], CGPoint(x: 0.5, y: 0), CGPoint(x: 0.5, y: 1))
+        let aerErstVeil = PonllyponllCyanGlowView(bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.08), UIColor.black.withAlphaComponent(0.18), PonllyPalette.background.withAlphaComponent(0.52)], CGPoint(x: 0.5, y: 0), CGPoint(x: 0.5, y: 1))
         view.addSubview(aerErstVeil)
         aerErstVeil.woodPanelPonlly(steelGate: view)
 
@@ -63,93 +63,137 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         view.addSubview(ponllBackButton)
         view.addSubview(bruCiuMoreButton)
 
-        let flckinkponllPaintMistel = UILabel()
-        flckinkponllPaintMistel.text = ponllflckinkWallTexture.nozzleCraft
-        flckinkponllPaintMistel.textColor = .white
-        flckinkponllPaintMistel.textAlignment = .center
-        flckinkponllPaintMistel.font = PonllyFonts.muralForgepon(neonLab: 21)
-        flckinkponllPaintMistel.numberOfLines = 2
-        flckinkponllPaintMistel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(flckinkponllPaintMistel)
+        let flckinkRoomHeader = UIView()
+        flckinkRoomHeader.backgroundColor = UIColor.black.withAlphaComponent(0.58)
+        flckinkRoomHeader.layer.cornerRadius = 34
+        flckinkRoomHeader.layer.borderWidth = 1
+        flckinkRoomHeader.layer.borderColor = UIColor.white.withAlphaComponent(0.12).cgColor
+        flckinkRoomHeader.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkRoomHeader)
+        let aerErstHost = PonllyponllTornEdge.flckinkChippedPaint(ponllflckinkWallTexture.gradientFill)
+        let ponllHostAvatar = ErErstPaintLabView(user: aerErstHost, size: 48)
+        ponllHostAvatar.translatesAutoresizingMaskIntoConstraints = false
+        flckinkRoomHeader.addSubview(ponllHostAvatar)
+        let bruCiuHeaderStack = UIStackView()
+        bruCiuHeaderStack.axis = .vertical
+        bruCiuHeaderStack.spacing = 4
+        bruCiuHeaderStack.translatesAutoresizingMaskIntoConstraints = false
+        flckinkRoomHeader.addSubview(bruCiuHeaderStack)
+        let flckinkRoomTitle = UILabel()
+        flckinkRoomTitle.text = ponllflckinkWallTexture.nozzleCraft
+        flckinkRoomTitle.textColor = .white
+        flckinkRoomTitle.font = PonllyFonts.muralForgepon(neonLab: 15)
+        flckinkRoomTitle.adjustsFontSizeToFitWidth = true
+        flckinkRoomTitle.minimumScaleFactor = 0.72
+        let aerErstListening = UILabel()
+        aerErstListening.text = "● \(max(ponllflckinkWallTexture.sprayHalo.count * 73, 124)) Listening"
+        aerErstListening.textColor = PonllyPalette.pink
+        aerErstListening.font = PonllyFonts.steelGate(rollingShutter: 12)
+        bruCiuHeaderStack.addArrangedSubview(flckinkRoomTitle)
+        bruCiuHeaderStack.addArrangedSubview(aerErstListening)
+
         let aerErstTopicLabel = UILabel()
-        aerErstTopicLabel.text = ponllflckinkWallTexture.colorFade
-        aerErstTopicLabel.textColor = PonllyPalette.muted
+        aerErstTopicLabel.text = ponllflckinkWallTexture.chromeShine.rawValue
+        aerErstTopicLabel.textColor = PonllyPalette.cyan
         aerErstTopicLabel.textAlignment = .center
-        aerErstTopicLabel.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
-        aerErstTopicLabel.numberOfLines = 2
+        aerErstTopicLabel.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstTopicLabel.layer.cornerRadius = 8
+        aerErstTopicLabel.layer.borderWidth = 1.4
+        aerErstTopicLabel.layer.borderColor = PonllyPalette.cyan.cgColor
+        aerErstTopicLabel.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        aerErstTopicLabel.clipsToBounds = true
         aerErstTopicLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstTopicLabel)
 
         bruCiuSeatsStack.axis = .vertical
-        bruCiuSeatsStack.spacing = 14
+        bruCiuSeatsStack.spacing = 16
         bruCiuSeatsStack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuSeatsStack)
         flckinkReloadSeats()
 
-        let ponllaerErstDropShadown = PonllyNeonButton("Join Seat")
-        ponllaerErstDropShadown.addTarget(self, action: #selector(ponllJoinSeatTapped), for: .touchUpInside)
-        view.addSubview(ponllaerErstDropShadown)
-
         aerErstaerErstStrokeWeight.translatesAutoresizingMaskIntoConstraints = false
+        aerErstaerErstStrokeWeight.backgroundColor = UIColor.black.withAlphaComponent(0.34)
+        aerErstaerErstStrokeWeight.layer.cornerRadius = 18
+        aerErstaerErstStrokeWeight.layer.borderWidth = 1
+        aerErstaerErstStrokeWeight.layer.borderColor = UIColor.white.withAlphaComponent(0.13).cgColor
+        aerErstaerErstStrokeWeight.clipsToBounds = true
         view.addSubview(aerErstaerErstStrokeWeight)
         flckinkponllPaintLayer.axis = .vertical
-        flckinkponllPaintLayer.spacing = 10
+        flckinkponllPaintLayer.spacing = 8
         flckinkponllPaintLayer.translatesAutoresizingMaskIntoConstraints = false
         aerErstaerErstStrokeWeight.addSubview(flckinkponllPaintLayer)
         ponllflckinkWallTexture.nozzleMist.forEach { flckinkponllPaintLayer.addArrangedSubview(bruCiubruCiuMarkerStrokeow($0)) }
 
         let bruCiuInputBar = aerErstInputArea()
         view.addSubview(bruCiuInputBar)
-        let flckinkflckinkOutlineGlowon = UIButton(type: .system)
-        flckinkflckinkOutlineGlowon.setTitle("Leave Room", for: .normal)
-        flckinkflckinkOutlineGlowon.setTitleColor(PonllyPalette.pink, for: .normal)
-        flckinkflckinkOutlineGlowon.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
-        flckinkflckinkOutlineGlowon.layer.cornerRadius = 16
-        flckinkflckinkOutlineGlowon.layer.borderWidth = 1
-        flckinkflckinkOutlineGlowon.layer.borderColor = PonllyPalette.pink.cgColor
-        flckinkflckinkOutlineGlowon.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.88)
-        flckinkflckinkOutlineGlowon.translatesAutoresizingMaskIntoConstraints = false
-        flckinkflckinkOutlineGlowon.addTarget(self, action: #selector(flckinkLeaveTapped), for: .touchUpInside)
-        view.addSubview(flckinkflckinkOutlineGlowon)
+        let flckinkControlBar = UIView()
+        flckinkControlBar.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.96)
+        flckinkControlBar.layer.cornerRadius = 28
+        flckinkControlBar.layer.borderWidth = 1
+        flckinkControlBar.layer.borderColor = UIColor.white.withAlphaComponent(0.1).cgColor
+        flckinkControlBar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkControlBar)
+        let ponllJoinHand = bruCiuControlButton("hand.raised.fill", color: UIColor.black.withAlphaComponent(0.28), tint: .white, size: 58, action: #selector(ponllJoinSeatTapped))
+        let aerErstLeaveButton = bruCiuControlButton("rectangle.portrait.and.arrow.right", color: UIColor(red: 1, green: 62/255, blue: 55/255, alpha: 1), tint: .white, size: 58, action: #selector(flckinkLeaveTapped))
+        bruCiuponllLineBurst.layer.cornerRadius = 44
+        bruCiuponllLineBurst.layer.borderWidth = 3
+        bruCiuponllLineBurst.layer.borderColor = PonllyPalette.cyan.cgColor
+        bruCiuponllLineBurst.backgroundColor = PonllyPalette.pink
+        bruCiuponllLineBurst.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuponllLineBurst.addTarget(self, action: #selector(flckinkMicTapped), for: .touchUpInside)
+        [ponllJoinHand, bruCiuponllLineBurst, aerErstLeaveButton].forEach(flckinkControlBar.addSubview)
 
         NSLayoutConstraint.activate([
             flckinkbruCiuColorSplash.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             flckinkbruCiuColorSplash.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             flckinkbruCiuColorSplash.topAnchor.constraint(equalTo: view.topAnchor),
-            flckinkbruCiuColorSplash.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.48),
+            flckinkbruCiuColorSplash.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             ponllBackButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
             ponllBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 14),
             bruCiuMoreButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -18),
             bruCiuMoreButton.topAnchor.constraint(equalTo: ponllBackButton.topAnchor),
-            flckinkponllPaintMistel.leadingAnchor.constraint(equalTo: ponllBackButton.trailingAnchor, constant: 12),
-            flckinkponllPaintMistel.trailingAnchor.constraint(equalTo: bruCiuMoreButton.leadingAnchor, constant: -12),
-            flckinkponllPaintMistel.centerYAnchor.constraint(equalTo: ponllBackButton.centerYAnchor),
-            aerErstTopicLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 28),
-            aerErstTopicLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
-            aerErstTopicLabel.topAnchor.constraint(equalTo: flckinkponllPaintMistel.bottomAnchor, constant: 18),
+            flckinkRoomHeader.leadingAnchor.constraint(equalTo: ponllBackButton.trailingAnchor, constant: 10),
+            flckinkRoomHeader.trailingAnchor.constraint(equalTo: bruCiuMoreButton.leadingAnchor, constant: -10),
+            flckinkRoomHeader.centerYAnchor.constraint(equalTo: ponllBackButton.centerYAnchor),
+            flckinkRoomHeader.heightAnchor.constraint(equalToConstant: 68),
+            ponllHostAvatar.leadingAnchor.constraint(equalTo: flckinkRoomHeader.leadingAnchor, constant: 18),
+            ponllHostAvatar.centerYAnchor.constraint(equalTo: flckinkRoomHeader.centerYAnchor),
+            bruCiuHeaderStack.leadingAnchor.constraint(equalTo: ponllHostAvatar.trailingAnchor, constant: 14),
+            bruCiuHeaderStack.trailingAnchor.constraint(equalTo: flckinkRoomHeader.trailingAnchor, constant: -18),
+            bruCiuHeaderStack.centerYAnchor.constraint(equalTo: flckinkRoomHeader.centerYAnchor),
+            aerErstTopicLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            aerErstTopicLabel.topAnchor.constraint(equalTo: flckinkRoomHeader.bottomAnchor, constant: 18),
+            aerErstTopicLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 180),
+            aerErstTopicLabel.heightAnchor.constraint(equalToConstant: 38),
             bruCiuSeatsStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
             bruCiuSeatsStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
-            bruCiuSeatsStack.topAnchor.constraint(equalTo: aerErstTopicLabel.bottomAnchor, constant: 22),
-            ponllaerErstDropShadown.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
-            ponllaerErstDropShadown.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-            ponllaerErstDropShadown.topAnchor.constraint(equalTo: bruCiuSeatsStack.bottomAnchor, constant: 18),
-            ponllaerErstDropShadown.heightAnchor.constraint(equalToConstant: 54),
+            bruCiuSeatsStack.topAnchor.constraint(equalTo: aerErstTopicLabel.bottomAnchor, constant: 18),
             bruCiuInputBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bruCiuInputBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bruCiuInputBar.bottomAnchor.constraint(equalTo: flckinkflckinkOutlineGlowon.topAnchor, constant: -10),
-            bruCiuInputBar.heightAnchor.constraint(equalToConstant: 72),
-            flckinkflckinkOutlineGlowon.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
-            flckinkflckinkOutlineGlowon.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
-            flckinkflckinkOutlineGlowon.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
-            flckinkflckinkOutlineGlowon.heightAnchor.constraint(equalToConstant: 46),
+            bruCiuInputBar.bottomAnchor.constraint(equalTo: flckinkControlBar.topAnchor, constant: -10),
+            bruCiuInputBar.heightAnchor.constraint(equalToConstant: 64),
+            flckinkControlBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flckinkControlBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flckinkControlBar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkControlBar.heightAnchor.constraint(equalToConstant: 126),
+            ponllJoinHand.leadingAnchor.constraint(equalTo: flckinkControlBar.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            ponllJoinHand.centerYAnchor.constraint(equalTo: bruCiuponllLineBurst.centerYAnchor),
+            bruCiuponllLineBurst.centerXAnchor.constraint(equalTo: flckinkControlBar.centerXAnchor),
+            bruCiuponllLineBurst.topAnchor.constraint(equalTo: flckinkControlBar.topAnchor, constant: 22),
+            bruCiuponllLineBurst.widthAnchor.constraint(equalToConstant: 88),
+            bruCiuponllLineBurst.heightAnchor.constraint(equalToConstant: 88),
+            aerErstLeaveButton.trailingAnchor.constraint(equalTo: flckinkControlBar.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            aerErstLeaveButton.centerYAnchor.constraint(equalTo: bruCiuponllLineBurst.centerYAnchor),
             aerErstaerErstStrokeWeight.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             aerErstaerErstStrokeWeight.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            aerErstaerErstStrokeWeight.topAnchor.constraint(equalTo: ponllaerErstDropShadown.bottomAnchor, constant: 16),
+            aerErstaerErstStrokeWeight.topAnchor.constraint(greaterThanOrEqualTo: bruCiuSeatsStack.bottomAnchor, constant: 12),
             aerErstaerErstStrokeWeight.bottomAnchor.constraint(equalTo: bruCiuInputBar.topAnchor, constant: -10),
-            flckinkponllPaintLayer.leadingAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.frameLayoutGuide.leadingAnchor),
-            flckinkponllPaintLayer.trailingAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.frameLayoutGuide.trailingAnchor),
-            flckinkponllPaintLayer.topAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.contentLayoutGuide.topAnchor),
-            flckinkponllPaintLayer.bottomAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.contentLayoutGuide.bottomAnchor)
+            aerErstaerErstStrokeWeight.heightAnchor.constraint(greaterThanOrEqualToConstant: 148),
+            flckinkponllPaintLayer.leadingAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.contentLayoutGuide.leadingAnchor, constant: 16),
+            flckinkponllPaintLayer.trailingAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.contentLayoutGuide.trailingAnchor, constant: -16),
+            flckinkponllPaintLayer.topAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.contentLayoutGuide.topAnchor, constant: 14),
+            flckinkponllPaintLayer.bottomAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.contentLayoutGuide.bottomAnchor, constant: -14),
+            flckinkponllPaintLayer.widthAnchor.constraint(equalTo: aerErstaerErstStrokeWeight.frameLayoutGuide.widthAnchor, constant: -32)
         ])
         ponllRefreshflckinkStreetMural()
     }
@@ -159,32 +203,38 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             bruCiuSeatsStack.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        let aerErstSeats = ponllflckinkWallTexture.paintCloud + bruCiuOpenSeats(ponllBubbleLetter: max(4 - ponllflckinkWallTexture.paintCloud.count, 1))
-        for ponllRowIndex in stride(from: 0, to: aerErstSeats.count, by: 2) {
-            let bruCiuRow = UIStackView()
-            bruCiuRow.axis = .horizontal
-            bruCiuRow.spacing = 18
-            bruCiuRow.distribution = .fillEqually
-            bruCiuRow.addArrangedSubview(flckinkaerErstWildstyleCurveew(aerErstSeats[ponllRowIndex]))
-            if ponllRowIndex + 1 < aerErstSeats.count {
-                bruCiuRow.addArrangedSubview(flckinkaerErstWildstyleCurveew(aerErstSeats[ponllRowIndex + 1]))
+        let aerErstSeats = ponllflckinkWallTexture.paintCloud + bruCiuOpenSeats(ponllBubbleLetter: max(6 - ponllflckinkWallTexture.paintCloud.count, 2))
+        let ponllFirstRow = Array(aerErstSeats.prefix(2))
+        bruCiuSeatsStack.addArrangedSubview(ponllSeatRow(ponllFirstRow, count: 2, compact: false))
+        let bruCiuRemainingSeats = Array(aerErstSeats.dropFirst(2))
+        for ponllRowIndex in stride(from: 0, to: bruCiuRemainingSeats.count, by: 4) {
+            let flckinkEndIndex = min(ponllRowIndex + 4, bruCiuRemainingSeats.count)
+            bruCiuSeatsStack.addArrangedSubview(ponllSeatRow(Array(bruCiuRemainingSeats[ponllRowIndex..<flckinkEndIndex]), count: 4, compact: true))
+        }
+    }
+
+    private func ponllSeatRow(_ bruCiuSeats: [PonllyponllPaperLayerSeat], count aerErstCount: Int, compact flckinkCompact: Bool) -> UIStackView {
+        let bruCiuRow = UIStackView()
+        bruCiuRow.axis = .horizontal
+        bruCiuRow.spacing = flckinkCompact ? 10 : 18
+        bruCiuRow.distribution = .fillEqually
+        for ponllIndex in 0..<aerErstCount {
+            if ponllIndex < bruCiuSeats.count {
+                bruCiuRow.addArrangedSubview(flckinkaerErstWildstyleCurveew(bruCiuSeats[ponllIndex], compact: flckinkCompact))
             } else {
                 bruCiuRow.addArrangedSubview(UIView())
             }
-            bruCiuSeatsStack.addArrangedSubview(bruCiuRow)
         }
+        return bruCiuRow
     }
 
     private func bruCiuOpenSeats(ponllBubbleLetter flckinkCount: Int) -> [PonllyponllPaperLayerSeat] {
         (0..<flckinkCount).map { _ in PonllyponllPaperLayerSeat(wheatpasteLayer: "", wallMark: true) }
     }
 
-    private func flckinkaerErstWildstyleCurveew(_ aerErstSeat: PonllyponllPaperLayerSeat) -> UIControl {
+    private func flckinkaerErstWildstyleCurveew(_ aerErstSeat: PonllyponllPaperLayerSeat, compact flckinkCompact: Bool = false) -> UIControl {
         let flckinkMuralGrid = UIControl()
-        flckinkMuralGrid.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.66)
-        flckinkMuralGrid.layer.cornerRadius = 18
-        flckinkMuralGrid.layer.borderWidth = 1
-        flckinkMuralGrid.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkMuralGrid.backgroundColor = .clear
         let bruCiuStack = UIStackView()
         bruCiuStack.axis = .vertical
         bruCiuStack.alignment = .center
@@ -192,31 +242,55 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         bruCiuStack.translatesAutoresizingMaskIntoConstraints = false
         flckinkMuralGrid.addSubview(bruCiuStack)
         if aerErstSeat.wheatpasteLayer.isEmpty {
-            let flckinkIcon = UIImageView(image: UIImage(systemName: "plus"))
-            flckinkIcon.tintColor = PonllyPalette.cyan
-            flckinkIcon.widthAnchor.constraint(equalToConstant: 32).isActive = true
-            flckinkIcon.heightAnchor.constraint(equalToConstant: 32).isActive = true
-            let aerbruCiuWheatpasteLayer = ponllSmallLabel("Open Seat", color: PonllyPalette.muted)
+            let flckinkIcon = UILabel()
+            flckinkIcon.text = "+"
+            flckinkIcon.textColor = .white
+            flckinkIcon.textAlignment = .center
+            flckinkIcon.font = UIFont.systemFont(ofSize: 34, weight: .light)
+            flckinkIcon.backgroundColor = UIColor.white.withAlphaComponent(0.28)
+            flckinkIcon.layer.cornerRadius = flckinkCompact ? 26 : 35
+            flckinkIcon.layer.borderWidth = 1.2
+            flckinkIcon.layer.borderColor = UIColor.white.withAlphaComponent(0.85).cgColor
+            flckinkIcon.clipsToBounds = true
+            flckinkIcon.widthAnchor.constraint(equalToConstant: flckinkCompact ? 52 : 70).isActive = true
+            flckinkIcon.heightAnchor.constraint(equalToConstant: flckinkCompact ? 52 : 70).isActive = true
+            let aerbruCiuWheatpasteLayer = ponllSmallLabel("Join Seat", color: PonllyPalette.muted)
+            aerbruCiuWheatpasteLayer.alpha = 0.78
             bruCiuStack.addArrangedSubview(flckinkIcon)
             bruCiuStack.addArrangedSubview(aerbruCiuWheatpasteLayer)
-            flckinkMuralGrid.addTarget(self, action: #selector(ponllJoinSeatTapped), for: .touchUpInside)
         } else {
             let ponllponllStencilBloom = PonllyponllTornEdge.flckinkChippedPaint(aerErstSeat.wheatpasteLayer)
-            let bruCiuaerErstCapControl = ErErstPaintLabView(user: ponllponllStencilBloom, size: 54)
-            bruCiuStack.addArrangedSubview(bruCiuaerErstCapControl)
+            let bruCiuAvatarWrap = UIView()
+            bruCiuAvatarWrap.translatesAutoresizingMaskIntoConstraints = false
+            let aerErstAvatarSize: CGFloat = flckinkCompact ? 44 : 56
+            let bruCiuaerErstCapControl = ErErstPaintLabView(user: ponllponllStencilBloom, size: aerErstAvatarSize)
+            bruCiuaerErstCapControl.translatesAutoresizingMaskIntoConstraints = false
+            bruCiuAvatarWrap.addSubview(bruCiuaerErstCapControl)
+            let aerErstMuted = UIImageView(image: UIImage(named: aerErstSeat.wallMark ? "voice_mic_muted" : "voice_mic_on"))
+            aerErstMuted.contentMode = .scaleAspectFit
+            aerErstMuted.translatesAutoresizingMaskIntoConstraints = false
+            bruCiuAvatarWrap.addSubview(aerErstMuted)
+            NSLayoutConstraint.activate([
+                bruCiuAvatarWrap.widthAnchor.constraint(equalToConstant: aerErstAvatarSize + 8),
+                bruCiuAvatarWrap.heightAnchor.constraint(equalToConstant: aerErstAvatarSize + 8),
+                bruCiuaerErstCapControl.leadingAnchor.constraint(equalTo: bruCiuAvatarWrap.leadingAnchor),
+                bruCiuaerErstCapControl.topAnchor.constraint(equalTo: bruCiuAvatarWrap.topAnchor),
+                bruCiuaerErstCapControl.widthAnchor.constraint(equalToConstant: aerErstAvatarSize),
+                bruCiuaerErstCapControl.heightAnchor.constraint(equalToConstant: aerErstAvatarSize),
+                aerErstMuted.trailingAnchor.constraint(equalTo: bruCiuaerErstCapControl.trailingAnchor, constant: 4),
+                aerErstMuted.bottomAnchor.constraint(equalTo: bruCiuaerErstCapControl.bottomAnchor, constant: 4),
+                aerErstMuted.widthAnchor.constraint(equalToConstant: 22),
+                aerErstMuted.heightAnchor.constraint(equalToConstant: 22)
+            ])
+            bruCiuStack.addArrangedSubview(bruCiuAvatarWrap)
             let flckinkName = ponllSmallLabel(ponllponllStencilBloom.aerosolDream, color: .white)
             bruCiuStack.addArrangedSubview(flckinkName)
-            let aerErstMuted = UIImageView(image: UIImage(systemName: aerErstSeat.wallMark ? "mic.slash.fill" : "mic.fill"))
-            aerErstMuted.tintColor = aerErstSeat.wallMark ? PonllyPalette.pink : PonllyPalette.cyan
-            aerErstMuted.widthAnchor.constraint(equalToConstant: 18).isActive = true
-            aerErstMuted.heightAnchor.constraint(equalToConstant: 18).isActive = true
-            bruCiuStack.addArrangedSubview(aerErstMuted)
             flckinkMuralGrid.addAction(UIAction { [weak self] _ in
                 self?.bruCiuOpenArtist(ponllponllStencilBloom)
             }, for: .touchUpInside)
         }
         NSLayoutConstraint.activate([
-            flckinkMuralGrid.heightAnchor.constraint(equalToConstant: 126),
+            flckinkMuralGrid.heightAnchor.constraint(equalToConstant: flckinkCompact ? 92 : 114),
             bruCiuStack.centerXAnchor.constraint(equalTo: flckinkMuralGrid.centerXAnchor),
             bruCiuStack.centerYAnchor.constraint(equalTo: flckinkMuralGrid.centerYAnchor)
         ])
@@ -225,17 +299,17 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
 
     private func aerErstInputArea() -> UIView {
         let flckinkBar = UIView()
-        flckinkBar.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.95)
-        flckinkBar.layer.borderWidth = 1
-        flckinkBar.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkBar.backgroundColor = .clear
         flckinkBar.translatesAutoresizingMaskIntoConstraints = false
-        ponllbruCiuLetterFormld.attributedPlaceholder = NSAttributedString(string: "Add a room note...", attributes: [.foregroundColor: PonllyPalette.muted])
+        ponllbruCiuLetterFormld.attributedPlaceholder = NSAttributedString(string: "Say something...", attributes: [.foregroundColor: PonllyPalette.muted])
         ponllbruCiuLetterFormld.textColor = .white
         ponllbruCiuLetterFormld.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
         ponllbruCiuLetterFormld.delegate = self
         ponllbruCiuLetterFormld.returnKeyType = .send
-        ponllbruCiuLetterFormld.backgroundColor = UIColor.black.withAlphaComponent(0.22)
-        ponllbruCiuLetterFormld.layer.cornerRadius = 18
+        ponllbruCiuLetterFormld.backgroundColor = UIColor.black.withAlphaComponent(0.36)
+        ponllbruCiuLetterFormld.layer.cornerRadius = 30
+        ponllbruCiuLetterFormld.layer.borderWidth = 1.2
+        ponllbruCiuLetterFormld.layer.borderColor = UIColor.white.withAlphaComponent(0.55).cgColor
         ponllbruCiuLetterFormld.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 14, height: 1))
         ponllbruCiuLetterFormld.leftViewMode = .always
         ponllbruCiuLetterFormld.translatesAutoresizingMaskIntoConstraints = false
@@ -250,21 +324,11 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         aerErstflckinkNozzleCraft.addTarget(self, action: #selector(aerErstSendTapped), for: .touchUpInside)
         flckinkBar.addSubview(aerErstflckinkNozzleCraft)
 
-        bruCiuponllLineBurst.translatesAutoresizingMaskIntoConstraints = false
-        bruCiuponllLineBurst.layer.cornerRadius = 22
-        bruCiuponllLineBurst.layer.borderWidth = 1
-        bruCiuponllLineBurst.addTarget(self, action: #selector(flckinkMicTapped), for: .touchUpInside)
-        flckinkBar.addSubview(bruCiuponllLineBurst)
-
         NSLayoutConstraint.activate([
             ponllbruCiuLetterFormld.leadingAnchor.constraint(equalTo: flckinkBar.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             ponllbruCiuLetterFormld.centerYAnchor.constraint(equalTo: flckinkBar.centerYAnchor),
-            ponllbruCiuLetterFormld.trailingAnchor.constraint(equalTo: bruCiuponllLineBurst.leadingAnchor, constant: -10),
-            ponllbruCiuLetterFormld.heightAnchor.constraint(equalToConstant: 44),
-            bruCiuponllLineBurst.trailingAnchor.constraint(equalTo: aerErstflckinkNozzleCraft.leadingAnchor, constant: -10),
-            bruCiuponllLineBurst.centerYAnchor.constraint(equalTo: ponllbruCiuLetterFormld.centerYAnchor),
-            bruCiuponllLineBurst.widthAnchor.constraint(equalToConstant: 44),
-            bruCiuponllLineBurst.heightAnchor.constraint(equalToConstant: 44),
+            ponllbruCiuLetterFormld.trailingAnchor.constraint(equalTo: aerErstflckinkNozzleCraft.leadingAnchor, constant: -10),
+            ponllbruCiuLetterFormld.heightAnchor.constraint(equalToConstant: 54),
             aerErstflckinkNozzleCraft.trailingAnchor.constraint(equalTo: flckinkBar.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             aerErstflckinkNozzleCraft.centerYAnchor.constraint(equalTo: ponllbruCiuLetterFormld.centerYAnchor),
             aerErstflckinkNozzleCraft.widthAnchor.constraint(equalToConstant: 44),
@@ -332,6 +396,24 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         return aerErstButton
     }
 
+    private func bruCiuControlButton(_ bruCiuSymbol: String, color flckinkColor: UIColor, tint aerErstTint: UIColor, size ponllSize: CGFloat, action bruCiuAction: Selector) -> UIButton {
+        let flckinkButton = UIButton(type: .system)
+        flckinkButton.setImage(UIImage(systemName: bruCiuSymbol), for: .normal)
+        flckinkButton.tintColor = aerErstTint
+        flckinkButton.backgroundColor = flckinkColor
+        flckinkButton.layer.cornerRadius = ponllSize / 2
+        flckinkButton.layer.borderWidth = 1
+        flckinkButton.layer.borderColor = UIColor.white.withAlphaComponent(0.1).cgColor
+        flckinkButton.imageView?.contentMode = .scaleAspectFit
+        flckinkButton.translatesAutoresizingMaskIntoConstraints = false
+        flckinkButton.addTarget(self, action: bruCiuAction, for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            flckinkButton.widthAnchor.constraint(equalToConstant: ponllSize),
+            flckinkButton.heightAnchor.constraint(equalToConstant: ponllSize)
+        ])
+        return flckinkButton
+    }
+
     private func ponllSmallLabel(_ bruCiuText: String, color flckinkColor: UIColor) -> UILabel {
         let aerErstLabel = UILabel()
         aerErstLabel.text = bruCiuText
@@ -344,11 +426,11 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
 
     private func ponllRefreshflckinkStreetMural() {
         bruCiuponllLineBurst.setImage(UIImage(systemName: aerErstSketchRush ? "mic.slash.fill" : "mic.fill"), for: .normal)
-        bruCiuponllLineBurst.tintColor = aerErstSketchRush ? PonllyPalette.pink : PonllyPalette.cyan
-        bruCiuponllLineBurst.backgroundColor = UIColor.black.withAlphaComponent(0.22)
-        bruCiuponllLineBurst.layer.borderColor = (aerErstSketchRush ? PonllyPalette.pink : PonllyPalette.cyan).cgColor
+        bruCiuponllLineBurst.tintColor = .white
+        bruCiuponllLineBurst.backgroundColor = flckinkIsOnSeat ? PonllyPalette.pink : PonllyPalette.pink.withAlphaComponent(0.46)
+        bruCiuponllLineBurst.layer.borderColor = PonllyPalette.cyan.cgColor
         bruCiuponllLineBurst.isEnabled = flckinkIsOnSeat
-        bruCiuponllLineBurst.alpha = flckinkIsOnSeat ? 1 : 0.45
+        bruCiuponllLineBurst.alpha = flckinkIsOnSeat ? 1 : 0.62
     }
 
     private func bruCiubruCiuAerosolDream(_ flckinkCompletion: @escaping (Bool) -> Void) {
@@ -392,7 +474,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
 
     @objc private func flckinkMicTapped() {
         guard flckinkIsOnSeat else {
-            ponllyShowThemeAlert(title: "Join A Seat First", message: "Take an open seat before using the microphone.", actionTitle: "Got It", style: .bruCiuSilverSheen)
+            ponllyShowThemeAlert(title: "Join A Seat First", message: "Tap the hand button before using the microphone.", actionTitle: "Got It", style: .bruCiuSilverSheen)
             return
         }
         aerErstSketchRush.toggle()

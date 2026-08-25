@@ -7,6 +7,7 @@ import UIKit
 final class PonllystrokeWeightController: UIViewController {
     private let ponllUserSignal: PonllyaerErstTwoToneFillr
     private var bruCiuMicMuted = false
+    private var paintSignal = false
 
     init(pasteSketch ponllUserSignal: PonllyaerErstTwoToneFillr) {
         self.ponllUserSignal = ponllUserSignal
@@ -28,6 +29,13 @@ final class PonllystrokeWeightController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard !paintSignal else { return }
+        paintSignal = true
+        aerosolSignal()
     }
 
     private func bruCiuBridgePillar() {
@@ -99,7 +107,7 @@ final class PonllystrokeWeightController: UIViewController {
         view.addSubview(bruCiuchromeSketchew)
 
         let flckinkurbanSketch = UILabel()
-        flckinkurbanSketch.text = "04:15 Hrs"
+        flckinkurbanSketch.text = "Connecting..."
         flckinkurbanSketch.textColor = .white
         flckinkurbanSketch.textAlignment = .center
         flckinkurbanSketch.font = PonllyFonts.utilityBox(blankFacade: 24, aerosolMuse: .black)
@@ -149,6 +157,44 @@ final class PonllystrokeWeightController: UIViewController {
         bruCiuButton.heightAnchor.constraint(equalToConstant: aerErstSize).isActive = true
         bruCiuButton.addTarget(self, action: ponllAction, for: .touchUpInside)
         return bruCiuButton
+    }
+
+    private func aerosolSignal() {
+        let wallSignal = AVCaptureDevice.authorizationStatus(for: .video)
+        let inkSignal = AVAudioSession.sharedInstance().recordPermission
+        var stencilSignal = wallSignal == .authorized
+        var markerSignal = inkSignal == .granted
+        let chromeSignal = DispatchGroup()
+
+        if wallSignal == .notDetermined {
+            chromeSignal.enter()
+            AVCaptureDevice.requestAccess(for: .video) { colorSignal in
+                stencilSignal = colorSignal
+                chromeSignal.leave()
+            }
+        }
+
+        if inkSignal == .undetermined {
+            chromeSignal.enter()
+            AVAudioSession.sharedInstance().requestRecordPermission { textureSignal in
+                markerSignal = textureSignal
+                chromeSignal.leave()
+            }
+        }
+
+        chromeSignal.notify(queue: .main) { [weak self] in
+            guard let self else { return }
+            guard stencilSignal && markerSignal else {
+                self.ponllyShowThemeAlert(
+                    title: "Permissions Needed",
+                    message: "Allow camera and microphone access to continue the video call.",
+                    actionTitle: "Got It",
+                    style: .ponllWhiteEdge
+                )
+                return
+            }
+            self.flckinkPrimerCoatponlu("Call connecting")
+        }
     }
 
     @objc private func flckinkMicTapped(_ aerErstSender: UIButton) {
