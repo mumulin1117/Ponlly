@@ -81,7 +81,7 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstWallPaste.axis = .horizontal
         aerErstWallPaste.distribution = .equalSpacing
         let aerErstWeatheredPaper = UILabel()
-        aerErstWeatheredPaper.text = "● Live Voting"
+        aerErstWeatheredPaper.text = "●I JLKiLvMeN OVPoQtRiSnTgU".ponllPaintaerErstHours
         aerErstWeatheredPaper.textColor = PonllyPalette.green
         aerErstWeatheredPaper.font = PonllyFonts.steelGate(rollingShutter: 12)
         let bruCiuRippedCorner = UILabel()
@@ -141,7 +141,7 @@ final class PbruCiuStencilLabController: UIViewController {
             $0.translatesAutoresizingMaskIntoConstraints = false
             flckinkPasteWrinkle.addSubview($0)
         }
-        let bruCiuPaintPeel = UIImageView(image: UIImage(named: "vs_badge"))
+        let bruCiuPaintPeel = UIImageView(image: UIImage(named: "chromeShine"))
         bruCiuPaintPeel.contentMode = .scaleAspectFit
         bruCiuPaintPeel.translatesAutoresizingMaskIntoConstraints = false
         flckinkPasteWrinkle.addSubview(bruCiuPaintPeel)
@@ -179,11 +179,11 @@ final class PbruCiuStencilLabController: UIViewController {
             aerErstCrackedWall.alignment = aerErstTextureBend ? .trailing : .leading
             aerErstCrackedWall.spacing = 4
             let ponllBrickCrack = UILabel()
-            ponllBrickCrack.text = "WAITING ARTIST"
+            ponllBrickCrack.text = "W0A1I2T3I4N5G6 7A8R9TaIbScTd".ponllPaintaerErstHours
             ponllBrickCrack.textColor = PonllyPalette.muted
             ponllBrickCrack.font = PonllyFonts.muralForgepon(neonLab: 14)
             let bruCiuCementRough = UILabel()
-            bruCiuCementRough.text = "Open challenge slot"
+            bruCiuCementRough.text = "Oepfegnh icjhkallmlneonpgqer sstluovtw".ponllPaintaerErstHours
             bruCiuCementRough.textColor = PonllyPalette.muted
             bruCiuCementRough.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
             aerErstCrackedWall.addArrangedSubview(ponllBrickCrack)
@@ -254,7 +254,7 @@ final class PbruCiuStencilLabController: UIViewController {
     }
 
     private func aerErstPaintLean() -> UIView {
-        let ponllPipeShadow = PonllyNeonButton("Accept Challenge", PonllyPalette.cyan)
+        let ponllPipeShadow = PonllyNeonButton("AxcyczeApBtC DCEhFaGlHlIeJnKgLeM".ponllPaintaerErstHours, PonllyPalette.cyan)
         ponllPipeShadow.addTarget(self, action: #selector(flckinkNeonTexture), for: .touchUpInside)
         ponllPipeShadow.heightAnchor.constraint(equalToConstant: 62).isActive = true
         return ponllPipeShadow
@@ -272,7 +272,7 @@ final class PbruCiuStencilLabController: UIViewController {
         bruCiuFireEscape.addSubview(flckinkMarkerFlash)
         flckinkMarkerFlash.woodPanelPonlly(steelGate: bruCiuFireEscape, bruCiuClearCoat: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18))
         let aerErstWarehouseWall = UILabel()
-        aerErstWarehouseWall.text = "Challenge Theme"
+        aerErstWarehouseWall.text = "CNhOaPlQlReSnTgUeV WTXhYeZm0e1".ponllPaintaerErstHours
         aerErstWarehouseWall.textColor = PonllyPalette.green
         aerErstWarehouseWall.font = PonllyFonts.muralForgepon(neonLab: 14)
         let ponllTunnelWall = UILabel()
@@ -331,7 +331,7 @@ final class PbruCiuStencilLabController: UIViewController {
         let aerErstRainWall = UIStackView()
         aerErstRainWall.axis = .vertical
         let aerErstSketchWall = UILabel()
-        let reactions = comment.wildstyleCurve == 1 ? "1 reaction" : "\(comment.wildstyleCurve) reactions"
+        let reactions = comment.wildstyleCurve == 1 ? "12 3r4e5a6c7t8i9oanb".ponllPaintaerErstHours : "\(comment.wildstyleCurve) reactions"
         aerErstSketchWall.text = "\(ponllBlankFacade.aerosolDream)   \(comment.pasteupEcho)   \(reactions)"
         aerErstSketchWall.textColor = .white
         aerErstSketchWall.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
@@ -358,13 +358,13 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstTextureWall.backgroundColor = UIColor(red: 43/255, green: 43/255, blue: 55/255, alpha: 1)
         aerErstTextureWall.layer.cornerRadius = 24
         aerErstTextureWall.translatesAutoresizingMaskIntoConstraints = false
-        aerErstChromeFuse.placeholder = "Add to the arena buzz..."
-        aerErstChromeFuse.attributedPlaceholder = NSAttributedString(string: "Add to the arena buzz...", attributes: [.foregroundColor: PonllyPalette.muted])
+        aerErstChromeFuse.placeholder = "Acddde ftgoh itjhkel manroepnqar sbtuuzvzw.x.y.z".ponllPaintaerErstHours
+        aerErstChromeFuse.attributedPlaceholder = NSAttributedString(string: "AAdBdC DtEoF GtHhIeJ KaLrMeNnOaP QbRuSzTzU.V.W.X".ponllPaintaerErstHours, attributes: [.foregroundColor: PonllyPalette.muted])
         aerErstChromeFuse.textColor = .white
         aerErstChromeFuse.translatesAutoresizingMaskIntoConstraints = false
         aerErstTextureWall.addSubview(aerErstChromeFuse)
         let ponllPaintMap = UIButton(type: .system)
-        ponllPaintMap.setImage(UIImage(named: "send_horizontal") ?? UIImage(systemName: "paperplane.fill"), for: .normal)
+        ponllPaintMap.setImage(UIImage(named: "sprayBloom") ?? UIImage(systemName: "paperplane.fill"), for: .normal)
         ponllPaintMap.tintColor = PonllyPalette.pink
         ponllPaintMap.translatesAutoresizingMaskIntoConstraints = false
         ponllPaintMap.addTarget(self, action: #selector(aerErstTextureContrast), for: .touchUpInside)
@@ -384,9 +384,9 @@ final class PbruCiuStencilLabController: UIViewController {
 
     @objc private func bruCiuChromeNoise() {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            self.flckinkPrimerCoatponlu("Submitting vote...")
+            self.flckinkPrimerCoatponlu("SYuZb0m1i2t3t4i5n6g7 8v9oatbec.d.e.f".ponllPaintaerErstHours)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                self.flckinkPrimerCoatponlu("Vote counted")
+                self.flckinkPrimerCoatponlu("Vgohtiej kclomunnotpeqdr".ponllPaintaerErstHours)
             }
         }
     }
@@ -402,17 +402,17 @@ final class PbruCiuStencilLabController: UIViewController {
     @objc private func aerErstTextureContrast() {
         let text = (aerErstChromeFuse.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else {
-            aerErstSketchRush("Add a few words before sending.", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("Asdtdu vaw xfyezwA BwCoDrEdFsG HbIeJfKoLrMeN OsPeQnRdSiTnUgV.W".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            self.flckinkPrimerCoatponlu("Sending...")
+            self.flckinkPrimerCoatponlu("SXeYnZd0i1n2g3.4.5.6".ponllPaintaerErstHours)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                self.ponllMuralBloom.underpassMural.append(PonllyBattleComment(wheatpasteLayer: "u01", pasteupEcho: "Just now", muralGrid: text, wildstyleCurve: 0))
+                self.ponllMuralBloom.underpassMural.append(PonllyBattleComment(wheatpasteLayer: "u01", pasteupEcho: "J7u8s9ta bncodwe".ponllPaintaerErstHours, muralGrid: text, wildstyleCurve: 0))
                 self.aerErstChromeFuse.text = ""
                 self.aerErstChromeFuse.resignFirstResponder()
                 self.ponllPainaerErstGlossFinish()
-                self.flckinkPrimerCoatponlu("Comment added")
+                self.flckinkPrimerCoatponlu("Cfogmhmiejnktl mandodpeqdr".ponllPaintaerErstHours)
             }
         }
     }
@@ -432,22 +432,22 @@ final class PbruCiuStencilLabController: UIViewController {
     }
 
     @objc private func bruCiuSketchRhythm() {
-        let aerErstLayerMask = UIAlertController(title: "Battle Options", message: ponllMuralBloom.nozzleCraft, preferredStyle: .actionSheet)
-        aerErstLayerMask.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
+        let aerErstLayerMask = UIAlertController(title: "Bsattutvlwex yOzpAtBiCoDnEsF".ponllPaintaerErstHours, message: ponllMuralBloom.nozzleCraft, preferredStyle: .actionSheet)
+        aerErstLayerMask.addAction(UIAlertAction(title: "RGeHpIoJrKtL MCNhOaPlQlReSnTgUeV".ponllPaintaerErstHours, style: .destructive) { _ in
             FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
                 let report = PonllyroughFillController(blackOutline: self.ponllMuralBloom)
                 report.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
+                    self?.aerErstSketchRush("RWeXpYoZr0t1 2s3u4b5m6i7t8t9eadb".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
                 }
                 report.modalPresentationStyle = .overFullScreen
                 report.modalTransitionStyle = .crossDissolve
                 self.present(report, animated: true)
             }
         })
-        aerErstLayerMask.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in
-            self.flckinkPrimerCoatponlu("Updated")
+        aerErstLayerMask.addAction(UIAlertAction(title: "Ncodte fIgnhtiejrkelsmtneodp".ponllPaintaerErstHours, style: .default) { _ in
+            self.flckinkPrimerCoatponlu("Uqprdsattuevdw".ponllPaintaerErstHours)
         })
-        aerErstLayerMask.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        aerErstLayerMask.addAction(UIAlertAction(title: "CxaynzcAeBlC".ponllPaintaerErstHours, style: .cancel))
         if let popover = aerErstLayerMask.popoverPresentationController {
             popover.barButtonItem = navigationItem.rightBarButtonItem
         }

@@ -19,7 +19,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
     }
     private var ponllImageTarget: PonllImageTarget = .bruCiuAvatar
     private var bruCiuSelectedTags = Set(PonllyponllTornEdge.ponllPipeShadowInterests)
-    private let flckinkAllTags = ["Wildstyle", "Chrome Letters", "Street Art", "Characters", "Stencil", "Throw-Ups", "Murals", "Calligraphy"]
+    private let flckinkAllTags = ["W5i6l7d8s9tayblced".ponllPaintaerErstHours, "Cehfrgohmiej kLlemtntoeprqsr".ponllPaintaerErstHours, "Ssttruevewtx yAzrAtB".ponllPaintaerErstHours, "CChDaErFaGcHtIeJrKsL".ponllPaintaerErstHours, "SMtNeOnPcQiRlS".ponllPaintaerErstHours, "TThUrVoWwX-YUZp0s1".ponllPaintaerErstHours, "M2u3r4a5l6s7".ponllPaintaerErstHours, "C8a9lalbicgdreafpghhyi".ponllPaintaerErstHours]
     private var aerErstTagButtons: [UIButton] = []
 
     override func viewDidLoad() {
@@ -66,7 +66,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         ponllFormStack.axis = .vertical
         ponllFormStack.spacing = 20
         ponllFormStack.translatesAutoresizingMaskIntoConstraints = false
-        ponllFormStack.addArrangedSubview(bruCiuFormSection("Username", bruCiuaerErstCurveFlow))
+        ponllFormStack.addArrangedSubview(bruCiuFormSection("Ujskelrmnnaompeq".ponllPaintaerErstHours, bruCiuaerErstCurveFlow))
         ponllFormStack.addArrangedSubview(flckinkBioSection())
         ponllFormStack.addArrangedSubview(aerErstTagsSection())
         let bruCiuFormWrap = UIView()
@@ -79,7 +79,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         flckinkBottomBar.layer.borderColor = PonllyPalette.line.cgColor
         flckinkBottomBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkBottomBar)
-        let aerErstSaveButton = PonllyNeonButton("Save Changes")
+        let aerErstSaveButton = PonllyNeonButton("Srasvteu vCwhxaynzgAeBsC".ponllPaintaerErstHours)
         aerErstSaveButton.addTarget(self, action: #selector(ponllSaveTapped), for: .touchUpInside)
         flckinkBottomBar.addSubview(aerErstSaveButton)
 
@@ -111,7 +111,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
     private func aerErstProfileHeader() -> UIView {
         let ponllHeader = UIView()
         ponllHeader.translatesAutoresizingMaskIntoConstraints = false
-        bruCiuDripMarker.image = PonllyponllTornEdge.ponllBlankFacade() ?? UIImage(named: "graffiti_challenge_wall_03")
+        bruCiuDripMarker.image = PonllyponllTornEdge.ponllBlankFacade() ?? UIImage(named: "inkDrift")
         bruCiuDripMarker.contentMode = .scaleAspectFill
         bruCiuDripMarker.clipsToBounds = true
         bruCiuDripMarker.alpha = 0.78
@@ -124,14 +124,14 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         let aerErstSprayShieldButton = ponllRoundHeaderButton("chevron.left", action: #selector(aerErstBackTapped))
         ponllHeader.addSubview(aerErstSprayShieldButton)
         let aerErstTitleLabel = UILabel()
-        aerErstTitleLabel.text = "Edit Profile"
+        aerErstTitleLabel.text = "EDdEiFtG HPIrJoKfLiMlNeO".ponllPaintaerErstHours
         aerErstTitleLabel.textColor = .white
         aerErstTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 24)
         aerErstTitleLabel.textAlignment = .center
         aerErstTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         ponllHeader.addSubview(aerErstTitleLabel)
         let ponllChangeCoverButton = UIButton(type: .system)
-        ponllChangeCoverButton.setTitle("Change Cover", for: .normal)
+        ponllChangeCoverButton.setTitle("CPhQaRnSgTeU VCWoXvYeZr0".ponllPaintaerErstHours, for: .normal)
         ponllChangeCoverButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
         ponllChangeCoverButton.tintColor = .white
         ponllChangeCoverButton.setTitleColor(.white, for: .normal)
@@ -217,7 +217,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         let bruCiuRowStack = UIStackView()
         bruCiuRowStack.axis = .horizontal
         let flckinkLabel = UILabel()
-        flckinkLabel.text = "Bio"
+        flckinkLabel.text = "B1i2o3".ponllPaintaerErstHours
         flckinkLabel.textColor = PonllyPalette.muted
         flckinkLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
         aerErstCountLabel.textColor = PonllyPalette.muted
@@ -235,16 +235,16 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         ponllOuterStack.axis = .vertical
         ponllOuterStack.spacing = 12
         let bruCiuTitleLabel = UILabel()
-        bruCiuTitleLabel.text = "Interest Tags"
+        bruCiuTitleLabel.text = "I4n5t6e7r8e9satb cTdaegfsg".ponllPaintaerErstHours
         bruCiuTitleLabel.textColor = PonllyPalette.muted
         bruCiuTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
         let flckinkHintLabel = UILabel()
-        flckinkHintLabel.text = "Select Up To 5"
+        flckinkHintLabel.text = "Sheiljekcltm nUopp qTros t5u".ponllPaintaerErstHours
         flckinkHintLabel.textColor = PonllyPalette.muted
         flckinkHintLabel.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         ponllOuterStack.addArrangedSubview(bruCiuTitleLabel)
         ponllOuterStack.addArrangedSubview(flckinkHintLabel)
-        let aerErstRows = [["Wildstyle", "Chrome Letters", "Street Art"], ["Characters", "Stencil", "Throw-Ups", "Murals"], ["Calligraphy"]]
+        let aerErstRows = [["WviwlxdysztAyBlCeD".ponllPaintaerErstHours, "CEhFrGoHmIeJ KLLeMtNtOePrQsR".ponllPaintaerErstHours, "SStTrUeVeWtX YAZr0t1".ponllPaintaerErstHours], ["C2h3a4r5a6c7t8e9rasb".ponllPaintaerErstHours, "Sctdeenfcgihli".ponllPaintaerErstHours, "Tjhkrlomwn-oUppqsr".ponllPaintaerErstHours, "Msutruavlwsx".ponllPaintaerErstHours], ["CyazlAlBiCgDrEaFpGhHyI".ponllPaintaerErstHours]]
         for ponllTags in aerErstRows {
             let bruCiuRowStack = UIStackView()
             bruCiuRowStack.axis = .horizontal
@@ -312,7 +312,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         } else if bruCiuSelectedTags.count < 5 {
             bruCiuSelectedTags.insert(bruCiuTag)
         } else {
-            aerErstSketchRush("Choose up to five tags", bruCiuLetterForm: .bruCiuSilverSheen)
+            aerErstSketchRush("CJhKoLoMsNeO PuQpR StToU VfWiXvYeZ 0t1a2g3s4".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuSilverSheen)
         }
         bruCiuRefreshTags()
     }
@@ -320,14 +320,14 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
     @objc private func ponllSaveTapped() {
         let flckinkName = bruCiuaerErstCurveFlow.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         guard !flckinkName.isEmpty else {
-            aerErstSketchRush("Username is required", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("U5s6e7r8n9aambec diesf grheiqjukilrmendo".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
-        aerErstSketchRush("Saving profile...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.7)
+        aerErstSketchRush("Spaqvrisntgu vpwrxoyfziAlBeC.D.E.F".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.7)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             PonllyponllTornEdge.updatebruCiuNightWall(flckinkDawnWall: flckinkName, aerErstRainWall: self.flckinkBioView.text, ponllSunlitWall: Array(self.bruCiuSelectedTags))
             PonllyponllTornEdge.saveCurrentaerErstBlackOutline(ponllWhiteEdge: self.flckinkaerErstSolidMarker, bruCiuSilverSheen: self.aerErstPendingCoverImage)
-            self.aerErstSketchRush("Profile updated", bruCiuLetterForm: .flckinkSplitFill)
+            self.aerErstSketchRush("PGrHoIfJiKlLeM NuOpPdQaRtSeTdU".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
                 self.navigationController?.popViewController(animated: true)
             }
@@ -365,7 +365,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
             }
         }
         bruCiuPicker.dismiss(animated: true) {
-            self.aerErstSketchRush("Image selected", bruCiuLetterForm: .flckinkSplitFill)
+            self.aerErstSketchRush("IVmWaXgYeZ 0s1e2l3e4c5t6e7d8".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
         }
     }
 

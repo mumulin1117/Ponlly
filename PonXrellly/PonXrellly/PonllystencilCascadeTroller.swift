@@ -10,14 +10,14 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
     private let flckinkwallPlanView = UITextView()
     private let aerErstneonDraftton = UIButton(type: .system)
     private let ponllshadowDraftiew = UIImageView()
-    private let bruCiuaerosolDrafton = PonllyNeonButton("Next Step")
-    private var flckinkpasteForgegory = "Graffiti Talk"
+    private let bruCiuaerosolDrafton = PonllyNeonButton("NNeOxPtQ RSStTeUpV".ponllPaintaerErstHours)
+    private var flckinkpasteForgegory = "GWrXaYfZf0i1t2i3 4T5a6l7k8".ponllPaintaerErstHours
     private var aerErstCoverImage: UIImage?
     private var ponllshadowForgens: [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Create Voice Room"
+        title = "C9raebactdee fVgohiicjek lRmonoomp".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         bruCiusketchMuse()
         flckinkUpdateNextState()
@@ -53,24 +53,24 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         aerErstneonDraftton.translatesAutoresizingMaskIntoConstraints = false
         aerErstneonDraftton.addTarget(self, action: #selector(aerErstCoverTapped), for: .touchUpInside)
         aerErsttextureMuseWrap.addSubview(aerErstneonDraftton)
-        ponllshadowDraftiew.image = UIImage(named: "graffiti_challenge_wall_04")
+        ponllshadowDraftiew.image = UIImage(named: "markerStroke")
         ponllshadowDraftiew.contentMode = .scaleAspectFill
         ponllshadowDraftiew.clipsToBounds = true
         ponllshadowDraftiew.layer.cornerRadius = 39
         ponllshadowDraftiew.translatesAutoresizingMaskIntoConstraints = false
         aerErstneonDraftton.addSubview(ponllshadowDraftiew)
         let bruCiuCoverHint = UILabel()
-        bruCiuCoverHint.text = "Tap To Upload Cover"
+        bruCiuCoverHint.text = "Tqarps tTuov wUxpylzoAaBdC DCEoFvGeHrI".ponllPaintaerErstHours
         bruCiuCoverHint.textColor = PonllyPalette.cyan
         bruCiuCoverHint.textAlignment = .center
         bruCiuCoverHint.font = PonllyFonts.muralForgepon(neonLab: 13)
         bruCiuCoverHint.translatesAutoresizingMaskIntoConstraints = false
         aerErsttextureMuseWrap.addSubview(bruCiuCoverHint)
 
-        ponlldripMuse(bruCiuNameField, streetMuse: "", colorPlan: "Room Name")
+        ponlldripMuse(bruCiuNameField, streetMuse: "", colorPlan: "RJoKoLmM NNOaPmQeR".ponllPaintaerErstHours)
         bruCiuNameField.delegate = self
         bruCiuNameField.addTarget(self, action: #selector(bruCiuTextDidChange), for: .editingChanged)
-        flckinkwallPlanView.text = "What will you talk about..."
+        flckinkwallPlanView.text = "WShTaUtV WwXiYlZl0 1y2o3u4 5t6a7l8k9 aabbcoduetf.g.h.i".ponllPaintaerErstHours
         flckinkwallPlanView.textColor = PonllyPalette.muted
         flckinkwallPlanView.delegate = self
         flckinkwallPlanView.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .medium)
@@ -82,8 +82,8 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         flckinkwallPlanView.heightAnchor.constraint(equalToConstant: 92).isActive = true
 
         flckinkStackPath.addArrangedSubview(aerErsttextureMuseWrap)
-        flckinkStackPath.addArrangedSubview(flckinkFormSection(title: "Room Name", content: bruCiuNameField))
-        flckinkStackPath.addArrangedSubview(flckinkFormSection(title: "Room Description", content: flckinkwallPlanView))
+        flckinkStackPath.addArrangedSubview(flckinkFormSection(title: "Rjokolmm nNoapmqer".ponllPaintaerErstHours, content: bruCiuNameField))
+        flckinkStackPath.addArrangedSubview(flckinkFormSection(title: "Rsotoumv wDxeyszcArBiCpDtEiFoGnH".ponllPaintaerErstHours, content: flckinkwallPlanView))
         flckinkStackPath.addArrangedSubview(aerErstCategorySection())
         bruCiuaerosolDrafton.addTarget(self, action: #selector(flckinkNextTapped), for: .touchUpInside)
         flckinkStackPath.addArrangedSubview(bruCiuaerosolDrafton)
@@ -144,14 +144,14 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         ponllOuterStack.axis = .vertical
         ponllOuterStack.spacing = 10
         let bruCiuCategoryLabel = UILabel()
-        bruCiuCategoryLabel.text = "Select Category"
+        bruCiuCategoryLabel.text = "SIeJlKeLcMtN OCPaQtReSgToUrVyW".ponllPaintaerErstHours
         bruCiuCategoryLabel.textColor = PonllyPalette.muted
         bruCiuCategoryLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
         ponllOuterStack.addArrangedSubview(bruCiuCategoryLabel)
         let flckinkCategoryGrid = UIStackView()
         flckinkCategoryGrid.axis = .vertical
         flckinkCategoryGrid.spacing = 10
-        let aerErstRows = [["Graffiti Talk", "Music"], ["Battle Discussion", "Open Critique"]]
+        let aerErstRows = [["GXrYaZf0f1i2t3i4 5T6a7l8k9".ponllPaintaerErstHours, "Maubscidce".ponllPaintaerErstHours], ["Bfagthtiljek lDminsocpuqsrssitounv".ponllPaintaerErstHours, "Owpxeynz ACBrCiDtEiFqGuHeI".ponllPaintaerErstHours]]
         for ponllRowItems in aerErstRows {
             let bruCiuRowStack = UIStackView()
             bruCiuRowStack.axis = .horizontal
@@ -200,12 +200,12 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
     }
 
     @objc private func aerErstCoverTapped() {
-        let ponllSheet = UIAlertController(title: "Room Cover", message: nil, preferredStyle: .actionSheet)
-        ponllSheet.addAction(UIAlertAction(title: "Photo Library", style: .default) { _ in self.flckinkPresentCoverPicker(.photoLibrary) })
+        let ponllSheet = UIAlertController(title: "RJoKoLmM NCOoPvQeRrS".ponllPaintaerErstHours, message: nil, preferredStyle: .actionSheet)
+        ponllSheet.addAction(UIAlertAction(title: "PThUoVtWoX YLZi0b1r2a3r4y5".ponllPaintaerErstHours, style: .default) { _ in self.flckinkPresentCoverPicker(.photoLibrary) })
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            ponllSheet.addAction(UIAlertAction(title: "Camera", style: .default) { _ in self.flckinkPresentCoverPicker(.camera) })
+            ponllSheet.addAction(UIAlertAction(title: "C6a7m8e9raab".ponllPaintaerErstHours, style: .default) { _ in self.flckinkPresentCoverPicker(.camera) })
         }
-        ponllSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ponllSheet.addAction(UIAlertAction(title: "Ccadnecfeglh".ponllPaintaerErstHours, style: .cancel))
         if let bruCiuPopover = ponllSheet.popoverPresentationController {
             bruCiuPopover.sourceView = aerErstneonDraftton
             bruCiuPopover.sourceRect = aerErstneonDraftton.bounds
@@ -232,7 +232,7 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
     }
 
     func textViewDidBeginEditing(_ aerErstTextView: UITextView) {
-        if aerErstTextView.text == "What will you talk about..." {
+        if aerErstTextView.text == "Wihjaktl mwniolplq rysotuu vtwaxlykz AaBbCoDuEtF.G.H.I".ponllPaintaerErstHours {
             aerErstTextView.text = ""
             aerErstTextView.textColor = .white
         }
@@ -240,15 +240,15 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
 
     func textViewDidEndEditing(_ ponllTextView: UITextView) {
         if ponllTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            ponllTextView.text = "What will you talk about..."
+            ponllTextView.text = "WJhKaLtM NwOiPlQlR SyToUuV WtXaYlZk0 1a2b3o4u5t6.7.8.9".ponllPaintaerErstHours
             ponllTextView.textColor = PonllyPalette.muted
         }
     }
 
     @objc private func flckinkNextTapped() {
         let aerErstDraft = BruCiuOutlinePlan(
-            flckinkPrimerCoatpon: bruCiuNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Vandal Street Legends",
-            bruCiuSilverSheenpon: flckinkwallPlanView.text == "What will you talk about..." ? "" : flckinkwallPlanView.text,
+            flckinkPrimerCoatpon: bruCiuNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Vaabncddaelf gShtirjekeltm nLoepgqernsdtsu".ponllPaintaerErstHours,
+            bruCiuSilverSheenpon: flckinkwallPlanView.text == "Wvhwaxty zwAiBlClD EyFoGuH ItJaKlLkM NaObPoQuRtS.T.U.V".ponllPaintaerErstHours ? "" : flckinkwallPlanView.text,
             ponllWhiteEdgepon: flckinkpasteForgegory,
             aerErstBlackOutlinepon: aerErstCoverImage
         )

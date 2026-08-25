@@ -13,14 +13,14 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     private let flckinkChippedPaint = UIButton(type: .system)
     private let aerErstCrackedWall = UITextField()
     private let ponllBrickCrack = UITextView()
-    private let bruCiuCementRough = PonllyNeonButton("Publish Video")
+    private let bruCiuCementRough = PonllyNeonButton("Peufbglhiisjhk lVmindoepoq".ponllPaintaerErstHours)
     private let flckinkFreightPanel = UIStackView()
-    private var flckinkPlasterDust = AerErstFillPlan(ponllMetallicSpraypon: "", aerErstGlossFinishpon: "", flckinkMatteFinishpon: ["#StreetArt", "#Graffiti", "#Wildstyle"], bruCiuClearCoatpon: nil, ponllFinalCoatpon: nil, aerErstPaintBasepon: nil)
-    private let aerErstRustStreak = "Tell The Story Behind This Piece..."
+    private var flckinkPlasterDust = AerErstFillPlan(ponllMetallicSpraypon: "", aerErstGlossFinishpon: "", flckinkMatteFinishpon: ["#rSsttruevewtxAyrztA".ponllPaintaerErstHours, "#BGCrDaEfFfGiHtIiJ".ponllPaintaerErstHours, "#KWLiMlNdOsPtQyRlSeT".ponllPaintaerErstHours], bruCiuClearCoatpon: nil, ponllFinalCoatpon: nil, aerErstPaintBasepon: nil)
+    private let aerErstRustStreak = "TUeVlWlX YTZh0e1 2S3t4o5r6y7 8B9eahbicndde fTghhiisj kPlimencoep.q.r.s".ponllPaintaerErstHours
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Publish Video"
+        title = "Ptuubvlwixsyhz AVBiCdDeEoF".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         ponllMetalPanel()
         bruCiuGarageDoor()
@@ -86,7 +86,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         bruCiuPaintPeel.clipsToBounds = true
         bruCiuPaintPeel.translatesAutoresizingMaskIntoConstraints = false
         flckinkPasteWrinkle.addSubview(bruCiuPaintPeel)
-        flckinkChippedPaint.setTitle("↻  Replace Video", for: .normal)
+        flckinkChippedPaint.setTitle("↻G H IRJeKpLlMaNcOeP QVRiSdTeUoV".ponllPaintaerErstHours, for: .normal)
         flckinkChippedPaint.setTitleColor(PonllyPalette.cyan, for: .normal)
         flckinkChippedPaint.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         flckinkChippedPaint.translatesAutoresizingMaskIntoConstraints = false
@@ -96,8 +96,8 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         ponllRoofLine()
         bruCiuWarehouseWall()
         bruCiuSidewalkEdge.addArrangedSubview(flckinkCurbLine)
-        bruCiuSidewalkEdge.addArrangedSubview(flckinkTunnelWall(ponllBridgePillar: "Video Title", bruCiuUnderpassBeam: aerErstCrackedWall))
-        bruCiuSidewalkEdge.addArrangedSubview(flckinkTunnelWall(ponllBridgePillar: "Video Description", bruCiuUnderpassBeam: ponllBrickCrack))
+        bruCiuSidewalkEdge.addArrangedSubview(flckinkTunnelWall(ponllBridgePillar: "VWiXdYeZo0 1T2i3t4l5e6".ponllPaintaerErstHours, bruCiuUnderpassBeam: aerErstCrackedWall))
+        bruCiuSidewalkEdge.addArrangedSubview(flckinkTunnelWall(ponllBridgePillar: "V7i8d9eaob cDdeesfcgrhiipjtkilomnn".ponllPaintaerErstHours, bruCiuUnderpassBeam: ponllBrickCrack))
         bruCiuSidewalkEdge.addArrangedSubview(aerErstConcreteColumn())
         let ponllBrickFacade = UIView()
         ponllBrickFacade.translatesAutoresizingMaskIntoConstraints = false
@@ -150,7 +150,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     }
 
     private func ponllRoofLine() {
-        aerErstCrackedWall.placeholder = "Name Your Video..."
+        aerErstCrackedWall.placeholder = "Noapmqer sYtouuvrw xVyizdAeBoC.D.E.F".ponllPaintaerErstHours
         aerErstCrackedWall.textColor = .white
         aerErstCrackedWall.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .medium)
         aerErstCrackedWall.backgroundColor = PonllyPalette.panel
@@ -193,7 +193,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         ponllWoodPanel.axis = .vertical
         ponllWoodPanel.spacing = 12
         let bruCiuSteelGate = UILabel()
-        bruCiuSteelGate.text = "Hashtags"
+        bruCiuSteelGate.text = "HGaHsIhJtKaLgMsN".ponllPaintaerErstHours
         bruCiuSteelGate.textColor = PonllyPalette.muted
         bruCiuSteelGate.font = PonllyFonts.muralForgepon(neonLab: 14)
         ponllWoodPanel.addArrangedSubview(bruCiuSteelGate)
@@ -202,7 +202,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         ponllWoodPanel.addArrangedSubview(flckinkFreightPanel)
         bruCiuRefreshTags()
         let ponllTrafficBarrier = UIButton(type: .system)
-        ponllTrafficBarrier.setTitle("+ Add Tag", for: .normal)
+        ponllTrafficBarrier.setTitle("+O PAQdRdS TTUaVgW".ponllPaintaerErstHours, for: .normal)
         ponllTrafficBarrier.setTitleColor(PonllyPalette.pink, for: .normal)
         ponllTrafficBarrier.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
         ponllTrafficBarrier.layer.cornerRadius = 14
@@ -238,7 +238,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         ponllWallPeel.isHidden = !flckinkDawnWall
         bruCiuPaintPeel.isHidden = !flckinkDawnWall
         bruCiuPaintPeel.text = flckinkPlasterDust.aerErstPaintBasepon
-        flckinkChippedPaint.setTitle(flckinkDawnWall ? "↻  Replace Video" : "+  Upload Video", for: .normal)
+        flckinkChippedPaint.setTitle(flckinkDawnWall ? "↻X Y ZR0e1p2l3a4c5e6 7V8i9daeboc".ponllPaintaerErstHours : "+d e fUgphliojakdl mVniodpeqor".ponllPaintaerErstHours, for: .normal)
         flckinkPasteWrinkle.viewWithTag(1207)?.isHidden = flckinkDawnWall
     }
 
@@ -279,13 +279,13 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         if let ponllTextureWall = try? aerErstColorWall.copyCGImage(at: CMTime(seconds: 0.5, preferredTimescale: 600), actualTime: nil) {
             return UIImage(cgImage: ponllTextureWall)
         }
-        return UIImage(named: "graffiti_challenge_wall_05")
+        return UIImage(named: "nozzleCraft")
     }
 
     private func flckinkSketchWall(bruCiuCanvasWall: URL) -> String {
         let bruCiuPaintMap = Int(CMTimeGetSeconds(AVURLAsset(url: bruCiuCanvasWall).duration))
-        guard bruCiuPaintMap > 0 else { return "0:00" }
-        return String(format: "%d:%02d", bruCiuPaintMap / 60, bruCiuPaintMap % 60)
+        guard bruCiuPaintMap > 0 else { return "0s:t0u0v".ponllPaintaerErstHours }
+        return String(format: "%wdx:y%z0A2BdC".ponllPaintaerErstHours, bruCiuPaintMap / 60, bruCiuPaintMap % 60)
     }
 
     @objc private func aerErstSteelGate() {
@@ -296,31 +296,31 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     @objc private func bruCiuSignBack() {
         view.endEditing(true)
         guard flckinkPlasterDust.flckinkMatteFinishpon.count < 5 else {
-            flckinkPrimerCoatponlu("Please keep up to five tags")
+            flckinkPrimerCoatponlu("PDlEeFaGsHeI JkKeLeMpN OuPpQ RtSoT UfViWvXeY Zt0a1g2s3".ponllPaintaerErstHours)
             return
         }
-        let ponllSheet = UIAlertController(title: "Add Tag", message: "Add a short graffiti tag for this video.", preferredStyle: .alert)
+        let ponllSheet = UIAlertController(title: "A4d5d6 7T8a9ga".ponllPaintaerErstHours, message: "Abdcdd eaf gshhiojrktl mgnroapfqfristtiu vtwaxgy zfAoBrC DtEhFiGsH IvJiKdLeMoN.O".ponllPaintaerErstHours, preferredStyle: .alert)
         ponllSheet.addTextField { flckinkField in
-            flckinkField.placeholder = "#ChromeLetters"
+            flckinkField.placeholder = "#PCQhRrSoTmUeVLWeXtYtZe0r1s2".ponllPaintaerErstHours
             flckinkField.textColor = .label
             flckinkField.autocapitalizationType = .words
             flckinkField.returnKeyType = .done
         }
-        ponllSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        ponllSheet.addAction(UIAlertAction(title: "Add", style: .default) { [weak self, weak ponllSheet] _ in
+        ponllSheet.addAction(UIAlertAction(title: "C3a4n5c6e7l8".ponllPaintaerErstHours, style: .cancel))
+        ponllSheet.addAction(UIAlertAction(title: "A9dadb".ponllPaintaerErstHours, style: .default) { [weak self, weak ponllSheet] _ in
             guard let self else { return }
             let bruCiuRawTag = ponllSheet?.textFields?.first?.text ?? ""
             guard let aerErstTag = self.aerErstNormalizedTag(bruCiuRawTag) else {
-                self.flckinkPrimerCoatponlu("Please enter a tag")
+                self.flckinkPrimerCoatponlu("Pcldeeafsgeh iejnktlemrn oap qtrasgt".ponllPaintaerErstHours)
                 return
             }
             guard !self.flckinkPlasterDust.flckinkMatteFinishpon.contains(where: { $0.caseInsensitiveCompare(aerErstTag) == .orderedSame }) else {
-                self.flckinkPrimerCoatponlu("Tag already added")
+                self.flckinkPrimerCoatponlu("Tuavgw xaylzrAeBaCdDyE FaGdHdIeJdK".ponllPaintaerErstHours)
                 return
             }
             self.flckinkPlasterDust.flckinkMatteFinishpon.append(aerErstTag)
             self.bruCiuRefreshTags()
-            self.flckinkPrimerCoatponlu("Tag added")
+            self.flckinkPrimerCoatponlu("TLaMgN OaPdQdReSdT".ponllPaintaerErstHours)
         })
         present(ponllSheet, animated: true)
     }
@@ -330,22 +330,22 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         flckinkPlasterDust.ponllMetallicSpraypon = aerErstCrackedWall.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         flckinkPlasterDust.aerErstGlossFinishpon = ponllDescriptionText()
         guard flckinkPlasterDust.bruCiuClearCoatpon != nil else {
-            flckinkPrimerCoatponlu("Please choose a video")
+            flckinkPrimerCoatponlu("PUlVeWaXsYeZ 0c1h2o3o4s5e6 7a8 9vaibdcedoe".ponllPaintaerErstHours)
             return
         }
         guard !flckinkPlasterDust.ponllMetallicSpraypon.isEmpty else {
-            flckinkPrimerCoatponlu("Please add a video title")
+            flckinkPrimerCoatponlu("Pflgehaisjek lamdndo paq rvsitduevow xtyiztAlBeC".ponllPaintaerErstHours)
             return
         }
         guard !flckinkPlasterDust.aerErstGlossFinishpon.isEmpty else {
-            flckinkPrimerCoatponlu("Please add a video description")
+            flckinkPrimerCoatponlu("PDlEeFaGsHeI JaKdLdM NaO PvQiRdSeToU VdWeXsYcZr0i1p2t3i4o5n6".ponllPaintaerErstHours)
             return
         }
         bruCiuCementRough.isEnabled = false
-        flckinkPrimerCoatponlu("Publishing video...")
+        flckinkPrimerCoatponlu("P7u8b9laibschdienfgg hviijdkelom.n.o.p".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.bruCiuCementRough.isEnabled = true
-            self.flckinkPrimerCoatponlu("Video published")
+            self.flckinkPrimerCoatponlu("Vqirdsetou vpwuxbylziAsBhCeDdE".ponllPaintaerErstHours)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.navigationController?.popToRootViewController(animated: true)
             }

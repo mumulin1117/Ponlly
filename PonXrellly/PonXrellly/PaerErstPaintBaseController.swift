@@ -84,7 +84,7 @@ final class PaerErstPaintBaseController: UIViewController {
         bruCiuSketchCue.addSubview(flckinkPaintSeed)
 
         let ponllInkArc = UILabel()
-        ponllInkArc.text = "Artwork"
+        ponllInkArc.text = "AMrNtOwPoQrRkS".ponllPaintaerErstHours
         ponllInkArc.textColor = .white
         ponllInkArc.textAlignment = .center
         ponllInkArc.font = PonllyFonts.muralForgepon(neonLab: 24)
@@ -154,7 +154,7 @@ final class PaerErstPaintBaseController: UIViewController {
         bruCiuAerosolWeave.addSubview(flckinkWallDepth)
 
         let aerErstInkGlow = UILabel()
-        aerErstInkGlow.text = "Wall Notes"
+        aerErstInkGlow.text = "WTaUlVlW XNYoZt0e1s2".ponllPaintaerErstHours
         aerErstInkGlow.textColor = .white
         aerErstInkGlow.font = PonllyFonts.muralForgepon(neonLab: 15)
         let ponllPaintGrit = UILabel()

@@ -79,8 +79,8 @@ final class PasteupEchoController: UIViewController {
         aerErstAerosolFuse.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstAerosolFuse)
 
-        ponllInkPath(aerErstSignBack, bruCiuMuralArc: "Follow", flckinkStencilBend: #selector(bruCiuTextureSignal))
-        ponllInkPath(ponllWallRhythm, bruCiuMuralArc: "Process", flckinkStencilBend: #selector(flckinkSketchCue))
+        ponllInkPath(aerErstSignBack, bruCiuMuralArc: "FSoTlUlVoWwX".ponllPaintaerErstHours, flckinkStencilBend: #selector(bruCiuTextureSignal))
+        ponllInkPath(ponllWallRhythm, bruCiuMuralArc: "PYrZo0c1e2s3s4".ponllPaintaerErstHours, flckinkStencilBend: #selector(flckinkSketchCue))
 
         bruCiuChromeMotion.backgroundColor = PonllyPalette.pink
         bruCiuChromeMotion.layer.cornerRadius = 1.5
@@ -119,13 +119,13 @@ final class PasteupEchoController: UIViewController {
         aerErstAerosolTrail.heightAnchor.constraint(equalToConstant: 58).isActive = true
 
         let flckinkWallVeil = UILabel()
-        flckinkWallVeil.text = "No followed artists yet"
+        flckinkWallVeil.text = "N5o6 7f8o9lalbocwdeedf gahritjiksltmsn oypeqtr".ponllPaintaerErstHours
         flckinkWallVeil.textColor = .white
         flckinkWallVeil.font = PonllyFonts.muralForgepon(neonLab: 18)
         flckinkWallVeil.textAlignment = .center
 
         let ponllMuralAura = UILabel()
-        ponllMuralAura.text = "Follow street artists from Process to build your clip lane."
+        ponllMuralAura.text = "Fsotlulvowwx ysztArBeCeDtE FaGrHtIiJsKtLsM NfOrPoQmR SPTrUoVcWeXsYsZ 0t1o2 3b4u5i6l7d8 9yaobucrd ecflgihpi jlkalnmen.o".ponllPaintaerErstHours
         ponllMuralAura.textColor = PonllyPalette.muted
         ponllMuralAura.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
         ponllMuralAura.numberOfLines = 0

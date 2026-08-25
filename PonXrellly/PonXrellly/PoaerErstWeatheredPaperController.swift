@@ -20,36 +20,36 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
 
         let aerErstPaintQuest = UINavigationController(rootViewController: PbruCiuColorPlanController())
         aerErstPaintQuest.tabBarItem = UITabBarItem(
-                title: "FEED",
-            image: UIImage(named: "tab_feed_normal")?.withRenderingMode(.alwaysOriginal),
-            selectedImage:UIImage(named: "tab_feed_selected")?.withRenderingMode(.alwaysOriginal)
+                title: "FvEwExDy".ponllPaintaerErstHours,
+            image: UIImage(named: "wallTexture")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "brickTone")?.withRenderingMode(.alwaysOriginal)
         )
       
 
         let ponllInkCue = UINavigationController(rootViewController: PasteupEchoController())
         ponllInkCue.tabBarItem = UITabBarItem(
-                title: "VIDEO",
-            image: UIImage(named: "tab_video_normal")?.withRenderingMode(.alwaysOriginal),
-            selectedImage:UIImage(named: "tab_video_selected")?.withRenderingMode(.alwaysOriginal)
+                title: "VzIADBECOD".ponllPaintaerErstHours,
+            image: UIImage(named: "paintRun")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "dripTrail")?.withRenderingMode(.alwaysOriginal)
         )
 
         let bruCiuWallSeed = UINavigationController(rootViewController: ErstWeatheredPaperController())
-        let flckinkStencilSpark = UIImage(named: "pk_battle_btn")?.withRenderingMode(.alwaysOriginal)
+        let flckinkStencilSpark = UIImage(named: "wheatpasteLayer")?.withRenderingMode(.alwaysOriginal)
         bruCiuWallSeed.tabBarItem = UITabBarItem(title: "", image: flckinkStencilSpark, selectedImage: flckinkStencilSpark)
         bruCiuWallSeed.tabBarItem.imageInsets = UIEdgeInsets(top: -12, left: 0, bottom: 12, right: 0)
 
         let aerErstMarkerMood = UINavigationController(rootViewController: PonllystencilBloomController())
         aerErstMarkerMood.tabBarItem =  UITabBarItem(
-                title: "VOICE",
-            image: UIImage(named: "tab_voice_normal")?.withRenderingMode(.alwaysOriginal),
-            selectedImage:UIImage(named: "tab_voice_selected")?.withRenderingMode(.alwaysOriginal)
+                title: "VEOFIGCHEI".ponllPaintaerErstHours,
+            image: UIImage(named: "inkBleed")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "markerNib")?.withRenderingMode(.alwaysOriginal)
         )
 
         let ponllChromePath = UINavigationController(rootViewController: PonllymuralKickntroller())
         ponllChromePath.tabBarItem =  UITabBarItem(
-                title: "STASH",
-            image: UIImage(named: "tab_stash_normal")?.withRenderingMode(.alwaysOriginal),
-            selectedImage:UIImage(named: "tab_stash_selected")?.withRenderingMode(.alwaysOriginal)
+                title: "SJTKALSMHN".ponllPaintaerErstHours,
+            image: UIImage(named: "gritSurface")?.withRenderingMode(.alwaysOriginal),
+            selectedImage:UIImage(named: "urbanPatina")?.withRenderingMode(.alwaysOriginal)
         )
         viewControllers = [aerErstPaintQuest, ponllInkCue, bruCiuWallSeed, aerErstMarkerMood, ponllChromePath]
       

@@ -12,9 +12,9 @@ final class PonllyMyArtworkViewController: UIViewController {
 
         var nozzleCraft: String {
             switch self {
-            case .bruCiuPastePlan: return "Artwork"
-            case .flckinkGraffitiLab: return "Video"
-            case .aerErstAerosolLab: return "PK Battle"
+            case .bruCiuPastePlan: return "A9ratbwcodrekf".ponllPaintaerErstHours
+            case .flckinkGraffitiLab: return "Vgihdiejok".ponllPaintaerErstHours
+            case .aerErstAerosolLab: return "PlKm nBoaptqtrlset".ponllPaintaerErstHours
             }
         }
     }
@@ -45,7 +45,7 @@ final class PonllyMyArtworkViewController: UIViewController {
     }
 
     private func bruCiuStencilLab() {
-        let flckinkPaperLayer = flckinkMuralLab(fadeSpray: "My Artwork")
+        let flckinkPaperLayer = flckinkMuralLab(fadeSpray: "Muyv wAxrytzwAoBrCkD".ponllPaintaerErstHours)
         view.addSubview(flckinkPaperLayer)
         bruCiuStencilFlicker.alwaysBounceVertical = true
         bruCiuStencilFlicker.translatesAutoresizingMaskIntoConstraints = false
@@ -216,7 +216,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         ponllPulpPaper.spacing = 10
         let artworks = PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: ponllMarkerLab.graffitiPulse)
         guard !artworks.isEmpty else {
-            ponllPulpPaper.addArrangedSubview(ponllMuralMuse(paintFuse: "No Artwork Yet", ponpaintTexture: "Your published wall pieces will appear here."))
+            ponllPulpPaper.addArrangedSubview(ponllMuralMuse(paintFuse: "NEoF GAHrItJwKoLrMkN OYPeQtR".ponllPaintaerErstHours, ponpaintTexture: "YSoTuUrV WpXuYbZl0i1s2h3e4d5 6w7a8l9la bpcideecfegsh iwjiklllm naopppqerasrt uhvewrxey.z".ponllPaintaerErstHours))
             return ponllPulpPaper
         }
         for aerErstRippedCorner in stride(from: 0, to: artworks.count, by: 2) {
@@ -260,7 +260,8 @@ final class PonllyMyArtworkViewController: UIViewController {
         bruCiuMonoPrint.addSubview(metallicSpray)
         let neonSpray = UILabel()
         if let ponllMuralBloom = PonllyponllTornEdge.bruCiuWallMap(flckinkStyleMap: wideNib) {
-            neonSpray.text = "\(wideNib.capControl)  •  \(ponllMuralBloom.bubbleLetter == .bruCiuSprayBloomponll ? "PK Live" : "Waiting")  •  \(PonllyponllTornEdge.ponllLineMap(flckinkDripMap: wideNib)) notes"
+            let ponllStatus = ponllMuralBloom.bubbleLetter == .bruCiuSprayBloomponll ? "PaKb cLdievfeg".ponllPaintaerErstHours : "Waabictdienfgg".ponllPaintaerErstHours
+            neonSpray.text = "\(wideNib.capControl)  •  \(ponllStatus)  •  \(PonllyponllTornEdge.ponllLineMap(flckinkDripMap: wideNib)) notes"
         } else {
             neonSpray.text = "\(wideNib.capControl)  •  Published Piece  •  \(PonllyponllTornEdge.ponllLineMap(flckinkDripMap: wideNib)) notes"
         }
@@ -286,7 +287,7 @@ final class PonllyMyArtworkViewController: UIViewController {
 
     private func aerErstNeonLab(_ paintMarker: PonllyaerErstSolidMarkerk) {
         guard paintMarker.markerStroke == ponllMarkerLab.graffitiPulse else {
-            aerErstSketchRush("Artwork is unavailable", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("ADrEtFwGoHrIkJ KiLsM NuOnPaQvRaSiTlUaVbWlXeY".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
         let glossFinish = PaerErstPaintBaseController(flckinkWallBurst: paintMarker, aerErstAerosolBloom: ponllMarkerLab)
@@ -301,7 +302,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         let bruCiuWeatheredPaper = PonllyponllTornEdge.flckinkColorWall(aerErstTextureWall: ponllMarkerLab.graffitiPulse)
         let artworks = PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: ponllMarkerLab.graffitiPulse)
         guard !bruCiuWeatheredPaper.isEmpty else {
-            ponllPulpPaper.addArrangedSubview(ponllMuralMuse(paintFuse: "No Videos Yet", ponpaintTexture: "Your published process clips will appear here."))
+            ponllPulpPaper.addArrangedSubview(ponllMuralMuse(paintFuse: "NZo0 1V2i3d4e5o6s7 8Y9eatb".ponllPaintaerErstHours, ponpaintTexture: "Ycoduerf gphuibjlkilsmhneodp qprrsotcuevswsx yczlAiBpCsD EwFiGlHlI JaKpLpMeNaOrP QhReSrTeU.V".ponllPaintaerErstHours))
             return ponllPulpPaper
         }
         bruCiuWeatheredPaper.enumerated().forEach { aerErstRippedCorner, flckinkRustStreak in
@@ -324,7 +325,7 @@ final class PonllyMyArtworkViewController: UIViewController {
         ponllPulpPaper.spacing = 12
         let flckinkTornEdge = PonllyponllTornEdge.ponllMuralWall(bruCiuLetterWall: ponllMarkerLab.graffitiPulse)
         guard !flckinkTornEdge.isEmpty else {
-            ponllPulpPaper.addArrangedSubview(ponllMuralMuse(paintFuse: "No PK Battles Yet", ponpaintTexture: "Your created and joined battles will appear here."))
+            ponllPulpPaper.addArrangedSubview(ponllMuralMuse(paintFuse: "NWoX YPZK0 1B2a3t4t5l6e7s8 9Yaebtc".ponllPaintaerErstHours, ponpaintTexture: "Ydoeufrg hcirjekaltmendo paqnrds tjuoviwnxeydz AbBaCtDtElFeGsH IwJiKlLlM NaOpPpQeRaSrT UhVeWrXeY.Z".ponllPaintaerErstHours))
             return ponllPulpPaper
         }
         flckinkTornEdge.forEach { ponllMuralBloom in

@@ -4,7 +4,7 @@ final class PonllycyanGlowController: UIViewController {
     private let ponllChromeMood: String
     private let bruCiuNeonPath: UIImage?
     private let flckinkTextureArc: () -> Void
-    private let aerErstSketchBend = UIImageView(image: UIImage(named: "voice_room_bg_08"))
+    private let aerErstSketchBend = UIImageView(image: UIImage(named: "whitePop"))
 
     init(_ ponllChromeMood: String, _ bruCiuNeonPath: UIImage?, _ flckinkTextureArc: @escaping () -> Void) {
         self.ponllChromeMood = ponllChromeMood
@@ -54,7 +54,7 @@ final class PonllycyanGlowController: UIViewController {
         flckinkLayerMask.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkLayerMask)
 
-        let aerErstPaperCut = UIImageView(image: bruCiuNeonPath ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "ponlly_avatar_01"))
+        let aerErstPaperCut = UIImageView(image: bruCiuNeonPath ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "pasteupEcho"))
         aerErstPaperCut.contentMode = .scaleAspectFill
         aerErstPaperCut.clipsToBounds = true
         aerErstPaperCut.layer.cornerRadius = 57
@@ -79,7 +79,7 @@ final class PonllycyanGlowController: UIViewController {
         view.addSubview(ponllSprayHalo)
 
         let bruCiuCutoutShape = UILabel()
-        bruCiuCutoutShape.text = "Your street art journey begins now. Battle with rivals, upload your masterpieces, and claim your turf."
+        bruCiuCutoutShape.text = "YOoPuQrR SsTtUrVeWeXtY Za0r1t2 3j4o5u6r7n8e9ya bbcedgeifngsh injokwl.m nBoaptqtrlset uwviwtxhy zrAiBvCaDlEsF,G HuIpJlKoLaMdN OyPoQuRrS TmUaVsWtXeYrZp0i1e2c3e4s5,6 7a8n9da bccldaeifmg hyiojukrl mtnuorpfq.r".ponllPaintaerErstHours
         bruCiuCutoutShape.textColor = PonllyPalette.muted
         bruCiuCutoutShape.textAlignment = .center
         bruCiuCutoutShape.font = PonllyFonts.utilityBox(blankFacade: 15)
@@ -88,7 +88,7 @@ final class PonllycyanGlowController: UIViewController {
         bruCiuCutoutShape.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuCutoutShape)
 
-        let flckinkSprayShield = PonllyNeonButton("Enter App")
+        let flckinkSprayShield = PonllyNeonButton("Esnttuevrw xAypzpA".ponllPaintaerErstHours)
         flckinkSprayShield.addTarget(self, action: #selector(bruCiuInkLean), for: .touchUpInside)
         flckinkSprayShield.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkSprayShield)

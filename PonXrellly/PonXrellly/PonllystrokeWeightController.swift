@@ -39,7 +39,7 @@ final class PonllystrokeWeightController: UIViewController {
     }
 
     private func bruCiuBridgePillar() {
-        let aerErstRemoteImage = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: ponllUserSignal) ?? UIImage(named: "voice_room_bg_08"))
+        let aerErstRemoteImage = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: ponllUserSignal) ?? UIImage(named: "whitePop"))
         aerErstRemoteImage.contentMode = .scaleAspectFill
         aerErstRemoteImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstRemoteImage)
@@ -93,7 +93,7 @@ final class PonllystrokeWeightController: UIViewController {
         ponllCallTitle.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllCallTitle)
 
-        let bruCiuchromeSketchew = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "ponlly_avatar_01"))
+        let bruCiuchromeSketchew = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "pasteupEcho"))
         bruCiuchromeSketchew.contentMode = .scaleAspectFill
         bruCiuchromeSketchew.clipsToBounds = true
         bruCiuchromeSketchew.layer.cornerRadius = 16
@@ -107,7 +107,7 @@ final class PonllystrokeWeightController: UIViewController {
         view.addSubview(bruCiuchromeSketchew)
 
         let flckinkurbanSketch = UILabel()
-        flckinkurbanSketch.text = "Connecting..."
+        flckinkurbanSketch.text = "CWoXnYnZe0c1t2i3n4g5.6.7.8".ponllPaintaerErstHours
         flckinkurbanSketch.textColor = .white
         flckinkurbanSketch.textAlignment = .center
         flckinkurbanSketch.font = PonllyFonts.utilityBox(blankFacade: 24, aerosolMuse: .black)
@@ -186,14 +186,14 @@ final class PonllystrokeWeightController: UIViewController {
             guard let self else { return }
             guard stencilSignal && markerSignal else {
                 self.ponllyShowThemeAlert(
-                    title: "Permissions Needed",
-                    message: "Allow camera and microphone access to continue the video call.",
-                    actionTitle: "Got It",
+                    title: "P9earbmcidsesfigohnisj kNlemendoepdq".ponllPaintaerErstHours,
+                    message: "Arlsltouwv wcxaymzeArBaC DaEnFdG HmIiJcKrLoMpNhOoPnQeR SaTcUcVeWsXsY Zt0o1 2c3o4n5t6i7n8u9ea btchdee fvgihdiejok lcmanlolp.q".ponllPaintaerErstHours,
+                    actionTitle: "Grostt uIvtw".ponllPaintaerErstHours,
                     style: .ponllWhiteEdge
                 )
                 return
             }
-            self.flckinkPrimerCoatponlu("Call connecting")
+            self.flckinkPrimerCoatponlu("CxaylzlA BcCoDnEnFeGcHtIiJnKgL".ponllPaintaerErstHours)
         }
     }
 
@@ -202,15 +202,15 @@ final class PonllystrokeWeightController: UIViewController {
         aerErstSender.setImage(UIImage(systemName: bruCiuMicMuted ? "mic.slash.fill" : "mic.fill"), for: .normal)
         aerErstSender.tintColor = .white
         aerErstSender.backgroundColor = bruCiuMicMuted ? PonllyPalette.pink.withAlphaComponent(0.86) : .black.withAlphaComponent(0.78)
-        flckinkPrimerCoatponlu(bruCiuMicMuted ? "Microphone muted" : "Microphone open")
+        flckinkPrimerCoatponlu(bruCiuMicMuted ? "MMiNcOrPoQpRhSoTnUeV WmXuYtZe0d1".ponllPaintaerErstHours : "M2i3c4r5o6p7h8o9naeb codpeefng".ponllPaintaerErstHours)
     }
 
     @objc private func ponllCameraTapped() {
-        flckinkPrimerCoatponlu("Camera switched")
+        flckinkPrimerCoatponlu("Chaimjekrlam nsowpiqtrcshteudv".ponllPaintaerErstHours)
     }
 
     @objc private func aerErstEndTapped() {
-        flckinkPrimerCoatponlu("Call ended")
+        flckinkPrimerCoatponlu("Cwaxlylz AeBnCdDeEdF".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             self.navigationController?.popViewController(animated: true)
         }
@@ -230,7 +230,7 @@ final class PonllystrokeWeightController: UIViewController {
             ponllConfirm.ponllChromeFlicker = { [weak self] in
                 guard let self else { return }
                 PonllyponllTornEdge.ponllMetalPanel(self.ponllUserSignal.graffitiPulse)
-                self.flckinkPrimerCoatponlu("Artist blocked")
+                self.flckinkPrimerCoatponlu("AGrHtIiJsKtL MbNlOoPcQkReSdT".ponllPaintaerErstHours)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
                     self.navigationController?.popViewController(animated: true)
                 }

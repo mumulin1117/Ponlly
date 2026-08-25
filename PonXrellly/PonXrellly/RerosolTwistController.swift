@@ -12,7 +12,7 @@ final class RerosolTwistController: UIViewController {
     init(bruCiuEdgeSnap: PonllyaerErstTwoToneFillr) {
         self.bruCiuEdgeSnap = bruCiuEdgeSnap
         super.init(nibName: nil, bundle: nil)
-        title = "Works"
+        title = "Wfogrhkisj".ponllPaintaerErstHours
     }
 
     required init?(coder: NSCoder) {
@@ -92,7 +92,7 @@ final class RerosolTwistController: UIViewController {
         flckinkColorFade.addSubview(bruCiuChromeShine)
 
         let ponllWhitePop = UILabel()
-        ponllWhitePop.text = "Battle Works"
+        ponllWhitePop.text = "Bkaltmtnloep qWrosrtkusv".ponllPaintaerErstHours
         ponllWhitePop.textColor = .white
         ponllWhitePop.font = PonllyFonts.muralForgepon(neonLab: 24)
         ponllWhitePop.textAlignment = .center
@@ -186,11 +186,11 @@ final class RerosolTwistController: UIViewController {
                 aerErstDripTrail.widthAnchor.constraint(equalToConstant: 36).isActive = true
                 aerErstDripTrail.heightAnchor.constraint(equalToConstant: 36).isActive = true
         let flckinkPaintRun = UILabel()
-        flckinkPaintRun.text = "No Battle Works Yet"
+        flckinkPaintRun.text = "Nwox yBzaAtBtClDeE FWGoHrIkJsK LYMeNtO".ponllPaintaerErstHours
         flckinkPaintRun.textColor = .white
         flckinkPaintRun.font = PonllyFonts.muralForgepon(neonLab: 18)
         let bruCiuUrbanPatina = UILabel()
-        bruCiuUrbanPatina.text = "Your joined and created PK battles will appear here."
+        bruCiuUrbanPatina.text = "YPoQuRrS TjUoViWnXeYdZ 0a1n2d3 4c5r6e7a8t9eadb cPdKe fbgahtitjlkelsm nwoiplqlr satpupvewaxry zhAeBrCeD.E".ponllPaintaerErstHours
         bruCiuUrbanPatina.textColor = PonllyPalette.muted
         bruCiuUrbanPatina.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         bruCiuUrbanPatina.textAlignment = .center

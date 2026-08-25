@@ -18,7 +18,7 @@ final class NikTrafficBarrierController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Waiting For Challenger"
+        title = "Wqaristtiunvgw xFyozrA BCChDaElFlGeHnIgJeKrL".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         let flckinkMuralTrail = UIStackView()
         flckinkMuralTrail.axis = .vertical
@@ -28,7 +28,7 @@ final class NikTrafficBarrierController: UIViewController {
         let aerErstStencilVeil = OnllBlankFacadeView(flckinkPaintAura: ponllWallFlicker)
         aerErstStencilVeil.heightAnchor.constraint(equalToConstant: 220).isActive = true
         let ponllChromeEcho = UILabel()
-        ponllChromeEcho.text = "Your Challenge Is Live! Waiting For A Creator To Accept."
+        ponllChromeEcho.text = "YMoNuOrP QCRhSaTlUlVeWnXgYeZ 0I1s2 3L4i5v6e7!8 9Waabictdienfgg hFiojrk lAm nCorpeqartsotru vTwox yAzcAcBeCpDtE.F".ponllPaintaerErstHours
         ponllChromeEcho.textColor = PonllyPalette.green
         ponllChromeEcho.textAlignment = .center
         ponllChromeEcho.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .bold)
@@ -45,7 +45,7 @@ final class NikTrafficBarrierController: UIViewController {
         bruCiuNeonSignal.layer.cornerRadius = 16
         bruCiuNeonSignal.clipsToBounds = true
         bruCiuNeonSignal.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        let flckinkSketchQuest = PonllyNeonButton("Delete Challenge", PonllyPalette.pink)
+        let flckinkSketchQuest = PonllyNeonButton("DGeHlIeJtKeL MCNhOaPlQlReSnTgUeV".ponllPaintaerErstHours, PonllyPalette.pink)
         flckinkSketchQuest.setTitleColor(.white, for: .normal)
         flckinkSketchQuest.addTarget(self, action: #selector(aerErstTextureCue), for: .touchUpInside)
         [aerErstStencilVeil, ponllChromeEcho, bruCiuNeonSignal, flckinkSketchQuest].forEach(flckinkMuralTrail.addArrangedSubview)
@@ -64,7 +64,7 @@ final class NikTrafficBarrierController: UIViewController {
     }
 
     @objc private func aerErstTextureCue() {
-        flckinkPrimerCoatponlu("Deleting challenge...")
+        flckinkPrimerCoatponlu("DWeXlYeZt0i1n2g3 4c5h6a7l8l9eanbgced.e.f.g".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             self.navigationController?.popToRootViewController(animated: true)
         }

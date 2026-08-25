@@ -12,7 +12,7 @@ final class PonllyacidGreenFillfController: UIViewController {
     init(kind ponllChromeTrail: PonllyRelationshipKind) {
         self.ponllChromeTrail = ponllChromeTrail
         super.init(nibName: nil, bundle: nil)
-        title = ponllChromeTrail == .aerErstBrickTone ? "Crew Connections" : "Following"
+        title = ponllChromeTrail == .aerErstBrickTone ? "Chriejwk lCmonnonpeqcrtsitounvsw".ponllPaintaerErstHours : "FxoylzlAoBwCiDnEgF".ponllPaintaerErstHours
     }
 
     required init?(coder: NSCoder) {
@@ -41,7 +41,8 @@ final class PonllyacidGreenFillfController: UIViewController {
         bruCiuNeonVeil.addSubview(flckinkTextureAura)
         let ponllPaintSignal = PonllyponllTornEdge.aerErstRainWall(bruCiuShadowWall: ponllChromeTrail)
         let bruCiuInkQuest = UILabel()
-        bruCiuInkQuest.text = "\(ponllPaintSignal.count) \(ponllChromeTrail == .aerErstBrickTone ? "Followers" : "Following")"
+        let aerErstLineMood = ponllChromeTrail == .aerErstBrickTone ? "Faoblcldoewfegrhsi".ponllPaintaerErstHours : "Faoblcldoewfignhgi".ponllPaintaerErstHours
+        bruCiuInkQuest.text = "\(ponllPaintSignal.count) \(aerErstLineMood)"
         bruCiuInkQuest.textColor = PonllyPalette.muted
         bruCiuInkQuest.font = PonllyFonts.muralForgepon(neonLab: 14)
         flckinkTextureAura.addArrangedSubview(bruCiuInkQuest)
@@ -91,7 +92,7 @@ final class PonllyacidGreenFillfController: UIViewController {
         flckinkMarkerPath.addArrangedSubview(ponllNeonBend)
         flckinkWallCue.addArrangedSubview(flckinkMarkerPath)
         let bruCiuTextureKick = UILabel()
-        bruCiuTextureKick.text = PonllyponllTornEdge.ponllBrickCrack(aerErstAerosolSeed.graffitiPulse) ? "Mutual" : (PonllyponllTornEdge.aerErstCrackedWall(aerErstAerosolSeed.graffitiPulse) ? "Following" : "Follow")
+        bruCiuTextureKick.text = PonllyponllTornEdge.ponllBrickCrack(aerErstAerosolSeed.graffitiPulse) ? "MKuLtMuNaOlP".ponllPaintaerErstHours : (PonllyponllTornEdge.aerErstCrackedWall(aerErstAerosolSeed.graffitiPulse) ? "FQoRlSlToUwViWnXgY".ponllPaintaerErstHours : "FZo0l1l2o3w4".ponllPaintaerErstHours)
         bruCiuTextureKick.textColor = PonllyponllTornEdge.ponllBrickCrack(aerErstAerosolSeed.graffitiPulse) ? PonllyPalette.green : .white
         bruCiuTextureKick.font = PonllyFonts.muralForgepon(neonLab: 11)
         bruCiuTextureKick.textAlignment = .center

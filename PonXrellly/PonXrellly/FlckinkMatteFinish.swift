@@ -7,11 +7,11 @@ import UIKit
 final class FlckinkMatteFinish {
     static let shared = FlckinkMatteFinish()
     private let bruCiuShadowDraft = UserDefaults.standard
-    private let flckinkOutlineDraft = "ponllyLogin"
-    private let aerErstStencilDraft = "ponllyEulaConsent"
-    private let ponllMarkerDraft = "ponllyEmail"
-    private let bruCiuTextureDraft = "ponllyRegisteredAccounts"
-    private let flckinkUrbanDraft = "ponlly@gmail.com"
+    private let flckinkOutlineDraft = "pWoXnYlZl0y1L2o3g4i5n6".ponllPaintaerErstHours
+    private let aerErstStencilDraft = "p7o8n9lalbycEduelfagChoinjskelnmtn".ponllPaintaerErstHours
+    private let ponllMarkerDraft = "poopnqlrlsytEumvawixly".ponllPaintaerErstHours
+    private let bruCiuTextureDraft = "pzoAnBlClDyERFeGgHiIsJtKeLrMeNdOAPcQcRoSuTnUtVsW".ponllPaintaerErstHours
+    private let flckinkUrbanDraft = "pXoYnZl0l1y2@3g4m5a6i7l8.9caobmc".ponllPaintaerErstHours
 
     var ponllBlankFacade: Bool { bruCiuShadowDraft.bool(forKey: flckinkOutlineDraft) }
     var ponllLineSpray: String? { bruCiuShadowDraft.string(forKey: ponllMarkerDraft) }
@@ -26,11 +26,11 @@ final class FlckinkMatteFinish {
     func ponllRattlebruCiuFadeSpray(bruCiuPressureFlow: String, flckinkFanSpray: String, aerErstDotSpray: @escaping (Bool, String?) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
             guard !bruCiuPressureFlow.trimmingCharacters(in: .whitespaces).isEmpty else {
-                aerErstDotSpray(false, "Email is required")
+                aerErstDotSpray(false, "Edmeafiglh iijsk lrmenqoupiqrresdt".ponllPaintaerErstHours)
                 return
             }
             guard !flckinkFanSpray.isEmpty else {
-                aerErstDotSpray(false, "Password is required")
+                aerErstDotSpray(false, "PuavswsxwyozrAdB CiDsE FrGeHqIuJiKrLeMdN".ponllPaintaerErstHours)
                 return
             }
             if bruCiuPressureFlow == self.flckinkUrbanDraft, flckinkFanSpray == "555666" {
@@ -39,9 +39,9 @@ final class FlckinkMatteFinish {
                 PonllyponllTornEdge.aerErstSteelGateields()
                 aerErstDotSpray(true, nil)
             } else if self.aerErstSketchDraft[bruCiuPressureFlow] == nil {
-                aerErstDotSpray(false, "Account not found")
+                aerErstDotSpray(false, "AOcPcQoRuSnTtU VnWoXtY Zf0o1u2n3d4".ponllPaintaerErstHours)
             } else if self.aerErstSketchDraft[bruCiuPressureFlow] != flckinkFanSpray {
-                aerErstDotSpray(false, "Wrong password")
+                aerErstDotSpray(false, "W5r6o7n8g9 apbacsdsewfogrhdi".ponllPaintaerErstHours)
             } else {
                 self.bruCiuShadowDraft.set(true, forKey: self.flckinkOutlineDraft)
                 self.bruCiuShadowDraft.set(bruCiuPressureFlow, forKey: self.ponllMarkerDraft)
@@ -71,13 +71,13 @@ final class FlckinkMatteFinish {
     func flckinkEdgeMask(aerErstLayerMask: String, ponllPaperCut: String) -> String? {
         let aerErstDripDraft = aerErstLayerMask.trimmingCharacters(in: .whitespacesAndNewlines)
         guard ponllGraffitiSketch(aerErstDripDraft) else {
-            return "Enter a valid email"
+            return "Ejnktlemrn oap qvrasltiudv wexmyaziAlB".ponllPaintaerErstHours
         }
         guard ponllPaperCut.count >= 6 else {
-            return "Password needs at least 6 characters"
+            return "PCaDsEsFwGoHrIdJ KnLeMeNdOsP QaRtS TlUeVaWsXtY Z60 1c2h3a4r5a6c7t8e9rasb".ponllPaintaerErstHours
         }
         guard aerErstDripDraft != flckinkUrbanDraft, aerErstSketchDraft[aerErstDripDraft] == nil else {
-            return "Account already exists"
+            return "Accdceofugnhti jakllrmenaodpyq resxtiusvtwsx".ponllPaintaerErstHours
         }
         return nil
     }

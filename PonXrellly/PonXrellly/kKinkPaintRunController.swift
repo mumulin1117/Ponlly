@@ -8,12 +8,12 @@ final class kKinkPaintRunController: UIViewController {
     private let ponllInkBurst = UITextField()
     private let bruCiuWallCascade = UITextView()
     private let flckinkAerosolRipple = UIScrollView()
-    private var aerErstMuralSurge = "Wildstyle"
-    private var ponllStencilBloom = "24 Hours"
+    private var aerErstMuralSurge = "WFiGlHdIsJtKyLlMeN".ponllPaintaerErstHours
+    private var ponllStencilBloom = "2O4P QHRoSuTrUsV".ponllPaintaerErstHours
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Battle Settings"
+        title = "BWaXtYtZl0e1 2S3e4t5t6i7n8g9sa".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         bruCiuMarkerFlicker()
         NotificationCenter.default.addObserver(self, selector: #selector(flckinkChromeFlash(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -35,19 +35,19 @@ final class kKinkPaintRunController: UIViewController {
         aerErstTextureTrace.spacing = 20
         aerErstTextureTrace.translatesAutoresizingMaskIntoConstraints = false
         flckinkAerosolRipple.addSubview(aerErstTextureTrace)
-        ponllInkBurst.text = "Wildstyle Showdown"
+        ponllInkBurst.text = "Wbiclddesftgyhliej kSlhmonwodpoqwrns".ponllPaintaerErstHours
         ponllPaintTrail(ponllInkBurst)
-        bruCiuWallCascade.text = "Bring Your Absolute Best Chrome Letters And Sharp Outlines to This Burner Arena"
+        bruCiuWallCascade.text = "Btruivnwgx yYzoAuBrC DAEbFsGoHlIuJtKeL MBNeOsPtQ RCShTrUoVmWeX YLZe0t1t2e3r4s5 6A7n8d9 aSbhcadrepf gOhuitjlkilnmenso ptqor sTthuivsw xByuzrAnBeCrD EAFrGeHnIaJ".ponllPaintaerErstHours
         bruCiuWallCascade.textColor = .white
         bruCiuWallCascade.backgroundColor = PonllyPalette.panel
         bruCiuWallCascade.layer.cornerRadius = 16
         bruCiuWallCascade.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
         bruCiuWallCascade.heightAnchor.constraint(equalToConstant: 130).isActive = true
-        aerErstTextureTrace.addArrangedSubview(flckinkInkVeil("Battle Title", ponllAerosolAura: ponllInkBurst))
-        aerErstTextureTrace.addArrangedSubview(aerErstMuralEcho("Battle Theme", bruCiuMarkerSignal: ["Wildstyle", "Character", "Black And White", "Free Style"], flckinkChromeQuest: aerErstMuralSurge))
-        aerErstTextureTrace.addArrangedSubview(flckinkInkVeil("Battle Description", ponllAerosolAura: bruCiuWallCascade))
-        aerErstTextureTrace.addArrangedSubview(aerErstMuralEcho("Battle Duration", bruCiuMarkerSignal: ["1 Hour", "6 Hours", "24 Hours", "48 Hours"], flckinkChromeQuest: ponllStencilBloom))
-        let bruCiuNeonCue = PonllyNeonButton("Next")
+        aerErstTextureTrace.addArrangedSubview(flckinkInkVeil("BKaLtMtNlOeP QTRiStTlUeV".ponllPaintaerErstHours, ponllAerosolAura: ponllInkBurst))
+        aerErstTextureTrace.addArrangedSubview(aerErstMuralEcho("BWaXtYtZl0e1 2T3h4e5m6e7".ponllPaintaerErstHours, bruCiuMarkerSignal: ["W8i9ladbsctdyelfeg".ponllPaintaerErstHours, "Chhiajrkalcmtneorp".ponllPaintaerErstHours, "Bqlrasctku vAwnxdy zWAhBiCtDeE".ponllPaintaerErstHours, "FFrGeHeI JSKtLyMlNeO".ponllPaintaerErstHours], flckinkChromeQuest: aerErstMuralSurge))
+        aerErstTextureTrace.addArrangedSubview(flckinkInkVeil("BPaQtRtSlTeU VDWeXsYcZr0i1p2t3i4o5n6".ponllPaintaerErstHours, ponllAerosolAura: bruCiuWallCascade))
+        aerErstTextureTrace.addArrangedSubview(aerErstMuralEcho("B7a8t9talbec dDeufrgahtiijoknl".ponllPaintaerErstHours, bruCiuMarkerSignal: ["1m nHoopuqrr".ponllPaintaerErstHours, "6s tHuovuwrxsy".ponllPaintaerErstHours, "2z4A BHCoDuErFsG".ponllPaintaerErstHours, "4H8I JHKoLuMrNsO".ponllPaintaerErstHours], flckinkChromeQuest: ponllStencilBloom))
+        let bruCiuNeonCue = PonllyNeonButton("NPeQxRtS".ponllPaintaerErstHours)
         bruCiuNeonCue.addTarget(self, action: #selector(ponllSketchSeed), for: .touchUpInside)
         aerErstTextureTrace.addArrangedSubview(bruCiuNeonCue)
         NSLayoutConstraint.activate([
@@ -124,7 +124,7 @@ final class kKinkPaintRunController: UIViewController {
     }
 
     @objc private func ponllSketchSeed() {
-        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "Upload Your Artwork", bruCiuPaintQuest: "Continue", flckinkInkCue: .ponllPaintPlan), animated: true)
+        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "UTpUlVoWaXdY ZY0o1u2r3 4A5r6t7w8o9rakb".ponllPaintaerErstHours, bruCiuPaintQuest: "Ccodnetfignhuiej".ponllPaintaerErstHours, flckinkInkCue: .ponllPaintPlan), animated: true)
     }
 
     @objc private func flckinkChromeFlash(_ ponllWallFuse: Notification) {

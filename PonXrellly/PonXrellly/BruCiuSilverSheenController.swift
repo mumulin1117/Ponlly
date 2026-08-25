@@ -18,7 +18,7 @@ final class BruCiuSilverSheenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Accept Challenge"
+        title = "A9cacbecpdte fCghhailjlkelnmgneo".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         flckinkSplitFill()
     }
@@ -45,7 +45,7 @@ final class BruCiuSilverSheenController: UIViewController {
         bruCiuMagentaBurst.font = PonllyFonts.muralForgepon(neonLab: 16)
         let flckinkLimeStroke = PonllyEmptyOpponentView()
         flckinkLimeStroke.heightAnchor.constraint(equalToConstant: 220).isActive = true
-        let aerErstBlackOutline = PonllyNeonButton("Submit Challenge")
+        let aerErstBlackOutline = PonllyNeonButton("Spuqbrmsittu vCwhxaylzlAeBnCgDeE".ponllPaintaerErstHours)
         aerErstBlackOutline.addTarget(self, action: #selector(ponllWhiteEdge), for: .touchUpInside)
         [ponllCyanGlow, bruCiuMagentaBurst, flckinkLimeStroke, aerErstBlackOutline].forEach(aerErstTwoToneFill.addArrangedSubview)
         NSLayoutConstraint.activate([
@@ -57,6 +57,6 @@ final class BruCiuSilverSheenController: UIViewController {
     }
 
     @objc private func ponllWhiteEdge() {
-        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "Upload Your Artwork", bruCiuPaintQuest: "Submit Challenge", flckinkInkCue: .bruCiuOutlinePlan(ponllRoughFill)), animated: true)
+        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "UFpGlHoIaJdK LYMoNuOrP QARrStTwUoVrWkX".ponllPaintaerErstHours, bruCiuPaintQuest: "SYuZb0m1i2t3 4C5h6a7l8l9eanbgced".ponllPaintaerErstHours, flckinkInkCue: .bruCiuOutlinePlan(ponllRoughFill)), animated: true)
     }
 }

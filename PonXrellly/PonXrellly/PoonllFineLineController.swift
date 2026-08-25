@@ -7,7 +7,7 @@ import UIKit
 final class PoonllFineLineController: UIViewController {
     private let ponllbruCiuPressureFlows = UIScrollView()
     private let bruCiuStackPath = UIStackView()
-    private let ponllAngleBreak = PonllyNeonButton("Charge")
+    private let ponllAngleBreak = PonllyNeonButton("CShTaUrVgWeX".ponllPaintaerErstHours)
     private var aerErstSelectedPackage = PoncanShaketalog.aerErstChromeNoise[3]
     private var flckinkPlasterDust: [String: Product] = [:]
     private var bruCiuColorRack: [PNeonDripCard] = []
@@ -39,7 +39,7 @@ final class PoonllFineLineController: UIViewController {
         let flckinkmuralAura = ponllmuralSurge()
         let aerErstBanner = bruCiuFirstBonusBanner()
         let ponllmuralFlicker = UILabel()
-        ponllmuralFlicker.text = "Select Coin Package"
+        ponllmuralFlicker.text = "SYeZl0e1c2t3 4C5o6i7n8 9Paabcckdaegfeg".ponllPaintaerErstHours
         ponllmuralFlicker.textColor = PonllyPalette.muted
         ponllmuralFlicker.font = PonllyFonts.muralForgepon(neonLab: 11)
         let bruCiuGrid = flckinkPackageGrid()
@@ -91,7 +91,7 @@ final class PoonllFineLineController: UIViewController {
         bruCiuaerosolMood.addSubview(flckinkmuralCascaden)
 
         let aerErstaerosolGlowe = UILabel()
-        aerErstaerosolGlowe.text = "COIN STORE"
+        aerErstaerosolGlowe.text = "ChOiIjNk lSmTnOoRpEq".ponllPaintaerErstHours
         aerErstaerosolGlowe.textColor = .white
         aerErstaerosolGlowe.font = PonllyFonts.muralForgepon(neonLab: 16)
         aerErstaerosolGlowe.adjustsFontSizeToFitWidth = true
@@ -99,7 +99,7 @@ final class PoonllFineLineController: UIViewController {
         aerErstaerosolGlowe.translatesAutoresizingMaskIntoConstraints = false
         bruCiuaerosolMood.addSubview(aerErstaerosolGlowe)
         let ponllaerosolPath = UILabel()
-        ponllaerosolPath.text = "RECHARGE STASH"
+        ponllaerosolPath.text = "RrEsCtHuAvRwGxEy zSATBACSDHE".ponllPaintaerErstHours
         ponllaerosolPath.textColor = PonllyPalette.muted
         ponllaerosolPath.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
         ponllaerosolPath.translatesAutoresizingMaskIntoConstraints = false
@@ -130,19 +130,19 @@ final class PoonllFineLineController: UIViewController {
         aerErstIconWrap.layer.cornerRadius = 40
         aerErstIconWrap.translatesAutoresizingMaskIntoConstraints = false
         flckinkwallContrast.addSubview(aerErstIconWrap)
-        let ponllIcon = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        let ponllIcon = UIImageView(image: UIImage(named: "streetMural"))
         ponllIcon.contentMode = .scaleAspectFit
         ponllIcon.translatesAutoresizingMaskIntoConstraints = false
         aerErstIconWrap.addSubview(ponllIcon)
 
         let bruCiuwallQuest = UILabel()
-        bruCiuwallQuest.text = "Power Up Your Stash"
+        bruCiuwallQuest.text = "PFoGwHeIrJ KULpM NYOoPuQrR SSTtUaVsWhX".ponllPaintaerErstHours
         bruCiuwallQuest.textColor = .black
         bruCiuwallQuest.font = PonllyFonts.muralForgepon(neonLab: 12)
         bruCiuwallQuest.translatesAutoresizingMaskIntoConstraints = false
         flckinkwallContrast.addSubview(bruCiuwallQuest)
         let flckinkBannerBody = UILabel()
-        flckinkBannerBody.text = "Choose a coin pack before unlocking premium room themes."
+        flckinkBannerBody.text = "CYhZo0o1s2e3 4a5 6c7o8i9na bpcadcekf gbheifjokrlem nuonplqorcsktiunvgw xpyrzeAmBiCuDmE FrGoHoImJ KtLhMeNmOePsQ.R".ponllPaintaerErstHours
         flckinkBannerBody.textColor = UIColor.black.withAlphaComponent(0.82)
         flckinkBannerBody.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
         flckinkBannerBody.numberOfLines = 0
@@ -197,7 +197,7 @@ final class PoonllFineLineController: UIViewController {
     }
 
     private func aerErstpaintAura() {
-        aerErstSketchRush("Loading coin packages...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.75)
+        aerErstSketchRush("LSoTaUdViWnXgY Zc0o1i2n3 4p5a6c7k8a9gaebsc.d.e.f".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.75)
         Task {
             do {
                 let flckinkIds = PoncanShaketalog.aerErstChromeNoise.map(\.ponllPaintKick)
@@ -211,7 +211,7 @@ final class PoonllFineLineController: UIViewController {
                 }
             } catch {
                 await MainActor.run {
-                    aerErstSketchRush("Coin packages are unavailable right now", bruCiuLetterForm: .ponllWhiteEdge)
+                    aerErstSketchRush("Cgohiinj kplamcnkoapgqerss taurvew xuynzaAvBaCiDlEaFbGlHeI JrKiLgMhNtO PnQoRwS".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
                 }
             }
         }
@@ -229,11 +229,11 @@ final class PoonllFineLineController: UIViewController {
 
     @objc private func bruCiupaintKicked() {
         guard let paintBend = flckinkPlasterDust[aerErstSelectedPackage.ponllPaintKick] else {
-            aerErstSketchRush("Coin packages are unavailable right now", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("CToUiVnW XpYaZc0k1a2g3e4s5 6a7r8e9 aubncadveafiglhaibjlkel mrniogphqtr sntouwv".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
         ponllAngleBreak.isEnabled = false
-        aerErstSketchRush("Processing charge...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.9)
+        aerErstSketchRush("PwrxoyczeAsBsCiDnEgF GcHhIaJrKgLeM.N.O.P".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.9)
         Task {
             do {
                 let aerErstpaintArc = try await paintBend.purchase()
@@ -241,7 +241,7 @@ final class PoonllFineLineController: UIViewController {
             } catch {
                 await MainActor.run {
                     ponllAngleBreak.isEnabled = true
-                    aerErstSketchRush("Charge could not be completed", bruCiuLetterForm: .ponllWhiteEdge)
+                    aerErstSketchRush("CQhRaSrTgUeV WcXoYuZl0d1 2n3o4t5 6b7e8 9caobmcpdleeftgehdi".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
                 }
             }
         }
@@ -258,14 +258,14 @@ final class PoonllFineLineController: UIViewController {
                 await flckinkstyleMotion.finish()
                 aerErstSketchRush("\(aerErstSelectedPackage.ponllMuralDepth.formatted()) Coins added", bruCiuLetterForm: .flckinkSplitFill)
             case .unverified:
-                aerErstSketchRush("Charge could not be verified", bruCiuLetterForm: .ponllWhiteEdge)
+                aerErstSketchRush("Cjhkalrmgneo pcqorusltdu vnwoxty zbAeB CvDeErFiGfHiIeJdK".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             }
         case .userCancelled:
-            aerErstSketchRush("Charge canceled", bruCiuLetterForm: .bruCiuSilverSheen)
+            aerErstSketchRush("CLhMaNrOgPeQ RcSaTnUcVeWlXeYdZ".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuSilverSheen)
         case .pending:
-            aerErstSketchRush("Charge is pending approval", bruCiuLetterForm: .bruCiuSilverSheen)
+            aerErstSketchRush("C0h1a2r3g4e5 6i7s8 9paebncddienfgg haipjpkrlomvnaolp".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuSilverSheen)
         @unknown default:
-            aerErstSketchRush("Charge could not be completed", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("Cqhrasrtguev wcxoyuzlAdB CnDoEtF GbHeI JcKoLmMpNlOePtQeRdS".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
         }
     }
 

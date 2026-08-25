@@ -24,7 +24,7 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
                 let ponllAerosolForge = PonllyponllTornEdge.bruCiuCementRough(bruCiuPasteMuse.letterForm)
                 aerErstGraffitiForge.brickTone = ponllAerosolForge
                 self.bruCiuTextureNoise(aerErstGraffitiForge)
-                self.flckinkPrimerCoatponlu(ponllAerosolForge ? "Artist followed" : "Artist unfollowed")
+                self.flckinkPrimerCoatponlu(ponllAerosolForge ? "Atrutviwsxty zfAoBlClDoEwFeGdH".ponllPaintaerErstHours : "AIrJtKiLsMtN OuPnQfRoSlTlUoVwWeXdY".ponllPaintaerErstHours)
             }
         }
         ponllStencilMuse.aerErstChromeArc = { [weak self] in
@@ -34,7 +34,7 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
                 bruCiuMuralForge.wallTexture.toggle()
                 bruCiuMuralForge.wildstyleCurve += bruCiuMuralForge.wallTexture ? 1 : -1
                 self.bruCiuTextureNoise(bruCiuMuralForge)
-                self.flckinkPrimerCoatponlu(bruCiuMuralForge.wallTexture ? "Added to your likes" : "Updated")
+                self.flckinkPrimerCoatponlu(bruCiuMuralForge.wallTexture ? "AZd0d1e2d3 4t5o6 7y8o9uarb cldiekfegsh".ponllPaintaerErstHours : "Uipjdkaltmendo".ponllPaintaerErstHours)
             }
         }
         ponllStencilMuse.ponllNeonBend = { [weak self] in
@@ -46,7 +46,7 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
             self.aerErstAerosolLean {
                 let aerErstInkForge = PonllyroughFillController(solidMarker: bruCiuPasteMuse)
                 aerErstInkForge.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
+                    self?.aerErstSketchRush("Rpeqprosrttu vswuxbymziAtBtCeDdE".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
                 }
                 aerErstInkForge.modalPresentationStyle = .overFullScreen
                 aerErstInkForge.modalTransitionStyle = .crossDissolve

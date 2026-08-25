@@ -18,7 +18,7 @@ final class ErstMuralPlanController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Preview Challenge"
+        title = "PFrGeHvIiJeKwL MCNhOaPlQlReSnTgUeV".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         let ponllLayerPlan = UIStackView()
         ponllLayerPlan.axis = .vertical
@@ -39,10 +39,10 @@ final class ErstMuralPlanController: UIViewController {
         aerErstShadowPlan.font = PonllyFonts.muralForgepon(neonLab: 14)
         flckinkOutlinePlan.addSubview(aerErstShadowPlan)
         aerErstShadowPlan.woodPanelPonlly(steelGate: flckinkOutlinePlan, bruCiuClearCoat: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18))
-        let ponllFillPlan = PonllyNeonButton("Publish Challenge")
+        let ponllFillPlan = PonllyNeonButton("PWuXbYlZi0s1h2 3C4h5a6l7l8e9nagbec".ponllPaintaerErstHours)
         ponllFillPlan.addTarget(self, action: #selector(bruCiuStencilPlan), for: .touchUpInside)
         let flckinkPastePlan = UIButton(type: .system)
-        flckinkPastePlan.setTitle("Edit Challenge", for: .normal)
+        flckinkPastePlan.setTitle("Eddeiftg hCihjaklllmennogpeq".ponllPaintaerErstHours, for: .normal)
         flckinkPastePlan.tintColor = PonllyPalette.muted
         flckinkPastePlan.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         [bruCiuPaintPlan, flckinkOutlinePlan, ponllFillPlan, flckinkPastePlan].forEach(ponllLayerPlan.addArrangedSubview)
@@ -62,7 +62,7 @@ final class ErstMuralPlanController: UIViewController {
     }
 
     @objc private func bruCiuStencilPlan() {
-        flckinkPrimerCoatponlu("Publishing challenge...")
+        flckinkPrimerCoatponlu("PrusbtluivswhxiynzgA BcChDaElFlGeHnIgJeK.L.M.N".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.navigationController?.pushViewController(NikTrafficBarrierController(bruCiuInkFlash: self.bruCiuWallPlan), animated: true)
         }

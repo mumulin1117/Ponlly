@@ -22,13 +22,13 @@ final class ErstWeatheredPaperController: UIViewController {
         aerErstAerosolLab.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstAerosolLab)
         let ponllLetterLab = UILabel()
-        ponllLetterLab.text = "Creation Hub"
+        ponllLetterLab.text = "COrPeQaRtSiToUnV WHXuYbZ".ponllPaintaerErstHours
         ponllLetterLab.textColor = .white
         ponllLetterLab.font = PonllyFonts.muralForgepon(neonLab: 24)
         ponllLetterLab.translatesAutoresizingMaskIntoConstraints = false
         aerErstAerosolLab.addSubview(ponllLetterLab)
         let bruCiuColorLab = UILabel()
-        bruCiuColorLab.text = "Select Your Medium"
+        bruCiuColorLab.text = "S0e1l2e3c4t5 6Y7o8u9ra bMceddeifugmh".ponllPaintaerErstHours
         bruCiuColorLab.textColor = PonllyPalette.muted
         bruCiuColorLab.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
         bruCiuColorLab.translatesAutoresizingMaskIntoConstraints = false
@@ -49,12 +49,12 @@ final class ErstWeatheredPaperController: UIViewController {
         ponllMarkerLab.spacing = 22
         ponllMarkerLab.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllMarkerLab)
-        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Post Video", bruCiuAerosolMuse: "Share progress timelapses & tutorials", flckinkMuralMuse: PonllyPalette.cyan, aerErstStreetMuse: "create_post_video_icon", ponllPaintMuse: #selector(bruCiuInkMuse)))
-        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Start PK Battle", bruCiuAerosolMuse: "Challenge another writer to a battle", flckinkMuralMuse: PonllyPalette.green, aerErstStreetMuse: "create_pk_battle_icon", ponllPaintMuse: #selector(flckinkStyleLab)))
-        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Create Voice Room", bruCiuAerosolMuse: "Hangout, review yards, or critique", flckinkMuralMuse: .white, aerErstStreetMuse: "create_voice_room_icon", ponllPaintMuse: #selector(aerErstWallMuse)))
+        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Piojsktl mVniodpeqor".ponllPaintaerErstHours, bruCiuAerosolMuse: "Sshtaurvew xpyrzoAgBrCeDsEsF GtHiImJeKlLaMpNsOePsQ R&S TtUuVtWoXrYiZa0l1s2".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.cyan, aerErstStreetMuse: "paintFlow", ponllPaintMuse: #selector(bruCiuInkMuse)))
+        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "S3t4a5r6t7 8P9Ka bBcadtetflgeh".ponllPaintaerErstHours, bruCiuAerosolMuse: "Cihjaklllmennogpeq rasntoutvhwexry zwArBiCtDeErF GtHoI JaK LbMaNtOtPlQeR".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.green, aerErstStreetMuse: "wallCraft", ponllPaintMuse: #selector(flckinkStyleLab)))
+        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "CSrTeUaVtWeX YVZo0i1c2e3 4R5o6o7m8".ponllPaintaerErstHours, bruCiuAerosolMuse: "H9aanbgcoduetf,g hriejvkilemwn oypaqrrdsst,u vowrx yczrAiBtCiDqEuFeG".ponllPaintaerErstHours, flckinkMuralMuse: .white, aerErstStreetMuse: "sprayRhythm", ponllPaintMuse: #selector(aerErstWallMuse)))
 
         let bruCiuLetterMuse = UILabel()
-        bruCiuLetterMuse.text = "Leave Your Mark"
+        bruCiuLetterMuse.text = "LHeIaJvKeL MYNoOuPrQ RMSaTrUkV".ponllPaintaerErstHours
         bruCiuLetterMuse.textColor = UIColor.white.withAlphaComponent(0.03)
         bruCiuLetterMuse.font = PonllyFonts.muralForgepon(neonLab: 34)
         bruCiuLetterMuse.adjustsFontSizeToFitWidth = true

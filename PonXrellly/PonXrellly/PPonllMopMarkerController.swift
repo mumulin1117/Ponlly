@@ -4,7 +4,7 @@ final class PPonllMopMarkerController: UIViewController {
     private let ponllUserName: String
     private let bruCiuAvatarImage: UIImage?
     private let flckinkCompletionFlow: () -> Void
-    private let aerErstneonMotion = UIImageView(image: UIImage(named: "voice_room_bg_08"))
+    private let aerErstneonMotion = UIImageView(image: UIImage(named: "whitePop"))
 
     init(userName ponllUserName: String, avatar bruCiuAvatarImage: UIImage?, completion flckinkCompletionFlow: @escaping () -> Void) {
         self.ponllUserName = ponllUserName
@@ -54,7 +54,7 @@ final class PPonllMopMarkerController: UIViewController {
         flckinkmarkerFuse.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkmarkerFuse)
 
-        let aerErstmarkerWeave = UIImageView(image: bruCiuAvatarImage ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "ponlly_avatar_01"))
+        let aerErstmarkerWeave = UIImageView(image: bruCiuAvatarImage ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "pasteupEcho"))
         aerErstmarkerWeave.contentMode = .scaleAspectFill
         aerErstmarkerWeave.clipsToBounds = true
         aerErstmarkerWeave.layer.cornerRadius = 57
@@ -79,7 +79,7 @@ final class PPonllMopMarkerController: UIViewController {
         view.addSubview(bruCiustencilSurge)
 
         let flckinkstencilContrast = UILabel()
-        flckinkstencilContrast.text = "Your street art journey begins now. Battle with rivals, upload your masterpieces, and claim your turf."
+        flckinkstencilContrast.text = "YLoMuNrO PsQtRrSeTeUtV WaXrYtZ 0j1o2u3r4n5e6y7 8b9eagbicndse fngohwi.j kBlamtntolpeq rwsittuhv wrxiyvzaAlBsC,D EuFpGlHoIaJdK LyMoNuOrP QmRaSsTtUeVrWpXiYeZc0e1s2,3 4a5n6d7 8c9laabicmd eyfoguhri jtkulrmfn.o".ponllPaintaerErstHours
         flckinkstencilContrast.textColor = PonllyPalette.muted
         flckinkstencilContrast.textAlignment = .center
         flckinkstencilContrast.font = PonllyFonts.utilityBox(blankFacade: 15)
@@ -88,7 +88,7 @@ final class PPonllMopMarkerController: UIViewController {
         flckinkstencilContrast.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkstencilContrast)
 
-        let aerErststencilWeave = PonllyNeonButton("Enter App")
+        let aerErststencilWeave = PonllyNeonButton("Epnqtresrt uAvpwpx".ponllPaintaerErstHours)
         aerErststencilWeave.addTarget(self, action: #selector(bruCiustencilKick), for: .touchUpInside)
         aerErststencilWeave.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErststencilWeave)

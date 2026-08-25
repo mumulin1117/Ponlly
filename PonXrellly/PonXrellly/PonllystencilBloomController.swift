@@ -44,11 +44,11 @@ final class PonllystencilBloomController: UIViewController {
         flckinkHeaderStack.axis = .vertical
         flckinkHeaderStack.spacing = 6
         let aerErstTitleMark = UILabel()
-        aerErstTitleMark.text = "Voice Room"
+        aerErstTitleMark.text = "VwoxiyczeA BRCoDoEmF".ponllPaintaerErstHours
         aerErstTitleMark.textColor = .white
         aerErstTitleMark.font = PonllyFonts.muralForgepon(neonLab: 32)
         let ponllSubtitleMark = UILabel()
-        ponllSubtitleMark.text = "Drop into wall-talk sessions with writers, critics, and process crews."
+        ponllSubtitleMark.text = "DGrHoIpJ KiLnMtNoO PwQaRlSlT-UtVaWlXkY Zs0e1s2s3i4o5n6s7 8w9iatbhc dwerfigtheirjsk,l mcnroiptqircsst,u vawnxdy zpArBoCcDeEsFsG HcIrJeKwLsM.N".ponllPaintaerErstHours
         ponllSubtitleMark.textColor = PonllyPalette.muted
         ponllSubtitleMark.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
         ponllSubtitleMark.numberOfLines = 0
@@ -235,12 +235,12 @@ final class PonllystencilBloomController: UIViewController {
         ponllfatCap.widthAnchor.constraint(equalToConstant: 38).isActive = true
         ponllfatCap.heightAnchor.constraint(equalToConstant: 38).isActive = true
         let bruCiuEmptyTitle = UILabel()
-        bruCiuEmptyTitle.text = "No rooms from followed artists"
+        bruCiuEmptyTitle.text = "NOoP QrRoSoTmUsV WfXrYoZm0 1f2o3l4l5o6w7e8d9 aabrctdiesftgsh".ponllPaintaerErstHours
         bruCiuEmptyTitle.textColor = .white
         bruCiuEmptyTitle.textAlignment = .center
         bruCiuEmptyTitle.font = PonllyFonts.muralForgepon(neonLab: 16)
         let flckinkpaintRun = UILabel()
-        flckinkpaintRun.text = "Follow more wall writers to see their live voice spaces here."
+        flckinkpaintRun.text = "Fiojlkllomwn ompoqrres twuavlwlx ywzrAiBtCeDrEsF GtHoI JsKeLeM NtOhPeQiRrS TlUiVvWeX YvZo0i1c2e3 4s5p6a7c8e9sa bhcedreef.g".ponllPaintaerErstHours
         flckinkpaintRun.textColor = PonllyPalette.muted
         flckinkpaintRun.textAlignment = .center
         flckinkpaintRun.numberOfLines = 0
@@ -250,7 +250,7 @@ final class PonllystencilBloomController: UIViewController {
     }
 
     private func aerErstOpen(_ letterForm: PonllyaerErstWeatheredPaperm) {
-        flckinkPrimerCoatponlu("Entering room...")
+        flckinkPrimerCoatponlu("Ehnitjekrlimnngo prqorosmt.u.v.w".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             let bruCiuconcreteMuse = PwheatpasteLayerController(aerErstConcreteMuse: letterForm)
             bruCiuconcreteMuse.hidesBottomBarWhenPushed = true
@@ -269,7 +269,7 @@ final class PonllystencilBloomController: UIViewController {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
             let             capControl = PonllyroughFillController(lineSpray: bruCiuRoom)
                         capControl.fadeSpray = { [weak self] in
-                self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
+                self?.aerErstSketchRush("RxeypzoArBtC DsEuFbGmHiItJtKeLdM".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
             }
                         capControl.modalPresentationStyle = .overFullScreen
                         capControl.modalTransitionStyle = .crossDissolve

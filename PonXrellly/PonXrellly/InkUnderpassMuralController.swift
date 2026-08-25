@@ -47,7 +47,7 @@ final class InkUnderpassMuralController: UIViewController {
         let ponllUrbanSketch = UIView()
         ponllUrbanSketch.translatesAutoresizingMaskIntoConstraints = false
         let bruCiuChromeSketch = UILabel()
-        bruCiuChromeSketch.text = "Ponlly"
+        bruCiuChromeSketch.text = "PwoxnylzlAyB".ponllPaintaerErstHours
         bruCiuChromeSketch.font = PonllyFonts.muralForgepon(neonLab: 22)
         bruCiuChromeSketch.textColor = .white
         bruCiuChromeSketch.layer.shadowColor = PonllyPalette.pink.cgColor
@@ -57,7 +57,7 @@ final class InkUnderpassMuralController: UIViewController {
         ponllUrbanSketch.addSubview(bruCiuChromeSketch)
 
         let flckinkNeonSketch = UIButton(type: .system)
-        flckinkNeonSketch.setImage(UIImage(named: "header_actions")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        flckinkNeonSketch.setImage(UIImage(named: "stencilBloom")?.withRenderingMode(.alwaysOriginal), for: .normal)
         flckinkNeonSketch.imageView?.contentMode = .scaleAspectFit
         flckinkNeonSketch.translatesAutoresizingMaskIntoConstraints = false
         flckinkNeonSketch.addTarget(self, action: #selector(aerErstPasteSketch), for: .touchUpInside)
@@ -69,8 +69,8 @@ final class InkUnderpassMuralController: UIViewController {
         ponllDripSketch.translatesAutoresizingMaskIntoConstraints = false
         ponllUrbanSketch.addSubview(ponllDripSketch)
 
-        flckinkAerosolPiece(bruCiuColorSketch, bruCiuGraffitiPiece: "Hot Battles", flckinkQuickPiece: .bruCiuSprayBloomponll)
-        flckinkAerosolPiece(flckinkStyleSketch, bruCiuGraffitiPiece: "Waiting for Challenge", flckinkQuickPiece: .flckinkWallTexturepoj)
+        flckinkAerosolPiece(bruCiuColorSketch, bruCiuGraffitiPiece: "HCoDtE FBGaHtItJlKeLsM".ponllPaintaerErstHours, flckinkQuickPiece: .bruCiuSprayBloomponll)
+        flckinkAerosolPiece(flckinkStyleSketch, bruCiuGraffitiPiece: "WNaOiPtQiRnSgT UfVoWrX YCZh0a1l2l3e4n5g6e7".ponllPaintaerErstHours, flckinkQuickPiece: .flckinkWallTexturepoj)
 
         ponllWallSketch.addArrangedSubview(ponllUrbanSketch)
 
@@ -132,7 +132,7 @@ final class InkUnderpassMuralController: UIViewController {
 
     private func bruCiuSoftPiece() -> UIView {
         let flckinkBurstPiece = UILabel()
-        flckinkBurstPiece.text = aerErstShadowSketch == .bruCiuSprayBloomponll ? "Hot Battles" : "Waiting For Challenge"
+        flckinkBurstPiece.text = aerErstShadowSketch == .bruCiuSprayBloomponll ? "H8o9ta bBcadtetflgehsi".ponllPaintaerErstHours : "Wjakiltminnogp qFrosrt uCvhwaxlylzeAnBgCeD".ponllPaintaerErstHours
         flckinkBurstPiece.textColor = .white
         flckinkBurstPiece.font = PonllyFonts.muralForgepon(neonLab: 12)
         return flckinkBurstPiece
@@ -170,22 +170,22 @@ final class InkUnderpassMuralController: UIViewController {
     }
 
     private func ponllArrowPiece(for flckinkRailPiece: PonllyBattle) {
-        let ponllTunnelPiece = UIAlertController(title: "Battle Options", message: flckinkRailPiece.nozzleCraft, preferredStyle: .actionSheet)
-        ponllTunnelPiece.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
+        let ponllTunnelPiece = UIAlertController(title: "BEaFtGtHlIeJ KOLpMtNiOoPnQsR".ponllPaintaerErstHours, message: flckinkRailPiece.nozzleCraft, preferredStyle: .actionSheet)
+        ponllTunnelPiece.addAction(UIAlertAction(title: "RSeTpUoVrWtX YCZh0a1l2l3e4n5g6e7".ponllPaintaerErstHours, style: .destructive) { _ in
             FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
                 let bruCiuAlleyPiece = PonllyroughFillController(blackOutline: flckinkRailPiece)
                 bruCiuAlleyPiece.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
+                    self?.aerErstSketchRush("R8e9paobrctd esfugbhmiijtktlemdn".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
                 }
                 bruCiuAlleyPiece.modalPresentationStyle = .overFullScreen
                 bruCiuAlleyPiece.modalTransitionStyle = .crossDissolve
                 self.present(bruCiuAlleyPiece, animated: true)
             }
         })
-        ponllTunnelPiece.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in
-            self.flckinkPrimerCoatponlu("Updated")
+        ponllTunnelPiece.addAction(UIAlertAction(title: "Nooptq rIsnttuevrwexsytzeAdB".ponllPaintaerErstHours, style: .default) { _ in
+            self.flckinkPrimerCoatponlu("UCpDdEaFtGeHdI".ponllPaintaerErstHours)
         })
-        ponllTunnelPiece.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ponllTunnelPiece.addAction(UIAlertAction(title: "CJaKnLcMeNlO".ponllPaintaerErstHours, style: .cancel))
         if let flckinkBridgePiece = ponllTunnelPiece.popoverPresentationController {
             flckinkBridgePiece.sourceView = view
             flckinkBridgePiece.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY - 80, width: 1, height: 1)

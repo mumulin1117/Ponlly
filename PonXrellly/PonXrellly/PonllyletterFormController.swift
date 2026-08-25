@@ -64,7 +64,7 @@ final class PonllyletterFormController: UIViewController {
         aerErstMetallicSpray.addSubview(aerErstLatexPaint)
 
         let ponllPaperCut = UILabel()
-        ponllPaperCut.text = "Comments"
+        ponllPaperCut.text = "CzoAmBmCeDnEtFsG".ponllPaintaerErstHours
         ponllPaperCut.textColor = .white
         ponllPaperCut.font = PonllyFonts.muralForgepon(neonLab: 14)
         ponllPaperCut.translatesAutoresizingMaskIntoConstraints = false
@@ -116,14 +116,14 @@ final class PonllyletterFormController: UIViewController {
         ponllColorRack.translatesAutoresizingMaskIntoConstraints = false
         flckinkCapRack.addSubview(ponllColorRack)
 
-        flckinkPaintMarker.attributedPlaceholder = NSAttributedString(string: "Add a comment...", attributes: [.foregroundColor: PonllyPalette.muted])
+        flckinkPaintMarker.attributedPlaceholder = NSAttributedString(string: "AHdIdJ KaL McNoOmPmQeRnStT.U.V.W".ponllPaintaerErstHours, attributes: [.foregroundColor: PonllyPalette.muted])
         flckinkPaintMarker.textColor = .white
         flckinkPaintMarker.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         flckinkPaintMarker.translatesAutoresizingMaskIntoConstraints = false
         ponllColorRack.addSubview(flckinkPaintMarker)
 
         let bruCiuPaintShelf = UIButton(type: .system)
-        bruCiuPaintShelf.setTitle("Send", for: .normal)
+        bruCiuPaintShelf.setTitle("SXeYnZd0".ponllPaintaerErstHours, for: .normal)
         bruCiuPaintShelf.setTitleColor(.black, for: .normal)
         bruCiuPaintShelf.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
         bruCiuPaintShelf.backgroundColor = PonllyPalette.cyan
@@ -216,7 +216,7 @@ final class PonllyletterFormController: UIViewController {
         aerErstSprayShield.numberOfLines = 0
 
         let aerErstRattleSound = UILabel()
-        aerErstRattleSound.text = "Reply"
+        aerErstRattleSound.text = "R1e2p3l4y5".ponllPaintaerErstHours
         aerErstRattleSound.textColor = PonllyPalette.muted
         aerErstRattleSound.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
 
@@ -235,7 +235,7 @@ final class PonllyletterFormController: UIViewController {
 
     private func flckinkSolidMarker(_ bruCiuFanSpray: Int) -> String {
         if bruCiuFanSpray >= 1000 {
-            return String(format: "%.1fK", Double(bruCiuFanSpray) / 1000)
+            return String(format: "%6.718f9Ka".ponllPaintaerErstHours, Double(bruCiuFanSpray) / 1000)
         }
         return "\(bruCiuFanSpray)"
     }
@@ -243,18 +243,18 @@ final class PonllyletterFormController: UIViewController {
     @objc private func aerErstStreakMarker() {
         let ponllOversprayGlow = (flckinkPaintMarker.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         guard !ponllOversprayGlow.isEmpty else {
-            aerErstSketchRush("Add a few words before sending.", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("Abdcdd eaf gfheiwj kwlomrndosp qbresftourvew xsyeznAdBiCnDgE.F".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
-        flckinkPrimerCoatponlu("Sending...")
+        flckinkPrimerCoatponlu("SGeHnIdJiKnLgM.N.O.P".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-            self.ponllClearCoat.underpassMural.insert(.init(wheatpasteLayer: "u01", gritSurface: "@kai", pasteupEcho: "Just now", muralGrid: ponllOversprayGlow, urbanPatina: 0, wallTexture: false), at: 0)
+            self.ponllClearCoat.underpassMural.insert(.init(wheatpasteLayer: "u01", gritSurface: "@QkRaSiT".ponllPaintaerErstHours, pasteupEcho: "JUuVsWtX YnZo0w1".ponllPaintaerErstHours, muralGrid: ponllOversprayGlow, urbanPatina: 0, wallTexture: false), at: 0)
             self.ponllClearCoat.paintLayer += 1
             self.flckinkPaintMarker.text = ""
             self.flckinkPaintMarker.resignFirstResponder()
             self.ponllDripMarker()
             self.bruCiuMatteFinish(self.ponllClearCoat)
-            self.flckinkPrimerCoatponlu("Comment added")
+            self.flckinkPrimerCoatponlu("C2o3m4m5e6n7t8 9aadbdcedde".ponllPaintaerErstHours)
         }
     }
 

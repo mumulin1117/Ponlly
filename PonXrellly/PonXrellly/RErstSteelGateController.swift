@@ -23,7 +23,7 @@ final class RErstSteelGateController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Theme Store"
+        title = "Tehfegmhei jSktlomrneo".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         bruCiuBridgePillar()
         NotificationCenter.default.addObserver(self, selector: #selector(aerErstbruCiuBrushMarker), name: .ponllybruCiuColorRackChange, object: nil)
@@ -50,7 +50,7 @@ final class RErstSteelGateController: UIViewController {
             ponllflckinkRoofLine.addArrangedSubview(flckinkSpotlightCard(bruCiuSpotlight))
         }
         let aerErstBrowseLabel = UILabel()
-        aerErstBrowseLabel.text = "Browse Themes"
+        aerErstBrowseLabel.text = "Bprqorwssteu vTwhxeymzeAsB".ponllPaintaerErstHours
         aerErstBrowseLabel.textColor = PonllyPalette.muted
         aerErstBrowseLabel.font = PonllyFonts.muralForgepon(neonLab: 11)
         ponllflckinkRoofLine.addArrangedSubview(aerErstBrowseLabel)
@@ -93,7 +93,7 @@ final class RErstSteelGateController: UIViewController {
         flckinkStrip.layer.borderWidth = 1
         flckinkStrip.layer.borderColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 0.42).cgColor
 
-        let aerErstaerErstDrainCover = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        let aerErstaerErstDrainCover = UIImageView(image: UIImage(named: "streetMural"))
         aerErstaerErstDrainCover.translatesAutoresizingMaskIntoConstraints = false
         flckinkStrip.addSubview(aerErstaerErstDrainCover)
 
@@ -104,7 +104,7 @@ final class RErstSteelGateController: UIViewController {
         ponllflckinkCurbLineLabel()
 
         let ponllHintLabel = UILabel()
-        ponllHintLabel.text = "Choose a room look"
+        ponllHintLabel.text = "CChDoEoFsGeH IaJ KrLoMoNmO PlQoRoSkT".ponllPaintaerErstHours
         ponllHintLabel.textColor = PonllyPalette.muted
         ponllHintLabel.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
         ponllHintLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -179,7 +179,7 @@ final class RErstSteelGateController: UIViewController {
         bruCiuMetaLabel.translatesAutoresizingMaskIntoConstraints = false
         ponlbruCiuSidewalkEdge.addSubview(bruCiuMetaLabel)
         let flckinkflckinkPlasterDust = UIButton(type: .system)
-        flckinkflckinkPlasterDust.setTitle("Choose", for: .normal)
+        flckinkflckinkPlasterDust.setTitle("CUhVoWoXsYeZ".ponllPaintaerErstHours, for: .normal)
         flckinkflckinkPlasterDust.setTitleColor(.black, for: .normal)
         flckinkflckinkPlasterDust.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 10)
         flckinkflckinkPlasterDust.backgroundColor = PonllyPalette.cyan
@@ -232,7 +232,7 @@ final class RErstSteelGateController: UIViewController {
         let flckinkflckinkPaintShelf = PonllysprayRhythmController(bruCiuTheme) { [weak self] ponllSelectedTheme in
             guard let self else { return }
             if PonllyponllTornEdge.flckinkShadowLayer < ponllSelectedTheme.aerErstLayerBlend {
-                self.aerErstSketchRush("Add coins to unlock this theme", bruCiuLetterForm: .bruCiuSilverSheen)
+                self.aerErstSketchRush("A0d1d2 3c4o5i6n7s8 9taob cudnelfogchki jtkhlimsn otphqermset".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuSilverSheen)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                     let bruCiuStore = PoonllFineLineController()
                     bruCiuStore.hidesBottomBarWhenPushed = true
@@ -240,10 +240,10 @@ final class RErstSteelGateController: UIViewController {
                 }
                 return
             }
-            self.aerErstSketchRush("Preparing room...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.75)
+            self.aerErstSketchRush("PurvewpxayrziAnBgC DrEoFoGmH.I.J.K".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.75)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
                 guard PonllyponllTornEdge.aerErstHighlightStroke(ponllSelectedTheme.aerErstLayerBlend) else {
-                    self.aerErstSketchRush("Add coins to unlock this theme", bruCiuLetterForm: .bruCiuSilverSheen)
+                    self.aerErstSketchRush("ALdMdN OcPoQiRnSsT UtVoW XuYnZl0o1c2k3 4t5h6i7s8 9tahbecmdee".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuSilverSheen)
                     let aerErstStore = PoonllFineLineController()
                     aerErstStore.hidesBottomBarWhenPushed = true
                     self.navigationController?.pushViewController(aerErstStore, animated: true)

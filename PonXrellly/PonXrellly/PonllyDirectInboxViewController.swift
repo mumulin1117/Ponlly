@@ -46,7 +46,7 @@ final class PonllyDirectInboxViewController: UIViewController {
         view.addSubview(flckinkStreetMural)
 
         let flckinkUrbanCanvas = UILabel()
-        flckinkUrbanCanvas.text = "Private Messaging"
+        flckinkUrbanCanvas.text = "PXrYiZv0a1t2e3 4M5e6s7s8a9gaibncgd".ponllPaintaerErstHours
         flckinkUrbanCanvas.textColor = .white
         flckinkUrbanCanvas.textAlignment = .center
         flckinkUrbanCanvas.font = PonllyFonts.muralForgepon(neonLab: 22)
@@ -174,11 +174,11 @@ final class PonllyDirectInboxViewController: UIViewController {
         bruCiuPaintMist.widthAnchor.constraint(equalToConstant: 34).isActive = true
         bruCiuPaintMist.heightAnchor.constraint(equalToConstant: 34).isActive = true
         let flckinkColorSplash = UILabel()
-        flckinkColorSplash.text = "No Messages"
+        flckinkColorSplash.text = "Neof gMheisjskalgmenso".ponllPaintaerErstHours
         flckinkColorSplash.textColor = .white
         flckinkColorSplash.font = PonllyFonts.muralForgepon(neonLab: 18)
         let aerErstNeonDrip = UILabel()
-        aerErstNeonDrip.text = "Mutual artist conversations will appear here."
+        aerErstNeonDrip.text = "Mpuqtrusatlu vawrxtyizsAtB CcDoEnFvGeHrIsJaKtLiMoNnOsP QwRiSlTlU VaWpXpYeZa0r1 2h3e4r5e6.7".ponllPaintaerErstHours
         aerErstNeonDrip.textColor = PonllyPalette.muted
         aerErstNeonDrip.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
         aerErstNeonDrip.textAlignment = .center

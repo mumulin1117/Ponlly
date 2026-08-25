@@ -13,10 +13,10 @@ final class FlckinkPrimerCoatController: UIViewController {
 
         var nozzleCraft: String {
             switch self {
-            case .flckinkWarehousePiece: return "Artwork"
-            case .aerErstShutterPiece: return "Videos"
-            case .ponllFencePiece: return "PK Battles"
-            case .bruCiuRooftopPiece: return "Favorites"
+            case .flckinkWarehousePiece: return "AyrztAwBoCrDkE".ponllPaintaerErstHours
+            case .aerErstShutterPiece: return "VFiGdHeIoJsK".ponllPaintaerErstHours
+            case .ponllFencePiece: return "PLKM NBOaPtQtRlSeTsU".ponllPaintaerErstHours
+            case .bruCiuRooftopPiece: return "FVaWvXoYrZi0t1e2s3".ponllPaintaerErstHours
             }
         }
     }
@@ -75,7 +75,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         let ponllCurvedLetter = aerErstTallLetter(flckinkCornerPiece.urbanCanvas, bruCiuWideLetter: 13, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
         ponllCurvedLetter.numberOfLines = 0
         ponllCurvedLetter.textAlignment = .center
-        let bruCiuBrokenLetter = flckinkStackedLetter(["Wildstyle", "Chrome", "Stencil"])
+        let bruCiuBrokenLetter = flckinkStackedLetter(["W4i5l6d7s8t9yalbec".ponllPaintaerErstHours, "Cdherfogmhei".ponllPaintaerErstHours, "Sjtkelnmcniolp".ponllPaintaerErstHours])
         let flckinkLinkedLetter = aerErstLoopedLetter()
         let aerErstFlaredLetter = ponllShadowedLetter()
         let ponllOutlinedLetter = bruCiuChromeLetter()
@@ -124,8 +124,8 @@ final class FlckinkPrimerCoatController: UIViewController {
         let aerErstSkinnyLetter = PbruCiuClearCoatView(ponllPaintTrace: PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).first ?? PonllyaerErstSolidMarkerk(
             graffitiPulse: "\(flckinkCornerPiece.graffitiPulse)_profile_empty",
             markerStroke: flckinkCornerPiece.graffitiPulse,
-            nozzleCraft: "Wall Study",
-            capControl: "Graffiti",
+            nozzleCraft: "Wqarlslt uSvtwuxdyyz".ponllPaintaerErstHours,
+            capControl: "GArBaCfDfEiFtGiH".ponllPaintaerErstHours,
             stencilBloom: nil,
             inkDrift: flckinkCornerPiece.inkDrift
         ))
@@ -137,7 +137,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllFatLetter.translatesAutoresizingMaskIntoConstraints = false
         flckinkBoldLetter.addSubview(ponllFatLetter)
         let bruCiuLetterGrid = flckinkLetterFlow("chevron.left", aerErstLetterSnap: #selector(ponllLetterArc))
-        let flckinkLetterBend = flckinkLetterFlow("ellipsis", aerErstLetterSnap: #selector(bruCiuLetterKick))
+        let flckinkLetterBend = flckinkLetterFlow("eIlJlKiLpMsNiOsP".ponllPaintaerErstHours, aerErstLetterSnap: #selector(bruCiuLetterKick))
         flckinkBoldLetter.addSubview(bruCiuLetterGrid)
         flckinkBoldLetter.addSubview(flckinkLetterBend)
         NSLayoutConstraint.activate([
@@ -232,9 +232,9 @@ final class FlckinkPrimerCoatController: UIViewController {
         bruCiuLetterOverlap.translatesAutoresizingMaskIntoConstraints = false
         ponllLetterSpacing.addSubview(bruCiuLetterOverlap)
         let flckinkLetterDepth = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
-        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.paintRun)", title: "Artworks", action: nil))
-        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.dripTrail)", title: "Followers", action: #selector(ponllLetterShadow)))
-        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.inkBleed)", title: "Following", action: #selector(bruCiuLetterHighlight)))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.paintRun)", title: "AQrRtSwToUrVkWsX".ponllPaintaerErstHours, action: nil))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.dripTrail)", title: "FYoZl0l1o2w3e4r5s6".ponllPaintaerErstHours, action: #selector(ponllLetterShadow)))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.inkBleed)", title: "F7o8l9laobwcidnegf".ponllPaintaerErstHours, action: #selector(bruCiuLetterHighlight)))
         NSLayoutConstraint.activate([
             ponllLetterSpacing.heightAnchor.constraint(equalToConstant: 96),
             bruCiuLetterOverlap.leadingAnchor.constraint(equalTo: ponllLetterSpacing.leadingAnchor),
@@ -255,7 +255,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllLetterEcho.translatesAutoresizingMaskIntoConstraints = false
         aerErstLetterFlare.addSubview(ponllLetterEcho)
         let bruCiuLetterAura: UILabel
-        if bruCiuLetterCrown == "Followers" {
+        if bruCiuLetterCrown == "Fgohliljokwlemrnso".ponllPaintaerErstHours {
             flckinkAerosolLetter.text = ponllLetterFrame
             flckinkAerosolLetter.font = PonllyFonts.muralForgepon(neonLab: 16)
             flckinkAerosolLetter.textColor = .white
@@ -283,7 +283,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         bruCiuUrbanLetter.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         bruCiuUrbanLetter.addTarget(self, action: #selector(aerErstStyleTexture), for: .touchUpInside)
         let ponllLetterNoise = UIButton(type: .system)
-        ponllLetterNoise.setTitle("Message", for: .normal)
+        ponllLetterNoise.setTitle("Mpeqsrssatguev".ponllPaintaerErstHours, for: .normal)
         ponllLetterNoise.setTitleColor(PonllyPalette.cyan, for: .normal)
         ponllLetterNoise.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         ponllLetterNoise.layer.cornerRadius = 22
@@ -349,7 +349,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllStylePath.spacing = 10
         let bruCiuStyleFlow = Array(PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).prefix(2))
         guard !bruCiuStyleFlow.isEmpty else {
-            ponllStylePath.addArrangedSubview(ponllPaintSignal(title: "No artwork yet", subtitle: "Published pieces from this artist will appear here."))
+            ponllStylePath.addArrangedSubview(ponllPaintSignal(title: "Nwox yazrAtBwCoDrEkF GyHeItJ".ponllPaintaerErstHours, subtitle: "PKuLbMlNiOsPhQeRdS TpUiVeWcXeYsZ 0f1r2o3m4 5t6h7i8s9 aabrctdiesftg hwiijlkll manpoppeqarrs thuevrwex.y".ponllPaintaerErstHours))
             return ponllStylePath
         }
         let flckinkStyleGrid = UIStackView()
@@ -379,7 +379,7 @@ final class FlckinkPrimerCoatController: UIViewController {
             for ponllStyleWeave in 0..<min(3, aerErstStyleTwist.count) {
                 bruCiuStyleKick.addArrangedSubview(bruCiuPaintQuest(
                     artwork: aerErstStyleTwist[ponllStyleWeave],
-                    title: ["Wall prep process", "Cap pressure study", "Color pass breakdown"][ponllStyleWeave],
+                    title: ["WzaAlBlC DpErFeGpH IpJrKoLcMeNsOsP".ponllPaintaerErstHours, "CQaRpS TpUrVeWsXsYuZr0e1 2s3t4u5d6y7".ponllPaintaerErstHours, "C8o9laobrc dpeafsgsh ibjrkelamkndoopwqnr".ponllPaintaerErstHours][ponllStyleWeave],
                     subtitle: "\(flckinkCornerPiece.aerosolDream) keeps the process focused on \(aerErstStyleTwist[ponllStyleWeave].capControl.lowercased()) control.",
                     meta: "\(6 + ponllStyleWeave * 3) reactions  •  \(2 + ponllStyleWeave) notes",
                     accent: PonllyPalette.cyan
@@ -405,7 +405,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         aerErstStyleGlow.spacing = 12
         let ponllStyleGrit = PonllyponllTornEdge.ponllMuralWall(bruCiuLetterWall: flckinkCornerPiece.graffitiPulse)
         if ponllStyleGrit.isEmpty {
-            aerErstStyleGlow.addArrangedSubview(ponllPaintSignal(title: "No PK ponllMuralBloom records yet", subtitle: "Fresh challenges from this artist will appear here."))
+            aerErstStyleGlow.addArrangedSubview(ponllPaintSignal(title: "Nsot uPvKw xpyoznAlBlCMDuErFaGlHBIlJoKoLmM NrOePcQoRrSdTsU VyWeXtY".ponllPaintaerErstHours, subtitle: "FZr0e1s2h3 4c5h6a7l8l9eanbgcedse ffgrhoimj ktlhminso paqrrtsitsutv wwxiylzlA BaCpDpEeFaGrH IhJeKrLeM.N".ponllPaintaerErstHours))
             return aerErstStyleGlow
         }
         for bruCiuStyleNoise in ponllStyleGrit {
@@ -434,7 +434,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllPaintSeed.spacing = 10
         let bruCiuPaintSpark = Array(PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).suffix(2))
         guard !bruCiuPaintSpark.isEmpty else {
-            ponllPaintSeed.addArrangedSubview(ponllPaintSignal(title: "No favorites yet", subtitle: "Saved wall inspiration from this artist will appear here."))
+            ponllPaintSeed.addArrangedSubview(ponllPaintSignal(title: "NOoP QfRaSvToUrViWtXeYsZ 0y1e2t3".ponllPaintaerErstHours, subtitle: "S4a5v6e7d8 9waablcld eifngshpiijrkaltminoonp qfrrsotmu vtwhxiysz AaBrCtDiEsFtG HwIiJlKlL MaNpOpPeQaRrS ThUeVrWeX.Y".ponllPaintaerErstHours))
             return ponllPaintSeed
         }
         let flckinkPaintMood = UIStackView()
@@ -518,7 +518,7 @@ final class FlckinkPrimerCoatController: UIViewController {
 
     private func aerErstGlowLetter() {
         if PonllyponllTornEdge.aerErstRustStreak(flckinkCornerPiece.graffitiPulse) {
-            bruCiuUrbanLetter.setTitle("Blocked", for: .normal)
+            bruCiuUrbanLetter.setTitle("BZl0o1c2k3e4d5".ponllPaintaerErstHours, for: .normal)
             bruCiuUrbanLetter.alpha = 0.5
             bruCiuUrbanLetter.isEnabled = true
             let aerErstPaintSurge = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
@@ -526,7 +526,7 @@ final class FlckinkPrimerCoatController: UIViewController {
             return
         }
         let ponllPaintBurst = PonllyponllTornEdge.aerErstCrackedWall(flckinkCornerPiece.graffitiPulse)
-        bruCiuUrbanLetter.setTitle(ponllPaintBurst ? "Following" : "Follow", for: .normal)
+        bruCiuUrbanLetter.setTitle(ponllPaintBurst ? "F6o7l8l9oawbicndge".ponllPaintaerErstHours : "Ffoglhliojwk".ponllPaintaerErstHours, for: .normal)
         bruCiuUrbanLetter.alpha = ponllPaintBurst ? 0.72 : 1
         let bruCiuPaintBloom = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
         flckinkAerosolLetter.text = "\(bruCiuPaintBloom.dripTrail + (ponllPaintBurst ? 1 : 0))"
@@ -572,16 +572,16 @@ final class FlckinkPrimerCoatController: UIViewController {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
             guard !PonllyponllTornEdge.aerErstRustStreak(self.flckinkCornerPiece.graffitiPulse) else {
                 self.ponllyShowThemeAlert(
-                    title: "Action Unavailable",
-                    message: "This artist is currently blocked. Manage your blocked list before reconnecting.",
-                    actionTitle: "Got It",
+                    title: "Alcmtnioopnq rUsntauvvawixlyazbAlBeC".ponllPaintaerErstHours,
+                    message: "TDhEiFsG HaIrJtKiLsMtN OiPsQ RcSuTrUrVeWnXtYlZy0 1b2l3o4c5k6e7d8.9 aMbacndaegfeg hyiojukrl mbnloopcqkresdt ulviwsxty zbAeBfCoDrEeF GrHeIcJoKnLnMeNcOtPiQnRgS.T".ponllPaintaerErstHours,
+                    actionTitle: "GUoVtW XIYtZ".ponllPaintaerErstHours,
                     style: .ponllWhiteEdge
                 )
                 return
             }
             let flckinkInkQuest = PonllyponllTornEdge.bruCiuCementRough(self.flckinkCornerPiece.graffitiPulse)
             self.aerErstGlowLetter()
-            self.flckinkPrimerCoatponlu(flckinkInkQuest ? "Artist followed" : "Artist unfollowed")
+            self.flckinkPrimerCoatponlu(flckinkInkQuest ? "A0r1t2i3s4t5 6f7o8l9laobwcedde".ponllPaintaerErstHours : "Afrgthiisjtk lumnnfooplqlroswteudv".ponllPaintaerErstHours)
         }
     }
 
@@ -589,18 +589,18 @@ final class FlckinkPrimerCoatController: UIViewController {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
             guard !PonllyponllTornEdge.aerErstRustStreak(self.flckinkCornerPiece.graffitiPulse) else {
                 self.ponllyShowThemeAlert(
-                    title: "Cannot Send Message",
-                    message: "Messaging is unavailable while this artist is blocked.",
-                    actionTitle: "Got It",
+                    title: "CwaxnynzoAtB CSDeEnFdG HMIeJsKsLaMgNeO".ponllPaintaerErstHours,
+                    message: "MPeQsRsSaTgUiVnWgX YiZs0 1u2n3a4v5a6i7l8a9balbec dwehfiglhei jtkhlimsn oaprqtrissttu viwsx ybzlAoBcCkDeEdF.G".ponllPaintaerErstHours,
+                    actionTitle: "GHoItJ KILtM".ponllPaintaerErstHours,
                     style: .ponllWhiteEdge
                 )
                 return
             }
             guard PonllyponllTornEdge.ponllBrickCrack(self.flckinkCornerPiece.graffitiPulse) else {
                 self.ponllyShowThemeAlert(
-                    title: "Cannot Send Message",
-                    message: "You need to follow each other before starting a direct conversation.",
-                    actionTitle: "Got It",
+                    title: "CNaOnPnQoRtS TSUeVnWdX YMZe0s1s2a3g4e5".ponllPaintaerErstHours,
+                    message: "Y6o7u8 9naebecdd etfog hfiojlkllomwn oepaqcrhs toutvhwexry zbAeBfCoDrEeF GsHtIaJrKtLiMnNgO PaQ RdSiTrUeVcWtX YcZo0n1v2e3r4s5a6t7i8o9na.b".ponllPaintaerErstHours,
+                    actionTitle: "Gcodte fIgth".ponllPaintaerErstHours,
                     style: .ponllWhiteEdge
                 )
                 return
@@ -629,7 +629,7 @@ final class FlckinkPrimerCoatController: UIViewController {
             guard let self else { return }
             PonllyponllTornEdge.ponllMetalPanel(self.flckinkCornerPiece.graffitiPulse)
             self.aerErstGlowLetter()
-            self.flckinkPrimerCoatponlu("Artist blocked")
+            self.flckinkPrimerCoatponlu("Airjtkilsmtn obplqorcskteudv".ponllPaintaerErstHours)
         }
         flckinkInkMood.modalPresentationStyle = .overFullScreen
         present(flckinkInkMood, animated: false)

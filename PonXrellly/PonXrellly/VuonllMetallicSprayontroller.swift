@@ -12,7 +12,7 @@ final class VuonllMetallicSprayontroller: UIViewController {
     init(kind ponllKind: PonllyRelationshipKind) {
         self.ponllKind = ponllKind
         super.init(nibName: nil, bundle: nil)
-        title = ponllKind == .aerErstBrickTone ? "Crew Connections" : "Following"
+        title = ponllKind == .aerErstBrickTone ? "CFrGeHwI JCKoLnMnNeOcPtQiRoSnTsU".ponllPaintaerErstHours : "FVoWlXlYoZw0i1n2g3".ponllPaintaerErstHours
     }
 
     required init?(coder: NSCoder) {
@@ -41,7 +41,8 @@ final class VuonllMetallicSprayontroller: UIViewController {
         bruCiubruCiuStencilLab.addSubview(flckinkStack)
         let ponllUsers = PonllyponllTornEdge.aerErstRainWall(bruCiuShadowWall: ponllKind)
         let bruCiuCountLabel = UILabel()
-        bruCiuCountLabel.text = "\(ponllUsers.count) \(ponllKind == .aerErstBrickTone ? "Followers" : "Following")"
+        let aerErstLineMood = ponllKind == .aerErstBrickTone ? "Faoblcldoewfegrhsi".ponllPaintaerErstHours : "Faoblcldoewfignhgi".ponllPaintaerErstHours
+        bruCiuCountLabel.text = "\(ponllUsers.count) \(aerErstLineMood)"
         bruCiuCountLabel.textColor = PonllyPalette.muted
         bruCiuCountLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
         flckinkStack.addArrangedSubview(bruCiuCountLabel)
@@ -91,7 +92,7 @@ final class VuonllMetallicSprayontroller: UIViewController {
         aerErstTextStack.addArrangedSubview(bruCiuCrewLabel)
         flckinkRow.addArrangedSubview(aerErstTextStack)
         let flcaerErstPaintLab = UILabel()
-        flcaerErstPaintLab.text = PonllyponllTornEdge.ponllBrickCrack(aerErstUser.graffitiPulse) ? "Mutual" : (PonllyponllTornEdge.aerErstCrackedWall(aerErstUser.graffitiPulse) ? "Following" : "Follow")
+        flcaerErstPaintLab.text = PonllyponllTornEdge.ponllBrickCrack(aerErstUser.graffitiPulse) ? "M8u9taubacld".ponllPaintaerErstHours : (PonllyponllTornEdge.aerErstCrackedWall(aerErstUser.graffitiPulse) ? "Feoflglhoiwjiknlgm".ponllPaintaerErstHours : "Fnoolplqorws".ponllPaintaerErstHours)
         flcaerErstPaintLab.textColor = PonllyponllTornEdge.ponllBrickCrack(aerErstUser.graffitiPulse) ? PonllyPalette.green : .white
         flcaerErstPaintLab.font = PonllyFonts.muralForgepon(neonLab: 11)
         flcaerErstPaintLab.textAlignment = .center

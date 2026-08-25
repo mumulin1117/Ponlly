@@ -8,12 +8,12 @@ final class PponllPaintMapController: UIViewController {
     private let ponllTitleField = UITextField()
     private let bruCiuDescView = UITextView()
     private let flckinksketchBend = UIScrollView()
-    private var aerErstSelectedTheme = "Wildstyle"
-    private var ponllSelectedDuration = "24 Hours"
+    private var aerErstSelectedTheme = "WTiUlVdWsXtYyZl0e1".ponllPaintaerErstHours
+    private var ponllSelectedDuration = "2243 4H5o6u7r8s9".ponllPaintaerErstHours
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Battle Settings"
+        title = "Baabtctdleef gSheitjtkilnmgnso".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         bruCiusketchNoise()
         NotificationCenter.default.addObserver(self, selector: #selector(flckinksketchTwist(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -35,19 +35,19 @@ final class PponllPaintMapController: UIViewController {
         aerErstStackPath.spacing = 20
         aerErstStackPath.translatesAutoresizingMaskIntoConstraints = false
         flckinksketchBend.addSubview(aerErstStackPath)
-        ponllTitleField.text = "Wildstyle Showdown"
+        ponllTitleField.text = "Wpiqlrdssttuyvlwex ySzhAoBwCdDoEwFnG".ponllPaintaerErstHours
         ponllsketchDepthField(ponllTitleField)
-        bruCiuDescView.text = "Bring Your Absolute Best Chrome Letters And Sharp Outlines to This Burner Arena"
+        bruCiuDescView.text = "BHrIiJnKgL MYNoOuPrQ RASbTsUoVlWuXtYeZ 0B1e2s3t4 5C6h7r8o9maeb cLdeetftgehrisj kAlnmdn oSphqarrspt uOvuwtxlyiznAeBsC DtEoF GTHhIiJsK LBMuNrOnPeQrR SATrUeVnWaX".ponllPaintaerErstHours
         bruCiuDescView.textColor = .white
         bruCiuDescView.backgroundColor = PonllyPalette.panel
         bruCiuDescView.layer.cornerRadius = 16
         bruCiuDescView.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
         bruCiuDescView.heightAnchor.constraint(equalToConstant: 130).isActive = true
-        aerErstStackPath.addArrangedSubview(flckinkSection("Battle Title", content: ponllTitleField))
-        aerErstStackPath.addArrangedSubview(aerErstChips("Battle Theme", items: ["Wildstyle", "Character", "Black And White", "Free Style"], selected: aerErstSelectedTheme))
-        aerErstStackPath.addArrangedSubview(flckinkSection("Battle Description", content: bruCiuDescView))
-        aerErstStackPath.addArrangedSubview(aerErstChips("Battle Duration", items: ["1 Hour", "6 Hours", "24 Hours", "48 Hours"], selected: ponllSelectedDuration))
-        let bruCiusketchGlow = PonllyNeonButton("Next")
+        aerErstStackPath.addArrangedSubview(flckinkSection("BYaZt0t1l2e3 4T5i6t7l8e9".ponllPaintaerErstHours, content: ponllTitleField))
+        aerErstStackPath.addArrangedSubview(aerErstChips("Baabtctdleef gThhiejmkel".ponllPaintaerErstHours, items: ["Wminlodpsqtryslteu".ponllPaintaerErstHours, "CvhwaxryazcAtBeCrD".ponllPaintaerErstHours, "BElFaGcHkI JAKnLdM NWOhPiQtReS".ponllPaintaerErstHours, "FTrUeVeW XSYtZy0l1e2".ponllPaintaerErstHours], selected: aerErstSelectedTheme))
+        aerErstStackPath.addArrangedSubview(flckinkSection("B3a4t5t6l7e8 9Daebsccdreifpgthiiojnk".ponllPaintaerErstHours, content: bruCiuDescView))
+        aerErstStackPath.addArrangedSubview(aerErstChips("Blamtntolpeq rDsutruavtwixoynz".ponllPaintaerErstHours, items: ["1A BHCoDuErF".ponllPaintaerErstHours, "6G HHIoJuKrLsM".ponllPaintaerErstHours, "2N4O PHQoRuSrTsU".ponllPaintaerErstHours, "4V8W XHYoZu0r1s2".ponllPaintaerErstHours], selected: ponllSelectedDuration))
+        let bruCiusketchGlow = PonllyNeonButton("N3e4x5t6".ponllPaintaerErstHours)
         bruCiusketchGlow.addTarget(self, action: #selector(ponllsketchWeave), for: .touchUpInside)
         aerErstStackPath.addArrangedSubview(bruCiusketchGlow)
         NSLayoutConstraint.activate([
@@ -124,7 +124,7 @@ final class PponllPaintMapController: UIViewController {
     }
 
     @objc private func ponllsketchWeave() {
-        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "Upload Your Artwork", bruCiuPaintQuest: "Continue", flckinkInkCue: .ponllPaintPlan), animated: true)
+        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "U7p8l9oaabdc dYeofugrh iAjrktlwmonrokp".ponllPaintaerErstHours, bruCiuPaintQuest: "Cqornsttiunvuwex".ponllPaintaerErstHours, flckinkInkCue: .ponllPaintPlan), animated: true)
     }
 
     @objc private func flckinksketchTwist(_ aerErstNote: Notification) {

@@ -40,7 +40,7 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
 
     private func bruCiuTexturePath() {
         let ponllMuralArc = UILabel()
-        ponllMuralArc.text = "Choose a graffiti artwork from your library or capture a fresh wall shot."
+        ponllMuralArc.text = "CRhSoToUsVeW XaY Zg0r1a2f3f4i5t6i7 8a9ratbwcodrekf gfhriojmk lymonuorp qlrisbtruavrwyx yozrA BcCaDpEtFuGrHeI JaK LfMrNeOsPhQ RwSaTlUlV WsXhYoZt0.1".ponllPaintaerErstHours
         ponllMuralArc.textColor = PonllyPalette.muted
         ponllMuralArc.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
         ponllMuralArc.numberOfLines = 0
@@ -94,16 +94,16 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
     }
 
     @objc private func flckinkPaintBend() {
-        let aerErstWallKick = UIAlertController(title: "Select Artwork", message: nil, preferredStyle: .actionSheet)
-        aerErstWallKick.addAction(UIAlertAction(title: "Photo Library", style: .default) { _ in
+        let aerErstWallKick = UIAlertController(title: "S2e3l4e5c6t7 8A9ratbwcodrekf".ponllPaintaerErstHours, message: nil, preferredStyle: .actionSheet)
+        aerErstWallKick.addAction(UIAlertAction(title: "Pghhoitjok lLminborpaqrrys".ponllPaintaerErstHours, style: .default) { _ in
             self.bruCiuAerosolLean(flckinkMuralTwist: .photoLibrary)
         })
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            aerErstWallKick.addAction(UIAlertAction(title: "Camera", style: .default) { _ in
+            aerErstWallKick.addAction(UIAlertAction(title: "Ctaumvewrxay".ponllPaintaerErstHours, style: .default) { _ in
                 self.bruCiuAerosolLean(flckinkMuralTwist: .camera)
             })
         }
-        aerErstWallKick.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        aerErstWallKick.addAction(UIAlertAction(title: "CzaAnBcCeDlE".ponllPaintaerErstHours, style: .cancel))
         if let ponllStencilWeave = aerErstWallKick.popoverPresentationController {
             ponllStencilWeave.sourceView = ponllMuralAura
             ponllStencilWeave.sourceRect = ponllMuralAura.bounds
@@ -130,7 +130,7 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
 
     @objc private func aerErstInkKick() {
         guard let aerErstChromeQuest else {
-            flckinkPrimerCoatponlu("Choose artwork to continue")
+            flckinkPrimerCoatponlu("CFhGoHoIsJeK LaMrNtOwPoQrRkS TtUoV WcXoYnZt0i1n2u3e4".ponllPaintaerErstHours)
             return
         }
         switch aerErstAerosolVeil {
@@ -139,15 +139,15 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
         case .bruCiuOutlinePlan(let ponllChromeGlow):
             flckinkMarkerSignal.isEnabled = false
             flckinkMarkerSignal.alpha = 0.55
-            flckinkPrimerCoatponlu("Submitting challenge...")
+            flckinkPrimerCoatponlu("S5u6b7m8i9tatbicndge fcghhailjlkelnmgneo.p.q.r".ponllPaintaerErstHours)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                 self.flckinkMarkerSignal.isEnabled = true
                 self.flckinkMarkerSignal.alpha = 1
                 let bruCiuNeonGrit = PonllyponllTornEdge.bruCiuStreetGlyph(ponllChromeGlow, ponllAngleBreak: aerErstChromeQuest)
                 self.ponllyShowThemeAlert(
-                    title: "Challenge Submitted",
-                    message: "Your artwork is now live in the ponllMuralBloom arena.",
-                    actionTitle: "View Challenge",
+                    title: "CshtaulvlwexnygzeA BSCuDbEmFiGtHtIeJdK".ponllPaintaerErstHours,
+                    message: "YLoMuNrO PaQrRtSwToUrVkW XiYsZ 0n1o2w3 4l5i6v7e8 9ianb ctdheef gphoinjlkllMmunroaplqBrlsotoumv waxryeznAaB.C".ponllPaintaerErstHours,
+                    actionTitle: "VDiEeFwG HCIhJaKlLlMeNnOgPeQ".ponllPaintaerErstHours,
                     style: .flckinkSplitFill
                 ) {
                     self.navigationController?.pushViewController(PbruCiuStencilLabController(flckinkPaintVeil: bruCiuNeonGrit), animated: true)

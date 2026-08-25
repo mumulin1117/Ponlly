@@ -47,7 +47,7 @@ final class PbruCiuColorPlanController: UIViewController {
         let aerErstInkSignal = UIView()
         aerErstInkSignal.translatesAutoresizingMaskIntoConstraints = false
         let ponllAerosolQuest = UILabel()
-        ponllAerosolQuest.text = "Ponlly"
+        ponllAerosolQuest.text = "Ppoqnrlsltyu".ponllPaintaerErstHours
         ponllAerosolQuest.font = PonllyFonts.muralForgepon(neonLab: 22)
         ponllAerosolQuest.textColor = .white
         ponllAerosolQuest.layer.shadowColor = PonllyPalette.pink.cgColor
@@ -57,7 +57,7 @@ final class PbruCiuColorPlanController: UIViewController {
         aerErstInkSignal.addSubview(ponllAerosolQuest)
 
         let bruCiuMuralCue = UIButton(type: .system)
-        bruCiuMuralCue.setImage(UIImage(named: "header_actions")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        bruCiuMuralCue.setImage(UIImage(named: "stencilBloom")?.withRenderingMode(.alwaysOriginal), for: .normal)
         bruCiuMuralCue.imageView?.contentMode = .scaleAspectFit
         bruCiuMuralCue.translatesAutoresizingMaskIntoConstraints = false
         bruCiuMuralCue.addTarget(self, action: #selector(ponllTexturePath), for: .touchUpInside)
@@ -69,8 +69,8 @@ final class PbruCiuColorPlanController: UIViewController {
         flckinkStencilSeed.translatesAutoresizingMaskIntoConstraints = false
         aerErstInkSignal.addSubview(flckinkStencilSeed)
 
-        aerErstChromeArc(flckinkAerosolFlash, ponllNeonBend: "Hot Battles", bruCiuTextureKick: .bruCiuSprayBloomponll)
-        aerErstChromeArc(aerErstMuralFuse, ponllNeonBend: "Waiting for Challenge", bruCiuTextureKick: .flckinkWallTexturepoj)
+        aerErstChromeArc(flckinkAerosolFlash, ponllNeonBend: "Hvowtx yBzaAtBtClDeEsF".ponllPaintaerErstHours, bruCiuTextureKick: .bruCiuSprayBloomponll)
+        aerErstChromeArc(aerErstMuralFuse, ponllNeonBend: "WGaHiItJiKnLgM NfOoPrQ RCShTaUlVlWeXnYgZe0".ponllPaintaerErstHours, bruCiuTextureKick: .flckinkWallTexturepoj)
 
         bruCiuWallFlicker.addArrangedSubview(aerErstInkSignal)
 
@@ -132,7 +132,7 @@ final class PbruCiuColorPlanController: UIViewController {
 
     private func aerErstPaintGlow() -> UIView {
         let bruCiuInkRipple = UILabel()
-        bruCiuInkRipple.text = ponllStencilTrace == .bruCiuSprayBloomponll ? "Hot Battles" : "Waiting For Challenge"
+        bruCiuInkRipple.text = ponllStencilTrace == .bruCiuSprayBloomponll ? "H1o2t3 4B5a6t7t8l9easb".ponllPaintaerErstHours : "Wcadietfignhgi jFkolrm nCohpaqlrlsetnugvew".ponllPaintaerErstHours
         bruCiuInkRipple.textColor = .white
         bruCiuInkRipple.font = PonllyFonts.muralForgepon(neonLab: 12)
         return bruCiuInkRipple
@@ -170,22 +170,22 @@ final class PbruCiuColorPlanController: UIViewController {
     }
 
     private func bruCiuPaintSurge(for flckinkInkVeil: PonllyBattle) {
-        let aerErstWallAura = UIAlertController(title: "Battle Options", message: flckinkInkVeil.nozzleCraft, preferredStyle: .actionSheet)
-        aerErstWallAura.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
+        let aerErstWallAura = UIAlertController(title: "BxaytztAlBeC DOEpFtGiHoInJsK".ponllPaintaerErstHours, message: flckinkInkVeil.nozzleCraft, preferredStyle: .actionSheet)
+        aerErstWallAura.addAction(UIAlertAction(title: "RLeMpNoOrPtQ RCShTaUlVlWeXnYgZe0".ponllPaintaerErstHours, style: .destructive) { _ in
             FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
                 let ponllAerosolEcho = PonllyroughFillController(blackOutline: flckinkInkVeil)
                 ponllAerosolEcho.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
+                    self?.aerErstSketchRush("R1e2p3o4r5t6 7s8u9bambictdteefdg".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
                 }
                 ponllAerosolEcho.modalPresentationStyle = .overFullScreen
                 ponllAerosolEcho.modalTransitionStyle = .crossDissolve
                 self.present(ponllAerosolEcho, animated: true)
             }
         })
-        aerErstWallAura.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in
-            self.flckinkPrimerCoatponlu("Updated")
+        aerErstWallAura.addAction(UIAlertAction(title: "Nhoitj kIlnmtneorpeqsrtsetdu".ponllPaintaerErstHours, style: .default) { _ in
+            self.flckinkPrimerCoatponlu("UvpwdxaytzeAdB".ponllPaintaerErstHours)
         })
-        aerErstWallAura.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        aerErstWallAura.addAction(UIAlertAction(title: "CCaDnEcFeGlH".ponllPaintaerErstHours, style: .cancel))
         if let bruCiuMarkerSignal = aerErstWallAura.popoverPresentationController {
             bruCiuMarkerSignal.sourceView = view
             bruCiuMarkerSignal.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY - 80, width: 1, height: 1)

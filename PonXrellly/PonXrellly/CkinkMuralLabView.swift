@@ -154,7 +154,7 @@ final class CkinkMuralLabView: UIControl {
     }
 
     private func aerErstCapRack() -> UIView {
-        let aerErstOversprayGlow = UIImageView(image: UIImage(named: "vs_badge"))
+        let aerErstOversprayGlow = UIImageView(image: UIImage(named: "chromeShine"))
         aerErstOversprayGlow.contentMode = .scaleAspectFit
         aerErstOversprayGlow.translatesAutoresizingMaskIntoConstraints = false
         return aerErstOversprayGlow

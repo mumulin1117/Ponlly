@@ -77,7 +77,7 @@ final class PonllyWaitingBattleCardView: UIControl {
             bruCiuArtistButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 132)
         ])
 
-        let ponllrooftopPieceButton = PonllyNeonButton("Join Challenge")
+        let ponllrooftopPieceButton = PonllyNeonButton("J3o4i5n6 7C8h9aalblcednegfeg".ponllPaintaerErstHours)
         ponllrooftopPieceButton.addTarget(self, action: #selector(bruCiustackedLetter), for: .touchUpInside)
 
         [ponllArtworkPanel, bruCiuThemeLabel, flckinkTitleRow, bruCiuArtistButton, ponllrooftopPieceButton].forEach(aerErstStackPath.addArrangedSubview)

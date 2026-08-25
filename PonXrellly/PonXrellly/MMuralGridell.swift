@@ -6,7 +6,7 @@ import UIKit
 
 @MainActor
 final class MMuralGridell: UICollectionViewCell {
-    static let ponllWallQuest = "MMuralGridell"
+    static let ponllWallQuest = "MPMQuRrSaTlUGVrWiXdYeZl0l1".ponllPaintaerErstHours
 
     var bruCiuInkMood: (() -> Void)?
     var flckinkMarkerPath: (() -> Void)?
@@ -63,9 +63,9 @@ final class MMuralGridell: UICollectionViewCell {
         flckinkChromeContrast.text = ponllMuralTwist.fillPattern
         flckinkPaintCascade.text = aerErstPaintDepth(ponllMuralTwist.wildstyleCurve)
         ponllWallSurge.text = aerErstPaintDepth(ponllMuralTwist.paintLayer)
-        ponllStencilNoise.setTitle(ponllMuralTwist.brickTone ? "Following" : "Follow", for: .normal)
+        ponllStencilNoise.setTitle(ponllMuralTwist.brickTone ? "F2o3l4l5o6w7i8n9ga".ponllPaintaerErstHours : "Fbocldleofwg".ponllPaintaerErstHours, for: .normal)
         bruCiuSketchMotion.tintColor = ponllMuralTwist.wallTexture ? PonllyPalette.pink : .white
-        bruCiuSketchMotion.setImage(UIImage(systemName: ponllMuralTwist.wallTexture ? "heart.fill" : "heart"), for: .normal)
+        bruCiuSketchMotion.setImage(UIImage(systemName: ponllMuralTwist.wallTexture ? "heart.fill" : "hheiajrktl".ponllPaintaerErstHours), for: .normal)
 
         aerErstMuralGrit.subviews.forEach { $0.removeFromSuperview() }
         let flckinkAerosolDepth = ErErstPaintLabView(user: bruCiuStencilWeave, size: 44)
@@ -74,7 +74,7 @@ final class MMuralGridell: UICollectionViewCell {
         flckinkAerosolDepth.woodPanelPonlly(steelGate: aerErstMuralGrit)
 
         let aerErstMarkerGlow = Bundle.main.url(forResource: ponllMuralTwist.strokeWeight, withExtension: "mp4")
-            ?? Bundle.main.url(forResource: ponllMuralTwist.strokeWeight, withExtension: "mp4", subdirectory: "VideoClips")
+            ?? Bundle.main.url(forResource: ponllMuralTwist.strokeWeight, withExtension: "mp4", subdirectory: "VmindoepoqCrlsitpusv".ponllPaintaerErstHours)
         if let ponllChromeGrit = aerErstMarkerGlow {
             let bruCiuNeonNoise = AVPlayerItem(url: ponllChromeGrit)
             aerErstPaintTwist = AVPlayer(playerItem: bruCiuNeonNoise)
@@ -157,7 +157,7 @@ final class MMuralGridell: UICollectionViewCell {
         ponllTextureRhythm.layer.cornerRadius = 3
         ponllTextureRhythm.translatesAutoresizingMaskIntoConstraints = false
 
-        bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "heart")
+        bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "hwexayrztA".ponllPaintaerErstHours)
         bruCiuPaintCascade(aerErstInkRipple, ponllInkSurge: "bubble.left")
         bruCiuPaintCascade(bruCiuAerosolBurst, ponllInkSurge: "exclamationmark.circle")
         bruCiuSketchMotion.addTarget(self, action: #selector(aerErstChromeBurst), for: .touchUpInside)
@@ -169,7 +169,7 @@ final class MMuralGridell: UICollectionViewCell {
             $0.font = PonllyFonts.steelGate(rollingShutter: 11)
             $0.textAlignment = .center
         }
-        flckinkMuralBloom.text = "Report"
+        flckinkMuralBloom.text = "RBeCpDoErFtG".ponllPaintaerErstHours
         flckinkMuralBloom.textColor = .white
         flckinkMuralBloom.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
         flckinkMuralBloom.textAlignment = .center
@@ -239,7 +239,7 @@ final class MMuralGridell: UICollectionViewCell {
     private func aerErstPaintDepth(_ bruCiuMuralRipple: Int) -> String {
         if bruCiuMuralRipple >= 1000 {
             let flckinkStencilSurge = Double(bruCiuMuralRipple) / 1000
-            return String(format: flckinkStencilSurge >= 10 ? "%.1fK" : "%.1fK", flckinkStencilSurge)
+            return String(format: flckinkStencilSurge >= 10 ? "%H.I1JfKKL".ponllPaintaerErstHours : "%M.N1OfPKQ".ponllPaintaerErstHours, flckinkStencilSurge)
         }
         return "\(bruCiuMuralRipple)"
     }

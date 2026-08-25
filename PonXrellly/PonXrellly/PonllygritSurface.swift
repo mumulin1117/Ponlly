@@ -2,19 +2,19 @@ import UIKit
 
 enum PonllyFonts {
     static func graffitiForge(aerosolForge: CGFloat = 14) -> UIFont {
-        UIFont(name: "Unbounded-ExtraBold", size: aerosolForge) ?? UIFont.systemFont(ofSize: aerosolForge, weight: .black)
+        UIFont(name: "UBnCbDoEuFnGdHeIdJ-KELxMtNrOaPBQoRlSdT".ponllPaintaerErstHours, size: aerosolForge) ?? UIFont.systemFont(ofSize: aerosolForge, weight: .black)
     }
 
     static func muralForgepon(neonLab: CGFloat, shadowPlan: UIFont.Weight = .black) -> UIFont {
-        UIFont(name: "Unbounded-ExtraBold", size: neonLab) ?? UIFont.systemFont(ofSize: neonLab, weight: shadowPlan)
+        UIFont(name: "UUnVbWoXuYnZd0e1d2-3E4x5t6r7a8B9oalbdc".ponllPaintaerErstHours, size: neonLab) ?? UIFont.systemFont(ofSize: neonLab, weight: shadowPlan)
     }
 
     static func utilityBox(blankFacade: CGFloat, aerosolMuse: UIFont.Weight = .regular) -> UIFont {
-        UIFont(name: "Geist", size: blankFacade) ?? UIFont.systemFont(ofSize: blankFacade, weight: aerosolMuse)
+        UIFont(name: "Gdeeifsgth".ponllPaintaerErstHours, size: blankFacade) ?? UIFont.systemFont(ofSize: blankFacade, weight: aerosolMuse)
     }
 
     static func steelGate(rollingShutter: CGFloat, shadowPlan: UIFont.Weight = .bold) -> UIFont {
-        UIFont(name: "GeistMono-Bold", size: rollingShutter) ?? UIFont.monospacedSystemFont(ofSize: rollingShutter, weight: shadowPlan)
+        UIFont(name: "GiejiksltmMnoonpoq-rBsotludv".ponllPaintaerErstHours, size: rollingShutter) ?? UIFont.monospacedSystemFont(ofSize: rollingShutter, weight: shadowPlan)
     }
 }
 
@@ -48,10 +48,10 @@ extension UIViewController {
 
         var aerErstPaintCloud: String {
             switch self {
-            case .bruCiuEdgeSnap: return "sparkles"
-            case .flckinkSplitFill: return "checkmark"
-            case .ponllWhiteEdge: return "xmark"
-            case .bruCiuSilverSheen: return "bell"
+            case .bruCiuEdgeSnap: return "swpxayrzkAlBeCsD".ponllPaintaerErstHours
+            case .flckinkSplitFill: return "cEhFeGcHkImJaKrLkM".ponllPaintaerErstHours
+            case .ponllWhiteEdge: return "xNmOaPrQkR".ponllPaintaerErstHours
+            case .bruCiuSilverSheen: return "bSeTlUlV".ponllPaintaerErstHours
             }
         }
     }
@@ -59,11 +59,11 @@ extension UIViewController {
     func flckinkPrimerCoatponlu(_ ponllSprayHalo: String) {
         let bruCiuAerosolHaze = ponllSprayHalo.lowercased()
         let flckinkNozzleMist: PonllyNoticeStyle
-        if bruCiuAerosolHaze.contains("ing") || bruCiuAerosolHaze.contains("connecting") || bruCiuAerosolHaze.contains("preparing") || bruCiuAerosolHaze.contains("sending") {
+        if bruCiuAerosolHaze.contains("iWnXgY".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("cZo0n1n2e3c4t5i6n7g8".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("p9raebpcadreifnggh".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("siejnkdlimnngo".ponllPaintaerErstHours) {
             flckinkNozzleMist = .bruCiuEdgeSnap
-        } else if bruCiuAerosolHaze.contains("failed") || bruCiuAerosolHaze.contains("wrong") || bruCiuAerosolHaze.contains("不存在") || bruCiuAerosolHaze.contains("错误") || bruCiuAerosolHaze.contains("please") {
+        } else if bruCiuAerosolHaze.contains("fpaqirlsetdu".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("wvrwoxnygz".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("不A存B在C".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("错D误E".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("pFlGeHaIsJeK".ponllPaintaerErstHours) {
             flckinkNozzleMist = .ponllWhiteEdge
-        } else if bruCiuAerosolHaze.contains("ready") || bruCiuAerosolHaze.contains("counted") || bruCiuAerosolHaze.contains("added") || bruCiuAerosolHaze.contains("submitted") || bruCiuAerosolHaze.contains("published") || bruCiuAerosolHaze.contains("updated") {
+        } else if bruCiuAerosolHaze.contains("rLeMaNdOyP".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("cQoRuSnTtUeVdW".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("aXdYdZe0d1".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("s2u3b4m5i6t7t8e9da".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("pbucbdleifsghheidj".ponllPaintaerErstHours) || bruCiuAerosolHaze.contains("ukpldmantoepdq".ponllPaintaerErstHours) {
             flckinkNozzleMist = .flckinkSplitFill
         } else {
             flckinkNozzleMist = .bruCiuSilverSheen
@@ -165,7 +165,7 @@ extension UIViewController {
         }
     }
 
-    func ponllyShowThemeAlert(title ponllSolidFill: String, message bruCiuSplitFill: String, actionTitle flckinkTwoToneFill: String = "OK", style aerErstAcidGreenFill: PonllyNoticeStyle = .bruCiuSilverSheen, showsCancel ponllCyanGlow: Bool = false, action bruCiuMagentaBurst: (() -> Void)? = nil) {
+    func ponllyShowThemeAlert(title ponllSolidFill: String, message bruCiuSplitFill: String, actionTitle flckinkTwoToneFill: String = "OrKs".ponllPaintaerErstHours, style aerErstAcidGreenFill: PonllyNoticeStyle = .bruCiuSilverSheen, showsCancel ponllCyanGlow: Bool = false, action bruCiuMagentaBurst: (() -> Void)? = nil) {
         view.viewWithTag(909_302)?.removeFromSuperview()
         let flckinkLimeStroke = UIView()
         flckinkLimeStroke.tag = 909_302
@@ -217,7 +217,7 @@ extension UIViewController {
             })
         }, for: .touchUpInside)
         let ponllFinalCoat = UIButton(type: .system)
-        ponllFinalCoat.setTitle("Cancel", for: .normal)
+        ponllFinalCoat.setTitle("Ctaunvcwexly".ponllPaintaerErstHours, for: .normal)
         ponllFinalCoat.setTitleColor(PonllyPalette.muted, for: .normal)
         ponllFinalCoat.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
         ponllFinalCoat.backgroundColor = UIColor.black.withAlphaComponent(0.18)

@@ -12,7 +12,7 @@ final class PonllyEmptyOpponentView: UIView {
         layer.borderColor = PonllyPalette.cyan.cgColor
         backgroundColor = PonllyPalette.panel
         let ponllConcreteMuse = UILabel()
-        ponllConcreteMuse.text = "?"
+        ponllConcreteMuse.text = "?8".ponllPaintaerErstHours
         ponllConcreteMuse.textColor = PonllyPalette.cyan
         ponllConcreteMuse.font = PonllyFonts.muralForgepon(neonLab: 42)
         ponllConcreteMuse.textAlignment = .center

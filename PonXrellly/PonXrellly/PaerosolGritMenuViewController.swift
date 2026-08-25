@@ -45,16 +45,16 @@ final class PaerosolGritMenuViewController: UIViewController {
         flckinkStencilVeil.addSubview(aerErstChromeAura)
 
         let ponllNeonEcho = UILabel()
-        ponllNeonEcho.text = "MANAGE ACCOUNT"
+        ponllNeonEcho.text = "M3A4N5A6G7E8 9AaCbCcOdUeNfTg".ponllPaintaerErstHours
         ponllNeonEcho.textColor = PonllyPalette.muted
         ponllNeonEcho.font = PonllyFonts.muralForgepon(neonLab: 12)
         ponllNeonEcho.translatesAutoresizingMaskIntoConstraints = false
         flckinkStencilVeil.addSubview(ponllNeonEcho)
 
-        let bruCiuTextureSignal = bruCiuPaintPath(ponllInkArc: "Report User", flckinkWallBend: .white, aerErstAerosolKick: "flag", bruCiuMuralLean: #selector(ponllSketchTwist))
-        let flckinkMarkerWeave = bruCiuPaintPath(ponllInkArc: "Block User", flckinkWallBend: UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1), aerErstAerosolKick: "shield", bruCiuMuralLean: #selector(flckinkPaintDepth))
+        let bruCiuTextureSignal = bruCiuPaintPath(ponllInkArc: "Rheipjokrltm nUospeqrr".ponllPaintaerErstHours, flckinkWallBend: .white, aerErstAerosolKick: "fsltaugv".ponllPaintaerErstHours, bruCiuMuralLean: #selector(ponllSketchTwist))
+        let flckinkMarkerWeave = bruCiuPaintPath(ponllInkArc: "BwlxoyczkA BUCsDeErF".ponllPaintaerErstHours, flckinkWallBend: UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1), aerErstAerosolKick: "sGhHiIeJlKdL".ponllPaintaerErstHours, bruCiuMuralLean: #selector(flckinkPaintDepth))
         let aerErstChromeGlow = UIButton(type: .system)
-        aerErstChromeGlow.setTitle("Cancel", for: .normal)
+        aerErstChromeGlow.setTitle("CMaNnOcPeQlR".ponllPaintaerErstHours, for: .normal)
         aerErstChromeGlow.setTitleColor(PonllyPalette.muted, for: .normal)
         aerErstChromeGlow.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
         aerErstChromeGlow.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)

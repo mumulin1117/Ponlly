@@ -10,16 +10,16 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
     private let flckinkWallTrace = UIStackView()
     private let aerErstAerosolTrail = UITextView()
     private var ponllMuralVeil: [PonllytwoToneFillRow] = []
-    private var bruCiuStencilAura = "Harassment"
+    private var bruCiuStencilAura = "H9aarbacsdsemfegnhti".ponllPaintaerErstHours
 
     private let flckinkMarkerEcho = [
-        "Inappropriate Content",
-        "Sexual Content",
-        "Spam",
-        "Fake Information",
-        "Harassment",
-        "Copyright Issue",
-        "Other"
+        "Ijnkalpmpnrooppqrrisattuev wCxoynztAeBnCtD".ponllPaintaerErstHours,
+        "SEeFxGuHaIlJ KCLoMnNtOePnQtR".ponllPaintaerErstHours,
+        "SSpTaUmV".ponllPaintaerErstHours,
+        "FWaXkYeZ 0I1n2f3o4r5m6a7t8i9oanb".ponllPaintaerErstHours,
+        "Hcadreafsgshmiejnktl".ponllPaintaerErstHours,
+        "Cmonpoyprqirgshttu vIwsxsyuzeA".ponllPaintaerErstHours,
+        "OBtChDeErF".ponllPaintaerErstHours
     ]
 
     init(user ponllPaintFlash: PonllyaerErstTwoToneFillr) {
@@ -65,7 +65,7 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         flckinkCanShake.translatesAutoresizingMaskIntoConstraints = false
         bruCiuPaintShelf.addSubview(flckinkCanShake)
         let bruCiuNozzleSet = UILabel()
-        bruCiuNozzleSet.text = "Report User"
+        bruCiuNozzleSet.text = "RGeHpIoJrKtL MUNsOePrQ".ponllPaintaerErstHours
         bruCiuNozzleSet.textColor = .white
         bruCiuNozzleSet.textAlignment = .center
         bruCiuNozzleSet.font = PonllyFonts.muralForgepon(neonLab: 22)
@@ -81,7 +81,7 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         bruCiuInkFuse.addSubview(flckinkWallTrace)
 
         flckinkWallTrace.addArrangedSubview(ponllPaintSpark())
-        flckinkWallTrace.addArrangedSubview(bruCiuInkMood("SELECT REASON"))
+        flckinkWallTrace.addArrangedSubview(bruCiuInkMood("SRESLTEUCVTW XRYEZA0S1O2N3".ponllPaintaerErstHours))
         flckinkMarkerEcho.forEach { ponllCapRack in
             let bruCiuColorRack = PonllytwoToneFillRow(fadePiece: ponllCapRack)
             bruCiuColorRack.ishaloPieceReason = ponllCapRack == bruCiuStencilAura
@@ -89,10 +89,10 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
             ponllMuralVeil.append(bruCiuColorRack)
             flckinkWallTrace.addArrangedSubview(bruCiuColorRack)
         }
-        flckinkWallTrace.addArrangedSubview(bruCiuInkMood("ADDITIONAL DETAILS (OPTIONAL)"))
+        flckinkWallTrace.addArrangedSubview(bruCiuInkMood("A4D5D6I7T8I9OaNbAcLd eDfEgThAiIjLkSl m(nOoPpTqIrOsNtAuLv)w".ponllPaintaerErstHours))
         aerErstAerosolArc()
         flckinkWallTrace.addArrangedSubview(aerErstAerosolTrail)
-        let bruCiuShadowSpray = PonllyNeonButton("Submit Report")
+        let bruCiuShadowSpray = PonllyNeonButton("SxuybzmAiBtC DREeFpGoHrItJ".ponllPaintaerErstHours)
         bruCiuShadowSpray.addTarget(self, action: #selector(aerErstMarkerBend), for: .touchUpInside)
         flckinkWallTrace.addArrangedSubview(bruCiuShadowSpray)
 
@@ -138,13 +138,13 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         flckinkDotSpray.textColor = .white
         flckinkDotSpray.font = PonllyFonts.muralForgepon(neonLab: 17)
         let aerErstLineSpray = UILabel()
-        aerErstLineSpray.text = "Reported target user"
+        aerErstLineSpray.text = "RKeLpMoNrOtPeQdR StTaUrVgWeXtY Zu0s1e2r3".ponllPaintaerErstHours
         aerErstLineSpray.textColor = PonllyPalette.muted
         aerErstLineSpray.font = PonllyFonts.utilityBox(blankFacade: 13)
         bruCiuFanSpray.addArrangedSubview(flckinkDotSpray)
         bruCiuFanSpray.addArrangedSubview(aerErstLineSpray)
         let ponllFadeSpray = UILabel()
-        ponllFadeSpray.text = "TARGET"
+        ponllFadeSpray.text = "T4A5R6G7E8T9".ponllPaintaerErstHours
         ponllFadeSpray.textColor = PonllyPalette.pink
         ponllFadeSpray.textAlignment = .center
         ponllFadeSpray.font = PonllyFonts.muralForgepon(neonLab: 11)
@@ -178,7 +178,7 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
     }
 
     private func aerErstAerosolArc() {
-        aerErstAerosolTrail.text = "Provide more context about this report..."
+        aerErstAerosolTrail.text = "Parbocvdiedfeg hmiojrkel mcnoonptqerxstt uavbwoxuytz AtBhCiDsE FrGeHpIoJrKtL.M.N.O".ponllPaintaerErstHours
         aerErstAerosolTrail.textColor = PonllyPalette.muted
         aerErstAerosolTrail.font = PonllyFonts.utilityBox(blankFacade: 14)
         aerErstAerosolTrail.backgroundColor = PonllyPalette.panel
@@ -203,14 +203,14 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
 
     func textViewDidEndEditing(_ flckinkFanSpray: UITextView) {
         if flckinkFanSpray.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            flckinkFanSpray.text = "Provide more context about this report..."
+            flckinkFanSpray.text = "PPrQoRvSiTdUeV WmXoYrZe0 1c2o3n4t5e6x7t8 9aabbocudte ftghhiisj krlempnoorptq.r.s.t".ponllPaintaerErstHours
             flckinkFanSpray.textColor = PonllyPalette.muted
         }
     }
 
     @objc private func aerErstMarkerBend() {
         let aerErstStencilSheet = aerErstAerosolTrail.textColor == PonllyPalette.muted ? "" : aerErstAerosolTrail.text ?? ""
-        flckinkPrimerCoatponlu("Submitting report...")
+        flckinkPrimerCoatponlu("SuuvbwmxiytztAiBnCgD ErFeGpHoIrJtK.L.M.N".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
             PonllyponllTornEdge.submitflckinkShutterPanel(
                 aerErstFreightPanel: self.ponllPaintFlash.graffitiPulse,

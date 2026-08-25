@@ -39,7 +39,7 @@ final class PonllyurbanCanvasController: UIViewController {
         aerErstStackPath.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstStackPath)
         let ponllCheckGlyph = UILabel()
-        ponllCheckGlyph.text = "✓"
+        ponllCheckGlyph.text = "✓U".ponllPaintaerErstHours
         ponllCheckGlyph.textColor = PonllyPalette.green
         ponllCheckGlyph.textAlignment = .center
         ponllCheckGlyph.font = PonllyFonts.muralForgepon(neonLab: 48)
@@ -51,12 +51,12 @@ final class PonllyurbanCanvasController: UIViewController {
         let bruCiuCheckWrap = UIView()
         bruCiuCheckWrap.addSubview(ponllCheckGlyph)
         let flckinkSuccessTitle = UILabel()
-        flckinkSuccessTitle.text = "Room Created!"
+        flckinkSuccessTitle.text = "RVoWoXmY ZC0r1e2a3t4e5d6!7".ponllPaintaerErstHours
         flckinkSuccessTitle.textColor = .white
         flckinkSuccessTitle.textAlignment = .center
         flckinkSuccessTitle.font = PonllyFonts.muralForgepon(neonLab: 28)
         let aerErstSuccessSubtitle = UILabel()
-        aerErstSuccessSubtitle.text = "Your voice room is ready. Invite your crew to jump in and start tags talk."
+        aerErstSuccessSubtitle.text = "Y8o9uarb cvdoeifcgeh irjokolmm niosp qrresatduyv.w xIynzvAiBtCeD EyFoGuHrI JcKrLeMwN OtPoQ RjSuTmUpV WiXnY Za0n1d2 3s4t5a6r7t8 9taabgcsd etfaglhki.j".ponllPaintaerErstHours
         aerErstSuccessSubtitle.textColor = PonllyPalette.muted
         aerErstSuccessSubtitle.textAlignment = .center
         aerErstSuccessSubtitle.numberOfLines = 0
@@ -74,10 +74,10 @@ final class PonllyurbanCanvasController: UIViewController {
         bruCiuSummaryLabel.font = PonllyFonts.steelGate(rollingShutter: 12)
         ponllSummaryPanel.addSubview(bruCiuSummaryLabel)
         bruCiuSummaryLabel.woodPanelPonlly(steelGate: ponllSummaryPanel, bruCiuClearCoat: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
-        let flckinkEnterButton = PonllyNeonButton("Enter Room")
+        let flckinkEnterButton = PonllyNeonButton("Eknltmenro pRqorosmt".ponllPaintaerErstHours)
         flckinkEnterButton.addTarget(self, action: #selector(bruCiuEnterTapped), for: .touchUpInside)
         let aerErstShareButton = UIButton(type: .system)
-        aerErstShareButton.setTitle("Share Room", for: .normal)
+        aerErstShareButton.setTitle("Suhvawrxey zRAoBoCmD".ponllPaintaerErstHours, for: .normal)
         aerErstShareButton.setTitleColor(.white, for: .normal)
         aerErstShareButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         aerErstShareButton.layer.cornerRadius = 14
@@ -107,19 +107,19 @@ final class PonllyurbanCanvasController: UIViewController {
             graffitiPulse: "created_\(UUID().uuidString)",
             nozzleCraft: ponllshutterPiece.flckinkPrimerCoatpon,
             chromeShine: .ponllGritSurface,
-            colorFade: ponllshutterPiece.bruCiuSilverSheenpon.isEmpty ? "Fresh room for wall critique and street art process talk" : ponllshutterPiece.bruCiuSilverSheenpon,
+            colorFade: ponllshutterPiece.bruCiuSilverSheenpon.isEmpty ? "FErFeGsHhI JrKoLoMmN OfPoQrR SwTaUlVlW XcYrZi0t1i2q3u4e5 6a7n8d9 asbtcrdeeeftg hairjtk lpmrnoocpeqsrss ttuavlwkx".ponllPaintaerErstHours : ponllshutterPiece.bruCiuSilverSheenpon,
             gradientFill: PonllyponllTornEdge.currentUserId,
             paintCloud: [.init(wheatpasteLayer: PonllyponllTornEdge.currentUserId, wallMark: false)],
             sprayHalo: ["u02", "u05", "u17"],
             aerosolHaze: bruCiualleyPiecePlan.aerErstTwoToneFill,
             whitePop: bruCiualleyPiecePlan.flckinkSplitFill,
             nozzleMist: [
-                .init(wheatpasteLayer: PonllyponllTornEdge.currentUserId, pasteupEcho: "now", muralGrid: "Room is open. Bring a wall note or a process question."),
-                .init(wheatpasteLayer: "u02", pasteupEcho: "now", muralGrid: "I am ready to compare outlines and texture choices.")
+                .init(wheatpasteLayer: PonllyponllTornEdge.currentUserId, pasteupEcho: "nyozwA".ponllPaintaerErstHours, muralGrid: "RBoCoDmE FiGsH IoJpKeLnM.N OBPrQiRnSgT UaV WwXaYlZl0 1n2o3t4e5 6o7r8 9aa bpcrdoecfegshsi jqkulemsntoipoqnr.s".ponllPaintaerErstHours),
+                .init(wheatpasteLayer: "u02", pasteupEcho: "ntouwv".ponllPaintaerErstHours, muralGrid: "Iw xaymz ArBeCaDdEyF GtHoI JcKoLmMpNaOrPeQ RoSuTtUlViWnXeYsZ 0a1n2d3 4t5e6x7t8u9raeb ccdheofigcheisj.k".ponllPaintaerErstHours)
             ]
         )
         PonllyponllTornEdge.updatebruCiuHardOutline(flckinkRoom)
-        flckinkPrimerCoatponlu("Entering room...")
+        flckinkPrimerCoatponlu("Elnmtneorpiqnrgs truovowmx.y.z.A".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             let aerErstImmersive = PwheatpasteLayerController(aerErstConcreteMuse: flckinkRoom)
             aerErstImmersive.hidesBottomBarWhenPushed = true
@@ -128,6 +128,6 @@ final class PonllyurbanCanvasController: UIViewController {
     }
 
     @objc private func ponllShareTapped() {
-        flckinkPrimerCoatponlu("Room invite ready")
+        flckinkPrimerCoatponlu("RBoCoDmE FiGnHvIiJtKeL MrNeOaPdQyR".ponllPaintaerErstHours)
     }
 }

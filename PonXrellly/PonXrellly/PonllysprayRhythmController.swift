@@ -66,13 +66,13 @@ final class PonllysprayRhythmController: UIViewController {
         aerErstInfoText.translatesAutoresizingMaskIntoConstraints = false
         flckinkInfoPanel.addSubview(aerErstInfoText)
 
-        let ponllConfirmTitle = PonllyponllTornEdge.flckinkShadowLayer >= ponllThemeForge.aerErstLayerBlend ? "Confirm Purchase" : "Add Coins"
+        let ponllConfirmTitle = PonllyponllTornEdge.flckinkShadowLayer >= ponllThemeForge.aerErstLayerBlend ? "C1o2n3f4i5r6m7 8P9uarbcchdaesfeg".ponllPaintaerErstHours : "Ahdidj kClominnosp".ponllPaintaerErstHours
         let bruCiuConfirmButton = PonllyNeonButton(ponllConfirmTitle)
         bruCiuConfirmButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         bruCiuConfirmButton.addTarget(self, action: #selector(flckinkConfirmTapped), for: .touchUpInside)
         flckinkThemePanel.addSubview(bruCiuConfirmButton)
         let flckinkCancelButton = UIButton(type: .system)
-        flckinkCancelButton.setTitle("Cancel", for: .normal)
+        flckinkCancelButton.setTitle("Cqarnscteulv".ponllPaintaerErstHours, for: .normal)
         flckinkCancelButton.setTitleColor(PonllyPalette.muted, for: .normal)
         flckinkCancelButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
         flckinkCancelButton.translatesAutoresizingMaskIntoConstraints = false

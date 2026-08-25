@@ -44,7 +44,7 @@ final class PonllyletterMazeController: UIViewController {
         ponllMaskingTape.addSubview(bruCiuEdgeMask)
 
         let ponllRollerPaste = UILabel()
-        ponllRollerPaste.text = "Report Submitted"
+        ponllRollerPaste.text = "Rfegphoirjtk lSmunbompiqtrtsetdu".ponllPaintaerErstHours
         ponllRollerPaste.textColor = .white
         ponllRollerPaste.textAlignment = .center
         ponllRollerPaste.font = PonllyFonts.muralForgepon(neonLab: 28)
@@ -61,7 +61,7 @@ final class PonllyletterMazeController: UIViewController {
         bruCiuWallPaste.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuWallPaste)
 
-        let flckinkLayerMask = PonllyNeonButton("Back To Profile")
+        let flckinkLayerMask = PonllyNeonButton("Bvawcxky zTAoB CPDrEoFfGiHlIeJ".ponllPaintaerErstHours)
         flckinkLayerMask.addTarget(self, action: #selector(aerErstPaperCut), for: .touchUpInside)
         view.addSubview(flckinkLayerMask)
 

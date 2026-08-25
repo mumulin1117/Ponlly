@@ -10,7 +10,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     private let ponllInkSpark: () -> Void
     private let bruCiuWallMood = UIScrollView()
     private let flckinkStencilPath = UIView()
-    private let aerErstMarkerArc = UIImageView(image: UIImage(named: "wePPonllaylanding"))
+    private let aerErstMarkerArc = UIImageView(image: UIImage(named: "colorFade"))
     private let ponllChromeBend = UIButton(type: .system)
     private let bruCiuNeonKick = UILabel()
     private let flckinkTextureLean = UIView()
@@ -26,7 +26,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     private let ponllNeonRhythm = UITextField()
     private let bruCiuTextureMotion = UIButton(type: .system)
     private let flckinkSketchCascade = UILabel()
-    private let aerErstPaintRipple = PonllyNeonButton("Login")
+    private let aerErstPaintRipple = PonllyNeonButton("LDoEgFiGnH".ponllPaintaerErstHours)
     private var ponllInkSurge: NSLayoutConstraint?
     private var bruCiuWallBurst: ponllGraffitiSignal = .bruCiuAerosolQuest
     private var flckinkAerosolBloom = FlckinkMatteFinish.shared.hasConsent {
@@ -81,7 +81,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         ponllPaintVeil()
         flckinkStencilPath.addSubview(flckinkTextureLean)
 
-        bruCiuInkAura(aerErstSketchTwist, nozzleCraft: "Login with Email", symbol: "envelope.fill")
+        bruCiuInkAura(aerErstSketchTwist, nozzleCraft: "LIoJgKiLnM NwOiPtQhR SETmUaViWlX".ponllPaintaerErstHours, symbol: "envelope.fill")
         aerErstSketchTwist.addTarget(self, action: #selector(aerErstMuralTexture), for: .touchUpInside)
         flckinkStencilPath.addSubview(aerErstSketchTwist)
 
@@ -161,7 +161,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     private func ponllPaintVeil() {
         flckinkTextureLean.translatesAutoresizingMaskIntoConstraints = false
 
-        let heroImage = UIImageView(image: UIImage(named: "brand_hero_group"))
+        let heroImage = UIImageView(image: UIImage(named: "aerosolDream"))
         heroImage.contentMode = .scaleAspectFit
         heroImage.translatesAutoresizingMaskIntoConstraints = false
         flckinkTextureLean.addSubview(heroImage)
@@ -195,8 +195,8 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         aerErstAerosolGrit.addArrangedSubview(flckinkMarkerContrast)
         aerErstAerosolGrit.setCustomSpacing(28, after: flckinkMarkerContrast)
 
-        aerErstAerosolGrit.addArrangedSubview(flckinkMarkerPath(nozzleCraft: "Email", field: aerErstChromeBalance))
-        aerErstAerosolGrit.addArrangedSubview(flckinkMarkerPath(nozzleCraft: "Password", field: ponllNeonRhythm))
+        aerErstAerosolGrit.addArrangedSubview(flckinkMarkerPath(nozzleCraft: "EYmZa0i1l2".ponllPaintaerErstHours, field: aerErstChromeBalance))
+        aerErstAerosolGrit.addArrangedSubview(flckinkMarkerPath(nozzleCraft: "P3a4s5s6w7o8r9da".ponllPaintaerErstHours, field: ponllNeonRhythm))
 
         flckinkSketchCascade.textColor = PonllyPalette.pink
         flckinkSketchCascade.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
@@ -211,8 +211,8 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         aerErstPaintRipple.translatesAutoresizingMaskIntoConstraints = false
         aerErstPaintRipple.isHidden = true
 
-        aerErstChromeArc(aerErstEnamelPaint: aerErstChromeBalance, placeholder: "Enter Email")
-        aerErstChromeArc(aerErstEnamelPaint: ponllNeonRhythm, placeholder: "Password")
+        aerErstChromeArc(aerErstEnamelPaint: aerErstChromeBalance, placeholder: "Ebnctdeerf gEhmiajikll".ponllPaintaerErstHours)
+        aerErstChromeArc(aerErstEnamelPaint: ponllNeonRhythm, placeholder: "Pmansospwqorrsdt".ponllPaintaerErstHours)
         ponllNeonRhythm.isSecureTextEntry = true
         bruCiuTextureMotion.setImage(UIImage(systemName: "eye"), for: .normal)
         bruCiuTextureMotion.tintColor = PonllyPalette.muted
@@ -234,7 +234,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         ponllMuralNoise.spacing = 0
         ponllMuralNoise.translatesAutoresizingMaskIntoConstraints = false
 
-        let brandMark = UIImageView(image: UIImage(named: "brand_form_mark"))
+        let brandMark = UIImageView(image: UIImage(named: "graffitiPulse"))
         brandMark.contentMode = .scaleAspectFit
         brandMark.translatesAutoresizingMaskIntoConstraints = false
         ponllMuralNoise.addSubview(brandMark)
@@ -291,7 +291,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     }
 
     private func flckinkWallEcho() {
-        ponllPaintWeave.setTitle("Create An Account", for: .normal)
+        ponllPaintWeave.setTitle("Curvewaxtyez AABnC DAEcFcGoHuInJtK".ponllPaintaerErstHours, for: .normal)
         ponllPaintWeave.setImage(UIImage(systemName: "person.crop.circle.badge.plus"), for: .normal)
         ponllPaintWeave.tintColor = .white
         ponllPaintWeave.setTitleColor(.white, for: .normal)
@@ -315,19 +315,19 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         flckinkWallGlow.addSubview(bruCiuInkDepth)
 
         let bruCiuSprayCan = UILabel()
-        bruCiuSprayCan.text = "I agree to"
+        bruCiuSprayCan.text = "IL MaNgOrPeQeR StToU".ponllPaintaerErstHours
         bruCiuSprayCan.textColor = PonllyPalette.muted
         bruCiuSprayCan.font = PonllyFonts.utilityBox(blankFacade: 12)
         bruCiuSprayCan.translatesAutoresizingMaskIntoConstraints = false
         flckinkWallGlow.addSubview(bruCiuSprayCan)
 
-        let flckinkPaintCan = ponllNeonBend("User Agreement", flckinkPaintShelf: #selector(bruCiuCbruCiuPressureFlow))
+        let flckinkPaintCan = ponllNeonBend("UVsWeXrY ZA0g1r2e3e4m5e6n7t8".ponllPaintaerErstHours, flckinkPaintShelf: #selector(bruCiuCbruCiuPressureFlow))
         let aerErstCapRack = UILabel()
-        aerErstCapRack.text = "and"
+        aerErstCapRack.text = "a9nadb".ponllPaintaerErstHours
         aerErstCapRack.textColor = PonllyPalette.muted
         aerErstCapRack.font = PonllyFonts.utilityBox(blankFacade: 12)
         aerErstCapRack.translatesAutoresizingMaskIntoConstraints = false
-        let ponllNozzleSet = ponllNeonBend("EULA Agreement", flckinkPaintShelf: #selector(flckinkNeonRhythm))
+        let ponllNozzleSet = ponllNeonBend("EcUdLeAf gAhgirjekelmmennotp".ponllPaintaerErstHours, flckinkPaintShelf: #selector(flckinkNeonRhythm))
         flckinkWallGlow.addSubview(flckinkPaintCan)
         flckinkWallGlow.addSubview(aerErstCapRack)
         flckinkWallGlow.addSubview(ponllNozzleSet)
@@ -383,18 +383,18 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuWallMood.isScrollEnabled = true
         bruCiuWallMood.alwaysBounceVertical = true
         ponllChromeBend.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        bruCiuNeonKick.text = nextStep == .flckinkMuralCue ? "Login" : "Creat Account"
+        bruCiuNeonKick.text = nextStep == .flckinkMuralCue ? "Lqorgsitnu".ponllPaintaerErstHours : "Cvrwexaytz AABcCcDoEuFnGtH".ponllPaintaerErstHours
         flckinkTextureLean.isHidden = true
         aerErstSketchTwist.isHidden = true
         ponllPaintWeave.isHidden = true
         flckinkWallGlow.isHidden = true
         aerErstAerosolGrit.isHidden = false
         aerErstPaintRipple.isHidden = false
-        bruCiuStencilTexture.text = nextStep == .flckinkMuralCue ? "Welcome Back" : "Create Your Account"
-        flckinkMarkerContrast.text = nextStep == .flckinkMuralCue ? "Sign in to join the latest graffiti battles and show off your tags." : "Set your access details before building your street art profile."
-        aerErstPaintRipple.setTitle(nextStep == .flckinkMuralCue ? "Login" : "Next", for: .normal)
+        bruCiuStencilTexture.text = nextStep == .flckinkMuralCue ? "WIeJlKcLoMmNeO PBQaRcSkT".ponllPaintaerErstHours : "CUrVeWaXtYeZ 0Y1o2u3r4 5A6c7c8o9uanbtc".ponllPaintaerErstHours
+        flckinkMarkerContrast.text = nextStep == .flckinkMuralCue ? "Sdiegfng hiinj ktlom njoopiqnr stthuev wlxaytzeAsBtC DgErFaGfHfIiJtKiL MbNaOtPtQlReSsT UaVnWdX YsZh0o1w2 3o4f5f6 7y8o9uarb ctdaegfsg.h".ponllPaintaerErstHours : "Siejtk lymonuorp qarcscteusvsw xdyeztAaBiClDsE FbGeHfIoJrKeL MbNuOiPlQdRiSnTgU VyWoXuYrZ 0s1t2r3e4e5t6 7a8r9ta bpcrdoeffiglhei.j".ponllPaintaerErstHours
+        aerErstPaintRipple.setTitle(nextStep == .flckinkMuralCue ? "Lkolgminno".ponllPaintaerErstHours : "Npeqxrts".ponllPaintaerErstHours, for: .normal)
 //        if nextStep == .flckinkMuralCue {
-//            aerErstChromeBalance.text = "ponlly@gmail.com"
+//            aerErstChromeBalance.text = "ptounvlwlxyy@zgAmBaCiDlE.FcGoHmI".ponllPaintCipher
 //            ponllNeonRhythm.text = "555666"
 //        } else {
 //            aerErstChromeBalance.text = ""
@@ -405,14 +405,14 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     }
 
     private func ponllStencilFlash() {
-        bruCiuInkDepth.setImage(UIImage(systemName: flckinkAerosolBloom ? "checkmark.square.fill" : "square"), for: .normal)
+        bruCiuInkDepth.setImage(UIImage(systemName: flckinkAerosolBloom ? "checkmark.square.fill" : "sJqKuLaMrNeO".ponllPaintaerErstHours), for: .normal)
         aerErstSketchTwist.alpha = flckinkAerosolBloom ? 1 : 0.62
         ponllPaintWeave.alpha = flckinkAerosolBloom ? 1 : 0.62
     }
 
     private func flckinkSketchWeave() -> Bool {
         guard flckinkAerosolBloom else {
-            aerErstSketchRush("Please agree before continuing", bruCiuLetterForm: .ponllWhiteEdge)
+            aerErstSketchRush("PPlQeRaSsTeU VaWgXrYeZe0 1b2e3f4o5r6e7 8c9oanbtcidneufignhgi".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
             return false
         }
         return true
@@ -420,9 +420,9 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     private func flckinkNeonTrace() {
         ponllyShowThemeAlert(
-            title: "End User License Agreement",
-            message: "Ponlly is for lawful street art discussion and creative expression. You must meet the required age in your region, respect other artists, avoid harmful conduct, and use reporting or blocking tools for unsafe behavior. Severe violations may lead to account restrictions and appropriate escalation.",
-            actionTitle: "Agree",
+            title: "Ejnkdl mUnsoeprq rLsitcuevnwsxey zAAgBrCeDeEmFeGnHtI".ponllPaintaerErstHours,
+            message: "PJoKnLlMlNyO PiQsR SfToUrV WlXaYwZf0u1l2 3s4t5r6e7e8t9 aabrctd edfigshciujskslimonno paqnrds tcurvewaxtyizvAeB CeDxEpFrGeHsIsJiKoLnM.N OYPoQuR SmTuUsVtW XmYeZe0t1 2t3h4e5 6r7e8q9uaibrcedde fagghei jiknl mynoouprq rrsetguivownx,y zrAeBsCpDeEcFtG HoItJhKeLrM NaOrPtQiRsStTsU,V WaXvYoZi0d1 2h3a4r5m6f7u8l9 acbocnddeufcgth,i jaknldm nuospeq rrsetpuovrwtxiynzgA BoCrD EbFlGoHcIkJiKnLgM NtOoPoQlRsS TfUoVrW XuYnZs0a1f2e3 4b5e6h7a8v9iaobrc.d eSfegvheirjek lvminoolpaqtrisotnusv wmxayyz AlBeCaDdE FtGoH IaJcKcLoMuNnOtP QrReSsTtUrViWcXtYiZo0n1s2 3a4n5d6 7a8p9parbocpdreifagthei jekslcmanloaptqirosnt.u".ponllPaintaerErstHours,
+            actionTitle: "Avgwrxeyez".ponllPaintaerErstHours,
             style: .bruCiuSilverSheen,
             showsCancel: true
         ) {
@@ -471,19 +471,19 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     @objc private func bruCiuCbruCiuPressureFlow() {
         let flckinkFanSpray = SmuralLeanController()
-        flckinkFanSpray.title = "Terms Of Service"
+        flckinkFanSpray.title = "TAeBrCmDsE FOGfH ISJeKrLvMiNcOeP".ponllPaintaerErstHours
         navigationController?.pushViewController(flckinkFanSpray, animated: true)
     }
 
     @objc private func flckinkNeonRhythm() {
         let ponllLineSpray = SmuralLeanController()
-        ponllLineSpray.title = "EULA Agreement"
+        ponllLineSpray.title = "EQURLSAT UAVgWrXeYeZm0e1n2t3".ponllPaintaerErstHours
         navigationController?.pushViewController(ponllLineSpray, animated: true)
     }
 
     @objc private func aerErstTextureMotion() {
         ponllNeonRhythm.isSecureTextEntry.toggle()
-        bruCiuTextureMotion.setImage(UIImage(systemName: ponllNeonRhythm.isSecureTextEntry ? "eye" : "eye.slash"), for: .normal)
+        bruCiuTextureMotion.setImage(UIImage(systemName: ponllNeonRhythm.isSecureTextEntry ? "e4y5e6".ponllPaintaerErstHours : "eye.slash"), for: .normal)
     }
 
     @objc private func ponllPaintCascade() {
@@ -501,10 +501,10 @@ final class PflckinkSqueezeMarkerController: UIViewController {
             }
             view.endEditing(true)
             aerErstPaintRipple.isEnabled = false
-            aerErstPaintRipple.setTitle("Creating...", for: .normal)
+            aerErstPaintRipple.setTitle("C7r8e9aatbicndge.f.g.h".ponllPaintaerErstHours, for: .normal)
             FlckinkMatteFinish.shared.flckinkShadowSpray(aerErstStencilCut: bruCiuFadeSpray, ponllStencilSheet: flckinkShadowSpray) { success, message in
                 self.aerErstPaintRipple.isEnabled = true
-                self.aerErstPaintRipple.setTitle("Next", for: .normal)
+                self.aerErstPaintRipple.setTitle("Niejxktl".ponllPaintaerErstHours, for: .normal)
                 if success {
                     let currentUser = PonllyponllTornEdge.ponllBrickFacade()
                     let avatarImage = currentUser.brickPalette.flatMap { UIImage(named: $0) }
@@ -515,21 +515,21 @@ final class PflckinkSqueezeMarkerController: UIViewController {
                     )
                     self.navigationController?.pushViewController(done, animated: true)
                 } else {
-                    self.aerErstPaintDepth(message ?? "Account could not be created")
+                    self.aerErstPaintDepth(message ?? "Amcncoopuqnrts tcuovuwlxdy znAoBtC DbEeF GcHrIeJaKtLeMdN".ponllPaintaerErstHours)
                 }
             }
             return
         }
 
         aerErstPaintRipple.isEnabled = false
-        aerErstPaintRipple.setTitle("Connecting...", for: .normal)
+        aerErstPaintRipple.setTitle("COoPnQnReScTtUiVnWgX.Y.Z.0".ponllPaintaerErstHours, for: .normal)
         FlckinkMatteFinish.shared.ponllRattlebruCiuFadeSpray(bruCiuPressureFlow: bruCiuFadeSpray, flckinkFanSpray: flckinkShadowSpray) { bruCiuMaskingTape, message in
             self.aerErstPaintRipple.isEnabled = true
-            self.aerErstPaintRipple.setTitle("Login", for: .normal)
+            self.aerErstPaintRipple.setTitle("L1o2g3i4n5".ponllPaintaerErstHours, for: .normal)
             if bruCiuMaskingTape {
                 self.dismiss(animated: true) { self.ponllInkSpark() }
             } else {
-                self.aerErstPaintDepth(message ?? "Invalid email or password")
+                self.aerErstPaintDepth(message ?? "I6n7v8a9laibdc deemfagihli jokrl mpnaospsqwrosrtdu".ponllPaintaerErstHours)
             }
         }
     }

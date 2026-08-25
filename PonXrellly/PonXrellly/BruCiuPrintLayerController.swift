@@ -7,7 +7,7 @@ import UIKit
 final class BruCiuPrintLayerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Create Battle"
+        title = "C1r2e3a4t5e6 7B8a9tatblced".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         ponllWallMark()
     }
@@ -25,14 +25,14 @@ final class BruCiuPrintLayerController: UIViewController {
         bruCiuStreetGlyph.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuStreetGlyph)
         let flckinkLetterMaze = UILabel()
-        flckinkLetterMaze.text = "Challenge Other Graffiti Creators To Prove Your Skills"
+        flckinkLetterMaze.text = "Cehfaglhliejnkglem nOotphqerrs tGurvawfxfyiztAiB CCDrEeFaGtHoIrJsK LTMoN OPPrQoRvSeT UYVoWuXrY ZS0k1i2l3l4s5".ponllPaintaerErstHours
         flckinkLetterMaze.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .semibold)
         flckinkLetterMaze.textColor = PonllyPalette.muted
         flckinkLetterMaze.numberOfLines = 0
-        let aerErstCurveFlow = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "hero", markerStroke: "u01", nozzleCraft: "Neon Fury Chrome Clash", capControl: "Battle", stencilBloom: "graffiti_challenge_wall_05", inkDrift: [.cyan, .systemPink, .orange]))
+        let aerErstCurveFlow = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "h6e7r8o9".ponllPaintaerErstHours, markerStroke: "u01", nozzleCraft: "Naebocnd eFfugrhyi jCkhlrmonmoep qCrlsatsuhv".ponllPaintaerErstHours, capControl: "BwaxtytzlAeB".ponllPaintaerErstHours, stencilBloom: "nozzleCraft", inkDrift: [.cyan, .systemPink, .orange]))
         aerErstCurveFlow.heightAnchor.constraint(equalToConstant: 240).isActive = true
         let ponllAngleBreak = UILabel()
-        ponllAngleBreak.text = "How PK Battles Work"
+        ponllAngleBreak.text = "HCoDwE FPGKH IBJaKtLtMlNeOsP QWRoSrTkU".ponllPaintaerErstHours
         ponllAngleBreak.textColor = PonllyPalette.cyan
         ponllAngleBreak.font = PonllyFonts.muralForgepon(neonLab: 14)
         let bruCiuEdgeSnap = UILabel()
@@ -40,7 +40,7 @@ final class BruCiuPrintLayerController: UIViewController {
         bruCiuEdgeSnap.textColor = .white
         bruCiuEdgeSnap.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
         bruCiuEdgeSnap.numberOfLines = 0
-        let flckinkShapeStack = PonllyNeonButton("Start Creating")
+        let flckinkShapeStack = PonllyNeonButton("SVtWaXrYtZ 0C1r2e3a4t5i6n7g8".ponllPaintaerErstHours)
         flckinkShapeStack.addTarget(self, action: #selector(aerErstLayerBlend), for: .touchUpInside)
         [flckinkLetterMaze, aerErstCurveFlow, ponllAngleBreak, bruCiuEdgeSnap, flckinkShapeStack].forEach(bruCiuStreetGlyph.addArrangedSubview)
         NSLayoutConstraint.activate([

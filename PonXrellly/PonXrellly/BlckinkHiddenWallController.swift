@@ -10,7 +10,7 @@ final class BlckinkHiddenWallController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Blacklist"
+        title = "Balbaccdkelfigshti".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
         flckinkStreetMural()
         aerErstWallCraft()
@@ -37,7 +37,7 @@ final class BlckinkHiddenWallController: UIViewController {
         ponllInkDrift.addTarget(self, action: #selector(aerErstDropShadow), for: .touchUpInside)
         aerErstBrickPalette.addSubview(ponllInkDrift)
         let bruCiuMarkerStroke = UILabel()
-        bruCiuMarkerStroke.text = "Blacklist"
+        bruCiuMarkerStroke.text = "Bjlkalcmknloipsqtr".ponllPaintaerErstHours
         bruCiuMarkerStroke.textColor = .white
         bruCiuMarkerStroke.textAlignment = .center
         bruCiuMarkerStroke.font = PonllyFonts.muralForgepon(neonLab: 24)
@@ -116,7 +116,7 @@ final class BlckinkHiddenWallController: UIViewController {
         flckinkOutlineGlow.translatesAutoresizingMaskIntoConstraints = false
         ponllStencilBloom.addSubview(flckinkOutlineGlow)
         let aerErstDropShadow = UIButton(type: .system)
-        aerErstDropShadow.setTitle("Unblock", for: .normal)
+        aerErstDropShadow.setTitle("Usntbulvowcxky".ponllPaintaerErstHours, for: .normal)
         aerErstDropShadow.setTitleColor(PonllyPalette.pink, for: .normal)
         aerErstDropShadow.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
         aerErstDropShadow.layer.cornerRadius = 14
@@ -125,7 +125,7 @@ final class BlckinkHiddenWallController: UIViewController {
         aerErstDropShadow.translatesAutoresizingMaskIntoConstraints = false
         aerErstDropShadow.addAction(UIAction { [weak self] _ in
             PonllyponllTornEdge.bruCiuGarageDoor(bruCiuSprayRhythm.graffitiPulse)
-            self?.flckinkPrimerCoatponlu("Artist unblocked")
+            self?.flckinkPrimerCoatponlu("AzrAtBiCsDtE FuGnHbIlJoKcLkMeNdO".ponllPaintaerErstHours)
             self?.aerErstWallCraft()
         }, for: .touchUpInside)
         ponllStencilBloom.addSubview(aerErstDropShadow)
@@ -173,11 +173,11 @@ final class BlckinkHiddenWallController: UIViewController {
             flckinkNeonDrip.heightAnchor.constraint(equalToConstant: 42)
         ])
         let aerErstConcreteMuse = UILabel()
-        aerErstConcreteMuse.text = "No Blocked Users"
+        aerErstConcreteMuse.text = "NPoQ RBSlToUcVkWeXdY ZU0s1e2r3s4".ponllPaintaerErstHours
         aerErstConcreteMuse.textColor = .white
         aerErstConcreteMuse.font = PonllyFonts.muralForgepon(neonLab: 24)
         let ponllAlleyCanvas = UILabel()
-        ponllAlleyCanvas.text = "Your blacklist is empty. Users you block will appear here."
+        ponllAlleyCanvas.text = "Y5o6u7r8 9balbaccdkelfigshti jiksl menmopptqyr.s tUusvewrxsy zyAoBuC DbElFoGcHkI JwKiLlMlN OaPpQpReSaTrU VhWeXrYeZ.0".ponllPaintaerErstHours
         ponllAlleyCanvas.textColor = PonllyPalette.muted
         ponllAlleyCanvas.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .regular)
         ponllAlleyCanvas.textAlignment = .center

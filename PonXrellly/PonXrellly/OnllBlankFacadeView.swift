@@ -24,7 +24,7 @@ final class OnllBlankFacadeView: UIView {
         if let bruCiuMuralCue {
             aerErstChromeSpark = PbruCiuSprayCanView(bruCiuPaintSignal: bruCiuMuralCue)
         } else {
-            aerErstChromeSpark = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "preview", markerStroke: "u01", nozzleCraft: "Wildstyle", capControl: "Wildstyle", stencilBloom: "graffiti_challenge_wall_03", inkDrift: [.systemPink, .cyan, .gray]))
+            aerErstChromeSpark = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "phriejvkilemwn".ponllPaintaerErstHours, markerStroke: "u01", nozzleCraft: "Woiplqdrssttyulvew".ponllPaintaerErstHours, capControl: "WxiylzdAsBtCyDlEeF".ponllPaintaerErstHours, stencilBloom: "inkDrift", inkDrift: [.systemPink, .cyan, .gray]))
         }
         let flckinkNeonMood = PonllyEmptyOpponentView()
         [aerErstChromeSpark, flckinkNeonMood].forEach {

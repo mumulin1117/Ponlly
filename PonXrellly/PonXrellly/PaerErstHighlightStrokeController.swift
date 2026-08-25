@@ -48,7 +48,7 @@ final class PaerErstHighlightStrokeController: UIViewController {
         bruCiuStencilTrail.addSubview(flckinkMarkerVeil)
 
         let aerErstChromeAura = UILabel()
-        aerErstChromeAura.text = "Block This User?"
+        aerErstChromeAura.text = "BylzoAcBkC DTEhFiGsH IUJsKeLrM?N".ponllPaintaerErstHours
         aerErstChromeAura.textColor = .white
         aerErstChromeAura.textAlignment = .center
         aerErstChromeAura.font = PonllyFonts.muralForgepon(neonLab: 20)
@@ -69,13 +69,13 @@ final class PaerErstHighlightStrokeController: UIViewController {
         bruCiuTextureSignal.translatesAutoresizingMaskIntoConstraints = false
         ponllMuralTrace.addSubview(bruCiuTextureSignal)
         [
-            "This user cannot view your profile",
-            "This user cannot send you messages",
-            "This user cannot interact with your content"
+            "TOhPiQsR SuTsUeVrW XcYaZn0n1o2t3 4v5i6e7w8 9yaobucrd epfrgohfiijlkel".ponllPaintaerErstHours,
+            "Tmhniosp qurssetru vcwaxnynzoAtB CsDeEnFdG HyIoJuK LmMeNsOsPaQgReSsT".ponllPaintaerErstHours,
+            "TUhViWsX YuZs0e1r2 3c4a5n6n7o8t9 aibnctdeerfagchti jwkiltmhn oypoqurrs tcuovnwtxeynztA".ponllPaintaerErstHours
         ].forEach { bruCiuTextureSignal.addArrangedSubview(flckinkSketchQuest($0)) }
 
         let flckinkPaintCue = UIButton(type: .system)
-        flckinkPaintCue.setTitle("Cancel", for: .normal)
+        flckinkPaintCue.setTitle("CBaCnDcEeFlG".ponllPaintaerErstHours, for: .normal)
         flckinkPaintCue.setTitleColor(PonllyPalette.muted, for: .normal)
         flckinkPaintCue.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
         flckinkPaintCue.layer.cornerRadius = 16
@@ -85,7 +85,7 @@ final class PaerErstHighlightStrokeController: UIViewController {
         flckinkPaintCue.translatesAutoresizingMaskIntoConstraints = false
         ponllMuralTrace.addSubview(flckinkPaintCue)
 
-        let aerErstWallSpark = PonllyNeonButton("Block", UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1))
+        let aerErstWallSpark = PonllyNeonButton("BHlIoJcKkL".ponllPaintaerErstHours, UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1))
         aerErstWallSpark.addTarget(self, action: #selector(ponllAerosolMood), for: .touchUpInside)
         ponllMuralTrace.addSubview(aerErstWallSpark)
 

@@ -74,18 +74,18 @@ final class PonllymuralKickntroller: UIViewController {
             flckinkInkCascade(),
             aerErstWallRipple(),
             ponllAerosolSurge([
-                bruCiuMuralBurst(inkMood: "My Artwork", styleSeed: "Show your artwork", paintSurge: "paintpalette", paintRipple: PonllyPalette.cyan, action: #selector(bruCiuInkAura)),
-                bruCiuMuralBurst(inkMood: "Blacklist", styleSeed: "Manage blocked users", paintSurge: "shield", paintRipple: PonllyPalette.cyan, action: #selector(bruCiuStencilCue))
+                bruCiuMuralBurst(inkMood: "MKyL MANrOtPwQoRrSkT".ponllPaintaerErstHours, styleSeed: "SUhVoWwX YyZo0u1r2 3a4r5t6w7o8r9ka".ponllPaintaerErstHours, paintSurge: "pbacidnetfpgahliejtktlem".ponllPaintaerErstHours, paintRipple: PonllyPalette.cyan, action: #selector(bruCiuInkAura)),
+                bruCiuMuralBurst(inkMood: "Bnloapcqkrlsitsutv".ponllPaintaerErstHours, styleSeed: "MwaxnyazgAeB CbDlEoFcGkHeIdJ KuLsMeNrOsP".ponllPaintaerErstHours, paintSurge: "sQhRiSeTlUdV".ponllPaintaerErstHours, paintRipple: PonllyPalette.cyan, action: #selector(bruCiuStencilCue))
             ]),
-            flckinkStencilBloom("Policies"),
+            flckinkStencilBloom("PWoXlYiZc0i1e2s3".ponllPaintaerErstHours),
             ponllAerosolSurge([
-                bruCiuMuralBurst(inkMood: "Terms Of Service", styleSeed: "Read our terms and conditions", paintSurge: "doc.text", paintRipple: PonllyPalette.pink, action: #selector(flckinkMarkerPath)),
-                bruCiuMuralBurst(inkMood: "Privacy Policy", styleSeed: "How we protect your data", paintSurge: "lock", paintRipple: PonllyPalette.pink, action: #selector(aerErstChromeArc))
+                bruCiuMuralBurst(inkMood: "T4e5r6m7s8 9Oafb cSdeerfvgihciej".ponllPaintaerErstHours, styleSeed: "Rkelamdn oopuqrr stteurvmwsx yaznAdB CcDoEnFdGiHtIiJoKnLsM".ponllPaintaerErstHours, paintSurge: "doc.text", paintRipple: PonllyPalette.pink, action: #selector(flckinkMarkerPath)),
+                bruCiuMuralBurst(inkMood: "PNrOiPvQaRcSyT UPVoWlXiYcZy0".ponllPaintaerErstHours, styleSeed: "H1o2w3 4w5e6 7p8r9oatbeccdte fygohuirj kdlamtnao".ponllPaintaerErstHours, paintSurge: "lpoqcrks".ponllPaintaerErstHours, paintRipple: PonllyPalette.pink, action: #selector(aerErstChromeArc))
             ]),
-            flckinkStencilBloom("Account Actions"),
+            flckinkStencilBloom("Atcucvowuxnytz AABcCtDiEoFnGsH".ponllPaintaerErstHours),
             ponllAerosolSurge([
-                bruCiuMuralBurst(inkMood: "Log Out", styleSeed: "Sign out of your account", paintSurge: "rectangle.portrait.and.arrow.right", paintRipple: .white, action: #selector(ponllNeonBend)),
-                bruCiuMuralBurst(inkMood: "Delete Account", styleSeed: "Permanently remove your account", paintSurge: "trash", paintRipple: PonllyPalette.pink, action: #selector(bruCiuTextureKick))
+                bruCiuMuralBurst(inkMood: "LIoJgK LOMuNtO".ponllPaintaerErstHours, styleSeed: "SPiQgRnS ToUuVtW XoYfZ 0y1o2u3r4 5a6c7c8o9uanbtc".ponllPaintaerErstHours, paintSurge: "rectangle.portrait.and.arrow.right", paintRipple: .white, action: #selector(ponllNeonBend)),
+                bruCiuMuralBurst(inkMood: "Ddeelfegthei jAkclcmonuonptq".ponllPaintaerErstHours, styleSeed: "PresrtmuavnwexnytzlAyB CrDeEmFoGvHeI JyKoLuMrN OaPcQcRoSuTnUtV".ponllPaintaerErstHours, paintSurge: "tWrXaYsZh0".ponllPaintaerErstHours, paintRipple: PonllyPalette.pink, action: #selector(bruCiuTextureKick))
             ])
         ]
     }
@@ -103,16 +103,16 @@ final class PonllymuralKickntroller: UIViewController {
         ponllPasteBrush.isLayoutMarginsRelativeArrangement = true
 
         let bruCiuTunnelWall = UILabel()
-        bruCiuTunnelWall.text = "My Stash"
+        bruCiuTunnelWall.text = "M1y2 3S4t5a6s7h8".ponllPaintaerErstHours
         bruCiuTunnelWall.textColor = .white
         bruCiuTunnelWall.font = PonllyFonts.muralForgepon(neonLab: 24)
         let bruCiuRollerPaste = UILabel()
-        bruCiuRollerPaste.text = "Sign in to keep your graffiti profile, battles, rooms, and private messages together."
+        bruCiuRollerPaste.text = "S9iagbnc dienf gthoi jkkelempn oypoqurrs tgurvawfxfyiztAiB CpDrEoFfGiHlIeJ,K LbMaNtOtPlQeRsS,T UrVoWoXmYsZ,0 1a2n3d4 5p6r7i8v9aatbec dmeefsgshaigjeksl mtnoogpeqtrhsetru.v".ponllPaintaerErstHours
         bruCiuRollerPaste.textColor = PonllyPalette.muted
         bruCiuRollerPaste.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
         bruCiuRollerPaste.textAlignment = .center
         bruCiuRollerPaste.numberOfLines = 0
-        let flckinkWallPaste = PonllyNeonButton("Sign In")
+        let flckinkWallPaste = PonllyNeonButton("Swixgynz AIBnC".ponllPaintaerErstHours)
         flckinkWallPaste.addTarget(self, action: #selector(flckinkTextureTrace), for: .touchUpInside)
         [bruCiuTunnelWall, bruCiuRollerPaste, flckinkWallPaste].forEach(ponllPasteBrush.addArrangedSubview)
         flckinkWallPaste.widthAnchor.constraint(equalTo: ponllPasteBrush.widthAnchor, multiplier: 0.82).isActive = true
@@ -153,7 +153,7 @@ final class PonllymuralKickntroller: UIViewController {
         aerErstPaperLayer.addSubview(flckinkMonoPrint)
 
         let aerErstColorPrint = UIButton(type: .system)
-        aerErstColorPrint.setTitle("Edit", for: .normal)
+        aerErstColorPrint.setTitle("EDdEiFtG".ponllPaintaerErstHours, for: .normal)
         aerErstColorPrint.setImage(UIImage(systemName: "pencil"), for: .normal)
         aerErstColorPrint.tintColor = PonllyPalette.pink
         aerErstColorPrint.setTitleColor(PonllyPalette.pink, for: .normal)
@@ -204,9 +204,9 @@ final class PonllymuralKickntroller: UIViewController {
         flckinkWeatheredPaper.layer.borderWidth = 1
         flckinkWeatheredPaper.layer.borderColor = PonllyPalette.line.cgColor
         let aerErstTornEdge = UIStackView(arrangedSubviews: [
-            aerErstMarkerFlicker("\(bruCiuPulpPaper.paintRun)", "WORKS", action: #selector(flckinkWallEcho)),
-            aerErstMarkerFlicker("\(bruCiuPulpPaper.dripTrail)", "FOLLOWERS", action: #selector(aerErstAerosolSignal)),
-            aerErstMarkerFlicker("\(bruCiuPulpPaper.inkBleed)", "FOLLOWING", action: #selector(ponllMuralQuest))
+            aerErstMarkerFlicker("\(bruCiuPulpPaper.paintRun)", "WHOIRJKKSL".ponllPaintaerErstHours, action: #selector(flckinkWallEcho)),
+            aerErstMarkerFlicker("\(bruCiuPulpPaper.dripTrail)", "FMONLOLPOQWRESRTSU".ponllPaintaerErstHours, action: #selector(aerErstAerosolSignal)),
+            aerErstMarkerFlicker("\(bruCiuPulpPaper.inkBleed)", "FVOWLXLYOZW0I1N2G3".ponllPaintaerErstHours, action: #selector(ponllMuralQuest))
         ])
         aerErstTornEdge.axis = .horizontal
         aerErstTornEdge.distribution = .fillEqually
@@ -230,7 +230,7 @@ final class PonllymuralKickntroller: UIViewController {
         flckinkWeatheredPaper.layer.borderColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 0.38).cgColor
         flckinkWeatheredPaper.translatesAutoresizingMaskIntoConstraints = false
 
-        let ponllRippedCorner = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        let ponllRippedCorner = UIImageView(image: UIImage(named: "streetMural"))
         ponllRippedCorner.contentMode = .scaleAspectFit
         ponllRippedCorner.translatesAutoresizingMaskIntoConstraints = false
         flckinkWeatheredPaper.addSubview(ponllRippedCorner)
@@ -242,13 +242,13 @@ final class PonllymuralKickntroller: UIViewController {
         bruCiuPasteWrinkle.translatesAutoresizingMaskIntoConstraints = false
         flckinkWeatheredPaper.addSubview(bruCiuPasteWrinkle)
         let flckinkAdhesiveLayer = UILabel()
-        flckinkAdhesiveLayer.text = "AVAILABLE COINS"
+        flckinkAdhesiveLayer.text = "A4V5A6I7L8A9BaLbEc dCeOfIgNhSi".ponllPaintaerErstHours
         flckinkAdhesiveLayer.textColor = PonllyPalette.muted
         flckinkAdhesiveLayer.font = PonllyFonts.muralForgepon(neonLab: 9)
         flckinkAdhesiveLayer.translatesAutoresizingMaskIntoConstraints = false
         flckinkWeatheredPaper.addSubview(flckinkAdhesiveLayer)
         let aerErstWallPeel = UIButton(type: .system)
-        aerErstWallPeel.setTitle("+ Recharge", for: .normal)
+        aerErstWallPeel.setTitle("+j kRlemcnhoaprqgres".ponllPaintaerErstHours, for: .normal)
         aerErstWallPeel.setTitleColor(.black, for: .normal)
         aerErstWallPeel.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
         aerErstWallPeel.backgroundColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 1)
@@ -313,7 +313,7 @@ final class PonllymuralKickntroller: UIViewController {
 
         let bruCiuPlasterDust = UILabel()
         bruCiuPlasterDust.text = flckinkBridgePillar
-        bruCiuPlasterDust.textColor = flckinkBridgePillar == "Delete Account" ? bruCiuBrickFacade : .white
+        bruCiuPlasterDust.textColor = flckinkBridgePillar == "Dteulvewtxey zAAcBcCoDuEnFtG".ponllPaintaerErstHours ? bruCiuBrickFacade : .white
         bruCiuPlasterDust.font = PonllyFonts.muralForgepon(neonLab: 17)
         bruCiuPlasterDust.isUserInteractionEnabled = false
         let flckinkRustStreak = UILabel()
@@ -401,7 +401,7 @@ final class PonllymuralKickntroller: UIViewController {
     private func bruCiuNeonFuse(_ value: Int) -> String {
         if value >= 10_000 {
             let ponllSidewalkEdge = Double(value) / 1_000
-            return String(format: "%.1fK", ponllSidewalkEdge)
+            return String(format: "%H.I1JfKKL".ponllPaintaerErstHours, ponllSidewalkEdge)
         }
         return "\(value)"
     }
@@ -465,27 +465,27 @@ final class PonllymuralKickntroller: UIViewController {
 
     @objc private func flckinkMarkerPath() {
         let bruCiuRoofLine = SmuralLeanController()
-        bruCiuRoofLine.title = "Terms Of Service"
+        bruCiuRoofLine.title = "TMeNrOmPsQ ROSfT USVeWrXvYiZc0e1".ponllPaintaerErstHours
         bruCiuRoofLine.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(bruCiuRoofLine, animated: true)
     }
 
     @objc private func aerErstChromeArc() {
         let bruCiuRoofLine = SmuralLeanController()
-        bruCiuRoofLine.title = "Privacy Policy"
+        bruCiuRoofLine.title = "P2r3i4v5a6c7y8 9Paoblcidceyf".ponllPaintaerErstHours
         bruCiuRoofLine.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(bruCiuRoofLine, animated: true)
     }
 
     @objc private func ponllNeonBend() {
-        ponllyShowThemeAlert(title: "Log Out", message: "Sign out of your Ponlly account on this device?", actionTitle: "Log Out", style: .bruCiuSilverSheen, showsCancel: true) {
+        ponllyShowThemeAlert(title: "Lgohgi jOkultm".ponllPaintaerErstHours, message: "Sniogpnq rosuttu vowfx yyzoAuBrC DPEoFnGlHlIyJ KaLcMcNoOuPnQtR SoTnU VtWhXiYsZ 0d1e2v3i4c5e6?7".ponllPaintaerErstHours, actionTitle: "L8o9ga bOcudte".ponllPaintaerErstHours, style: .bruCiuSilverSheen, showsCancel: true) {
             FlckinkMatteFinish.shared.bruCiuPasteBrush()
             self.flckinkNeonContrast()
         }
     }
 
     @objc private func bruCiuTextureKick() {
-        ponllyShowThemeAlert(title: "Delete Account", message: "This removes the current account from this device and signs you out.", actionTitle: "Delete", style: .ponllWhiteEdge, showsCancel: true) {
+        ponllyShowThemeAlert(title: "Dfeglheitjek lAmcncoopuqnrts".ponllPaintaerErstHours, message: "Tthuivsw xryezmAoBvCeDsE FtGhHeI JcKuLrMrNeOnPtQ RaScTcUoVuWnXtY Zf0r1o2m3 4t5h6i7s8 9daebvcidceef gahnidj kslimgnnosp qyrosut uovuwtx.y".ponllPaintaerErstHours, actionTitle: "DzeAlBeCtDeE".ponllPaintaerErstHours, style: .ponllWhiteEdge, showsCancel: true) {
             FlckinkMatteFinish.shared.flckinkRollerPaste()
             self.flckinkNeonContrast()
         }

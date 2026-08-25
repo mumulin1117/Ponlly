@@ -20,7 +20,7 @@ final class PNeonDripCard: UIControl {
         layer.masksToBounds = false
         translatesAutoresizingMaskIntoConstraints = false
 
-        let ponllFinalCoat = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        let ponllFinalCoat = UIImageView(image: UIImage(named: "streetMural"))
         ponllFinalCoat.contentMode = .scaleAspectFit
         ponllFinalCoat.isUserInteractionEnabled = false
         ponllFinalCoat.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +38,7 @@ final class PNeonDripCard: UIControl {
         addSubview(bruCiuClearCoat)
 
         let flckinkMatteFinish = UILabel()
-        flckinkMatteFinish.text = "Coins"
+        flckinkMatteFinish.text = "CGoHiInJsK".ponllPaintaerErstHours
         flckinkMatteFinish.textColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 1)
         flckinkMatteFinish.textAlignment = .center
         flckinkMatteFinish.font = PonllyFonts.muralForgepon(neonLab: 9)

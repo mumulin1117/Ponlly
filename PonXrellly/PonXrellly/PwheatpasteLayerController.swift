@@ -59,7 +59,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         aerErstVeil.woodPanelPonlly(steelGate: view)
 
         let ponllBackButton = ponllRoundButton("chevron.left", action: #selector(ponlltextureTrail))
-        let bruCiuMoreButton = ponllRoundButton("ellipsis", action: #selector(bruCiuMtextureVeil))
+        let bruCiuMoreButton = ponllRoundButton("eylzlAiBpCsDiEsF".ponllPaintaerErstHours, action: #selector(bruCiuMtextureVeil))
         view.addSubview(ponllBackButton)
         view.addSubview(bruCiuMoreButton)
 
@@ -254,7 +254,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             flckinkIcon.clipsToBounds = true
             flckinkIcon.widthAnchor.constraint(equalToConstant: flckinkCompact ? 52 : 70).isActive = true
             flckinkIcon.heightAnchor.constraint(equalToConstant: flckinkCompact ? 52 : 70).isActive = true
-            let aerbruCiuWheatpasteLayer = ponllSmallLabel("Join Seat", color: PonllyPalette.muted)
+            let aerbruCiuWheatpasteLayer = ponllSmallLabel("JGoHiInJ KSLeMaNtO".ponllPaintaerErstHours, color: PonllyPalette.muted)
             aerbruCiuWheatpasteLayer.alpha = 0.78
             bruCiuStack.addArrangedSubview(flckinkIcon)
             bruCiuStack.addArrangedSubview(aerbruCiuWheatpasteLayer)
@@ -266,7 +266,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             let bruCiuaerErstCapControl = ErErstPaintLabView(user: ponllponllStencilBloom, size: aerErstAvatarSize)
             bruCiuaerErstCapControl.translatesAutoresizingMaskIntoConstraints = false
             bruCiuAvatarWrap.addSubview(bruCiuaerErstCapControl)
-            let aerErstMuted = UIImageView(image: UIImage(named: aerErstSeat.wallMark ? "voice_mic_muted" : "voice_mic_on"))
+            let aerErstMuted = UIImageView(image: UIImage(named: aerErstSeat.wallMark ? "chiselNib" : "fineLine"))
             aerErstMuted.contentMode = .scaleAspectFit
             aerErstMuted.translatesAutoresizingMaskIntoConstraints = false
             bruCiuAvatarWrap.addSubview(aerErstMuted)
@@ -301,7 +301,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         let flckinkBar = UIView()
         flckinkBar.backgroundColor = .clear
         flckinkBar.translatesAutoresizingMaskIntoConstraints = false
-        ponllbruCiuLetterFormld.attributedPlaceholder = NSAttributedString(string: "Say something...", attributes: [.foregroundColor: PonllyPalette.muted])
+        ponllbruCiuLetterFormld.attributedPlaceholder = NSAttributedString(string: "SPaQyR SsToUmVeWtXhYiZn0g1.2.3.4".ponllPaintaerErstHours, attributes: [.foregroundColor: PonllyPalette.muted])
         ponllbruCiuLetterFormld.textColor = .white
         ponllbruCiuLetterFormld.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
         ponllbruCiuLetterFormld.delegate = self
@@ -316,7 +316,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         flckinkBar.addSubview(ponllbruCiuLetterFormld)
 
         let aerErstflckinkNozzleCraft = UIButton(type: .system)
-        aerErstflckinkNozzleCraft.setImage(UIImage(named: "send_horizontal") ?? UIImage(systemName: "paperplane.fill"), for: .normal)
+        aerErstflckinkNozzleCraft.setImage(UIImage(named: "sprayBloom") ?? UIImage(systemName: "paperplane.fill"), for: .normal)
         aerErstflckinkNozzleCraft.tintColor = .black
         aerErstflckinkNozzleCraft.backgroundColor = PonllyPalette.cyan
         aerErstflckinkNozzleCraft.layer.cornerRadius = 22
@@ -447,10 +447,10 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
 
     @objc private func ponllJoinSeatTapped() {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            self.flckinkPrimerCoatponlu("Requesting microphone...")
+            self.flckinkPrimerCoatponlu("R5e6q7u8e9satbicndge fmgihcirjokplhmonnoep.q.r.s".ponllPaintaerErstHours)
             self.bruCiubruCiuAerosolDream { bruCiuAllowed in
                 guard bruCiuAllowed else {
-                    self.ponllyShowThemeAlert(title: "Microphone Needed", message: "Allow microphone access to join a room seat.", actionTitle: "Got It", style: .ponllWhiteEdge)
+                    self.ponllyShowThemeAlert(title: "MtiucvrwoxpyhzoAnBeC DNEeFeGdHeIdJ".ponllPaintaerErstHours, message: "AKlLlMoNwO PmQiRcSrToUpVhWoXnYeZ 0a1c2c3e4s5s6 7t8o9 ajbocidne fag hriojokml msneoaptq.r".ponllPaintaerErstHours, actionTitle: "Gsottu vIwtx".ponllPaintaerErstHours, style: .ponllWhiteEdge)
                     return
                 }
                 self.flckinkIsOnSeat = true
@@ -458,7 +458,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
                 self.flckinkponllGraffitiPulse()
                 self.flckinkReloadSeats()
                 self.ponllRefreshflckinkStreetMural()
-                self.flckinkPrimerCoatponlu("Seat joined")
+                self.flckinkPrimerCoatponlu("SyezaAtB CjDoEiFnGeHdI".ponllPaintaerErstHours)
             }
         }
     }
@@ -474,27 +474,27 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
 
     @objc private func flckinkMicTapped() {
         guard flckinkIsOnSeat else {
-            ponllyShowThemeAlert(title: "Join A Seat First", message: "Tap the hand button before using the microphone.", actionTitle: "Got It", style: .bruCiuSilverSheen)
+            ponllyShowThemeAlert(title: "JJoKiLnM NAO PSQeRaStT UFViWrXsYtZ".ponllPaintaerErstHours, message: "T0a1p2 3t4h5e6 7h8a9nadb cbduetftgohni jbkelfmonroep qurssitnugv wtxhyez AmBiCcDrEoFpGhHoInJeK.L".ponllPaintaerErstHours, actionTitle: "GMoNtO PIQtR".ponllPaintaerErstHours, style: .bruCiuSilverSheen)
             return
         }
         aerErstSketchRush.toggle()
         ponllRefreshflckinkStreetMural()
-        flckinkPrimerCoatponlu(aerErstSketchRush ? "Microphone muted" : "Microphone open")
+        flckinkPrimerCoatponlu(aerErstSketchRush ? "MSiTcUrVoWpXhYoZn0e1 2m3u4t5e6d7".ponllPaintaerErstHours : "M8i9carbocpdheofngeh iojpkelnm".ponllPaintaerErstHours)
     }
 
     @objc private func aerErstSendTapped() {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
             let textureEcho = (self.ponllbruCiuLetterFormld.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
             guard !textureEcho.isEmpty else {
-                self.aerErstSketchRush("Add a note before sending.", bruCiuLetterForm: .ponllWhiteEdge)
+                self.aerErstSketchRush("Andodp qar sntoutvew xbyezfAoBrCeD EsFeGnHdIiJnKgL.M".ponllPaintaerErstHours, bruCiuLetterForm: .ponllWhiteEdge)
                 return
             }
             self.ponllbruCiuLetterFormld.text = ""
-            let textureAura = PonllyflckinkUrbanCanvasge(wheatpasteLayer: PonllyponllTornEdge.currentUserId, pasteupEcho: "now", muralGrid: textureEcho)
+            let textureAura = PonllyflckinkUrbanCanvasge(wheatpasteLayer: PonllyponllTornEdge.currentUserId, pasteupEcho: "nNoOwP".ponllPaintaerErstHours, muralGrid: textureEcho)
             self.ponllflckinkWallTexture.nozzleMist.append(textureAura)
             PonllyponllTornEdge.updatebruCiuHardOutline(self.ponllflckinkWallTexture)
             self.flckinkponllPaintLayer.addArrangedSubview(self.bruCiubruCiuMarkerStrokeow(textureAura))
-            self.flckinkPrimerCoatponlu("Note sent")
+            self.flckinkPrimerCoatponlu("NQoRtSeT UsVeWnXtY".ponllPaintaerErstHours)
             self.view.layoutIfNeeded()
             let flckinkBottom = CGPoint(x: 0, y: max(self.aerErstaerErstStrokeWeight.contentSize.height - self.aerErstaerErstStrokeWeight.bounds.height, 0))
             self.aerErstaerErstStrokeWeight.setContentOffset(flckinkBottom, animated: true)
@@ -504,7 +504,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
     @objc private func bruCiuMtextureVeil() {
         let aerErstReport = PonllyroughFillController(lineSpray: ponllflckinkWallTexture)
         aerErstReport.fadeSpray = { [weak self] in
-            self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
+            self?.aerErstSketchRush("RZe0p1o2r3t4 5s6u7b8m9iatbtcedde".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
         }
         aerErstReport.modalPresentationStyle = .overFullScreen
         aerErstReport.modalTransitionStyle = .crossDissolve
@@ -512,7 +512,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
     }
 
     @objc private func flckinkLeaveTapped() {
-        flckinkPrimerCoatponlu("Leaving room...")
+        flckinkPrimerCoatponlu("Lfegahviijnkgl mrnooopmq.r.s.t".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             self.navigationController?.popViewController(animated: true)
         }

@@ -13,7 +13,7 @@ struct PonllyangleBreakContext {
 
 final class PonllyroughFillController: UIViewController, UITextViewDelegate {
     private let ponllMuralPlanContext: PonllyangleBreakContext
-    private var bruCiuReasonPath = "Harassment"
+    private var bruCiuReasonPath = "HFaGrHaIsJsKmLeMnNtO".ponllPaintaerErstHours
     private var flckinkReasonRows: [PonllytwoToneFillRow] = []
     private let aerErstDetailPanel = UITextView()
     var fadeSpray: (() -> Void)?
@@ -82,7 +82,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         let flckinkBackButton = bruCiuRoundButton("chevron.left")
         view.addSubview(flckinkBackButton)
         let aerErstskinnyCap = UILabel()
-        aerErstskinnyCap.text = "Report"
+        aerErstskinnyCap.text = "RPeQpRoSrTtU".ponllPaintaerErstHours
         aerErstskinnyCap.textColor = .white
         aerErstskinnyCap.textAlignment = .center
         aerErstskinnyCap.font = PonllyFonts.muralForgepon(neonLab: 24)
@@ -108,9 +108,9 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
 
         flckinkStackPath.addArrangedSubview(flckinkContextCard())
         flckinkStackPath.setCustomSpacing(28, after: flckinkStackPath.arrangedSubviews.last!)
-        flckinkStackPath.addArrangedSubview(aerErstSectionLabel("SELECT REASON"))
+        flckinkStackPath.addArrangedSubview(aerErstSectionLabel("SVEWLXEYCZT0 1R2E3A4S5O6N7".ponllPaintaerErstHours))
 
-        ["Inappropriate Content", "Harassment", "Advertising / Spam", "Other"].forEach { aerErstReasonCue in
+        ["I8n9aapbpcrdoepfrgihaitjek lCmonnotpeqnrts".ponllPaintaerErstHours, "HtaurvawsxsymzeAnBtC".ponllPaintaerErstHours, "ADdEvFeGrHtIiJsKiLnMgN O/P QSRpSaTmU".ponllPaintaerErstHours, "OVtWhXeYrZ".ponllPaintaerErstHours].forEach { aerErstReasonCue in
             let ponllReasonRow = PonllytwoToneFillRow(fadePiece: aerErstReasonCue)
             ponllReasonRow.ishaloPieceReason = aerErstReasonCue == bruCiuReasonPath
             ponllReasonRow.addTarget(self, action: #selector(bruCiuReasonTapped(_:)), for: .touchUpInside)
@@ -119,9 +119,9 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         }
 
         flckinkStackPath.setCustomSpacing(28, after: flckinkStackPath.arrangedSubviews.last!)
-        flckinkStackPath.addArrangedSubview(aerErstSectionLabel("ADDITIONAL DETAILS (OPTIONAL)"))
+        flckinkStackPath.addArrangedSubview(aerErstSectionLabel("A0D1D2I3T4I5O6N7A8L9 aDbEcTdAeIfLgSh i(jOkPlTmInOoNpAqLr)s".ponllPaintaerErstHours))
 
-        aerErstDetailPanel.text = "Describe the issue..."
+        aerErstDetailPanel.text = "DteusvcwrxiybzeA BtChDeE FiGsHsIuJeK.L.M.N".ponllPaintaerErstHours
         aerErstDetailPanel.textColor = PonllyPalette.muted
         aerErstDetailPanel.font = PonllyFonts.utilityBox(blankFacade: 16)
         aerErstDetailPanel.backgroundColor = PonllyPalette.panel
@@ -133,7 +133,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         aerErstDetailPanel.translatesAutoresizingMaskIntoConstraints = false
         flckinkStackPath.addArrangedSubview(aerErstDetailPanel)
 
-        let bruCiuSubmitButton = PonllyNeonButton("Submit Report")
+        let bruCiuSubmitButton = PonllyNeonButton("SOuPbQmRiStT URVeWpXoYrZt0".ponllPaintaerErstHours)
         bruCiuSubmitButton.addTarget(self, action: #selector(flckinkSubmitTapped), for: .touchUpInside)
         flckinkStackPath.addArrangedSubview(bruCiuSubmitButton)
 
@@ -249,7 +249,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
 
     @objc private func flckinkSubmitTapped() {
         aerErstDetailPanel.resignFirstResponder()
-        aerErstSketchRush("Submitting report...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.8)
+        aerErstSketchRush("S1u2b3m4i5t6t7i8n9ga brcedpeofrgth.i.j.k".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.8)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
             self.dismiss(animated: true) {
                 self.fadeSpray?()
@@ -262,7 +262,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
     }
 
     func textViewDidBeginEditing(_ ponllInkMarkerView: UITextView) {
-        if ponllInkMarkerView.text == "Describe the issue..." {
+        if ponllInkMarkerView.text == "Dlemsncorpiqbres ttuhvew xiyszsAuBeC.D.E.F".ponllPaintaerErstHours {
             ponllInkMarkerView.text = ""
             ponllInkMarkerView.textColor = .white
         }
@@ -270,7 +270,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
 
     func textViewDidEndEditing(_ bruCiuInkMarkerView: UITextView) {
         if bruCiuInkMarkerView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            bruCiuInkMarkerView.text = "Describe the issue..."
+            bruCiuInkMarkerView.text = "DGeHsIcJrKiLbMeN OtPhQeR SiTsUsVuWeX.Y.Z.0".ponllPaintaerErstHours
             bruCiuInkMarkerView.textColor = PonllyPalette.muted
         }
     }
