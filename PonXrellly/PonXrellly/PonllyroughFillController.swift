@@ -5,47 +5,47 @@ import StoreKit
 import UIKit
 
 struct PonllyangleBreakContext {
-    let title: String
-    let subtitle: String?
-    let imageName: String?
-    let fallbackColors: [UIColor]
+    let ponllLetterForm: String
+    let bruCiuShadowLayer: String?
+    let flckinkWallTexture: String?
+    let aerErstColorRack: [UIColor]
 }
 
 final class PonllyroughFillController: UIViewController, UITextViewDelegate {
-    private let context: PonllyangleBreakContext
-    private var selectedReason = "Harassment"
-    private var reasonRows: [PonllytwoToneFillRow] = []
-    private let detailView = UITextView()
-    var onReportSubmitted: (() -> Void)?
+    private let ponllMuralPlanContext: PonllyangleBreakContext
+    private var bruCiuReasonPath = "Harassment"
+    private var flckinkReasonRows: [PonllytwoToneFillRow] = []
+    private let aerErstDetailPanel = UITextView()
+    var fadeSpray: (() -> Void)?
 
-    init(room: PonllyVoiceRoom) {
-        let host = PonllyDataCenter.user(room.hostId)
-        self.context = PonllyangleBreakContext(
-            title: room.title,
-            subtitle: "Hosted by \(host.name)",
-            imageName: room.backgroundImageName,
-            fallbackColors: [room.accent, PonllyPalette.panel]
+    init(lineSpray: PonllyaerErstWeatheredPaperm) {
+        let capRack = PonllyponllTornEdge.flckinkChippedPaint(lineSpray.gradientFill)
+        self.ponllMuralPlanContext = PonllyangleBreakContext(
+            ponllLetterForm: lineSpray.nozzleCraft,
+            bruCiuShadowLayer: "Hosted by \(capRack.aerosolDream)",
+            flckinkWallTexture: lineSpray.aerosolHaze,
+            aerErstColorRack: [lineSpray.whitePop, PonllyPalette.panel]
         )
         super.init(nibName: nil, bundle: nil)
     }
 
-    init(battle: PonllyBattle) {
-        self.context = PonllyangleBreakContext(
-            title: battle.title,
-            subtitle: battle.theme,
-            imageName: battle.artworkA.imageName,
-            fallbackColors: battle.artworkA.colors
+    init(blackOutline: PonllyBattle) {
+        self.ponllMuralPlanContext = PonllyangleBreakContext(
+            ponllLetterForm: blackOutline.nozzleCraft,
+            bruCiuShadowLayer: blackOutline.chromeFill,
+            flckinkWallTexture: blackOutline.neonDrip.stencilBloom,
+            aerErstColorRack: blackOutline.neonDrip.inkDrift
         )
         super.init(nibName: nil, bundle: nil)
     }
 
-    init(video: PonllyVideo) {
-        let author = PonllyDataCenter.user(video.authorId)
-        self.context = PonllyangleBreakContext(
-            title: video.title,
-            subtitle: "By \(author.name)",
-            imageName: nil,
-            fallbackColors: video.colors
+    init(solidMarker: PonllyVideo) {
+        let author = PonllyponllTornEdge.flckinkChippedPaint(solidMarker.letterForm)
+        self.ponllMuralPlanContext = PonllyangleBreakContext(
+            ponllLetterForm: solidMarker.nozzleCraft,
+            bruCiuShadowLayer: "By \(author.aerosolDream)",
+            flckinkWallTexture: nil,
+            aerErstColorRack: solidMarker.inkDrift
         )
         super.init(nibName: nil, bundle: nil)
     }
@@ -56,235 +56,235 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        ponllPaintPlansolidFill()
+        NotificationCenter.default.addObserver(self, selector: #selector(ponllglossFinishShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(bruCiumetallicSprayde(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    private func setup() {
+    private func ponllPaintPlansolidFill() {
         view.backgroundColor = PonllyPalette.background
 
-        let background = UIImageView(image: context.imageName.flatMap(UIImage.init(named:)))
-        background.contentMode = .scaleAspectFill
-        background.alpha = background.image == nil ? 0 : 0.2
-        background.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(background)
-        background.pinToEdges(of: view)
+        let ponllNightWall = UIImageView(image: ponllMuralPlanContext.flckinkWallTexture.flatMap(UIImage.init(named:)))
+        ponllNightWall.contentMode = .scaleAspectFill
+        ponllNightWall.alpha = ponllNightWall.image == nil ? 0 : 0.2
+        ponllNightWall.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllNightWall)
+        ponllNightWall.woodPanelPonlly(steelGate: view)
 
-        let veil = PonllyGradientView(
-            colors: [UIColor.black.withAlphaComponent(0.2), PonllyPalette.background.withAlphaComponent(0.98)],
-            start: CGPoint(x: 0.5, y: 0),
-            end: CGPoint(x: 0.5, y: 1)
+        let bruCiuLayerBlend = PonllyponllCyanGlowView(
+            bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.2), PonllyPalette.background.withAlphaComponent(0.98)],
+            CGPoint(x: 0.5, y: 0),
+            CGPoint(x: 0.5, y: 1)
         )
-        view.addSubview(veil)
-        veil.pinToEdges(of: view)
+        view.addSubview(bruCiuLayerBlend)
+        bruCiuLayerBlend.woodPanelPonlly(steelGate: view)
 
-        let back = roundButton(symbol: "chevron.left")
-        view.addSubview(back)
-        let title = UILabel()
-        title.text = "Report"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 24)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(title)
+        let flckinkBackButton = bruCiuRoundButton("chevron.left")
+        view.addSubview(flckinkBackButton)
+        let aerErstskinnyCap = UILabel()
+        aerErstskinnyCap.text = "Report"
+        aerErstskinnyCap.textColor = .white
+        aerErstskinnyCap.textAlignment = .center
+        aerErstskinnyCap.font = PonllyFonts.muralForgepon(neonLab: 24)
+        aerErstskinnyCap.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstskinnyCap)
 
-        let divider = UIView()
-        divider.backgroundColor = PonllyPalette.line
-        divider.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(divider)
+        let ponllLineMap = UIView()
+        ponllLineMap.backgroundColor = PonllyPalette.line
+        ponllLineMap.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllLineMap)
 
-        let scrollView = UIScrollView()
-        scrollView.keyboardDismissMode = .interactive
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+        let bruCiuScrollFrame = UIScrollView()
+        bruCiuScrollFrame.keyboardDismissMode = .interactive
+        bruCiuScrollFrame.alwaysBounceVertical = true
+        bruCiuScrollFrame.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuScrollFrame)
 
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 16
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+        let flckinkStackPath = UIStackView()
+        flckinkStackPath.axis = .vertical
+        flckinkStackPath.spacing = 16
+        flckinkStackPath.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuScrollFrame.addSubview(flckinkStackPath)
 
-        stack.addArrangedSubview(contextCard())
-        stack.setCustomSpacing(28, after: stack.arrangedSubviews.last!)
-        stack.addArrangedSubview(sectionLabel("SELECT REASON"))
+        flckinkStackPath.addArrangedSubview(flckinkContextCard())
+        flckinkStackPath.setCustomSpacing(28, after: flckinkStackPath.arrangedSubviews.last!)
+        flckinkStackPath.addArrangedSubview(aerErstSectionLabel("SELECT REASON"))
 
-        ["Inappropriate Content", "Harassment", "Advertising / Spam", "Other"].forEach { reason in
-            let row = PonllytwoToneFillRow(reason: reason)
-            row.isSelectedReason = reason == selectedReason
-            row.addTarget(self, action: #selector(reasonTapped(_:)), for: .touchUpInside)
-            reasonRows.append(row)
-            stack.addArrangedSubview(row)
+        ["Inappropriate Content", "Harassment", "Advertising / Spam", "Other"].forEach { aerErstReasonCue in
+            let ponllReasonRow = PonllytwoToneFillRow(fadePiece: aerErstReasonCue)
+            ponllReasonRow.ishaloPieceReason = aerErstReasonCue == bruCiuReasonPath
+            ponllReasonRow.addTarget(self, action: #selector(bruCiuReasonTapped(_:)), for: .touchUpInside)
+            flckinkReasonRows.append(ponllReasonRow)
+            flckinkStackPath.addArrangedSubview(ponllReasonRow)
         }
 
-        stack.setCustomSpacing(28, after: stack.arrangedSubviews.last!)
-        stack.addArrangedSubview(sectionLabel("ADDITIONAL DETAILS (OPTIONAL)"))
+        flckinkStackPath.setCustomSpacing(28, after: flckinkStackPath.arrangedSubviews.last!)
+        flckinkStackPath.addArrangedSubview(aerErstSectionLabel("ADDITIONAL DETAILS (OPTIONAL)"))
 
-        detailView.text = "Describe the issue..."
-        detailView.textColor = PonllyPalette.muted
-        detailView.font = PonllyFonts.body(size: 16)
-        detailView.backgroundColor = PonllyPalette.panel
-        detailView.layer.cornerRadius = 16
-        detailView.layer.borderWidth = 1
-        detailView.layer.borderColor = PonllyPalette.line.cgColor
-        detailView.textContainerInset = UIEdgeInsets(top: 16, left: 14, bottom: 16, right: 14)
-        detailView.delegate = self
-        detailView.translatesAutoresizingMaskIntoConstraints = false
-        stack.addArrangedSubview(detailView)
+        aerErstDetailPanel.text = "Describe the issue..."
+        aerErstDetailPanel.textColor = PonllyPalette.muted
+        aerErstDetailPanel.font = PonllyFonts.utilityBox(blankFacade: 16)
+        aerErstDetailPanel.backgroundColor = PonllyPalette.panel
+        aerErstDetailPanel.layer.cornerRadius = 16
+        aerErstDetailPanel.layer.borderWidth = 1
+        aerErstDetailPanel.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstDetailPanel.textContainerInset = UIEdgeInsets(top: 16, left: 14, bottom: 16, right: 14)
+        aerErstDetailPanel.delegate = self
+        aerErstDetailPanel.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStackPath.addArrangedSubview(aerErstDetailPanel)
 
-        let submit = PonllyNeonButton(title: "Submit Report")
-        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
-        stack.addArrangedSubview(submit)
+        let bruCiuSubmitButton = PonllyNeonButton("Submit Report")
+        bruCiuSubmitButton.addTarget(self, action: #selector(flckinkSubmitTapped), for: .touchUpInside)
+        flckinkStackPath.addArrangedSubview(bruCiuSubmitButton)
 
         NSLayoutConstraint.activate([
-            back.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            back.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
-            back.widthAnchor.constraint(equalToConstant: 56),
-            back.heightAnchor.constraint(equalToConstant: 56),
-            title.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            divider.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            divider.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            divider.topAnchor.constraint(equalTo: back.bottomAnchor, constant: 34),
-            divider.heightAnchor.constraint(equalToConstant: 1),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: divider.bottomAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 26),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -34),
-            detailView.heightAnchor.constraint(equalToConstant: 116),
-            submit.heightAnchor.constraint(equalToConstant: 58)
+            flckinkBackButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            flckinkBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
+            flckinkBackButton.widthAnchor.constraint(equalToConstant: 56),
+            flckinkBackButton.heightAnchor.constraint(equalToConstant: 56),
+            aerErstskinnyCap.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            aerErstskinnyCap.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
+            ponllLineMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            ponllLineMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ponllLineMap.topAnchor.constraint(equalTo: flckinkBackButton.bottomAnchor, constant: 34),
+            ponllLineMap.heightAnchor.constraint(equalToConstant: 1),
+            bruCiuScrollFrame.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            bruCiuScrollFrame.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bruCiuScrollFrame.topAnchor.constraint(equalTo: ponllLineMap.bottomAnchor),
+            bruCiuScrollFrame.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkStackPath.leadingAnchor.constraint(equalTo: bruCiuScrollFrame.frameLayoutGuide.leadingAnchor, constant: 20),
+            flckinkStackPath.trailingAnchor.constraint(equalTo: bruCiuScrollFrame.frameLayoutGuide.trailingAnchor, constant: -20),
+            flckinkStackPath.topAnchor.constraint(equalTo: bruCiuScrollFrame.contentLayoutGuide.topAnchor, constant: 26),
+            flckinkStackPath.bottomAnchor.constraint(equalTo: bruCiuScrollFrame.contentLayoutGuide.bottomAnchor, constant: -34),
+            aerErstDetailPanel.heightAnchor.constraint(equalToConstant: 116),
+            bruCiuSubmitButton.heightAnchor.constraint(equalToConstant: 58)
         ])
     }
 
-    private func roundButton(symbol: String) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: symbol), for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        button.layer.cornerRadius = 28
-        button.layer.borderWidth = 1.2
-        button.layer.borderColor = PonllyPalette.line.cgColor
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        return button
+    private func bruCiuRoundButton(_ ponllStreetGlyph: String) -> UIButton {
+        let flckinkButtonFrame = UIButton(type: .system)
+        flckinkButtonFrame.setImage(UIImage(systemName: ponllStreetGlyph), for: .normal)
+        flckinkButtonFrame.tintColor = .white
+        flckinkButtonFrame.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        flckinkButtonFrame.layer.cornerRadius = 28
+        flckinkButtonFrame.layer.borderWidth = 1.2
+        flckinkButtonFrame.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkButtonFrame.translatesAutoresizingMaskIntoConstraints = false
+        flckinkButtonFrame.addTarget(self, action: #selector(aerErstBackTapped), for: .touchUpInside)
+        return flckinkButtonFrame
     }
 
-    private func contextCard() -> UIView {
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel
-        card.layer.cornerRadius = 20
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-        card.translatesAutoresizingMaskIntoConstraints = false
+    private func flckinkContextCard() -> UIView {
+        let aerErstpressureFlow = UIView()
+        aerErstpressureFlow.backgroundColor = PonllyPalette.panel
+        aerErstpressureFlow.layer.cornerRadius = 20
+        aerErstpressureFlow.layer.borderWidth = 1
+        aerErstpressureFlow.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstpressureFlow.translatesAutoresizingMaskIntoConstraints = false
 
-        let thumb = UIView()
-        thumb.layer.cornerRadius = 28
-        thumb.clipsToBounds = true
-        thumb.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(thumb)
-        let gradient = PonllyGradientView(colors: context.fallbackColors)
-        thumb.addSubview(gradient)
-        gradient.pinToEdges(of: thumb)
-        if let imageName = context.imageName, let image = UIImage(named: imageName) {
-            let imageView = UIImageView(image: image)
-            imageView.contentMode = .scaleAspectFill
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            thumb.addSubview(imageView)
-            imageView.pinToEdges(of: thumb)
+        let ponlldotSpray = UIView()
+        ponlldotSpray.layer.cornerRadius = 28
+        ponlldotSpray.clipsToBounds = true
+        ponlldotSpray.translatesAutoresizingMaskIntoConstraints = false
+        aerErstpressureFlow.addSubview(ponlldotSpray)
+        let bruCiuGradientFill = PonllyponllCyanGlowView(bruCiuDripMarker: ponllMuralPlanContext.aerErstColorRack)
+        ponlldotSpray.addSubview(bruCiuGradientFill)
+        bruCiuGradientFill.woodPanelPonlly(steelGate: ponlldotSpray)
+        if let flckinkImageName = ponllMuralPlanContext.flckinkWallTexture, let aerErstImageLayer = UIImage(named: flckinkImageName) {
+            let ponllImageFrame = UIImageView(image: aerErstImageLayer)
+            ponllImageFrame.contentMode = .scaleAspectFill
+            ponllImageFrame.translatesAutoresizingMaskIntoConstraints = false
+            ponlldotSpray.addSubview(ponllImageFrame)
+            ponllImageFrame.woodPanelPonlly(steelGate: ponlldotSpray)
         }
 
-        let name = UILabel()
-        name.text = context.title
-        name.textColor = .white
-        name.font = PonllyFonts.display(size: 16)
-        name.numberOfLines = 2
-        name.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(name)
+        let bruCiufadeSpray = UILabel()
+        bruCiufadeSpray.text = ponllMuralPlanContext.ponllLetterForm
+        bruCiufadeSpray.textColor = .white
+        bruCiufadeSpray.font = PonllyFonts.muralForgepon(neonLab: 16)
+        bruCiufadeSpray.numberOfLines = 2
+        bruCiufadeSpray.translatesAutoresizingMaskIntoConstraints = false
+        aerErstpressureFlow.addSubview(bruCiufadeSpray)
 
-        let subtitle = UILabel()
-        subtitle.text = context.subtitle
-        subtitle.textColor = PonllyPalette.muted
-        subtitle.font = PonllyFonts.body(size: 14, weight: .medium)
-        subtitle.numberOfLines = 1
-        subtitle.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(subtitle)
+        let flckinknozzleSet = UILabel()
+        flckinknozzleSet.text = ponllMuralPlanContext.bruCiuShadowLayer
+        flckinknozzleSet.textColor = PonllyPalette.muted
+        flckinknozzleSet.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
+        flckinknozzleSet.numberOfLines = 1
+        flckinknozzleSet.translatesAutoresizingMaskIntoConstraints = false
+        aerErstpressureFlow.addSubview(flckinknozzleSet)
 
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 92),
-            thumb.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 18),
-            thumb.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            thumb.widthAnchor.constraint(equalToConstant: 56),
-            thumb.heightAnchor.constraint(equalToConstant: 56),
-            name.leadingAnchor.constraint(equalTo: thumb.trailingAnchor, constant: 14),
-            name.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -18),
-            name.topAnchor.constraint(equalTo: card.topAnchor, constant: 22),
-            subtitle.leadingAnchor.constraint(equalTo: name.leadingAnchor),
-            subtitle.trailingAnchor.constraint(equalTo: name.trailingAnchor),
-            subtitle.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 6)
+            aerErstpressureFlow.heightAnchor.constraint(equalToConstant: 92),
+            ponlldotSpray.leadingAnchor.constraint(equalTo: aerErstpressureFlow.leadingAnchor, constant: 18),
+            ponlldotSpray.centerYAnchor.constraint(equalTo: aerErstpressureFlow.centerYAnchor),
+            ponlldotSpray.widthAnchor.constraint(equalToConstant: 56),
+            ponlldotSpray.heightAnchor.constraint(equalToConstant: 56),
+            bruCiufadeSpray.leadingAnchor.constraint(equalTo: ponlldotSpray.trailingAnchor, constant: 14),
+            bruCiufadeSpray.trailingAnchor.constraint(equalTo: aerErstpressureFlow.trailingAnchor, constant: -18),
+            bruCiufadeSpray.topAnchor.constraint(equalTo: aerErstpressureFlow.topAnchor, constant: 22),
+            flckinknozzleSet.leadingAnchor.constraint(equalTo: bruCiufadeSpray.leadingAnchor),
+            flckinknozzleSet.trailingAnchor.constraint(equalTo: bruCiufadeSpray.trailingAnchor),
+            flckinknozzleSet.topAnchor.constraint(equalTo: bruCiufadeSpray.bottomAnchor, constant: 6)
         ])
-        return card
+        return aerErstpressureFlow
     }
 
-    private func sectionLabel(_ text: String) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.display(size: 13)
-        return label
+    private func aerErstSectionLabel(_ ponllLabelText: String) -> UILabel {
+        let bruCiuLabelMark = UILabel()
+        bruCiuLabelMark.text = ponllLabelText
+        bruCiuLabelMark.textColor = PonllyPalette.muted
+        bruCiuLabelMark.font = PonllyFonts.muralForgepon(neonLab: 13)
+        return bruCiuLabelMark
     }
 
-    private func refreshReasons() {
-        reasonRows.forEach { $0.isSelectedReason = $0.reason == selectedReason }
+    private func ponllpaintCanRows() {
+        flckinkReasonRows.forEach { $0.ishaloPieceReason = $0.grimePiece == bruCiuReasonPath }
     }
 
-    @objc private func reasonTapped(_ sender: PonllytwoToneFillRow) {
-        selectedReason = sender.reason
-        refreshReasons()
+    @objc private func bruCiuReasonTapped(_ ponllReasonSender: PonllytwoToneFillRow) {
+        bruCiuReasonPath = ponllReasonSender.grimePiece
+        ponllpaintCanRows()
     }
 
-    @objc private func submitTapped() {
-        detailView.resignFirstResponder()
-        ponllyShowNotice("Submitting report...", style: .loading, autoDismissAfter: 0.8)
+    @objc private func flckinkSubmitTapped() {
+        aerErstDetailPanel.resignFirstResponder()
+        aerErstSketchRush("Submitting report...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.8)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
             self.dismiss(animated: true) {
-                self.onReportSubmitted?()
+                self.fadeSpray?()
             }
         }
     }
 
-    @objc private func backTapped() {
+    @objc private func aerErstBackTapped() {
         dismiss(animated: true)
     }
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Describe the issue..." {
-            textView.text = ""
-            textView.textColor = .white
+    func textViewDidBeginEditing(_ ponllInkMarkerView: UITextView) {
+        if ponllInkMarkerView.text == "Describe the issue..." {
+            ponllInkMarkerView.text = ""
+            ponllInkMarkerView.textColor = .white
         }
     }
 
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = "Describe the issue..."
-            textView.textColor = PonllyPalette.muted
+    func textViewDidEndEditing(_ bruCiuInkMarkerView: UITextView) {
+        if bruCiuInkMarkerView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            bruCiuInkMarkerView.text = "Describe the issue..."
+            bruCiuInkMarkerView.textColor = PonllyPalette.muted
         }
     }
 
-    @objc private func keyboardWillShow(_ note: Notification) {
-        guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
-              let scrollView = view.subviews.compactMap({ $0 as? UIScrollView }).first else { return }
-        scrollView.contentInset.bottom = frame.height
-        scrollView.verticalScrollIndicatorInsets.bottom = frame.height
+    @objc private func ponllglossFinishShow(_ flckinkKeyboardNote: Notification) {
+        guard let aerErstKeyboardFrame = flckinkKeyboardNote.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+              let ponllScrollFrame = view.subviews.compactMap({ $0 as? UIScrollView }).first else { return }
+        ponllScrollFrame.contentInset.bottom = aerErstKeyboardFrame.height
+        ponllScrollFrame.verticalScrollIndicatorInsets.bottom = aerErstKeyboardFrame.height
     }
 
-    @objc private func keyboardWillHide(_ note: Notification) {
-        guard let scrollView = view.subviews.compactMap({ $0 as? UIScrollView }).first else { return }
-        scrollView.contentInset.bottom = 0
-        scrollView.verticalScrollIndicatorInsets.bottom = 0
+    @objc private func bruCiumetallicSprayde(_ flckinkKeyboardNote: Notification) {
+        guard let aerErstScrollFrame = view.subviews.compactMap({ $0 as? UIScrollView }).first else { return }
+        aerErstScrollFrame.contentInset.bottom = 0
+        aerErstScrollFrame.verticalScrollIndicatorInsets.bottom = 0
     }
 }

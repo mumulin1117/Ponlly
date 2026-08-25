@@ -1,275 +1,275 @@
 import UIKit
 
 enum PonllyFonts {
-    static func themeFont(size: CGFloat = 14) -> UIFont {
-        UIFont(name: "Unbounded-ExtraBold", size: size) ?? UIFont.systemFont(ofSize: size, weight: .black)
+    static func graffitiForge(aerosolForge: CGFloat = 14) -> UIFont {
+        UIFont(name: "Unbounded-ExtraBold", size: aerosolForge) ?? UIFont.systemFont(ofSize: aerosolForge, weight: .black)
     }
 
-    static func display(size: CGFloat, weight: UIFont.Weight = .black) -> UIFont {
-        UIFont(name: "Unbounded-ExtraBold", size: size) ?? UIFont.systemFont(ofSize: size, weight: weight)
+    static func muralForgepon(neonLab: CGFloat, shadowPlan: UIFont.Weight = .black) -> UIFont {
+        UIFont(name: "Unbounded-ExtraBold", size: neonLab) ?? UIFont.systemFont(ofSize: neonLab, weight: shadowPlan)
     }
 
-    static func body(size: CGFloat, weight: UIFont.Weight = .regular) -> UIFont {
-        UIFont(name: "Geist", size: size) ?? UIFont.systemFont(ofSize: size, weight: weight)
+    static func utilityBox(blankFacade: CGFloat, aerosolMuse: UIFont.Weight = .regular) -> UIFont {
+        UIFont(name: "Geist", size: blankFacade) ?? UIFont.systemFont(ofSize: blankFacade, weight: aerosolMuse)
     }
 
-    static func mono(size: CGFloat, weight: UIFont.Weight = .bold) -> UIFont {
-        UIFont(name: "GeistMono-Bold", size: size) ?? UIFont.monospacedSystemFont(ofSize: size, weight: weight)
+    static func steelGate(rollingShutter: CGFloat, shadowPlan: UIFont.Weight = .bold) -> UIFont {
+        UIFont(name: "GeistMono-Bold", size: rollingShutter) ?? UIFont.monospacedSystemFont(ofSize: rollingShutter, weight: shadowPlan)
     }
 }
 
 extension UIView {
-    func pinToEdges(of view: UIView, insets: UIEdgeInsets = .zero) {
+    func woodPanelPonlly(steelGate ponllChromeShine: UIView, bruCiuClearCoat bruCiuColorFade: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: insets.left),
-            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -insets.right),
-            topAnchor.constraint(equalTo: view.topAnchor, constant: insets.top),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -insets.bottom)
+            leadingAnchor.constraint(equalTo: ponllChromeShine.leadingAnchor, constant: bruCiuColorFade.left),
+            trailingAnchor.constraint(equalTo: ponllChromeShine.trailingAnchor, constant: -bruCiuColorFade.right),
+            topAnchor.constraint(equalTo: ponllChromeShine.topAnchor, constant: bruCiuColorFade.top),
+            bottomAnchor.constraint(equalTo: ponllChromeShine.bottomAnchor, constant: -bruCiuColorFade.bottom)
         ])
     }
 }
 
 extension UIViewController {
     enum PonllyNoticeStyle {
-        case loading
-        case success
-        case failure
-        case info
+        case bruCiuEdgeSnap
+        case flckinkSplitFill
+        case ponllWhiteEdge
+        case bruCiuSilverSheen
 
-        var accent: UIColor {
+        var flckinkGradientFill: UIColor {
             switch self {
-            case .loading, .info: return PonllyPalette.cyan
-            case .success: return PonllyPalette.green
-            case .failure: return PonllyPalette.pink
+            case .bruCiuEdgeSnap, .bruCiuSilverSheen: return PonllyPalette.cyan
+            case .flckinkSplitFill: return PonllyPalette.green
+            case .ponllWhiteEdge: return PonllyPalette.pink
             }
         }
 
-        var iconName: String {
+        var aerErstPaintCloud: String {
             switch self {
-            case .loading: return "sparkles"
-            case .success: return "checkmark"
-            case .failure: return "xmark"
-            case .info: return "bell"
+            case .bruCiuEdgeSnap: return "sparkles"
+            case .flckinkSplitFill: return "checkmark"
+            case .ponllWhiteEdge: return "xmark"
+            case .bruCiuSilverSheen: return "bell"
             }
         }
     }
 
-    func ponllyShowToast(_ message: String) {
-        let lowercased = message.lowercased()
-        let style: PonllyNoticeStyle
-        if lowercased.contains("ing") || lowercased.contains("connecting") || lowercased.contains("preparing") || lowercased.contains("sending") {
-            style = .loading
-        } else if lowercased.contains("failed") || lowercased.contains("wrong") || lowercased.contains("不存在") || lowercased.contains("错误") || lowercased.contains("please") {
-            style = .failure
-        } else if lowercased.contains("ready") || lowercased.contains("counted") || lowercased.contains("added") || lowercased.contains("submitted") || lowercased.contains("published") || lowercased.contains("updated") {
-            style = .success
+    func flckinkPrimerCoatponlu(_ ponllSprayHalo: String) {
+        let bruCiuAerosolHaze = ponllSprayHalo.lowercased()
+        let flckinkNozzleMist: PonllyNoticeStyle
+        if bruCiuAerosolHaze.contains("ing") || bruCiuAerosolHaze.contains("connecting") || bruCiuAerosolHaze.contains("preparing") || bruCiuAerosolHaze.contains("sending") {
+            flckinkNozzleMist = .bruCiuEdgeSnap
+        } else if bruCiuAerosolHaze.contains("failed") || bruCiuAerosolHaze.contains("wrong") || bruCiuAerosolHaze.contains("不存在") || bruCiuAerosolHaze.contains("错误") || bruCiuAerosolHaze.contains("please") {
+            flckinkNozzleMist = .ponllWhiteEdge
+        } else if bruCiuAerosolHaze.contains("ready") || bruCiuAerosolHaze.contains("counted") || bruCiuAerosolHaze.contains("added") || bruCiuAerosolHaze.contains("submitted") || bruCiuAerosolHaze.contains("published") || bruCiuAerosolHaze.contains("updated") {
+            flckinkNozzleMist = .flckinkSplitFill
         } else {
-            style = .info
+            flckinkNozzleMist = .bruCiuSilverSheen
         }
-        ponllyShowNotice(message, style: style, autoDismissAfter: style == .loading ? 1.05 : 1.65)
+        aerErstSketchRush(ponllSprayHalo, bruCiuLetterForm: flckinkNozzleMist, flckinkFillPattern: flckinkNozzleMist == .bruCiuEdgeSnap ? 1.05 : 1.65)
     }
 
-    func ponllyShowNotice(_ message: String, style: PonllyNoticeStyle = .info, autoDismissAfter delay: TimeInterval = 1.65) {
+    func aerErstSketchRush(_ ponllWallMark: String, bruCiuLetterForm bruCiuStreetGlyph: PonllyNoticeStyle = .bruCiuSilverSheen, flckinkFillPattern flckinkLetterMaze: TimeInterval = 1.65) {
         view.viewWithTag(909_301)?.removeFromSuperview()
-        let overlay = UIView()
-        overlay.tag = 909_301
-        overlay.backgroundColor = UIColor.black.withAlphaComponent(0.22)
-        overlay.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(overlay)
+        let aerErstCurveFlow = UIView()
+        aerErstCurveFlow.tag = 909_301
+        aerErstCurveFlow.backgroundColor = UIColor.black.withAlphaComponent(0.22)
+        aerErstCurveFlow.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstCurveFlow)
 
-        let panel = UIView()
-        panel.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.97)
-        panel.layer.cornerRadius = 22
-        panel.layer.borderWidth = 1.5
-        panel.layer.borderColor = style.accent.cgColor
-        panel.layer.shadowColor = style.accent.cgColor
-        panel.layer.shadowOpacity = 0.36
-        panel.layer.shadowRadius = 24
-        panel.layer.shadowOffset = CGSize(width: 0, height: 12)
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        overlay.addSubview(panel)
+        let ponllAngleBreak = UIView()
+        ponllAngleBreak.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.97)
+        ponllAngleBreak.layer.cornerRadius = 22
+        ponllAngleBreak.layer.borderWidth = 1.5
+        ponllAngleBreak.layer.borderColor = bruCiuStreetGlyph.flckinkGradientFill.cgColor
+        ponllAngleBreak.layer.shadowColor = bruCiuStreetGlyph.flckinkGradientFill.cgColor
+        ponllAngleBreak.layer.shadowOpacity = 0.36
+        ponllAngleBreak.layer.shadowRadius = 24
+        ponllAngleBreak.layer.shadowOffset = CGSize(width: 0, height: 12)
+        ponllAngleBreak.translatesAutoresizingMaskIntoConstraints = false
+        aerErstCurveFlow.addSubview(ponllAngleBreak)
 
-        let iconWrap = UIView()
-        iconWrap.backgroundColor = style.accent.withAlphaComponent(0.13)
-        iconWrap.layer.cornerRadius = 26
-        iconWrap.layer.borderWidth = 1.4
-        iconWrap.layer.borderColor = style.accent.cgColor
-        iconWrap.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(iconWrap)
+        let bruCiuEdgeSnap = UIView()
+        bruCiuEdgeSnap.backgroundColor = bruCiuStreetGlyph.flckinkGradientFill.withAlphaComponent(0.13)
+        bruCiuEdgeSnap.layer.cornerRadius = 26
+        bruCiuEdgeSnap.layer.borderWidth = 1.4
+        bruCiuEdgeSnap.layer.borderColor = bruCiuStreetGlyph.flckinkGradientFill.cgColor
+        bruCiuEdgeSnap.translatesAutoresizingMaskIntoConstraints = false
+        ponllAngleBreak.addSubview(bruCiuEdgeSnap)
 
-        if style == .loading {
-            let spinner = UIActivityIndicatorView(style: .medium)
-            spinner.color = style.accent
-            spinner.startAnimating()
-            spinner.translatesAutoresizingMaskIntoConstraints = false
-            iconWrap.addSubview(spinner)
+        if bruCiuStreetGlyph == .bruCiuEdgeSnap {
+            let flckinkShapeStack = UIActivityIndicatorView(style: .medium)
+            flckinkShapeStack.color = bruCiuStreetGlyph.flckinkGradientFill
+            flckinkShapeStack.startAnimating()
+            flckinkShapeStack.translatesAutoresizingMaskIntoConstraints = false
+            bruCiuEdgeSnap.addSubview(flckinkShapeStack)
             NSLayoutConstraint.activate([
-                spinner.centerXAnchor.constraint(equalTo: iconWrap.centerXAnchor),
-                spinner.centerYAnchor.constraint(equalTo: iconWrap.centerYAnchor)
+                flckinkShapeStack.centerXAnchor.constraint(equalTo: bruCiuEdgeSnap.centerXAnchor),
+                flckinkShapeStack.centerYAnchor.constraint(equalTo: bruCiuEdgeSnap.centerYAnchor)
             ])
         } else {
-            let icon = UIImageView(image: UIImage(systemName: style.iconName))
-            icon.tintColor = style.accent
-            icon.contentMode = .scaleAspectFit
-            icon.translatesAutoresizingMaskIntoConstraints = false
-            iconWrap.addSubview(icon)
+            let aerErstLayerBlend = UIImageView(image: UIImage(systemName: bruCiuStreetGlyph.aerErstPaintCloud))
+            aerErstLayerBlend.tintColor = bruCiuStreetGlyph.flckinkGradientFill
+            aerErstLayerBlend.contentMode = .scaleAspectFit
+            aerErstLayerBlend.translatesAutoresizingMaskIntoConstraints = false
+            bruCiuEdgeSnap.addSubview(aerErstLayerBlend)
             NSLayoutConstraint.activate([
-                icon.centerXAnchor.constraint(equalTo: iconWrap.centerXAnchor),
-                icon.centerYAnchor.constraint(equalTo: iconWrap.centerYAnchor),
-                icon.widthAnchor.constraint(equalToConstant: 22),
-                icon.heightAnchor.constraint(equalToConstant: 22)
+                aerErstLayerBlend.centerXAnchor.constraint(equalTo: bruCiuEdgeSnap.centerXAnchor),
+                aerErstLayerBlend.centerYAnchor.constraint(equalTo: bruCiuEdgeSnap.centerYAnchor),
+                aerErstLayerBlend.widthAnchor.constraint(equalToConstant: 22),
+                aerErstLayerBlend.heightAnchor.constraint(equalToConstant: 22)
             ])
         }
 
-        let label = UILabel()
-        label.text = message
-        label.textColor = .white
-        label.font = PonllyFonts.display(size: 13)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(label)
+        let ponllRoughFill = UILabel()
+        ponllRoughFill.text = ponllWallMark
+        ponllRoughFill.textColor = .white
+        ponllRoughFill.font = PonllyFonts.muralForgepon(neonLab: 13)
+        ponllRoughFill.textAlignment = .center
+        ponllRoughFill.numberOfLines = 0
+        ponllRoughFill.translatesAutoresizingMaskIntoConstraints = false
+        ponllAngleBreak.addSubview(ponllRoughFill)
 
         NSLayoutConstraint.activate([
-            overlay.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            overlay.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            overlay.topAnchor.constraint(equalTo: view.topAnchor),
-            overlay.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            panel.centerXAnchor.constraint(equalTo: overlay.centerXAnchor),
-            panel.centerYAnchor.constraint(equalTo: overlay.centerYAnchor),
-            panel.leadingAnchor.constraint(greaterThanOrEqualTo: overlay.safeAreaLayoutGuide.leadingAnchor, constant: 34),
-            panel.trailingAnchor.constraint(lessThanOrEqualTo: overlay.safeAreaLayoutGuide.trailingAnchor, constant: -34),
-            panel.widthAnchor.constraint(lessThanOrEqualToConstant: 300),
-            iconWrap.centerXAnchor.constraint(equalTo: panel.centerXAnchor),
-            iconWrap.topAnchor.constraint(equalTo: panel.topAnchor, constant: 22),
-            iconWrap.widthAnchor.constraint(equalToConstant: 52),
-            iconWrap.heightAnchor.constraint(equalToConstant: 52),
-            label.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 22),
-            label.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -22),
-            label.topAnchor.constraint(equalTo: iconWrap.bottomAnchor, constant: 16),
-            label.bottomAnchor.constraint(equalTo: panel.bottomAnchor, constant: -22)
+            aerErstCurveFlow.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            aerErstCurveFlow.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            aerErstCurveFlow.topAnchor.constraint(equalTo: view.topAnchor),
+            aerErstCurveFlow.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ponllAngleBreak.centerXAnchor.constraint(equalTo: aerErstCurveFlow.centerXAnchor),
+            ponllAngleBreak.centerYAnchor.constraint(equalTo: aerErstCurveFlow.centerYAnchor),
+            ponllAngleBreak.leadingAnchor.constraint(greaterThanOrEqualTo: aerErstCurveFlow.safeAreaLayoutGuide.leadingAnchor, constant: 34),
+            ponllAngleBreak.trailingAnchor.constraint(lessThanOrEqualTo: aerErstCurveFlow.safeAreaLayoutGuide.trailingAnchor, constant: -34),
+            ponllAngleBreak.widthAnchor.constraint(lessThanOrEqualToConstant: 300),
+            bruCiuEdgeSnap.centerXAnchor.constraint(equalTo: ponllAngleBreak.centerXAnchor),
+            bruCiuEdgeSnap.topAnchor.constraint(equalTo: ponllAngleBreak.topAnchor, constant: 22),
+            bruCiuEdgeSnap.widthAnchor.constraint(equalToConstant: 52),
+            bruCiuEdgeSnap.heightAnchor.constraint(equalToConstant: 52),
+            ponllRoughFill.leadingAnchor.constraint(equalTo: ponllAngleBreak.leadingAnchor, constant: 22),
+            ponllRoughFill.trailingAnchor.constraint(equalTo: ponllAngleBreak.trailingAnchor, constant: -22),
+            ponllRoughFill.topAnchor.constraint(equalTo: bruCiuEdgeSnap.bottomAnchor, constant: 16),
+            ponllRoughFill.bottomAnchor.constraint(equalTo: ponllAngleBreak.bottomAnchor, constant: -22)
         ])
 
-        overlay.alpha = 0
-        panel.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        aerErstCurveFlow.alpha = 0
+        ponllAngleBreak.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
         UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut], animations: {
-            overlay.alpha = 1
-            panel.transform = .identity
+            aerErstCurveFlow.alpha = 1
+            ponllAngleBreak.transform = .identity
         }) { _ in
-            UIView.animate(withDuration: 0.22, delay: delay, options: [.curveEaseIn], animations: {
-                overlay.alpha = 0
-                panel.transform = CGAffineTransform(scaleX: 0.94, y: 0.94)
-            }, completion: { _ in overlay.removeFromSuperview() })
+            UIView.animate(withDuration: 0.22, delay: flckinkLetterMaze, options: [.curveEaseIn], animations: {
+                aerErstCurveFlow.alpha = 0
+                ponllAngleBreak.transform = CGAffineTransform(scaleX: 0.94, y: 0.94)
+            }, completion: { _ in aerErstCurveFlow.removeFromSuperview() })
         }
     }
 
-    func ponllyShowThemeAlert(title: String, message: String, actionTitle: String = "OK", style: PonllyNoticeStyle = .info, showsCancel: Bool = false, action: (() -> Void)? = nil) {
+    func ponllyShowThemeAlert(title ponllSolidFill: String, message bruCiuSplitFill: String, actionTitle flckinkTwoToneFill: String = "OK", style aerErstAcidGreenFill: PonllyNoticeStyle = .bruCiuSilverSheen, showsCancel ponllCyanGlow: Bool = false, action bruCiuMagentaBurst: (() -> Void)? = nil) {
         view.viewWithTag(909_302)?.removeFromSuperview()
-        let overlay = UIView()
-        overlay.tag = 909_302
-        overlay.backgroundColor = UIColor.black.withAlphaComponent(0.62)
-        overlay.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(overlay)
+        let flckinkLimeStroke = UIView()
+        flckinkLimeStroke.tag = 909_302
+        flckinkLimeStroke.backgroundColor = UIColor.black.withAlphaComponent(0.62)
+        flckinkLimeStroke.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkLimeStroke)
 
-        let panel = UIView()
-        panel.backgroundColor = PonllyPalette.panel
-        panel.layer.cornerRadius = 24
-        panel.layer.borderWidth = 1.5
-        panel.layer.borderColor = style.accent.cgColor
-        panel.layer.shadowColor = style.accent.cgColor
-        panel.layer.shadowOpacity = 0.34
-        panel.layer.shadowRadius = 26
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        overlay.addSubview(panel)
+        let aerErstBlackOutline = UIView()
+        aerErstBlackOutline.backgroundColor = PonllyPalette.panel
+        aerErstBlackOutline.layer.cornerRadius = 24
+        aerErstBlackOutline.layer.borderWidth = 1.5
+        aerErstBlackOutline.layer.borderColor = aerErstAcidGreenFill.flckinkGradientFill.cgColor
+        aerErstBlackOutline.layer.shadowColor = aerErstAcidGreenFill.flckinkGradientFill.cgColor
+        aerErstBlackOutline.layer.shadowOpacity = 0.34
+        aerErstBlackOutline.layer.shadowRadius = 26
+        aerErstBlackOutline.translatesAutoresizingMaskIntoConstraints = false
+        flckinkLimeStroke.addSubview(aerErstBlackOutline)
 
-        let icon = UIImageView(image: UIImage(systemName: style.iconName))
-        icon.tintColor = style.accent
-        icon.contentMode = .scaleAspectFit
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(icon)
-        let titleLabel = UILabel()
-        titleLabel.text = title
-        titleLabel.textColor = .white
-        titleLabel.textAlignment = .center
-        titleLabel.font = PonllyFonts.display(size: 18)
-        titleLabel.numberOfLines = 0
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(titleLabel)
-        let messageLabel = UILabel()
-        messageLabel.text = message
-        messageLabel.textColor = PonllyPalette.muted
-        messageLabel.textAlignment = .center
-        messageLabel.font = PonllyFonts.body(size: 13)
-        messageLabel.numberOfLines = 0
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(messageLabel)
-        let button = PonllyNeonButton(title: actionTitle, color: style.accent)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(button)
-        button.addAction(UIAction { [weak overlay] _ in
+        let ponllWhiteEdge = UIImageView(image: UIImage(systemName: aerErstAcidGreenFill.aerErstPaintCloud))
+        ponllWhiteEdge.tintColor = aerErstAcidGreenFill.flckinkGradientFill
+        ponllWhiteEdge.contentMode = .scaleAspectFit
+        ponllWhiteEdge.translatesAutoresizingMaskIntoConstraints = false
+        aerErstBlackOutline.addSubview(ponllWhiteEdge)
+        let bruCiuSilverSheen = UILabel()
+        bruCiuSilverSheen.text = ponllSolidFill
+        bruCiuSilverSheen.textColor = .white
+        bruCiuSilverSheen.textAlignment = .center
+        bruCiuSilverSheen.font = PonllyFonts.muralForgepon(neonLab: 18)
+        bruCiuSilverSheen.numberOfLines = 0
+        bruCiuSilverSheen.translatesAutoresizingMaskIntoConstraints = false
+        aerErstBlackOutline.addSubview(bruCiuSilverSheen)
+        let flckinkPrimerCoat = UILabel()
+        flckinkPrimerCoat.text = bruCiuSplitFill
+        flckinkPrimerCoat.textColor = PonllyPalette.muted
+        flckinkPrimerCoat.textAlignment = .center
+        flckinkPrimerCoat.font = PonllyFonts.utilityBox(blankFacade: 13)
+        flckinkPrimerCoat.numberOfLines = 0
+        flckinkPrimerCoat.translatesAutoresizingMaskIntoConstraints = false
+        aerErstBlackOutline.addSubview(flckinkPrimerCoat)
+        let aerErstPaintBase = PonllyNeonButton(flckinkTwoToneFill, aerErstAcidGreenFill.flckinkGradientFill)
+        aerErstPaintBase.translatesAutoresizingMaskIntoConstraints = false
+        aerErstBlackOutline.addSubview(aerErstPaintBase)
+        aerErstPaintBase.addAction(UIAction { [weak flckinkLimeStroke] _ in
             UIView.animate(withDuration: 0.18, animations: {
-                overlay?.alpha = 0
+                flckinkLimeStroke?.alpha = 0
             }, completion: { _ in
-                overlay?.removeFromSuperview()
-                action?()
+                flckinkLimeStroke?.removeFromSuperview()
+                bruCiuMagentaBurst?()
             })
         }, for: .touchUpInside)
-        let cancelButton = UIButton(type: .system)
-        cancelButton.setTitle("Cancel", for: .normal)
-        cancelButton.setTitleColor(PonllyPalette.muted, for: .normal)
-        cancelButton.titleLabel?.font = PonllyFonts.display(size: 13)
-        cancelButton.backgroundColor = UIColor.black.withAlphaComponent(0.18)
-        cancelButton.layer.cornerRadius = 18
-        cancelButton.layer.borderWidth = 1
-        cancelButton.layer.borderColor = PonllyPalette.line.cgColor
-        cancelButton.isHidden = !showsCancel
-        cancelButton.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(cancelButton)
-        cancelButton.addAction(UIAction { [weak overlay] _ in
+        let ponllFinalCoat = UIButton(type: .system)
+        ponllFinalCoat.setTitle("Cancel", for: .normal)
+        ponllFinalCoat.setTitleColor(PonllyPalette.muted, for: .normal)
+        ponllFinalCoat.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        ponllFinalCoat.backgroundColor = UIColor.black.withAlphaComponent(0.18)
+        ponllFinalCoat.layer.cornerRadius = 18
+        ponllFinalCoat.layer.borderWidth = 1
+        ponllFinalCoat.layer.borderColor = PonllyPalette.line.cgColor
+        ponllFinalCoat.isHidden = !ponllCyanGlow
+        ponllFinalCoat.translatesAutoresizingMaskIntoConstraints = false
+        aerErstBlackOutline.addSubview(ponllFinalCoat)
+        ponllFinalCoat.addAction(UIAction { [weak flckinkLimeStroke] _ in
             UIView.animate(withDuration: 0.18, animations: {
-                overlay?.alpha = 0
+                flckinkLimeStroke?.alpha = 0
             }, completion: { _ in
-                overlay?.removeFromSuperview()
+                flckinkLimeStroke?.removeFromSuperview()
             })
         }, for: .touchUpInside)
 
         NSLayoutConstraint.activate([
-            overlay.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            overlay.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            overlay.topAnchor.constraint(equalTo: view.topAnchor),
-            overlay.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            panel.centerXAnchor.constraint(equalTo: overlay.centerXAnchor),
-            panel.centerYAnchor.constraint(equalTo: overlay.centerYAnchor),
-            panel.leadingAnchor.constraint(equalTo: overlay.safeAreaLayoutGuide.leadingAnchor, constant: 34),
-            panel.trailingAnchor.constraint(equalTo: overlay.safeAreaLayoutGuide.trailingAnchor, constant: -34),
-            icon.centerXAnchor.constraint(equalTo: panel.centerXAnchor),
-            icon.topAnchor.constraint(equalTo: panel.topAnchor, constant: 24),
-            icon.widthAnchor.constraint(equalToConstant: 34),
-            icon.heightAnchor.constraint(equalToConstant: 34),
-            titleLabel.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 22),
-            titleLabel.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -22),
-            titleLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 18),
-            messageLabel.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 22),
-            messageLabel.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -22),
-            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
-            button.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 22),
-            button.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -22),
-            button.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 22),
-            button.heightAnchor.constraint(equalToConstant: 54),
-            cancelButton.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 22),
-            cancelButton.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -22),
-            cancelButton.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 12),
-            cancelButton.heightAnchor.constraint(equalToConstant: showsCancel ? 46 : 0),
-            cancelButton.bottomAnchor.constraint(equalTo: panel.bottomAnchor, constant: -22)
+            flckinkLimeStroke.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flckinkLimeStroke.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flckinkLimeStroke.topAnchor.constraint(equalTo: view.topAnchor),
+            flckinkLimeStroke.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            aerErstBlackOutline.centerXAnchor.constraint(equalTo: flckinkLimeStroke.centerXAnchor),
+            aerErstBlackOutline.centerYAnchor.constraint(equalTo: flckinkLimeStroke.centerYAnchor),
+            aerErstBlackOutline.leadingAnchor.constraint(equalTo: flckinkLimeStroke.safeAreaLayoutGuide.leadingAnchor, constant: 34),
+            aerErstBlackOutline.trailingAnchor.constraint(equalTo: flckinkLimeStroke.safeAreaLayoutGuide.trailingAnchor, constant: -34),
+            ponllWhiteEdge.centerXAnchor.constraint(equalTo: aerErstBlackOutline.centerXAnchor),
+            ponllWhiteEdge.topAnchor.constraint(equalTo: aerErstBlackOutline.topAnchor, constant: 24),
+            ponllWhiteEdge.widthAnchor.constraint(equalToConstant: 34),
+            ponllWhiteEdge.heightAnchor.constraint(equalToConstant: 34),
+            bruCiuSilverSheen.leadingAnchor.constraint(equalTo: aerErstBlackOutline.leadingAnchor, constant: 22),
+            bruCiuSilverSheen.trailingAnchor.constraint(equalTo: aerErstBlackOutline.trailingAnchor, constant: -22),
+            bruCiuSilverSheen.topAnchor.constraint(equalTo: ponllWhiteEdge.bottomAnchor, constant: 18),
+            flckinkPrimerCoat.leadingAnchor.constraint(equalTo: aerErstBlackOutline.leadingAnchor, constant: 22),
+            flckinkPrimerCoat.trailingAnchor.constraint(equalTo: aerErstBlackOutline.trailingAnchor, constant: -22),
+            flckinkPrimerCoat.topAnchor.constraint(equalTo: bruCiuSilverSheen.bottomAnchor, constant: 12),
+            aerErstPaintBase.leadingAnchor.constraint(equalTo: aerErstBlackOutline.leadingAnchor, constant: 22),
+            aerErstPaintBase.trailingAnchor.constraint(equalTo: aerErstBlackOutline.trailingAnchor, constant: -22),
+            aerErstPaintBase.topAnchor.constraint(equalTo: flckinkPrimerCoat.bottomAnchor, constant: 22),
+            aerErstPaintBase.heightAnchor.constraint(equalToConstant: 54),
+            ponllFinalCoat.leadingAnchor.constraint(equalTo: aerErstBlackOutline.leadingAnchor, constant: 22),
+            ponllFinalCoat.trailingAnchor.constraint(equalTo: aerErstBlackOutline.trailingAnchor, constant: -22),
+            ponllFinalCoat.topAnchor.constraint(equalTo: aerErstPaintBase.bottomAnchor, constant: 12),
+            ponllFinalCoat.heightAnchor.constraint(equalToConstant: ponllCyanGlow ? 46 : 0),
+            ponllFinalCoat.bottomAnchor.constraint(equalTo: aerErstBlackOutline.bottomAnchor, constant: -22)
         ])
 
-        overlay.alpha = 0
-        panel.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        flckinkLimeStroke.alpha = 0
+        aerErstBlackOutline.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
         UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
-            overlay.alpha = 1
-            panel.transform = .identity
+            flckinkLimeStroke.alpha = 1
+            aerErstBlackOutline.transform = .identity
         }
     }
 }

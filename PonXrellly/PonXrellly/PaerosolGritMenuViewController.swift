@@ -5,12 +5,12 @@ import StoreKit
 import UIKit
 
 final class PaerosolGritMenuViewController: UIViewController {
-    private let user: PonllyUser
-    var onReport: (() -> Void)?
-    var onBlock: (() -> Void)?
+    private let ponllTextureBloom: PonllyaerErstTwoToneFillr
+    var bruCiuSketchFlicker: (() -> Void)?
+    var flckinkPaintFlash: (() -> Void)?
 
-    init(user: PonllyUser) {
-        self.user = user
+    init(aerErstInkFuse: PonllyaerErstTwoToneFillr) {
+        self.ponllTextureBloom = aerErstInkFuse
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -20,156 +20,156 @@ final class PaerosolGritMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        ponllAerosolTrace()
     }
 
-    private func setup() {
+    private func ponllAerosolTrace() {
         view.backgroundColor = UIColor(red: 6/255, green: 6/255, blue: 8/255, alpha: 0.9)
-        let dismissTap = UITapGestureRecognizer(target: self, action: #selector(cancelTapped))
-        dismissTap.cancelsTouchesInView = false
-        view.addGestureRecognizer(dismissTap)
+        let bruCiuMuralTrail = UITapGestureRecognizer(target: self, action: #selector(aerErstTextureSignal))
+        bruCiuMuralTrail.cancelsTouchesInView = false
+        view.addGestureRecognizer(bruCiuMuralTrail)
 
-        let sheet = UIView()
-        sheet.backgroundColor = PonllyPalette.panel
-        sheet.layer.cornerRadius = 22
-        sheet.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        sheet.layer.borderWidth = 1
-        sheet.layer.borderColor = PonllyPalette.line.cgColor
-        sheet.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(sheet)
+        let flckinkStencilVeil = UIView()
+        flckinkStencilVeil.backgroundColor = PonllyPalette.panel
+        flckinkStencilVeil.layer.cornerRadius = 22
+        flckinkStencilVeil.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        flckinkStencilVeil.layer.borderWidth = 1
+        flckinkStencilVeil.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkStencilVeil.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkStencilVeil)
 
-        let handle = UIView()
-        handle.backgroundColor = PonllyPalette.line
-        handle.layer.cornerRadius = 2
-        handle.translatesAutoresizingMaskIntoConstraints = false
-        sheet.addSubview(handle)
+        let aerErstChromeAura = UIView()
+        aerErstChromeAura.backgroundColor = PonllyPalette.line
+        aerErstChromeAura.layer.cornerRadius = 2
+        aerErstChromeAura.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilVeil.addSubview(aerErstChromeAura)
 
-        let title = UILabel()
-        title.text = "MANAGE ACCOUNT"
-        title.textColor = PonllyPalette.muted
-        title.font = PonllyFonts.display(size: 12)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        sheet.addSubview(title)
+        let ponllNeonEcho = UILabel()
+        ponllNeonEcho.text = "MANAGE ACCOUNT"
+        ponllNeonEcho.textColor = PonllyPalette.muted
+        ponllNeonEcho.font = PonllyFonts.muralForgepon(neonLab: 12)
+        ponllNeonEcho.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilVeil.addSubview(ponllNeonEcho)
 
-        let report = menuRow(title: "Report User", color: .white, symbol: "flag", action: #selector(reportTapped))
-        let block = menuRow(title: "Block User", color: UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1), symbol: "shield", action: #selector(blockTapped))
-        let cancel = UIButton(type: .system)
-        cancel.setTitle("Cancel", for: .normal)
-        cancel.setTitleColor(PonllyPalette.muted, for: .normal)
-        cancel.titleLabel?.font = PonllyFonts.display(size: 13)
-        cancel.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        cancel.layer.cornerRadius = 14
-        cancel.layer.borderWidth = 1
-        cancel.layer.borderColor = PonllyPalette.line.cgColor
-        cancel.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
-        cancel.translatesAutoresizingMaskIntoConstraints = false
-        [report, block, cancel].forEach(sheet.addSubview)
+        let bruCiuTextureSignal = bruCiuPaintPath(ponllInkArc: "Report User", flckinkWallBend: .white, aerErstAerosolKick: "flag", bruCiuMuralLean: #selector(ponllSketchTwist))
+        let flckinkMarkerWeave = bruCiuPaintPath(ponllInkArc: "Block User", flckinkWallBend: UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1), aerErstAerosolKick: "shield", bruCiuMuralLean: #selector(flckinkPaintDepth))
+        let aerErstChromeGlow = UIButton(type: .system)
+        aerErstChromeGlow.setTitle("Cancel", for: .normal)
+        aerErstChromeGlow.setTitleColor(PonllyPalette.muted, for: .normal)
+        aerErstChromeGlow.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstChromeGlow.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        aerErstChromeGlow.layer.cornerRadius = 14
+        aerErstChromeGlow.layer.borderWidth = 1
+        aerErstChromeGlow.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstChromeGlow.addTarget(self, action: #selector(aerErstTextureSignal), for: .touchUpInside)
+        aerErstChromeGlow.translatesAutoresizingMaskIntoConstraints = false
+        [bruCiuTextureSignal, flckinkMarkerWeave, aerErstChromeGlow].forEach(flckinkStencilVeil.addSubview)
 
         NSLayoutConstraint.activate([
-            sheet.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            sheet.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            sheet.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            handle.topAnchor.constraint(equalTo: sheet.topAnchor, constant: 16),
-            handle.centerXAnchor.constraint(equalTo: sheet.centerXAnchor),
-            handle.widthAnchor.constraint(equalToConstant: 40),
-            handle.heightAnchor.constraint(equalToConstant: 4),
-            title.leadingAnchor.constraint(equalTo: sheet.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            title.trailingAnchor.constraint(equalTo: sheet.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            title.topAnchor.constraint(equalTo: handle.bottomAnchor, constant: 20),
-            report.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            report.trailingAnchor.constraint(equalTo: title.trailingAnchor),
-            report.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 28),
-            report.heightAnchor.constraint(equalToConstant: 58),
-            block.leadingAnchor.constraint(equalTo: report.leadingAnchor),
-            block.trailingAnchor.constraint(equalTo: report.trailingAnchor),
-            block.topAnchor.constraint(equalTo: report.bottomAnchor, constant: 14),
-            block.heightAnchor.constraint(equalToConstant: 58),
-            cancel.leadingAnchor.constraint(equalTo: report.leadingAnchor),
-            cancel.trailingAnchor.constraint(equalTo: report.trailingAnchor),
-            cancel.topAnchor.constraint(equalTo: block.bottomAnchor, constant: 24),
-            cancel.heightAnchor.constraint(equalToConstant: 54),
-            cancel.bottomAnchor.constraint(equalTo: sheet.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+            flckinkStencilVeil.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flckinkStencilVeil.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flckinkStencilVeil.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            aerErstChromeAura.topAnchor.constraint(equalTo: flckinkStencilVeil.topAnchor, constant: 16),
+            aerErstChromeAura.centerXAnchor.constraint(equalTo: flckinkStencilVeil.centerXAnchor),
+            aerErstChromeAura.widthAnchor.constraint(equalToConstant: 40),
+            aerErstChromeAura.heightAnchor.constraint(equalToConstant: 4),
+            ponllNeonEcho.leadingAnchor.constraint(equalTo: flckinkStencilVeil.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllNeonEcho.trailingAnchor.constraint(equalTo: flckinkStencilVeil.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            ponllNeonEcho.topAnchor.constraint(equalTo: aerErstChromeAura.bottomAnchor, constant: 20),
+            bruCiuTextureSignal.leadingAnchor.constraint(equalTo: ponllNeonEcho.leadingAnchor),
+            bruCiuTextureSignal.trailingAnchor.constraint(equalTo: ponllNeonEcho.trailingAnchor),
+            bruCiuTextureSignal.topAnchor.constraint(equalTo: ponllNeonEcho.bottomAnchor, constant: 28),
+            bruCiuTextureSignal.heightAnchor.constraint(equalToConstant: 58),
+            flckinkMarkerWeave.leadingAnchor.constraint(equalTo: bruCiuTextureSignal.leadingAnchor),
+            flckinkMarkerWeave.trailingAnchor.constraint(equalTo: bruCiuTextureSignal.trailingAnchor),
+            flckinkMarkerWeave.topAnchor.constraint(equalTo: bruCiuTextureSignal.bottomAnchor, constant: 14),
+            flckinkMarkerWeave.heightAnchor.constraint(equalToConstant: 58),
+            aerErstChromeGlow.leadingAnchor.constraint(equalTo: bruCiuTextureSignal.leadingAnchor),
+            aerErstChromeGlow.trailingAnchor.constraint(equalTo: bruCiuTextureSignal.trailingAnchor),
+            aerErstChromeGlow.topAnchor.constraint(equalTo: flckinkMarkerWeave.bottomAnchor, constant: 24),
+            aerErstChromeGlow.heightAnchor.constraint(equalToConstant: 54),
+            aerErstChromeGlow.bottomAnchor.constraint(equalTo: flckinkStencilVeil.safeAreaLayoutGuide.bottomAnchor, constant: -16)
         ])
 
-        sheet.transform = CGAffineTransform(translationX: 0, y: 280)
+        flckinkStencilVeil.transform = CGAffineTransform(translationX: 0, y: 280)
         view.alpha = 0
         UIView.animate(withDuration: 0.24, delay: 0, options: [.curveEaseOut]) {
             self.view.alpha = 1
-            sheet.transform = .identity
+            flckinkStencilVeil.transform = .identity
         }
     }
 
-    private func menuRow(title: String, color: UIColor, symbol: String, action: Selector) -> UIControl {
-        let control = UIControl()
-        control.backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 26/255, alpha: 1)
-        control.layer.cornerRadius = 14
-        control.layer.borderWidth = 1
-        control.layer.borderColor = PonllyPalette.line.cgColor
-        control.addTarget(self, action: action, for: .touchUpInside)
-        control.translatesAutoresizingMaskIntoConstraints = false
+    private func bruCiuPaintPath(ponllInkArc: String, flckinkWallBend: UIColor, aerErstAerosolKick: String, bruCiuMuralLean: Selector) -> UIControl {
+        let ponllStencilTwist = UIControl()
+        ponllStencilTwist.backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 26/255, alpha: 1)
+        ponllStencilTwist.layer.cornerRadius = 14
+        ponllStencilTwist.layer.borderWidth = 1
+        ponllStencilTwist.layer.borderColor = PonllyPalette.line.cgColor
+        ponllStencilTwist.addTarget(self, action: bruCiuMuralLean, for: .touchUpInside)
+        ponllStencilTwist.translatesAutoresizingMaskIntoConstraints = false
 
-        let iconBox = UIView()
-        iconBox.layer.cornerRadius = 10
-        iconBox.layer.borderWidth = 1.2
-        iconBox.layer.borderColor = color.cgColor
-        iconBox.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(iconBox)
-        let icon = UIImageView(image: UIImage(systemName: symbol))
-        icon.tintColor = color
-        icon.contentMode = .scaleAspectFit
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        iconBox.addSubview(icon)
+        let flckinkPaintWeave = UIView()
+        flckinkPaintWeave.layer.cornerRadius = 10
+        flckinkPaintWeave.layer.borderWidth = 1.2
+        flckinkPaintWeave.layer.borderColor = flckinkWallBend.cgColor
+        flckinkPaintWeave.translatesAutoresizingMaskIntoConstraints = false
+        ponllStencilTwist.addSubview(flckinkPaintWeave)
+        let aerErstInkDepth = UIImageView(image: UIImage(systemName: aerErstAerosolKick))
+        aerErstInkDepth.tintColor = flckinkWallBend
+        aerErstInkDepth.contentMode = .scaleAspectFit
+        aerErstInkDepth.translatesAutoresizingMaskIntoConstraints = false
+        flckinkPaintWeave.addSubview(aerErstInkDepth)
 
-        let label = UILabel()
-        label.text = title
-        label.textColor = color
-        label.font = PonllyFonts.body(size: 16, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(label)
+        let ponllChromeGlow = UILabel()
+        ponllChromeGlow.text = ponllInkArc
+        ponllChromeGlow.textColor = flckinkWallBend
+        ponllChromeGlow.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .bold)
+        ponllChromeGlow.translatesAutoresizingMaskIntoConstraints = false
+        ponllStencilTwist.addSubview(ponllChromeGlow)
 
-        let chevron = UIImageView(image: UIImage(systemName: "chevron.right"))
-        chevron.tintColor = PonllyPalette.muted
-        chevron.contentMode = .scaleAspectFit
-        chevron.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(chevron)
+        let bruCiuNeonGrit = UIImageView(image: UIImage(systemName: "chevron.right"))
+        bruCiuNeonGrit.tintColor = PonllyPalette.muted
+        bruCiuNeonGrit.contentMode = .scaleAspectFit
+        bruCiuNeonGrit.translatesAutoresizingMaskIntoConstraints = false
+        ponllStencilTwist.addSubview(bruCiuNeonGrit)
 
         NSLayoutConstraint.activate([
-            iconBox.leadingAnchor.constraint(equalTo: control.leadingAnchor, constant: 14),
-            iconBox.centerYAnchor.constraint(equalTo: control.centerYAnchor),
-            iconBox.widthAnchor.constraint(equalToConstant: 32),
-            iconBox.heightAnchor.constraint(equalToConstant: 32),
-            icon.centerXAnchor.constraint(equalTo: iconBox.centerXAnchor),
-            icon.centerYAnchor.constraint(equalTo: iconBox.centerYAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 16),
-            icon.heightAnchor.constraint(equalToConstant: 16),
-            label.leadingAnchor.constraint(equalTo: iconBox.trailingAnchor, constant: 14),
-            label.centerYAnchor.constraint(equalTo: control.centerYAnchor),
-            label.trailingAnchor.constraint(lessThanOrEqualTo: chevron.leadingAnchor, constant: -12),
-            chevron.trailingAnchor.constraint(equalTo: control.trailingAnchor, constant: -18),
-            chevron.centerYAnchor.constraint(equalTo: control.centerYAnchor),
-            chevron.widthAnchor.constraint(equalToConstant: 16),
-            chevron.heightAnchor.constraint(equalToConstant: 16)
+            flckinkPaintWeave.leadingAnchor.constraint(equalTo: ponllStencilTwist.leadingAnchor, constant: 14),
+            flckinkPaintWeave.centerYAnchor.constraint(equalTo: ponllStencilTwist.centerYAnchor),
+            flckinkPaintWeave.widthAnchor.constraint(equalToConstant: 32),
+            flckinkPaintWeave.heightAnchor.constraint(equalToConstant: 32),
+            aerErstInkDepth.centerXAnchor.constraint(equalTo: flckinkPaintWeave.centerXAnchor),
+            aerErstInkDepth.centerYAnchor.constraint(equalTo: flckinkPaintWeave.centerYAnchor),
+            aerErstInkDepth.widthAnchor.constraint(equalToConstant: 16),
+            aerErstInkDepth.heightAnchor.constraint(equalToConstant: 16),
+            ponllChromeGlow.leadingAnchor.constraint(equalTo: flckinkPaintWeave.trailingAnchor, constant: 14),
+            ponllChromeGlow.centerYAnchor.constraint(equalTo: ponllStencilTwist.centerYAnchor),
+            ponllChromeGlow.trailingAnchor.constraint(lessThanOrEqualTo: bruCiuNeonGrit.leadingAnchor, constant: -12),
+            bruCiuNeonGrit.trailingAnchor.constraint(equalTo: ponllStencilTwist.trailingAnchor, constant: -18),
+            bruCiuNeonGrit.centerYAnchor.constraint(equalTo: ponllStencilTwist.centerYAnchor),
+            bruCiuNeonGrit.widthAnchor.constraint(equalToConstant: 16),
+            bruCiuNeonGrit.heightAnchor.constraint(equalToConstant: 16)
         ])
-        return control
+        return ponllStencilTwist
     }
 
-    private func dismissThen(_ action: (() -> Void)? = nil) {
+    private func flckinkWallNoise(_ aerErstAerosolTexture: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.18, animations: {
             self.view.alpha = 0
         }, completion: { _ in
-            self.dismiss(animated: false, completion: action)
+            self.dismiss(animated: false, completion: aerErstAerosolTexture)
         })
     }
 
-    @objc private func reportTapped() {
-        dismissThen(onReport)
+    @objc private func ponllSketchTwist() {
+        flckinkWallNoise(bruCiuSketchFlicker)
     }
 
-    @objc private func blockTapped() {
-        dismissThen(onBlock)
+    @objc private func flckinkPaintDepth() {
+        flckinkWallNoise(flckinkPaintFlash)
     }
 
-    @objc private func cancelTapped() {
-        dismissThen()
+    @objc private func aerErstTextureSignal() {
+        flckinkWallNoise()
     }
 }

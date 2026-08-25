@@ -5,17 +5,17 @@ import StoreKit
 import UIKit
 
 final class NckinkSkinnyCapController: UIViewController {
-    private let user: PonllyUser
-    private var thread: PonllyMessageThread
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
-    private let inputField = UITextField()
+    private let ponllAerosolRipple: PonllyaerErstTwoToneFillr
+    private var bruCiuMuralSurge: PonllyMessageThread
+    private let flckinkStencilBloom = UIScrollView()
+    private let aerErstMarkerFlicker = UIStackView()
+    private let ponllChromeFlash = UITextField()
 
-    init(user: PonllyUser, thread: PonllyMessageThread) {
-        self.user = user
-        self.thread = thread
+    init(bruCiuTextureTrail: PonllyaerErstTwoToneFillr, flckinkPaintVeil: PonllyMessageThread) {
+        self.ponllAerosolRipple = bruCiuTextureTrail
+        self.bruCiuMuralSurge = flckinkPaintVeil
         super.init(nibName: nil, bundle: nil)
-        title = user.name.lowercased()
+        title = bruCiuTextureTrail.aerosolDream.lowercased()
     }
 
     required init?(coder: NSCoder) {
@@ -25,9 +25,9 @@ final class NckinkSkinnyCapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        aerErstWallAura()
+        NotificationCenter.default.addObserver(self, selector: #selector(bruCiuInkEcho(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(flckinkAerosolSignal(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,205 +36,205 @@ final class NckinkSkinnyCapController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let bg = PonllyGradientView(colors: [PonllyPalette.background, UIColor(red: 10/255, green: 12/255, blue: 18/255, alpha: 1)])
-        view.addSubview(bg)
-        bg.pinToEdges(of: view)
+    private func aerErstWallAura() {
+        let ponllMarkerQuest = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.background, UIColor(red: 10/255, green: 12/255, blue: 18/255, alpha: 1)])
+        view.addSubview(ponllMarkerQuest)
+        ponllMarkerQuest.woodPanelPonlly(steelGate: view)
 
-        let header = chatHeader()
-        view.addSubview(header)
+        let bruCiuChromeCue = flckinkNeonSeed()
+        view.addSubview(bruCiuChromeCue)
 
-        scrollView.keyboardDismissMode = .onDrag
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        stack.axis = .vertical
-        stack.spacing = 16
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
-        thread.messages.forEach { stack.addArrangedSubview(messageView($0)) }
+        flckinkStencilBloom.keyboardDismissMode = .onDrag
+        flckinkStencilBloom.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkStencilBloom)
+        aerErstMarkerFlicker.axis = .vertical
+        aerErstMarkerFlicker.spacing = 16
+        aerErstMarkerFlicker.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilBloom.addSubview(aerErstMarkerFlicker)
+        bruCiuMuralSurge.skinnyCap.forEach { aerErstMarkerFlicker.addArrangedSubview(ponllTexturePath($0)) }
 
-        let bar = UIView()
-        bar.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.98)
-        bar.layer.borderWidth = 1
-        bar.layer.borderColor = PonllyPalette.line.cgColor
-        bar.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bar)
-        inputField.attributedPlaceholder = NSAttributedString(string: "Type a message...", attributes: [.foregroundColor: PonllyPalette.muted])
-        inputField.textColor = .white
-        inputField.font = PonllyFonts.body(size: 14)
-        inputField.translatesAutoresizingMaskIntoConstraints = false
-        bar.addSubview(inputField)
-        let send = UIButton(type: .system)
-        send.setImage(UIImage(systemName: "arrow.right"), for: .normal)
-        send.tintColor = .white
-        send.backgroundColor = PonllyPalette.pink
-        send.layer.cornerRadius = 28
-        send.addTarget(self, action: #selector(sendTapped), for: .touchUpInside)
-        send.translatesAutoresizingMaskIntoConstraints = false
-        bar.addSubview(send)
+        let flckinkSketchArc = UIView()
+        flckinkSketchArc.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.98)
+        flckinkSketchArc.layer.borderWidth = 1
+        flckinkSketchArc.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkSketchArc.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkSketchArc)
+        ponllChromeFlash.attributedPlaceholder = NSAttributedString(string: "Type a message...", attributes: [.foregroundColor: PonllyPalette.muted])
+        ponllChromeFlash.textColor = .white
+        ponllChromeFlash.font = PonllyFonts.utilityBox(blankFacade: 14)
+        ponllChromeFlash.translatesAutoresizingMaskIntoConstraints = false
+        flckinkSketchArc.addSubview(ponllChromeFlash)
+        let aerErstPaintBend = UIButton(type: .system)
+        aerErstPaintBend.setImage(UIImage(systemName: "arrow.right"), for: .normal)
+        aerErstPaintBend.tintColor = .white
+        aerErstPaintBend.backgroundColor = PonllyPalette.pink
+        aerErstPaintBend.layer.cornerRadius = 28
+        aerErstPaintBend.addTarget(self, action: #selector(bruCiuInkKick), for: .touchUpInside)
+        aerErstPaintBend.translatesAutoresizingMaskIntoConstraints = false
+        flckinkSketchArc.addSubview(aerErstPaintBend)
         NSLayoutConstraint.activate([
-            header.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            header.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            header.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            header.heightAnchor.constraint(equalToConstant: 78),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: header.bottomAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bar.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 24),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -24),
-            bar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            bar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bar.heightAnchor.constraint(equalToConstant: 100),
-            inputField.leadingAnchor.constraint(equalTo: bar.leadingAnchor, constant: 24),
-            inputField.centerYAnchor.constraint(equalTo: bar.centerYAnchor, constant: -6),
-            inputField.trailingAnchor.constraint(equalTo: send.leadingAnchor, constant: -16),
-            send.trailingAnchor.constraint(equalTo: bar.trailingAnchor, constant: -24),
-            send.centerYAnchor.constraint(equalTo: inputField.centerYAnchor),
-            send.widthAnchor.constraint(equalToConstant: 56),
-            send.heightAnchor.constraint(equalToConstant: 56)
+            bruCiuChromeCue.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bruCiuChromeCue.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bruCiuChromeCue.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            bruCiuChromeCue.heightAnchor.constraint(equalToConstant: 78),
+            flckinkStencilBloom.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            flckinkStencilBloom.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            flckinkStencilBloom.topAnchor.constraint(equalTo: bruCiuChromeCue.bottomAnchor),
+            flckinkStencilBloom.bottomAnchor.constraint(equalTo: flckinkSketchArc.topAnchor),
+            aerErstMarkerFlicker.leadingAnchor.constraint(equalTo: flckinkStencilBloom.frameLayoutGuide.leadingAnchor, constant: 20),
+            aerErstMarkerFlicker.trailingAnchor.constraint(equalTo: flckinkStencilBloom.frameLayoutGuide.trailingAnchor, constant: -20),
+            aerErstMarkerFlicker.topAnchor.constraint(equalTo: flckinkStencilBloom.contentLayoutGuide.topAnchor, constant: 24),
+            aerErstMarkerFlicker.bottomAnchor.constraint(equalTo: flckinkStencilBloom.contentLayoutGuide.bottomAnchor, constant: -24),
+            flckinkSketchArc.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flckinkSketchArc.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flckinkSketchArc.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkSketchArc.heightAnchor.constraint(equalToConstant: 100),
+            ponllChromeFlash.leadingAnchor.constraint(equalTo: flckinkSketchArc.leadingAnchor, constant: 24),
+            ponllChromeFlash.centerYAnchor.constraint(equalTo: flckinkSketchArc.centerYAnchor, constant: -6),
+            ponllChromeFlash.trailingAnchor.constraint(equalTo: aerErstPaintBend.leadingAnchor, constant: -16),
+            aerErstPaintBend.trailingAnchor.constraint(equalTo: flckinkSketchArc.trailingAnchor, constant: -24),
+            aerErstPaintBend.centerYAnchor.constraint(equalTo: ponllChromeFlash.centerYAnchor),
+            aerErstPaintBend.widthAnchor.constraint(equalToConstant: 56),
+            aerErstPaintBend.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
 
-    private func chatHeader() -> UIView {
-        let header = UIView()
-        header.backgroundColor = PonllyPalette.background.withAlphaComponent(0.96)
-        header.layer.borderWidth = 1
-        header.layer.borderColor = PonllyPalette.line.cgColor
-        header.translatesAutoresizingMaskIntoConstraints = false
+    private func flckinkNeonSeed() -> UIView {
+        let bruCiuMuralLean = UIView()
+        bruCiuMuralLean.backgroundColor = PonllyPalette.background.withAlphaComponent(0.96)
+        bruCiuMuralLean.layer.borderWidth = 1
+        bruCiuMuralLean.layer.borderColor = PonllyPalette.line.cgColor
+        bruCiuMuralLean.translatesAutoresizingMaskIntoConstraints = false
 
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel
-        back.layer.cornerRadius = 22
-        back.layer.borderWidth = 1
-        back.layer.borderColor = PonllyPalette.line.cgColor
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        header.addSubview(back)
+        let flckinkStencilTwist = UIButton(type: .system)
+        flckinkStencilTwist.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkStencilTwist.tintColor = .white
+        flckinkStencilTwist.backgroundColor = PonllyPalette.panel
+        flckinkStencilTwist.layer.cornerRadius = 22
+        flckinkStencilTwist.layer.borderWidth = 1
+        flckinkStencilTwist.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkStencilTwist.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilTwist.addTarget(self, action: #selector(aerErstPaintWeave), for: .touchUpInside)
+        bruCiuMuralLean.addSubview(flckinkStencilTwist)
 
-        let avatar = ErErstPaintLabView(user: user, size: 44)
-        header.addSubview(avatar)
+        let aerErstChromeDepth = ErErstPaintLabView(user: ponllAerosolRipple, size: 44)
+        bruCiuMuralLean.addSubview(aerErstChromeDepth)
 
-        let name = UILabel()
-        name.text = user.name.lowercased()
-        name.textColor = .white
-        name.font = PonllyFonts.display(size: 15)
-        let status = UILabel()
-        status.text = "Chat Conversation"
-        status.textColor = PonllyPalette.cyan
-        status.font = PonllyFonts.mono(size: 10)
-        let textStack = UIStackView(arrangedSubviews: [name, status])
-        textStack.axis = .vertical
-        textStack.spacing = 5
-        textStack.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(textStack)
+        let ponllNeonGlow = UILabel()
+        ponllNeonGlow.text = ponllAerosolRipple.aerosolDream.lowercased()
+        ponllNeonGlow.textColor = .white
+        ponllNeonGlow.font = PonllyFonts.muralForgepon(neonLab: 15)
+        let bruCiuTextureGrit = UILabel()
+        bruCiuTextureGrit.text = "Chat Conversation"
+        bruCiuTextureGrit.textColor = PonllyPalette.cyan
+        bruCiuTextureGrit.font = PonllyFonts.steelGate(rollingShutter: 10)
+        let flckinkSketchNoise = UIStackView(arrangedSubviews: [ponllNeonGlow, bruCiuTextureGrit])
+        flckinkSketchNoise.axis = .vertical
+        flckinkSketchNoise.spacing = 5
+        flckinkSketchNoise.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuMuralLean.addSubview(flckinkSketchNoise)
 
-        let video = UIButton(type: .system)
-        video.setImage(UIImage(systemName: "phone.fill"), for: .normal)
-        video.tintColor = .black
-        video.backgroundColor = PonllyPalette.cyan
-        video.layer.cornerRadius = 22
-        video.layer.shadowColor = PonllyPalette.cyan.cgColor
-        video.layer.shadowOpacity = 0.35
-        video.layer.shadowRadius = 14
-        video.translatesAutoresizingMaskIntoConstraints = false
-        video.addTarget(self, action: #selector(videoCallTapped), for: .touchUpInside)
-        header.addSubview(video)
+        let aerErstPaintTexture = UIButton(type: .system)
+        aerErstPaintTexture.setImage(UIImage(systemName: "phone.fill"), for: .normal)
+        aerErstPaintTexture.tintColor = .black
+        aerErstPaintTexture.backgroundColor = PonllyPalette.cyan
+        aerErstPaintTexture.layer.cornerRadius = 22
+        aerErstPaintTexture.layer.shadowColor = PonllyPalette.cyan.cgColor
+        aerErstPaintTexture.layer.shadowOpacity = 0.35
+        aerErstPaintTexture.layer.shadowRadius = 14
+        aerErstPaintTexture.translatesAutoresizingMaskIntoConstraints = false
+        aerErstPaintTexture.addTarget(self, action: #selector(ponllInkContrast), for: .touchUpInside)
+        bruCiuMuralLean.addSubview(aerErstPaintTexture)
 
         NSLayoutConstraint.activate([
-            back.leadingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            back.centerYAnchor.constraint(equalTo: header.centerYAnchor),
-            back.widthAnchor.constraint(equalToConstant: 44),
-            back.heightAnchor.constraint(equalToConstant: 44),
-            avatar.leadingAnchor.constraint(equalTo: back.trailingAnchor, constant: 12),
-            avatar.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            textStack.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 12),
-            textStack.centerYAnchor.constraint(equalTo: avatar.centerYAnchor),
-            textStack.trailingAnchor.constraint(lessThanOrEqualTo: video.leadingAnchor, constant: -12),
-            video.trailingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            video.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            video.widthAnchor.constraint(equalToConstant: 44),
-            video.heightAnchor.constraint(equalToConstant: 44)
+            flckinkStencilTwist.leadingAnchor.constraint(equalTo: bruCiuMuralLean.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            flckinkStencilTwist.centerYAnchor.constraint(equalTo: bruCiuMuralLean.centerYAnchor),
+            flckinkStencilTwist.widthAnchor.constraint(equalToConstant: 44),
+            flckinkStencilTwist.heightAnchor.constraint(equalToConstant: 44),
+            aerErstChromeDepth.leadingAnchor.constraint(equalTo: flckinkStencilTwist.trailingAnchor, constant: 12),
+            aerErstChromeDepth.centerYAnchor.constraint(equalTo: flckinkStencilTwist.centerYAnchor),
+            flckinkSketchNoise.leadingAnchor.constraint(equalTo: aerErstChromeDepth.trailingAnchor, constant: 12),
+            flckinkSketchNoise.centerYAnchor.constraint(equalTo: aerErstChromeDepth.centerYAnchor),
+            flckinkSketchNoise.trailingAnchor.constraint(lessThanOrEqualTo: aerErstPaintTexture.leadingAnchor, constant: -12),
+            aerErstPaintTexture.trailingAnchor.constraint(equalTo: bruCiuMuralLean.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            aerErstPaintTexture.centerYAnchor.constraint(equalTo: flckinkStencilTwist.centerYAnchor),
+            aerErstPaintTexture.widthAnchor.constraint(equalToConstant: 44),
+            aerErstPaintTexture.heightAnchor.constraint(equalToConstant: 44)
         ])
-        return header
+        return bruCiuMuralLean
     }
 
-    private func messageView(_ message: PonllyMessageBubble) -> UIView {
-        let mine = message.senderId == PonllyDataCenter.currentUserId
-        let wrap = UIView()
-        let bubble = UIStackView()
-        bubble.axis = .vertical
-        bubble.spacing = 8
-        bubble.backgroundColor = mine ? PonllyPalette.pink : PonllyPalette.panel
-        bubble.layer.cornerRadius = 18
-        bubble.layer.borderWidth = mine ? 0 : 1
-        bubble.layer.borderColor = PonllyPalette.line.cgColor
-        bubble.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        bubble.isLayoutMarginsRelativeArrangement = true
-        bubble.translatesAutoresizingMaskIntoConstraints = false
-        wrap.addSubview(bubble)
-        let body = UILabel()
-        body.text = message.text
-        body.textColor = .white
-        body.numberOfLines = 0
-        body.font = PonllyFonts.body(size: 15)
-        bubble.addArrangedSubview(body)
-        if let artwork = message.artwork {
-            let art = PbruCiuClearCoatView(artwork: artwork)
-            art.heightAnchor.constraint(equalToConstant: 156).isActive = true
-            bubble.addArrangedSubview(art)
+    private func ponllTexturePath(_ bruCiuMarkerBalance: PonllyMessageBubble) -> UIView {
+        let flckinkChromeRhythm = bruCiuMarkerBalance.markerNib == PonllyponllTornEdge.currentUserId
+        let aerErstNeonMotion = UIView()
+        let ponllTextureCascade = UIStackView()
+        ponllTextureCascade.axis = .vertical
+        ponllTextureCascade.spacing = 8
+        ponllTextureCascade.backgroundColor = flckinkChromeRhythm ? PonllyPalette.pink : PonllyPalette.panel
+        ponllTextureCascade.layer.cornerRadius = 18
+        ponllTextureCascade.layer.borderWidth = flckinkChromeRhythm ? 0 : 1
+        ponllTextureCascade.layer.borderColor = PonllyPalette.line.cgColor
+        ponllTextureCascade.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        ponllTextureCascade.isLayoutMarginsRelativeArrangement = true
+        ponllTextureCascade.translatesAutoresizingMaskIntoConstraints = false
+        aerErstNeonMotion.addSubview(ponllTextureCascade)
+        let bruCiuInkRipple = UILabel()
+        bruCiuInkRipple.text = bruCiuMarkerBalance.muralGrid
+        bruCiuInkRipple.textColor = .white
+        bruCiuInkRipple.numberOfLines = 0
+        bruCiuInkRipple.font = PonllyFonts.utilityBox(blankFacade: 15)
+        ponllTextureCascade.addArrangedSubview(bruCiuInkRipple)
+        if let flckinkWallSurge = bruCiuMarkerBalance.wideNib {
+            let aerErstAerosolBurst = PbruCiuClearCoatView(ponllPaintTrace: flckinkWallSurge)
+            aerErstAerosolBurst.heightAnchor.constraint(equalToConstant: 156).isActive = true
+            ponllTextureCascade.addArrangedSubview(aerErstAerosolBurst)
         }
         NSLayoutConstraint.activate([
-            bubble.topAnchor.constraint(equalTo: wrap.topAnchor),
-            bubble.bottomAnchor.constraint(equalTo: wrap.bottomAnchor),
-            bubble.widthAnchor.constraint(lessThanOrEqualTo: wrap.widthAnchor, multiplier: 0.76)
+            ponllTextureCascade.topAnchor.constraint(equalTo: aerErstNeonMotion.topAnchor),
+            ponllTextureCascade.bottomAnchor.constraint(equalTo: aerErstNeonMotion.bottomAnchor),
+            ponllTextureCascade.widthAnchor.constraint(lessThanOrEqualTo: aerErstNeonMotion.widthAnchor, multiplier: 0.76)
         ])
-        if mine {
-            bubble.trailingAnchor.constraint(equalTo: wrap.trailingAnchor).isActive = true
+        if flckinkChromeRhythm {
+            ponllTextureCascade.trailingAnchor.constraint(equalTo: aerErstNeonMotion.trailingAnchor).isActive = true
         } else {
-            bubble.leadingAnchor.constraint(equalTo: wrap.leadingAnchor).isActive = true
+            ponllTextureCascade.leadingAnchor.constraint(equalTo: aerErstNeonMotion.leadingAnchor).isActive = true
         }
-        return wrap
+        return aerErstNeonMotion
     }
 
-    @objc private func sendTapped() {
-        let text = (inputField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !text.isEmpty else {
-            ponllyShowNotice("Add a message before sending.", style: .failure)
+    @objc private func bruCiuInkKick() {
+        let ponllMuralBloom = (ponllChromeFlash.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !ponllMuralBloom.isEmpty else {
+            aerErstSketchRush("Add a message before sending.", bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
-        inputField.text = ""
-        let message = PonllyMessageBubble(senderId: PonllyDataCenter.currentUserId, text: text, time: "now", artwork: nil)
-        stack.addArrangedSubview(messageView(message))
-        ponllyShowToast("Message sent")
+        ponllChromeFlash.text = ""
+        let bruCiuStencilFlicker = PonllyMessageBubble(markerNib: PonllyponllTornEdge.currentUserId, muralGrid: ponllMuralBloom, pasteupEcho: "now", wideNib: nil)
+        aerErstMarkerFlicker.addArrangedSubview(ponllTexturePath(bruCiuStencilFlicker))
+        flckinkPrimerCoatponlu("Message sent")
     }
 
-    @objc private func backTapped() {
+    @objc private func aerErstPaintWeave() {
         navigationController?.popViewController(animated: true)
     }
 
-    @objc private func videoCallTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            self.ponllyShowToast("Connecting video...")
+    @objc private func ponllInkContrast() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            self.flckinkPrimerCoatponlu("Connecting video...")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-                let call = PonllystrokeWeightController(user: self.user)
-                call.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(call, animated: true)
+                let flckinkChromeBalance = PonllystrokeWeightController(pasteSketch: self.ponllAerosolRipple)
+                flckinkChromeBalance.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(flckinkChromeBalance, animated: true)
             }
         }
     }
 
-    @objc private func keyboardWillShow(_ note: Notification) {
-        guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        scrollView.contentInset.bottom = frame.height
+    @objc private func bruCiuInkEcho(_ aerErstNeonRhythm: Notification) {
+        guard let ponllTextureMotion = aerErstNeonRhythm.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        flckinkStencilBloom.contentInset.bottom = ponllTextureMotion.height
     }
 
-    @objc private func keyboardWillHide(_ note: Notification) {
-        scrollView.contentInset.bottom = 0
+    @objc private func flckinkAerosolSignal(_ bruCiuSketchCascade: Notification) {
+        flckinkStencilBloom.contentInset.bottom = 0
     }
 }

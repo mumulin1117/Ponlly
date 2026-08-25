@@ -5,14 +5,14 @@ import StoreKit
 import UIKit
 
 final class PonllyNeonButton: UIButton {
-    init(title: String, color: UIColor = PonllyPalette.cyan) {
+    init(_ ponllLineBurst: String, _ bruCiuCyanGlow: UIColor = PonllyPalette.cyan) {
         super.init(frame: .zero)
-        setTitle(title, for: .normal)
+        setTitle(ponllLineBurst, for: .normal)
         setTitleColor(.black, for: .normal)
-        titleLabel?.font = PonllyFonts.display(size: 14)
-        backgroundColor = color
+        titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
+        backgroundColor = bruCiuCyanGlow
         layer.cornerRadius = 22
-        layer.shadowColor = color.cgColor
+        layer.shadowColor = bruCiuCyanGlow.cgColor
         layer.shadowOpacity = 0.35
         layer.shadowRadius = 18
         layer.shadowOffset = CGSize(width: 0, height: 8)

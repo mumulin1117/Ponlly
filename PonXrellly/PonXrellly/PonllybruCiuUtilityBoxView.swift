@@ -5,46 +5,46 @@ import StoreKit
 import UIKit
 
 final class PonllybruCiuUtilityBoxView: UIView {
-    init(aVotes: Int, bVotes: Int) {
+    init(aVotes ponllSketchLean: Int, bVotes bruCiuPaintTwist: Int) {
         super.init(frame: .zero)
-        let total = max(aVotes + bVotes, 1)
-        let aPercent = CGFloat(aVotes) / CGFloat(total)
-        let bar = UIView()
-        bar.backgroundColor = PonllyPalette.cyan
-        bar.layer.cornerRadius = 6
-        bar.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(bar)
-        let pink = UIView()
-        pink.backgroundColor = PonllyPalette.pink
-        pink.layer.cornerRadius = 6
-        pink.translatesAutoresizingMaskIntoConstraints = false
-        bar.addSubview(pink)
-        let left = UILabel()
-        left.text = "Kai \(Int(aPercent * 100))%"
-        left.textColor = .white
-        left.font = PonllyFonts.display(size: 13)
-        let right = UILabel()
-        right.text = "Nova \(100 - Int(aPercent * 100))%"
-        right.textColor = .white
-        right.font = PonllyFonts.display(size: 13)
-        right.textAlignment = .right
-        [left, right].forEach {
+        let flckinkInkWeave = max(ponllSketchLean + bruCiuPaintTwist, 1)
+        let aerErstWallDepth = CGFloat(ponllSketchLean) / CGFloat(flckinkInkWeave)
+        let ponllAerosolGlow = UIView()
+        ponllAerosolGlow.backgroundColor = PonllyPalette.cyan
+        ponllAerosolGlow.layer.cornerRadius = 6
+        ponllAerosolGlow.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllAerosolGlow)
+        let bruCiuMuralGrit = UIView()
+        bruCiuMuralGrit.backgroundColor = PonllyPalette.pink
+        bruCiuMuralGrit.layer.cornerRadius = 6
+        bruCiuMuralGrit.translatesAutoresizingMaskIntoConstraints = false
+        ponllAerosolGlow.addSubview(bruCiuMuralGrit)
+        let flckinkStencilNoise = UILabel()
+        flckinkStencilNoise.text = "Kai \(Int(aerErstWallDepth * 100))%"
+        flckinkStencilNoise.textColor = .white
+        flckinkStencilNoise.font = PonllyFonts.muralForgepon(neonLab: 13)
+        let aerErstMarkerTexture = UILabel()
+        aerErstMarkerTexture.text = "Nova \(100 - Int(aerErstWallDepth * 100))%"
+        aerErstMarkerTexture.textColor = .white
+        aerErstMarkerTexture.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstMarkerTexture.textAlignment = .right
+        [flckinkStencilNoise, aerErstMarkerTexture].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
         NSLayoutConstraint.activate([
-            bar.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bar.trailingAnchor.constraint(equalTo: trailingAnchor),
-            bar.topAnchor.constraint(equalTo: topAnchor),
-            bar.heightAnchor.constraint(equalToConstant: 12),
-            pink.leadingAnchor.constraint(equalTo: bar.leadingAnchor),
-            pink.topAnchor.constraint(equalTo: bar.topAnchor),
-            pink.bottomAnchor.constraint(equalTo: bar.bottomAnchor),
-            pink.widthAnchor.constraint(equalTo: bar.widthAnchor, multiplier: aPercent),
-            left.leadingAnchor.constraint(equalTo: leadingAnchor),
-            left.topAnchor.constraint(equalTo: bar.bottomAnchor, constant: 8),
-            right.trailingAnchor.constraint(equalTo: trailingAnchor),
-            right.topAnchor.constraint(equalTo: bar.bottomAnchor, constant: 8)
+            ponllAerosolGlow.leadingAnchor.constraint(equalTo: leadingAnchor),
+            ponllAerosolGlow.trailingAnchor.constraint(equalTo: trailingAnchor),
+            ponllAerosolGlow.topAnchor.constraint(equalTo: topAnchor),
+            ponllAerosolGlow.heightAnchor.constraint(equalToConstant: 12),
+            bruCiuMuralGrit.leadingAnchor.constraint(equalTo: ponllAerosolGlow.leadingAnchor),
+            bruCiuMuralGrit.topAnchor.constraint(equalTo: ponllAerosolGlow.topAnchor),
+            bruCiuMuralGrit.bottomAnchor.constraint(equalTo: ponllAerosolGlow.bottomAnchor),
+            bruCiuMuralGrit.widthAnchor.constraint(equalTo: ponllAerosolGlow.widthAnchor, multiplier: aerErstWallDepth),
+            flckinkStencilNoise.leadingAnchor.constraint(equalTo: leadingAnchor),
+            flckinkStencilNoise.topAnchor.constraint(equalTo: ponllAerosolGlow.bottomAnchor, constant: 8),
+            aerErstMarkerTexture.trailingAnchor.constraint(equalTo: trailingAnchor),
+            aerErstMarkerTexture.topAnchor.constraint(equalTo: ponllAerosolGlow.bottomAnchor, constant: 8)
         ])
     }
 

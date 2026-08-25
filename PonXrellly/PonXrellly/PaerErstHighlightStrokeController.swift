@@ -5,11 +5,11 @@ import StoreKit
 import UIKit
 
 final class PaerErstHighlightStrokeController: UIViewController {
-    private let user: PonllyUser
-    var onConfirm: (() -> Void)?
+    private let aerErstSketchBloom: PonllyaerErstTwoToneFillr
+    var ponllChromeFlicker: (() -> Void)?
 
-    init(user: PonllyUser) {
-        self.user = user
+    init(bruCiuPaintFlash: PonllyaerErstTwoToneFillr) {
+        self.aerErstSketchBloom = bruCiuPaintFlash
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -19,134 +19,134 @@ final class PaerErstHighlightStrokeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        flckinkInkFuse()
     }
 
-    private func setup() {
+    private func flckinkInkFuse() {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.78)
-        let panel = UIView()
-        panel.backgroundColor = PonllyPalette.panel
-        panel.layer.cornerRadius = 24
-        panel.layer.borderWidth = 1.3
-        panel.layer.borderColor = PonllyPalette.line.cgColor
-        panel.layer.shadowColor = PonllyPalette.pink.cgColor
-        panel.layer.shadowOpacity = 0.22
-        panel.layer.shadowRadius = 28
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(panel)
+        let ponllMuralTrace = UIView()
+        ponllMuralTrace.backgroundColor = PonllyPalette.panel
+        ponllMuralTrace.layer.cornerRadius = 24
+        ponllMuralTrace.layer.borderWidth = 1.3
+        ponllMuralTrace.layer.borderColor = PonllyPalette.line.cgColor
+        ponllMuralTrace.layer.shadowColor = PonllyPalette.pink.cgColor
+        ponllMuralTrace.layer.shadowOpacity = 0.22
+        ponllMuralTrace.layer.shadowRadius = 28
+        ponllMuralTrace.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllMuralTrace)
 
-        let iconWrap = UIView()
-        iconWrap.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.12)
-        iconWrap.layer.cornerRadius = 40
-        iconWrap.layer.borderWidth = 1.5
-        iconWrap.layer.borderColor = PonllyPalette.pink.cgColor
-        iconWrap.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(iconWrap)
-        let icon = UIImageView(image: UIImage(systemName: "shield.lefthalf.filled"))
-        icon.tintColor = PonllyPalette.pink
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        iconWrap.addSubview(icon)
+        let bruCiuStencilTrail = UIView()
+        bruCiuStencilTrail.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.12)
+        bruCiuStencilTrail.layer.cornerRadius = 40
+        bruCiuStencilTrail.layer.borderWidth = 1.5
+        bruCiuStencilTrail.layer.borderColor = PonllyPalette.pink.cgColor
+        bruCiuStencilTrail.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralTrace.addSubview(bruCiuStencilTrail)
+        let flckinkMarkerVeil = UIImageView(image: UIImage(systemName: "shield.lefthalf.filled"))
+        flckinkMarkerVeil.tintColor = PonllyPalette.pink
+        flckinkMarkerVeil.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuStencilTrail.addSubview(flckinkMarkerVeil)
 
-        let title = UILabel()
-        title.text = "Block This User?"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 20)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(title)
+        let aerErstChromeAura = UILabel()
+        aerErstChromeAura.text = "Block This User?"
+        aerErstChromeAura.textColor = .white
+        aerErstChromeAura.textAlignment = .center
+        aerErstChromeAura.font = PonllyFonts.muralForgepon(neonLab: 20)
+        aerErstChromeAura.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralTrace.addSubview(aerErstChromeAura)
 
-        let handle = UILabel()
-        handle.text = "@\(user.name.lowercased())"
-        handle.textColor = PonllyPalette.pink
-        handle.textAlignment = .center
-        handle.font = PonllyFonts.mono(size: 14)
-        handle.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(handle)
+        let ponllNeonEcho = UILabel()
+        ponllNeonEcho.text = "@\(aerErstSketchBloom.aerosolDream.lowercased())"
+        ponllNeonEcho.textColor = PonllyPalette.pink
+        ponllNeonEcho.textAlignment = .center
+        ponllNeonEcho.font = PonllyFonts.steelGate(rollingShutter: 14)
+        ponllNeonEcho.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralTrace.addSubview(ponllNeonEcho)
 
-        let notes = UIStackView()
-        notes.axis = .vertical
-        notes.spacing = 12
-        notes.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(notes)
+        let bruCiuTextureSignal = UIStackView()
+        bruCiuTextureSignal.axis = .vertical
+        bruCiuTextureSignal.spacing = 12
+        bruCiuTextureSignal.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralTrace.addSubview(bruCiuTextureSignal)
         [
             "This user cannot view your profile",
             "This user cannot send you messages",
             "This user cannot interact with your content"
-        ].forEach { notes.addArrangedSubview(noteRow($0)) }
+        ].forEach { bruCiuTextureSignal.addArrangedSubview(flckinkSketchQuest($0)) }
 
-        let cancel = UIButton(type: .system)
-        cancel.setTitle("Cancel", for: .normal)
-        cancel.setTitleColor(PonllyPalette.muted, for: .normal)
-        cancel.titleLabel?.font = PonllyFonts.display(size: 13)
-        cancel.layer.cornerRadius = 16
-        cancel.layer.borderWidth = 1.2
-        cancel.layer.borderColor = PonllyPalette.line.cgColor
-        cancel.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
-        cancel.translatesAutoresizingMaskIntoConstraints = false
-        panel.addSubview(cancel)
+        let flckinkPaintCue = UIButton(type: .system)
+        flckinkPaintCue.setTitle("Cancel", for: .normal)
+        flckinkPaintCue.setTitleColor(PonllyPalette.muted, for: .normal)
+        flckinkPaintCue.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        flckinkPaintCue.layer.cornerRadius = 16
+        flckinkPaintCue.layer.borderWidth = 1.2
+        flckinkPaintCue.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkPaintCue.addTarget(self, action: #selector(aerErstInkSeed), for: .touchUpInside)
+        flckinkPaintCue.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralTrace.addSubview(flckinkPaintCue)
 
-        let block = PonllyNeonButton(title: "Block", color: UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1))
-        block.addTarget(self, action: #selector(blockTapped), for: .touchUpInside)
-        panel.addSubview(block)
+        let aerErstWallSpark = PonllyNeonButton("Block", UIColor(red: 255/255, green: 51/255, blue: 85/255, alpha: 1))
+        aerErstWallSpark.addTarget(self, action: #selector(ponllAerosolMood), for: .touchUpInside)
+        ponllMuralTrace.addSubview(aerErstWallSpark)
 
         NSLayoutConstraint.activate([
-            panel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            panel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            panel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
-            panel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
-            iconWrap.centerXAnchor.constraint(equalTo: panel.centerXAnchor),
-            iconWrap.topAnchor.constraint(equalTo: panel.topAnchor, constant: 34),
-            iconWrap.widthAnchor.constraint(equalToConstant: 80),
-            iconWrap.heightAnchor.constraint(equalToConstant: 80),
-            icon.centerXAnchor.constraint(equalTo: iconWrap.centerXAnchor),
-            icon.centerYAnchor.constraint(equalTo: iconWrap.centerYAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 28),
-            icon.heightAnchor.constraint(equalToConstant: 28),
-            title.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 20),
-            title.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -20),
-            title.topAnchor.constraint(equalTo: iconWrap.bottomAnchor, constant: 28),
-            handle.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            handle.trailingAnchor.constraint(equalTo: title.trailingAnchor),
-            handle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 10),
-            notes.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 42),
-            notes.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -34),
-            notes.topAnchor.constraint(equalTo: handle.bottomAnchor, constant: 28),
-            cancel.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 24),
-            cancel.topAnchor.constraint(equalTo: notes.bottomAnchor, constant: 28),
-            cancel.heightAnchor.constraint(equalToConstant: 56),
-            block.leadingAnchor.constraint(equalTo: cancel.trailingAnchor, constant: 12),
-            block.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -24),
-            block.topAnchor.constraint(equalTo: cancel.topAnchor),
-            block.widthAnchor.constraint(equalTo: cancel.widthAnchor),
-            block.heightAnchor.constraint(equalTo: cancel.heightAnchor),
-            block.bottomAnchor.constraint(equalTo: panel.bottomAnchor, constant: -24)
+            ponllMuralTrace.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ponllMuralTrace.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            ponllMuralTrace.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            ponllMuralTrace.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
+            bruCiuStencilTrail.centerXAnchor.constraint(equalTo: ponllMuralTrace.centerXAnchor),
+            bruCiuStencilTrail.topAnchor.constraint(equalTo: ponllMuralTrace.topAnchor, constant: 34),
+            bruCiuStencilTrail.widthAnchor.constraint(equalToConstant: 80),
+            bruCiuStencilTrail.heightAnchor.constraint(equalToConstant: 80),
+            flckinkMarkerVeil.centerXAnchor.constraint(equalTo: bruCiuStencilTrail.centerXAnchor),
+            flckinkMarkerVeil.centerYAnchor.constraint(equalTo: bruCiuStencilTrail.centerYAnchor),
+            flckinkMarkerVeil.widthAnchor.constraint(equalToConstant: 28),
+            flckinkMarkerVeil.heightAnchor.constraint(equalToConstant: 28),
+            aerErstChromeAura.leadingAnchor.constraint(equalTo: ponllMuralTrace.leadingAnchor, constant: 20),
+            aerErstChromeAura.trailingAnchor.constraint(equalTo: ponllMuralTrace.trailingAnchor, constant: -20),
+            aerErstChromeAura.topAnchor.constraint(equalTo: bruCiuStencilTrail.bottomAnchor, constant: 28),
+            ponllNeonEcho.leadingAnchor.constraint(equalTo: aerErstChromeAura.leadingAnchor),
+            ponllNeonEcho.trailingAnchor.constraint(equalTo: aerErstChromeAura.trailingAnchor),
+            ponllNeonEcho.topAnchor.constraint(equalTo: aerErstChromeAura.bottomAnchor, constant: 10),
+            bruCiuTextureSignal.leadingAnchor.constraint(equalTo: ponllMuralTrace.leadingAnchor, constant: 42),
+            bruCiuTextureSignal.trailingAnchor.constraint(equalTo: ponllMuralTrace.trailingAnchor, constant: -34),
+            bruCiuTextureSignal.topAnchor.constraint(equalTo: ponllNeonEcho.bottomAnchor, constant: 28),
+            flckinkPaintCue.leadingAnchor.constraint(equalTo: ponllMuralTrace.leadingAnchor, constant: 24),
+            flckinkPaintCue.topAnchor.constraint(equalTo: bruCiuTextureSignal.bottomAnchor, constant: 28),
+            flckinkPaintCue.heightAnchor.constraint(equalToConstant: 56),
+            aerErstWallSpark.leadingAnchor.constraint(equalTo: flckinkPaintCue.trailingAnchor, constant: 12),
+            aerErstWallSpark.trailingAnchor.constraint(equalTo: ponllMuralTrace.trailingAnchor, constant: -24),
+            aerErstWallSpark.topAnchor.constraint(equalTo: flckinkPaintCue.topAnchor),
+            aerErstWallSpark.widthAnchor.constraint(equalTo: flckinkPaintCue.widthAnchor),
+            aerErstWallSpark.heightAnchor.constraint(equalTo: flckinkPaintCue.heightAnchor),
+            aerErstWallSpark.bottomAnchor.constraint(equalTo: ponllMuralTrace.bottomAnchor, constant: -24)
         ])
     }
 
-    private func noteRow(_ text: String) -> UIView {
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.alignment = .center
-        row.spacing = 12
-        let icon = UIImageView(image: UIImage(systemName: "xmark.circle.fill"))
-        icon.tintColor = PonllyPalette.pink
-        icon.widthAnchor.constraint(equalToConstant: 18).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 18).isActive = true
-        let label = UILabel()
-        label.text = text
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.body(size: 13)
-        label.numberOfLines = 0
-        row.addArrangedSubview(icon)
-        row.addArrangedSubview(label)
-        return row
+    private func flckinkSketchQuest(_ bruCiuPaintPath: String) -> UIView {
+        let flckinkInkArc = UIStackView()
+        flckinkInkArc.axis = .horizontal
+        flckinkInkArc.alignment = .center
+        flckinkInkArc.spacing = 12
+        let aerErstMuralBend = UIImageView(image: UIImage(systemName: "xmark.circle.fill"))
+        aerErstMuralBend.tintColor = PonllyPalette.pink
+        aerErstMuralBend.widthAnchor.constraint(equalToConstant: 18).isActive = true
+        aerErstMuralBend.heightAnchor.constraint(equalToConstant: 18).isActive = true
+        let ponllStencilKick = UILabel()
+        ponllStencilKick.text = bruCiuPaintPath
+        ponllStencilKick.textColor = PonllyPalette.muted
+        ponllStencilKick.font = PonllyFonts.utilityBox(blankFacade: 13)
+        ponllStencilKick.numberOfLines = 0
+        flckinkInkArc.addArrangedSubview(aerErstMuralBend)
+        flckinkInkArc.addArrangedSubview(ponllStencilKick)
+        return flckinkInkArc
     }
 
-    @objc private func cancelTapped() {
+    @objc private func aerErstInkSeed() {
         dismiss(animated: true)
     }
 
-    @objc private func blockTapped() {
-        dismiss(animated: true, completion: onConfirm)
+    @objc private func ponllAerosolMood() {
+        dismiss(animated: true, completion: ponllChromeFlicker)
     }
 }

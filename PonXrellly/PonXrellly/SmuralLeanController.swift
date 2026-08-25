@@ -5,7 +5,7 @@ import StoreKit
 import UIKit
 
 final class SmuralLeanController: UIViewController {
-    private let textView = UITextView()
+    private let ponllflckinkShadowPlanView = UITextView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,7 +13,7 @@ final class SmuralLeanController: UIViewController {
             title = "Privacy Policy"
         }
         view.backgroundColor = PonllyPalette.background
-        setup()
+        bruCiubruCiuOutlinePlan()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,90 +22,90 @@ final class SmuralLeanController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(header)
+    private func bruCiubruCiuOutlinePlan() {
+        let flckinponllPaintPlan = UIView()
+        flckinponllPaintPlan.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinponllPaintPlan)
 
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        back.layer.cornerRadius = 28
-        back.layer.borderWidth = 1
-        back.layer.borderColor = PonllyPalette.line.cgColor
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        header.addSubview(back)
+        let aerErstaerErstLayerPlan = UIButton(type: .system)
+        aerErstaerErstLayerPlan.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        aerErstaerErstLayerPlan.tintColor = .white
+        aerErstaerErstLayerPlan.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        aerErstaerErstLayerPlan.layer.cornerRadius = 28
+        aerErstaerErstLayerPlan.layer.borderWidth = 1
+        aerErstaerErstLayerPlan.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstaerErstLayerPlan.translatesAutoresizingMaskIntoConstraints = false
+        aerErstaerErstLayerPlan.addTarget(self, action: #selector(ponllbruCiuShadowWall), for: .touchUpInside)
+        flckinponllPaintPlan.addSubview(aerErstaerErstLayerPlan)
 
-        let heading = UILabel()
-        heading.text = policyTitle
-        heading.textColor = .white
-        heading.font = PonllyFonts.display(size: 22)
-        heading.textAlignment = .center
-        heading.adjustsFontSizeToFitWidth = true
-        heading.minimumScaleFactor = 0.76
-        heading.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(heading)
+        let ponllHeading = UILabel()
+        ponllHeading.text = aerErstaerErstMuralPlan
+        ponllHeading.textColor = .white
+        ponllHeading.font = PonllyFonts.muralForgepon(neonLab: 22)
+        ponllHeading.textAlignment = .center
+        ponllHeading.adjustsFontSizeToFitWidth = true
+        ponllHeading.minimumScaleFactor = 0.76
+        ponllHeading.translatesAutoresizingMaskIntoConstraints = false
+        flckinponllPaintPlan.addSubview(ponllHeading)
 
-        textView.isEditable = false
-        textView.showsVerticalScrollIndicator = true
-        textView.backgroundColor = .clear
-        textView.textContainerInset = UIEdgeInsets(top: 18, left: 18, bottom: 34, right: 18)
-        textView.attributedText = attributedPolicyText()
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(textView)
+        ponllflckinkShadowPlanView.isEditable = false
+        ponllflckinkShadowPlanView.showsVerticalScrollIndicator = true
+        ponllflckinkShadowPlanView.backgroundColor = .clear
+        ponllflckinkShadowPlanView.textContainerInset = UIEdgeInsets(top: 18, left: 18, bottom: 34, right: 18)
+        ponllflckinkShadowPlanView.attributedText = bruCiuAttributedflckinkStrokeMap()
+        ponllflckinkShadowPlanView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllflckinkShadowPlanView)
 
         NSLayoutConstraint.activate([
-            header.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            header.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            header.topAnchor.constraint(equalTo: view.topAnchor),
-            header.heightAnchor.constraint(equalToConstant: 122),
-            back.leadingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            back.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -12),
-            back.widthAnchor.constraint(equalToConstant: 56),
-            back.heightAnchor.constraint(equalToConstant: 56),
-            heading.leadingAnchor.constraint(equalTo: back.trailingAnchor, constant: 14),
-            heading.trailingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.trailingAnchor, constant: -28),
-            heading.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            textView.topAnchor.constraint(equalTo: header.bottomAnchor),
-            textView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            flckinponllPaintPlan.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flckinponllPaintPlan.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flckinponllPaintPlan.topAnchor.constraint(equalTo: view.topAnchor),
+            flckinponllPaintPlan.heightAnchor.constraint(equalToConstant: 122),
+            aerErstaerErstLayerPlan.leadingAnchor.constraint(equalTo: flckinponllPaintPlan.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            aerErstaerErstLayerPlan.bottomAnchor.constraint(equalTo: flckinponllPaintPlan.bottomAnchor, constant: -12),
+            aerErstaerErstLayerPlan.widthAnchor.constraint(equalToConstant: 56),
+            aerErstaerErstLayerPlan.heightAnchor.constraint(equalToConstant: 56),
+            ponllHeading.leadingAnchor.constraint(equalTo: aerErstaerErstLayerPlan.trailingAnchor, constant: 14),
+            ponllHeading.trailingAnchor.constraint(equalTo: flckinponllPaintPlan.safeAreaLayoutGuide.trailingAnchor, constant: -28),
+            ponllHeading.centerYAnchor.constraint(equalTo: aerErstaerErstLayerPlan.centerYAnchor),
+            ponllflckinkShadowPlanView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            ponllflckinkShadowPlanView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ponllflckinkShadowPlanView.topAnchor.constraint(equalTo: flckinponllPaintPlan.bottomAnchor),
+            ponllflckinkShadowPlanView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 
-    private var isTermsPage: Bool {
-        let value = (title ?? "").lowercased()
-        return value.contains("terms") || value.contains("service")
+    private var bruCiuIsflckinkSketchPlan: Bool {
+        let flckinkValue = (title ?? "").lowercased()
+        return flckinkValue.contains("terms") || flckinkValue.contains("service")
     }
 
-    private var isEulaPage: Bool {
-        let value = (title ?? "").lowercased()
-        return value.contains("eula") || value.contains("license")
+    private var flckinkIsponllWallPlan: Bool {
+        let aerErstValue = (title ?? "").lowercased()
+        return aerErstValue.contains("eula") || aerErstValue.contains("license")
     }
 
-    private var policyTitle: String {
-        if isEulaPage { return "Ponlly EULA Agreement" }
-        return isTermsPage ? "Ponlly User Terms" : "Ponlly Privacy Policy"
+    private var aerErstaerErstMuralPlan: String {
+        if flckinkIsponllWallPlan { return "Ponlly EULA Agreement" }
+        return bruCiuIsflckinkSketchPlan ? "Ponlly User Terms" : "Ponlly Privacy Policy"
     }
 
-    private func attributedPolicyText() -> NSAttributedString {
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.lineSpacing = 5
-        paragraph.paragraphSpacing = 14
-        let text = isEulaPage ? eulaText : (isTermsPage ? userTermsText : privacyText)
+    private func bruCiuAttributedflckinkStrokeMap() -> NSAttributedString {
+        let ponllParagraph = NSMutableParagraphStyle()
+        ponllParagraph.lineSpacing = 5
+        ponllParagraph.paragraphSpacing = 14
+        let bruCiuText = flckinkIsponllWallPlan ? ponllbruCiuLetterWall : (bruCiuIsflckinkSketchPlan ? aerErstUserTermsText : flckinkaerErstTextureWall)
         return NSAttributedString(
-            string: text,
+            string: bruCiuText,
             attributes: [
-                .font: PonllyFonts.body(size: 14, weight: .regular),
+                .font: PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .regular),
                 .foregroundColor: PonllyPalette.muted,
-                .paragraphStyle: paragraph
+                .paragraphStyle: ponllParagraph
             ]
         )
     }
 
-    private var privacyText: String {
+    private var flckinkaerErstTextureWall: String {
         """
         Last updated: August 20, 2026
 
@@ -155,7 +155,7 @@ final class SmuralLeanController: UIViewController {
         """
     }
 
-    private var userTermsText: String {
+    private var aerErstUserTermsText: String {
         """
         Last updated: August 20, 2026
 
@@ -202,7 +202,7 @@ final class SmuralLeanController: UIViewController {
         """
     }
 
-    private var eulaText: String {
+    private var ponllbruCiuLetterWall: String {
         """
         Last updated: August 20, 2026
 
@@ -240,7 +240,7 @@ final class SmuralLeanController: UIViewController {
         """
     }
 
-    @objc private func backTapped() {
+    @objc private func ponllbruCiuShadowWall() {
         navigationController?.popViewController(animated: true)
     }
 }

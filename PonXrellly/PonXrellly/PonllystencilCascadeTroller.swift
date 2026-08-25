@@ -5,24 +5,24 @@ import StoreKit
 import UIKit
 
 final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
-    private let scrollView = UIScrollView()
-    private let nameField = UITextField()
-    private let detailView = UITextView()
-    private let coverButton = UIButton(type: .system)
-    private let coverImageView = UIImageView()
-    private let nextButton = PonllyNeonButton(title: "Next Step")
-    private var selectedCategory = "Graffiti Talk"
-    private var coverImage: UIImage?
-    private var categoryButtons: [UIButton] = []
+    private let ponllScrollVault = UIScrollView()
+    private let bruCiuNameField = UITextField()
+    private let flckinkwallPlanView = UITextView()
+    private let aerErstneonDraftton = UIButton(type: .system)
+    private let ponllshadowDraftiew = UIImageView()
+    private let bruCiuaerosolDrafton = PonllyNeonButton("Next Step")
+    private var flckinkpasteForgegory = "Graffiti Talk"
+    private var aerErstCoverImage: UIImage?
+    private var ponllshadowForgens: [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Voice Room"
         view.backgroundColor = PonllyPalette.background
-        setup()
-        updateNextState()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        bruCiusketchMuse()
+        flckinkUpdateNextState()
+        NotificationCenter.default.addObserver(self, selector: #selector(ponllKeyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(bruCiuKeyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,239 +31,239 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        scrollView.keyboardDismissMode = .onDrag
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+    private func bruCiusketchMuse() {
+        ponllScrollVault.keyboardDismissMode = .onDrag
+        ponllScrollVault.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllScrollVault)
 
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 22
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+        let flckinkStackPath = UIStackView()
+        flckinkStackPath.axis = .vertical
+        flckinkStackPath.spacing = 22
+        flckinkStackPath.translatesAutoresizingMaskIntoConstraints = false
+        ponllScrollVault.addSubview(flckinkStackPath)
 
-        let coverWrap = UIView()
-        coverWrap.translatesAutoresizingMaskIntoConstraints = false
-        coverButton.backgroundColor = PonllyPalette.panel
-        coverButton.layer.cornerRadius = 42
-        coverButton.layer.borderWidth = 2
-        coverButton.layer.borderColor = PonllyPalette.cyan.cgColor
-        coverButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
-        coverButton.tintColor = PonllyPalette.cyan
-        coverButton.translatesAutoresizingMaskIntoConstraints = false
-        coverButton.addTarget(self, action: #selector(coverTapped), for: .touchUpInside)
-        coverWrap.addSubview(coverButton)
-        coverImageView.image = UIImage(named: "graffiti_challenge_wall_04")
-        coverImageView.contentMode = .scaleAspectFill
-        coverImageView.clipsToBounds = true
-        coverImageView.layer.cornerRadius = 39
-        coverImageView.translatesAutoresizingMaskIntoConstraints = false
-        coverButton.addSubview(coverImageView)
-        let coverHint = UILabel()
-        coverHint.text = "Tap To Upload Cover"
-        coverHint.textColor = PonllyPalette.cyan
-        coverHint.textAlignment = .center
-        coverHint.font = PonllyFonts.display(size: 13)
-        coverHint.translatesAutoresizingMaskIntoConstraints = false
-        coverWrap.addSubview(coverHint)
+        let aerErsttextureMuseWrap = UIView()
+        aerErsttextureMuseWrap.translatesAutoresizingMaskIntoConstraints = false
+        aerErstneonDraftton.backgroundColor = PonllyPalette.panel
+        aerErstneonDraftton.layer.cornerRadius = 42
+        aerErstneonDraftton.layer.borderWidth = 2
+        aerErstneonDraftton.layer.borderColor = PonllyPalette.cyan.cgColor
+        aerErstneonDraftton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
+        aerErstneonDraftton.tintColor = PonllyPalette.cyan
+        aerErstneonDraftton.translatesAutoresizingMaskIntoConstraints = false
+        aerErstneonDraftton.addTarget(self, action: #selector(aerErstCoverTapped), for: .touchUpInside)
+        aerErsttextureMuseWrap.addSubview(aerErstneonDraftton)
+        ponllshadowDraftiew.image = UIImage(named: "graffiti_challenge_wall_04")
+        ponllshadowDraftiew.contentMode = .scaleAspectFill
+        ponllshadowDraftiew.clipsToBounds = true
+        ponllshadowDraftiew.layer.cornerRadius = 39
+        ponllshadowDraftiew.translatesAutoresizingMaskIntoConstraints = false
+        aerErstneonDraftton.addSubview(ponllshadowDraftiew)
+        let bruCiuCoverHint = UILabel()
+        bruCiuCoverHint.text = "Tap To Upload Cover"
+        bruCiuCoverHint.textColor = PonllyPalette.cyan
+        bruCiuCoverHint.textAlignment = .center
+        bruCiuCoverHint.font = PonllyFonts.muralForgepon(neonLab: 13)
+        bruCiuCoverHint.translatesAutoresizingMaskIntoConstraints = false
+        aerErsttextureMuseWrap.addSubview(bruCiuCoverHint)
 
-        configureField(nameField, text: "Vandal Street Legends", placeholder: "Room Name")
-        nameField.delegate = self
-        nameField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-        detailView.text = "What will you talk about..."
-        detailView.textColor = PonllyPalette.muted
-        detailView.delegate = self
-        detailView.font = PonllyFonts.body(size: 16, weight: .medium)
-        detailView.backgroundColor = PonllyPalette.panel
-        detailView.layer.cornerRadius = 14
-        detailView.layer.borderWidth = 1
-        detailView.layer.borderColor = PonllyPalette.line.cgColor
-        detailView.textContainerInset = UIEdgeInsets(top: 14, left: 12, bottom: 14, right: 12)
-        detailView.heightAnchor.constraint(equalToConstant: 92).isActive = true
+        ponlldripMuse(bruCiuNameField, streetMuse: "", colorPlan: "Room Name")
+        bruCiuNameField.delegate = self
+        bruCiuNameField.addTarget(self, action: #selector(bruCiuTextDidChange), for: .editingChanged)
+        flckinkwallPlanView.text = "What will you talk about..."
+        flckinkwallPlanView.textColor = PonllyPalette.muted
+        flckinkwallPlanView.delegate = self
+        flckinkwallPlanView.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .medium)
+        flckinkwallPlanView.backgroundColor = PonllyPalette.panel
+        flckinkwallPlanView.layer.cornerRadius = 14
+        flckinkwallPlanView.layer.borderWidth = 1
+        flckinkwallPlanView.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkwallPlanView.textContainerInset = UIEdgeInsets(top: 14, left: 12, bottom: 14, right: 12)
+        flckinkwallPlanView.heightAnchor.constraint(equalToConstant: 92).isActive = true
 
-        stack.addArrangedSubview(coverWrap)
-        stack.addArrangedSubview(formSection(title: "Room Name", content: nameField))
-        stack.addArrangedSubview(formSection(title: "Room Description", content: detailView))
-        stack.addArrangedSubview(categorySection())
-        nextButton.addTarget(self, action: #selector(nextTapped), for: .touchUpInside)
-        stack.addArrangedSubview(nextButton)
+        flckinkStackPath.addArrangedSubview(aerErsttextureMuseWrap)
+        flckinkStackPath.addArrangedSubview(flckinkFormSection(title: "Room Name", content: bruCiuNameField))
+        flckinkStackPath.addArrangedSubview(flckinkFormSection(title: "Room Description", content: flckinkwallPlanView))
+        flckinkStackPath.addArrangedSubview(aerErstCategorySection())
+        bruCiuaerosolDrafton.addTarget(self, action: #selector(flckinkNextTapped), for: .touchUpInside)
+        flckinkStackPath.addArrangedSubview(bruCiuaerosolDrafton)
 
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 22),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -22),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 24),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -34),
-            coverWrap.heightAnchor.constraint(equalToConstant: 118),
-            coverButton.centerXAnchor.constraint(equalTo: coverWrap.centerXAnchor),
-            coverButton.topAnchor.constraint(equalTo: coverWrap.topAnchor),
-            coverButton.widthAnchor.constraint(equalToConstant: 84),
-            coverButton.heightAnchor.constraint(equalToConstant: 84),
-            coverImageView.leadingAnchor.constraint(equalTo: coverButton.leadingAnchor, constant: 3),
-            coverImageView.trailingAnchor.constraint(equalTo: coverButton.trailingAnchor, constant: -3),
-            coverImageView.topAnchor.constraint(equalTo: coverButton.topAnchor, constant: 3),
-            coverImageView.bottomAnchor.constraint(equalTo: coverButton.bottomAnchor, constant: -3),
-            coverHint.centerXAnchor.constraint(equalTo: coverWrap.centerXAnchor),
-            coverHint.topAnchor.constraint(equalTo: coverButton.bottomAnchor, constant: 8),
-            nameField.heightAnchor.constraint(equalToConstant: 50),
-            nextButton.heightAnchor.constraint(equalToConstant: 58)
+            ponllScrollVault.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            ponllScrollVault.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ponllScrollVault.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            ponllScrollVault.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkStackPath.leadingAnchor.constraint(equalTo: ponllScrollVault.frameLayoutGuide.leadingAnchor, constant: 22),
+            flckinkStackPath.trailingAnchor.constraint(equalTo: ponllScrollVault.frameLayoutGuide.trailingAnchor, constant: -22),
+            flckinkStackPath.topAnchor.constraint(equalTo: ponllScrollVault.contentLayoutGuide.topAnchor, constant: 24),
+            flckinkStackPath.bottomAnchor.constraint(equalTo: ponllScrollVault.contentLayoutGuide.bottomAnchor, constant: -34),
+            aerErsttextureMuseWrap.heightAnchor.constraint(equalToConstant: 118),
+            aerErstneonDraftton.centerXAnchor.constraint(equalTo: aerErsttextureMuseWrap.centerXAnchor),
+            aerErstneonDraftton.topAnchor.constraint(equalTo: aerErsttextureMuseWrap.topAnchor),
+            aerErstneonDraftton.widthAnchor.constraint(equalToConstant: 84),
+            aerErstneonDraftton.heightAnchor.constraint(equalToConstant: 84),
+            ponllshadowDraftiew.leadingAnchor.constraint(equalTo: aerErstneonDraftton.leadingAnchor, constant: 3),
+            ponllshadowDraftiew.trailingAnchor.constraint(equalTo: aerErstneonDraftton.trailingAnchor, constant: -3),
+            ponllshadowDraftiew.topAnchor.constraint(equalTo: aerErstneonDraftton.topAnchor, constant: 3),
+            ponllshadowDraftiew.bottomAnchor.constraint(equalTo: aerErstneonDraftton.bottomAnchor, constant: -3),
+            bruCiuCoverHint.centerXAnchor.constraint(equalTo: aerErsttextureMuseWrap.centerXAnchor),
+            bruCiuCoverHint.topAnchor.constraint(equalTo: aerErstneonDraftton.bottomAnchor, constant: 8),
+            bruCiuNameField.heightAnchor.constraint(equalToConstant: 50),
+            bruCiuaerosolDrafton.heightAnchor.constraint(equalToConstant: 58)
         ])
     }
 
-    private func configureField(_ field: UITextField, text: String, placeholder: String) {
-        field.text = text
-        field.placeholder = placeholder
-        field.textColor = .white
-        field.font = PonllyFonts.body(size: 16, weight: .medium)
-        field.backgroundColor = PonllyPalette.panel
-        field.layer.cornerRadius = 14
-        field.layer.borderWidth = 1
-        field.layer.borderColor = PonllyPalette.line.cgColor
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 14, height: 1))
-        field.leftViewMode = .always
+    private func ponlldripMuse(_ bruCiuField: UITextField, streetMuse ponllTextValue: String, colorPlan flckinkPlaceholder: String) {
+        bruCiuField.text = ponllTextValue
+        bruCiuField.placeholder = flckinkPlaceholder
+        bruCiuField.textColor = .white
+        bruCiuField.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .medium)
+        bruCiuField.backgroundColor = PonllyPalette.panel
+        bruCiuField.layer.cornerRadius = 14
+        bruCiuField.layer.borderWidth = 1
+        bruCiuField.layer.borderColor = PonllyPalette.line.cgColor
+        bruCiuField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 14, height: 1))
+        bruCiuField.leftViewMode = .always
     }
 
-    private func formSection(title: String, content: UIView) -> UIStackView {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 8
-        let label = UILabel()
-        label.text = title
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.display(size: 14)
-        stack.addArrangedSubview(label)
-        stack.addArrangedSubview(content)
-        return stack
+    private func flckinkFormSection(title ponllSectionTitle: String, content bruCiuSectionContent: UIView) -> UIStackView {
+        let aerErstSectionStack = UIStackView()
+        aerErstSectionStack.axis = .vertical
+        aerErstSectionStack.spacing = 8
+        let flckinkSectionLabel = UILabel()
+        flckinkSectionLabel.text = ponllSectionTitle
+        flckinkSectionLabel.textColor = PonllyPalette.muted
+        flckinkSectionLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
+        aerErstSectionStack.addArrangedSubview(flckinkSectionLabel)
+        aerErstSectionStack.addArrangedSubview(bruCiuSectionContent)
+        return aerErstSectionStack
     }
 
-    private func categorySection() -> UIStackView {
-        let outer = UIStackView()
-        outer.axis = .vertical
-        outer.spacing = 10
-        let label = UILabel()
-        label.text = "Select Category"
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.display(size: 14)
-        outer.addArrangedSubview(label)
-        let grid = UIStackView()
-        grid.axis = .vertical
-        grid.spacing = 10
-        let rows = [["Graffiti Talk", "Music"], ["Battle Discussion", "Open Critique"]]
-        for rowItems in rows {
-            let row = UIStackView()
-            row.axis = .horizontal
-            row.spacing = 10
-            row.distribution = .fillEqually
-            for item in rowItems {
-                let button = UIButton(type: .system)
-                button.setTitle(item, for: .normal)
-                button.titleLabel?.font = PonllyFonts.display(size: 14)
-                button.layer.cornerRadius = 12
-                button.layer.borderWidth = 1
-                button.heightAnchor.constraint(equalToConstant: 38).isActive = true
-                button.addTarget(self, action: #selector(categoryTapped(_:)), for: .touchUpInside)
-                categoryButtons.append(button)
-                row.addArrangedSubview(button)
+    private func aerErstCategorySection() -> UIStackView {
+        let ponllOuterStack = UIStackView()
+        ponllOuterStack.axis = .vertical
+        ponllOuterStack.spacing = 10
+        let bruCiuCategoryLabel = UILabel()
+        bruCiuCategoryLabel.text = "Select Category"
+        bruCiuCategoryLabel.textColor = PonllyPalette.muted
+        bruCiuCategoryLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
+        ponllOuterStack.addArrangedSubview(bruCiuCategoryLabel)
+        let flckinkCategoryGrid = UIStackView()
+        flckinkCategoryGrid.axis = .vertical
+        flckinkCategoryGrid.spacing = 10
+        let aerErstRows = [["Graffiti Talk", "Music"], ["Battle Discussion", "Open Critique"]]
+        for ponllRowItems in aerErstRows {
+            let bruCiuRowStack = UIStackView()
+            bruCiuRowStack.axis = .horizontal
+            bruCiuRowStack.spacing = 10
+            bruCiuRowStack.distribution = .fillEqually
+            for flckinkItem in ponllRowItems {
+                let aerErstCategoryButton = UIButton(type: .system)
+                aerErstCategoryButton.setTitle(flckinkItem, for: .normal)
+                aerErstCategoryButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
+                aerErstCategoryButton.layer.cornerRadius = 12
+                aerErstCategoryButton.layer.borderWidth = 1
+                aerErstCategoryButton.heightAnchor.constraint(equalToConstant: 38).isActive = true
+                aerErstCategoryButton.addTarget(self, action: #selector(ponllCategoryTapped(_:)), for: .touchUpInside)
+                ponllshadowForgens.append(aerErstCategoryButton)
+                bruCiuRowStack.addArrangedSubview(aerErstCategoryButton)
             }
-            grid.addArrangedSubview(row)
+            flckinkCategoryGrid.addArrangedSubview(bruCiuRowStack)
         }
-        outer.addArrangedSubview(grid)
-        refreshCategories()
-        return outer
+        ponllOuterStack.addArrangedSubview(flckinkCategoryGrid)
+        bruCiuRefreshCategories()
+        return ponllOuterStack
     }
 
-    private func refreshCategories() {
-        categoryButtons.forEach { button in
-            let selected = button.title(for: .normal) == selectedCategory
-            button.setTitleColor(selected ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
-            button.layer.borderColor = (selected ? PonllyPalette.pink : PonllyPalette.line).cgColor
-            button.backgroundColor = selected ? PonllyPalette.pink.withAlphaComponent(0.08) : PonllyPalette.panel
+    private func bruCiuRefreshCategories() {
+        ponllshadowForgens.forEach { flckinkButton in
+            let aerErstSelected = flckinkButton.title(for: .normal) == flckinkpasteForgegory
+            flckinkButton.setTitleColor(aerErstSelected ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
+            flckinkButton.layer.borderColor = (aerErstSelected ? PonllyPalette.pink : PonllyPalette.line).cgColor
+            flckinkButton.backgroundColor = aerErstSelected ? PonllyPalette.pink.withAlphaComponent(0.08) : PonllyPalette.panel
         }
     }
 
-    private func updateNextState() {
-        let ready = !(nameField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-        nextButton.isEnabled = ready
-        nextButton.alpha = ready ? 1 : 0.45
+    private func flckinkUpdateNextState() {
+        let ponllReady = !(bruCiuNameField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        bruCiuaerosolDrafton.isEnabled = ponllReady
+        bruCiuaerosolDrafton.alpha = ponllReady ? 1 : 0.45
     }
 
-    @objc private func categoryTapped(_ sender: UIButton) {
-        selectedCategory = sender.title(for: .normal) ?? selectedCategory
-        refreshCategories()
+    @objc private func ponllCategoryTapped(_ aerErstSender: UIButton) {
+        flckinkpasteForgegory = aerErstSender.title(for: .normal) ?? flckinkpasteForgegory
+        bruCiuRefreshCategories()
     }
 
-    @objc private func textDidChange() {
-        updateNextState()
+    @objc private func bruCiuTextDidChange() {
+        flckinkUpdateNextState()
     }
 
-    @objc private func coverTapped() {
-        let sheet = UIAlertController(title: "Room Cover", message: nil, preferredStyle: .actionSheet)
-        sheet.addAction(UIAlertAction(title: "Photo Library", style: .default) { _ in self.presentCoverPicker(.photoLibrary) })
+    @objc private func aerErstCoverTapped() {
+        let ponllSheet = UIAlertController(title: "Room Cover", message: nil, preferredStyle: .actionSheet)
+        ponllSheet.addAction(UIAlertAction(title: "Photo Library", style: .default) { _ in self.flckinkPresentCoverPicker(.photoLibrary) })
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            sheet.addAction(UIAlertAction(title: "Camera", style: .default) { _ in self.presentCoverPicker(.camera) })
+            ponllSheet.addAction(UIAlertAction(title: "Camera", style: .default) { _ in self.flckinkPresentCoverPicker(.camera) })
         }
-        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        if let popover = sheet.popoverPresentationController {
-            popover.sourceView = coverButton
-            popover.sourceRect = coverButton.bounds
+        ponllSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        if let bruCiuPopover = ponllSheet.popoverPresentationController {
+            bruCiuPopover.sourceView = aerErstneonDraftton
+            bruCiuPopover.sourceRect = aerErstneonDraftton.bounds
         }
-        present(sheet, animated: true)
+        present(ponllSheet, animated: true)
     }
 
-    private func presentCoverPicker(_ source: UIImagePickerController.SourceType) {
-        let picker = UIImagePickerController()
-        picker.sourceType = source
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+    private func flckinkPresentCoverPicker(_ aerErstSource: UIImagePickerController.SourceType) {
+        let ponllPicker = UIImagePickerController()
+        ponllPicker.sourceType = aerErstSource
+        ponllPicker.allowsEditing = true
+        ponllPicker.delegate = self
+        present(ponllPicker, animated: true)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        coverImage = (info[.editedImage] as? UIImage) ?? (info[.originalImage] as? UIImage)
-        coverImageView.image = coverImage
-        picker.dismiss(animated: true)
+    func imagePickerController(_ ponllPicker: UIImagePickerController, didFinishPickingMediaWithInfo bruCiuInfo: [UIImagePickerController.InfoKey: Any]) {
+        aerErstCoverImage = (bruCiuInfo[.editedImage] as? UIImage) ?? (bruCiuInfo[.originalImage] as? UIImage)
+        ponllshadowDraftiew.image = aerErstCoverImage
+        ponllPicker.dismiss(animated: true)
     }
 
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
+    func imagePickerControllerDidCancel(_ flckinkPicker: UIImagePickerController) {
+        flckinkPicker.dismiss(animated: true)
     }
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "What will you talk about..." {
-            textView.text = ""
-            textView.textColor = .white
-        }
-    }
-
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = "What will you talk about..."
-            textView.textColor = PonllyPalette.muted
+    func textViewDidBeginEditing(_ aerErstTextView: UITextView) {
+        if aerErstTextView.text == "What will you talk about..." {
+            aerErstTextView.text = ""
+            aerErstTextView.textColor = .white
         }
     }
 
-    @objc private func nextTapped() {
-        let draft = BruCiuOutlinePlan(
-            name: nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Vandal Street Legends",
-            details: detailView.text == "What will you talk about..." ? "" : detailView.text,
-            category: selectedCategory,
-            coverImage: coverImage
+    func textViewDidEndEditing(_ ponllTextView: UITextView) {
+        if ponllTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            ponllTextView.text = "What will you talk about..."
+            ponllTextView.textColor = PonllyPalette.muted
+        }
+    }
+
+    @objc private func flckinkNextTapped() {
+        let aerErstDraft = BruCiuOutlinePlan(
+            flckinkPrimerCoatpon: bruCiuNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Vandal Street Legends",
+            bruCiuSilverSheenpon: flckinkwallPlanView.text == "What will you talk about..." ? "" : flckinkwallPlanView.text,
+            ponllWhiteEdgepon: flckinkpasteForgegory,
+            aerErstBlackOutlinepon: aerErstCoverImage
         )
-        navigationController?.pushViewController(RErstSteelGateController(draft: draft), animated: true)
+        navigationController?.pushViewController(RErstSteelGateController(bruCiuPaintedFence: aerErstDraft), animated: true)
     }
 
-    @objc private func keyboardWillShow(_ note: Notification) {
-        guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        let bottom = max(frame.height - view.safeAreaInsets.bottom, 0) + 22
-        scrollView.contentInset.bottom = bottom
-        scrollView.verticalScrollIndicatorInsets.bottom = bottom
+    @objc private func ponllKeyboardWillShow(_ bruCiuNote: Notification) {
+        guard let flckinkFrame = bruCiuNote.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        let aerErstBottomInset = max(flckinkFrame.height - view.safeAreaInsets.bottom, 0) + 22
+        ponllScrollVault.contentInset.bottom = aerErstBottomInset
+        ponllScrollVault.verticalScrollIndicatorInsets.bottom = aerErstBottomInset
     }
 
-    @objc private func keyboardWillHide(_ note: Notification) {
-        scrollView.contentInset.bottom = 0
-        scrollView.verticalScrollIndicatorInsets.bottom = 0
+    @objc private func bruCiuKeyboardWillHide(_ ponllNote: Notification) {
+        ponllScrollVault.contentInset.bottom = 0
+        ponllScrollVault.verticalScrollIndicatorInsets.bottom = 0
     }
 }

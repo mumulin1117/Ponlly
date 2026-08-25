@@ -5,44 +5,44 @@ import StoreKit
 import UIKit
 
 final class ErErstPaintLabView: UIView {
-    init(user: PonllyUser, size: CGFloat = 40) {
+    init(user ponllLayerMap: PonllyaerErstTwoToneFillr, size bruCiuCanMap: CGFloat = 40) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: size).isActive = true
-        heightAnchor.constraint(equalToConstant: size).isActive = true
-        layer.cornerRadius = size / 2
+        widthAnchor.constraint(equalToConstant: bruCiuCanMap).isActive = true
+        heightAnchor.constraint(equalToConstant: bruCiuCanMap).isActive = true
+        layer.cornerRadius = bruCiuCanMap / 2
         clipsToBounds = true
         layer.borderWidth = 2
-        layer.borderColor = user.colors[1].cgColor
-        let gradientView = PonllyGradientView(colors: user.colors)
-        gradientView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(gradientView)
-        let imageView = UIImageView(image: PonllyDataCenter.avatarImage(for: user))
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isHidden = imageView.image == nil
-        addSubview(imageView)
-        let label = UILabel()
-        label.text = String(user.name.prefix(1)).uppercased()
-        label.isHidden = imageView.image != nil
-        label.font = PonllyFonts.display(size: size * 0.38)
-        label.textColor = .white
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(label)
+        layer.borderColor = ponllLayerMap.inkDrift[1].cgColor
+        let flckinkCapMap = PonllyponllCyanGlowView(bruCiuDripMarker: ponllLayerMap.inkDrift)
+        flckinkCapMap.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkCapMap)
+        let aerErstStrokeMap = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: ponllLayerMap))
+        aerErstStrokeMap.contentMode = .scaleAspectFill
+        aerErstStrokeMap.translatesAutoresizingMaskIntoConstraints = false
+        aerErstStrokeMap.isHidden = aerErstStrokeMap.image == nil
+        addSubview(aerErstStrokeMap)
+        let ponllMuralPlan = UILabel()
+        ponllMuralPlan.text = String(ponllLayerMap.aerosolDream.prefix(1)).uppercased()
+        ponllMuralPlan.isHidden = aerErstStrokeMap.image != nil
+        ponllMuralPlan.font = PonllyFonts.muralForgepon(neonLab: bruCiuCanMap * 0.38)
+        ponllMuralPlan.textColor = .white
+        ponllMuralPlan.textAlignment = .center
+        ponllMuralPlan.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllMuralPlan)
         NSLayoutConstraint.activate([
-            gradientView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            gradientView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            gradientView.topAnchor.constraint(equalTo: topAnchor),
-            gradientView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor),
-            label.topAnchor.constraint(equalTo: topAnchor),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor)
+            flckinkCapMap.leadingAnchor.constraint(equalTo: leadingAnchor),
+            flckinkCapMap.trailingAnchor.constraint(equalTo: trailingAnchor),
+            flckinkCapMap.topAnchor.constraint(equalTo: topAnchor),
+            flckinkCapMap.bottomAnchor.constraint(equalTo: bottomAnchor),
+            aerErstStrokeMap.leadingAnchor.constraint(equalTo: leadingAnchor),
+            aerErstStrokeMap.trailingAnchor.constraint(equalTo: trailingAnchor),
+            aerErstStrokeMap.topAnchor.constraint(equalTo: topAnchor),
+            aerErstStrokeMap.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ponllMuralPlan.leadingAnchor.constraint(equalTo: leadingAnchor),
+            ponllMuralPlan.trailingAnchor.constraint(equalTo: trailingAnchor),
+            ponllMuralPlan.topAnchor.constraint(equalTo: topAnchor),
+            ponllMuralPlan.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 

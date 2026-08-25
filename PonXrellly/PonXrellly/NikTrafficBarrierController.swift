@@ -5,10 +5,10 @@ import StoreKit
 import UIKit
 
 final class NikTrafficBarrierController: UIViewController {
-    private let selectedImage: UIImage
+    private let ponllWallFlicker: UIImage
 
-    init(selectedImage: UIImage) {
-        self.selectedImage = selectedImage
+    init(bruCiuInkFlash: UIImage) {
+        self.ponllWallFlicker = bruCiuInkFlash
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -20,40 +20,40 @@ final class NikTrafficBarrierController: UIViewController {
         super.viewDidLoad()
         title = "Waiting For Challenger"
         view.backgroundColor = PonllyPalette.background
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 30
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stack)
-        let arena = OnllBlankFacadeView(selectedImage: selectedImage)
-        arena.heightAnchor.constraint(equalToConstant: 220).isActive = true
-        let status = UILabel()
-        status.text = "Your Challenge Is Live! Waiting For A Creator To Accept."
-        status.textColor = PonllyPalette.green
-        status.textAlignment = .center
-        status.font = PonllyFonts.body(size: 14, weight: .bold)
-        status.backgroundColor = UIColor.green.withAlphaComponent(0.1)
-        status.layer.cornerRadius = 16
-        status.clipsToBounds = true
-        status.heightAnchor.constraint(equalToConstant: 58).isActive = true
-        let detail = UILabel()
-        detail.text = "Theme                                      Wildstyle\nStakes Duration                         24 Hours\nOpponent Acceptance Deadline       11 Hours Left"
-        detail.textColor = .white
-        detail.numberOfLines = 0
-        detail.font = PonllyFonts.mono(size: 12)
-        detail.backgroundColor = PonllyPalette.panel
-        detail.layer.cornerRadius = 16
-        detail.clipsToBounds = true
-        detail.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        let delete = PonllyNeonButton(title: "Delete Challenge", color: PonllyPalette.pink)
-        delete.setTitleColor(.white, for: .normal)
-        delete.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
-        [arena, status, detail, delete].forEach(stack.addArrangedSubview)
+        let flckinkMuralTrail = UIStackView()
+        flckinkMuralTrail.axis = .vertical
+        flckinkMuralTrail.spacing = 30
+        flckinkMuralTrail.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkMuralTrail)
+        let aerErstStencilVeil = OnllBlankFacadeView(flckinkPaintAura: ponllWallFlicker)
+        aerErstStencilVeil.heightAnchor.constraint(equalToConstant: 220).isActive = true
+        let ponllChromeEcho = UILabel()
+        ponllChromeEcho.text = "Your Challenge Is Live! Waiting For A Creator To Accept."
+        ponllChromeEcho.textColor = PonllyPalette.green
+        ponllChromeEcho.textAlignment = .center
+        ponllChromeEcho.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .bold)
+        ponllChromeEcho.backgroundColor = UIColor.green.withAlphaComponent(0.1)
+        ponllChromeEcho.layer.cornerRadius = 16
+        ponllChromeEcho.clipsToBounds = true
+        ponllChromeEcho.heightAnchor.constraint(equalToConstant: 58).isActive = true
+        let bruCiuNeonSignal = UILabel()
+        bruCiuNeonSignal.text = "Theme                                      Wildstyle\nStakes Duration                         24 Hours\nOpponent Acceptance Deadline       11 Hours Left"
+        bruCiuNeonSignal.textColor = .white
+        bruCiuNeonSignal.numberOfLines = 0
+        bruCiuNeonSignal.font = PonllyFonts.steelGate(rollingShutter: 12)
+        bruCiuNeonSignal.backgroundColor = PonllyPalette.panel
+        bruCiuNeonSignal.layer.cornerRadius = 16
+        bruCiuNeonSignal.clipsToBounds = true
+        bruCiuNeonSignal.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        let flckinkSketchQuest = PonllyNeonButton("Delete Challenge", PonllyPalette.pink)
+        flckinkSketchQuest.setTitleColor(.white, for: .normal)
+        flckinkSketchQuest.addTarget(self, action: #selector(aerErstTextureCue), for: .touchUpInside)
+        [aerErstStencilVeil, ponllChromeEcho, bruCiuNeonSignal, flckinkSketchQuest].forEach(flckinkMuralTrail.addArrangedSubview)
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 34),
-            delete.heightAnchor.constraint(equalToConstant: 60)
+            flckinkMuralTrail.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            flckinkMuralTrail.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            flckinkMuralTrail.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 34),
+            flckinkSketchQuest.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
@@ -63,8 +63,8 @@ final class NikTrafficBarrierController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    @objc private func deleteTapped() {
-        ponllyShowToast("Deleting challenge...")
+    @objc private func aerErstTextureCue() {
+        flckinkPrimerCoatponlu("Deleting challenge...")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             self.navigationController?.popToRootViewController(animated: true)
         }

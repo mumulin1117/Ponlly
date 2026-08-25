@@ -2,35 +2,35 @@ import UIKit
 import StoreKit
 
 struct PonllycapRackge {
-    let productId: String
-    let coins: Int
-    let fallbackPrice: String
-    let bonus: String?
+    let ponllPaintKick: String
+    let bruCiuInkLean: Int
+    let flckinkWallTwist: String
+    let aerErstAerosolWeave: String?
 
-    var totalCoins: Int {
-        coins + bonusCoins
+    var ponllMuralDepth: Int {
+        bruCiuInkLean + bruCiuStencilGlow
     }
 
-    private var bonusCoins: Int {
+    private var bruCiuStencilGlow: Int {
         guard
-            let bonus,
-            let percent = Int(bonus.replacingOccurrences(of: "+", with: "").replacingOccurrences(of: "%", with: ""))
+            let aerErstAerosolWeave,
+            let flckinkMarkerGrit = Int(aerErstAerosolWeave.replacingOccurrences(of: "+", with: "").replacingOccurrences(of: "%", with: ""))
         else {
             return 0
         }
-        return Int((Double(coins) * Double(percent) / 100.0).rounded())
+        return Int((Double(bruCiuInkLean) * Double(flckinkMarkerGrit) / 100.0).rounded())
     }
 }
 
 enum PoncanShaketalog {
-    static let packages: [PonllycapRackge] = [
-        .init(productId: "dtwplhleglzbyuwv", coins: 50, fallbackPrice: "$0.99", bonus: nil),
-        .init(productId: "kejrefezvtblmhpz", coins: 350, fallbackPrice: "$1.99", bonus: "+10%"),
-        .init(productId: "gzpyowmxuqcppzjw", coins: 725, fallbackPrice: "$4.99", bonus: "+15%"),
-        .init(productId: "ergehryjryrhthjrtjfc", coins: 1050, fallbackPrice: "$6.99", bonus: "+20%"),
-        .init(productId: "ftwaitwezvxxkaeu", coins: 1550, fallbackPrice: "$9.99", bonus: "+25%"),
-        .init(productId: "etyhkvkebquaqqzz", coins: 3150, fallbackPrice: "$19.99", bonus: "+30%"),
-        .init(productId: "frawtxprivibfvrz", coins: 6300, fallbackPrice: "$49.99", bonus: "+35%"),
-        .init(productId: "vcbkojuzznekgnys", coins: 12750, fallbackPrice: "$99.99", bonus: "+50%")
+    static let aerErstChromeNoise: [PonllycapRackge] = [
+        .init(ponllPaintKick: "dtwplhleglzbyuwv", bruCiuInkLean: 50, flckinkWallTwist: "$0.99", aerErstAerosolWeave: nil),
+        .init(ponllPaintKick: "kejrefezvtblmhpz", bruCiuInkLean: 350, flckinkWallTwist: "$1.99", aerErstAerosolWeave: "+10%"),
+        .init(ponllPaintKick: "gzpyowmxuqcppzjw", bruCiuInkLean: 725, flckinkWallTwist: "$4.99", aerErstAerosolWeave: "+15%"),
+        .init(ponllPaintKick: "ergehryjryrhthjrtjfc", bruCiuInkLean: 1050, flckinkWallTwist: "$6.99", aerErstAerosolWeave: "+20%"),
+        .init(ponllPaintKick: "ftwaitwezvxxkaeu", bruCiuInkLean: 1550, flckinkWallTwist: "$9.99", aerErstAerosolWeave: "+25%"),
+        .init(ponllPaintKick: "etyhkvkebquaqqzz", bruCiuInkLean: 3150, flckinkWallTwist: "$19.99", aerErstAerosolWeave: "+30%"),
+        .init(ponllPaintKick: "frawtxprivibfvrz", bruCiuInkLean: 6300, flckinkWallTwist: "$49.99", aerErstAerosolWeave: "+35%"),
+        .init(ponllPaintKick: "vcbkojuzznekgnys", bruCiuInkLean: 12750, flckinkWallTwist: "$99.99", aerErstAerosolWeave: "+50%")
     ]
 }

@@ -8,7 +8,7 @@ final class ErstWeatheredPaperController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        setupHub()
+        flckinkGraffitiLab()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -17,140 +17,140 @@ final class ErstWeatheredPaperController: UIViewController {
         tabBarController?.tabBar.isHidden = false
     }
 
-    private func setupHub() {
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(header)
-        let title = UILabel()
-        title.text = "Creation Hub"
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 24)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(title)
-        let subtitle = UILabel()
-        subtitle.text = "Select Your Medium"
-        subtitle.textColor = PonllyPalette.muted
-        subtitle.font = PonllyFonts.body(size: 13, weight: .medium)
-        subtitle.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(subtitle)
-        let close = UIButton(type: .system)
-        close.setImage(UIImage(systemName: "xmark"), for: .normal)
-        close.tintColor = .white
-        close.backgroundColor = PonllyPalette.panel
-        close.layer.cornerRadius = 28
-        close.layer.borderWidth = 1
-        close.layer.borderColor = PonllyPalette.line.cgColor
-        close.translatesAutoresizingMaskIntoConstraints = false
-        close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-        header.addSubview(close)
+    private func flckinkGraffitiLab() {
+        let aerErstAerosolLab = UIView()
+        aerErstAerosolLab.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstAerosolLab)
+        let ponllLetterLab = UILabel()
+        ponllLetterLab.text = "Creation Hub"
+        ponllLetterLab.textColor = .white
+        ponllLetterLab.font = PonllyFonts.muralForgepon(neonLab: 24)
+        ponllLetterLab.translatesAutoresizingMaskIntoConstraints = false
+        aerErstAerosolLab.addSubview(ponllLetterLab)
+        let bruCiuColorLab = UILabel()
+        bruCiuColorLab.text = "Select Your Medium"
+        bruCiuColorLab.textColor = PonllyPalette.muted
+        bruCiuColorLab.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+        bruCiuColorLab.translatesAutoresizingMaskIntoConstraints = false
+        aerErstAerosolLab.addSubview(bruCiuColorLab)
+        let flckinkWallLab = UIButton(type: .system)
+        flckinkWallLab.setImage(UIImage(systemName: "xmark"), for: .normal)
+        flckinkWallLab.tintColor = .white
+        flckinkWallLab.backgroundColor = PonllyPalette.panel
+        flckinkWallLab.layer.cornerRadius = 28
+        flckinkWallLab.layer.borderWidth = 1
+        flckinkWallLab.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkWallLab.translatesAutoresizingMaskIntoConstraints = false
+        flckinkWallLab.addTarget(self, action: #selector(aerErstStyleLab), for: .touchUpInside)
+        aerErstAerosolLab.addSubview(flckinkWallLab)
 
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 22
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stack)
-        stack.addArrangedSubview(hubCard(title: "Post Video", subtitle: "Share progress timelapses & tutorials", color: PonllyPalette.cyan, iconName: "create_post_video_icon", action: #selector(videoTapped)))
-        stack.addArrangedSubview(hubCard(title: "Start PK Battle", subtitle: "Challenge another writer to a battle", color: PonllyPalette.green, iconName: "create_pk_battle_icon", action: #selector(start)))
-        stack.addArrangedSubview(hubCard(title: "Create Voice Room", subtitle: "Hangout, review yards, or critique", color: .white, iconName: "create_voice_room_icon", action: #selector(voiceTapped)))
+        let ponllMarkerLab = UIStackView()
+        ponllMarkerLab.axis = .vertical
+        ponllMarkerLab.spacing = 22
+        ponllMarkerLab.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllMarkerLab)
+        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Post Video", bruCiuAerosolMuse: "Share progress timelapses & tutorials", flckinkMuralMuse: PonllyPalette.cyan, aerErstStreetMuse: "create_post_video_icon", ponllPaintMuse: #selector(bruCiuInkMuse)))
+        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Start PK Battle", bruCiuAerosolMuse: "Challenge another writer to a battle", flckinkMuralMuse: PonllyPalette.green, aerErstStreetMuse: "create_pk_battle_icon", ponllPaintMuse: #selector(flckinkStyleLab)))
+        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Create Voice Room", bruCiuAerosolMuse: "Hangout, review yards, or critique", flckinkMuralMuse: .white, aerErstStreetMuse: "create_voice_room_icon", ponllPaintMuse: #selector(aerErstWallMuse)))
 
-        let mark = UILabel()
-        mark.text = "Leave Your Mark"
-        mark.textColor = UIColor.white.withAlphaComponent(0.03)
-        mark.font = PonllyFonts.display(size: 34)
-        mark.adjustsFontSizeToFitWidth = true
-        mark.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(mark)
+        let bruCiuLetterMuse = UILabel()
+        bruCiuLetterMuse.text = "Leave Your Mark"
+        bruCiuLetterMuse.textColor = UIColor.white.withAlphaComponent(0.03)
+        bruCiuLetterMuse.font = PonllyFonts.muralForgepon(neonLab: 34)
+        bruCiuLetterMuse.adjustsFontSizeToFitWidth = true
+        bruCiuLetterMuse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuLetterMuse)
 
         NSLayoutConstraint.activate([
-            header.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
-            header.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-            header.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 34),
-            header.heightAnchor.constraint(equalToConstant: 74),
-            title.leadingAnchor.constraint(equalTo: header.leadingAnchor),
-            title.topAnchor.constraint(equalTo: header.topAnchor),
-            subtitle.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 2),
-            close.trailingAnchor.constraint(equalTo: header.trailingAnchor),
-            close.centerYAnchor.constraint(equalTo: header.centerYAnchor),
-            close.widthAnchor.constraint(equalToConstant: 56),
-            close.heightAnchor.constraint(equalToConstant: 56),
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-            stack.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 46),
-            mark.leadingAnchor.constraint(equalTo: stack.leadingAnchor),
-            mark.trailingAnchor.constraint(equalTo: stack.trailingAnchor),
-            mark.topAnchor.constraint(equalTo: stack.bottomAnchor, constant: 76)
+            aerErstAerosolLab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            aerErstAerosolLab.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            aerErstAerosolLab.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 34),
+            aerErstAerosolLab.heightAnchor.constraint(equalToConstant: 74),
+            ponllLetterLab.leadingAnchor.constraint(equalTo: aerErstAerosolLab.leadingAnchor),
+            ponllLetterLab.topAnchor.constraint(equalTo: aerErstAerosolLab.topAnchor),
+            bruCiuColorLab.leadingAnchor.constraint(equalTo: ponllLetterLab.leadingAnchor),
+            bruCiuColorLab.topAnchor.constraint(equalTo: ponllLetterLab.bottomAnchor, constant: 2),
+            flckinkWallLab.trailingAnchor.constraint(equalTo: aerErstAerosolLab.trailingAnchor),
+            flckinkWallLab.centerYAnchor.constraint(equalTo: aerErstAerosolLab.centerYAnchor),
+            flckinkWallLab.widthAnchor.constraint(equalToConstant: 56),
+            flckinkWallLab.heightAnchor.constraint(equalToConstant: 56),
+            ponllMarkerLab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            ponllMarkerLab.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            ponllMarkerLab.topAnchor.constraint(equalTo: aerErstAerosolLab.bottomAnchor, constant: 46),
+            bruCiuLetterMuse.leadingAnchor.constraint(equalTo: ponllMarkerLab.leadingAnchor),
+            bruCiuLetterMuse.trailingAnchor.constraint(equalTo: ponllMarkerLab.trailingAnchor),
+            bruCiuLetterMuse.topAnchor.constraint(equalTo: ponllMarkerLab.bottomAnchor, constant: 76)
         ])
     }
 
-    private func hubCard(title: String, subtitle: String, color: UIColor, iconName: String, action: Selector) -> UIControl {
-        let card = UIControl()
-        card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.72)
-        card.layer.cornerRadius = 26
-        card.layer.borderWidth = 1.2
-        card.layer.borderColor = color.withAlphaComponent(0.25).cgColor
-        card.layer.shadowColor = color.cgColor
-        card.layer.shadowOpacity = 0.2
-        card.layer.shadowRadius = 18
-        card.translatesAutoresizingMaskIntoConstraints = false
-        card.addTarget(self, action: action, for: .touchUpInside)
-        let titleLabel = UILabel()
-        titleLabel.text = title
-        titleLabel.textColor = color
-        titleLabel.font = PonllyFonts.display(size: 16)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        let subtitleLabel = UILabel()
-        subtitleLabel.text = subtitle
-        subtitleLabel.textColor = PonllyPalette.muted
-        subtitleLabel.font = PonllyFonts.body(size: 12, weight: .medium)
-        subtitleLabel.numberOfLines = 2
-        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        let icon = UIImageView(image: UIImage(named: iconName))
-        icon.contentMode = .scaleAspectFit
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(titleLabel)
-        card.addSubview(subtitleLabel)
-        card.addSubview(icon)
+    private func bruCiuStencilLab(ponllMuralLab: String, bruCiuAerosolMuse: String, flckinkMuralMuse: UIColor, aerErstStreetMuse: String, ponllPaintMuse: Selector) -> UIControl {
+        let bruCiuInkMuse = UIControl()
+        bruCiuInkMuse.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.72)
+        bruCiuInkMuse.layer.cornerRadius = 26
+        bruCiuInkMuse.layer.borderWidth = 1.2
+        bruCiuInkMuse.layer.borderColor = flckinkMuralMuse.withAlphaComponent(0.25).cgColor
+        bruCiuInkMuse.layer.shadowColor = flckinkMuralMuse.cgColor
+        bruCiuInkMuse.layer.shadowOpacity = 0.2
+        bruCiuInkMuse.layer.shadowRadius = 18
+        bruCiuInkMuse.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuInkMuse.addTarget(self, action: ponllPaintMuse, for: .touchUpInside)
+        let flckinkLetterMuse = UILabel()
+        flckinkLetterMuse.text = ponllMuralLab
+        flckinkLetterMuse.textColor = flckinkMuralMuse
+        flckinkLetterMuse.font = PonllyFonts.muralForgepon(neonLab: 16)
+        flckinkLetterMuse.translatesAutoresizingMaskIntoConstraints = false
+        let aerErstColorMuse = UILabel()
+        aerErstColorMuse.text = bruCiuAerosolMuse
+        aerErstColorMuse.textColor = PonllyPalette.muted
+        aerErstColorMuse.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+        aerErstColorMuse.numberOfLines = 2
+        aerErstColorMuse.translatesAutoresizingMaskIntoConstraints = false
+        let ponllStyleMuse = UIImageView(image: UIImage(named: aerErstStreetMuse))
+        ponllStyleMuse.contentMode = .scaleAspectFit
+        ponllStyleMuse.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuInkMuse.addSubview(flckinkLetterMuse)
+        bruCiuInkMuse.addSubview(aerErstColorMuse)
+        bruCiuInkMuse.addSubview(ponllStyleMuse)
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 112),
-            titleLabel.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 28),
-            titleLabel.topAnchor.constraint(equalTo: card.topAnchor, constant: 28),
-            subtitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            subtitleLabel.trailingAnchor.constraint(lessThanOrEqualTo: icon.leadingAnchor, constant: -18),
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
-            icon.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -26),
-            icon.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 72),
-            icon.heightAnchor.constraint(equalToConstant: 72)
+            bruCiuInkMuse.heightAnchor.constraint(equalToConstant: 112),
+            flckinkLetterMuse.leadingAnchor.constraint(equalTo: bruCiuInkMuse.leadingAnchor, constant: 28),
+            flckinkLetterMuse.topAnchor.constraint(equalTo: bruCiuInkMuse.topAnchor, constant: 28),
+            aerErstColorMuse.leadingAnchor.constraint(equalTo: flckinkLetterMuse.leadingAnchor),
+            aerErstColorMuse.trailingAnchor.constraint(lessThanOrEqualTo: ponllStyleMuse.leadingAnchor, constant: -18),
+            aerErstColorMuse.topAnchor.constraint(equalTo: flckinkLetterMuse.bottomAnchor, constant: 12),
+            ponllStyleMuse.trailingAnchor.constraint(equalTo: bruCiuInkMuse.trailingAnchor, constant: -26),
+            ponllStyleMuse.centerYAnchor.constraint(equalTo: bruCiuInkMuse.centerYAnchor),
+            ponllStyleMuse.widthAnchor.constraint(equalToConstant: 72),
+            ponllStyleMuse.heightAnchor.constraint(equalToConstant: 72)
         ])
-        return card
+        return bruCiuInkMuse
     }
 
-    @objc private func start() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let entry = BruCiuPrintLayerController()
-            entry.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(entry, animated: true)
+    @objc private func flckinkStyleLab() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let bruCiuWallMuse = BruCiuPrintLayerController()
+            bruCiuWallMuse.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(bruCiuWallMuse, animated: true)
         }
     }
 
-    @objc private func closeTapped() {
+    @objc private func aerErstStyleLab() {
         tabBarController?.selectedIndex = 0
     }
 
-    @objc private func videoTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let publish = DinkWallTextureController()
-            publish.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(publish, animated: true)
+    @objc private func bruCiuInkMuse() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let flckinkDripMuse = DinkWallTextureController()
+            flckinkDripMuse.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(flckinkDripMuse, animated: true)
         }
     }
 
-    @objc private func voiceTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let room = PonllystencilCascadeTroller()
-            room.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(room, animated: true)
+    @objc private func aerErstWallMuse() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let ponllTextureMuse = PonllystencilCascadeTroller()
+            ponllTextureMuse.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(ponllTextureMuse, animated: true)
         }
     }
 }

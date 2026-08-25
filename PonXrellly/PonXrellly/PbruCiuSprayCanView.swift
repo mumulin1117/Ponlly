@@ -5,23 +5,23 @@ import StoreKit
 import UIKit
 
 final class PbruCiuSprayCanView: UIView {
-    init(image: UIImage) {
+    init(bruCiuPaintSignal: UIImage) {
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel
         layer.cornerRadius = 18
         layer.borderWidth = 2
         layer.borderColor = PonllyPalette.pink.cgColor
         clipsToBounds = true
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(imageView)
+        let flckinkInkQuest = UIImageView(image: bruCiuPaintSignal)
+        flckinkInkQuest.contentMode = .scaleAspectFill
+        flckinkInkQuest.clipsToBounds = true
+        flckinkInkQuest.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkInkQuest)
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            flckinkInkQuest.leadingAnchor.constraint(equalTo: leadingAnchor),
+            flckinkInkQuest.trailingAnchor.constraint(equalTo: trailingAnchor),
+            flckinkInkQuest.topAnchor.constraint(equalTo: topAnchor),
+            flckinkInkQuest.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 

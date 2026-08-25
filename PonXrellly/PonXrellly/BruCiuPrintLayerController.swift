@@ -9,7 +9,7 @@ final class BruCiuPrintLayerController: UIViewController {
         super.viewDidLoad()
         title = "Create Battle"
         view.backgroundColor = PonllyPalette.background
-        setupPage()
+        ponllWallMark()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -18,40 +18,40 @@ final class BruCiuPrintLayerController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setupPage() {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 28
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stack)
-        let title = UILabel()
-        title.text = "Challenge Other Graffiti Creators To Prove Your Skills"
-        title.font = PonllyFonts.body(size: 16, weight: .semibold)
-        title.textColor = PonllyPalette.muted
-        title.numberOfLines = 0
-        let hero = PbruCiuClearCoatView(artwork: .init(id: "hero", ownerId: "u01", title: "Neon Fury Chrome Clash", style: "Battle", imageName: "graffiti_challenge_wall_05", colors: [.cyan, .systemPink, .orange]))
-        hero.heightAnchor.constraint(equalToConstant: 240).isActive = true
-        let how = UILabel()
-        how.text = "How PK Battles Work"
-        how.textColor = PonllyPalette.cyan
-        how.font = PonllyFonts.display(size: 14)
-        let steps = UILabel()
-        steps.text = "1   Select Your Artwork From Your Crew Vault\n\n2   Set Battle Rules, Themes, And Time Stakes\n\n3   Wait For A Challenger To Drop Their Tag"
-        steps.textColor = .white
-        steps.font = PonllyFonts.body(size: 14, weight: .semibold)
-        steps.numberOfLines = 0
-        let button = PonllyNeonButton(title: "Start Creating")
-        button.addTarget(self, action: #selector(goNextTapped), for: .touchUpInside)
-        [title, hero, how, steps, button].forEach(stack.addArrangedSubview)
+    private func ponllWallMark() {
+        let bruCiuStreetGlyph = UIStackView()
+        bruCiuStreetGlyph.axis = .vertical
+        bruCiuStreetGlyph.spacing = 28
+        bruCiuStreetGlyph.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuStreetGlyph)
+        let flckinkLetterMaze = UILabel()
+        flckinkLetterMaze.text = "Challenge Other Graffiti Creators To Prove Your Skills"
+        flckinkLetterMaze.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .semibold)
+        flckinkLetterMaze.textColor = PonllyPalette.muted
+        flckinkLetterMaze.numberOfLines = 0
+        let aerErstCurveFlow = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "hero", markerStroke: "u01", nozzleCraft: "Neon Fury Chrome Clash", capControl: "Battle", stencilBloom: "graffiti_challenge_wall_05", inkDrift: [.cyan, .systemPink, .orange]))
+        aerErstCurveFlow.heightAnchor.constraint(equalToConstant: 240).isActive = true
+        let ponllAngleBreak = UILabel()
+        ponllAngleBreak.text = "How PK Battles Work"
+        ponllAngleBreak.textColor = PonllyPalette.cyan
+        ponllAngleBreak.font = PonllyFonts.muralForgepon(neonLab: 14)
+        let bruCiuEdgeSnap = UILabel()
+        bruCiuEdgeSnap.text = "1   Select Your Artwork From Your Crew Vault\n\n2   Set Battle Rules, Themes, And Time Stakes\n\n3   Wait For A Challenger To Drop Their Tag"
+        bruCiuEdgeSnap.textColor = .white
+        bruCiuEdgeSnap.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
+        bruCiuEdgeSnap.numberOfLines = 0
+        let flckinkShapeStack = PonllyNeonButton("Start Creating")
+        flckinkShapeStack.addTarget(self, action: #selector(aerErstLayerBlend), for: .touchUpInside)
+        [flckinkLetterMaze, aerErstCurveFlow, ponllAngleBreak, bruCiuEdgeSnap, flckinkShapeStack].forEach(bruCiuStreetGlyph.addArrangedSubview)
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
-            button.heightAnchor.constraint(equalToConstant: 60)
+            bruCiuStreetGlyph.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            bruCiuStreetGlyph.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            bruCiuStreetGlyph.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
+            flckinkShapeStack.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
-    @objc private func goNextTapped() {
+    @objc private func aerErstLayerBlend() {
         navigationController?.pushViewController(PponllPaintMapController(), animated: true)
     }
 }

@@ -5,10 +5,10 @@ import StoreKit
 import UIKit
 
 final class ErstMuralPlanController: UIViewController {
-    private let selectedImage: UIImage
+    private let bruCiuWallPlan: UIImage
 
-    init(selectedImage: UIImage) {
-        self.selectedImage = selectedImage
+    init(flckinkColorPlan aerErstSketchPlan: UIImage) {
+        self.bruCiuWallPlan = aerErstSketchPlan
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -20,38 +20,38 @@ final class ErstMuralPlanController: UIViewController {
         super.viewDidLoad()
         title = "Preview Challenge"
         view.backgroundColor = PonllyPalette.background
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 26
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stack)
-        let arena = OnllBlankFacadeView(selectedImage: selectedImage)
-        arena.heightAnchor.constraint(equalToConstant: 220).isActive = true
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-        let text = UILabel()
-        text.text = "Wildstyle\n\nWildstyle Showdown\nBring Your Absolute Best Chrome Letters And Sharp Outlines to This Burner Arena"
-        text.numberOfLines = 0
-        text.textColor = .white
-        text.font = PonllyFonts.display(size: 14)
-        card.addSubview(text)
-        text.pinToEdges(of: card, insets: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18))
-        let publish = PonllyNeonButton(title: "Publish Challenge")
-        publish.addTarget(self, action: #selector(publishTapped), for: .touchUpInside)
-        let edit = UIButton(type: .system)
-        edit.setTitle("Edit Challenge", for: .normal)
-        edit.tintColor = PonllyPalette.muted
-        edit.titleLabel?.font = PonllyFonts.display(size: 12)
-        [arena, card, publish, edit].forEach(stack.addArrangedSubview)
+        let ponllLayerPlan = UIStackView()
+        ponllLayerPlan.axis = .vertical
+        ponllLayerPlan.spacing = 26
+        ponllLayerPlan.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllLayerPlan)
+        let bruCiuPaintPlan = OnllBlankFacadeView(flckinkPaintAura: bruCiuWallPlan)
+        bruCiuPaintPlan.heightAnchor.constraint(equalToConstant: 220).isActive = true
+        let flckinkOutlinePlan = UIView()
+        flckinkOutlinePlan.backgroundColor = PonllyPalette.panel
+        flckinkOutlinePlan.layer.cornerRadius = 18
+        flckinkOutlinePlan.layer.borderWidth = 1
+        flckinkOutlinePlan.layer.borderColor = PonllyPalette.line.cgColor
+        let aerErstShadowPlan = UILabel()
+        aerErstShadowPlan.text = "Wildstyle\n\nWildstyle Showdown\nBring Your Absolute Best Chrome Letters And Sharp Outlines to This Burner Arena"
+        aerErstShadowPlan.numberOfLines = 0
+        aerErstShadowPlan.textColor = .white
+        aerErstShadowPlan.font = PonllyFonts.muralForgepon(neonLab: 14)
+        flckinkOutlinePlan.addSubview(aerErstShadowPlan)
+        aerErstShadowPlan.woodPanelPonlly(steelGate: flckinkOutlinePlan, bruCiuClearCoat: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18))
+        let ponllFillPlan = PonllyNeonButton("Publish Challenge")
+        ponllFillPlan.addTarget(self, action: #selector(bruCiuStencilPlan), for: .touchUpInside)
+        let flckinkPastePlan = UIButton(type: .system)
+        flckinkPastePlan.setTitle("Edit Challenge", for: .normal)
+        flckinkPastePlan.tintColor = PonllyPalette.muted
+        flckinkPastePlan.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
+        [bruCiuPaintPlan, flckinkOutlinePlan, ponllFillPlan, flckinkPastePlan].forEach(ponllLayerPlan.addArrangedSubview)
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
-            card.heightAnchor.constraint(equalToConstant: 170),
-            publish.heightAnchor.constraint(equalToConstant: 60)
+            ponllLayerPlan.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllLayerPlan.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            ponllLayerPlan.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            flckinkOutlinePlan.heightAnchor.constraint(equalToConstant: 170),
+            ponllFillPlan.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
@@ -61,10 +61,10 @@ final class ErstMuralPlanController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    @objc private func publishTapped() {
-        ponllyShowToast("Publishing challenge...")
+    @objc private func bruCiuStencilPlan() {
+        flckinkPrimerCoatponlu("Publishing challenge...")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
-            self.navigationController?.pushViewController(NikTrafficBarrierController(selectedImage: self.selectedImage), animated: true)
+            self.navigationController?.pushViewController(NikTrafficBarrierController(bruCiuInkFlash: self.bruCiuWallPlan), animated: true)
         }
     }
 }

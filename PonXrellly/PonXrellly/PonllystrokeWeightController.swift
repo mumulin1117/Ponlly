@@ -5,11 +5,11 @@ import StoreKit
 import UIKit
 
 final class PonllystrokeWeightController: UIViewController {
-    private let user: PonllyUser
-    private var micMuted = false
+    private let ponllUserSignal: PonllyaerErstTwoToneFillr
+    private var bruCiuMicMuted = false
 
-    init(user: PonllyUser) {
-        self.user = user
+    init(pasteSketch ponllUserSignal: PonllyaerErstTwoToneFillr) {
+        self.ponllUserSignal = ponllUserSignal
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -21,7 +21,7 @@ final class PonllystrokeWeightController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        setup()
+        bruCiuBridgePillar()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,173 +30,173 @@ final class PonllystrokeWeightController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let remoteImage = UIImageView(image: PonllyDataCenter.avatarImage(for: user) ?? UIImage(named: "voice_room_bg_08"))
-        remoteImage.contentMode = .scaleAspectFill
-        remoteImage.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(remoteImage)
-        remoteImage.pinToEdges(of: view)
+    private func bruCiuBridgePillar() {
+        let aerErstRemoteImage = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: ponllUserSignal) ?? UIImage(named: "voice_room_bg_08"))
+        aerErstRemoteImage.contentMode = .scaleAspectFill
+        aerErstRemoteImage.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstRemoteImage)
+        aerErstRemoteImage.woodPanelPonlly(steelGate: view)
 
-        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .systemThinMaterialDark))
-        blur.alpha = remoteImage.image == nil ? 0 : 0.18
-        blur.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(blur)
-        blur.pinToEdges(of: view)
+        let ponllBlurLayer = UIVisualEffectView(effect: UIBlurEffect(style: .systemThinMaterialDark))
+        ponllBlurLayer.alpha = aerErstRemoteImage.image == nil ? 0 : 0.18
+        ponllBlurLayer.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllBlurLayer)
+        ponllBlurLayer.woodPanelPonlly(steelGate: view)
 
-        let veil = PonllyGradientView(
-            colors: [
+        let bruCiuVeilLayer = PonllyponllCyanGlowView(
+            bruCiuDripMarker: [
                 UIColor.black.withAlphaComponent(0.08),
                 UIColor.black.withAlphaComponent(0.1),
                 PonllyPalette.background.withAlphaComponent(0.72)
             ],
-            start: CGPoint(x: 0.5, y: 0),
-            end: CGPoint(x: 0.5, y: 1)
+            CGPoint(x: 0.5, y: 0),
+            CGPoint(x: 0.5, y: 1)
         )
-        view.addSubview(veil)
-        veil.pinToEdges(of: view)
+        view.addSubview(bruCiuVeilLayer)
+        bruCiuVeilLayer.woodPanelPonlly(steelGate: view)
 
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-        back.layer.cornerRadius = 38
-        back.layer.borderWidth = 1
-        back.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        view.addSubview(back)
+        let flckinkBackButton = UIButton(type: .system)
+        flckinkBackButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkBackButton.tintColor = .white
+        flckinkBackButton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
+        flckinkBackButton.layer.cornerRadius = 38
+        flckinkBackButton.layer.borderWidth = 1
+        flckinkBackButton.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
+        flckinkBackButton.translatesAutoresizingMaskIntoConstraints = false
+        flckinkBackButton.addTarget(self, action: #selector(ponllpaintSketch), for: .touchUpInside)
+        view.addSubview(flckinkBackButton)
 
-        let more = UIButton(type: .system)
-        more.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        more.tintColor = .white
-        more.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-        more.layer.cornerRadius = 38
-        more.layer.borderWidth = 1
-        more.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
-        more.translatesAutoresizingMaskIntoConstraints = false
-        more.addTarget(self, action: #selector(moreTapped), for: .touchUpInside)
-        view.addSubview(more)
+        let aerErstneonSketchutton = UIButton(type: .system)
+        aerErstneonSketchutton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        aerErstneonSketchutton.tintColor = .white
+        aerErstneonSketchutton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
+        aerErstneonSketchutton.layer.cornerRadius = 38
+        aerErstneonSketchutton.layer.borderWidth = 1
+        aerErstneonSketchutton.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
+        aerErstneonSketchutton.translatesAutoresizingMaskIntoConstraints = false
+        aerErstneonSketchutton.addTarget(self, action: #selector(bruCiuMoreTapped), for: .touchUpInside)
+        view.addSubview(aerErstneonSketchutton)
 
-        let title = UILabel()
-        title.text = user.name.replacingOccurrences(of: "@", with: "")
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 24)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(title)
+        let ponllCallTitle = UILabel()
+        ponllCallTitle.text = ponllUserSignal.aerosolDream.replacingOccurrences(of: "@", with: "")
+        ponllCallTitle.textColor = .white
+        ponllCallTitle.textAlignment = .center
+        ponllCallTitle.font = PonllyFonts.muralForgepon(neonLab: 24)
+        ponllCallTitle.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllCallTitle)
 
-        let localPreview = UIImageView(image: PonllyDataCenter.avatarImage(for: PonllyDataCenter.currentUser()) ?? UIImage(named: "ponlly_avatar_01"))
-        localPreview.contentMode = .scaleAspectFill
-        localPreview.clipsToBounds = true
-        localPreview.layer.cornerRadius = 16
-        localPreview.layer.borderWidth = 2.5
-        localPreview.layer.borderColor = UIColor.white.cgColor
-        localPreview.layer.shadowColor = UIColor.black.cgColor
-        localPreview.layer.shadowOpacity = 0.35
-        localPreview.layer.shadowRadius = 18
-        localPreview.layer.shadowOffset = CGSize(width: 0, height: 8)
-        localPreview.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(localPreview)
+        let bruCiuchromeSketchew = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "ponlly_avatar_01"))
+        bruCiuchromeSketchew.contentMode = .scaleAspectFill
+        bruCiuchromeSketchew.clipsToBounds = true
+        bruCiuchromeSketchew.layer.cornerRadius = 16
+        bruCiuchromeSketchew.layer.borderWidth = 2.5
+        bruCiuchromeSketchew.layer.borderColor = UIColor.white.cgColor
+        bruCiuchromeSketchew.layer.shadowColor = UIColor.black.cgColor
+        bruCiuchromeSketchew.layer.shadowOpacity = 0.35
+        bruCiuchromeSketchew.layer.shadowRadius = 18
+        bruCiuchromeSketchew.layer.shadowOffset = CGSize(width: 0, height: 8)
+        bruCiuchromeSketchew.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuchromeSketchew)
 
-        let timer = UILabel()
-        timer.text = "04:15 Hrs"
-        timer.textColor = .white
-        timer.textAlignment = .center
-        timer.font = PonllyFonts.body(size: 24, weight: .black)
-        timer.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(timer)
+        let flckinkurbanSketch = UILabel()
+        flckinkurbanSketch.text = "04:15 Hrs"
+        flckinkurbanSketch.textColor = .white
+        flckinkurbanSketch.textAlignment = .center
+        flckinkurbanSketch.font = PonllyFonts.utilityBox(blankFacade: 24, aerosolMuse: .black)
+        flckinkurbanSketch.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkurbanSketch)
 
-        let mic = callButton(symbol: "mic.fill", background: .black.withAlphaComponent(0.78), tint: .white, size: 76, action: #selector(micTapped(_:)))
-        let end = callButton(symbol: "phone.down.fill", background: UIColor(red: 1, green: 31/255, blue: 39/255, alpha: 1), tint: .white, size: 92, action: #selector(endTapped))
-        let camera = callButton(symbol: "video.fill", background: .black.withAlphaComponent(0.78), tint: .white, size: 76, action: #selector(cameraTapped))
-        [mic, end, camera].forEach(view.addSubview)
+        let aerErstmarkerSketchutton = aerErststencilSketchtton(outlineSketch: "mic.fill", shadowSketch: .black.withAlphaComponent(0.78), styleSketch: .white, wallSketch: 76, colorSketch: #selector(flckinkMicTapped(_:)))
+        let ponllEndButton = aerErststencilSketchtton(outlineSketch: "phone.down.fill", shadowSketch: UIColor(red: 1, green: 31/255, blue: 39/255, alpha: 1), styleSketch: .white, wallSketch: 92, colorSketch: #selector(aerErstEndTapped))
+        let bruCiuCameraButton = aerErststencilSketchtton(outlineSketch: "video.fill", shadowSketch: .black.withAlphaComponent(0.78), styleSketch: .white, wallSketch: 76, colorSketch: #selector(ponllCameraTapped))
+        [aerErstmarkerSketchutton, ponllEndButton, bruCiuCameraButton].forEach(view.addSubview)
 
         NSLayoutConstraint.activate([
-            back.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            back.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
-            back.widthAnchor.constraint(equalToConstant: 76),
-            back.heightAnchor.constraint(equalToConstant: 76),
-            more.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            more.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            more.widthAnchor.constraint(equalToConstant: 76),
-            more.heightAnchor.constraint(equalToConstant: 76),
-            title.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            localPreview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-            localPreview.bottomAnchor.constraint(equalTo: timer.topAnchor, constant: -16),
-            localPreview.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.38),
-            localPreview.heightAnchor.constraint(equalTo: localPreview.widthAnchor, multiplier: 1.25),
-            timer.centerXAnchor.constraint(equalTo: localPreview.centerXAnchor),
-            timer.bottomAnchor.constraint(equalTo: mic.topAnchor, constant: -54),
-            end.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            end.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -76),
-            mic.centerYAnchor.constraint(equalTo: end.centerYAnchor),
-            mic.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 36),
-            camera.centerYAnchor.constraint(equalTo: end.centerYAnchor),
-            camera.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -36)
+            flckinkBackButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            flckinkBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
+            flckinkBackButton.widthAnchor.constraint(equalToConstant: 76),
+            flckinkBackButton.heightAnchor.constraint(equalToConstant: 76),
+            aerErstneonSketchutton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            aerErstneonSketchutton.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
+            aerErstneonSketchutton.widthAnchor.constraint(equalToConstant: 76),
+            aerErstneonSketchutton.heightAnchor.constraint(equalToConstant: 76),
+            ponllCallTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ponllCallTitle.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
+            bruCiuchromeSketchew.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            bruCiuchromeSketchew.bottomAnchor.constraint(equalTo: flckinkurbanSketch.topAnchor, constant: -16),
+            bruCiuchromeSketchew.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.38),
+            bruCiuchromeSketchew.heightAnchor.constraint(equalTo: bruCiuchromeSketchew.widthAnchor, multiplier: 1.25),
+            flckinkurbanSketch.centerXAnchor.constraint(equalTo: bruCiuchromeSketchew.centerXAnchor),
+            flckinkurbanSketch.bottomAnchor.constraint(equalTo: aerErstmarkerSketchutton.topAnchor, constant: -54),
+            ponllEndButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ponllEndButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -76),
+            aerErstmarkerSketchutton.centerYAnchor.constraint(equalTo: ponllEndButton.centerYAnchor),
+            aerErstmarkerSketchutton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 36),
+            bruCiuCameraButton.centerYAnchor.constraint(equalTo: ponllEndButton.centerYAnchor),
+            bruCiuCameraButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -36)
         ])
     }
 
-    private func callButton(symbol: String, background: UIColor, tint: UIColor, size: CGFloat, action: Selector) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: symbol), for: .normal)
-        button.tintColor = tint
-        button.backgroundColor = background
-        button.layer.cornerRadius = size / 2
-        button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: size).isActive = true
-        button.heightAnchor.constraint(equalToConstant: size).isActive = true
-        button.addTarget(self, action: action, for: .touchUpInside)
-        return button
+    private func aerErststencilSketchtton(outlineSketch ponllSymbol: String, shadowSketch bruCiuBackground: UIColor, styleSketch flckinkTint: UIColor, wallSketch aerErstSize: CGFloat, colorSketch ponllAction: Selector) -> UIButton {
+        let bruCiuButton = UIButton(type: .system)
+        bruCiuButton.setImage(UIImage(systemName: ponllSymbol), for: .normal)
+        bruCiuButton.tintColor = flckinkTint
+        bruCiuButton.backgroundColor = bruCiuBackground
+        bruCiuButton.layer.cornerRadius = aerErstSize / 2
+        bruCiuButton.imageView?.contentMode = .scaleAspectFit
+        bruCiuButton.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuButton.widthAnchor.constraint(equalToConstant: aerErstSize).isActive = true
+        bruCiuButton.heightAnchor.constraint(equalToConstant: aerErstSize).isActive = true
+        bruCiuButton.addTarget(self, action: ponllAction, for: .touchUpInside)
+        return bruCiuButton
     }
 
-    @objc private func micTapped(_ sender: UIButton) {
-        micMuted.toggle()
-        sender.setImage(UIImage(systemName: micMuted ? "mic.slash.fill" : "mic.fill"), for: .normal)
-        sender.tintColor = .white
-        sender.backgroundColor = micMuted ? PonllyPalette.pink.withAlphaComponent(0.86) : .black.withAlphaComponent(0.78)
-        ponllyShowToast(micMuted ? "Microphone muted" : "Microphone open")
+    @objc private func flckinkMicTapped(_ aerErstSender: UIButton) {
+        bruCiuMicMuted.toggle()
+        aerErstSender.setImage(UIImage(systemName: bruCiuMicMuted ? "mic.slash.fill" : "mic.fill"), for: .normal)
+        aerErstSender.tintColor = .white
+        aerErstSender.backgroundColor = bruCiuMicMuted ? PonllyPalette.pink.withAlphaComponent(0.86) : .black.withAlphaComponent(0.78)
+        flckinkPrimerCoatponlu(bruCiuMicMuted ? "Microphone muted" : "Microphone open")
     }
 
-    @objc private func cameraTapped() {
-        ponllyShowToast("Camera switched")
+    @objc private func ponllCameraTapped() {
+        flckinkPrimerCoatponlu("Camera switched")
     }
 
-    @objc private func endTapped() {
-        ponllyShowToast("Call ended")
+    @objc private func aerErstEndTapped() {
+        flckinkPrimerCoatponlu("Call ended")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             self.navigationController?.popViewController(animated: true)
         }
     }
 
-    @objc private func moreTapped() {
-        let menu = PaerosolGritMenuViewController(user: user)
-        menu.onReport = { [weak self] in
+    @objc private func bruCiuMoreTapped() {
+        let flckinkMenu = PaerosolGritMenuViewController(aerErstInkFuse: ponllUserSignal)
+        flckinkMenu.bruCiuSketchFlicker = { [weak self] in
             guard let self else { return }
-            let report = PonllycolorFadeController(user: self.user)
-            report.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(report, animated: true)
+            let aerErstReport = PonllycolorFadeController(user: self.ponllUserSignal)
+            aerErstReport.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(aerErstReport, animated: true)
         }
-        menu.onBlock = { [weak self] in
+        flckinkMenu.flckinkPaintFlash = { [weak self] in
             guard let self else { return }
-            let confirm = PaerErstHighlightStrokeController(user: self.user)
-            confirm.onConfirm = { [weak self] in
+            let ponllConfirm = PaerErstHighlightStrokeController(bruCiuPaintFlash: self.ponllUserSignal)
+            ponllConfirm.ponllChromeFlicker = { [weak self] in
                 guard let self else { return }
-                PonllyDataCenter.blockUser(self.user.id)
-                self.ponllyShowToast("Artist blocked")
+                PonllyponllTornEdge.ponllMetalPanel(self.ponllUserSignal.graffitiPulse)
+                self.flckinkPrimerCoatponlu("Artist blocked")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
                     self.navigationController?.popViewController(animated: true)
                 }
             }
-            confirm.modalPresentationStyle = .overFullScreen
-            self.present(confirm, animated: false)
+            ponllConfirm.modalPresentationStyle = .overFullScreen
+            self.present(ponllConfirm, animated: false)
         }
-        menu.modalPresentationStyle = .overFullScreen
-        present(menu, animated: false)
+        flckinkMenu.modalPresentationStyle = .overFullScreen
+        present(flckinkMenu, animated: false)
     }
 
-    @objc private func backTapped() {
+    @objc private func ponllpaintSketch() {
         navigationController?.popViewController(animated: true)
     }
 }

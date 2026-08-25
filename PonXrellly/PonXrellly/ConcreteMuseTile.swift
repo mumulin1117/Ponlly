@@ -5,46 +5,46 @@ import StoreKit
 import UIKit
 
 final class ConcreteMuseTile: UIControl {
-    let theme: OnllPaintPlanTheme
+    let aerErstStreetPosterStyle: PonllPaintPlan
 
-    init(theme: OnllPaintPlanTheme) {
-        self.theme = theme
+    init(ponllColorPrint bruCiuHandbillTexture: PonllPaintPlan) {
+        self.aerErstStreetPosterStyle = bruCiuHandbillTexture
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel
         layer.cornerRadius = 14
         layer.borderWidth = 1
         layer.borderColor = PonllyPalette.line.cgColor
         translatesAutoresizingMaskIntoConstraints = false
-        let image = UIImageView(image: UIImage(named: theme.imageName))
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 10
-        image.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(image)
-        let title = UILabel()
-        title.text = theme.name
-        title.textColor = .white
-        title.font = PonllyFonts.themeFont(size: 10)
-        title.numberOfLines = 1
-        title.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(title)
-        let meta = UILabel()
-        meta.text = "\(theme.cost.formatted()) Coins"
-        meta.textColor = theme.accent
-        meta.font = PonllyFonts.mono(size: 11)
-        meta.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(meta)
+        let flckinkPulpPaper = UIImageView(image: UIImage(named: bruCiuHandbillTexture.aerErstTwoToneFill))
+        flckinkPulpPaper.contentMode = .scaleAspectFill
+        flckinkPulpPaper.clipsToBounds = true
+        flckinkPulpPaper.layer.cornerRadius = 10
+        flckinkPulpPaper.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkPulpPaper)
+        let aerErstWeatheredPaper = UILabel()
+        aerErstWeatheredPaper.text = bruCiuHandbillTexture.bruCiuMagentaBurstpobn
+        aerErstWeatheredPaper.textColor = .white
+        aerErstWeatheredPaper.font = PonllyFonts.graffitiForge(aerosolForge: 10)
+        aerErstWeatheredPaper.numberOfLines = 1
+        aerErstWeatheredPaper.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(aerErstWeatheredPaper)
+        let ponllTornEdge = UILabel()
+        ponllTornEdge.text = "\(bruCiuHandbillTexture.aerErstLayerBlend.formatted()) Coins"
+        ponllTornEdge.textColor = bruCiuHandbillTexture.flckinkSplitFill
+        ponllTornEdge.font = PonllyFonts.steelGate(rollingShutter: 11)
+        ponllTornEdge.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllTornEdge)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 128),
-            image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            image.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            image.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            image.heightAnchor.constraint(equalToConstant: 74),
-            title.leadingAnchor.constraint(equalTo: image.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: image.trailingAnchor),
-            title.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 8),
-            meta.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            meta.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 4)
+            flckinkPulpPaper.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            flckinkPulpPaper.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            flckinkPulpPaper.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            flckinkPulpPaper.heightAnchor.constraint(equalToConstant: 74),
+            aerErstWeatheredPaper.leadingAnchor.constraint(equalTo: flckinkPulpPaper.leadingAnchor),
+            aerErstWeatheredPaper.trailingAnchor.constraint(equalTo: flckinkPulpPaper.trailingAnchor),
+            aerErstWeatheredPaper.topAnchor.constraint(equalTo: flckinkPulpPaper.bottomAnchor, constant: 8),
+            ponllTornEdge.leadingAnchor.constraint(equalTo: aerErstWeatheredPaper.leadingAnchor),
+            ponllTornEdge.topAnchor.constraint(equalTo: aerErstWeatheredPaper.bottomAnchor, constant: 4)
         ])
     }
 

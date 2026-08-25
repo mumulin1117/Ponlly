@@ -5,15 +5,15 @@ import StoreKit
 import UIKit
 
 final class BlckinkHiddenWallController: UIViewController {
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
+    private let ponllGraffitiPulse = UIScrollView()
+    private let bruCiuAerosolDream = UIStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Blacklist"
         view.backgroundColor = PonllyPalette.background
-        setup()
-        reload()
+        flckinkStreetMural()
+        aerErstWallCraft()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,171 +22,171 @@ final class BlckinkHiddenWallController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(header)
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        back.layer.cornerRadius = 28
-        back.layer.borderWidth = 1
-        back.layer.borderColor = PonllyPalette.line.cgColor
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        header.addSubview(back)
-        let title = UILabel()
-        title.text = "Blacklist"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 24)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(title)
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        stack.axis = .vertical
-        stack.spacing = 14
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+    private func flckinkStreetMural() {
+        let aerErstBrickPalette = UIView()
+        aerErstBrickPalette.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstBrickPalette)
+        let ponllInkDrift = UIButton(type: .system)
+        ponllInkDrift.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        ponllInkDrift.tintColor = .white
+        ponllInkDrift.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        ponllInkDrift.layer.cornerRadius = 28
+        ponllInkDrift.layer.borderWidth = 1
+        ponllInkDrift.layer.borderColor = PonllyPalette.line.cgColor
+        ponllInkDrift.translatesAutoresizingMaskIntoConstraints = false
+        ponllInkDrift.addTarget(self, action: #selector(aerErstDropShadow), for: .touchUpInside)
+        aerErstBrickPalette.addSubview(ponllInkDrift)
+        let bruCiuMarkerStroke = UILabel()
+        bruCiuMarkerStroke.text = "Blacklist"
+        bruCiuMarkerStroke.textColor = .white
+        bruCiuMarkerStroke.textAlignment = .center
+        bruCiuMarkerStroke.font = PonllyFonts.muralForgepon(neonLab: 24)
+        bruCiuMarkerStroke.translatesAutoresizingMaskIntoConstraints = false
+        aerErstBrickPalette.addSubview(bruCiuMarkerStroke)
+        ponllGraffitiPulse.alwaysBounceVertical = true
+        ponllGraffitiPulse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllGraffitiPulse)
+        bruCiuAerosolDream.axis = .vertical
+        bruCiuAerosolDream.spacing = 14
+        bruCiuAerosolDream.translatesAutoresizingMaskIntoConstraints = false
+        ponllGraffitiPulse.addSubview(bruCiuAerosolDream)
         NSLayoutConstraint.activate([
-            header.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            header.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            header.topAnchor.constraint(equalTo: view.topAnchor),
-            header.heightAnchor.constraint(equalToConstant: 122),
-            back.leadingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            back.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -12),
-            back.widthAnchor.constraint(equalToConstant: 56),
-            back.heightAnchor.constraint(equalToConstant: 56),
-            title.centerXAnchor.constraint(equalTo: header.centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: header.bottomAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 18),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -18),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 30),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -34)
+            aerErstBrickPalette.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            aerErstBrickPalette.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            aerErstBrickPalette.topAnchor.constraint(equalTo: view.topAnchor),
+            aerErstBrickPalette.heightAnchor.constraint(equalToConstant: 122),
+            ponllInkDrift.leadingAnchor.constraint(equalTo: aerErstBrickPalette.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllInkDrift.bottomAnchor.constraint(equalTo: aerErstBrickPalette.bottomAnchor, constant: -12),
+            ponllInkDrift.widthAnchor.constraint(equalToConstant: 56),
+            ponllInkDrift.heightAnchor.constraint(equalToConstant: 56),
+            bruCiuMarkerStroke.centerXAnchor.constraint(equalTo: aerErstBrickPalette.centerXAnchor),
+            bruCiuMarkerStroke.centerYAnchor.constraint(equalTo: ponllInkDrift.centerYAnchor),
+            ponllGraffitiPulse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            ponllGraffitiPulse.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ponllGraffitiPulse.topAnchor.constraint(equalTo: aerErstBrickPalette.bottomAnchor),
+            ponllGraffitiPulse.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            bruCiuAerosolDream.leadingAnchor.constraint(equalTo: ponllGraffitiPulse.frameLayoutGuide.leadingAnchor, constant: 18),
+            bruCiuAerosolDream.trailingAnchor.constraint(equalTo: ponllGraffitiPulse.frameLayoutGuide.trailingAnchor, constant: -18),
+            bruCiuAerosolDream.topAnchor.constraint(equalTo: ponllGraffitiPulse.contentLayoutGuide.topAnchor, constant: 30),
+            bruCiuAerosolDream.bottomAnchor.constraint(equalTo: ponllGraffitiPulse.contentLayoutGuide.bottomAnchor, constant: -34)
         ])
     }
 
-    private func reload() {
-        stack.arrangedSubviews.forEach {
-            stack.removeArrangedSubview($0)
+    private func aerErstWallCraft() {
+        bruCiuAerosolDream.arrangedSubviews.forEach {
+            bruCiuAerosolDream.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        let users = PonllyDataCenter.blockedUsers()
-        guard !users.isEmpty else {
-            stack.addArrangedSubview(emptyPanel())
+        let flckinkNozzleCraft = PonllyponllTornEdge.aerErstSketchWall()
+        guard !flckinkNozzleCraft.isEmpty else {
+            bruCiuAerosolDream.addArrangedSubview(bruCiuChromeFill())
             return
         }
-        let count = UILabel()
-        count.text = "\(users.count) Blocked Users"
-        count.textColor = PonllyPalette.muted
-        count.font = PonllyFonts.display(size: 14)
-        stack.addArrangedSubview(count)
-        users.forEach { stack.addArrangedSubview(row(for: $0)) }
+        let aerErstCapControl = UILabel()
+        aerErstCapControl.text = "\(flckinkNozzleCraft.count) Blocked Users"
+        aerErstCapControl.textColor = PonllyPalette.muted
+        aerErstCapControl.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuAerosolDream.addArrangedSubview(aerErstCapControl)
+        flckinkNozzleCraft.forEach { bruCiuAerosolDream.addArrangedSubview(ponllPaintFlow(for: $0)) }
     }
 
-    private func row(for user: PonllyUser) -> UIView {
-        let card = UIControl()
-        card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.94)
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-        card.addAction(UIAction { [weak self] _ in
-            let profile = FlckinkPrimerCoatController(user: user)
-            profile.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(profile, animated: true)
+    private func ponllPaintFlow(for bruCiuSprayRhythm: PonllyaerErstTwoToneFillr) -> UIView {
+        let ponllStencilBloom = UIControl()
+        ponllStencilBloom.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.94)
+        ponllStencilBloom.layer.cornerRadius = 18
+        ponllStencilBloom.layer.borderWidth = 1
+        ponllStencilBloom.layer.borderColor = PonllyPalette.line.cgColor
+        ponllStencilBloom.addAction(UIAction { [weak self] _ in
+            let flckinkMuralGrid = FlckinkPrimerCoatController(user: bruCiuSprayRhythm)
+            flckinkMuralGrid.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(flckinkMuralGrid, animated: true)
         }, for: .touchUpInside)
-        let avatar = ErErstPaintLabView(user: user, size: 48)
-        card.addSubview(avatar)
-        let name = UILabel()
-        name.text = user.name.lowercased()
-        name.textColor = .white
-        name.font = PonllyFonts.display(size: 14)
-        name.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(name)
-        let crew = UILabel()
-        crew.text = "\(user.crew) • \(user.city)"
-        crew.textColor = PonllyPalette.muted
-        crew.font = PonllyFonts.body(size: 12, weight: .medium)
-        crew.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(crew)
-        let unblock = UIButton(type: .system)
-        unblock.setTitle("Unblock", for: .normal)
-        unblock.setTitleColor(PonllyPalette.pink, for: .normal)
-        unblock.titleLabel?.font = PonllyFonts.display(size: 14)
-        unblock.layer.cornerRadius = 14
-        unblock.layer.borderWidth = 1
-        unblock.layer.borderColor = PonllyPalette.pink.cgColor
-        unblock.translatesAutoresizingMaskIntoConstraints = false
-        unblock.addAction(UIAction { [weak self] _ in
-            PonllyDataCenter.unblockUser(user.id)
-            self?.ponllyShowToast("Artist unblocked")
-            self?.reload()
+        let aerErstWildstyleCurve = ErErstPaintLabView(user: bruCiuSprayRhythm, size: 48)
+        ponllStencilBloom.addSubview(aerErstWildstyleCurve)
+        let ponllBubbleLetter = UILabel()
+        ponllBubbleLetter.text = bruCiuSprayRhythm.aerosolDream.lowercased()
+        ponllBubbleLetter.textColor = .white
+        ponllBubbleLetter.font = PonllyFonts.muralForgepon(neonLab: 14)
+        ponllBubbleLetter.translatesAutoresizingMaskIntoConstraints = false
+        ponllStencilBloom.addSubview(ponllBubbleLetter)
+        let flckinkOutlineGlow = UILabel()
+        flckinkOutlineGlow.text = "\(bruCiuSprayRhythm.sprayRhythm) • \(bruCiuSprayRhythm.paintFlow)"
+        flckinkOutlineGlow.textColor = PonllyPalette.muted
+        flckinkOutlineGlow.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+        flckinkOutlineGlow.translatesAutoresizingMaskIntoConstraints = false
+        ponllStencilBloom.addSubview(flckinkOutlineGlow)
+        let aerErstDropShadow = UIButton(type: .system)
+        aerErstDropShadow.setTitle("Unblock", for: .normal)
+        aerErstDropShadow.setTitleColor(PonllyPalette.pink, for: .normal)
+        aerErstDropShadow.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
+        aerErstDropShadow.layer.cornerRadius = 14
+        aerErstDropShadow.layer.borderWidth = 1
+        aerErstDropShadow.layer.borderColor = PonllyPalette.pink.cgColor
+        aerErstDropShadow.translatesAutoresizingMaskIntoConstraints = false
+        aerErstDropShadow.addAction(UIAction { [weak self] _ in
+            PonllyponllTornEdge.bruCiuGarageDoor(bruCiuSprayRhythm.graffitiPulse)
+            self?.flckinkPrimerCoatponlu("Artist unblocked")
+            self?.aerErstWallCraft()
         }, for: .touchUpInside)
-        card.addSubview(unblock)
+        ponllStencilBloom.addSubview(aerErstDropShadow)
 
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 90),
-            avatar.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
-            avatar.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            name.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 14),
-            name.topAnchor.constraint(equalTo: card.topAnchor, constant: 20),
-            name.trailingAnchor.constraint(lessThanOrEqualTo: unblock.leadingAnchor, constant: -12),
-            crew.leadingAnchor.constraint(equalTo: name.leadingAnchor),
-            crew.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 6),
-            crew.trailingAnchor.constraint(equalTo: name.trailingAnchor),
-            unblock.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -16),
-            unblock.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            unblock.widthAnchor.constraint(equalToConstant: 98),
-            unblock.heightAnchor.constraint(equalToConstant: 40)
+            ponllStencilBloom.heightAnchor.constraint(equalToConstant: 90),
+            aerErstWildstyleCurve.leadingAnchor.constraint(equalTo: ponllStencilBloom.leadingAnchor, constant: 16),
+            aerErstWildstyleCurve.centerYAnchor.constraint(equalTo: ponllStencilBloom.centerYAnchor),
+            ponllBubbleLetter.leadingAnchor.constraint(equalTo: aerErstWildstyleCurve.trailingAnchor, constant: 14),
+            ponllBubbleLetter.topAnchor.constraint(equalTo: ponllStencilBloom.topAnchor, constant: 20),
+            ponllBubbleLetter.trailingAnchor.constraint(lessThanOrEqualTo: aerErstDropShadow.leadingAnchor, constant: -12),
+            flckinkOutlineGlow.leadingAnchor.constraint(equalTo: ponllBubbleLetter.leadingAnchor),
+            flckinkOutlineGlow.topAnchor.constraint(equalTo: ponllBubbleLetter.bottomAnchor, constant: 6),
+            flckinkOutlineGlow.trailingAnchor.constraint(equalTo: ponllBubbleLetter.trailingAnchor),
+            aerErstDropShadow.trailingAnchor.constraint(equalTo: ponllStencilBloom.trailingAnchor, constant: -16),
+            aerErstDropShadow.centerYAnchor.constraint(equalTo: ponllStencilBloom.centerYAnchor),
+            aerErstDropShadow.widthAnchor.constraint(equalToConstant: 98),
+            aerErstDropShadow.heightAnchor.constraint(equalToConstant: 40)
         ])
-        return card
+        return ponllStencilBloom
     }
 
-    private func emptyPanel() -> UIView {
-        let panel = UIStackView()
-        panel.axis = .vertical
-        panel.alignment = .center
-        panel.spacing = 18
-        panel.layoutMargins = UIEdgeInsets(top: 190, left: 24, bottom: 24, right: 24)
-        panel.isLayoutMarginsRelativeArrangement = true
-        let iconWrap = UIView()
-        iconWrap.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.16)
-        iconWrap.layer.cornerRadius = 64
-        iconWrap.layer.borderWidth = 2
-        iconWrap.layer.borderColor = PonllyPalette.pink.cgColor
-        iconWrap.widthAnchor.constraint(equalToConstant: 128).isActive = true
-        iconWrap.heightAnchor.constraint(equalToConstant: 128).isActive = true
-        let icon = UIImageView(image: UIImage(systemName: "shield.checkered"))
-        icon.tintColor = PonllyPalette.pink
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        iconWrap.addSubview(icon)
+    private func bruCiuChromeFill() -> UIView {
+        let ponllPaintMist = UIStackView()
+        ponllPaintMist.axis = .vertical
+        ponllPaintMist.alignment = .center
+        ponllPaintMist.spacing = 18
+        ponllPaintMist.layoutMargins = UIEdgeInsets(top: 190, left: 24, bottom: 24, right: 24)
+        ponllPaintMist.isLayoutMarginsRelativeArrangement = true
+        let bruCiuColorSplash = UIView()
+        bruCiuColorSplash.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.16)
+        bruCiuColorSplash.layer.cornerRadius = 64
+        bruCiuColorSplash.layer.borderWidth = 2
+        bruCiuColorSplash.layer.borderColor = PonllyPalette.pink.cgColor
+        bruCiuColorSplash.widthAnchor.constraint(equalToConstant: 128).isActive = true
+        bruCiuColorSplash.heightAnchor.constraint(equalToConstant: 128).isActive = true
+        let flckinkNeonDrip = UIImageView(image: UIImage(systemName: "shield.checkered"))
+        flckinkNeonDrip.tintColor = PonllyPalette.pink
+        flckinkNeonDrip.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuColorSplash.addSubview(flckinkNeonDrip)
         NSLayoutConstraint.activate([
-            icon.centerXAnchor.constraint(equalTo: iconWrap.centerXAnchor),
-            icon.centerYAnchor.constraint(equalTo: iconWrap.centerYAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 42),
-            icon.heightAnchor.constraint(equalToConstant: 42)
+            flckinkNeonDrip.centerXAnchor.constraint(equalTo: bruCiuColorSplash.centerXAnchor),
+            flckinkNeonDrip.centerYAnchor.constraint(equalTo: bruCiuColorSplash.centerYAnchor),
+            flckinkNeonDrip.widthAnchor.constraint(equalToConstant: 42),
+            flckinkNeonDrip.heightAnchor.constraint(equalToConstant: 42)
         ])
-        let title = UILabel()
-        title.text = "No Blocked Users"
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 24)
-        let body = UILabel()
-        body.text = "Your blacklist is empty. Users you block will appear here."
-        body.textColor = PonllyPalette.muted
-        body.font = PonllyFonts.body(size: 14, weight: .regular)
-        body.textAlignment = .center
-        body.numberOfLines = 0
-        [iconWrap, title, body].forEach(panel.addArrangedSubview)
-        return panel
+        let aerErstConcreteMuse = UILabel()
+        aerErstConcreteMuse.text = "No Blocked Users"
+        aerErstConcreteMuse.textColor = .white
+        aerErstConcreteMuse.font = PonllyFonts.muralForgepon(neonLab: 24)
+        let ponllAlleyCanvas = UILabel()
+        ponllAlleyCanvas.text = "Your blacklist is empty. Users you block will appear here."
+        ponllAlleyCanvas.textColor = PonllyPalette.muted
+        ponllAlleyCanvas.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .regular)
+        ponllAlleyCanvas.textAlignment = .center
+        ponllAlleyCanvas.numberOfLines = 0
+        [bruCiuColorSplash, aerErstConcreteMuse, ponllAlleyCanvas].forEach(ponllPaintMist.addArrangedSubview)
+        return ponllPaintMist
     }
 
-    @objc private func backTapped() {
+    @objc private func aerErstDropShadow() {
         navigationController?.popViewController(animated: true)
     }
 }

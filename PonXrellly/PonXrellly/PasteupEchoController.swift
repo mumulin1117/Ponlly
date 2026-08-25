@@ -6,24 +6,24 @@ import UIKit
 
 @MainActor
 final class PasteupEchoController: UIViewController {
-    private enum SectionMode {
-        case following
-        case process
+    enum ponllAerosolNoise {
+        case bruCiuMuralTexture
+        case flckinkStencilContrast
     }
 
-    private let followButton = UIButton(type: .system)
-    private let processButton = UIButton(type: .system)
-    private let indicator = UIView()
-    private let emptyView = UIStackView()
-    private var collectionView: UICollectionView!
-    private var indicatorCenterConstraint: NSLayoutConstraint?
-    private var selectedMode: SectionMode = .process
-    var visibleVideos: [PonllyVideo] {
-        switch selectedMode {
-        case .following:
-            return PonllyDataCenter.visibleVideos().filter { PonllyDataCenter.isFollowing($0.authorId) }
-        case .process:
-            return PonllyDataCenter.visibleVideos()
+    let aerErstSignBack = UIButton(type: .system)
+    let ponllWallRhythm = UIButton(type: .system)
+    let bruCiuChromeMotion = UIView()
+    let flckinkNeonCascade = UIStackView()
+    var aerErstTextureRipple: UICollectionView!
+    var ponllPaintSurge: NSLayoutConstraint?
+    var bruCiuAerosolBurst: ponllAerosolNoise = .flckinkStencilContrast
+    var flckinkMuralBloom: [PonllyVideo] {
+        switch bruCiuAerosolBurst {
+        case .bruCiuMuralTexture:
+            return PonllyponllTornEdge.ponllPaintMap().filter { PonllyponllTornEdge.aerErstCrackedWall($0.letterForm) }
+        case .flckinkStencilContrast:
+            return PonllyponllTornEdge.ponllPaintMap()
         }
     }
 
@@ -31,203 +31,203 @@ final class PasteupEchoController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setupCollection()
-        setupHeader()
-        setupEmptyView()
-        updateTabs()
+        ponllSketchFlicker()
+        bruCiuPaintFlash()
+        flckinkInkFuse()
+        aerErstMuralTrace()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = false
-        reloadFeed()
-        collectionView.reloadData()
-        playCenteredCell()
+        ponllStencilVeil()
+        aerErstTextureRipple.reloadData()
+        bruCiuChromeAura()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        collectionView.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.pause() }
+        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
     }
 
-    private func setupCollection() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = PonllyPalette.background
-        collectionView.isPagingEnabled = false
-        collectionView.decelerationRate = .fast
-        collectionView.alwaysBounceVertical = true
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(MMuralGridell.self, forCellWithReuseIdentifier: MMuralGridell.reuseId)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(collectionView)
-        collectionView.pinToEdges(of: view)
+    private func ponllSketchFlicker() {
+        let flckinkWallFlash = UICollectionViewFlowLayout()
+        flckinkWallFlash.scrollDirection = .vertical
+        flckinkWallFlash.minimumLineSpacing = 0
+        flckinkWallFlash.minimumInteritemSpacing = 0
+        aerErstTextureRipple = UICollectionView(frame: .zero, collectionViewLayout: flckinkWallFlash)
+        aerErstTextureRipple.backgroundColor = PonllyPalette.background
+        aerErstTextureRipple.isPagingEnabled = false
+        aerErstTextureRipple.decelerationRate = .fast
+        aerErstTextureRipple.alwaysBounceVertical = true
+        aerErstTextureRipple.showsVerticalScrollIndicator = false
+        aerErstTextureRipple.contentInsetAdjustmentBehavior = .never
+        aerErstTextureRipple.dataSource = self
+        aerErstTextureRipple.delegate = self
+        aerErstTextureRipple.register(MMuralGridell.self, forCellWithReuseIdentifier: MMuralGridell.ponllWallQuest)
+        aerErstTextureRipple.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstTextureRipple)
+        aerErstTextureRipple.woodPanelPonlly(steelGate: view)
     }
 
-    private func setupHeader() {
-        let header = UIStackView(arrangedSubviews: [followButton, processButton])
-        header.axis = .horizontal
-        header.spacing = 24
-        header.alignment = .center
-        header.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(header)
+    private func bruCiuPaintFlash() {
+        let aerErstAerosolFuse = UIStackView(arrangedSubviews: [aerErstSignBack, ponllWallRhythm])
+        aerErstAerosolFuse.axis = .horizontal
+        aerErstAerosolFuse.spacing = 24
+        aerErstAerosolFuse.alignment = .center
+        aerErstAerosolFuse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstAerosolFuse)
 
-        configureTab(followButton, title: "Follow", action: #selector(followTapped))
-        configureTab(processButton, title: "Process", action: #selector(processTapped))
+        ponllInkPath(aerErstSignBack, bruCiuMuralArc: "Follow", flckinkStencilBend: #selector(bruCiuTextureSignal))
+        ponllInkPath(ponllWallRhythm, bruCiuMuralArc: "Process", flckinkStencilBend: #selector(flckinkSketchCue))
 
-        indicator.backgroundColor = PonllyPalette.pink
-        indicator.layer.cornerRadius = 1.5
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(indicator)
+        bruCiuChromeMotion.backgroundColor = PonllyPalette.pink
+        bruCiuChromeMotion.layer.cornerRadius = 1.5
+        bruCiuChromeMotion.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuChromeMotion)
 
-        indicatorCenterConstraint = indicator.centerXAnchor.constraint(equalTo: processButton.centerXAnchor)
+        ponllPaintSurge = bruCiuChromeMotion.centerXAnchor.constraint(equalTo: ponllWallRhythm.centerXAnchor)
         NSLayoutConstraint.activate([
-            header.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            header.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
-            indicator.widthAnchor.constraint(equalToConstant: 40),
-            indicator.heightAnchor.constraint(equalToConstant: 3),
-            indicator.topAnchor.constraint(equalTo: processButton.bottomAnchor, constant: 6),
-            indicatorCenterConstraint!
+            aerErstAerosolFuse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            aerErstAerosolFuse.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
+            bruCiuChromeMotion.widthAnchor.constraint(equalToConstant: 40),
+            bruCiuChromeMotion.heightAnchor.constraint(equalToConstant: 3),
+            bruCiuChromeMotion.topAnchor.constraint(equalTo: ponllWallRhythm.bottomAnchor, constant: 6),
+            ponllPaintSurge!
         ])
     }
 
-    private func configureTab(_ button: UIButton, title: String, action: Selector) {
-        button.setTitle(title, for: .normal)
-        button.titleLabel?.font = PonllyFonts.display(size: 13)
-        button.addTarget(self, action: action, for: .touchUpInside)
+    private func ponllInkPath(_ bruCiuPaintSeed: UIButton, bruCiuMuralArc: String, flckinkStencilBend: Selector) {
+        bruCiuPaintSeed.setTitle(bruCiuMuralArc, for: .normal)
+        bruCiuPaintSeed.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        bruCiuPaintSeed.addTarget(self, action: flckinkStencilBend, for: .touchUpInside)
     }
 
-    private func setupEmptyView() {
-        emptyView.axis = .vertical
-        emptyView.alignment = .center
-        emptyView.spacing = 14
-        emptyView.isHidden = true
-        emptyView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(emptyView)
+    private func flckinkInkFuse() {
+        flckinkNeonCascade.axis = .vertical
+        flckinkNeonCascade.alignment = .center
+        flckinkNeonCascade.spacing = 14
+        flckinkNeonCascade.isHidden = true
+        flckinkNeonCascade.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkNeonCascade)
 
-        let icon = UIImageView(image: UIImage(systemName: "play.rectangle.on.rectangle"))
-        icon.tintColor = PonllyPalette.cyan
-        icon.contentMode = .scaleAspectFit
-        icon.widthAnchor.constraint(equalToConstant: 58).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 58).isActive = true
+        let aerErstAerosolTrail = UIImageView(image: UIImage(systemName: "play.rectangle.on.rectangle"))
+        aerErstAerosolTrail.tintColor = PonllyPalette.cyan
+        aerErstAerosolTrail.contentMode = .scaleAspectFit
+        aerErstAerosolTrail.widthAnchor.constraint(equalToConstant: 58).isActive = true
+        aerErstAerosolTrail.heightAnchor.constraint(equalToConstant: 58).isActive = true
 
-        let title = UILabel()
-        title.text = "No followed artists yet"
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 18)
-        title.textAlignment = .center
+        let flckinkWallVeil = UILabel()
+        flckinkWallVeil.text = "No followed artists yet"
+        flckinkWallVeil.textColor = .white
+        flckinkWallVeil.font = PonllyFonts.muralForgepon(neonLab: 18)
+        flckinkWallVeil.textAlignment = .center
 
-        let body = UILabel()
-        body.text = "Follow street artists from Process to build your clip lane."
-        body.textColor = PonllyPalette.muted
-        body.font = PonllyFonts.body(size: 13, weight: .medium)
-        body.numberOfLines = 0
-        body.textAlignment = .center
+        let ponllMuralAura = UILabel()
+        ponllMuralAura.text = "Follow street artists from Process to build your clip lane."
+        ponllMuralAura.textColor = PonllyPalette.muted
+        ponllMuralAura.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+        ponllMuralAura.numberOfLines = 0
+        ponllMuralAura.textAlignment = .center
 
-        [icon, title, body].forEach(emptyView.addArrangedSubview)
+        [aerErstAerosolTrail, flckinkWallVeil, ponllMuralAura].forEach(flckinkNeonCascade.addArrangedSubview)
         NSLayoutConstraint.activate([
-            emptyView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            emptyView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            emptyView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 34),
-            emptyView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -34)
+            flckinkNeonCascade.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            flckinkNeonCascade.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            flckinkNeonCascade.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 34),
+            flckinkNeonCascade.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -34)
         ])
     }
 
-    private func updateTabs() {
-        let isProcess = selectedMode == .process
-        followButton.setTitleColor(isProcess ? PonllyPalette.muted : PonllyPalette.pink, for: .normal)
-        processButton.setTitleColor(isProcess ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
-        followButton.titleLabel?.font = PonllyFonts.display(size: 13)
-        processButton.titleLabel?.font = PonllyFonts.display(size: 13)
-        emptyView.isHidden = !(selectedMode == .following && visibleVideos.isEmpty)
-        collectionView.isHidden = selectedMode == .following && visibleVideos.isEmpty
-        indicatorCenterConstraint?.isActive = false
-        indicatorCenterConstraint = indicator.centerXAnchor.constraint(equalTo: isProcess ? processButton.centerXAnchor : followButton.centerXAnchor)
-        indicatorCenterConstraint?.isActive = true
+    func aerErstMuralTrace() {
+        let bruCiuStencilEcho = bruCiuAerosolBurst == .flckinkStencilContrast
+        aerErstSignBack.setTitleColor(bruCiuStencilEcho ? PonllyPalette.muted : PonllyPalette.pink, for: .normal)
+        ponllWallRhythm.setTitleColor(bruCiuStencilEcho ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
+        aerErstSignBack.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        ponllWallRhythm.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        flckinkNeonCascade.isHidden = !(bruCiuAerosolBurst == .bruCiuMuralTexture && flckinkMuralBloom.isEmpty)
+        aerErstTextureRipple.isHidden = bruCiuAerosolBurst == .bruCiuMuralTexture && flckinkMuralBloom.isEmpty
+        ponllPaintSurge?.isActive = false
+        ponllPaintSurge = bruCiuChromeMotion.centerXAnchor.constraint(equalTo: bruCiuStencilEcho ? ponllWallRhythm.centerXAnchor : aerErstSignBack.centerXAnchor)
+        ponllPaintSurge?.isActive = true
         UIView.animate(withDuration: 0.22) {
             self.view.layoutIfNeeded()
         }
     }
 
-    private func reloadFeed() {
-        collectionView.reloadData()
-        collectionView.layoutIfNeeded()
-        collectionView.setContentOffset(.zero, animated: false)
-        updateTabs()
+    func ponllStencilVeil() {
+        aerErstTextureRipple.reloadData()
+        aerErstTextureRipple.layoutIfNeeded()
+        aerErstTextureRipple.setContentOffset(.zero, animated: false)
+        aerErstMuralTrace()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.playCenteredCell()
+            self.bruCiuChromeAura()
         }
     }
 
-    func updateVideo(_ video: PonllyVideo) {
-        guard let index = PonllyDataCenter.videos.firstIndex(where: { $0.id == video.id }) else { return }
-        PonllyDataCenter.videos[index] = video
-        reloadFeed()
+    func bruCiuTextureNoise(_ flckinkSketchContrast: PonllyVideo) {
+        guard let aerErstPaintBalance = PonllyponllTornEdge.ponllWallPeel.firstIndex(where: { $0.graffitiPulse == flckinkSketchContrast.graffitiPulse }) else { return }
+        PonllyponllTornEdge.ponllWallPeel[aerErstPaintBalance] = flckinkSketchContrast
+        ponllStencilVeil()
     }
 
-    private func currentVideo(at indexPath: IndexPath) -> PonllyVideo? {
-        guard visibleVideos.indices.contains(indexPath.item) else { return nil }
-        return visibleVideos[indexPath.item]
+    func flckinkAerosolRhythm(bruCiuMuralMotion: IndexPath) -> PonllyVideo? {
+        guard flckinkMuralBloom.indices.contains(bruCiuMuralMotion.item) else { return nil }
+        return flckinkMuralBloom[bruCiuMuralMotion.item]
     }
 
-    func playCenteredCell() {
-        let center = CGPoint(x: collectionView.bounds.midX, y: collectionView.contentOffset.y + collectionView.bounds.midY)
-        collectionView.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.pause() }
-        if let indexPath = collectionView.indexPathForItem(at: center),
-           let cell = collectionView.cellForItem(at: indexPath) as? MMuralGridell {
-            cell.play()
+    func bruCiuChromeAura() {
+        let ponllStencilCascade = CGPoint(x: aerErstTextureRipple.bounds.midX, y: aerErstTextureRipple.contentOffset.y + aerErstTextureRipple.bounds.midY)
+        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
+        if let flckinkWallRipple = aerErstTextureRipple.indexPathForItem(at: ponllStencilCascade),
+           let aerErstInkSurge = aerErstTextureRipple.cellForItem(at: flckinkWallRipple) as? MMuralGridell {
+            aerErstInkSurge.aerErstStencilWeave()
         }
     }
 
-    func updatePlaybackForVisibleCells() {
-        guard !collectionView.isHidden else { return }
-        let viewport = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
-        collectionView.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { cell in
-            let visibleHeight = cell.frame.intersection(viewport).height
-            let visibility = visibleHeight / max(cell.bounds.height, 1)
-            visibility >= 0.55 ? cell.play() : cell.pause()
+    func ponllStencilDepth() {
+        guard !aerErstTextureRipple.isHidden else { return }
+        let bruCiuChromeFlicker = CGRect(origin: aerErstTextureRipple.contentOffset, size: aerErstTextureRipple.bounds.size)
+        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { ponllNeonFlash in
+            let flckinkPaintFuse = ponllNeonFlash.frame.intersection(bruCiuChromeFlicker).height
+            let aerErstWallTrace = flckinkPaintFuse / max(ponllNeonFlash.bounds.height, 1)
+            aerErstWallTrace >= 0.55 ? ponllNeonFlash.aerErstStencilWeave() : ponllNeonFlash.ponllPaintDepth()
         }
     }
 
-    func snappedOffsetY(for proposedY: CGFloat, velocityY: CGFloat) -> CGFloat {
-        let pageHeight = max(collectionView.bounds.height, 1)
-        let currentPage = collectionView.contentOffset.y / pageHeight
-        let proposedPage = proposedY / pageHeight
-        let targetPage: CGFloat
-        if velocityY > 0.25 {
-            targetPage = floor(currentPage) + 1
-        } else if velocityY < -0.25 {
-            targetPage = ceil(currentPage) - 1
+    func bruCiuAerosolTrail(flckinkStencilTrail: CGFloat, aerErstMarkerVeil: CGFloat) -> CGFloat {
+        let ponllChromeAura = max(aerErstTextureRipple.bounds.height, 1)
+        let bruCiuNeonEcho = aerErstTextureRipple.contentOffset.y / ponllChromeAura
+        let flckinkTextureSignal = flckinkStencilTrail / ponllChromeAura
+        let aerErstSketchFlicker: CGFloat
+        if aerErstMarkerVeil > 0.25 {
+            aerErstSketchFlicker = floor(bruCiuNeonEcho) + 1
+        } else if aerErstMarkerVeil < -0.25 {
+            aerErstSketchFlicker = ceil(bruCiuNeonEcho) - 1
         } else {
-            targetPage = round(proposedPage)
+            aerErstSketchFlicker = round(flckinkTextureSignal)
         }
-        let maxPage = max(CGFloat(visibleVideos.count - 1), 0)
-        return min(max(targetPage, 0), maxPage) * pageHeight
+        let ponllPaintPath = max(CGFloat(flckinkMuralBloom.count - 1), 0)
+        return min(max(aerErstSketchFlicker, 0), ponllPaintPath) * ponllChromeAura
     }
 
-    func snapToNearestVideo(animated: Bool) {
-        let y = snappedOffsetY(for: collectionView.contentOffset.y, velocityY: 0)
-        collectionView.setContentOffset(CGPoint(x: 0, y: y), animated: animated)
+    func bruCiuInkArc(ponllMuralBend: Bool) {
+        let flckinkWallKick = bruCiuAerosolTrail(flckinkStencilTrail: aerErstTextureRipple.contentOffset.y, aerErstMarkerVeil: 0)
+        aerErstTextureRipple.setContentOffset(CGPoint(x: 0, y: flckinkWallKick), animated: ponllMuralBend)
     }
 
-    func requireVideoLogin(_ completion: @escaping () -> Void) {
-        FlckinkMatteFinish.shared.requireLogin(from: self, completion: completion)
+    func aerErstAerosolLean(_ bruCiuStencilWeave: @escaping () -> Void) {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self, ponllOversprayGlow: bruCiuStencilWeave)
     }
 
-    @objc private func followTapped() {
-        selectedMode = .following
-        reloadFeed()
+    @objc private func bruCiuTextureSignal() {
+        bruCiuAerosolBurst = .bruCiuMuralTexture
+        ponllStencilVeil()
     }
 
-    @objc private func processTapped() {
-        selectedMode = .process
-        reloadFeed()
+    @objc private func flckinkSketchCue() {
+        bruCiuAerosolBurst = .flckinkStencilContrast
+        ponllStencilVeil()
     }
 }

@@ -5,19 +5,19 @@ import StoreKit
 import UIKit
 
 final class PoonllFineLineController: UIViewController {
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
-    private let chargeButton = PonllyNeonButton(title: "Charge")
-    private var selectedPackage = PoncanShaketalog.packages[3]
-    private var productMap: [String: Product] = [:]
-    private var packageCards: [PNeonDripCard] = []
+    private let ponllScrollCanvas = UIScrollView()
+    private let bruCiuStackPath = UIStackView()
+    private let flckinkChargeButton = PonllyNeonButton("Charge")
+    private var aerErstSelectedPackage = PoncanShaketalog.aerErstChromeNoise[3]
+    private var ponllProductMap: [String: Product] = [:]
+    private var bruCiuPackageCards: [PNeonDripCard] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = ""
         view.backgroundColor = PonllyPalette.background
-        setup()
-        loadProducts()
+        bruCiuBridgePillar()
+        aerErstpaintAura()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -26,247 +26,247 @@ final class PoonllFineLineController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        stack.axis = .vertical
-        stack.spacing = 24
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+    private func bruCiuBridgePillar() {
+        ponllScrollCanvas.alwaysBounceVertical = true
+        ponllScrollCanvas.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllScrollCanvas)
+        bruCiuStackPath.axis = .vertical
+        bruCiuStackPath.spacing = 24
+        bruCiuStackPath.translatesAutoresizingMaskIntoConstraints = false
+        ponllScrollCanvas.addSubview(bruCiuStackPath)
 
-        let header = pageHeader()
-        let banner = firstBonusBanner()
-        let title = UILabel()
-        title.text = "Select Coin Package"
-        title.textColor = PonllyPalette.muted
-        title.font = PonllyFonts.display(size: 11)
-        let grid = packageGrid()
-        [header, banner, title, grid].forEach(stack.addArrangedSubview)
+        let flckinkmuralAura = ponllmuralSurge()
+        let aerErstBanner = bruCiuFirstBonusBanner()
+        let ponllmuralFlicker = UILabel()
+        ponllmuralFlicker.text = "Select Coin Package"
+        ponllmuralFlicker.textColor = PonllyPalette.muted
+        ponllmuralFlicker.font = PonllyFonts.muralForgepon(neonLab: 11)
+        let bruCiuGrid = flckinkPackageGrid()
+        [flckinkmuralAura, aerErstBanner, ponllmuralFlicker, bruCiuGrid].forEach(bruCiuStackPath.addArrangedSubview)
 
-        let bottomBar = UIView()
-        bottomBar.backgroundColor = PonllyPalette.background
-        bottomBar.layer.borderWidth = 1
-        bottomBar.layer.borderColor = PonllyPalette.line.cgColor
-        bottomBar.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bottomBar)
-        chargeButton.addTarget(self, action: #selector(chargeTapped), for: .touchUpInside)
-        chargeButton.titleLabel?.font = PonllyFonts.display(size: 13)
-        bottomBar.addSubview(chargeButton)
-
-        NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomBar.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: -56),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -28),
-            bottomBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            bottomBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bottomBar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bottomBar.heightAnchor.constraint(equalToConstant: 118),
-            chargeButton.leadingAnchor.constraint(equalTo: bottomBar.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            chargeButton.trailingAnchor.constraint(equalTo: bottomBar.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            chargeButton.topAnchor.constraint(equalTo: bottomBar.topAnchor, constant: 22),
-            chargeButton.heightAnchor.constraint(equalToConstant: 58)
-        ])
-        refreshSelection()
-    }
-
-    private func pageHeader() -> UIView {
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        back.layer.cornerRadius = 30
-        back.layer.borderWidth = 1
-        back.layer.borderColor = PonllyPalette.line.cgColor
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        header.addSubview(back)
-
-        let title = UILabel()
-        title.text = "COIN STORE"
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 16)
-        title.adjustsFontSizeToFitWidth = true
-        title.minimumScaleFactor = 0.75
-        title.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(title)
-        let subtitle = UILabel()
-        subtitle.text = "RECHARGE STASH"
-        subtitle.textColor = PonllyPalette.muted
-        subtitle.font = PonllyFonts.body(size: 11, weight: .regular)
-        subtitle.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(subtitle)
+        let aerErstmuralBurst = UIView()
+        aerErstmuralBurst.backgroundColor = PonllyPalette.background
+        aerErstmuralBurst.layer.borderWidth = 1
+        aerErstmuralBurst.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstmuralBurst.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstmuralBurst)
+        flckinkChargeButton.addTarget(self, action: #selector(bruCiupaintKicked), for: .touchUpInside)
+        flckinkChargeButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstmuralBurst.addSubview(flckinkChargeButton)
 
         NSLayoutConstraint.activate([
-            header.heightAnchor.constraint(equalToConstant: 148),
-            back.leadingAnchor.constraint(equalTo: header.leadingAnchor),
-            back.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -20),
-            back.widthAnchor.constraint(equalToConstant: 60),
-            back.heightAnchor.constraint(equalToConstant: 60),
-            title.leadingAnchor.constraint(equalTo: back.trailingAnchor, constant: 24),
-            title.trailingAnchor.constraint(equalTo: header.trailingAnchor),
-            title.topAnchor.constraint(equalTo: back.topAnchor, constant: 6),
-            subtitle.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8)
+            ponllScrollCanvas.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            ponllScrollCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ponllScrollCanvas.topAnchor.constraint(equalTo: view.topAnchor),
+            ponllScrollCanvas.bottomAnchor.constraint(equalTo: aerErstmuralBurst.topAnchor),
+            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.leadingAnchor, constant: 20),
+            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.trailingAnchor, constant: -20),
+            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor, constant: -56),
+            bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor, constant: -28),
+            aerErstmuralBurst.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            aerErstmuralBurst.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            aerErstmuralBurst.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            aerErstmuralBurst.heightAnchor.constraint(equalToConstant: 118),
+            flckinkChargeButton.leadingAnchor.constraint(equalTo: aerErstmuralBurst.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            flckinkChargeButton.trailingAnchor.constraint(equalTo: aerErstmuralBurst.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            flckinkChargeButton.topAnchor.constraint(equalTo: aerErstmuralBurst.topAnchor, constant: 22),
+            flckinkChargeButton.heightAnchor.constraint(equalToConstant: 58)
         ])
-        return header
+        ponllpaintWeaveon()
     }
 
-    private func firstBonusBanner() -> UIView {
-        let banner = PonllyGradientView(colors: [PonllyPalette.pink, PonllyPalette.cyan], start: CGPoint(x: 0, y: 0.5), end: CGPoint(x: 1, y: 0.5))
-        banner.layer.cornerRadius = 0
-        banner.translatesAutoresizingMaskIntoConstraints = false
+    private func ponllmuralSurge() -> UIView {
+        let bruCiuaerosolMood = UIView()
+        bruCiuaerosolMood.translatesAutoresizingMaskIntoConstraints = false
+        let flckinkmuralCascaden = UIButton(type: .system)
+        flckinkmuralCascaden.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkmuralCascaden.tintColor = .white
+        flckinkmuralCascaden.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        flckinkmuralCascaden.layer.cornerRadius = 30
+        flckinkmuralCascaden.layer.borderWidth = 1
+        flckinkmuralCascaden.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkmuralCascaden.translatesAutoresizingMaskIntoConstraints = false
+        flckinkmuralCascaden.addTarget(self, action: #selector(aerErstBackTapped), for: .touchUpInside)
+        bruCiuaerosolMood.addSubview(flckinkmuralCascaden)
 
-        let iconWrap = UIView()
-        iconWrap.backgroundColor = UIColor.black.withAlphaComponent(0.62)
-        iconWrap.layer.cornerRadius = 40
-        iconWrap.translatesAutoresizingMaskIntoConstraints = false
-        banner.addSubview(iconWrap)
-        let icon = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
-        icon.contentMode = .scaleAspectFit
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        iconWrap.addSubview(icon)
-
-        let title = UILabel()
-        title.text = "+50% First-Time Bonus"
-        title.textColor = .black
-        title.font = PonllyFonts.display(size: 12)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        banner.addSubview(title)
-        let body = UILabel()
-        body.text = "Get extra coins on your initial top-up today."
-        body.textColor = UIColor.black.withAlphaComponent(0.82)
-        body.font = PonllyFonts.body(size: 11, weight: .regular)
-        body.numberOfLines = 0
-        body.translatesAutoresizingMaskIntoConstraints = false
-        banner.addSubview(body)
+        let aerErstaerosolGlowe = UILabel()
+        aerErstaerosolGlowe.text = "COIN STORE"
+        aerErstaerosolGlowe.textColor = .white
+        aerErstaerosolGlowe.font = PonllyFonts.muralForgepon(neonLab: 16)
+        aerErstaerosolGlowe.adjustsFontSizeToFitWidth = true
+        aerErstaerosolGlowe.minimumScaleFactor = 0.75
+        aerErstaerosolGlowe.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuaerosolMood.addSubview(aerErstaerosolGlowe)
+        let ponllaerosolPath = UILabel()
+        ponllaerosolPath.text = "RECHARGE STASH"
+        ponllaerosolPath.textColor = PonllyPalette.muted
+        ponllaerosolPath.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
+        ponllaerosolPath.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuaerosolMood.addSubview(ponllaerosolPath)
 
         NSLayoutConstraint.activate([
-            banner.heightAnchor.constraint(equalToConstant: 128),
-            iconWrap.leadingAnchor.constraint(equalTo: banner.leadingAnchor, constant: 20),
-            iconWrap.centerYAnchor.constraint(equalTo: banner.centerYAnchor),
-            iconWrap.widthAnchor.constraint(equalToConstant: 80),
-            iconWrap.heightAnchor.constraint(equalToConstant: 80),
-            icon.centerXAnchor.constraint(equalTo: iconWrap.centerXAnchor),
-            icon.centerYAnchor.constraint(equalTo: iconWrap.centerYAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 42),
-            icon.heightAnchor.constraint(equalToConstant: 42),
-            title.leadingAnchor.constraint(equalTo: iconWrap.trailingAnchor, constant: 22),
-            title.trailingAnchor.constraint(equalTo: banner.trailingAnchor, constant: -18),
-            title.topAnchor.constraint(equalTo: iconWrap.topAnchor, constant: 12),
-            body.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            body.trailingAnchor.constraint(equalTo: title.trailingAnchor),
-            body.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8)
+            bruCiuaerosolMood.heightAnchor.constraint(equalToConstant: 148),
+            flckinkmuralCascaden.leadingAnchor.constraint(equalTo: bruCiuaerosolMood.leadingAnchor),
+            flckinkmuralCascaden.bottomAnchor.constraint(equalTo: bruCiuaerosolMood.bottomAnchor, constant: -20),
+            flckinkmuralCascaden.widthAnchor.constraint(equalToConstant: 60),
+            flckinkmuralCascaden.heightAnchor.constraint(equalToConstant: 60),
+            aerErstaerosolGlowe.leadingAnchor.constraint(equalTo: flckinkmuralCascaden.trailingAnchor, constant: 24),
+            aerErstaerosolGlowe.trailingAnchor.constraint(equalTo: bruCiuaerosolMood.trailingAnchor),
+            aerErstaerosolGlowe.topAnchor.constraint(equalTo: flckinkmuralCascaden.topAnchor, constant: 6),
+            ponllaerosolPath.leadingAnchor.constraint(equalTo: aerErstaerosolGlowe.leadingAnchor),
+            ponllaerosolPath.topAnchor.constraint(equalTo: aerErstaerosolGlowe.bottomAnchor, constant: 8)
         ])
-        return banner
+        return bruCiuaerosolMood
     }
 
-    private func packageGrid() -> UIStackView {
-        let grid = UIStackView()
-        grid.axis = .vertical
-        grid.spacing = 14
-        for index in stride(from: 0, to: PoncanShaketalog.packages.count, by: 2) {
-            let row = UIStackView()
-            row.axis = .horizontal
-            row.spacing = 14
-            row.distribution = .fillEqually
-            for offset in 0..<2 {
-                let packageIndex = index + offset
-                if packageIndex < PoncanShaketalog.packages.count {
-                    let card = PNeonDripCard(package: PoncanShaketalog.packages[packageIndex])
-                    card.addTarget(self, action: #selector(packageTapped(_:)), for: .touchUpInside)
-                    packageCards.append(card)
-                    row.addArrangedSubview(card)
+    private func bruCiuFirstBonusBanner() -> UIView {
+        let flckinkwallContrast = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.pink, PonllyPalette.cyan], CGPoint(x: 0, y: 0.5), CGPoint(x: 1, y: 0.5))
+        flckinkwallContrast.layer.cornerRadius = 0
+        flckinkwallContrast.translatesAutoresizingMaskIntoConstraints = false
+
+        let aerErstIconWrap = UIView()
+        aerErstIconWrap.backgroundColor = UIColor.black.withAlphaComponent(0.62)
+        aerErstIconWrap.layer.cornerRadius = 40
+        aerErstIconWrap.translatesAutoresizingMaskIntoConstraints = false
+        flckinkwallContrast.addSubview(aerErstIconWrap)
+        let ponllIcon = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        ponllIcon.contentMode = .scaleAspectFit
+        ponllIcon.translatesAutoresizingMaskIntoConstraints = false
+        aerErstIconWrap.addSubview(ponllIcon)
+
+        let bruCiuwallQuest = UILabel()
+        bruCiuwallQuest.text = "+50% First-Time Bonus"
+        bruCiuwallQuest.textColor = .black
+        bruCiuwallQuest.font = PonllyFonts.muralForgepon(neonLab: 12)
+        bruCiuwallQuest.translatesAutoresizingMaskIntoConstraints = false
+        flckinkwallContrast.addSubview(bruCiuwallQuest)
+        let flckinkBannerBody = UILabel()
+        flckinkBannerBody.text = "Get extra coins on your initial top-up today."
+        flckinkBannerBody.textColor = UIColor.black.withAlphaComponent(0.82)
+        flckinkBannerBody.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
+        flckinkBannerBody.numberOfLines = 0
+        flckinkBannerBody.translatesAutoresizingMaskIntoConstraints = false
+        flckinkwallContrast.addSubview(flckinkBannerBody)
+
+        NSLayoutConstraint.activate([
+            flckinkwallContrast.heightAnchor.constraint(equalToConstant: 128),
+            aerErstIconWrap.leadingAnchor.constraint(equalTo: flckinkwallContrast.leadingAnchor, constant: 20),
+            aerErstIconWrap.centerYAnchor.constraint(equalTo: flckinkwallContrast.centerYAnchor),
+            aerErstIconWrap.widthAnchor.constraint(equalToConstant: 80),
+            aerErstIconWrap.heightAnchor.constraint(equalToConstant: 80),
+            ponllIcon.centerXAnchor.constraint(equalTo: aerErstIconWrap.centerXAnchor),
+            ponllIcon.centerYAnchor.constraint(equalTo: aerErstIconWrap.centerYAnchor),
+            ponllIcon.widthAnchor.constraint(equalToConstant: 42),
+            ponllIcon.heightAnchor.constraint(equalToConstant: 42),
+            bruCiuwallQuest.leadingAnchor.constraint(equalTo: aerErstIconWrap.trailingAnchor, constant: 22),
+            bruCiuwallQuest.trailingAnchor.constraint(equalTo: flckinkwallContrast.trailingAnchor, constant: -18),
+            bruCiuwallQuest.topAnchor.constraint(equalTo: aerErstIconWrap.topAnchor, constant: 12),
+            flckinkBannerBody.leadingAnchor.constraint(equalTo: bruCiuwallQuest.leadingAnchor),
+            flckinkBannerBody.trailingAnchor.constraint(equalTo: bruCiuwallQuest.trailingAnchor),
+            flckinkBannerBody.topAnchor.constraint(equalTo: bruCiuwallQuest.bottomAnchor, constant: 8)
+        ])
+        return flckinkwallContrast
+    }
+
+    private func flckinkPackageGrid() -> UIStackView {
+        let aerErstGrid = UIStackView()
+        aerErstGrid.axis = .vertical
+        aerErstGrid.spacing = 14
+        for ponllIndex in stride(from: 0, to: PoncanShaketalog.aerErstChromeNoise.count, by: 2) {
+            let bruCiuRow = UIStackView()
+            bruCiuRow.axis = .horizontal
+            bruCiuRow.spacing = 14
+            bruCiuRow.distribution = .fillEqually
+            for flckinkOffset in 0..<2 {
+                let aerErstPackageIndex = ponllIndex + flckinkOffset
+                if aerErstPackageIndex < PoncanShaketalog.aerErstChromeNoise.count {
+                    let ponllCard = PNeonDripCard(aerErstMuralFuse: PoncanShaketalog.aerErstChromeNoise[aerErstPackageIndex])
+                    ponllCard.addTarget(self, action: #selector(ponllpaintTwisted(_:)), for: .touchUpInside)
+                    bruCiuPackageCards.append(ponllCard)
+                    bruCiuRow.addArrangedSubview(ponllCard)
                 } else {
-                    row.addArrangedSubview(UIView())
+                    bruCiuRow.addArrangedSubview(UIView())
                 }
             }
-            grid.addArrangedSubview(row)
+            aerErstGrid.addArrangedSubview(bruCiuRow)
         }
-        return grid
+        return aerErstGrid
     }
 
-    private func loadProducts() {
-        ponllyShowNotice("Loading coin packages...", style: .loading, autoDismissAfter: 0.75)
+    private func aerErstpaintAura() {
+        aerErstSketchRush("Loading coin packages...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.75)
         Task {
             do {
-                let ids = PoncanShaketalog.packages.map(\.productId)
-                let products = try await Product.products(for: ids)
+                let flckinkIds = PoncanShaketalog.aerErstChromeNoise.map(\.ponllPaintKick)
+                let aerErstProducts = try await Product.products(for: flckinkIds)
                 await MainActor.run {
-                    productMap = Dictionary(uniqueKeysWithValues: products.map { ($0.id, $0) })
-                    packageCards.forEach { card in
-                        let price = productMap[card.package.productId]?.displayPrice ?? card.package.fallbackPrice
-                        card.updatePrice(price)
+                    ponllProductMap = Dictionary(uniqueKeysWithValues: aerErstProducts.map { ($0.id, $0) })
+                    bruCiuPackageCards.forEach { ponllCard in
+                        let bruCiuPrice = ponllProductMap[ponllCard.ponllWallFlicker.ponllPaintKick]?.displayPrice ?? ponllCard.ponllWallFlicker.flckinkWallTwist
+                        ponllCard.flckinkStencilTrace(bruCiuPrice)
                     }
                 }
             } catch {
                 await MainActor.run {
-                    ponllyShowNotice("Coin packages are unavailable right now", style: .failure)
+                    aerErstSketchRush("Coin packages are unavailable right now", bruCiuLetterForm: .ponllWhiteEdge)
                 }
             }
         }
     }
 
-    private func refreshSelection() {
-        packageCards.forEach { $0.setSelected($0.package.productId == selectedPackage.productId) }
+    private func ponllpaintWeaveon() {
+        bruCiuPackageCards.forEach { $0.ponllChromeTrail($0.ponllWallFlicker.ponllPaintKick == aerErstSelectedPackage.ponllPaintKick) }
     }
 
-    @objc private func packageTapped(_ sender: PNeonDripCard) {
-        selectedPackage = sender.package
-        refreshSelection()
+    @objc private func ponllpaintTwisted(_ bruCiuSender: PNeonDripCard) {
+        aerErstSelectedPackage = bruCiuSender.ponllWallFlicker
+        ponllpaintWeaveon()
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 
-    @objc private func chargeTapped() {
-        guard let product = productMap[selectedPackage.productId] else {
-            ponllyShowNotice("Coin packages are unavailable right now", style: .failure)
+    @objc private func bruCiupaintKicked() {
+        guard let paintBend = ponllProductMap[aerErstSelectedPackage.ponllPaintKick] else {
+            aerErstSketchRush("Coin packages are unavailable right now", bruCiuLetterForm: .ponllWhiteEdge)
             return
         }
-        chargeButton.isEnabled = false
-        ponllyShowNotice("Processing charge...", style: .loading, autoDismissAfter: 0.9)
+        flckinkChargeButton.isEnabled = false
+        aerErstSketchRush("Processing charge...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.9)
         Task {
             do {
-                let result = try await product.purchase()
-                await handlePurchase(result)
+                let aerErstpaintArc = try await paintBend.purchase()
+                await flckinkHandlepaintFlowline(aerErstpaintArc)
             } catch {
                 await MainActor.run {
-                    chargeButton.isEnabled = true
-                    ponllyShowNotice("Charge could not be completed", style: .failure)
+                    flckinkChargeButton.isEnabled = true
+                    aerErstSketchRush("Charge could not be completed", bruCiuLetterForm: .ponllWhiteEdge)
                 }
             }
         }
     }
 
     @MainActor
-    private func handlePurchase(_ result: Product.PurchaseResult) async {
-        chargeButton.isEnabled = true
-        switch result {
-        case .success(let verification):
-            switch verification {
-            case .verified(let transaction):
-                PonllyDataCenter.addCoins(selectedPackage.totalCoins)
-                await transaction.finish()
-                ponllyShowNotice("\(selectedPackage.totalCoins.formatted()) Coins added", style: .success)
+    private func flckinkHandlepaintFlowline(_ ponllpaintMood: Product.PurchaseResult) async {
+        flckinkChargeButton.isEnabled = true
+        switch ponllpaintMood {
+        case .success(let bruCiupaintSpark):
+            switch bruCiupaintSpark {
+            case .verified(let flckinkstyleMotion):
+                PonllyponllTornEdge.ponllWhitePop(aerErstSelectedPackage.ponllMuralDepth)
+                await flckinkstyleMotion.finish()
+                aerErstSketchRush("\(aerErstSelectedPackage.ponllMuralDepth.formatted()) Coins added", bruCiuLetterForm: .flckinkSplitFill)
             case .unverified:
-                ponllyShowNotice("Charge could not be verified", style: .failure)
+                aerErstSketchRush("Charge could not be verified", bruCiuLetterForm: .ponllWhiteEdge)
             }
         case .userCancelled:
-            ponllyShowNotice("Charge canceled", style: .info)
+            aerErstSketchRush("Charge canceled", bruCiuLetterForm: .bruCiuSilverSheen)
         case .pending:
-            ponllyShowNotice("Charge is pending approval", style: .info)
+            aerErstSketchRush("Charge is pending approval", bruCiuLetterForm: .bruCiuSilverSheen)
         @unknown default:
-            ponllyShowNotice("Charge could not be completed", style: .failure)
+            aerErstSketchRush("Charge could not be completed", bruCiuLetterForm: .ponllWhiteEdge)
         }
     }
 
-    @objc private func backTapped() {
+    @objc private func aerErstBackTapped() {
         navigationController?.popViewController(animated: true)
     }
 }

@@ -5,12 +5,12 @@ import StoreKit
 import UIKit
 
 final class PaerErstPaintBaseController: UIViewController {
-    private let artwork: PonllyArtwork
-    private let owner: PonllyUser
+    private let ponllPaintRipple: PonllyaerErstSolidMarkerk
+    private let bruCiuInkSurge: PonllyaerErstTwoToneFillr
 
-    init(artwork: PonllyArtwork, owner: PonllyUser) {
-        self.artwork = artwork
-        self.owner = owner
+    init(flckinkWallBurst: PonllyaerErstSolidMarkerk, aerErstAerosolBloom: PonllyaerErstTwoToneFillr) {
+        self.ponllPaintRipple = flckinkWallBurst
+        self.bruCiuInkSurge = aerErstAerosolBloom
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -22,7 +22,7 @@ final class PaerErstPaintBaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        setup()
+        ponllMuralFlicker()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,149 +31,149 @@ final class PaerErstPaintBaseController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let bg = PonllyGradientView(colors: [PonllyPalette.background, UIColor(red: 11/255, green: 14/255, blue: 19/255, alpha: 1)])
-        view.addSubview(bg)
-        bg.pinToEdges(of: view)
+    private func ponllMuralFlicker() {
+        let bruCiuStencilFlash = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.background, UIColor(red: 11/255, green: 14/255, blue: 19/255, alpha: 1)])
+        view.addSubview(bruCiuStencilFlash)
+        bruCiuStencilFlash.woodPanelPonlly(steelGate: view)
 
-        let scrollView = UIScrollView()
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+        let flckinkMarkerFuse = UIScrollView()
+        flckinkMarkerFuse.alwaysBounceVertical = true
+        flckinkMarkerFuse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkMarkerFuse)
 
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 18
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+        let aerErstInkTrace = UIStackView()
+        aerErstInkTrace.axis = .vertical
+        aerErstInkTrace.spacing = 18
+        aerErstInkTrace.translatesAutoresizingMaskIntoConstraints = false
+        flckinkMarkerFuse.addSubview(aerErstInkTrace)
 
-        let header = headerView()
-        let hero = PbruCiuClearCoatView(artwork: artwork)
-        hero.layer.cornerRadius = 24
-        hero.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.65).cgColor
-        stack.addArrangedSubview(header)
-        stack.addArrangedSubview(hero)
-        stack.addArrangedSubview(infoCard())
-        stack.addArrangedSubview(detailCard())
+        let ponllAerosolTrail = bruCiuTextureVeil()
+        let flckinkMuralAura = PbruCiuClearCoatView(ponllPaintTrace: ponllPaintRipple)
+        flckinkMuralAura.layer.cornerRadius = 24
+        flckinkMuralAura.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.65).cgColor
+        aerErstInkTrace.addArrangedSubview(ponllAerosolTrail)
+        aerErstInkTrace.addArrangedSubview(flckinkMuralAura)
+        aerErstInkTrace.addArrangedSubview(aerErstChromeEcho())
+        aerErstInkTrace.addArrangedSubview(ponllNeonSignal())
 
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 18),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -18),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 22),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -34),
-            header.heightAnchor.constraint(equalToConstant: 86),
-            hero.heightAnchor.constraint(equalTo: hero.widthAnchor, multiplier: 0.88)
+            flckinkMarkerFuse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            flckinkMarkerFuse.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            flckinkMarkerFuse.topAnchor.constraint(equalTo: view.topAnchor),
+            flckinkMarkerFuse.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            aerErstInkTrace.leadingAnchor.constraint(equalTo: flckinkMarkerFuse.frameLayoutGuide.leadingAnchor, constant: 18),
+            aerErstInkTrace.trailingAnchor.constraint(equalTo: flckinkMarkerFuse.frameLayoutGuide.trailingAnchor, constant: -18),
+            aerErstInkTrace.topAnchor.constraint(equalTo: flckinkMarkerFuse.contentLayoutGuide.topAnchor, constant: 22),
+            aerErstInkTrace.bottomAnchor.constraint(equalTo: flckinkMarkerFuse.contentLayoutGuide.bottomAnchor, constant: -34),
+            ponllAerosolTrail.heightAnchor.constraint(equalToConstant: 86),
+            flckinkMuralAura.heightAnchor.constraint(equalTo: flckinkMuralAura.widthAnchor, multiplier: 0.88)
         ])
     }
 
-    private func headerView() -> UIView {
-        let header = UIView()
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        back.layer.cornerRadius = 28
-        back.layer.borderWidth = 1
-        back.layer.borderColor = PonllyPalette.line.cgColor
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        header.addSubview(back)
+    private func bruCiuTextureVeil() -> UIView {
+        let bruCiuSketchCue = UIView()
+        let flckinkPaintSeed = UIButton(type: .system)
+        flckinkPaintSeed.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkPaintSeed.tintColor = .white
+        flckinkPaintSeed.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        flckinkPaintSeed.layer.cornerRadius = 28
+        flckinkPaintSeed.layer.borderWidth = 1
+        flckinkPaintSeed.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkPaintSeed.translatesAutoresizingMaskIntoConstraints = false
+        flckinkPaintSeed.addTarget(self, action: #selector(aerErstWallPath), for: .touchUpInside)
+        bruCiuSketchCue.addSubview(flckinkPaintSeed)
 
-        let title = UILabel()
-        title.text = "Artwork"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 24)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(title)
-
-        NSLayoutConstraint.activate([
-            back.leadingAnchor.constraint(equalTo: header.leadingAnchor),
-            back.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -8),
-            back.widthAnchor.constraint(equalToConstant: 56),
-            back.heightAnchor.constraint(equalToConstant: 56),
-            title.centerXAnchor.constraint(equalTo: header.centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: back.centerYAnchor)
-        ])
-        return header
-    }
-
-    private func infoCard() -> UIView {
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-
-        let avatar = ErErstPaintLabView(user: owner, size: 46)
-        card.addSubview(avatar)
-        let title = UILabel()
-        title.text = artwork.title
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 18)
-        title.numberOfLines = 2
-        title.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(title)
-        let meta = UILabel()
-        meta.text = "\(artwork.style)  •  \(PonllyDataCenter.noteCount(for: artwork)) notes"
-        meta.textColor = PonllyPalette.cyan
-        meta.font = PonllyFonts.body(size: 12, weight: .bold)
-        meta.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(meta)
+        let ponllInkArc = UILabel()
+        ponllInkArc.text = "Artwork"
+        ponllInkArc.textColor = .white
+        ponllInkArc.textAlignment = .center
+        ponllInkArc.font = PonllyFonts.muralForgepon(neonLab: 24)
+        ponllInkArc.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuSketchCue.addSubview(ponllInkArc)
 
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(greaterThanOrEqualToConstant: 92),
-            avatar.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
-            avatar.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            title.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 14),
-            title.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -16),
-            title.topAnchor.constraint(equalTo: card.topAnchor, constant: 20),
-            meta.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            meta.trailingAnchor.constraint(equalTo: title.trailingAnchor),
-            meta.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8),
-            meta.bottomAnchor.constraint(lessThanOrEqualTo: card.bottomAnchor, constant: -18)
+            flckinkPaintSeed.leadingAnchor.constraint(equalTo: bruCiuSketchCue.leadingAnchor),
+            flckinkPaintSeed.bottomAnchor.constraint(equalTo: bruCiuSketchCue.bottomAnchor, constant: -8),
+            flckinkPaintSeed.widthAnchor.constraint(equalToConstant: 56),
+            flckinkPaintSeed.heightAnchor.constraint(equalToConstant: 56),
+            ponllInkArc.centerXAnchor.constraint(equalTo: bruCiuSketchCue.centerXAnchor),
+            ponllInkArc.centerYAnchor.constraint(equalTo: flckinkPaintSeed.centerYAnchor)
         ])
-        return card
+        return bruCiuSketchCue
     }
 
-    private func detailCard() -> UIView {
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
+    private func aerErstChromeEcho() -> UIView {
+        let bruCiuMuralBend = UIView()
+        bruCiuMuralBend.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
+        bruCiuMuralBend.layer.cornerRadius = 18
+        bruCiuMuralBend.layer.borderWidth = 1
+        bruCiuMuralBend.layer.borderColor = PonllyPalette.line.cgColor
 
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 10
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(stack)
-
-        let heading = UILabel()
-        heading.text = "Wall Notes"
-        heading.textColor = .white
-        heading.font = PonllyFonts.display(size: 15)
-        let body = UILabel()
-        body.text = "A finished street-art piece from \(owner.name), built around \(artwork.style.lowercased()) rhythm, wall texture, and clean visual presence."
-        body.textColor = PonllyPalette.muted
-        body.font = PonllyFonts.body(size: 13, weight: .medium)
-        body.numberOfLines = 0
-        [heading, body].forEach(stack.addArrangedSubview)
+        let flckinkStencilKick = ErErstPaintLabView(user: bruCiuInkSurge, size: 46)
+        bruCiuMuralBend.addSubview(flckinkStencilKick)
+        let aerErstMarkerLean = UILabel()
+        aerErstMarkerLean.text = ponllPaintRipple.nozzleCraft
+        aerErstMarkerLean.textColor = .white
+        aerErstMarkerLean.font = PonllyFonts.muralForgepon(neonLab: 18)
+        aerErstMarkerLean.numberOfLines = 2
+        aerErstMarkerLean.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuMuralBend.addSubview(aerErstMarkerLean)
+        let ponllChromeTwist = UILabel()
+        ponllChromeTwist.text = "\(ponllPaintRipple.capControl)  •  \(PonllyponllTornEdge.ponllLineMap(flckinkDripMap: ponllPaintRipple)) notes"
+        ponllChromeTwist.textColor = PonllyPalette.cyan
+        ponllChromeTwist.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
+        ponllChromeTwist.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuMuralBend.addSubview(ponllChromeTwist)
 
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 18),
-            stack.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -18),
-            stack.topAnchor.constraint(equalTo: card.topAnchor, constant: 18),
-            stack.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -18)
+            bruCiuMuralBend.heightAnchor.constraint(greaterThanOrEqualToConstant: 92),
+            flckinkStencilKick.leadingAnchor.constraint(equalTo: bruCiuMuralBend.leadingAnchor, constant: 16),
+            flckinkStencilKick.centerYAnchor.constraint(equalTo: bruCiuMuralBend.centerYAnchor),
+            aerErstMarkerLean.leadingAnchor.constraint(equalTo: flckinkStencilKick.trailingAnchor, constant: 14),
+            aerErstMarkerLean.trailingAnchor.constraint(equalTo: bruCiuMuralBend.trailingAnchor, constant: -16),
+            aerErstMarkerLean.topAnchor.constraint(equalTo: bruCiuMuralBend.topAnchor, constant: 20),
+            ponllChromeTwist.leadingAnchor.constraint(equalTo: aerErstMarkerLean.leadingAnchor),
+            ponllChromeTwist.trailingAnchor.constraint(equalTo: aerErstMarkerLean.trailingAnchor),
+            ponllChromeTwist.topAnchor.constraint(equalTo: aerErstMarkerLean.bottomAnchor, constant: 8),
+            ponllChromeTwist.bottomAnchor.constraint(lessThanOrEqualTo: bruCiuMuralBend.bottomAnchor, constant: -18)
         ])
-        return card
+        return bruCiuMuralBend
     }
 
-    @objc private func backTapped() {
+    private func ponllNeonSignal() -> UIView {
+        let bruCiuAerosolWeave = UIView()
+        bruCiuAerosolWeave.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
+        bruCiuAerosolWeave.layer.cornerRadius = 18
+        bruCiuAerosolWeave.layer.borderWidth = 1
+        bruCiuAerosolWeave.layer.borderColor = PonllyPalette.line.cgColor
+
+        let flckinkWallDepth = UIStackView()
+        flckinkWallDepth.axis = .vertical
+        flckinkWallDepth.spacing = 10
+        flckinkWallDepth.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuAerosolWeave.addSubview(flckinkWallDepth)
+
+        let aerErstInkGlow = UILabel()
+        aerErstInkGlow.text = "Wall Notes"
+        aerErstInkGlow.textColor = .white
+        aerErstInkGlow.font = PonllyFonts.muralForgepon(neonLab: 15)
+        let ponllPaintGrit = UILabel()
+        ponllPaintGrit.text = "A finished street-art piece from \(bruCiuInkSurge.aerosolDream), built around \(ponllPaintRipple.capControl.lowercased()) rhythm, wall texture, and clean visual presence."
+        ponllPaintGrit.textColor = PonllyPalette.muted
+        ponllPaintGrit.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+        ponllPaintGrit.numberOfLines = 0
+        [aerErstInkGlow, ponllPaintGrit].forEach(flckinkWallDepth.addArrangedSubview)
+
+        NSLayoutConstraint.activate([
+            flckinkWallDepth.leadingAnchor.constraint(equalTo: bruCiuAerosolWeave.leadingAnchor, constant: 18),
+            flckinkWallDepth.trailingAnchor.constraint(equalTo: bruCiuAerosolWeave.trailingAnchor, constant: -18),
+            flckinkWallDepth.topAnchor.constraint(equalTo: bruCiuAerosolWeave.topAnchor, constant: 18),
+            flckinkWallDepth.bottomAnchor.constraint(equalTo: bruCiuAerosolWeave.bottomAnchor, constant: -18)
+        ])
+        return bruCiuAerosolWeave
+    }
+
+    @objc private func aerErstWallPath() {
         navigationController?.popViewController(animated: true)
     }
 }

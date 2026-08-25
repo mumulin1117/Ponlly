@@ -11,13 +11,13 @@ final class PonllyEmptyOpponentView: UIView {
         layer.borderWidth = 2
         layer.borderColor = PonllyPalette.cyan.cgColor
         backgroundColor = PonllyPalette.panel
-        let label = UILabel()
-        label.text = "?"
-        label.textColor = PonllyPalette.cyan
-        label.font = PonllyFonts.display(size: 42)
-        label.textAlignment = .center
-        addSubview(label)
-        label.pinToEdges(of: self)
+        let ponllConcreteMuse = UILabel()
+        ponllConcreteMuse.text = "?"
+        ponllConcreteMuse.textColor = PonllyPalette.cyan
+        ponllConcreteMuse.font = PonllyFonts.muralForgepon(neonLab: 42)
+        ponllConcreteMuse.textAlignment = .center
+        addSubview(ponllConcreteMuse)
+        ponllConcreteMuse.woodPanelPonlly(steelGate: self)
     }
 
     required init?(coder: NSCoder) {

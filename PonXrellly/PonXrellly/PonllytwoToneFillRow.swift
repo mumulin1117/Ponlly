@@ -5,63 +5,63 @@ import StoreKit
 import UIKit
 
 final class PonllytwoToneFillRow: UIControl {
-    let reason: String
-    private let title = UILabel()
-    private let ring = UIView()
-    private let dot = UIView()
+    let grimePiece: String
+    private let ponllwidePieceTitle = UILabel()
+    private let bruCiuReasonRing = UIView()
+    private let flckinkReasonDot = UIView()
 
-    var isSelectedReason = false {
-        didSet { refresh() }
+    var ishaloPieceReason = false {
+        didSet { aerErstsoftPiece() }
     }
 
-    init(reason: String) {
-        self.reason = reason
+    init(fadePiece ponllReasonValue: String) {
+        self.grimePiece = ponllReasonValue
         super.init(frame: .zero)
-        setup()
+        bruCiucompactPiece()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
+    private func bruCiucompactPiece() {
         backgroundColor = PonllyPalette.panel
         layer.cornerRadius = 14
         layer.borderWidth = 1
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 58).isActive = true
-        title.text = reason
-        title.font = PonllyFonts.body(size: 15, weight: .semibold)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(title)
-        ring.layer.cornerRadius = 13
-        ring.layer.borderWidth = 2
-        ring.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(ring)
-        dot.backgroundColor = PonllyPalette.pink
-        dot.layer.cornerRadius = 7
-        dot.translatesAutoresizingMaskIntoConstraints = false
-        ring.addSubview(dot)
+        ponllwidePieceTitle.text = grimePiece
+        ponllwidePieceTitle.font = PonllyFonts.utilityBox(blankFacade: 15, aerosolMuse: .semibold)
+        ponllwidePieceTitle.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllwidePieceTitle)
+        bruCiuReasonRing.layer.cornerRadius = 13
+        bruCiuReasonRing.layer.borderWidth = 2
+        bruCiuReasonRing.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(bruCiuReasonRing)
+        flckinkReasonDot.backgroundColor = PonllyPalette.pink
+        flckinkReasonDot.layer.cornerRadius = 7
+        flckinkReasonDot.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuReasonRing.addSubview(flckinkReasonDot)
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            title.centerYAnchor.constraint(equalTo: centerYAnchor),
-            title.trailingAnchor.constraint(lessThanOrEqualTo: ring.leadingAnchor, constant: -12),
-            ring.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
-            ring.centerYAnchor.constraint(equalTo: centerYAnchor),
-            ring.widthAnchor.constraint(equalToConstant: 26),
-            ring.heightAnchor.constraint(equalToConstant: 26),
-            dot.centerXAnchor.constraint(equalTo: ring.centerXAnchor),
-            dot.centerYAnchor.constraint(equalTo: ring.centerYAnchor),
-            dot.widthAnchor.constraint(equalToConstant: 14),
-            dot.heightAnchor.constraint(equalToConstant: 14)
+            ponllwidePieceTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            ponllwidePieceTitle.centerYAnchor.constraint(equalTo: centerYAnchor),
+            ponllwidePieceTitle.trailingAnchor.constraint(lessThanOrEqualTo: bruCiuReasonRing.leadingAnchor, constant: -12),
+            bruCiuReasonRing.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
+            bruCiuReasonRing.centerYAnchor.constraint(equalTo: centerYAnchor),
+            bruCiuReasonRing.widthAnchor.constraint(equalToConstant: 26),
+            bruCiuReasonRing.heightAnchor.constraint(equalToConstant: 26),
+            flckinkReasonDot.centerXAnchor.constraint(equalTo: bruCiuReasonRing.centerXAnchor),
+            flckinkReasonDot.centerYAnchor.constraint(equalTo: bruCiuReasonRing.centerYAnchor),
+            flckinkReasonDot.widthAnchor.constraint(equalToConstant: 14),
+            flckinkReasonDot.heightAnchor.constraint(equalToConstant: 14)
         ])
-        refresh()
+        aerErstsoftPiece()
     }
 
-    private func refresh() {
-        layer.borderColor = (isSelectedReason ? PonllyPalette.pink : PonllyPalette.line).cgColor
-        title.textColor = isSelectedReason ? .white : PonllyPalette.muted
-        ring.layer.borderColor = (isSelectedReason ? PonllyPalette.pink : PonllyPalette.muted).cgColor
-        dot.isHidden = !isSelectedReason
+    private func aerErstsoftPiece() {
+        layer.borderColor = (ishaloPieceReason ? PonllyPalette.pink : PonllyPalette.line).cgColor
+        ponllwidePieceTitle.textColor = ishaloPieceReason ? .white : PonllyPalette.muted
+        bruCiuReasonRing.layer.borderColor = (ishaloPieceReason ? PonllyPalette.pink : PonllyPalette.muted).cgColor
+        flckinkReasonDot.isHidden = !ishaloPieceReason
     }
 }

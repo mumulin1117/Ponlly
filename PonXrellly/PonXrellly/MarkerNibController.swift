@@ -5,21 +5,19 @@ import StoreKit
 import UIKit
 
 final class MarkerNibController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private let titleText: String
-    private let submitTitle: String
-    private let mode: EbruCiuOutlinePlan
-    private let artworkButton = UIButton(type: .system)
-    private let previewImageView = UIImageView()
-    private let actionButton: PonllyNeonButton
-    private var selectedImage: UIImage? {
-        didSet { updateSelectionState() }
+    private let bruCiuInkTrace: String
+    private let aerErstAerosolVeil: BruCiuLayerPlan
+    private let ponllMuralAura = UIButton(type: .system)
+    private let bruCiuStencilEcho = UIImageView()
+    private let flckinkMarkerSignal: PonllyNeonButton
+    private var aerErstChromeQuest: UIImage? {
+        didSet { ponllNeonSeed() }
     }
 
-    init(titleText: String, submitTitle: String, mode: EbruCiuOutlinePlan) {
-        self.titleText = titleText
-        self.submitTitle = submitTitle
-        self.mode = mode
-        self.actionButton = PonllyNeonButton(title: submitTitle)
+    init(ponllStyleSignal: String, bruCiuPaintQuest: String, flckinkInkCue: BruCiuLayerPlan) {
+        self.bruCiuInkTrace = ponllStyleSignal
+        self.aerErstAerosolVeil = flckinkInkCue
+        self.flckinkMarkerSignal = PonllyNeonButton(bruCiuPaintQuest)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -29,9 +27,9 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = titleText
+        title = bruCiuInkTrace
         view.backgroundColor = PonllyPalette.background
-        setup()
+        bruCiuTexturePath()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,89 +38,89 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let help = UILabel()
-        help.text = "Choose a graffiti artwork from your library or capture a fresh wall shot."
-        help.textColor = PonllyPalette.muted
-        help.font = PonllyFonts.body(size: 14, weight: .semibold)
-        help.numberOfLines = 0
-        help.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(help)
-        artworkButton.setTitle("+", for: .normal)
-        artworkButton.titleLabel?.font = UIFont.systemFont(ofSize: 72, weight: .light)
-        artworkButton.tintColor = PonllyPalette.cyan
-        artworkButton.backgroundColor = PonllyPalette.panel
-        artworkButton.layer.cornerRadius = 18
-        artworkButton.layer.borderWidth = 3
-        artworkButton.layer.borderColor = PonllyPalette.cyan.cgColor
-        artworkButton.translatesAutoresizingMaskIntoConstraints = false
-        artworkButton.addTarget(self, action: #selector(pickArtworkTapped), for: .touchUpInside)
-        view.addSubview(artworkButton)
-        previewImageView.contentMode = .scaleAspectFill
-        previewImageView.clipsToBounds = true
-        previewImageView.layer.cornerRadius = 18
-        previewImageView.isHidden = true
-        previewImageView.translatesAutoresizingMaskIntoConstraints = false
-        artworkButton.addSubview(previewImageView)
-        actionButton.addTarget(self, action: #selector(goNextTapped), for: .touchUpInside)
-        view.addSubview(actionButton)
-        updateSelectionState()
+    private func bruCiuTexturePath() {
+        let ponllMuralArc = UILabel()
+        ponllMuralArc.text = "Choose a graffiti artwork from your library or capture a fresh wall shot."
+        ponllMuralArc.textColor = PonllyPalette.muted
+        ponllMuralArc.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
+        ponllMuralArc.numberOfLines = 0
+        ponllMuralArc.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllMuralArc)
+        ponllMuralAura.setTitle("+", for: .normal)
+        ponllMuralAura.titleLabel?.font = UIFont.systemFont(ofSize: 72, weight: .light)
+        ponllMuralAura.tintColor = PonllyPalette.cyan
+        ponllMuralAura.backgroundColor = PonllyPalette.panel
+        ponllMuralAura.layer.cornerRadius = 18
+        ponllMuralAura.layer.borderWidth = 3
+        ponllMuralAura.layer.borderColor = PonllyPalette.cyan.cgColor
+        ponllMuralAura.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralAura.addTarget(self, action: #selector(flckinkPaintBend), for: .touchUpInside)
+        view.addSubview(ponllMuralAura)
+        bruCiuStencilEcho.contentMode = .scaleAspectFill
+        bruCiuStencilEcho.clipsToBounds = true
+        bruCiuStencilEcho.layer.cornerRadius = 18
+        bruCiuStencilEcho.isHidden = true
+        bruCiuStencilEcho.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralAura.addSubview(bruCiuStencilEcho)
+        flckinkMarkerSignal.addTarget(self, action: #selector(aerErstInkKick), for: .touchUpInside)
+        view.addSubview(flckinkMarkerSignal)
+        ponllNeonSeed()
         NSLayoutConstraint.activate([
-            help.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 28),
-            help.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
-            help.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 26),
-            artworkButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 28),
-            artworkButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
-            artworkButton.topAnchor.constraint(equalTo: help.bottomAnchor, constant: 24),
-            artworkButton.heightAnchor.constraint(equalTo: artworkButton.widthAnchor, multiplier: 0.72),
-            previewImageView.leadingAnchor.constraint(equalTo: artworkButton.leadingAnchor),
-            previewImageView.trailingAnchor.constraint(equalTo: artworkButton.trailingAnchor),
-            previewImageView.topAnchor.constraint(equalTo: artworkButton.topAnchor),
-            previewImageView.bottomAnchor.constraint(equalTo: artworkButton.bottomAnchor),
-            actionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            actionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
-            actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
-            actionButton.heightAnchor.constraint(equalToConstant: 60)
+            ponllMuralArc.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 28),
+            ponllMuralArc.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
+            ponllMuralArc.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 26),
+            ponllMuralAura.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 28),
+            ponllMuralAura.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
+            ponllMuralAura.topAnchor.constraint(equalTo: ponllMuralArc.bottomAnchor, constant: 24),
+            ponllMuralAura.heightAnchor.constraint(equalTo: ponllMuralAura.widthAnchor, multiplier: 0.72),
+            bruCiuStencilEcho.leadingAnchor.constraint(equalTo: ponllMuralAura.leadingAnchor),
+            bruCiuStencilEcho.trailingAnchor.constraint(equalTo: ponllMuralAura.trailingAnchor),
+            bruCiuStencilEcho.topAnchor.constraint(equalTo: ponllMuralAura.topAnchor),
+            bruCiuStencilEcho.bottomAnchor.constraint(equalTo: ponllMuralAura.bottomAnchor),
+            flckinkMarkerSignal.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            flckinkMarkerSignal.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            flckinkMarkerSignal.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
+            flckinkMarkerSignal.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
-    private func updateSelectionState() {
-        let hasImage = selectedImage != nil
-        previewImageView.image = selectedImage
-        previewImageView.isHidden = !hasImage
-        artworkButton.setTitle(hasImage ? "" : "+", for: .normal)
-        actionButton.isEnabled = hasImage
-        actionButton.alpha = hasImage ? 1 : 0.45
+    private func ponllNeonSeed() {
+        let bruCiuSketchSpark = aerErstChromeQuest != nil
+        bruCiuStencilEcho.image = aerErstChromeQuest
+        bruCiuStencilEcho.isHidden = !bruCiuSketchSpark
+        ponllMuralAura.setTitle(bruCiuSketchSpark ? "" : "+", for: .normal)
+        flckinkMarkerSignal.isEnabled = bruCiuSketchSpark
+        flckinkMarkerSignal.alpha = bruCiuSketchSpark ? 1 : 0.45
     }
 
-    @objc private func pickArtworkTapped() {
-        let sheet = UIAlertController(title: "Select Artwork", message: nil, preferredStyle: .actionSheet)
-        sheet.addAction(UIAlertAction(title: "Photo Library", style: .default) { _ in
-            self.presentPicker(source: .photoLibrary)
+    @objc private func flckinkPaintBend() {
+        let aerErstWallKick = UIAlertController(title: "Select Artwork", message: nil, preferredStyle: .actionSheet)
+        aerErstWallKick.addAction(UIAlertAction(title: "Photo Library", style: .default) { _ in
+            self.bruCiuAerosolLean(flckinkMuralTwist: .photoLibrary)
         })
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            sheet.addAction(UIAlertAction(title: "Camera", style: .default) { _ in
-                self.presentPicker(source: .camera)
+            aerErstWallKick.addAction(UIAlertAction(title: "Camera", style: .default) { _ in
+                self.bruCiuAerosolLean(flckinkMuralTwist: .camera)
             })
         }
-        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        if let popover = sheet.popoverPresentationController {
-            popover.sourceView = artworkButton
-            popover.sourceRect = artworkButton.bounds
+        aerErstWallKick.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        if let ponllStencilWeave = aerErstWallKick.popoverPresentationController {
+            ponllStencilWeave.sourceView = ponllMuralAura
+            ponllStencilWeave.sourceRect = ponllMuralAura.bounds
         }
-        present(sheet, animated: true)
+        present(aerErstWallKick, animated: true)
     }
 
-    private func presentPicker(source: UIImagePickerController.SourceType) {
-        let picker = UIImagePickerController()
-        picker.sourceType = source
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+    private func bruCiuAerosolLean(flckinkMuralTwist: UIImagePickerController.SourceType) {
+        let aerErstMarkerDepth = UIImagePickerController()
+        aerErstMarkerDepth.sourceType = flckinkMuralTwist
+        aerErstMarkerDepth.allowsEditing = true
+        aerErstMarkerDepth.delegate = self
+        present(aerErstMarkerDepth, animated: true)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        selectedImage = (info[.editedImage] as? UIImage) ?? (info[.originalImage] as? UIImage)
+        aerErstChromeQuest = (info[.editedImage] as? UIImage) ?? (info[.originalImage] as? UIImage)
         picker.dismiss(animated: true)
     }
 
@@ -130,29 +128,29 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
         picker.dismiss(animated: true)
     }
 
-    @objc private func goNextTapped() {
-        guard let selectedImage else {
-            ponllyShowToast("Choose artwork to continue")
+    @objc private func aerErstInkKick() {
+        guard let aerErstChromeQuest else {
+            flckinkPrimerCoatponlu("Choose artwork to continue")
             return
         }
-        switch mode {
-        case .create:
-            navigationController?.pushViewController(ErstMuralPlanController(selectedImage: selectedImage), animated: true)
-        case .accept(let battle):
-            actionButton.isEnabled = false
-            actionButton.alpha = 0.55
-            ponllyShowToast("Submitting challenge...")
+        switch aerErstAerosolVeil {
+        case .ponllPaintPlan:
+            navigationController?.pushViewController(ErstMuralPlanController(flckinkColorPlan: aerErstChromeQuest), animated: true)
+        case .bruCiuOutlinePlan(let ponllChromeGlow):
+            flckinkMarkerSignal.isEnabled = false
+            flckinkMarkerSignal.alpha = 0.55
+            flckinkPrimerCoatponlu("Submitting challenge...")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                self.actionButton.isEnabled = true
-                self.actionButton.alpha = 1
-                let updatedBattle = PonllyDataCenter.acceptBattle(battle, selectedImage: selectedImage)
+                self.flckinkMarkerSignal.isEnabled = true
+                self.flckinkMarkerSignal.alpha = 1
+                let bruCiuNeonGrit = PonllyponllTornEdge.bruCiuStreetGlyph(ponllChromeGlow, ponllAngleBreak: aerErstChromeQuest)
                 self.ponllyShowThemeAlert(
                     title: "Challenge Submitted",
-                    message: "Your artwork is now live in the battle arena.",
+                    message: "Your artwork is now live in the ponllMuralBloom arena.",
                     actionTitle: "View Challenge",
-                    style: .success
+                    style: .flckinkSplitFill
                 ) {
-                    self.navigationController?.pushViewController(PbruCiuStencilLabController(battle: updatedBattle), animated: true)
+                    self.navigationController?.pushViewController(PbruCiuStencilLabController(flckinkPaintVeil: bruCiuNeonGrit), animated: true)
                 }
             }
         }

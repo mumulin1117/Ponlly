@@ -5,33 +5,33 @@ import StoreKit
 import UIKit
 
 final class FlckinkPrimerCoatController: UIViewController {
-    private enum ProfileTab: Int, CaseIterable {
-        case artwork
-        case videos
-        case pkBattles
-        case favorites
+    private enum bruCiuConcretePiece: Int, CaseIterable {
+        case flckinkWarehousePiece
+        case aerErstShutterPiece
+        case ponllFencePiece
+        case bruCiuRooftopPiece
 
-        var title: String {
+        var nozzleCraft: String {
             switch self {
-            case .artwork: return "Artwork"
-            case .videos: return "Videos"
-            case .pkBattles: return "PK Battles"
-            case .favorites: return "Favorites"
+            case .flckinkWarehousePiece: return "Artwork"
+            case .aerErstShutterPiece: return "Videos"
+            case .ponllFencePiece: return "PK Battles"
+            case .bruCiuRooftopPiece: return "Favorites"
             }
         }
     }
 
-    private let user: PonllyUser
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
-    private let followButton = UIButton(type: .system)
-    private let followersValue = UILabel()
-    private let tabContentStack = UIStackView()
-    private var selectedProfileTab: ProfileTab = .artwork
-    private var profileTabButtons: [UIButton] = []
+    private let flckinkCornerPiece: PonllyaerErstTwoToneFillr
+    private let aerErstPillarPiece = UIScrollView()
+    private let ponllFacadePiece = UIStackView()
+    private let bruCiuUrbanLetter = UIButton(type: .system)
+    private let flckinkAerosolLetter = UILabel()
+    private let aerErstPaintLetter = UIStackView()
+    private var ponllInkLetter: bruCiuConcretePiece = .flckinkWarehousePiece
+    private var bruCiuMuralLetter: [UIButton] = []
 
-    init(user: PonllyUser) {
-        self.user = user
+    init(user: PonllyaerErstTwoToneFillr) {
+        self.flckinkCornerPiece = user
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -42,9 +42,9 @@ final class FlckinkPrimerCoatController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = user.name
+        title = flckinkCornerPiece.aerosolDream
         view.backgroundColor = PonllyPalette.background
-        setup()
+        flckinkWildstyleLetter()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,585 +53,585 @@ final class FlckinkPrimerCoatController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let bg = PonllyGradientView(colors: [PonllyPalette.background, UIColor(red: 10/255, green: 13/255, blue: 18/255, alpha: 1)])
-        view.addSubview(bg)
-        bg.pinToEdges(of: view)
+    private func flckinkWildstyleLetter() {
+        let aerErstBubbleLettering = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.background, UIColor(red: 10/255, green: 13/255, blue: 18/255, alpha: 1)])
+        view.addSubview(aerErstBubbleLettering)
+        aerErstBubbleLettering.woodPanelPonlly(steelGate: view)
 
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+        aerErstPillarPiece.alwaysBounceVertical = true
+        aerErstPillarPiece.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstPillarPiece)
 
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.spacing = 18
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+        ponllFacadePiece.axis = .vertical
+        ponllFacadePiece.alignment = .center
+        ponllFacadePiece.spacing = 18
+        ponllFacadePiece.translatesAutoresizingMaskIntoConstraints = false
+        aerErstPillarPiece.addSubview(ponllFacadePiece)
 
-        let profileTop = profileTopBlock()
-        stack.addArrangedSubview(profileTop)
-        let name = label("@\(user.name.lowercased())", size: 24, color: .white, weight: .black)
-        name.textAlignment = .center
-        let bio = label(user.bio, size: 13, color: PonllyPalette.muted, weight: .regular)
-        bio.numberOfLines = 0
-        bio.textAlignment = .center
-        let tags = tagRow(["Wildstyle", "Chrome", "Stencil"])
-        let stats = statsCard()
-        let actions = actionRow()
-        let tabs = profileTabs()
-        tabContentStack.axis = .vertical
-        tabContentStack.spacing = 12
-        tabContentStack.translatesAutoresizingMaskIntoConstraints = false
-        [name, bio, tags, stats, actions, tabs, tabContentStack].forEach(stack.addArrangedSubview)
+        let ponllbruCiuHandbillTextureLetter = bruCiuLetterStretch()
+        ponllFacadePiece.addArrangedSubview(ponllbruCiuHandbillTextureLetter)
+        let bruCiuSoftLetter = aerErstTallLetter("@\(flckinkCornerPiece.aerosolDream.lowercased())", bruCiuWideLetter: 24, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
+        bruCiuSoftLetter.textAlignment = .center
+        let ponllCurvedLetter = aerErstTallLetter(flckinkCornerPiece.urbanCanvas, bruCiuWideLetter: 13, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
+        ponllCurvedLetter.numberOfLines = 0
+        ponllCurvedLetter.textAlignment = .center
+        let bruCiuBrokenLetter = flckinkStackedLetter(["Wildstyle", "Chrome", "Stencil"])
+        let flckinkLinkedLetter = aerErstLoopedLetter()
+        let aerErstFlaredLetter = ponllShadowedLetter()
+        let ponllOutlinedLetter = bruCiuChromeLetter()
+        aerErstPaintLetter.axis = .vertical
+        aerErstPaintLetter.spacing = 12
+        aerErstPaintLetter.translatesAutoresizingMaskIntoConstraints = false
+        [bruCiuSoftLetter, ponllCurvedLetter, bruCiuBrokenLetter, flckinkLinkedLetter, aerErstFlaredLetter, ponllOutlinedLetter, aerErstPaintLetter].forEach(ponllFacadePiece.addArrangedSubview)
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -32),
-            profileTop.leadingAnchor.constraint(equalTo: stack.leadingAnchor),
-            profileTop.trailingAnchor.constraint(equalTo: stack.trailingAnchor),
-            bio.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 24),
-            bio.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -24),
-            stats.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 16),
-            stats.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -16),
-            actions.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 16),
-            actions.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -16),
-            tabs.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 16),
-            tabs.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -16),
-            tabContentStack.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 16),
-            tabContentStack.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -16)
+            aerErstPillarPiece.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            aerErstPillarPiece.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            aerErstPillarPiece.topAnchor.constraint(equalTo: view.topAnchor),
+            aerErstPillarPiece.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ponllFacadePiece.leadingAnchor.constraint(equalTo: aerErstPillarPiece.frameLayoutGuide.leadingAnchor),
+            ponllFacadePiece.trailingAnchor.constraint(equalTo: aerErstPillarPiece.frameLayoutGuide.trailingAnchor),
+            ponllFacadePiece.topAnchor.constraint(equalTo: aerErstPillarPiece.contentLayoutGuide.topAnchor),
+            ponllFacadePiece.bottomAnchor.constraint(equalTo: aerErstPillarPiece.contentLayoutGuide.bottomAnchor, constant: -32),
+            ponllbruCiuHandbillTextureLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor),
+            ponllbruCiuHandbillTextureLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor),
+            ponllCurvedLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 24),
+            ponllCurvedLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -24),
+            flckinkLinkedLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
+            flckinkLinkedLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -16),
+            aerErstFlaredLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
+            aerErstFlaredLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -16),
+            ponllOutlinedLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
+            ponllOutlinedLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -16),
+            aerErstPaintLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
+            aerErstPaintLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -16)
         ])
-        refreshProfileTabs()
-        reloadProfileTabContent()
-        refreshRelationshipUI()
+        bruCiuNeonLetter()
+        flckinkDripLetter()
+        aerErstGlowLetter()
     }
 
-    private func label(_ text: String, size: CGFloat, color: UIColor, weight: UIFont.Weight) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.font = weight == .black ? PonllyFonts.display(size: size) : PonllyFonts.body(size: size, weight: weight)
-        label.textColor = color
-        return label
+    private func aerErstTallLetter(_ ponllRoughLetter: String, bruCiuWideLetter: CGFloat, flckinkCompactLetter: UIColor, aerErstAngularLetter: UIFont.Weight) -> UILabel {
+        let bruCiuCleanLetter = UILabel()
+        bruCiuCleanLetter.text = ponllRoughLetter
+        bruCiuCleanLetter.font = aerErstAngularLetter == .black ? PonllyFonts.muralForgepon(neonLab: bruCiuWideLetter) : PonllyFonts.utilityBox(blankFacade: bruCiuWideLetter, aerosolMuse: aerErstAngularLetter)
+        bruCiuCleanLetter.textColor = flckinkCompactLetter
+        return bruCiuCleanLetter
     }
 
-    private func heroHeader() -> UIView {
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        let art = PbruCiuClearCoatView(artwork: PonllyDataCenter.profileArtworks(for: user.id).first ?? PonllyArtwork(
-            id: "\(user.id)_profile_empty",
-            ownerId: user.id,
-            title: "Wall Study",
-            style: "Graffiti",
-            imageName: nil,
-            colors: user.colors
+    private func ponllSharpLetter() -> UIView {
+        let flckinkBoldLetter = UIView()
+        flckinkBoldLetter.translatesAutoresizingMaskIntoConstraints = false
+        let aerErstSkinnyLetter = PbruCiuClearCoatView(ponllPaintTrace: PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).first ?? PonllyaerErstSolidMarkerk(
+            graffitiPulse: "\(flckinkCornerPiece.graffitiPulse)_profile_empty",
+            markerStroke: flckinkCornerPiece.graffitiPulse,
+            nozzleCraft: "Wall Study",
+            capControl: "Graffiti",
+            stencilBloom: nil,
+            inkDrift: flckinkCornerPiece.inkDrift
         ))
-        art.layer.cornerRadius = 0
-        art.layer.borderWidth = 0
-        art.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(art)
-        let shade = PonllyGradientView(colors: [UIColor.black.withAlphaComponent(0.08), PonllyPalette.background])
-        shade.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(shade)
-        let back = roundIcon("chevron.left", action: #selector(backTapped))
-        let more = roundIcon("ellipsis", action: #selector(moreTapped))
-        header.addSubview(back)
-        header.addSubview(more)
+        aerErstSkinnyLetter.layer.cornerRadius = 0
+        aerErstSkinnyLetter.layer.borderWidth = 0
+        aerErstSkinnyLetter.translatesAutoresizingMaskIntoConstraints = false
+        flckinkBoldLetter.addSubview(aerErstSkinnyLetter)
+        let ponllFatLetter = PonllyponllCyanGlowView(bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.08), PonllyPalette.background])
+        ponllFatLetter.translatesAutoresizingMaskIntoConstraints = false
+        flckinkBoldLetter.addSubview(ponllFatLetter)
+        let bruCiuLetterGrid = flckinkLetterFlow("chevron.left", aerErstLetterSnap: #selector(ponllLetterArc))
+        let flckinkLetterBend = flckinkLetterFlow("ellipsis", aerErstLetterSnap: #selector(bruCiuLetterKick))
+        flckinkBoldLetter.addSubview(bruCiuLetterGrid)
+        flckinkBoldLetter.addSubview(flckinkLetterBend)
         NSLayoutConstraint.activate([
-            header.heightAnchor.constraint(equalToConstant: 246),
-            art.leadingAnchor.constraint(equalTo: header.leadingAnchor),
-            art.trailingAnchor.constraint(equalTo: header.trailingAnchor),
-            art.topAnchor.constraint(equalTo: header.topAnchor),
-            art.bottomAnchor.constraint(equalTo: header.bottomAnchor),
-            shade.leadingAnchor.constraint(equalTo: header.leadingAnchor),
-            shade.trailingAnchor.constraint(equalTo: header.trailingAnchor),
-            shade.topAnchor.constraint(equalTo: header.topAnchor),
-            shade.bottomAnchor.constraint(equalTo: header.bottomAnchor),
-            back.leadingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            back.topAnchor.constraint(equalTo: header.safeAreaLayoutGuide.topAnchor, constant: 22),
-            more.trailingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            more.topAnchor.constraint(equalTo: back.topAnchor)
+            flckinkBoldLetter.heightAnchor.constraint(equalToConstant: 246),
+            aerErstSkinnyLetter.leadingAnchor.constraint(equalTo: flckinkBoldLetter.leadingAnchor),
+            aerErstSkinnyLetter.trailingAnchor.constraint(equalTo: flckinkBoldLetter.trailingAnchor),
+            aerErstSkinnyLetter.topAnchor.constraint(equalTo: flckinkBoldLetter.topAnchor),
+            aerErstSkinnyLetter.bottomAnchor.constraint(equalTo: flckinkBoldLetter.bottomAnchor),
+            ponllFatLetter.leadingAnchor.constraint(equalTo: flckinkBoldLetter.leadingAnchor),
+            ponllFatLetter.trailingAnchor.constraint(equalTo: flckinkBoldLetter.trailingAnchor),
+            ponllFatLetter.topAnchor.constraint(equalTo: flckinkBoldLetter.topAnchor),
+            ponllFatLetter.bottomAnchor.constraint(equalTo: flckinkBoldLetter.bottomAnchor),
+            bruCiuLetterGrid.leadingAnchor.constraint(equalTo: flckinkBoldLetter.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuLetterGrid.topAnchor.constraint(equalTo: flckinkBoldLetter.safeAreaLayoutGuide.topAnchor, constant: 22),
+            flckinkLetterBend.trailingAnchor.constraint(equalTo: flckinkBoldLetter.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            flckinkLetterBend.topAnchor.constraint(equalTo: bruCiuLetterGrid.topAnchor)
         ])
-        return header
+        return flckinkBoldLetter
     }
 
-    private func profileTopBlock() -> UIView {
-        let container = UIView()
-        container.translatesAutoresizingMaskIntoConstraints = false
-        let header = heroHeader()
-        container.addSubview(header)
-        let avatar = ErErstPaintLabView(user: user, size: 82)
-        avatar.layer.borderColor = PonllyPalette.pink.cgColor
-        avatar.layer.shadowColor = PonllyPalette.pink.cgColor
-        avatar.layer.shadowOpacity = 0.55
-        avatar.layer.shadowRadius = 18
-        avatar.layer.shadowOffset = CGSize(width: 0, height: 0)
-        container.addSubview(avatar)
+    private func flckinkLetterFlow(_ aerErstLetterLean: String, aerErstLetterSnap: Selector) -> UIButton {
+        let ponllLetterSwing = UIButton(type: .system)
+        ponllLetterSwing.setImage(UIImage(systemName: aerErstLetterLean), for: .normal)
+        ponllLetterSwing.tintColor = .white
+        ponllLetterSwing.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        ponllLetterSwing.layer.cornerRadius = 28
+        ponllLetterSwing.layer.borderWidth = 1
+        ponllLetterSwing.layer.borderColor = PonllyPalette.line.cgColor
+        ponllLetterSwing.translatesAutoresizingMaskIntoConstraints = false
+        ponllLetterSwing.addTarget(self, action: aerErstLetterSnap, for: .touchUpInside)
+        ponllLetterSwing.widthAnchor.constraint(equalToConstant: 56).isActive = true
+        ponllLetterSwing.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        return ponllLetterSwing
+    }
+
+    private func bruCiuLetterStretch() -> UIView {
+        let bruCiuLetterTwist = UIView()
+        bruCiuLetterTwist.translatesAutoresizingMaskIntoConstraints = false
+        let flckinkLetterWeave = ponllSharpLetter()
+        bruCiuLetterTwist.addSubview(flckinkLetterWeave)
+        let aerErstLetterPuzzle = ErErstPaintLabView(user: flckinkCornerPiece, size: 82)
+        aerErstLetterPuzzle.layer.borderColor = PonllyPalette.pink.cgColor
+        aerErstLetterPuzzle.layer.shadowColor = PonllyPalette.pink.cgColor
+        aerErstLetterPuzzle.layer.shadowOpacity = 0.55
+        aerErstLetterPuzzle.layer.shadowRadius = 18
+        aerErstLetterPuzzle.layer.shadowOffset = CGSize(width: 0, height: 0)
+        bruCiuLetterTwist.addSubview(aerErstLetterPuzzle)
         NSLayoutConstraint.activate([
-            container.heightAnchor.constraint(equalToConstant: 246),
-            header.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            header.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            header.topAnchor.constraint(equalTo: container.topAnchor),
-            header.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-            avatar.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            avatar.topAnchor.constraint(equalTo: container.topAnchor, constant: 78)
+            bruCiuLetterTwist.heightAnchor.constraint(equalToConstant: 246),
+            flckinkLetterWeave.leadingAnchor.constraint(equalTo: bruCiuLetterTwist.leadingAnchor),
+            flckinkLetterWeave.trailingAnchor.constraint(equalTo: bruCiuLetterTwist.trailingAnchor),
+            flckinkLetterWeave.topAnchor.constraint(equalTo: bruCiuLetterTwist.topAnchor),
+            flckinkLetterWeave.bottomAnchor.constraint(equalTo: bruCiuLetterTwist.bottomAnchor),
+            aerErstLetterPuzzle.centerXAnchor.constraint(equalTo: bruCiuLetterTwist.centerXAnchor),
+            aerErstLetterPuzzle.topAnchor.constraint(equalTo: bruCiuLetterTwist.topAnchor, constant: 78)
         ])
-        return container
+        return bruCiuLetterTwist
     }
 
-    private func roundIcon(_ symbol: String, action: Selector) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: symbol), for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        button.layer.cornerRadius = 28
-        button.layer.borderWidth = 1
-        button.layer.borderColor = PonllyPalette.line.cgColor
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: action, for: .touchUpInside)
-        button.widthAnchor.constraint(equalToConstant: 56).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        return button
-    }
-
-    private func tagRow(_ tags: [String]) -> UIStackView {
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.alignment = .center
-        row.spacing = 10
-        tags.forEach { text in
-            let pill = UILabel()
-            pill.text = text
-            pill.textAlignment = .center
-            pill.textColor = PonllyPalette.muted
-            pill.font = PonllyFonts.body(size: 12, weight: .semibold)
-            pill.backgroundColor = PonllyPalette.panel
-            pill.layer.cornerRadius = 17
-            pill.layer.borderWidth = 1
-            pill.layer.borderColor = PonllyPalette.line.cgColor
-            pill.clipsToBounds = true
-            pill.widthAnchor.constraint(greaterThanOrEqualToConstant: 92).isActive = true
-            pill.heightAnchor.constraint(equalToConstant: 36).isActive = true
-            row.addArrangedSubview(pill)
+    private func flckinkStackedLetter(_ ponllLetterRhythm: [String]) -> UIStackView {
+        let bruCiuLetterBalance = UIStackView()
+        bruCiuLetterBalance.axis = .horizontal
+        bruCiuLetterBalance.alignment = .center
+        bruCiuLetterBalance.spacing = 10
+        ponllLetterRhythm.forEach { flckinkLetterContrast in
+            let aerErstLetterWeight = UILabel()
+            aerErstLetterWeight.text = flckinkLetterContrast
+            aerErstLetterWeight.textAlignment = .center
+            aerErstLetterWeight.textColor = PonllyPalette.muted
+            aerErstLetterWeight.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .semibold)
+            aerErstLetterWeight.backgroundColor = PonllyPalette.panel
+            aerErstLetterWeight.layer.cornerRadius = 17
+            aerErstLetterWeight.layer.borderWidth = 1
+            aerErstLetterWeight.layer.borderColor = PonllyPalette.line.cgColor
+            aerErstLetterWeight.clipsToBounds = true
+            aerErstLetterWeight.widthAnchor.constraint(greaterThanOrEqualToConstant: 92).isActive = true
+            aerErstLetterWeight.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            bruCiuLetterBalance.addArrangedSubview(aerErstLetterWeight)
         }
-        return row
+        return bruCiuLetterBalance
     }
 
-    private func statsCard() -> UIView {
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.88)
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.distribution = .fillEqually
-        row.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(row)
-        let stats = PonllyDataCenter.profileStats(for: user.id)
-        row.addArrangedSubview(statBlock(value: "\(stats.artworkCount)", title: "Artworks", action: nil))
-        row.addArrangedSubview(statBlock(value: "\(stats.followerCount)", title: "Followers", action: #selector(followersTapped)))
-        row.addArrangedSubview(statBlock(value: "\(stats.followingCount)", title: "Following", action: #selector(followingTapped)))
+    private func aerErstLoopedLetter() -> UIView {
+        let ponllLetterSpacing = UIView()
+        ponllLetterSpacing.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.88)
+        ponllLetterSpacing.layer.cornerRadius = 18
+        ponllLetterSpacing.layer.borderWidth = 1
+        ponllLetterSpacing.layer.borderColor = PonllyPalette.line.cgColor
+        let bruCiuLetterOverlap = UIStackView()
+        bruCiuLetterOverlap.axis = .horizontal
+        bruCiuLetterOverlap.distribution = .fillEqually
+        bruCiuLetterOverlap.translatesAutoresizingMaskIntoConstraints = false
+        ponllLetterSpacing.addSubview(bruCiuLetterOverlap)
+        let flckinkLetterDepth = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.paintRun)", title: "Artworks", action: nil))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.dripTrail)", title: "Followers", action: #selector(ponllLetterShadow)))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.inkBleed)", title: "Following", action: #selector(bruCiuLetterHighlight)))
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 96),
-            row.leadingAnchor.constraint(equalTo: card.leadingAnchor),
-            row.trailingAnchor.constraint(equalTo: card.trailingAnchor),
-            row.topAnchor.constraint(equalTo: card.topAnchor),
-            row.bottomAnchor.constraint(equalTo: card.bottomAnchor)
+            ponllLetterSpacing.heightAnchor.constraint(equalToConstant: 96),
+            bruCiuLetterOverlap.leadingAnchor.constraint(equalTo: ponllLetterSpacing.leadingAnchor),
+            bruCiuLetterOverlap.trailingAnchor.constraint(equalTo: ponllLetterSpacing.trailingAnchor),
+            bruCiuLetterOverlap.topAnchor.constraint(equalTo: ponllLetterSpacing.topAnchor),
+            bruCiuLetterOverlap.bottomAnchor.constraint(equalTo: ponllLetterSpacing.bottomAnchor)
         ])
-        return card
+        return ponllLetterSpacing
     }
 
-    private func statBlock(value: String, title: String, action: Selector?) -> UIControl {
-        let control = UIControl()
-        if let action { control.addTarget(self, action: action, for: .touchUpInside) }
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.spacing = 8
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(stack)
-        let valueLabel: UILabel
-        if title == "Followers" {
-            followersValue.text = value
-            followersValue.font = PonllyFonts.display(size: 16)
-            followersValue.textColor = .white
-            valueLabel = followersValue
+    private func aerErstLetterDimension(value ponllLetterFrame: String, title bruCiuLetterCrown: String, action flckinkLetterSpark: Selector?) -> UIControl {
+        let aerErstLetterFlare = UIControl()
+        if let flckinkLetterSpark { aerErstLetterFlare.addTarget(self, action: flckinkLetterSpark, for: .touchUpInside) }
+        let ponllLetterEcho = UIStackView()
+        ponllLetterEcho.axis = .vertical
+        ponllLetterEcho.alignment = .center
+        ponllLetterEcho.spacing = 8
+        ponllLetterEcho.translatesAutoresizingMaskIntoConstraints = false
+        aerErstLetterFlare.addSubview(ponllLetterEcho)
+        let bruCiuLetterAura: UILabel
+        if bruCiuLetterCrown == "Followers" {
+            flckinkAerosolLetter.text = ponllLetterFrame
+            flckinkAerosolLetter.font = PonllyFonts.muralForgepon(neonLab: 16)
+            flckinkAerosolLetter.textColor = .white
+            bruCiuLetterAura = flckinkAerosolLetter
         } else {
-            valueLabel = label(value, size: 16, color: .white, weight: .black)
+            bruCiuLetterAura = aerErstTallLetter(ponllLetterFrame, bruCiuWideLetter: 16, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
         }
-        let titleLabel = label(title, size: 11, color: PonllyPalette.muted, weight: .medium)
-        [valueLabel, titleLabel].forEach(stack.addArrangedSubview)
+        let flckinkLetterDust = aerErstTallLetter(bruCiuLetterCrown, bruCiuWideLetter: 11, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .medium)
+        [bruCiuLetterAura, flckinkLetterDust].forEach(ponllLetterEcho.addArrangedSubview)
         NSLayoutConstraint.activate([
-            stack.centerXAnchor.constraint(equalTo: control.centerXAnchor),
-            stack.centerYAnchor.constraint(equalTo: control.centerYAnchor)
+            ponllLetterEcho.centerXAnchor.constraint(equalTo: aerErstLetterFlare.centerXAnchor),
+            ponllLetterEcho.centerYAnchor.constraint(equalTo: aerErstLetterFlare.centerYAnchor)
         ])
-        return control
+        return aerErstLetterFlare
     }
 
-    private func actionRow() -> UIStackView {
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.spacing = 14
-        row.distribution = .fillEqually
-        followButton.backgroundColor = PonllyPalette.pink
-        followButton.layer.cornerRadius = 22
-        followButton.setTitleColor(.white, for: .normal)
-        followButton.titleLabel?.font = PonllyFonts.display(size: 12)
-        followButton.addTarget(self, action: #selector(followTapped), for: .touchUpInside)
-        let message = UIButton(type: .system)
-        message.setTitle("Message", for: .normal)
-        message.setTitleColor(PonllyPalette.cyan, for: .normal)
-        message.titleLabel?.font = PonllyFonts.display(size: 12)
-        message.layer.cornerRadius = 22
-        message.layer.borderWidth = 1.4
-        message.layer.borderColor = PonllyPalette.cyan.cgColor
-        message.addTarget(self, action: #selector(messageTapped), for: .touchUpInside)
-        [followButton, message].forEach {
+    private func ponllShadowedLetter() -> UIStackView {
+        let aerErstLetterGrit = UIStackView()
+        aerErstLetterGrit.axis = .horizontal
+        aerErstLetterGrit.spacing = 14
+        aerErstLetterGrit.distribution = .fillEqually
+        bruCiuUrbanLetter.backgroundColor = PonllyPalette.pink
+        bruCiuUrbanLetter.layer.cornerRadius = 22
+        bruCiuUrbanLetter.setTitleColor(.white, for: .normal)
+        bruCiuUrbanLetter.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
+        bruCiuUrbanLetter.addTarget(self, action: #selector(aerErstStyleTexture), for: .touchUpInside)
+        let ponllLetterNoise = UIButton(type: .system)
+        ponllLetterNoise.setTitle("Message", for: .normal)
+        ponllLetterNoise.setTitleColor(PonllyPalette.cyan, for: .normal)
+        ponllLetterNoise.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
+        ponllLetterNoise.layer.cornerRadius = 22
+        ponllLetterNoise.layer.borderWidth = 1.4
+        ponllLetterNoise.layer.borderColor = PonllyPalette.cyan.cgColor
+        ponllLetterNoise.addTarget(self, action: #selector(ponllStyleDrift), for: .touchUpInside)
+        [bruCiuUrbanLetter, ponllLetterNoise].forEach {
             $0.heightAnchor.constraint(equalToConstant: 58).isActive = true
-            row.addArrangedSubview($0)
+            aerErstLetterGrit.addArrangedSubview($0)
         }
-        return row
+        return aerErstLetterGrit
     }
 
-    private func profileTabs() -> UIStackView {
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.distribution = .fillEqually
-        row.spacing = 8
-        profileTabButtons = ProfileTab.allCases.map { tab in
-            let button = UIButton(type: .system)
-            button.tag = tab.rawValue
-            button.setTitle(tab.title, for: .normal)
-            button.titleLabel?.font = PonllyFonts.display(size: 11)
-            button.layer.cornerRadius = 16
-            button.layer.borderWidth = 1
-            button.addTarget(self, action: #selector(profileTabTapped(_:)), for: .touchUpInside)
-            button.heightAnchor.constraint(equalToConstant: 36).isActive = true
-            row.addArrangedSubview(button)
-            return button
+    private func bruCiuChromeLetter() -> UIStackView {
+        let bruCiuStyleBurst = UIStackView()
+        bruCiuStyleBurst.axis = .horizontal
+        bruCiuStyleBurst.distribution = .fillEqually
+        bruCiuStyleBurst.spacing = 8
+        bruCiuMuralLetter = bruCiuConcretePiece.allCases.map { flckinkStyleShift in
+            let aerErstStylePulse = UIButton(type: .system)
+            aerErstStylePulse.tag = flckinkStyleShift.rawValue
+            aerErstStylePulse.setTitle(flckinkStyleShift.nozzleCraft, for: .normal)
+            aerErstStylePulse.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
+            aerErstStylePulse.layer.cornerRadius = 16
+            aerErstStylePulse.layer.borderWidth = 1
+            aerErstStylePulse.addTarget(self, action: #selector(bruCiuStyleEcho(_:)), for: .touchUpInside)
+            aerErstStylePulse.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            bruCiuStyleBurst.addArrangedSubview(aerErstStylePulse)
+            return aerErstStylePulse
         }
-        return row
+        return bruCiuStyleBurst
     }
 
-    private func refreshProfileTabs() {
-        profileTabButtons.forEach { button in
-            let isSelected = button.tag == selectedProfileTab.rawValue
-            button.backgroundColor = isSelected ? PonllyPalette.pink : PonllyPalette.panel.withAlphaComponent(0.72)
-            button.setTitleColor(isSelected ? .white : PonllyPalette.muted, for: .normal)
-            button.layer.borderColor = (isSelected ? PonllyPalette.pink : PonllyPalette.line).cgColor
+    private func bruCiuNeonLetter() {
+        bruCiuMuralLetter.forEach { flckinkStyleFrame in
+            let aerErstStyleCue = flckinkStyleFrame.tag == ponllInkLetter.rawValue
+            flckinkStyleFrame.backgroundColor = aerErstStyleCue ? PonllyPalette.pink : PonllyPalette.panel.withAlphaComponent(0.72)
+            flckinkStyleFrame.setTitleColor(aerErstStyleCue ? .white : PonllyPalette.muted, for: .normal)
+            flckinkStyleFrame.layer.borderColor = (aerErstStyleCue ? PonllyPalette.pink : PonllyPalette.line).cgColor
         }
     }
 
-    private func reloadProfileTabContent() {
-        tabContentStack.arrangedSubviews.forEach {
-            tabContentStack.removeArrangedSubview($0)
+    private func flckinkDripLetter() {
+        aerErstPaintLetter.arrangedSubviews.forEach {
+            aerErstPaintLetter.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        switch selectedProfileTab {
-        case .artwork:
-            tabContentStack.addArrangedSubview(artworkGrid())
-        case .videos:
-            tabContentStack.addArrangedSubview(videoList())
-        case .pkBattles:
-            tabContentStack.addArrangedSubview(pkBattleList())
-        case .favorites:
-            tabContentStack.addArrangedSubview(favoriteGrid())
+        switch ponllInkLetter {
+        case .flckinkWarehousePiece:
+            aerErstPaintLetter.addArrangedSubview(ponllStyleSeed())
+        case .aerErstShutterPiece:
+            aerErstPaintLetter.addArrangedSubview(bruCiuStylePrompt())
+        case .ponllFencePiece:
+            aerErstPaintLetter.addArrangedSubview(flckinkStyleSpark())
+        case .bruCiuRooftopPiece:
+            aerErstPaintLetter.addArrangedSubview(aerErstStyleMood())
         }
     }
 
-    private func artworkGrid() -> UIStackView {
-        let outer = UIStackView()
-        outer.axis = .vertical
-        outer.spacing = 10
-        let artworks = Array(PonllyDataCenter.profileArtworks(for: user.id).prefix(2))
-        guard !artworks.isEmpty else {
-            outer.addArrangedSubview(emptyProfilePanel(title: "No artwork yet", subtitle: "Published pieces from this artist will appear here."))
-            return outer
+    private func ponllStyleSeed() -> UIStackView {
+        let ponllStylePath = UIStackView()
+        ponllStylePath.axis = .vertical
+        ponllStylePath.spacing = 10
+        let bruCiuStyleFlow = Array(PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).prefix(2))
+        guard !bruCiuStyleFlow.isEmpty else {
+            ponllStylePath.addArrangedSubview(ponllPaintSignal(title: "No artwork yet", subtitle: "Published pieces from this artist will appear here."))
+            return ponllStylePath
         }
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.spacing = 10
-        row.distribution = .fillEqually
-        artworks.forEach { artwork in
-            let art = PbruCiuClearCoatView(artwork: artwork)
-            art.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
-            art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.92).isActive = true
-            row.addArrangedSubview(art)
+        let flckinkStyleGrid = UIStackView()
+        flckinkStyleGrid.axis = .horizontal
+        flckinkStyleGrid.spacing = 10
+        flckinkStyleGrid.distribution = .fillEqually
+        bruCiuStyleFlow.forEach { aerErstStyleArc in
+            let ponllStyleBend = PbruCiuClearCoatView(ponllPaintTrace: aerErstStyleArc)
+            ponllStyleBend.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
+            ponllStyleBend.heightAnchor.constraint(equalTo: ponllStyleBend.widthAnchor, multiplier: 0.92).isActive = true
+            flckinkStyleGrid.addArrangedSubview(ponllStyleBend)
         }
-        if artworks.count == 1 {
-            row.addArrangedSubview(UIView())
+        if bruCiuStyleFlow.count == 1 {
+            flckinkStyleGrid.addArrangedSubview(UIView())
         }
-        outer.addArrangedSubview(row)
-        return outer
+        ponllStylePath.addArrangedSubview(flckinkStyleGrid)
+        return ponllStylePath
     }
 
-    private func videoList() -> UIStackView {
-        let outer = UIStackView()
-        outer.axis = .vertical
-        outer.spacing = 12
-        let videos = PonllyDataCenter.profileVideos(for: user.id)
-        let artworks = PonllyDataCenter.profileArtworks(for: user.id)
-        if videos.isEmpty {
-            for index in 0..<min(3, artworks.count) {
-                outer.addArrangedSubview(profileMediaCard(
-                    artwork: artworks[index],
-                    title: ["Wall prep process", "Cap pressure study", "Color pass breakdown"][index],
-                    subtitle: "\(user.name) keeps the process focused on \(artworks[index].style.lowercased()) control.",
-                    meta: "\(6 + index * 3) reactions  •  \(2 + index) notes",
+    private func bruCiuStylePrompt() -> UIStackView {
+        let bruCiuStyleKick = UIStackView()
+        bruCiuStyleKick.axis = .vertical
+        bruCiuStyleKick.spacing = 12
+        let flckinkStyleLean = PonllyponllTornEdge.flckinkColorWall(aerErstTextureWall: flckinkCornerPiece.graffitiPulse)
+        let aerErstStyleTwist = PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse)
+        if flckinkStyleLean.isEmpty {
+            for ponllStyleWeave in 0..<min(3, aerErstStyleTwist.count) {
+                bruCiuStyleKick.addArrangedSubview(bruCiuPaintQuest(
+                    artwork: aerErstStyleTwist[ponllStyleWeave],
+                    title: ["Wall prep process", "Cap pressure study", "Color pass breakdown"][ponllStyleWeave],
+                    subtitle: "\(flckinkCornerPiece.aerosolDream) keeps the process focused on \(aerErstStyleTwist[ponllStyleWeave].capControl.lowercased()) control.",
+                    meta: "\(6 + ponllStyleWeave * 3) reactions  •  \(2 + ponllStyleWeave) notes",
                     accent: PonllyPalette.cyan
                 ))
             }
         } else {
-            for (index, item) in videos.enumerated() {
-                outer.addArrangedSubview(profileMediaCard(
-                    artwork: artworks[index % artworks.count],
-                    title: item.title,
-                    subtitle: item.details,
-                    meta: "\(item.reactionCount) reactions  •  \(item.commentCount) notes",
+            for (bruCiuStyleLayer, flckinkStyleDepth) in flckinkStyleLean.enumerated() {
+                bruCiuStyleKick.addArrangedSubview(bruCiuPaintQuest(
+                    artwork: aerErstStyleTwist[bruCiuStyleLayer % aerErstStyleTwist.count],
+                    title: flckinkStyleDepth.nozzleCraft,
+                    subtitle: flckinkStyleDepth.fillPattern,
+                    meta: "\(flckinkStyleDepth.wildstyleCurve) reactions  •  \(flckinkStyleDepth.paintLayer) notes",
                     accent: PonllyPalette.cyan
                 ))
             }
         }
-        return outer
+        return bruCiuStyleKick
     }
 
-    private func pkBattleList() -> UIStackView {
-        let outer = UIStackView()
-        outer.axis = .vertical
-        outer.spacing = 12
-        let battles = PonllyDataCenter.battleRecords(for: user.id)
-        if battles.isEmpty {
-            outer.addArrangedSubview(emptyProfilePanel(title: "No PK battle records yet", subtitle: "Fresh challenges from this artist will appear here."))
-            return outer
+    private func flckinkStyleSpark() -> UIStackView {
+        let aerErstStyleGlow = UIStackView()
+        aerErstStyleGlow.axis = .vertical
+        aerErstStyleGlow.spacing = 12
+        let ponllStyleGrit = PonllyponllTornEdge.ponllMuralWall(bruCiuLetterWall: flckinkCornerPiece.graffitiPulse)
+        if ponllStyleGrit.isEmpty {
+            aerErstStyleGlow.addArrangedSubview(ponllPaintSignal(title: "No PK ponllMuralBloom records yet", subtitle: "Fresh challenges from this artist will appear here."))
+            return aerErstStyleGlow
         }
-        for battle in battles {
-            let art = battle.creatorAId == user.id ? battle.artworkA : (battle.artworkB ?? battle.artworkA)
-            let total = max(battle.votesA + battle.votesB, 1)
-            let statusText = battle.status == .hot ? "\(total) votes  •  \(battle.deadlineText)" : "Waiting  •  \(battle.deadlineText)"
-            let card = profileMediaCard(
-                artwork: art,
-                title: battle.title,
-                subtitle: battle.theme,
-                meta: statusText,
-                accent: battle.status == .hot ? PonllyPalette.pink : PonllyPalette.cyan
+        for bruCiuStyleNoise in ponllStyleGrit {
+            let flckinkStyleTexture = bruCiuStyleNoise.paintMist == flckinkCornerPiece.graffitiPulse ? bruCiuStyleNoise.neonDrip : (bruCiuStyleNoise.concreteMuse ?? bruCiuStyleNoise.neonDrip)
+            let aerErstStyleContrast = max(bruCiuStyleNoise.alleyCanvas + bruCiuStyleNoise.railYard, 1)
+            let ponllStyleBalance = bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll ? "\(aerErstStyleContrast) votes  •  \(bruCiuStyleNoise.sketchRush)" : "Waiting  •  \(bruCiuStyleNoise.sketchRush)"
+            let bruCiuStyleRhythm = bruCiuPaintQuest(
+                    artwork: flckinkStyleTexture,
+                    title: bruCiuStyleNoise.nozzleCraft,
+                subtitle: bruCiuStyleNoise.chromeFill,
+                meta: ponllStyleBalance,
+                accent: bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll ? PonllyPalette.pink : PonllyPalette.cyan
             )
-            let tap = UITapGestureRecognizer(target: self, action: #selector(pkBattleCardTapped(_:)))
-            card.addGestureRecognizer(tap)
-            card.isUserInteractionEnabled = true
-            card.accessibilityIdentifier = battle.id
-            outer.addArrangedSubview(card)
+            let flckinkStyleMotion = UITapGestureRecognizer(target: self, action: #selector(aerErstPaintCue(_:)))
+            bruCiuStyleRhythm.addGestureRecognizer(flckinkStyleMotion)
+            bruCiuStyleRhythm.isUserInteractionEnabled = true
+            bruCiuStyleRhythm.accessibilityIdentifier = bruCiuStyleNoise.graffitiPulse
+            aerErstStyleGlow.addArrangedSubview(bruCiuStyleRhythm)
         }
-        return outer
+        return aerErstStyleGlow
     }
 
-    private func favoriteGrid() -> UIStackView {
-        let outer = UIStackView()
-        outer.axis = .vertical
-        outer.spacing = 10
-        let artworks = Array(PonllyDataCenter.profileArtworks(for: user.id).suffix(2))
-        guard !artworks.isEmpty else {
-            outer.addArrangedSubview(emptyProfilePanel(title: "No favorites yet", subtitle: "Saved wall inspiration from this artist will appear here."))
-            return outer
+    private func aerErstStyleMood() -> UIStackView {
+        let ponllPaintSeed = UIStackView()
+        ponllPaintSeed.axis = .vertical
+        ponllPaintSeed.spacing = 10
+        let bruCiuPaintSpark = Array(PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).suffix(2))
+        guard !bruCiuPaintSpark.isEmpty else {
+            ponllPaintSeed.addArrangedSubview(ponllPaintSignal(title: "No favorites yet", subtitle: "Saved wall inspiration from this artist will appear here."))
+            return ponllPaintSeed
         }
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.spacing = 10
-        row.distribution = .fillEqually
-        artworks.forEach { artwork in
-            let art = PbruCiuClearCoatView(artwork: artwork)
-            art.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.45).cgColor
-            art.heightAnchor.constraint(equalTo: art.widthAnchor, multiplier: 0.76).isActive = true
-            row.addArrangedSubview(art)
+        let flckinkPaintMood = UIStackView()
+        flckinkPaintMood.axis = .horizontal
+        flckinkPaintMood.spacing = 10
+        flckinkPaintMood.distribution = .fillEqually
+        bruCiuPaintSpark.forEach { aerErstPaintPath in
+            let ponllPaintFlowline = PbruCiuClearCoatView(ponllPaintTrace: aerErstPaintPath)
+            ponllPaintFlowline.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.45).cgColor
+            ponllPaintFlowline.heightAnchor.constraint(equalTo: ponllPaintFlowline.widthAnchor, multiplier: 0.76).isActive = true
+            flckinkPaintMood.addArrangedSubview(ponllPaintFlowline)
         }
-        if artworks.count == 1 {
-            row.addArrangedSubview(UIView())
+        if bruCiuPaintSpark.count == 1 {
+            flckinkPaintMood.addArrangedSubview(UIView())
         }
-        outer.addArrangedSubview(row)
-        return outer
+        ponllPaintSeed.addArrangedSubview(flckinkPaintMood)
+        return ponllPaintSeed
     }
 
-    private func profileMediaCard(artwork: PonllyArtwork, title: String, subtitle: String, meta: String, accent: UIColor) -> UIView {
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
+    private func bruCiuPaintQuest(artwork flckinkPaintArc: PonllyaerErstSolidMarkerk, title aerErstPaintBend: String, subtitle ponllPaintKick: String, meta bruCiuPaintLean: String, accent flckinkPaintTwist: UIColor) -> UIView {
+        let aerErstPaintWeave = UIView()
+        aerErstPaintWeave.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
+        aerErstPaintWeave.layer.cornerRadius = 18
+        aerErstPaintWeave.layer.borderWidth = 1
+        aerErstPaintWeave.layer.borderColor = PonllyPalette.line.cgColor
 
-        let art = PbruCiuClearCoatView(artwork: artwork)
-        art.layer.borderColor = accent.withAlphaComponent(0.45).cgColor
-        card.addSubview(art)
+        let ponllPaintDepth = PbruCiuClearCoatView(ponllPaintTrace: flckinkPaintArc)
+        ponllPaintDepth.layer.borderColor = flckinkPaintTwist.withAlphaComponent(0.45).cgColor
+        aerErstPaintWeave.addSubview(ponllPaintDepth)
 
-        let textStack = UIStackView()
-        textStack.axis = .vertical
-        textStack.spacing = 7
-        textStack.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(textStack)
+        let bruCiuPaintGlow = UIStackView()
+        bruCiuPaintGlow.axis = .vertical
+        bruCiuPaintGlow.spacing = 7
+        bruCiuPaintGlow.translatesAutoresizingMaskIntoConstraints = false
+        aerErstPaintWeave.addSubview(bruCiuPaintGlow)
 
-        let titleLabel = label(title, size: 14, color: .white, weight: .black)
-        titleLabel.numberOfLines = 2
-        let subtitleLabel = label(subtitle, size: 12, color: PonllyPalette.muted, weight: .regular)
-        subtitleLabel.numberOfLines = 2
-        let metaLabel = label(meta, size: 11, color: accent, weight: .bold)
-        metaLabel.numberOfLines = 1
-        [titleLabel, subtitleLabel, metaLabel].forEach(textStack.addArrangedSubview)
+        let flckinkPaintGrit = aerErstTallLetter(aerErstPaintBend, bruCiuWideLetter: 14, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
+        flckinkPaintGrit.numberOfLines = 2
+        let aerErstPaintNoise = aerErstTallLetter(ponllPaintKick, bruCiuWideLetter: 12, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
+        aerErstPaintNoise.numberOfLines = 2
+        let ponllPaintTexture = aerErstTallLetter(bruCiuPaintLean, bruCiuWideLetter: 11, flckinkCompactLetter: flckinkPaintTwist, aerErstAngularLetter: .bold)
+        ponllPaintTexture.numberOfLines = 1
+        [flckinkPaintGrit, aerErstPaintNoise, ponllPaintTexture].forEach(bruCiuPaintGlow.addArrangedSubview)
 
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(greaterThanOrEqualToConstant: 122),
-            art.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 12),
-            art.topAnchor.constraint(equalTo: card.topAnchor, constant: 12),
-            art.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -12),
-            art.widthAnchor.constraint(equalTo: card.widthAnchor, multiplier: 0.34),
-            textStack.leadingAnchor.constraint(equalTo: art.trailingAnchor, constant: 14),
-            textStack.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -14),
-            textStack.centerYAnchor.constraint(equalTo: card.centerYAnchor)
+            aerErstPaintWeave.heightAnchor.constraint(greaterThanOrEqualToConstant: 122),
+            ponllPaintDepth.leadingAnchor.constraint(equalTo: aerErstPaintWeave.leadingAnchor, constant: 12),
+            ponllPaintDepth.topAnchor.constraint(equalTo: aerErstPaintWeave.topAnchor, constant: 12),
+            ponllPaintDepth.bottomAnchor.constraint(equalTo: aerErstPaintWeave.bottomAnchor, constant: -12),
+            ponllPaintDepth.widthAnchor.constraint(equalTo: aerErstPaintWeave.widthAnchor, multiplier: 0.34),
+            bruCiuPaintGlow.leadingAnchor.constraint(equalTo: ponllPaintDepth.trailingAnchor, constant: 14),
+            bruCiuPaintGlow.trailingAnchor.constraint(equalTo: aerErstPaintWeave.trailingAnchor, constant: -14),
+            bruCiuPaintGlow.centerYAnchor.constraint(equalTo: aerErstPaintWeave.centerYAnchor)
         ])
-        return card
+        return aerErstPaintWeave
     }
 
-    private func emptyProfilePanel(title: String, subtitle: String) -> UIView {
-        let panel = UIStackView()
-        panel.axis = .vertical
-        panel.alignment = .center
-        panel.spacing = 10
-        panel.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-        panel.layer.cornerRadius = 18
-        panel.layer.borderWidth = 1
-        panel.layer.borderColor = PonllyPalette.line.cgColor
-        panel.layoutMargins = UIEdgeInsets(top: 26, left: 18, bottom: 26, right: 18)
-        panel.isLayoutMarginsRelativeArrangement = true
-        let icon = UIImageView(image: UIImage(systemName: "sparkles"))
-        icon.tintColor = PonllyPalette.cyan
-        icon.widthAnchor.constraint(equalToConstant: 28).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 28).isActive = true
-        let titleLabel = label(title, size: 15, color: .white, weight: .black)
-        titleLabel.textAlignment = .center
-        let subtitleLabel = label(subtitle, size: 12, color: PonllyPalette.muted, weight: .regular)
-        subtitleLabel.textAlignment = .center
-        subtitleLabel.numberOfLines = 0
-        [icon, titleLabel, subtitleLabel].forEach(panel.addArrangedSubview)
-        return panel
+    private func ponllPaintSignal(title bruCiuPaintContrast: String, subtitle flckinkPaintBalance: String) -> UIView {
+        let aerErstPaintRhythm = UIStackView()
+        aerErstPaintRhythm.axis = .vertical
+        aerErstPaintRhythm.alignment = .center
+        aerErstPaintRhythm.spacing = 10
+        aerErstPaintRhythm.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
+        aerErstPaintRhythm.layer.cornerRadius = 18
+        aerErstPaintRhythm.layer.borderWidth = 1
+        aerErstPaintRhythm.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstPaintRhythm.layoutMargins = UIEdgeInsets(top: 26, left: 18, bottom: 26, right: 18)
+        aerErstPaintRhythm.isLayoutMarginsRelativeArrangement = true
+        let ponllPaintMotion = UIImageView(image: UIImage(systemName: "sparkles"))
+        ponllPaintMotion.tintColor = PonllyPalette.cyan
+        ponllPaintMotion.widthAnchor.constraint(equalToConstant: 28).isActive = true
+        ponllPaintMotion.heightAnchor.constraint(equalToConstant: 28).isActive = true
+        let bruCiuPaintCascade = aerErstTallLetter(bruCiuPaintContrast, bruCiuWideLetter: 15, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
+        bruCiuPaintCascade.textAlignment = .center
+        let flckinkPaintRipple = aerErstTallLetter(flckinkPaintBalance, bruCiuWideLetter: 12, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
+        flckinkPaintRipple.textAlignment = .center
+        flckinkPaintRipple.numberOfLines = 0
+        [ponllPaintMotion, bruCiuPaintCascade, flckinkPaintRipple].forEach(aerErstPaintRhythm.addArrangedSubview)
+        return aerErstPaintRhythm
     }
 
-    private func refreshRelationshipUI() {
-        if PonllyDataCenter.isBlocked(user.id) {
-            followButton.setTitle("Blocked", for: .normal)
-            followButton.alpha = 0.5
-            followButton.isEnabled = true
-            let stats = PonllyDataCenter.profileStats(for: user.id)
-            followersValue.text = "\(stats.followerCount)"
+    private func aerErstGlowLetter() {
+        if PonllyponllTornEdge.aerErstRustStreak(flckinkCornerPiece.graffitiPulse) {
+            bruCiuUrbanLetter.setTitle("Blocked", for: .normal)
+            bruCiuUrbanLetter.alpha = 0.5
+            bruCiuUrbanLetter.isEnabled = true
+            let aerErstPaintSurge = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
+            flckinkAerosolLetter.text = "\(aerErstPaintSurge.dripTrail)"
             return
         }
-        let following = PonllyDataCenter.isFollowing(user.id)
-        followButton.setTitle(following ? "Following" : "Follow", for: .normal)
-        followButton.alpha = following ? 0.72 : 1
-        let stats = PonllyDataCenter.profileStats(for: user.id)
-        followersValue.text = "\(stats.followerCount + (following ? 1 : 0))"
+        let ponllPaintBurst = PonllyponllTornEdge.aerErstCrackedWall(flckinkCornerPiece.graffitiPulse)
+        bruCiuUrbanLetter.setTitle(ponllPaintBurst ? "Following" : "Follow", for: .normal)
+        bruCiuUrbanLetter.alpha = ponllPaintBurst ? 0.72 : 1
+        let bruCiuPaintBloom = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
+        flckinkAerosolLetter.text = "\(bruCiuPaintBloom.dripTrail + (ponllPaintBurst ? 1 : 0))"
     }
 
-    @objc private func backTapped() {
+    @objc private func ponllLetterArc() {
         navigationController?.popViewController(animated: true)
     }
 
-    @objc private func moreTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let menu = PaerosolGritMenuViewController(user: self.user)
-            menu.onReport = { [weak self] in
+    @objc private func bruCiuLetterKick() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let flckinkPaintFlicker = PaerosolGritMenuViewController(aerErstInkFuse: self.flckinkCornerPiece)
+            flckinkPaintFlicker.bruCiuSketchFlicker = { [weak self] in
                 guard let self else { return }
-                let report = PonllycolorFadeController(user: self.user)
-                report.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(report, animated: true)
+                let aerErstPaintFlash = PonllycolorFadeController(user: self.flckinkCornerPiece)
+                aerErstPaintFlash.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(aerErstPaintFlash, animated: true)
             }
-            menu.onBlock = { [weak self] in
-                self?.presentBlockConfirmation()
+            flckinkPaintFlicker.flckinkPaintFlash = { [weak self] in
+                self?.ponllPaintFuse()
             }
-            menu.modalPresentationStyle = .overFullScreen
-            self.present(menu, animated: false)
+            flckinkPaintFlicker.modalPresentationStyle = .overFullScreen
+            self.present(flckinkPaintFlicker, animated: false)
         }
     }
 
-    @objc private func profileTabTapped(_ sender: UIButton) {
-        guard let tab = ProfileTab(rawValue: sender.tag), tab != selectedProfileTab else { return }
-        selectedProfileTab = tab
-        refreshProfileTabs()
-        reloadProfileTabContent()
+    @objc private func bruCiuStyleEcho(_ ponllPaintTrace: UIButton) {
+        guard let bruCiuPaintTrail = bruCiuConcretePiece(rawValue: ponllPaintTrace.tag), bruCiuPaintTrail != ponllInkLetter else { return }
+        ponllInkLetter = bruCiuPaintTrail
+        bruCiuNeonLetter()
+        flckinkDripLetter()
     }
 
-    @objc private func pkBattleCardTapped(_ gesture: UITapGestureRecognizer) {
-        guard let id = gesture.view?.accessibilityIdentifier,
-              let battle = PonllyDataCenter.battles.first(where: { $0.id == id }) else { return }
-        let detail = PbruCiuStencilLabController(battle: battle)
-        detail.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(detail, animated: true)
+    @objc private func aerErstPaintCue(_ flckinkPaintVeil: UITapGestureRecognizer) {
+        guard let aerErstPaintAura = flckinkPaintVeil.view?.accessibilityIdentifier,
+              let ponllPaintEcho = PonllyponllTornEdge.babruCiuPaintPeelttles.first(where: { $0.graffitiPulse == aerErstPaintAura }) else { return }
+        let bruCiuInkSignal = PbruCiuStencilLabController(flckinkPaintVeil: ponllPaintEcho)
+        bruCiuInkSignal.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(bruCiuInkSignal, animated: true)
     }
 
-    @objc private func followTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            guard !PonllyDataCenter.isBlocked(self.user.id) else {
+    @objc private func aerErstStyleTexture() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            guard !PonllyponllTornEdge.aerErstRustStreak(self.flckinkCornerPiece.graffitiPulse) else {
                 self.ponllyShowThemeAlert(
                     title: "Action Unavailable",
                     message: "This artist is currently blocked. Manage your blocked list before reconnecting.",
                     actionTitle: "Got It",
-                    style: .failure
+                    style: .ponllWhiteEdge
                 )
                 return
             }
-            let following = PonllyDataCenter.toggleFollow(self.user.id)
-            self.refreshRelationshipUI()
-            self.ponllyShowToast(following ? "Artist followed" : "Artist unfollowed")
+            let flckinkInkQuest = PonllyponllTornEdge.bruCiuCementRough(self.flckinkCornerPiece.graffitiPulse)
+            self.aerErstGlowLetter()
+            self.flckinkPrimerCoatponlu(flckinkInkQuest ? "Artist followed" : "Artist unfollowed")
         }
     }
 
-    @objc private func messageTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            guard !PonllyDataCenter.isBlocked(self.user.id) else {
+    @objc private func ponllStyleDrift() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            guard !PonllyponllTornEdge.aerErstRustStreak(self.flckinkCornerPiece.graffitiPulse) else {
                 self.ponllyShowThemeAlert(
                     title: "Cannot Send Message",
                     message: "Messaging is unavailable while this artist is blocked.",
                     actionTitle: "Got It",
-                    style: .failure
+                    style: .ponllWhiteEdge
                 )
                 return
             }
-            guard PonllyDataCenter.isMutual(self.user.id) else {
+            guard PonllyponllTornEdge.ponllBrickCrack(self.flckinkCornerPiece.graffitiPulse) else {
                 self.ponllyShowThemeAlert(
                     title: "Cannot Send Message",
                     message: "You need to follow each other before starting a direct conversation.",
                     actionTitle: "Got It",
-                    style: .failure
+                    style: .ponllWhiteEdge
                 )
                 return
             }
-            let chat = NckinkSkinnyCapController(user: self.user, thread: PonllyDataCenter.thread(for: self.user.id))
-            chat.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(chat, animated: true)
+            let aerErstInkCue = NckinkSkinnyCapController(bruCiuTextureTrail: self.flckinkCornerPiece, flckinkPaintVeil: PonllyponllTornEdge.ponllFineLine(flckinkSkinnyCap: self.flckinkCornerPiece.graffitiPulse))
+            aerErstInkCue.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(aerErstInkCue, animated: true)
         }
     }
 
-    @objc private func followersTapped() {
-        let list = PonllyacidGreenFillfController(kind: .followers)
-        list.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(list, animated: true)
+    @objc private func ponllLetterShadow() {
+        let ponllInkSeed = PonllyacidGreenFillfController(kind: .aerErstBrickTone)
+        ponllInkSeed.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(ponllInkSeed, animated: true)
     }
 
-    @objc private func followingTapped() {
-        let list = PonllyacidGreenFillfController(kind: .following)
-        list.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(list, animated: true)
+    @objc private func bruCiuLetterHighlight() {
+        let bruCiuInkSpark = PonllyacidGreenFillfController(kind: .ponllGritSurface)
+        bruCiuInkSpark.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(bruCiuInkSpark, animated: true)
     }
 
-    private func presentBlockConfirmation() {
-        let confirm = PaerErstHighlightStrokeController(user: user)
-        confirm.onConfirm = { [weak self] in
+    private func ponllPaintFuse() {
+        let flckinkInkMood = PaerErstHighlightStrokeController(bruCiuPaintFlash: flckinkCornerPiece)
+        flckinkInkMood.ponllChromeFlicker = { [weak self] in
             guard let self else { return }
-            PonllyDataCenter.blockUser(self.user.id)
-            self.refreshRelationshipUI()
-            self.ponllyShowToast("Artist blocked")
+            PonllyponllTornEdge.ponllMetalPanel(self.flckinkCornerPiece.graffitiPulse)
+            self.aerErstGlowLetter()
+            self.flckinkPrimerCoatponlu("Artist blocked")
         }
-        confirm.modalPresentationStyle = .overFullScreen
-        present(confirm, animated: false)
+        flckinkInkMood.modalPresentationStyle = .overFullScreen
+        present(flckinkInkMood, animated: false)
     }
 }

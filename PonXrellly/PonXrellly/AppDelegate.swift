@@ -19,18 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationAppearance.shadowColor = PonllyPalette.line
         navigationAppearance.titleTextAttributes = [
             .foregroundColor: UIColor.white,
-            .font: PonllyFonts.display(size: 20)
+            .font: PonllyFonts.muralForgepon(neonLab: 20)
         ]
         UINavigationBar.appearance().standardAppearance = navigationAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
         UINavigationBar.appearance().compactAppearance = navigationAppearance
         UINavigationBar.appearance().tintColor = .white
         UITabBarItem.appearance().setTitleTextAttributes(
-            [.foregroundColor: UIColor.white, .font: PonllyFonts.display(size: 9)],
+            [.foregroundColor: UIColor.white, .font: PonllyFonts.muralForgepon(neonLab: 9)],
             for: .normal
         )
         UITabBarItem.appearance().setTitleTextAttributes(
-            [.foregroundColor: PonllyPalette.pink, .font: PonllyFonts.display(size: 9)],
+            [.foregroundColor: PonllyPalette.pink, .font: PonllyFonts.muralForgepon(neonLab: 9)],
             for: .selected
         )
 

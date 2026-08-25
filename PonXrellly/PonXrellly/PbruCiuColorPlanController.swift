@@ -5,209 +5,209 @@ import StoreKit
 import UIKit
 
 final class PbruCiuColorPlanController: UIViewController {
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
-    private let hotButton = UIButton(type: .system)
-    private let waitingButton = UIButton(type: .system)
-    private var selectedStatus: PonllyBattleStatus = .hot
+    private let ponllInkBloom = UIScrollView()
+    private let bruCiuWallFlicker = UIStackView()
+    private let flckinkAerosolFlash = UIButton(type: .system)
+    private let aerErstMuralFuse = UIButton(type: .system)
+    private var ponllStencilTrace: PonllyBattleStatus = .bruCiuSprayBloomponll
 
     override func viewDidLoad() {
         super.viewDidLoad()
       
         view.backgroundColor = PonllyPalette.background
         navigationController?.navigationBar.isHidden = true
-        setupUI()
-        reloadBattles()
-        NotificationCenter.default.addObserver(self, selector: #selector(battlesDidChange), name: .ponllyBattlesDidChange, object: nil)
+        bruCiuMarkerTrail()
+        flckinkChromeVeil()
+        NotificationCenter.default.addObserver(self, selector: #selector(aerErstNeonAura), name: .ponllyBattlesponllNozzleSet, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = false
-        reloadBattles()
+        flckinkChromeVeil()
     }
 
-    private func setupUI() {
-        let bg = PonllyGradientView(colors: [PonllyPalette.background, UIColor(red: 13/255, green: 16/255, blue: 22/255, alpha: 1)])
-        view.addSubview(bg)
-        bg.pinToEdges(of: view)
+    private func bruCiuMarkerTrail() {
+        let flckinkPaintEcho = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.background, UIColor(red: 13/255, green: 16/255, blue: 22/255, alpha: 1)])
+        view.addSubview(flckinkPaintEcho)
+        flckinkPaintEcho.woodPanelPonlly(steelGate: view)
 
-        scrollView.alwaysBounceVertical = true
-        scrollView.delaysContentTouches = false
-        scrollView.canCancelContentTouches = true
-        view.addSubview(scrollView)
-        scrollView.pinToEdges(of: view)
+        ponllInkBloom.alwaysBounceVertical = true
+        ponllInkBloom.delaysContentTouches = false
+        ponllInkBloom.canCancelContentTouches = true
+        view.addSubview(ponllInkBloom)
+        ponllInkBloom.woodPanelPonlly(steelGate: view)
 
-        stack.axis = .vertical
-        stack.spacing = 16
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+        bruCiuWallFlicker.axis = .vertical
+        bruCiuWallFlicker.spacing = 16
+        bruCiuWallFlicker.translatesAutoresizingMaskIntoConstraints = false
+        ponllInkBloom.addSubview(bruCiuWallFlicker)
 
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        let titleLabel = UILabel()
-        titleLabel.text = "Ponlly"
-        titleLabel.font = PonllyFonts.display(size: 22)
-        titleLabel.textColor = .white
-        titleLabel.layer.shadowColor = PonllyPalette.pink.cgColor
-        titleLabel.layer.shadowOpacity = 0.35
-        titleLabel.layer.shadowRadius = 10
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(titleLabel)
+        let aerErstInkSignal = UIView()
+        aerErstInkSignal.translatesAutoresizingMaskIntoConstraints = false
+        let ponllAerosolQuest = UILabel()
+        ponllAerosolQuest.text = "Ponlly"
+        ponllAerosolQuest.font = PonllyFonts.muralForgepon(neonLab: 22)
+        ponllAerosolQuest.textColor = .white
+        ponllAerosolQuest.layer.shadowColor = PonllyPalette.pink.cgColor
+        ponllAerosolQuest.layer.shadowOpacity = 0.35
+        ponllAerosolQuest.layer.shadowRadius = 10
+        ponllAerosolQuest.translatesAutoresizingMaskIntoConstraints = false
+        aerErstInkSignal.addSubview(ponllAerosolQuest)
 
-        let bell = UIButton(type: .system)
-        bell.setImage(UIImage(named: "header_actions")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        bell.imageView?.contentMode = .scaleAspectFit
-        bell.translatesAutoresizingMaskIntoConstraints = false
-        bell.addTarget(self, action: #selector(privateMessagingTapped), for: .touchUpInside)
-        header.addSubview(bell)
+        let bruCiuMuralCue = UIButton(type: .system)
+        bruCiuMuralCue.setImage(UIImage(named: "header_actions")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        bruCiuMuralCue.imageView?.contentMode = .scaleAspectFit
+        bruCiuMuralCue.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuMuralCue.addTarget(self, action: #selector(ponllTexturePath), for: .touchUpInside)
+        aerErstInkSignal.addSubview(bruCiuMuralCue)
 
-        let segments = UIStackView(arrangedSubviews: [hotButton, waitingButton])
-        segments.axis = .horizontal
-        segments.spacing = 10
-        segments.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(segments)
+        let flckinkStencilSeed = UIStackView(arrangedSubviews: [flckinkAerosolFlash, aerErstMuralFuse])
+        flckinkStencilSeed.axis = .horizontal
+        flckinkStencilSeed.spacing = 10
+        flckinkStencilSeed.translatesAutoresizingMaskIntoConstraints = false
+        aerErstInkSignal.addSubview(flckinkStencilSeed)
 
-        configureSegment(hotButton, title: "Hot Battles", status: .hot)
-        configureSegment(waitingButton, title: "Waiting for Challenge", status: .waiting)
+        aerErstChromeArc(flckinkAerosolFlash, ponllNeonBend: "Hot Battles", bruCiuTextureKick: .bruCiuSprayBloomponll)
+        aerErstChromeArc(aerErstMuralFuse, ponllNeonBend: "Waiting for Challenge", bruCiuTextureKick: .flckinkWallTexturepoj)
 
-        stack.addArrangedSubview(header)
+        bruCiuWallFlicker.addArrangedSubview(aerErstInkSignal)
 
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 16),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -16),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 22),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -30),
-            header.heightAnchor.constraint(equalToConstant: 116),
-            titleLabel.leadingAnchor.constraint(equalTo: header.leadingAnchor, constant: 4),
-            titleLabel.topAnchor.constraint(equalTo: header.topAnchor),
-            bell.trailingAnchor.constraint(equalTo: header.trailingAnchor, constant: -4),
-            bell.topAnchor.constraint(equalTo: header.topAnchor, constant: 2),
-            bell.widthAnchor.constraint(equalToConstant: 52),
-            bell.heightAnchor.constraint(equalToConstant: 52),
-            segments.leadingAnchor.constraint(equalTo: header.leadingAnchor, constant: 4),
-            segments.trailingAnchor.constraint(lessThanOrEqualTo: header.trailingAnchor, constant: -4),
-            segments.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 18),
-            hotButton.heightAnchor.constraint(equalToConstant: 48),
-            waitingButton.heightAnchor.constraint(equalToConstant: 48)
+            bruCiuWallFlicker.leadingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuWallFlicker.trailingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.trailingAnchor, constant: -16),
+            bruCiuWallFlicker.topAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.topAnchor, constant: 22),
+            bruCiuWallFlicker.bottomAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.bottomAnchor, constant: -30),
+            aerErstInkSignal.heightAnchor.constraint(equalToConstant: 116),
+            ponllAerosolQuest.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
+            ponllAerosolQuest.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor),
+            bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -4),
+            bruCiuMuralCue.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor, constant: 2),
+            bruCiuMuralCue.widthAnchor.constraint(equalToConstant: 52),
+            bruCiuMuralCue.heightAnchor.constraint(equalToConstant: 52),
+            flckinkStencilSeed.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
+            flckinkStencilSeed.trailingAnchor.constraint(lessThanOrEqualTo: aerErstInkSignal.trailingAnchor, constant: -4),
+            flckinkStencilSeed.topAnchor.constraint(equalTo: ponllAerosolQuest.bottomAnchor, constant: 18),
+            flckinkAerosolFlash.heightAnchor.constraint(equalToConstant: 48),
+            aerErstMuralFuse.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 
-    private func configureSegment(_ button: UIButton, title: String, status: PonllyBattleStatus) {
-        button.setTitle(title, for: .normal)
-        button.titleLabel?.font = status == .hot ? PonllyFonts.body(size: 12, weight: .medium) : PonllyFonts.body(size: 12, weight: .bold)
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.titleLabel?.minimumScaleFactor = 0.86
-        button.layer.cornerRadius = 24
-        button.layer.borderWidth = 1.5
-        button.tag = status == .hot ? 0 : 1
-        button.addTarget(self, action: #selector(segmentTapped(_:)), for: .touchUpInside)
-        button.widthAnchor.constraint(equalToConstant: status == .hot ? 106 : 174).isActive = true
+    private func aerErstChromeArc(_ flckinkPaintSpark: UIButton, ponllNeonBend: String, bruCiuTextureKick: PonllyBattleStatus) {
+        flckinkPaintSpark.setTitle(ponllNeonBend, for: .normal)
+        flckinkPaintSpark.titleLabel?.font = bruCiuTextureKick == .bruCiuSprayBloomponll ? PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium) : PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
+        flckinkPaintSpark.titleLabel?.adjustsFontSizeToFitWidth = true
+        flckinkPaintSpark.titleLabel?.minimumScaleFactor = 0.86
+        flckinkPaintSpark.layer.cornerRadius = 24
+        flckinkPaintSpark.layer.borderWidth = 1.5
+        flckinkPaintSpark.tag = bruCiuTextureKick == .bruCiuSprayBloomponll ? 0 : 1
+        flckinkPaintSpark.addTarget(self, action: #selector(bruCiuSketchWeave(_:)), for: .touchUpInside)
+        flckinkPaintSpark.widthAnchor.constraint(equalToConstant: bruCiuTextureKick == .bruCiuSprayBloomponll ? 106 : 174).isActive = true
     }
 
-    private func reloadBattles() {
-        while stack.arrangedSubviews.count > 1 {
-            stack.arrangedSubviews.last?.removeFromSuperview()
+    private func flckinkChromeVeil() {
+        while bruCiuWallFlicker.arrangedSubviews.count > 1 {
+            bruCiuWallFlicker.arrangedSubviews.last?.removeFromSuperview()
         }
-        updateSegments()
-        stack.addArrangedSubview(sectionHeader())
-        let battles = PonllyDataCenter.visibleBattles(status: selectedStatus)
-        for battle in battles {
-            if selectedStatus == .waiting {
-                let card = PonllyWaitingBattleCardView(battle: battle)
-                card.onTap = { [weak self] in self?.openBattle(battle) }
-                card.onArtist = { [weak self] user in self?.openArtist(user) }
-                card.onJoin = { [weak self] in self?.joinBattle(battle) }
-                stack.addArrangedSubview(card)
+        ponllWallDepth()
+        bruCiuWallFlicker.addArrangedSubview(aerErstPaintGlow())
+        let ponllInkGrit = PonllyponllTornEdge.flckinkPaintRun(aerErstDripTrail: ponllStencilTrace)
+        for bruCiuAerosolNoise in ponllInkGrit {
+            if ponllStencilTrace == .flckinkWallTexturepoj {
+                let flckinkMuralTexture = PonllyWaitingBattleCardView(fencePiece: bruCiuAerosolNoise)
+                flckinkMuralTexture.paintQuest = { [weak self] in self?.bruCiuChromeBalance(bruCiuAerosolNoise) }
+                flckinkMuralTexture.zMotion = { [weak self] aerErstStencilMotion in self?.flckinkNeonCascade(aerErstStencilMotion) }
+                flckinkMuralTexture.styleNoise = { [weak self] in self?.ponllTextureRipple(bruCiuAerosolNoise) }
+                bruCiuWallFlicker.addArrangedSubview(flckinkMuralTexture)
             } else {
-                let card = CkinkMuralLabView(battle: battle)
-                card.onTap = { [weak self] in self?.openBattle(battle) }
-                card.onMore = { [weak self] in self?.showReportSheet(for: battle) }
-                card.onArtist = { [weak self] user in self?.openArtist(user) }
-                stack.addArrangedSubview(card)
+                let aerErstSketchContrast = CkinkMuralLabView(flckinkWallPaste: bruCiuAerosolNoise)
+                aerErstSketchContrast.bruCiuSilverSheen = { [weak self] in self?.bruCiuChromeBalance(bruCiuAerosolNoise) }
+                aerErstSketchContrast.flckinkPrimerCoat = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
+                aerErstSketchContrast.aerErstPaintBase = { [weak self] ponllWallBurst in self?.flckinkNeonCascade(ponllWallBurst) }
+                bruCiuWallFlicker.addArrangedSubview(aerErstSketchContrast)
             }
         }
     }
 
-    private func sectionHeader() -> UIView {
-        let title = UILabel()
-        title.text = selectedStatus == .hot ? "Hot Battles" : "Waiting For Challenge"
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 12)
-        return title
+    private func aerErstPaintGlow() -> UIView {
+        let bruCiuInkRipple = UILabel()
+        bruCiuInkRipple.text = ponllStencilTrace == .bruCiuSprayBloomponll ? "Hot Battles" : "Waiting For Challenge"
+        bruCiuInkRipple.textColor = .white
+        bruCiuInkRipple.font = PonllyFonts.muralForgepon(neonLab: 12)
+        return bruCiuInkRipple
     }
 
-    private func updateSegments() {
-        let selected = selectedStatus == .hot
-        hotButton.backgroundColor = selected ? PonllyPalette.pink : .clear
-        hotButton.setTitleColor(.white, for: .normal)
-        hotButton.layer.borderColor = selected ? PonllyPalette.pink.cgColor : UIColor.white.withAlphaComponent(0.35).cgColor
-        waitingButton.backgroundColor = selected ? .clear : PonllyPalette.pink
-        waitingButton.setTitleColor(.white, for: .normal)
-        waitingButton.layer.borderColor = selected ? UIColor.white.withAlphaComponent(0.35).cgColor : PonllyPalette.pink.cgColor
+    private func ponllWallDepth() {
+        let flckinkMuralSurge = ponllStencilTrace == .bruCiuSprayBloomponll
+        flckinkAerosolFlash.backgroundColor = flckinkMuralSurge ? PonllyPalette.pink : .clear
+        flckinkAerosolFlash.setTitleColor(.white, for: .normal)
+        flckinkAerosolFlash.layer.borderColor = flckinkMuralSurge ? PonllyPalette.pink.cgColor : UIColor.white.withAlphaComponent(0.35).cgColor
+        aerErstMuralFuse.backgroundColor = flckinkMuralSurge ? .clear : PonllyPalette.pink
+        aerErstMuralFuse.setTitleColor(.white, for: .normal)
+        aerErstMuralFuse.layer.borderColor = flckinkMuralSurge ? UIColor.white.withAlphaComponent(0.35).cgColor : PonllyPalette.pink.cgColor
     }
 
-    private func openBattle(_ battle: PonllyBattle) {
-        let latestBattle = PonllyDataCenter.visibleBattles().first { $0.id == battle.id } ?? battle
-        let detail = PbruCiuStencilLabController(battle: latestBattle)
-        detail.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(detail, animated: true)
+    private func bruCiuChromeBalance(_ aerErstInkMotion: PonllyBattle) {
+        let ponllPaintCascade = PonllyponllTornEdge.flckinkPaintRun().first { $0.graffitiPulse == aerErstInkMotion.graffitiPulse } ?? aerErstInkMotion
+        let bruCiuMuralFlicker = PbruCiuStencilLabController(flckinkPaintVeil: ponllPaintCascade)
+        bruCiuMuralFlicker.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(bruCiuMuralFlicker, animated: true)
     }
 
-    private func openArtist(_ user: PonllyUser) {
-        let profile = FlckinkPrimerCoatController(user: user)
-        profile.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(profile, animated: true)
+    private func flckinkNeonCascade(_ flckinkStencilFlash: PonllyaerErstTwoToneFillr) {
+        let aerErstChromeFuse = FlckinkPrimerCoatController(user: flckinkStencilFlash)
+        aerErstChromeFuse.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(aerErstChromeFuse, animated: true)
     }
 
-    private func joinBattle(_ battle: PonllyBattle) {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let accept = BruCiuSilverSheenController(battle: battle)
-            accept.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(accept, animated: true)
+    private func ponllTextureRipple(_ ponllNeonTrace: PonllyBattle) {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let bruCiuPaintTrail = BruCiuSilverSheenController(ponllPrimerCoat: ponllNeonTrace)
+            bruCiuPaintTrail.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(bruCiuPaintTrail, animated: true)
         }
     }
 
-    private func showReportSheet(for battle: PonllyBattle) {
-        let alert = UIAlertController(title: "Battle Options", message: battle.title, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
-            FlckinkMatteFinish.shared.requireLogin(from: self) {
-                let report = PonllyroughFillController(battle: battle)
-                report.onReportSubmitted = { [weak self] in
-                    self?.ponllyShowNotice("Report submitted", style: .success)
+    private func bruCiuPaintSurge(for flckinkInkVeil: PonllyBattle) {
+        let aerErstWallAura = UIAlertController(title: "Battle Options", message: flckinkInkVeil.nozzleCraft, preferredStyle: .actionSheet)
+        aerErstWallAura.addAction(UIAlertAction(title: "Report Challenge", style: .destructive) { _ in
+            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+                let ponllAerosolEcho = PonllyroughFillController(blackOutline: flckinkInkVeil)
+                ponllAerosolEcho.fadeSpray = { [weak self] in
+                    self?.aerErstSketchRush("Report submitted", bruCiuLetterForm: .flckinkSplitFill)
                 }
-                report.modalPresentationStyle = .overFullScreen
-                report.modalTransitionStyle = .crossDissolve
-                self.present(report, animated: true)
+                ponllAerosolEcho.modalPresentationStyle = .overFullScreen
+                ponllAerosolEcho.modalTransitionStyle = .crossDissolve
+                self.present(ponllAerosolEcho, animated: true)
             }
         })
-        alert.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in
-            self.ponllyShowToast("Updated")
+        aerErstWallAura.addAction(UIAlertAction(title: "Not Interested", style: .default) { _ in
+            self.flckinkPrimerCoatponlu("Updated")
         })
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        if let popover = alert.popoverPresentationController {
-            popover.sourceView = view
-            popover.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY - 80, width: 1, height: 1)
+        aerErstWallAura.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        if let bruCiuMarkerSignal = aerErstWallAura.popoverPresentationController {
+            bruCiuMarkerSignal.sourceView = view
+            bruCiuMarkerSignal.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY - 80, width: 1, height: 1)
         }
-        present(alert, animated: true)
+        present(aerErstWallAura, animated: true)
     }
 
-    @objc private func segmentTapped(_ sender: UIButton) {
-        selectedStatus = sender.tag == 0 ? .hot : .waiting
-        reloadBattles()
+    @objc private func bruCiuSketchWeave(_ aerErstPaintPath: UIButton) {
+        ponllStencilTrace = aerErstPaintPath.tag == 0 ? .bruCiuSprayBloomponll : .flckinkWallTexturepoj
+        flckinkChromeVeil()
     }
 
-    @objc private func privateMessagingTapped() {
-        FlckinkMatteFinish.shared.requireLogin(from: self) {
-            let inbox = PonllyDirectInboxViewController(keepsTabBarVisible: false)
-            inbox.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(inbox, animated: true)
+    @objc private func ponllTexturePath() {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let flckinkAerosolArc = PonllyDirectInboxViewController(keepsTabBarVisible: false)
+            flckinkAerosolArc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(flckinkAerosolArc, animated: true)
         }
     }
 
-    @objc private func battlesDidChange() {
-        selectedStatus = .hot
-        reloadBattles()
+    @objc private func aerErstNeonAura() {
+        ponllStencilTrace = .bruCiuSprayBloomponll
+        flckinkChromeVeil()
     }
 }

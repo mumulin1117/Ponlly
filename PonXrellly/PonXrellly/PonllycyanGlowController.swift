@@ -1,15 +1,15 @@
 import UIKit
 
 final class PonllycyanGlowController: UIViewController {
-    private let userName: String
-    private let avatar: UIImage?
-    private let completion: () -> Void
-    private let backgroundImageView = UIImageView(image: UIImage(named: "voice_room_bg_08"))
+    private let ponllChromeMood: String
+    private let bruCiuNeonPath: UIImage?
+    private let flckinkTextureArc: () -> Void
+    private let aerErstSketchBend = UIImageView(image: UIImage(named: "voice_room_bg_08"))
 
-    init(userName: String, avatar: UIImage?, completion: @escaping () -> Void) {
-        self.userName = userName
-        self.avatar = avatar
-        self.completion = completion
+    init(_ ponllChromeMood: String, _ bruCiuNeonPath: UIImage?, _ flckinkTextureArc: @escaping () -> Void) {
+        self.ponllChromeMood = ponllChromeMood
+        self.bruCiuNeonPath = bruCiuNeonPath
+        self.flckinkTextureArc = flckinkTextureArc
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -22,79 +22,79 @@ final class PonllycyanGlowController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setupUI()
+        ponllPaintKick()
     }
 
-    private func setupUI() {
-        backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.alpha = 0.46
-        view.addSubview(backgroundImageView)
-        backgroundImageView.pinToEdges(of: view)
+    private func ponllPaintKick() {
+        aerErstSketchBend.contentMode = .scaleAspectFill
+        aerErstSketchBend.alpha = 0.46
+        view.addSubview(aerErstSketchBend)
+        aerErstSketchBend.woodPanelPonlly(steelGate: view)
 
-        let veil = PonllyGradientView(
-            colors: [
+        let bruCiuEdgeMask = PonllyponllCyanGlowView(
+            bruCiuDripMarker: [
                 UIColor.black.withAlphaComponent(0.42),
                 UIColor(red: 18/255, green: 0, blue: 15/255, alpha: 0.5),
                 UIColor.black.withAlphaComponent(0.9)
             ],
-            start: CGPoint(x: 0.5, y: 0),
-            end: CGPoint(x: 0.5, y: 1)
+            CGPoint(x: 0.5, y: 0),
+            CGPoint(x: 0.5, y: 1)
         )
-        view.addSubview(veil)
-        veil.pinToEdges(of: view)
+        view.addSubview(bruCiuEdgeMask)
+        bruCiuEdgeMask.woodPanelPonlly(steelGate: view)
 
-        let avatarWrap = UIView()
-        avatarWrap.backgroundColor = UIColor.black.withAlphaComponent(0.55)
-        avatarWrap.layer.cornerRadius = 65
-        avatarWrap.layer.borderWidth = 3
-        avatarWrap.layer.borderColor = PonllyPalette.pink.cgColor
-        avatarWrap.layer.shadowColor = PonllyPalette.cyan.cgColor
-        avatarWrap.layer.shadowOpacity = 0.34
-        avatarWrap.layer.shadowRadius = 24
-        avatarWrap.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(avatarWrap)
+        let flckinkLayerMask = UIView()
+        flckinkLayerMask.backgroundColor = UIColor.black.withAlphaComponent(0.55)
+        flckinkLayerMask.layer.cornerRadius = 65
+        flckinkLayerMask.layer.borderWidth = 3
+        flckinkLayerMask.layer.borderColor = PonllyPalette.pink.cgColor
+        flckinkLayerMask.layer.shadowColor = PonllyPalette.cyan.cgColor
+        flckinkLayerMask.layer.shadowOpacity = 0.34
+        flckinkLayerMask.layer.shadowRadius = 24
+        flckinkLayerMask.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkLayerMask)
 
-        let avatarView = UIImageView(image: avatar ?? PonllyDataCenter.avatarImage(for: PonllyDataCenter.currentUser()) ?? UIImage(named: "ponlly_avatar_01"))
-        avatarView.contentMode = .scaleAspectFill
-        avatarView.clipsToBounds = true
-        avatarView.layer.cornerRadius = 57
-        avatarView.translatesAutoresizingMaskIntoConstraints = false
-        avatarWrap.addSubview(avatarView)
+        let aerErstPaperCut = UIImageView(image: bruCiuNeonPath ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "ponlly_avatar_01"))
+        aerErstPaperCut.contentMode = .scaleAspectFill
+        aerErstPaperCut.clipsToBounds = true
+        aerErstPaperCut.layer.cornerRadius = 57
+        aerErstPaperCut.translatesAutoresizingMaskIntoConstraints = false
+        flckinkLayerMask.addSubview(aerErstPaperCut)
 
-        let crown = UILabel()
-        crown.text = userName
-        crown.textColor = PonllyPalette.cyan
-        crown.textAlignment = .center
-        crown.font = PonllyFonts.mono(size: 8)
-        crown.translatesAutoresizingMaskIntoConstraints = false
-        avatarWrap.addSubview(crown)
+        let ponllBladeLine = UILabel()
+        ponllBladeLine.text = ponllChromeMood
+        ponllBladeLine.textColor = PonllyPalette.cyan
+        ponllBladeLine.textAlignment = .center
+        ponllBladeLine.font = PonllyFonts.steelGate(rollingShutter: 8)
+        ponllBladeLine.translatesAutoresizingMaskIntoConstraints = false
+        flckinkLayerMask.addSubview(ponllBladeLine)
 
-        let title = UILabel()
-        title.text = "Welcome To\nPonlly"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 32)
-        title.numberOfLines = 0
-        title.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(title)
+        let ponllSprayHalo = UILabel()
+        ponllSprayHalo.text = "Welcome To\nPonlly"
+        ponllSprayHalo.textColor = .white
+        ponllSprayHalo.textAlignment = .center
+        ponllSprayHalo.font = PonllyFonts.muralForgepon(neonLab: 32)
+        ponllSprayHalo.numberOfLines = 0
+        ponllSprayHalo.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllSprayHalo)
 
-        let body = UILabel()
-        body.text = "Your street art journey begins now. Battle with rivals, upload your masterpieces, and claim your turf."
-        body.textColor = PonllyPalette.muted
-        body.textAlignment = .center
-        body.font = PonllyFonts.body(size: 15)
-        body.numberOfLines = 0
-        body.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
-        body.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(body)
+        let bruCiuCutoutShape = UILabel()
+        bruCiuCutoutShape.text = "Your street art journey begins now. Battle with rivals, upload your masterpieces, and claim your turf."
+        bruCiuCutoutShape.textColor = PonllyPalette.muted
+        bruCiuCutoutShape.textAlignment = .center
+        bruCiuCutoutShape.font = PonllyFonts.utilityBox(blankFacade: 15)
+        bruCiuCutoutShape.numberOfLines = 0
+        bruCiuCutoutShape.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        bruCiuCutoutShape.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuCutoutShape)
 
-        let enterButton = PonllyNeonButton(title: "Enter App")
-        enterButton.addTarget(self, action: #selector(enterTapped), for: .touchUpInside)
-        enterButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(enterButton)
+        let flckinkSprayShield = PonllyNeonButton("Enter App")
+        flckinkSprayShield.addTarget(self, action: #selector(bruCiuInkLean), for: .touchUpInside)
+        flckinkSprayShield.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkSprayShield)
 
-        let avatarCenterY = NSLayoutConstraint(
-            item: avatarWrap,
+        let aerErstOversprayGlow = NSLayoutConstraint(
+            item: flckinkLayerMask,
             attribute: .centerY,
             relatedBy: .equal,
             toItem: view,
@@ -104,36 +104,36 @@ final class PonllycyanGlowController: UIViewController {
         )
 
         NSLayoutConstraint.activate([
-            avatarWrap.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            avatarCenterY,
-            avatarWrap.widthAnchor.constraint(equalToConstant: 130),
-            avatarWrap.heightAnchor.constraint(equalToConstant: 130),
-            avatarView.centerXAnchor.constraint(equalTo: avatarWrap.centerXAnchor),
-            avatarView.centerYAnchor.constraint(equalTo: avatarWrap.centerYAnchor, constant: -1),
-            avatarView.widthAnchor.constraint(equalToConstant: 114),
-            avatarView.heightAnchor.constraint(equalToConstant: 114),
-            crown.leadingAnchor.constraint(equalTo: avatarWrap.leadingAnchor, constant: 8),
-            crown.trailingAnchor.constraint(equalTo: avatarWrap.trailingAnchor, constant: -8),
-            crown.bottomAnchor.constraint(equalTo: avatarWrap.bottomAnchor, constant: -10),
+            flckinkLayerMask.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            aerErstOversprayGlow,
+            flckinkLayerMask.widthAnchor.constraint(equalToConstant: 130),
+            flckinkLayerMask.heightAnchor.constraint(equalToConstant: 130),
+            aerErstPaperCut.centerXAnchor.constraint(equalTo: flckinkLayerMask.centerXAnchor),
+            aerErstPaperCut.centerYAnchor.constraint(equalTo: flckinkLayerMask.centerYAnchor, constant: -1),
+            aerErstPaperCut.widthAnchor.constraint(equalToConstant: 114),
+            aerErstPaperCut.heightAnchor.constraint(equalToConstant: 114),
+            ponllBladeLine.leadingAnchor.constraint(equalTo: flckinkLayerMask.leadingAnchor, constant: 8),
+            ponllBladeLine.trailingAnchor.constraint(equalTo: flckinkLayerMask.trailingAnchor, constant: -8),
+            ponllBladeLine.bottomAnchor.constraint(equalTo: flckinkLayerMask.bottomAnchor, constant: -10),
 
-            title.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42),
-            title.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -42),
-            title.topAnchor.constraint(equalTo: avatarWrap.bottomAnchor, constant: 53),
-            body.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            body.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            body.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 16),
+            ponllSprayHalo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42),
+            ponllSprayHalo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -42),
+            ponllSprayHalo.topAnchor.constraint(equalTo: flckinkLayerMask.bottomAnchor, constant: 53),
+            bruCiuCutoutShape.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            bruCiuCutoutShape.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            bruCiuCutoutShape.topAnchor.constraint(equalTo: ponllSprayHalo.bottomAnchor, constant: 16),
 
-            enterButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            enterButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
-            body.bottomAnchor.constraint(lessThanOrEqualTo: enterButton.topAnchor, constant: -20),
-            enterButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            enterButton.heightAnchor.constraint(equalToConstant: 62)
+            flckinkSprayShield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            flckinkSprayShield.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
+            bruCiuCutoutShape.bottomAnchor.constraint(lessThanOrEqualTo: flckinkSprayShield.topAnchor, constant: -20),
+            flckinkSprayShield.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            flckinkSprayShield.heightAnchor.constraint(equalToConstant: 62)
         ])
     }
 
-    @objc private func enterTapped() {
+    @objc private func bruCiuInkLean() {
         navigationController?.dismiss(animated: true) {
-            self.completion()
+            self.flckinkTextureArc()
         }
     }
 }

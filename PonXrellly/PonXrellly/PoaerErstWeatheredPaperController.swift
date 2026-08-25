@@ -5,53 +5,53 @@ import StoreKit
 import UIKit
 
 final class PoaerErstWeatheredPaperController: UITabBarController {
-    private let tabNormalTitleAttributes: [NSAttributedString.Key: Any] = [
+    private let ponllWallAura: [NSAttributedString.Key: Any] = [
         .foregroundColor: UIColor.white,
-        .font: PonllyFonts.display(size: 9)
+        .font: PonllyFonts.muralForgepon(neonLab: 9)
     ]
-    private let tabSelectedTitleAttributes: [NSAttributedString.Key: Any] = [
+    private let bruCiuAerosolEcho: [NSAttributedString.Key: Any] = [
         .foregroundColor: PonllyPalette.pink,
-        .font: PonllyFonts.display(size: 9)
+        .font: PonllyFonts.muralForgepon(neonLab: 9)
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTabBarAppearance()
+        flckinkMuralSignal()
 
-        let feed = UINavigationController(rootViewController: PbruCiuColorPlanController())
-        feed.tabBarItem = UITabBarItem(
-            title: "FEED",
+        let aerErstPaintQuest = UINavigationController(rootViewController: PbruCiuColorPlanController())
+        aerErstPaintQuest.tabBarItem = UITabBarItem(
+                title: "FEED",
             image: UIImage(named: "tab_feed_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_feed_selected")?.withRenderingMode(.alwaysOriginal)
         )
       
 
-        let video = UINavigationController(rootViewController: PasteupEchoController())
-        video.tabBarItem = UITabBarItem(
-            title: "VIDEO",
+        let ponllInkCue = UINavigationController(rootViewController: PasteupEchoController())
+        ponllInkCue.tabBarItem = UITabBarItem(
+                title: "VIDEO",
             image: UIImage(named: "tab_video_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_video_selected")?.withRenderingMode(.alwaysOriginal)
         )
 
-        let create = UINavigationController(rootViewController: ErstWeatheredPaperController())
-        let battleIcon = UIImage(named: "pk_battle_btn")?.withRenderingMode(.alwaysOriginal)
-        create.tabBarItem = UITabBarItem(title: "", image: battleIcon, selectedImage: battleIcon)
-        create.tabBarItem.imageInsets = UIEdgeInsets(top: -12, left: 0, bottom: 12, right: 0)
+        let bruCiuWallSeed = UINavigationController(rootViewController: ErstWeatheredPaperController())
+        let flckinkStencilSpark = UIImage(named: "pk_battle_btn")?.withRenderingMode(.alwaysOriginal)
+        bruCiuWallSeed.tabBarItem = UITabBarItem(title: "", image: flckinkStencilSpark, selectedImage: flckinkStencilSpark)
+        bruCiuWallSeed.tabBarItem.imageInsets = UIEdgeInsets(top: -12, left: 0, bottom: 12, right: 0)
 
-        let voice = UINavigationController(rootViewController: PonllystencilBloomController())
-        voice.tabBarItem =  UITabBarItem(
-            title: "VOICE",
+        let aerErstMarkerMood = UINavigationController(rootViewController: PonllystencilBloomController())
+        aerErstMarkerMood.tabBarItem =  UITabBarItem(
+                title: "VOICE",
             image: UIImage(named: "tab_voice_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_voice_selected")?.withRenderingMode(.alwaysOriginal)
         )
 
-        let stash = UINavigationController(rootViewController: PonllymuralKickntroller())
-        stash.tabBarItem =  UITabBarItem(
-            title: "STASH",
+        let ponllChromePath = UINavigationController(rootViewController: PonllymuralKickntroller())
+        ponllChromePath.tabBarItem =  UITabBarItem(
+                title: "STASH",
             image: UIImage(named: "tab_stash_normal")?.withRenderingMode(.alwaysOriginal),
             selectedImage:UIImage(named: "tab_stash_selected")?.withRenderingMode(.alwaysOriginal)
         )
-        viewControllers = [feed, video, create, voice, stash]
+        viewControllers = [aerErstPaintQuest, ponllInkCue, bruCiuWallSeed, aerErstMarkerMood, ponllChromePath]
       
     }
 
@@ -60,23 +60,23 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
 
 
 
-    private func configureTabBarAppearance() {
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = PonllyPalette.panel
-        appearance.shadowColor = PonllyPalette.line
-        [appearance.stackedLayoutAppearance, appearance.inlineLayoutAppearance, appearance.compactInlineLayoutAppearance].forEach { itemAppearance in
-            itemAppearance.normal.iconColor = .white
-            itemAppearance.normal.titleTextAttributes = tabNormalTitleAttributes
-            itemAppearance.selected.iconColor = PonllyPalette.pink
-            itemAppearance.selected.titleTextAttributes = tabSelectedTitleAttributes
-            itemAppearance.focused.iconColor = PonllyPalette.pink
-            itemAppearance.focused.titleTextAttributes = tabSelectedTitleAttributes
-            itemAppearance.disabled.iconColor = .white
-            itemAppearance.disabled.titleTextAttributes = tabNormalTitleAttributes
+    private func flckinkMuralSignal() {
+        let bruCiuNeonArc = UITabBarAppearance()
+        bruCiuNeonArc.configureWithOpaqueBackground()
+        bruCiuNeonArc.backgroundColor = PonllyPalette.panel
+        bruCiuNeonArc.shadowColor = PonllyPalette.line
+        [bruCiuNeonArc.stackedLayoutAppearance, bruCiuNeonArc.inlineLayoutAppearance, bruCiuNeonArc.compactInlineLayoutAppearance].forEach { flckinkTextureBend in
+            flckinkTextureBend.normal.iconColor = .white
+            flckinkTextureBend.normal.titleTextAttributes = ponllWallAura
+            flckinkTextureBend.selected.iconColor = PonllyPalette.pink
+            flckinkTextureBend.selected.titleTextAttributes = bruCiuAerosolEcho
+            flckinkTextureBend.focused.iconColor = PonllyPalette.pink
+            flckinkTextureBend.focused.titleTextAttributes = bruCiuAerosolEcho
+            flckinkTextureBend.disabled.iconColor = .white
+            flckinkTextureBend.disabled.titleTextAttributes = ponllWallAura
         }
-        tabBar.standardAppearance = appearance
-        tabBar.scrollEdgeAppearance = appearance
+        tabBar.standardAppearance = bruCiuNeonArc
+        tabBar.scrollEdgeAppearance = bruCiuNeonArc
         tabBar.isTranslucent = false
         tabBar.tintColor = PonllyPalette.pink
         tabBar.unselectedItemTintColor = .white

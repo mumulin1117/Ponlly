@@ -1,15 +1,15 @@
 import UIKit
 
 final class PPonllMopMarkerController: UIViewController {
-    private let userName: String
-    private let avatar: UIImage?
-    private let completion: () -> Void
-    private let backgroundImageView = UIImageView(image: UIImage(named: "voice_room_bg_08"))
+    private let ponllUserName: String
+    private let bruCiuAvatarImage: UIImage?
+    private let flckinkCompletionFlow: () -> Void
+    private let aerErstneonMotion = UIImageView(image: UIImage(named: "voice_room_bg_08"))
 
-    init(userName: String, avatar: UIImage?, completion: @escaping () -> Void) {
-        self.userName = userName
-        self.avatar = avatar
-        self.completion = completion
+    init(userName ponllUserName: String, avatar bruCiuAvatarImage: UIImage?, completion flckinkCompletionFlow: @escaping () -> Void) {
+        self.ponllUserName = ponllUserName
+        self.bruCiuAvatarImage = bruCiuAvatarImage
+        self.flckinkCompletionFlow = flckinkCompletionFlow
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -22,79 +22,79 @@ final class PPonllMopMarkerController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setupUI()
+        ponllsketchArc()
     }
 
-    private func setupUI() {
-        backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.alpha = 0.46
-        view.addSubview(backgroundImageView)
-        backgroundImageView.pinToEdges(of: view)
+    private func ponllsketchArc() {
+        aerErstneonMotion.contentMode = .scaleAspectFill
+        aerErstneonMotion.alpha = 0.46
+        view.addSubview(aerErstneonMotion)
+        aerErstneonMotion.woodPanelPonlly(steelGate: view)
 
-        let veil = PonllyGradientView(
-            colors: [
+        let bruCiuVeilLayer = PonllyponllCyanGlowView(
+            bruCiuDripMarker: [
                 UIColor.black.withAlphaComponent(0.42),
                 UIColor(red: 18/255, green: 0, blue: 15/255, alpha: 0.5),
                 UIColor.black.withAlphaComponent(0.9)
             ],
-            start: CGPoint(x: 0.5, y: 0),
-            end: CGPoint(x: 0.5, y: 1)
+            CGPoint(x: 0.5, y: 0),
+            CGPoint(x: 0.5, y: 1)
         )
-        view.addSubview(veil)
-        veil.pinToEdges(of: view)
+        view.addSubview(bruCiuVeilLayer)
+        bruCiuVeilLayer.woodPanelPonlly(steelGate: view)
 
-        let avatarWrap = UIView()
-        avatarWrap.backgroundColor = UIColor.black.withAlphaComponent(0.55)
-        avatarWrap.layer.cornerRadius = 65
-        avatarWrap.layer.borderWidth = 3
-        avatarWrap.layer.borderColor = PonllyPalette.pink.cgColor
-        avatarWrap.layer.shadowColor = PonllyPalette.cyan.cgColor
-        avatarWrap.layer.shadowOpacity = 0.34
-        avatarWrap.layer.shadowRadius = 24
-        avatarWrap.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(avatarWrap)
+        let flckinkmarkerFuse = UIView()
+        flckinkmarkerFuse.backgroundColor = UIColor.black.withAlphaComponent(0.55)
+        flckinkmarkerFuse.layer.cornerRadius = 65
+        flckinkmarkerFuse.layer.borderWidth = 3
+        flckinkmarkerFuse.layer.borderColor = PonllyPalette.pink.cgColor
+        flckinkmarkerFuse.layer.shadowColor = PonllyPalette.cyan.cgColor
+        flckinkmarkerFuse.layer.shadowOpacity = 0.34
+        flckinkmarkerFuse.layer.shadowRadius = 24
+        flckinkmarkerFuse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkmarkerFuse)
 
-        let avatarView = UIImageView(image: avatar ?? PonllyDataCenter.avatarImage(for: PonllyDataCenter.currentUser()) ?? UIImage(named: "ponlly_avatar_01"))
-        avatarView.contentMode = .scaleAspectFill
-        avatarView.clipsToBounds = true
-        avatarView.layer.cornerRadius = 57
-        avatarView.translatesAutoresizingMaskIntoConstraints = false
-        avatarWrap.addSubview(avatarView)
+        let aerErstmarkerWeave = UIImageView(image: bruCiuAvatarImage ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "ponlly_avatar_01"))
+        aerErstmarkerWeave.contentMode = .scaleAspectFill
+        aerErstmarkerWeave.clipsToBounds = true
+        aerErstmarkerWeave.layer.cornerRadius = 57
+        aerErstmarkerWeave.translatesAutoresizingMaskIntoConstraints = false
+        flckinkmarkerFuse.addSubview(aerErstmarkerWeave)
 
-        let crown = UILabel()
-        crown.text = userName
-        crown.textColor = PonllyPalette.cyan
-        crown.textAlignment = .center
-        crown.font = PonllyFonts.mono(size: 8)
-        crown.translatesAutoresizingMaskIntoConstraints = false
-        avatarWrap.addSubview(crown)
+        let ponllCrownLabel = UILabel()
+        ponllCrownLabel.text = ponllUserName
+        ponllCrownLabel.textColor = PonllyPalette.cyan
+        ponllCrownLabel.textAlignment = .center
+        ponllCrownLabel.font = PonllyFonts.steelGate(rollingShutter: 8)
+        ponllCrownLabel.translatesAutoresizingMaskIntoConstraints = false
+        flckinkmarkerFuse.addSubview(ponllCrownLabel)
 
-        let title = UILabel()
-        title.text = "Welcome To\nPonlly"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 32)
-        title.numberOfLines = 0
-        title.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(title)
+        let bruCiustencilSurge = UILabel()
+        bruCiustencilSurge.text = "Welcome To\nPonlly"
+        bruCiustencilSurge.textColor = .white
+        bruCiustencilSurge.textAlignment = .center
+        bruCiustencilSurge.font = PonllyFonts.muralForgepon(neonLab: 32)
+        bruCiustencilSurge.numberOfLines = 0
+        bruCiustencilSurge.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiustencilSurge)
 
-        let body = UILabel()
-        body.text = "Your street art journey begins now. Battle with rivals, upload your masterpieces, and claim your turf."
-        body.textColor = PonllyPalette.muted
-        body.textAlignment = .center
-        body.font = PonllyFonts.body(size: 15)
-        body.numberOfLines = 0
-        body.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
-        body.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(body)
+        let flckinkstencilContrast = UILabel()
+        flckinkstencilContrast.text = "Your street art journey begins now. Battle with rivals, upload your masterpieces, and claim your turf."
+        flckinkstencilContrast.textColor = PonllyPalette.muted
+        flckinkstencilContrast.textAlignment = .center
+        flckinkstencilContrast.font = PonllyFonts.utilityBox(blankFacade: 15)
+        flckinkstencilContrast.numberOfLines = 0
+        flckinkstencilContrast.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        flckinkstencilContrast.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkstencilContrast)
 
-        let enterButton = PonllyNeonButton(title: "Enter App")
-        enterButton.addTarget(self, action: #selector(enterTapped), for: .touchUpInside)
-        enterButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(enterButton)
+        let aerErststencilWeave = PonllyNeonButton("Enter App")
+        aerErststencilWeave.addTarget(self, action: #selector(bruCiustencilKick), for: .touchUpInside)
+        aerErststencilWeave.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErststencilWeave)
 
-        let avatarCenterY = NSLayoutConstraint(
-            item: avatarWrap,
+        let ponllstencilTwist = NSLayoutConstraint(
+            item: flckinkmarkerFuse,
             attribute: .centerY,
             relatedBy: .equal,
             toItem: view,
@@ -104,36 +104,36 @@ final class PPonllMopMarkerController: UIViewController {
         )
 
         NSLayoutConstraint.activate([
-            avatarWrap.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            avatarCenterY,
-            avatarWrap.widthAnchor.constraint(equalToConstant: 130),
-            avatarWrap.heightAnchor.constraint(equalToConstant: 130),
-            avatarView.centerXAnchor.constraint(equalTo: avatarWrap.centerXAnchor),
-            avatarView.centerYAnchor.constraint(equalTo: avatarWrap.centerYAnchor, constant: -1),
-            avatarView.widthAnchor.constraint(equalToConstant: 114),
-            avatarView.heightAnchor.constraint(equalToConstant: 114),
-            crown.leadingAnchor.constraint(equalTo: avatarWrap.leadingAnchor, constant: 8),
-            crown.trailingAnchor.constraint(equalTo: avatarWrap.trailingAnchor, constant: -8),
-            crown.bottomAnchor.constraint(equalTo: avatarWrap.bottomAnchor, constant: -10),
+            flckinkmarkerFuse.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ponllstencilTwist,
+            flckinkmarkerFuse.widthAnchor.constraint(equalToConstant: 130),
+            flckinkmarkerFuse.heightAnchor.constraint(equalToConstant: 130),
+            aerErstmarkerWeave.centerXAnchor.constraint(equalTo: flckinkmarkerFuse.centerXAnchor),
+            aerErstmarkerWeave.centerYAnchor.constraint(equalTo: flckinkmarkerFuse.centerYAnchor, constant: -1),
+            aerErstmarkerWeave.widthAnchor.constraint(equalToConstant: 114),
+            aerErstmarkerWeave.heightAnchor.constraint(equalToConstant: 114),
+            ponllCrownLabel.leadingAnchor.constraint(equalTo: flckinkmarkerFuse.leadingAnchor, constant: 8),
+            ponllCrownLabel.trailingAnchor.constraint(equalTo: flckinkmarkerFuse.trailingAnchor, constant: -8),
+            ponllCrownLabel.bottomAnchor.constraint(equalTo: flckinkmarkerFuse.bottomAnchor, constant: -10),
 
-            title.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42),
-            title.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -42),
-            title.topAnchor.constraint(equalTo: avatarWrap.bottomAnchor, constant: 53),
-            body.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            body.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            body.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 16),
+            bruCiustencilSurge.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42),
+            bruCiustencilSurge.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -42),
+            bruCiustencilSurge.topAnchor.constraint(equalTo: flckinkmarkerFuse.bottomAnchor, constant: 53),
+            flckinkstencilContrast.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            flckinkstencilContrast.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            flckinkstencilContrast.topAnchor.constraint(equalTo: bruCiustencilSurge.bottomAnchor, constant: 16),
 
-            enterButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            enterButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
-            body.bottomAnchor.constraint(lessThanOrEqualTo: enterButton.topAnchor, constant: -20),
-            enterButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            enterButton.heightAnchor.constraint(equalToConstant: 62)
+            aerErststencilWeave.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            aerErststencilWeave.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
+            flckinkstencilContrast.bottomAnchor.constraint(lessThanOrEqualTo: aerErststencilWeave.topAnchor, constant: -20),
+            aerErststencilWeave.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            aerErststencilWeave.heightAnchor.constraint(equalToConstant: 62)
         ])
     }
 
-    @objc private func enterTapped() {
+    @objc private func bruCiustencilKick() {
         navigationController?.dismiss(animated: true) {
-            self.completion()
+            self.flckinkCompletionFlow()
         }
     }
 }

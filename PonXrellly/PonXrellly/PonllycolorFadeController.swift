@@ -5,14 +5,14 @@ import StoreKit
 import UIKit
 
 final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
-    private let user: PonllyUser
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
-    private let detailView = UITextView()
-    private var reasonRows: [PonllytwoToneFillRow] = []
-    private var selectedReason = "Harassment"
+    private let ponllPaintFlash: PonllyaerErstTwoToneFillr
+    private let bruCiuInkFuse = UIScrollView()
+    private let flckinkWallTrace = UIStackView()
+    private let aerErstAerosolTrail = UITextView()
+    private var ponllMuralVeil: [PonllytwoToneFillRow] = []
+    private var bruCiuStencilAura = "Harassment"
 
-    private let reasons = [
+    private let flckinkMarkerEcho = [
         "Inappropriate Content",
         "Sexual Content",
         "Spam",
@@ -22,8 +22,8 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         "Other"
     ]
 
-    init(user: PonllyUser) {
-        self.user = user
+    init(user ponllPaintFlash: PonllyaerErstTwoToneFillr) {
+        self.ponllPaintFlash = ponllPaintFlash
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -35,9 +35,9 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        aerErstChromeSignal()
+        NotificationCenter.default.addObserver(self, selector: #selector(ponllNeonQuest(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(bruCiuTextureCue(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,196 +46,196 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let bg = PonllyGradientView(colors: [PonllyPalette.background, UIColor(red: 10/255, green: 10/255, blue: 14/255, alpha: 1)])
-        view.addSubview(bg)
-        bg.pinToEdges(of: view)
+    private func aerErstChromeSignal() {
+        let ponllColorRack = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.background, UIColor(red: 10/255, green: 10/255, blue: 14/255, alpha: 1)])
+        view.addSubview(ponllColorRack)
+        ponllColorRack.woodPanelPonlly(steelGate: view)
 
-        let header = UIView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(header)
-        let back = UIButton(type: .system)
-        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        back.tintColor = .white
-        back.backgroundColor = PonllyPalette.panel
-        back.layer.cornerRadius = 28
-        back.layer.borderWidth = 1
-        back.layer.borderColor = PonllyPalette.line.cgColor
-        back.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        back.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(back)
-        let title = UILabel()
-        title.text = "Report User"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 22)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(title)
+        let bruCiuPaintShelf = UIView()
+        bruCiuPaintShelf.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuPaintShelf)
+        let flckinkCanShake = UIButton(type: .system)
+        flckinkCanShake.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkCanShake.tintColor = .white
+        flckinkCanShake.backgroundColor = PonllyPalette.panel
+        flckinkCanShake.layer.cornerRadius = 28
+        flckinkCanShake.layer.borderWidth = 1
+        flckinkCanShake.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkCanShake.addTarget(self, action: #selector(flckinkSketchSeed), for: .touchUpInside)
+        flckinkCanShake.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuPaintShelf.addSubview(flckinkCanShake)
+        let bruCiuNozzleSet = UILabel()
+        bruCiuNozzleSet.text = "Report User"
+        bruCiuNozzleSet.textColor = .white
+        bruCiuNozzleSet.textAlignment = .center
+        bruCiuNozzleSet.font = PonllyFonts.muralForgepon(neonLab: 22)
+        bruCiuNozzleSet.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuPaintShelf.addSubview(bruCiuNozzleSet)
 
-        scrollView.keyboardDismissMode = .onDrag
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        stack.axis = .vertical
-        stack.spacing = 16
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+        bruCiuInkFuse.keyboardDismissMode = .onDrag
+        bruCiuInkFuse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuInkFuse)
+        flckinkWallTrace.axis = .vertical
+        flckinkWallTrace.spacing = 16
+        flckinkWallTrace.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuInkFuse.addSubview(flckinkWallTrace)
 
-        stack.addArrangedSubview(targetCard())
-        stack.addArrangedSubview(sectionLabel("SELECT REASON"))
-        reasons.forEach { reason in
-            let row = PonllytwoToneFillRow(reason: reason)
-            row.isSelectedReason = reason == selectedReason
-            row.addAction(UIAction { [weak self] _ in self?.selectReason(reason) }, for: .touchUpInside)
-            reasonRows.append(row)
-            stack.addArrangedSubview(row)
+        flckinkWallTrace.addArrangedSubview(ponllPaintSpark())
+        flckinkWallTrace.addArrangedSubview(bruCiuInkMood("SELECT REASON"))
+        flckinkMarkerEcho.forEach { ponllCapRack in
+            let bruCiuColorRack = PonllytwoToneFillRow(fadePiece: ponllCapRack)
+            bruCiuColorRack.ishaloPieceReason = ponllCapRack == bruCiuStencilAura
+            bruCiuColorRack.addAction(UIAction { [weak self] _ in self?.flckinkWallPath(ponllCapRack) }, for: .touchUpInside)
+            ponllMuralVeil.append(bruCiuColorRack)
+            flckinkWallTrace.addArrangedSubview(bruCiuColorRack)
         }
-        stack.addArrangedSubview(sectionLabel("ADDITIONAL DETAILS (OPTIONAL)"))
-        configureDetailView()
-        stack.addArrangedSubview(detailView)
-        let submit = PonllyNeonButton(title: "Submit Report")
-        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
-        stack.addArrangedSubview(submit)
+        flckinkWallTrace.addArrangedSubview(bruCiuInkMood("ADDITIONAL DETAILS (OPTIONAL)"))
+        aerErstAerosolArc()
+        flckinkWallTrace.addArrangedSubview(aerErstAerosolTrail)
+        let bruCiuShadowSpray = PonllyNeonButton("Submit Report")
+        bruCiuShadowSpray.addTarget(self, action: #selector(aerErstMarkerBend), for: .touchUpInside)
+        flckinkWallTrace.addArrangedSubview(bruCiuShadowSpray)
 
         NSLayoutConstraint.activate([
-            header.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            header.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            header.topAnchor.constraint(equalTo: view.topAnchor),
-            header.heightAnchor.constraint(equalToConstant: 112),
-            back.leadingAnchor.constraint(equalTo: header.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            back.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -18),
-            back.widthAnchor.constraint(equalToConstant: 56),
-            back.heightAnchor.constraint(equalToConstant: 56),
-            title.centerXAnchor.constraint(equalTo: header.centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: back.centerYAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: header.bottomAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 22),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -28),
-            detailView.heightAnchor.constraint(equalToConstant: 108),
-            submit.heightAnchor.constraint(equalToConstant: 58)
+            bruCiuPaintShelf.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bruCiuPaintShelf.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bruCiuPaintShelf.topAnchor.constraint(equalTo: view.topAnchor),
+            bruCiuPaintShelf.heightAnchor.constraint(equalToConstant: 112),
+            flckinkCanShake.leadingAnchor.constraint(equalTo: bruCiuPaintShelf.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            flckinkCanShake.bottomAnchor.constraint(equalTo: bruCiuPaintShelf.bottomAnchor, constant: -18),
+            flckinkCanShake.widthAnchor.constraint(equalToConstant: 56),
+            flckinkCanShake.heightAnchor.constraint(equalToConstant: 56),
+            bruCiuNozzleSet.centerXAnchor.constraint(equalTo: bruCiuPaintShelf.centerXAnchor),
+            bruCiuNozzleSet.centerYAnchor.constraint(equalTo: flckinkCanShake.centerYAnchor),
+            bruCiuInkFuse.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bruCiuInkFuse.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bruCiuInkFuse.topAnchor.constraint(equalTo: bruCiuPaintShelf.bottomAnchor),
+            bruCiuInkFuse.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkWallTrace.leadingAnchor.constraint(equalTo: bruCiuInkFuse.frameLayoutGuide.leadingAnchor, constant: 20),
+            flckinkWallTrace.trailingAnchor.constraint(equalTo: bruCiuInkFuse.frameLayoutGuide.trailingAnchor, constant: -20),
+            flckinkWallTrace.topAnchor.constraint(equalTo: bruCiuInkFuse.contentLayoutGuide.topAnchor, constant: 22),
+            flckinkWallTrace.bottomAnchor.constraint(equalTo: bruCiuInkFuse.contentLayoutGuide.bottomAnchor, constant: -28),
+            aerErstAerosolTrail.heightAnchor.constraint(equalToConstant: 108),
+            bruCiuShadowSpray.heightAnchor.constraint(equalToConstant: 58)
         ])
     }
 
-    private func targetCard() -> UIView {
-        let card = UIView()
-        card.backgroundColor = PonllyPalette.panel
-        card.layer.cornerRadius = 16
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-        let avatar = ErErstPaintLabView(user: user, size: 54)
-        card.addSubview(avatar)
-        let textStack = UIStackView()
-        textStack.axis = .vertical
-        textStack.spacing = 6
-        textStack.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(textStack)
-        let handle = UILabel()
-        handle.text = "@\(user.name.lowercased())"
-        handle.textColor = .white
-        handle.font = PonllyFonts.display(size: 17)
-        let sub = UILabel()
-        sub.text = "Reported target user"
-        sub.textColor = PonllyPalette.muted
-        sub.font = PonllyFonts.body(size: 13)
-        textStack.addArrangedSubview(handle)
-        textStack.addArrangedSubview(sub)
-        let badge = UILabel()
-        badge.text = "TARGET"
-        badge.textColor = PonllyPalette.pink
-        badge.textAlignment = .center
-        badge.font = PonllyFonts.display(size: 11)
-        badge.layer.cornerRadius = 10
-        badge.layer.borderWidth = 1.2
-        badge.layer.borderColor = PonllyPalette.pink.cgColor
-        badge.clipsToBounds = true
-        badge.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(badge)
+    private func ponllPaintSpark() -> UIView {
+        let aerErstRattleSound = UIView()
+        aerErstRattleSound.backgroundColor = PonllyPalette.panel
+        aerErstRattleSound.layer.cornerRadius = 16
+        aerErstRattleSound.layer.borderWidth = 1
+        aerErstRattleSound.layer.borderColor = PonllyPalette.line.cgColor
+        let ponllPressureFlow = ErErstPaintLabView(user: ponllPaintFlash, size: 54)
+        aerErstRattleSound.addSubview(ponllPressureFlow)
+        let bruCiuFanSpray = UIStackView()
+        bruCiuFanSpray.axis = .vertical
+        bruCiuFanSpray.spacing = 6
+        bruCiuFanSpray.translatesAutoresizingMaskIntoConstraints = false
+        aerErstRattleSound.addSubview(bruCiuFanSpray)
+        let flckinkDotSpray = UILabel()
+        flckinkDotSpray.text = "@\(ponllPaintFlash.aerosolDream.lowercased())"
+        flckinkDotSpray.textColor = .white
+        flckinkDotSpray.font = PonllyFonts.muralForgepon(neonLab: 17)
+        let aerErstLineSpray = UILabel()
+        aerErstLineSpray.text = "Reported target user"
+        aerErstLineSpray.textColor = PonllyPalette.muted
+        aerErstLineSpray.font = PonllyFonts.utilityBox(blankFacade: 13)
+        bruCiuFanSpray.addArrangedSubview(flckinkDotSpray)
+        bruCiuFanSpray.addArrangedSubview(aerErstLineSpray)
+        let ponllFadeSpray = UILabel()
+        ponllFadeSpray.text = "TARGET"
+        ponllFadeSpray.textColor = PonllyPalette.pink
+        ponllFadeSpray.textAlignment = .center
+        ponllFadeSpray.font = PonllyFonts.muralForgepon(neonLab: 11)
+        ponllFadeSpray.layer.cornerRadius = 10
+        ponllFadeSpray.layer.borderWidth = 1.2
+        ponllFadeSpray.layer.borderColor = PonllyPalette.pink.cgColor
+        ponllFadeSpray.clipsToBounds = true
+        ponllFadeSpray.translatesAutoresizingMaskIntoConstraints = false
+        aerErstRattleSound.addSubview(ponllFadeSpray)
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 94),
-            avatar.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
-            avatar.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            textStack.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 14),
-            textStack.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            textStack.trailingAnchor.constraint(lessThanOrEqualTo: badge.leadingAnchor, constant: -12),
-            badge.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -16),
-            badge.centerYAnchor.constraint(equalTo: card.centerYAnchor),
-            badge.widthAnchor.constraint(equalToConstant: 78),
-            badge.heightAnchor.constraint(equalToConstant: 36)
+            aerErstRattleSound.heightAnchor.constraint(equalToConstant: 94),
+            ponllPressureFlow.leadingAnchor.constraint(equalTo: aerErstRattleSound.leadingAnchor, constant: 16),
+            ponllPressureFlow.centerYAnchor.constraint(equalTo: aerErstRattleSound.centerYAnchor),
+            bruCiuFanSpray.leadingAnchor.constraint(equalTo: ponllPressureFlow.trailingAnchor, constant: 14),
+            bruCiuFanSpray.centerYAnchor.constraint(equalTo: aerErstRattleSound.centerYAnchor),
+            bruCiuFanSpray.trailingAnchor.constraint(lessThanOrEqualTo: ponllFadeSpray.leadingAnchor, constant: -12),
+            ponllFadeSpray.trailingAnchor.constraint(equalTo: aerErstRattleSound.trailingAnchor, constant: -16),
+            ponllFadeSpray.centerYAnchor.constraint(equalTo: aerErstRattleSound.centerYAnchor),
+            ponllFadeSpray.widthAnchor.constraint(equalToConstant: 78),
+            ponllFadeSpray.heightAnchor.constraint(equalToConstant: 36)
         ])
-        return card
+        return aerErstRattleSound
     }
 
-    private func sectionLabel(_ text: String) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.display(size: 12)
-        return label
+    private func bruCiuInkMood(_ flckinkPaintShelf: String) -> UILabel {
+        let aerErstCanShake = UILabel()
+        aerErstCanShake.text = flckinkPaintShelf
+        aerErstCanShake.textColor = PonllyPalette.muted
+        aerErstCanShake.font = PonllyFonts.muralForgepon(neonLab: 12)
+        return aerErstCanShake
     }
 
-    private func configureDetailView() {
-        detailView.text = "Provide more context about this report..."
-        detailView.textColor = PonllyPalette.muted
-        detailView.font = PonllyFonts.body(size: 14)
-        detailView.backgroundColor = PonllyPalette.panel
-        detailView.layer.cornerRadius = 14
-        detailView.layer.borderWidth = 1
-        detailView.layer.borderColor = PonllyPalette.line.cgColor
-        detailView.textContainerInset = UIEdgeInsets(top: 16, left: 14, bottom: 16, right: 14)
-        detailView.delegate = self
+    private func aerErstAerosolArc() {
+        aerErstAerosolTrail.text = "Provide more context about this report..."
+        aerErstAerosolTrail.textColor = PonllyPalette.muted
+        aerErstAerosolTrail.font = PonllyFonts.utilityBox(blankFacade: 14)
+        aerErstAerosolTrail.backgroundColor = PonllyPalette.panel
+        aerErstAerosolTrail.layer.cornerRadius = 14
+        aerErstAerosolTrail.layer.borderWidth = 1
+        aerErstAerosolTrail.layer.borderColor = PonllyPalette.line.cgColor
+        aerErstAerosolTrail.textContainerInset = UIEdgeInsets(top: 16, left: 14, bottom: 16, right: 14)
+        aerErstAerosolTrail.delegate = self
     }
 
-    private func selectReason(_ reason: String) {
-        selectedReason = reason
-        reasonRows.forEach { $0.isSelectedReason = $0.reason == reason }
+    private func flckinkWallPath(_ ponllRattleSound: String) {
+        bruCiuStencilAura = ponllRattleSound
+        ponllMuralVeil.forEach { $0.ishaloPieceReason = $0.grimePiece == ponllRattleSound }
     }
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == PonllyPalette.muted {
-            textView.text = ""
-            textView.textColor = .white
+    func textViewDidBeginEditing(_ bruCiuPressureFlow: UITextView) {
+        if bruCiuPressureFlow.textColor == PonllyPalette.muted {
+            bruCiuPressureFlow.text = ""
+            bruCiuPressureFlow.textColor = .white
         }
     }
 
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = "Provide more context about this report..."
-            textView.textColor = PonllyPalette.muted
+    func textViewDidEndEditing(_ flckinkFanSpray: UITextView) {
+        if flckinkFanSpray.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            flckinkFanSpray.text = "Provide more context about this report..."
+            flckinkFanSpray.textColor = PonllyPalette.muted
         }
     }
 
-    @objc private func submitTapped() {
-        let rawDetails = detailView.textColor == PonllyPalette.muted ? "" : detailView.text ?? ""
-        ponllyShowToast("Submitting report...")
+    @objc private func aerErstMarkerBend() {
+        let aerErstStencilSheet = aerErstAerosolTrail.textColor == PonllyPalette.muted ? "" : aerErstAerosolTrail.text ?? ""
+        flckinkPrimerCoatponlu("Submitting report...")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
-            PonllyDataCenter.submitUserReport(
-                targetUserId: self.user.id,
-                reason: self.selectedReason,
-                details: rawDetails.trimmingCharacters(in: .whitespacesAndNewlines),
+            PonllyponllTornEdge.submitflckinkShutterPanel(
+                aerErstFreightPanel: self.ponllPaintFlash.graffitiPulse,
+                ponllAlleyDoor: self.bruCiuStencilAura,
+                bruCiuSidewalkEdge: aerErstStencilSheet.trimmingCharacters(in: .whitespacesAndNewlines),
                 hasEvidence: false
             )
-            let success = PonllyletterMazeController()
-            success.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(success, animated: true)
+            let flckinkStencilCut = PonllyletterMazeController()
+            flckinkStencilCut.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(flckinkStencilCut, animated: true)
         }
     }
 
-    @objc private func backTapped() {
+    @objc private func flckinkSketchSeed() {
         navigationController?.popViewController(animated: true)
     }
 
-    @objc private func keyboardWillShow(_ note: Notification) {
-        guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        scrollView.contentInset.bottom = frame.height
-        scrollView.verticalScrollIndicatorInsets.bottom = frame.height
+    @objc private func ponllNeonQuest(_ note: Notification) {
+        guard let ponllMaskingTape = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        bruCiuInkFuse.contentInset.bottom = ponllMaskingTape.height
+        bruCiuInkFuse.verticalScrollIndicatorInsets.bottom = ponllMaskingTape.height
     }
 
-    @objc private func keyboardWillHide(_ note: Notification) {
-        scrollView.contentInset.bottom = 0
-        scrollView.verticalScrollIndicatorInsets.bottom = 0
+    @objc private func bruCiuTextureCue(_ note: Notification) {
+        bruCiuInkFuse.contentInset.bottom = 0
+        bruCiuInkFuse.verticalScrollIndicatorInsets.bottom = 0
     }
 }

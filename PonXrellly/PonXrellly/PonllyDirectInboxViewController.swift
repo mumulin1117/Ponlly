@@ -5,12 +5,12 @@ import StoreKit
 import UIKit
 
 final class PonllyDirectInboxViewController: UIViewController {
-    private let stack = UIStackView()
-    private let keepsTabBarVisible: Bool
-    private let backButton = UIButton(type: .system)
+    private let ponllGraffitiPulse = UIStackView()
+    private let bruCiuAerosolDream: Bool
+    private let flckinkStreetMural = UIButton(type: .system)
 
-    init(keepsTabBarVisible: Bool = true) {
-        self.keepsTabBarVisible = keepsTabBarVisible
+    init(keepsTabBarVisible bruCiuAerosolDream: Bool = true) {
+        self.bruCiuAerosolDream = bruCiuAerosolDream
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -22,172 +22,172 @@ final class PonllyDirectInboxViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setup()
-        reloadThreads()
+        aerErstWallCraft()
+        ponllPaintFlow()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        tabBarController?.tabBar.isHidden = !keepsTabBarVisible
-        reloadThreads()
+        tabBarController?.tabBar.isHidden = !bruCiuAerosolDream
+        ponllPaintFlow()
     }
 
-    private func setup() {
-        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        backButton.tintColor = .white
-        backButton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        backButton.layer.cornerRadius = 22
-        backButton.layer.borderWidth = 1
-        backButton.layer.borderColor = PonllyPalette.line.cgColor
-        backButton.isHidden = keepsTabBarVisible
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-        view.addSubview(backButton)
+    private func aerErstWallCraft() {
+        flckinkStreetMural.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkStreetMural.tintColor = .white
+        flckinkStreetMural.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        flckinkStreetMural.layer.cornerRadius = 22
+        flckinkStreetMural.layer.borderWidth = 1
+        flckinkStreetMural.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkStreetMural.isHidden = bruCiuAerosolDream
+        flckinkStreetMural.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStreetMural.addTarget(self, action: #selector(bruCiuSprayRhythm), for: .touchUpInside)
+        view.addSubview(flckinkStreetMural)
 
-        let title = UILabel()
-        title.text = "Private Messaging"
-        title.textColor = .white
-        title.textAlignment = .center
-        title.font = PonllyFonts.display(size: 22)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(title)
+        let flckinkUrbanCanvas = UILabel()
+        flckinkUrbanCanvas.text = "Private Messaging"
+        flckinkUrbanCanvas.textColor = .white
+        flckinkUrbanCanvas.textAlignment = .center
+        flckinkUrbanCanvas.font = PonllyFonts.muralForgepon(neonLab: 22)
+        flckinkUrbanCanvas.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkUrbanCanvas)
 
-        stack.axis = .vertical
-        stack.spacing = 14
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stack)
+        ponllGraffitiPulse.axis = .vertical
+        ponllGraffitiPulse.spacing = 14
+        ponllGraffitiPulse.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllGraffitiPulse)
         NSLayoutConstraint.activate([
-            backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
-            backButton.centerYAnchor.constraint(equalTo: title.centerYAnchor),
-            backButton.widthAnchor.constraint(equalToConstant: 44),
-            backButton.heightAnchor.constraint(equalToConstant: 44),
-            title.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            title.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            stack.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 28)
+            flckinkStreetMural.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
+            flckinkStreetMural.centerYAnchor.constraint(equalTo: flckinkUrbanCanvas.centerYAnchor),
+            flckinkStreetMural.widthAnchor.constraint(equalToConstant: 44),
+            flckinkStreetMural.heightAnchor.constraint(equalToConstant: 44),
+            flckinkUrbanCanvas.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            flckinkUrbanCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            ponllGraffitiPulse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            ponllGraffitiPulse.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            ponllGraffitiPulse.topAnchor.constraint(equalTo: flckinkUrbanCanvas.bottomAnchor, constant: 28)
         ])
     }
 
-    private func reloadThreads() {
-        stack.arrangedSubviews.forEach {
-            stack.removeArrangedSubview($0)
+    private func ponllPaintFlow() {
+        ponllGraffitiPulse.arrangedSubviews.forEach {
+            ponllGraffitiPulse.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        let threads = PonllyDataCenter.visibleMessageThreads()
-        guard !threads.isEmpty else {
-            stack.addArrangedSubview(emptyInbox())
+        let aerErstBrickPalette = PonllyponllTornEdge.visiblebruCiuMarkerNib()
+        guard !aerErstBrickPalette.isEmpty else {
+            ponllGraffitiPulse.addArrangedSubview(bruCiuInkDrift())
             return
         }
-        threads.forEach { stack.addArrangedSubview(threadRow($0)) }
+        aerErstBrickPalette.forEach { ponllGraffitiPulse.addArrangedSubview(flckinkMarkerStroke($0)) }
     }
 
-    private func threadRow(_ thread: PonllyMessageThread) -> UIControl {
-        let user = PonllyDataCenter.user(thread.userId)
-        let control = UIControl()
-        control.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.94)
-        control.layer.cornerRadius = 18
-        control.layer.borderWidth = 1
-        control.layer.borderColor = PonllyPalette.line.cgColor
-        control.addAction(UIAction { [weak self] _ in
+    private func flckinkMarkerStroke(_ ponllNozzleCraft: PonllyMessageThread) -> UIControl {
+        let bruCiuCapControl = PonllyponllTornEdge.flckinkChippedPaint(ponllNozzleCraft.wheatpasteLayer)
+        let flckinkStencilBloom = UIControl()
+        flckinkStencilBloom.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.94)
+        flckinkStencilBloom.layer.cornerRadius = 18
+        flckinkStencilBloom.layer.borderWidth = 1
+        flckinkStencilBloom.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkStencilBloom.addAction(UIAction { [weak self] _ in
             guard let self else { return }
-            FlckinkMatteFinish.shared.requireLogin(from: self) {
-                let detail = NckinkSkinnyCapController(user: user, thread: thread)
-                detail.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(detail, animated: true)
+            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+                let aerErstWheatpasteLayer = NckinkSkinnyCapController(bruCiuTextureTrail: bruCiuCapControl, flckinkPaintVeil: ponllNozzleCraft)
+                aerErstWheatpasteLayer.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(aerErstWheatpasteLayer, animated: true)
             }
         }, for: .touchUpInside)
 
-        let avatar = ErErstPaintLabView(user: user, size: 48)
-        avatar.isUserInteractionEnabled = false
-        avatar.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(avatar)
+        let flckinkPasteupEcho = ErErstPaintLabView(user: bruCiuCapControl, size: 48)
+        flckinkPasteupEcho.isUserInteractionEnabled = false
+        flckinkPasteupEcho.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilBloom.addSubview(flckinkPasteupEcho)
 
-        let onlineDot = UIView()
-        onlineDot.backgroundColor = PonllyPalette.green
-        onlineDot.isUserInteractionEnabled = false
-        onlineDot.layer.cornerRadius = 6
-        onlineDot.layer.borderWidth = 1
-        onlineDot.layer.borderColor = PonllyPalette.panel.cgColor
-        onlineDot.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(onlineDot)
+        let aerErstMuralGrid = UIView()
+        aerErstMuralGrid.backgroundColor = PonllyPalette.green
+        aerErstMuralGrid.isUserInteractionEnabled = false
+        aerErstMuralGrid.layer.cornerRadius = 6
+        aerErstMuralGrid.layer.borderWidth = 1
+        aerErstMuralGrid.layer.borderColor = PonllyPalette.panel.cgColor
+        aerErstMuralGrid.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilBloom.addSubview(aerErstMuralGrid)
 
-        let name = UILabel()
-        name.text = user.name.lowercased()
-        name.textColor = .white
-        name.font = PonllyFonts.display(size: 13)
-        name.isUserInteractionEnabled = false
-        let preview = UILabel()
-        preview.text = thread.lastText
-        preview.textColor = thread.unreadCount > 0 ? .white : PonllyPalette.muted
-        preview.font = PonllyFonts.body(size: 12, weight: .regular)
-        preview.lineBreakMode = .byTruncatingTail
-        preview.isUserInteractionEnabled = false
-        let textStack = UIStackView(arrangedSubviews: [name, preview])
-        textStack.axis = .vertical
-        textStack.spacing = 6
-        textStack.isUserInteractionEnabled = false
-        textStack.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(textStack)
+        let ponllWildstyleCurve = UILabel()
+        ponllWildstyleCurve.text = bruCiuCapControl.aerosolDream.lowercased()
+        ponllWildstyleCurve.textColor = .white
+        ponllWildstyleCurve.font = PonllyFonts.muralForgepon(neonLab: 13)
+        ponllWildstyleCurve.isUserInteractionEnabled = false
+        let bruCiuBubbleLetter = UILabel()
+        bruCiuBubbleLetter.text = ponllNozzleCraft.chiselNib
+        bruCiuBubbleLetter.textColor = ponllNozzleCraft.fatCap > 0 ? .white : PonllyPalette.muted
+        bruCiuBubbleLetter.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .regular)
+        bruCiuBubbleLetter.lineBreakMode = .byTruncatingTail
+        bruCiuBubbleLetter.isUserInteractionEnabled = false
+        let flckinkChromeFill = UIStackView(arrangedSubviews: [ponllWildstyleCurve, bruCiuBubbleLetter])
+        flckinkChromeFill.axis = .vertical
+        flckinkChromeFill.spacing = 6
+        flckinkChromeFill.isUserInteractionEnabled = false
+        flckinkChromeFill.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilBloom.addSubview(flckinkChromeFill)
 
-        let time = UILabel()
-        time.text = thread.lastTime
-        time.textColor = PonllyPalette.muted
-        time.font = PonllyFonts.mono(size: 10)
-        time.isUserInteractionEnabled = false
-        time.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(time)
+        let aerErstOutlineGlow = UILabel()
+        aerErstOutlineGlow.text = ponllNozzleCraft.fineLine
+        aerErstOutlineGlow.textColor = PonllyPalette.muted
+        aerErstOutlineGlow.font = PonllyFonts.steelGate(rollingShutter: 10)
+        aerErstOutlineGlow.isUserInteractionEnabled = false
+        aerErstOutlineGlow.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStencilBloom.addSubview(aerErstOutlineGlow)
 
         NSLayoutConstraint.activate([
-            control.heightAnchor.constraint(equalToConstant: 78),
-            avatar.leadingAnchor.constraint(equalTo: control.leadingAnchor, constant: 14),
-            avatar.centerYAnchor.constraint(equalTo: control.centerYAnchor),
-            avatar.widthAnchor.constraint(equalToConstant: 48),
-            avatar.heightAnchor.constraint(equalToConstant: 48),
-            onlineDot.trailingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: -2),
-            onlineDot.bottomAnchor.constraint(equalTo: avatar.bottomAnchor, constant: -2),
-            onlineDot.widthAnchor.constraint(equalToConstant: 12),
-            onlineDot.heightAnchor.constraint(equalToConstant: 12),
-            textStack.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: 14),
-            textStack.centerYAnchor.constraint(equalTo: control.centerYAnchor),
-            textStack.trailingAnchor.constraint(equalTo: time.leadingAnchor, constant: -12),
-            time.trailingAnchor.constraint(equalTo: control.trailingAnchor, constant: -16),
-            time.centerYAnchor.constraint(equalTo: control.centerYAnchor)
+            flckinkStencilBloom.heightAnchor.constraint(equalToConstant: 78),
+            flckinkPasteupEcho.leadingAnchor.constraint(equalTo: flckinkStencilBloom.leadingAnchor, constant: 14),
+            flckinkPasteupEcho.centerYAnchor.constraint(equalTo: flckinkStencilBloom.centerYAnchor),
+            flckinkPasteupEcho.widthAnchor.constraint(equalToConstant: 48),
+            flckinkPasteupEcho.heightAnchor.constraint(equalToConstant: 48),
+            aerErstMuralGrid.trailingAnchor.constraint(equalTo: flckinkPasteupEcho.trailingAnchor, constant: -2),
+            aerErstMuralGrid.bottomAnchor.constraint(equalTo: flckinkPasteupEcho.bottomAnchor, constant: -2),
+            aerErstMuralGrid.widthAnchor.constraint(equalToConstant: 12),
+            aerErstMuralGrid.heightAnchor.constraint(equalToConstant: 12),
+            flckinkChromeFill.leadingAnchor.constraint(equalTo: flckinkPasteupEcho.trailingAnchor, constant: 14),
+            flckinkChromeFill.centerYAnchor.constraint(equalTo: flckinkStencilBloom.centerYAnchor),
+            flckinkChromeFill.trailingAnchor.constraint(equalTo: aerErstOutlineGlow.leadingAnchor, constant: -12),
+            aerErstOutlineGlow.trailingAnchor.constraint(equalTo: flckinkStencilBloom.trailingAnchor, constant: -16),
+            aerErstOutlineGlow.centerYAnchor.constraint(equalTo: flckinkStencilBloom.centerYAnchor)
         ])
-        return control
+        return flckinkStencilBloom
     }
 
-    private func emptyInbox() -> UIView {
-        let panel = UIStackView()
-        panel.axis = .vertical
-        panel.alignment = .center
-        panel.spacing = 12
-        panel.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.86)
-        panel.layer.cornerRadius = 20
-        panel.layer.borderWidth = 1
-        panel.layer.borderColor = PonllyPalette.line.cgColor
-        panel.layoutMargins = UIEdgeInsets(top: 44, left: 20, bottom: 44, right: 20)
-        panel.isLayoutMarginsRelativeArrangement = true
-        let icon = UIImageView(image: UIImage(systemName: "bubble.left.and.bubble.right"))
-        icon.tintColor = PonllyPalette.cyan
-        icon.widthAnchor.constraint(equalToConstant: 34).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        let title = UILabel()
-        title.text = "No Messages"
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 18)
-        let body = UILabel()
-        body.text = "Mutual artist conversations will appear here."
-        body.textColor = PonllyPalette.muted
-        body.font = PonllyFonts.body(size: 13, weight: .medium)
-        body.textAlignment = .center
-        body.numberOfLines = 0
-        [icon, title, body].forEach(panel.addArrangedSubview)
-        return panel
+    private func bruCiuInkDrift() -> UIView {
+        let ponllDropShadow = UIStackView()
+        ponllDropShadow.axis = .vertical
+        ponllDropShadow.alignment = .center
+        ponllDropShadow.spacing = 12
+        ponllDropShadow.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.86)
+        ponllDropShadow.layer.cornerRadius = 20
+        ponllDropShadow.layer.borderWidth = 1
+        ponllDropShadow.layer.borderColor = PonllyPalette.line.cgColor
+        ponllDropShadow.layoutMargins = UIEdgeInsets(top: 44, left: 20, bottom: 44, right: 20)
+        ponllDropShadow.isLayoutMarginsRelativeArrangement = true
+        let bruCiuPaintMist = UIImageView(image: UIImage(systemName: "bubble.left.and.bubble.right"))
+        bruCiuPaintMist.tintColor = PonllyPalette.cyan
+        bruCiuPaintMist.widthAnchor.constraint(equalToConstant: 34).isActive = true
+        bruCiuPaintMist.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        let flckinkColorSplash = UILabel()
+        flckinkColorSplash.text = "No Messages"
+        flckinkColorSplash.textColor = .white
+        flckinkColorSplash.font = PonllyFonts.muralForgepon(neonLab: 18)
+        let aerErstNeonDrip = UILabel()
+        aerErstNeonDrip.text = "Mutual artist conversations will appear here."
+        aerErstNeonDrip.textColor = PonllyPalette.muted
+        aerErstNeonDrip.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+        aerErstNeonDrip.textAlignment = .center
+        aerErstNeonDrip.numberOfLines = 0
+        [bruCiuPaintMist, flckinkColorSplash, aerErstNeonDrip].forEach(ponllDropShadow.addArrangedSubview)
+        return ponllDropShadow
     }
 
-    @objc private func backTapped() {
+    @objc private func bruCiuSprayRhythm() {
         navigationController?.popViewController(animated: true)
     }
 }

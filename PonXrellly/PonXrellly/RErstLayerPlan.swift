@@ -1,44 +1,44 @@
 import AVFoundation
 import UIKit
 
-enum EbruCiuOutlinePlan {
-    case create
-    case accept(PonllyBattle)
+enum BruCiuLayerPlan {
+    case ponllPaintPlan
+    case bruCiuOutlinePlan(PonllyBattle)
 }
 
-struct ArErstFillPlan {
-    var title: String
-    var details: String
-    var tags: [String]
-    var sourceURL: URL?
-    var thumbnail: UIImage?
-    var durationText: String?
+struct AerErstFillPlan {
+    var ponllMetallicSpraypon: String
+    var aerErstGlossFinishpon: String
+    var flckinkMatteFinishpon: [String]
+    var bruCiuClearCoatpon: URL?
+    var ponllFinalCoatpon: UIImage?
+    var aerErstPaintBasepon: String?
 }
 
 struct BruCiuOutlinePlan {
-    var name: String
-    var details: String
-    var category: String
-    var coverImage: UIImage?
+    var flckinkPrimerCoatpon: String
+    var bruCiuSilverSheenpon: String
+    var ponllWhiteEdgepon: String
+    var aerErstBlackOutlinepon: UIImage?
 }
 
-struct OnllPaintPlanTheme {
-    let id: String
-    let name: String
-    let subtitle: String
-    let imageName: String
-    let accent: UIColor
-    let availability: String
-    let capacity: String
-    let cost: Int
+struct PonllPaintPlan {
+    let flckinkLimeStrokepon: String
+    let bruCiuMagentaBurstpobn: String
+    let ponllCyanGlow: String
+    let aerErstTwoToneFill: String
+    let flckinkSplitFill: UIColor
+    let bruCiuSolidFill: String
+    let ponllRoughFill: String
+    let aerErstLayerBlend: Int
 }
 
-enum RErstLayerPlan {
-    static let themes: [OnllPaintPlanTheme] = [
-        .init(id: "voiceThemeShibuya", name: "Shibuya Underground", subtitle: "Transform your voice room into a Tokyo hyper-street style lounge.", imageName: "voice_room_bg_01", accent: PonllyPalette.pink, availability: "Spotlight Theme", capacity: "12 seats", cost: 1800),
-        .init(id: "voiceThemeTokyo", name: "Tokyo Alley", subtitle: "Glowing signs, wet pavement, and quick critique energy.", imageName: "voice_room_bg_03", accent: PonllyPalette.cyan, availability: "Ready", capacity: "10 seats", cost: 1200),
-        .init(id: "voiceThemeSubway", name: "Subway Yard", subtitle: "Concrete panels, low light, and rail-wall atmosphere.", imageName: "voice_room_bg_04", accent: .white, availability: "Ready", capacity: "8 seats", cost: 950),
-        .init(id: "voiceThemeChrome", name: "Liquid Chrome", subtitle: "Metal shine and high-contrast room lighting.", imageName: "voice_room_bg_07", accent: PonllyPalette.green, availability: "Fresh", capacity: "8 seats", cost: 1500),
-        .init(id: "voiceThemeVault", name: "Graffiti Vault", subtitle: "Dense mural walls for longer crew sessions.", imageName: "voice_room_bg_08", accent: .orange, availability: "Fresh", capacity: "12 seats", cost: 800)
+enum AerErstLayerPlan {
+    static let flckinkShapeStackopl: [PonllPaintPlan] = [
+        .init(flckinkLimeStrokepon: "voiceThemeShibuya", bruCiuMagentaBurstpobn: "Shibuya Underground", ponllCyanGlow: "Transform your voice room into a Tokyo hyper-street style lounge.", aerErstTwoToneFill: "voice_room_bg_01", flckinkSplitFill: PonllyPalette.pink, bruCiuSolidFill: "Spotlight Theme", ponllRoughFill: "12 seats", aerErstLayerBlend: 1800),
+        .init(flckinkLimeStrokepon: "voiceThemeTokyo", bruCiuMagentaBurstpobn: "Tokyo Alley", ponllCyanGlow: "Glowing signs, wet pavement, and quick critique energy.", aerErstTwoToneFill: "voice_room_bg_03", flckinkSplitFill: PonllyPalette.cyan, bruCiuSolidFill: "Ready", ponllRoughFill: "10 seats", aerErstLayerBlend: 1200),
+        .init(flckinkLimeStrokepon: "voiceThemeSubway", bruCiuMagentaBurstpobn: "Subway Yard", ponllCyanGlow: "Concrete panels, low light, and rail-wall atmosphere.", aerErstTwoToneFill: "voice_room_bg_04", flckinkSplitFill: .white, bruCiuSolidFill: "Ready", ponllRoughFill: "8 seats", aerErstLayerBlend: 950),
+        .init(flckinkLimeStrokepon: "voiceThemeChrome", bruCiuMagentaBurstpobn: "Liquid Chrome", ponllCyanGlow: "Metal shine and high-contrast room lighting.", aerErstTwoToneFill: "voice_room_bg_07", flckinkSplitFill: PonllyPalette.green, bruCiuSolidFill: "Fresh", ponllRoughFill: "8 seats", aerErstLayerBlend: 1500),
+        .init(flckinkLimeStrokepon: "voiceThemeVault", bruCiuMagentaBurstpobn: "Graffiti Vault", ponllCyanGlow: "Dense mural walls for longer crew sessions.", aerErstTwoToneFill: "voice_room_bg_08", flckinkSplitFill: .orange, bruCiuSolidFill: "Fresh", ponllRoughFill: "12 seats", aerErstLayerBlend: 800)
     ]
 }

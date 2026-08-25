@@ -5,11 +5,11 @@ import StoreKit
 import UIKit
 
 final class PNeonDripCard: UIControl {
-    let package: PonllycapRackge
-    private let priceLabel = UILabel()
+    let ponllWallFlicker: PonllycapRackge
+    private let bruCiuInkFlash = UILabel()
 
-    init(package: PonllycapRackge) {
-        self.package = package
+    init(aerErstMuralFuse: PonllycapRackge) {
+        self.ponllWallFlicker = aerErstMuralFuse
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel
         layer.cornerRadius = 20
@@ -19,82 +19,82 @@ final class PNeonDripCard: UIControl {
         layer.masksToBounds = false
         translatesAutoresizingMaskIntoConstraints = false
 
-        let icon = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
-        icon.contentMode = .scaleAspectFit
-        icon.isUserInteractionEnabled = false
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(icon)
+        let ponllFinalCoat = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        ponllFinalCoat.contentMode = .scaleAspectFit
+        ponllFinalCoat.isUserInteractionEnabled = false
+        ponllFinalCoat.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllFinalCoat)
 
-        let amount = UILabel()
-        amount.text = package.totalCoins.formatted()
-        amount.textColor = .white
-        amount.textAlignment = .center
-        amount.font = PonllyFonts.mono(size: 20)
-        amount.adjustsFontSizeToFitWidth = true
-        amount.minimumScaleFactor = 0.74
-        amount.isUserInteractionEnabled = false
-        amount.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(amount)
+        let bruCiuClearCoat = UILabel()
+        bruCiuClearCoat.text = ponllWallFlicker.ponllMuralDepth.formatted()
+        bruCiuClearCoat.textColor = .white
+        bruCiuClearCoat.textAlignment = .center
+        bruCiuClearCoat.font = PonllyFonts.steelGate(rollingShutter: 20)
+        bruCiuClearCoat.adjustsFontSizeToFitWidth = true
+        bruCiuClearCoat.minimumScaleFactor = 0.74
+        bruCiuClearCoat.isUserInteractionEnabled = false
+        bruCiuClearCoat.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(bruCiuClearCoat)
 
-        let caption = UILabel()
-        caption.text = "Coins"
-        caption.textColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 1)
-        caption.textAlignment = .center
-        caption.font = PonllyFonts.display(size: 9)
-        caption.isUserInteractionEnabled = false
-        caption.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(caption)
+        let flckinkMatteFinish = UILabel()
+        flckinkMatteFinish.text = "Coins"
+        flckinkMatteFinish.textColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 1)
+        flckinkMatteFinish.textAlignment = .center
+        flckinkMatteFinish.font = PonllyFonts.muralForgepon(neonLab: 9)
+        flckinkMatteFinish.isUserInteractionEnabled = false
+        flckinkMatteFinish.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkMatteFinish)
 
-        priceLabel.text = package.fallbackPrice
-        priceLabel.textColor = .white
-        priceLabel.textAlignment = .center
-        priceLabel.font = PonllyFonts.display(size: 10)
-        priceLabel.backgroundColor = UIColor.black.withAlphaComponent(0.34)
-        priceLabel.layer.cornerRadius = 11
-        priceLabel.layer.borderWidth = 1
-        priceLabel.layer.borderColor = PonllyPalette.line.cgColor
-        priceLabel.clipsToBounds = true
-        priceLabel.isUserInteractionEnabled = false
-        priceLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(priceLabel)
+        bruCiuInkFlash.text = ponllWallFlicker.flckinkWallTwist
+        bruCiuInkFlash.textColor = .white
+        bruCiuInkFlash.textAlignment = .center
+        bruCiuInkFlash.font = PonllyFonts.muralForgepon(neonLab: 10)
+        bruCiuInkFlash.backgroundColor = UIColor.black.withAlphaComponent(0.34)
+        bruCiuInkFlash.layer.cornerRadius = 11
+        bruCiuInkFlash.layer.borderWidth = 1
+        bruCiuInkFlash.layer.borderColor = PonllyPalette.line.cgColor
+        bruCiuInkFlash.clipsToBounds = true
+        bruCiuInkFlash.isUserInteractionEnabled = false
+        bruCiuInkFlash.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(bruCiuInkFlash)
 
-        if let bonus = package.bonus {
-            let badge = UILabel()
-            badge.text = bonus
-            badge.textColor = .black
-            badge.textAlignment = .center
-            badge.font = PonllyFonts.display(size: 8)
-            badge.backgroundColor = PonllyPalette.pink
-            badge.layer.cornerRadius = 14
-            badge.layer.zPosition = 999
-            badge.clipsToBounds = true
-            badge.isUserInteractionEnabled = false
-            badge.translatesAutoresizingMaskIntoConstraints = false
-            addSubview(badge)
-            bringSubviewToFront(badge)
+        if let aerErstMuralArc = ponllWallFlicker.aerErstAerosolWeave {
+            let aerErstGlossFinish = UILabel()
+            aerErstGlossFinish.text = aerErstMuralArc
+            aerErstGlossFinish.textColor = .black
+            aerErstGlossFinish.textAlignment = .center
+            aerErstGlossFinish.font = PonllyFonts.muralForgepon(neonLab: 8)
+            aerErstGlossFinish.backgroundColor = PonllyPalette.pink
+            aerErstGlossFinish.layer.cornerRadius = 14
+            aerErstGlossFinish.layer.zPosition = 999
+            aerErstGlossFinish.clipsToBounds = true
+            aerErstGlossFinish.isUserInteractionEnabled = false
+            aerErstGlossFinish.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(aerErstGlossFinish)
+            bringSubviewToFront(aerErstGlossFinish)
             NSLayoutConstraint.activate([
-                badge.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-                badge.topAnchor.constraint(equalTo: topAnchor, constant: -8),
-                badge.widthAnchor.constraint(equalToConstant: 72),
-                badge.heightAnchor.constraint(equalToConstant: 30)
+                aerErstGlossFinish.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+                aerErstGlossFinish.topAnchor.constraint(equalTo: topAnchor, constant: -8),
+                aerErstGlossFinish.widthAnchor.constraint(equalToConstant: 72),
+                aerErstGlossFinish.heightAnchor.constraint(equalToConstant: 30)
             ])
         }
 
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 190),
-            icon.centerXAnchor.constraint(equalTo: centerXAnchor),
-            icon.topAnchor.constraint(equalTo: topAnchor, constant: 26),
-            icon.widthAnchor.constraint(equalToConstant: 44),
-            icon.heightAnchor.constraint(equalToConstant: 44),
-            amount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
-            amount.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            amount.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 16),
-            caption.centerXAnchor.constraint(equalTo: centerXAnchor),
-            caption.topAnchor.constraint(equalTo: amount.bottomAnchor, constant: 5),
-            priceLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
-            priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
-            priceLabel.topAnchor.constraint(equalTo: caption.bottomAnchor, constant: 15),
-            priceLabel.heightAnchor.constraint(equalToConstant: 34)
+            ponllFinalCoat.centerXAnchor.constraint(equalTo: centerXAnchor),
+            ponllFinalCoat.topAnchor.constraint(equalTo: topAnchor, constant: 26),
+            ponllFinalCoat.widthAnchor.constraint(equalToConstant: 44),
+            ponllFinalCoat.heightAnchor.constraint(equalToConstant: 44),
+            bruCiuClearCoat.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
+            bruCiuClearCoat.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+            bruCiuClearCoat.topAnchor.constraint(equalTo: ponllFinalCoat.bottomAnchor, constant: 16),
+            flckinkMatteFinish.centerXAnchor.constraint(equalTo: centerXAnchor),
+            flckinkMatteFinish.topAnchor.constraint(equalTo: bruCiuClearCoat.bottomAnchor, constant: 5),
+            bruCiuInkFlash.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
+            bruCiuInkFlash.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
+            bruCiuInkFlash.topAnchor.constraint(equalTo: flckinkMatteFinish.bottomAnchor, constant: 15),
+            bruCiuInkFlash.heightAnchor.constraint(equalToConstant: 34)
         ])
     }
 
@@ -102,14 +102,14 @@ final class PNeonDripCard: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func updatePrice(_ text: String) {
-        priceLabel.text = text
+    func flckinkStencilTrace(_ muralGrid: String) {
+        bruCiuInkFlash.text = muralGrid
     }
 
-    func setSelected(_ selected: Bool) {
+    func ponllChromeTrail(_ selected: Bool) {
         layer.borderColor = (selected ? UIColor(red: 1, green: 190/255, blue: 0, alpha: 1) : PonllyPalette.line).cgColor
         layer.borderWidth = selected ? 2.4 : 1.5
-        priceLabel.backgroundColor = selected ? UIColor(red: 1, green: 190/255, blue: 0, alpha: 1) : UIColor.black.withAlphaComponent(0.34)
-        priceLabel.textColor = selected ? .black : .white
+        bruCiuInkFlash.backgroundColor = selected ? UIColor(red: 1, green: 190/255, blue: 0, alpha: 1) : UIColor.black.withAlphaComponent(0.34)
+        bruCiuInkFlash.textColor = selected ? .black : .white
     }
 }

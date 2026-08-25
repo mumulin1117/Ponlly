@@ -6,173 +6,173 @@ import UIKit
 
 @MainActor
 final class CkinkMuralLabView: UIControl {
-    var onTap: (() -> Void)?
-    var onMore: (() -> Void)?
-    var onArtist: ((PonllyUser) -> Void)?
-    private let battle: PonllyBattle
+    var bruCiuSilverSheen: (() -> Void)?
+    var flckinkPrimerCoat: (() -> Void)?
+    var aerErstPaintBase: ((PonllyaerErstTwoToneFillr) -> Void)?
+    private let ponllFinalCoat: PonllyBattle
 
-    init(battle: PonllyBattle) {
-        self.battle = battle
+    init(flckinkWallPaste bruCiuClearCoat: PonllyBattle) {
+        self.ponllFinalCoat = bruCiuClearCoat
         super.init(frame: .zero)
-        setup()
-        addTarget(self, action: #selector(tapped), for: .touchUpInside)
+        flckinkMatteFinish()
+        addTarget(self, action: #selector(aerErstGlossFinish), for: .touchUpInside)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
+    private func flckinkMatteFinish() {
         backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
         layer.cornerRadius = 18
         layer.borderWidth = 1.3
         layer.borderColor = PonllyPalette.line.cgColor
         translatesAutoresizingMaskIntoConstraints = false
 
-        let a = PonllyDataCenter.user(battle.creatorAId)
-        let b = PonllyDataCenter.user(battle.creatorBId)
+        let ponllMetallicSpray = PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.paintMist)
+        let bruCiuNeonSpray = PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.colorSplash)
 
-        let content = UIStackView()
-        content.axis = .vertical
-        content.spacing = 14
-        content.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(content)
+        let flckinkInkMarker = UIStackView()
+        flckinkInkMarker.axis = .vertical
+        flckinkInkMarker.spacing = 14
+        flckinkInkMarker.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkInkMarker)
 
-        let top = UIStackView()
-        top.axis = .horizontal
-        top.alignment = .center
-        top.distribution = .equalSpacing
+        let aerErstPaintMarker = UIStackView()
+        aerErstPaintMarker.axis = .horizontal
+        aerErstPaintMarker.alignment = .center
+        aerErstPaintMarker.distribution = .equalSpacing
 
-        let leftUser = userRow(a)
-        leftUser.addTarget(self, action: #selector(leftArtistTapped), for: .touchUpInside)
-        let rightUser = userRow(b)
-        rightUser.addTarget(self, action: #selector(rightArtistTapped), for: .touchUpInside)
-        let more = UIButton(type: .system)
-        more.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        more.tintColor = PonllyPalette.muted
-        more.layer.cornerRadius = 20
-        more.layer.borderWidth = 1
-        more.layer.borderColor = PonllyPalette.line.cgColor
-        more.widthAnchor.constraint(equalToConstant: 42).isActive = true
-        more.heightAnchor.constraint(equalToConstant: 42).isActive = true
-        more.addTarget(self, action: #selector(moreTapped), for: .touchUpInside)
-        top.addArrangedSubview(leftUser)
-        top.addArrangedSubview(rightUser)
-        top.addArrangedSubview(more)
+        let ponllMopMarker = bruCiuDripMarker(ponllMetallicSpray)
+        ponllMopMarker.addTarget(self, action: #selector(flckinkSqueezeMarker), for: .touchUpInside)
+        let aerErstSolidMarker = bruCiuDripMarker(bruCiuNeonSpray)
+        aerErstSolidMarker.addTarget(self, action: #selector(ponllStreakMarker), for: .touchUpInside)
+        let bruCiuBrushMarker = UIButton(type: .system)
+        bruCiuBrushMarker.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        bruCiuBrushMarker.tintColor = PonllyPalette.muted
+        bruCiuBrushMarker.layer.cornerRadius = 20
+        bruCiuBrushMarker.layer.borderWidth = 1
+        bruCiuBrushMarker.layer.borderColor = PonllyPalette.line.cgColor
+        bruCiuBrushMarker.widthAnchor.constraint(equalToConstant: 42).isActive = true
+        bruCiuBrushMarker.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        bruCiuBrushMarker.addTarget(self, action: #selector(flckinkAcrylicMarker), for: .touchUpInside)
+        aerErstPaintMarker.addArrangedSubview(ponllMopMarker)
+        aerErstPaintMarker.addArrangedSubview(aerErstSolidMarker)
+        aerErstPaintMarker.addArrangedSubview(bruCiuBrushMarker)
 
-        let artRow = UIView()
-        artRow.translatesAutoresizingMaskIntoConstraints = false
-        let artA = PbruCiuClearCoatView(artwork: battle.artworkA)
-        let artB = battle.artworkB.map(PbruCiuClearCoatView.init) ?? PonllyEmptyOpponentView()
-        artA.translatesAutoresizingMaskIntoConstraints = false
-        artB.translatesAutoresizingMaskIntoConstraints = false
-        artRow.addSubview(artA)
-        artRow.addSubview(artB)
-        let vs = vsBadge()
-        artRow.addSubview(vs)
+        let aerErstEnamelPaint = UIView()
+        aerErstEnamelPaint.translatesAutoresizingMaskIntoConstraints = false
+        let ponllLatexPaint = PbruCiuClearCoatView(ponllPaintTrace: ponllFinalCoat.neonDrip)
+        let bruCiuSprayCan = ponllFinalCoat.concreteMuse.map { PbruCiuClearCoatView(ponllPaintTrace: $0) } ?? PonllyEmptyOpponentView()
+        ponllLatexPaint.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuSprayCan.translatesAutoresizingMaskIntoConstraints = false
+        aerErstEnamelPaint.addSubview(ponllLatexPaint)
+        aerErstEnamelPaint.addSubview(bruCiuSprayCan)
+        let flckinkPaintCan = aerErstCapRack()
+        aerErstEnamelPaint.addSubview(flckinkPaintCan)
 
-        let theme = label(battle.theme.uppercased(), size: 14, color: PonllyPalette.cyan, weight: .black)
-        theme.font = PonllyFonts.themeFont(size: 14)
+        let ponllNozzleSet = bruCiuColorRack(ponllFinalCoat.chromeFill.uppercased(), aerErstPaperCut: 14, ponllBladeLine: PonllyPalette.cyan, bruCiuCutoutShape: .black)
+        ponllNozzleSet.font = PonllyFonts.graffitiForge(aerosolForge: 14)
 
-        let title = UILabel()
-        title.text = battle.title
-        title.font = PonllyFonts.display(size: 16)
-        title.textColor = .white
-        title.numberOfLines = 2
+        let flckinkPaintShelf = UILabel()
+        flckinkPaintShelf.text = ponllFinalCoat.nozzleCraft
+        flckinkPaintShelf.font = PonllyFonts.muralForgepon(neonLab: 16)
+        flckinkPaintShelf.textColor = .white
+        flckinkPaintShelf.numberOfLines = 2
 
-        let meta = UIStackView()
-        meta.axis = .horizontal
-        meta.distribution = .equalSpacing
-        let votes = label("\(battle.votesA + battle.votesB) votes", size: 15, color: .white, weight: .bold)
-        let comments = label("\(battle.comments.count) comments", size: 15, color: PonllyPalette.muted, weight: .bold)
-        meta.addArrangedSubview(votes)
-        meta.addArrangedSubview(comments)
+        let aerErstCanShake = UIStackView()
+        aerErstCanShake.axis = .horizontal
+        aerErstCanShake.distribution = .equalSpacing
+        let ponllRattleSound = bruCiuColorRack("\(ponllFinalCoat.alleyCanvas + ponllFinalCoat.railYard) votes", aerErstPaperCut: 15, ponllBladeLine: .white, bruCiuCutoutShape: .bold)
+        let bruCiuPressureFlow = bruCiuColorRack("\(ponllFinalCoat.underpassMural.count) comments", aerErstPaperCut: 15, ponllBladeLine: PonllyPalette.muted, bruCiuCutoutShape: .bold)
+        aerErstCanShake.addArrangedSubview(ponllRattleSound)
+        aerErstCanShake.addArrangedSubview(bruCiuPressureFlow)
 
-        let progress = PonllybruCiuUtilityBoxView(aVotes: battle.votesA, bVotes: battle.votesB)
+        let flckinkFanSpray = PonllybruCiuUtilityBoxView(aVotes: ponllFinalCoat.alleyCanvas, bVotes: ponllFinalCoat.railYard)
 
-        [top, artRow, theme, title, meta, progress].forEach(content.addArrangedSubview)
-        [artRow, theme, title, meta, progress].forEach(attachDetailTap)
+        [aerErstPaintMarker, aerErstEnamelPaint, ponllNozzleSet, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(flckinkInkMarker.addArrangedSubview)
+        [aerErstEnamelPaint, ponllNozzleSet, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
 
         NSLayoutConstraint.activate([
             heightAnchor.constraint(greaterThanOrEqualToConstant: 380),
-            content.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
-            content.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            content.topAnchor.constraint(equalTo: topAnchor, constant: 14),
-            content.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            artRow.heightAnchor.constraint(equalToConstant: 210),
-            artA.leadingAnchor.constraint(equalTo: artRow.leadingAnchor),
-            artA.topAnchor.constraint(equalTo: artRow.topAnchor),
-            artA.bottomAnchor.constraint(equalTo: artRow.bottomAnchor),
-            artA.widthAnchor.constraint(equalTo: artRow.widthAnchor, multiplier: 0.49),
-            artB.trailingAnchor.constraint(equalTo: artRow.trailingAnchor),
-            artB.topAnchor.constraint(equalTo: artRow.topAnchor),
-            artB.bottomAnchor.constraint(equalTo: artRow.bottomAnchor),
-            artB.widthAnchor.constraint(equalTo: artRow.widthAnchor, multiplier: 0.49),
-            vs.centerXAnchor.constraint(equalTo: artRow.centerXAnchor),
-            vs.centerYAnchor.constraint(equalTo: artRow.centerYAnchor),
-            vs.widthAnchor.constraint(equalToConstant: 70),
-            vs.heightAnchor.constraint(equalToConstant: 70),
-            progress.heightAnchor.constraint(equalToConstant: 38)
+            flckinkInkMarker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
+            flckinkInkMarker.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+            flckinkInkMarker.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+            flckinkInkMarker.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            aerErstEnamelPaint.heightAnchor.constraint(equalToConstant: 210),
+            ponllLatexPaint.leadingAnchor.constraint(equalTo: aerErstEnamelPaint.leadingAnchor),
+            ponllLatexPaint.topAnchor.constraint(equalTo: aerErstEnamelPaint.topAnchor),
+            ponllLatexPaint.bottomAnchor.constraint(equalTo: aerErstEnamelPaint.bottomAnchor),
+            ponllLatexPaint.widthAnchor.constraint(equalTo: aerErstEnamelPaint.widthAnchor, multiplier: 0.49),
+            bruCiuSprayCan.trailingAnchor.constraint(equalTo: aerErstEnamelPaint.trailingAnchor),
+            bruCiuSprayCan.topAnchor.constraint(equalTo: aerErstEnamelPaint.topAnchor),
+            bruCiuSprayCan.bottomAnchor.constraint(equalTo: aerErstEnamelPaint.bottomAnchor),
+            bruCiuSprayCan.widthAnchor.constraint(equalTo: aerErstEnamelPaint.widthAnchor, multiplier: 0.49),
+            flckinkPaintCan.centerXAnchor.constraint(equalTo: aerErstEnamelPaint.centerXAnchor),
+            flckinkPaintCan.centerYAnchor.constraint(equalTo: aerErstEnamelPaint.centerYAnchor),
+            flckinkPaintCan.widthAnchor.constraint(equalToConstant: 70),
+            flckinkPaintCan.heightAnchor.constraint(equalToConstant: 70),
+            flckinkFanSpray.heightAnchor.constraint(equalToConstant: 38)
         ])
     }
 
-    private func userRow(_ user: PonllyUser) -> UIControl {
-        let control = UIControl()
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.alignment = .center
-        row.spacing = 8
-        row.isUserInteractionEnabled = false
-        row.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(row)
-        row.addArrangedSubview(ErErstPaintLabView(user: user, size: 38))
-        row.addArrangedSubview(label(user.name, size: 17, color: .white, weight: .bold))
+    private func bruCiuDripMarker(_ flckinkShadowSpray: PonllyaerErstTwoToneFillr) -> UIControl {
+        let aerErstStencilCut = UIControl()
+        let ponllStencilSheet = UIStackView()
+        ponllStencilSheet.axis = .horizontal
+        ponllStencilSheet.alignment = .center
+        ponllStencilSheet.spacing = 8
+        ponllStencilSheet.isUserInteractionEnabled = false
+        ponllStencilSheet.translatesAutoresizingMaskIntoConstraints = false
+        aerErstStencilCut.addSubview(ponllStencilSheet)
+        ponllStencilSheet.addArrangedSubview(ErErstPaintLabView(user: flckinkShadowSpray, size: 38))
+        ponllStencilSheet.addArrangedSubview(bruCiuColorRack(flckinkShadowSpray.aerosolDream, aerErstPaperCut: 17, ponllBladeLine: .white, bruCiuCutoutShape: .bold))
         NSLayoutConstraint.activate([
-            control.heightAnchor.constraint(equalToConstant: 48),
-            control.widthAnchor.constraint(greaterThanOrEqualToConstant: 92),
-            row.leadingAnchor.constraint(equalTo: control.leadingAnchor),
-            row.trailingAnchor.constraint(equalTo: control.trailingAnchor),
-            row.topAnchor.constraint(equalTo: control.topAnchor),
-            row.bottomAnchor.constraint(equalTo: control.bottomAnchor)
+            aerErstStencilCut.heightAnchor.constraint(equalToConstant: 48),
+            aerErstStencilCut.widthAnchor.constraint(greaterThanOrEqualToConstant: 92),
+            ponllStencilSheet.leadingAnchor.constraint(equalTo: aerErstStencilCut.leadingAnchor),
+            ponllStencilSheet.trailingAnchor.constraint(equalTo: aerErstStencilCut.trailingAnchor),
+            ponllStencilSheet.topAnchor.constraint(equalTo: aerErstStencilCut.topAnchor),
+            ponllStencilSheet.bottomAnchor.constraint(equalTo: aerErstStencilCut.bottomAnchor)
         ])
-        return control
+        return aerErstStencilCut
     }
 
-    private func attachDetailTap(to view: UIView) {
-        view.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        tap.cancelsTouchesInView = true
-        view.addGestureRecognizer(tap)
+    private func aerErstDotSpray(to ponllMaskingTape: UIView) {
+        ponllMaskingTape.isUserInteractionEnabled = true
+        let bruCiuEdgeMask = UITapGestureRecognizer(target: self, action: #selector(aerErstGlossFinish))
+        bruCiuEdgeMask.cancelsTouchesInView = true
+        ponllMaskingTape.addGestureRecognizer(bruCiuEdgeMask)
     }
 
-    private func label(_ text: String, size: CGFloat, color: UIColor, weight: UIFont.Weight) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.font = weight == .black ? PonllyFonts.display(size: size) : PonllyFonts.body(size: size, weight: weight)
-        label.textColor = color
-        return label
+    private func bruCiuColorRack(_ flckinkLayerMask: String, aerErstPaperCut: CGFloat, ponllBladeLine: UIColor, bruCiuCutoutShape: UIFont.Weight) -> UILabel {
+        let flckinkSprayShield = UILabel()
+        flckinkSprayShield.text = flckinkLayerMask
+        flckinkSprayShield.font = bruCiuCutoutShape == .black ? PonllyFonts.muralForgepon(neonLab: aerErstPaperCut) : PonllyFonts.utilityBox(blankFacade: aerErstPaperCut, aerosolMuse: bruCiuCutoutShape)
+        flckinkSprayShield.textColor = ponllBladeLine
+        return flckinkSprayShield
     }
 
-    private func vsBadge() -> UIView {
-        let imageView = UIImageView(image: UIImage(named: "vs_badge"))
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    private func aerErstCapRack() -> UIView {
+        let aerErstOversprayGlow = UIImageView(image: UIImage(named: "vs_badge"))
+        aerErstOversprayGlow.contentMode = .scaleAspectFit
+        aerErstOversprayGlow.translatesAutoresizingMaskIntoConstraints = false
+        return aerErstOversprayGlow
     }
 
-    @objc private func tapped() {
-        onTap?()
+    @objc private func aerErstGlossFinish() {
+        bruCiuSilverSheen?()
     }
 
-    @objc private func moreTapped() {
-        onMore?()
+    @objc private func flckinkAcrylicMarker() {
+        flckinkPrimerCoat?()
     }
 
-    @objc private func leftArtistTapped() {
-        onArtist?(PonllyDataCenter.user(battle.creatorAId))
+    @objc private func flckinkSqueezeMarker() {
+        aerErstPaintBase?(PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.paintMist))
     }
 
-    @objc private func rightArtistTapped() {
-        onArtist?(PonllyDataCenter.user(battle.creatorBId))
+    @objc private func ponllStreakMarker() {
+        aerErstPaintBase?(PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.colorSplash))
     }
 }

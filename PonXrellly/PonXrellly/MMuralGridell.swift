@@ -6,35 +6,35 @@ import UIKit
 
 @MainActor
 final class MMuralGridell: UICollectionViewCell {
-    static let reuseId = "MMuralGridell"
+    static let ponllWallQuest = "MMuralGridell"
 
-    var onAvatar: (() -> Void)?
-    var onFollow: (() -> Void)?
-    var onLike: (() -> Void)?
-    var onComment: (() -> Void)?
-    var onReport: (() -> Void)?
+    var bruCiuInkMood: (() -> Void)?
+    var flckinkMarkerPath: (() -> Void)?
+    var aerErstChromeArc: (() -> Void)?
+    var ponllNeonBend: (() -> Void)?
+    var bruCiuTextureKick: (() -> Void)?
 
-    private let playerLayer = AVPlayerLayer()
-    private var player: AVPlayer?
-    private var isPlaying = false
-    private let overlay = CAGradientLayer()
-    private let centerPlayButton = UIButton(type: .system)
-    private let avatarButton = UIButton(type: .system)
-    private let followButton = UIButton(type: .system)
-    private let authorLabel = UILabel()
-    private let captionLabel = UILabel()
-    private let progressTrack = UIView()
-    private let progressBar = UIView()
-    private let likeButton = UIButton(type: .system)
-    private let likeCountLabel = UILabel()
-    private let commentButton = UIButton(type: .system)
-    private let commentCountLabel = UILabel()
-    private let reportButton = UIButton(type: .system)
-    private let reportLabel = UILabel()
+    private let flckinkSketchLean = AVPlayerLayer()
+    private var aerErstPaintTwist: AVPlayer?
+    private var ponllInkWeave = false
+    private let bruCiuWallDepth = CAGradientLayer()
+    private let flckinkAerosolGlow = UIButton(type: .system)
+    private let aerErstMuralGrit = UIButton(type: .system)
+    private let ponllStencilNoise = UIButton(type: .system)
+    private let bruCiuMarkerTexture = UILabel()
+    private let flckinkChromeContrast = UILabel()
+    private let aerErstNeonBalance = UIView()
+    private let ponllTextureRhythm = UIView()
+    private let bruCiuSketchMotion = UIButton(type: .system)
+    private let flckinkPaintCascade = UILabel()
+    private let aerErstInkRipple = UIButton(type: .system)
+    private let ponllWallSurge = UILabel()
+    private let bruCiuAerosolBurst = UIButton(type: .system)
+    private let flckinkMuralBloom = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        aerErstMarkerFlicker()
     }
 
     required init?(coder: NSCoder) {
@@ -43,224 +43,224 @@ final class MMuralGridell: UICollectionViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        pause()
-        player = nil
-        playerLayer.player = nil
+        ponllPaintDepth()
+        aerErstPaintTwist = nil
+        flckinkSketchLean.player = nil
         NotificationCenter.default.removeObserver(self)
-        isPlaying = false
-        updateCenterPlayButton()
+        ponllInkWeave = false
+        bruCiuChromeFlash()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        playerLayer.frame = contentView.bounds
-        overlay.frame = contentView.bounds
+        flckinkSketchLean.frame = contentView.bounds
+        bruCiuWallDepth.frame = contentView.bounds
     }
 
-    func configure(video: PonllyVideo) {
-        let user = PonllyDataCenter.user(video.authorId)
-        authorLabel.text = "@\(user.name.lowercased())"
-        captionLabel.text = video.details
-        likeCountLabel.text = compactCount(video.reactionCount)
-        commentCountLabel.text = compactCount(video.commentCount)
-        followButton.setTitle(video.isFollowingAuthor ? "Following" : "Follow", for: .normal)
-        likeButton.tintColor = video.isLiked ? PonllyPalette.pink : .white
-        likeButton.setImage(UIImage(systemName: video.isLiked ? "heart.fill" : "heart"), for: .normal)
+    func flckinkAerosolLean(ponllMuralTwist: PonllyVideo) {
+        let bruCiuStencilWeave = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralTwist.letterForm)
+        bruCiuMarkerTexture.text = "@\(bruCiuStencilWeave.aerosolDream.lowercased())"
+        flckinkChromeContrast.text = ponllMuralTwist.fillPattern
+        flckinkPaintCascade.text = aerErstPaintDepth(ponllMuralTwist.wildstyleCurve)
+        ponllWallSurge.text = aerErstPaintDepth(ponllMuralTwist.paintLayer)
+        ponllStencilNoise.setTitle(ponllMuralTwist.brickTone ? "Following" : "Follow", for: .normal)
+        bruCiuSketchMotion.tintColor = ponllMuralTwist.wallTexture ? PonllyPalette.pink : .white
+        bruCiuSketchMotion.setImage(UIImage(systemName: ponllMuralTwist.wallTexture ? "heart.fill" : "heart"), for: .normal)
 
-        avatarButton.subviews.forEach { $0.removeFromSuperview() }
-        let avatar = ErErstPaintLabView(user: user, size: 44)
-        avatar.isUserInteractionEnabled = false
-        avatarButton.addSubview(avatar)
-        avatar.pinToEdges(of: avatarButton)
+        aerErstMuralGrit.subviews.forEach { $0.removeFromSuperview() }
+        let flckinkAerosolDepth = ErErstPaintLabView(user: bruCiuStencilWeave, size: 44)
+        flckinkAerosolDepth.isUserInteractionEnabled = false
+        aerErstMuralGrit.addSubview(flckinkAerosolDepth)
+        flckinkAerosolDepth.woodPanelPonlly(steelGate: aerErstMuralGrit)
 
-        let videoURL = Bundle.main.url(forResource: video.fileName, withExtension: "mp4")
-            ?? Bundle.main.url(forResource: video.fileName, withExtension: "mp4", subdirectory: "VideoClips")
-        if let url = videoURL {
-            let item = AVPlayerItem(url: url)
-            player = AVPlayer(playerItem: item)
-            player?.isMuted = true
-            playerLayer.player = player
-            NotificationCenter.default.addObserver(self, selector: #selector(loopVideo), name: .AVPlayerItemDidPlayToEndTime, object: item)
+        let aerErstMarkerGlow = Bundle.main.url(forResource: ponllMuralTwist.strokeWeight, withExtension: "mp4")
+            ?? Bundle.main.url(forResource: ponllMuralTwist.strokeWeight, withExtension: "mp4", subdirectory: "VideoClips")
+        if let ponllChromeGrit = aerErstMarkerGlow {
+            let bruCiuNeonNoise = AVPlayerItem(url: ponllChromeGrit)
+            aerErstPaintTwist = AVPlayer(playerItem: bruCiuNeonNoise)
+            aerErstPaintTwist?.isMuted = true
+            flckinkSketchLean.player = aerErstPaintTwist
+            NotificationCenter.default.addObserver(self, selector: #selector(flckinkTextureContrast), name: .AVPlayerItemDidPlayToEndTime, object: bruCiuNeonNoise)
         }
     }
 
-    func play() {
-        isPlaying = true
-        updateCenterPlayButton()
-        player?.play()
+    func aerErstStencilWeave() {
+        ponllInkWeave = true
+        bruCiuChromeFlash()
+        aerErstPaintTwist?.play()
     }
 
-    func pause() {
-        isPlaying = false
-        updateCenterPlayButton()
-        player?.pause()
+    func ponllPaintDepth() {
+        ponllInkWeave = false
+        bruCiuChromeFlash()
+        aerErstPaintTwist?.pause()
     }
 
-    private func setup() {
+    private func aerErstMarkerFlicker() {
         contentView.backgroundColor = PonllyPalette.background
-        playerLayer.videoGravity = .resizeAspectFill
-        contentView.layer.addSublayer(playerLayer)
+        flckinkSketchLean.videoGravity = .resizeAspectFill
+        contentView.layer.addSublayer(flckinkSketchLean)
 
-        overlay.colors = [
+        bruCiuWallDepth.colors = [
             UIColor.black.withAlphaComponent(0.15).cgColor,
             UIColor.black.withAlphaComponent(0.05).cgColor,
             UIColor.black.withAlphaComponent(0.78).cgColor
         ]
-        overlay.locations = [0, 0.48, 1]
-        contentView.layer.addSublayer(overlay)
+        bruCiuWallDepth.locations = [0, 0.48, 1]
+        contentView.layer.addSublayer(bruCiuWallDepth)
 
-        [centerPlayButton, avatarButton, followButton, authorLabel, captionLabel, progressTrack, likeButton, likeCountLabel, commentButton, commentCountLabel, reportButton, reportLabel].forEach {
+        [flckinkAerosolGlow, aerErstMuralGrit, ponllStencilNoise, bruCiuMarkerTexture, flckinkChromeContrast, aerErstNeonBalance, bruCiuSketchMotion, flckinkPaintCascade, aerErstInkRipple, ponllWallSurge, bruCiuAerosolBurst, flckinkMuralBloom].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         }
 
-        centerPlayButton.backgroundColor = UIColor.black.withAlphaComponent(0.42)
-        centerPlayButton.tintColor = .white
-        centerPlayButton.layer.cornerRadius = 34
-        centerPlayButton.layer.borderWidth = 2
-        centerPlayButton.layer.borderColor = PonllyPalette.cyan.cgColor
-        centerPlayButton.layer.shadowColor = PonllyPalette.cyan.cgColor
-        centerPlayButton.layer.shadowOpacity = 0.35
-        centerPlayButton.layer.shadowRadius = 14
-        centerPlayButton.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 24, weight: .bold), forImageIn: .normal)
-        centerPlayButton.addTarget(self, action: #selector(centerPlayTapped), for: .touchUpInside)
-        updateCenterPlayButton()
+        flckinkAerosolGlow.backgroundColor = UIColor.black.withAlphaComponent(0.42)
+        flckinkAerosolGlow.tintColor = .white
+        flckinkAerosolGlow.layer.cornerRadius = 34
+        flckinkAerosolGlow.layer.borderWidth = 2
+        flckinkAerosolGlow.layer.borderColor = PonllyPalette.cyan.cgColor
+        flckinkAerosolGlow.layer.shadowColor = PonllyPalette.cyan.cgColor
+        flckinkAerosolGlow.layer.shadowOpacity = 0.35
+        flckinkAerosolGlow.layer.shadowRadius = 14
+        flckinkAerosolGlow.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 24, weight: .bold), forImageIn: .normal)
+        flckinkAerosolGlow.addTarget(self, action: #selector(ponllWallBalance), for: .touchUpInside)
+        bruCiuChromeFlash()
 
-        avatarButton.layer.cornerRadius = 22
-        avatarButton.layer.borderWidth = 2
-        avatarButton.layer.borderColor = PonllyPalette.pink.cgColor
-        avatarButton.clipsToBounds = true
-        avatarButton.addTarget(self, action: #selector(avatarTapped), for: .touchUpInside)
+        aerErstMuralGrit.layer.cornerRadius = 22
+        aerErstMuralGrit.layer.borderWidth = 2
+        aerErstMuralGrit.layer.borderColor = PonllyPalette.pink.cgColor
+        aerErstMuralGrit.clipsToBounds = true
+        aerErstMuralGrit.addTarget(self, action: #selector(bruCiuAerosolRhythm), for: .touchUpInside)
 
-        followButton.backgroundColor = PonllyPalette.pink
-        followButton.layer.cornerRadius = 15
-        followButton.titleLabel?.font = PonllyFonts.display(size: 9)
-        followButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        followButton.titleLabel?.minimumScaleFactor = 0.72
-        followButton.setTitleColor(.white, for: .normal)
-        followButton.addTarget(self, action: #selector(followTapped), for: .touchUpInside)
+        ponllStencilNoise.backgroundColor = PonllyPalette.pink
+        ponllStencilNoise.layer.cornerRadius = 15
+        ponllStencilNoise.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 9)
+        ponllStencilNoise.titleLabel?.adjustsFontSizeToFitWidth = true
+        ponllStencilNoise.titleLabel?.minimumScaleFactor = 0.72
+        ponllStencilNoise.setTitleColor(.white, for: .normal)
+        ponllStencilNoise.addTarget(self, action: #selector(flckinkMuralMotion), for: .touchUpInside)
 
-        authorLabel.textColor = PonllyPalette.cyan
-        authorLabel.font = PonllyFonts.display(size: 14)
-        authorLabel.layer.shadowColor = PonllyPalette.cyan.cgColor
-        authorLabel.layer.shadowOpacity = 0.35
-        authorLabel.layer.shadowRadius = 10
+        bruCiuMarkerTexture.textColor = PonllyPalette.cyan
+        bruCiuMarkerTexture.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuMarkerTexture.layer.shadowColor = PonllyPalette.cyan.cgColor
+        bruCiuMarkerTexture.layer.shadowOpacity = 0.35
+        bruCiuMarkerTexture.layer.shadowRadius = 10
 
-        captionLabel.textColor = .white
-        captionLabel.font = PonllyFonts.body(size: 13, weight: .regular)
-        captionLabel.numberOfLines = 3
+        flckinkChromeContrast.textColor = .white
+        flckinkChromeContrast.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
+        flckinkChromeContrast.numberOfLines = 3
 
-        progressTrack.backgroundColor = UIColor.white.withAlphaComponent(0.16)
-        progressTrack.layer.cornerRadius = 3
-        progressTrack.addSubview(progressBar)
-        progressBar.backgroundColor = PonllyPalette.pink
-        progressBar.layer.cornerRadius = 3
-        progressBar.translatesAutoresizingMaskIntoConstraints = false
+        aerErstNeonBalance.backgroundColor = UIColor.white.withAlphaComponent(0.16)
+        aerErstNeonBalance.layer.cornerRadius = 3
+        aerErstNeonBalance.addSubview(ponllTextureRhythm)
+        ponllTextureRhythm.backgroundColor = PonllyPalette.pink
+        ponllTextureRhythm.layer.cornerRadius = 3
+        ponllTextureRhythm.translatesAutoresizingMaskIntoConstraints = false
 
-        configureActionButton(likeButton, symbol: "heart")
-        configureActionButton(commentButton, symbol: "bubble.left")
-        configureActionButton(reportButton, symbol: "exclamationmark.circle")
-        likeButton.addTarget(self, action: #selector(likeTapped), for: .touchUpInside)
-        commentButton.addTarget(self, action: #selector(commentTapped), for: .touchUpInside)
-        reportButton.addTarget(self, action: #selector(reportTapped), for: .touchUpInside)
+        bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "heart")
+        bruCiuPaintCascade(aerErstInkRipple, ponllInkSurge: "bubble.left")
+        bruCiuPaintCascade(bruCiuAerosolBurst, ponllInkSurge: "exclamationmark.circle")
+        bruCiuSketchMotion.addTarget(self, action: #selector(aerErstChromeBurst), for: .touchUpInside)
+        aerErstInkRipple.addTarget(self, action: #selector(ponllNeonBloom), for: .touchUpInside)
+        bruCiuAerosolBurst.addTarget(self, action: #selector(bruCiuTextureFlicker), for: .touchUpInside)
 
-        [likeCountLabel, commentCountLabel].forEach {
+        [flckinkPaintCascade, ponllWallSurge].forEach {
             $0.textColor = .white
-            $0.font = PonllyFonts.mono(size: 11)
+            $0.font = PonllyFonts.steelGate(rollingShutter: 11)
             $0.textAlignment = .center
         }
-        reportLabel.text = "Report"
-        reportLabel.textColor = .white
-        reportLabel.font = PonllyFonts.body(size: 11, weight: .regular)
-        reportLabel.textAlignment = .center
+        flckinkMuralBloom.text = "Report"
+        flckinkMuralBloom.textColor = .white
+        flckinkMuralBloom.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
+        flckinkMuralBloom.textAlignment = .center
 
         NSLayoutConstraint.activate([
-            centerPlayButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            centerPlayButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            centerPlayButton.widthAnchor.constraint(equalToConstant: 68),
-            centerPlayButton.heightAnchor.constraint(equalToConstant: 68),
+            flckinkAerosolGlow.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            flckinkAerosolGlow.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            flckinkAerosolGlow.widthAnchor.constraint(equalToConstant: 68),
+            flckinkAerosolGlow.heightAnchor.constraint(equalToConstant: 68),
 
-            avatarButton.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            avatarButton.bottomAnchor.constraint(equalTo: followButton.topAnchor, constant: -8),
-            avatarButton.widthAnchor.constraint(equalToConstant: 44),
-            avatarButton.heightAnchor.constraint(equalToConstant: 44),
-            followButton.centerXAnchor.constraint(equalTo: avatarButton.centerXAnchor),
-            followButton.bottomAnchor.constraint(equalTo: likeButton.topAnchor, constant: -32),
-            followButton.widthAnchor.constraint(equalToConstant: 80),
-            followButton.heightAnchor.constraint(equalToConstant: 30),
+            aerErstMuralGrit.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            aerErstMuralGrit.bottomAnchor.constraint(equalTo: ponllStencilNoise.topAnchor, constant: -8),
+            aerErstMuralGrit.widthAnchor.constraint(equalToConstant: 44),
+            aerErstMuralGrit.heightAnchor.constraint(equalToConstant: 44),
+            ponllStencilNoise.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
+            ponllStencilNoise.bottomAnchor.constraint(equalTo: bruCiuSketchMotion.topAnchor, constant: -32),
+            ponllStencilNoise.widthAnchor.constraint(equalToConstant: 80),
+            ponllStencilNoise.heightAnchor.constraint(equalToConstant: 30),
 
-            likeButton.centerXAnchor.constraint(equalTo: avatarButton.centerXAnchor),
-            likeButton.bottomAnchor.constraint(equalTo: likeCountLabel.topAnchor, constant: -10),
-            likeButton.widthAnchor.constraint(equalToConstant: 44),
-            likeButton.heightAnchor.constraint(equalToConstant: 44),
-            likeCountLabel.centerXAnchor.constraint(equalTo: likeButton.centerXAnchor),
-            likeCountLabel.bottomAnchor.constraint(equalTo: commentButton.topAnchor, constant: -28),
+            bruCiuSketchMotion.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
+            bruCiuSketchMotion.bottomAnchor.constraint(equalTo: flckinkPaintCascade.topAnchor, constant: -10),
+            bruCiuSketchMotion.widthAnchor.constraint(equalToConstant: 44),
+            bruCiuSketchMotion.heightAnchor.constraint(equalToConstant: 44),
+            flckinkPaintCascade.centerXAnchor.constraint(equalTo: bruCiuSketchMotion.centerXAnchor),
+            flckinkPaintCascade.bottomAnchor.constraint(equalTo: aerErstInkRipple.topAnchor, constant: -28),
 
-            commentButton.centerXAnchor.constraint(equalTo: avatarButton.centerXAnchor),
-            commentButton.bottomAnchor.constraint(equalTo: commentCountLabel.topAnchor, constant: -10),
-            commentButton.widthAnchor.constraint(equalToConstant: 44),
-            commentButton.heightAnchor.constraint(equalToConstant: 44),
-            commentCountLabel.centerXAnchor.constraint(equalTo: commentButton.centerXAnchor),
-            commentCountLabel.bottomAnchor.constraint(equalTo: reportButton.topAnchor, constant: -32),
+            aerErstInkRipple.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
+            aerErstInkRipple.bottomAnchor.constraint(equalTo: ponllWallSurge.topAnchor, constant: -10),
+            aerErstInkRipple.widthAnchor.constraint(equalToConstant: 44),
+            aerErstInkRipple.heightAnchor.constraint(equalToConstant: 44),
+            ponllWallSurge.centerXAnchor.constraint(equalTo: aerErstInkRipple.centerXAnchor),
+            ponllWallSurge.bottomAnchor.constraint(equalTo: bruCiuAerosolBurst.topAnchor, constant: -32),
 
-            reportButton.centerXAnchor.constraint(equalTo: avatarButton.centerXAnchor),
-            reportButton.bottomAnchor.constraint(equalTo: reportLabel.topAnchor, constant: -8),
-            reportButton.widthAnchor.constraint(equalToConstant: 44),
-            reportButton.heightAnchor.constraint(equalToConstant: 44),
-            reportLabel.centerXAnchor.constraint(equalTo: reportButton.centerXAnchor),
-            reportLabel.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -58),
+            bruCiuAerosolBurst.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
+            bruCiuAerosolBurst.bottomAnchor.constraint(equalTo: flckinkMuralBloom.topAnchor, constant: -8),
+            bruCiuAerosolBurst.widthAnchor.constraint(equalToConstant: 44),
+            bruCiuAerosolBurst.heightAnchor.constraint(equalToConstant: 44),
+            flckinkMuralBloom.centerXAnchor.constraint(equalTo: bruCiuAerosolBurst.centerXAnchor),
+            flckinkMuralBloom.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -58),
 
-            authorLabel.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            authorLabel.bottomAnchor.constraint(equalTo: captionLabel.topAnchor, constant: -8),
+            bruCiuMarkerTexture.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuMarkerTexture.bottomAnchor.constraint(equalTo: flckinkChromeContrast.topAnchor, constant: -8),
 
-            captionLabel.leadingAnchor.constraint(equalTo: authorLabel.leadingAnchor),
-            captionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -80),
-            captionLabel.bottomAnchor.constraint(equalTo: progressTrack.topAnchor, constant: -18),
+            flckinkChromeContrast.leadingAnchor.constraint(equalTo: bruCiuMarkerTexture.leadingAnchor),
+            flckinkChromeContrast.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -80),
+            flckinkChromeContrast.bottomAnchor.constraint(equalTo: aerErstNeonBalance.topAnchor, constant: -18),
 
-            progressTrack.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            progressTrack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -96),
-            progressTrack.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -28),
-            progressTrack.heightAnchor.constraint(equalToConstant: 6),
-            progressBar.leadingAnchor.constraint(equalTo: progressTrack.leadingAnchor),
-            progressBar.topAnchor.constraint(equalTo: progressTrack.topAnchor),
-            progressBar.bottomAnchor.constraint(equalTo: progressTrack.bottomAnchor),
-            progressBar.widthAnchor.constraint(equalTo: progressTrack.widthAnchor, multiplier: 0.58)
+            aerErstNeonBalance.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            aerErstNeonBalance.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -96),
+            aerErstNeonBalance.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -28),
+            aerErstNeonBalance.heightAnchor.constraint(equalToConstant: 6),
+            ponllTextureRhythm.leadingAnchor.constraint(equalTo: aerErstNeonBalance.leadingAnchor),
+            ponllTextureRhythm.topAnchor.constraint(equalTo: aerErstNeonBalance.topAnchor),
+            ponllTextureRhythm.bottomAnchor.constraint(equalTo: aerErstNeonBalance.bottomAnchor),
+            ponllTextureRhythm.widthAnchor.constraint(equalTo: aerErstNeonBalance.widthAnchor, multiplier: 0.58)
         ])
     }
 
-    private func configureActionButton(_ button: UIButton, symbol: String) {
-        button.setImage(UIImage(systemName: symbol), for: .normal)
-        button.tintColor = .white
-        button.contentVerticalAlignment = .fill
-        button.contentHorizontalAlignment = .fill
-        button.imageView?.contentMode = .scaleAspectFit
+    private func bruCiuPaintCascade(_ flckinkInkBalance: UIButton, ponllInkSurge: String) {
+        flckinkInkBalance.setImage(UIImage(systemName: ponllInkSurge), for: .normal)
+        flckinkInkBalance.tintColor = .white
+        flckinkInkBalance.contentVerticalAlignment = .fill
+        flckinkInkBalance.contentHorizontalAlignment = .fill
+        flckinkInkBalance.imageView?.contentMode = .scaleAspectFit
     }
 
-    private func compactCount(_ count: Int) -> String {
-        if count >= 1000 {
-            let value = Double(count) / 1000
-            return String(format: value >= 10 ? "%.1fK" : "%.1fK", value)
+    private func aerErstPaintDepth(_ bruCiuMuralRipple: Int) -> String {
+        if bruCiuMuralRipple >= 1000 {
+            let flckinkStencilSurge = Double(bruCiuMuralRipple) / 1000
+            return String(format: flckinkStencilSurge >= 10 ? "%.1fK" : "%.1fK", flckinkStencilSurge)
         }
-        return "\(count)"
+        return "\(bruCiuMuralRipple)"
     }
 
-    private func updateCenterPlayButton() {
-        let imageName = isPlaying ? "pause.fill" : "play.fill"
-        centerPlayButton.setImage(UIImage(systemName: imageName), for: .normal)
+    private func bruCiuChromeFlash() {
+        let ponllTextureBurst = ponllInkWeave ? "pause.fill" : "play.fill"
+        flckinkAerosolGlow.setImage(UIImage(systemName: ponllTextureBurst), for: .normal)
     }
 
-    @objc private func loopVideo() {
-        player?.seek(to: .zero)
-        player?.play()
+    @objc private func flckinkTextureContrast() {
+        aerErstPaintTwist?.seek(to: .zero)
+        aerErstPaintTwist?.play()
     }
 
-    @objc private func centerPlayTapped() {
-        isPlaying ? pause() : play()
+    @objc private func ponllWallBalance() {
+        ponllInkWeave ? ponllPaintDepth() : aerErstStencilWeave()
     }
 
-    @objc private func avatarTapped() { onAvatar?() }
-    @objc private func followTapped() { onFollow?() }
-    @objc private func likeTapped() { onLike?() }
-    @objc private func commentTapped() { onComment?() }
-    @objc private func reportTapped() { onReport?() }
+    @objc private func bruCiuAerosolRhythm() { bruCiuInkMood?() }
+    @objc private func flckinkMuralMotion() { flckinkMarkerPath?() }
+    @objc private func aerErstChromeBurst() { aerErstChromeArc?() }
+    @objc private func ponllNeonBloom() { ponllNeonBend?() }
+    @objc private func bruCiuTextureFlicker() { bruCiuTextureKick?() }
 }

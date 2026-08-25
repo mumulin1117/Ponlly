@@ -5,14 +5,14 @@ import StoreKit
 import UIKit
 
 final class VuonllMetallicSprayontroller: UIViewController {
-    private let kind: PonllyRelationshipKind
-    private let scrollView = UIScrollView()
-    private let stack = UIStackView()
+    private let ponllKind: PonllyRelationshipKind
+    private let bruCiubruCiuStencilLab = UIScrollView()
+    private let flckinkStack = UIStackView()
 
-    init(kind: PonllyRelationshipKind) {
-        self.kind = kind
+    init(kind ponllKind: PonllyRelationshipKind) {
+        self.ponllKind = ponllKind
         super.init(nibName: nil, bundle: nil)
-        title = kind == .followers ? "Crew Connections" : "Following"
+        title = ponllKind == .aerErstBrickTone ? "Crew Connections" : "Following"
     }
 
     required init?(coder: NSCoder) {
@@ -22,7 +22,7 @@ final class VuonllMetallicSprayontroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        setup()
+        aerErstSetup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,83 +31,83 @@ final class VuonllMetallicSprayontroller: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        stack.axis = .vertical
-        stack.spacing = 16
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
-        let users = PonllyDataCenter.relatedUsers(kind: kind)
-        let count = UILabel()
-        count.text = "\(users.count) \(kind == .followers ? "Followers" : "Following")"
-        count.textColor = PonllyPalette.muted
-        count.font = PonllyFonts.display(size: 14)
-        stack.addArrangedSubview(count)
-        users.forEach { stack.addArrangedSubview(row(for: $0)) }
+    private func aerErstSetup() {
+        bruCiubruCiuStencilLab.alwaysBounceVertical = true
+        bruCiubruCiuStencilLab.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiubruCiuStencilLab)
+        flckinkStack.axis = .vertical
+        flckinkStack.spacing = 16
+        flckinkStack.translatesAutoresizingMaskIntoConstraints = false
+        bruCiubruCiuStencilLab.addSubview(flckinkStack)
+        let ponllUsers = PonllyponllTornEdge.aerErstRainWall(bruCiuShadowWall: ponllKind)
+        let bruCiuCountLabel = UILabel()
+        bruCiuCountLabel.text = "\(ponllUsers.count) \(ponllKind == .aerErstBrickTone ? "Followers" : "Following")"
+        bruCiuCountLabel.textColor = PonllyPalette.muted
+        bruCiuCountLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
+        flckinkStack.addArrangedSubview(bruCiuCountLabel)
+        ponllUsers.forEach { flckinkStack.addArrangedSubview(bruCiuRow(for: $0)) }
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 16),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -16),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 26),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -34)
+            bruCiubruCiuStencilLab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            bruCiubruCiuStencilLab.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bruCiubruCiuStencilLab.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            bruCiubruCiuStencilLab.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkStack.leadingAnchor.constraint(equalTo: bruCiubruCiuStencilLab.frameLayoutGuide.leadingAnchor, constant: 16),
+            flckinkStack.trailingAnchor.constraint(equalTo: bruCiubruCiuStencilLab.frameLayoutGuide.trailingAnchor, constant: -16),
+            flckinkStack.topAnchor.constraint(equalTo: bruCiubruCiuStencilLab.contentLayoutGuide.topAnchor, constant: 26),
+            flckinkStack.bottomAnchor.constraint(equalTo: bruCiubruCiuStencilLab.contentLayoutGuide.bottomAnchor, constant: -34)
         ])
     }
 
-    private func row(for user: PonllyUser) -> UIControl {
-        let control = UIControl()
-        control.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.88)
-        control.layer.cornerRadius = 18
-        control.layer.borderWidth = 1
-        control.layer.borderColor = PonllyPalette.line.cgColor
-        control.addAction(UIAction { [weak self] _ in
-            let profile = FlckinkPrimerCoatController(user: user)
-            profile.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(profile, animated: true)
+    private func bruCiuRow(for aerErstUser: PonllyaerErstTwoToneFillr) -> UIControl {
+        let ponllflckinkLetterMaze = UIControl()
+        ponllflckinkLetterMaze.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.88)
+        ponllflckinkLetterMaze.layer.cornerRadius = 18
+        ponllflckinkLetterMaze.layer.borderWidth = 1
+        ponllflckinkLetterMaze.layer.borderColor = PonllyPalette.line.cgColor
+        ponllflckinkLetterMaze.addAction(UIAction { [weak self] _ in
+            let bruCiuProfile = FlckinkPrimerCoatController(user: aerErstUser)
+            bruCiuProfile.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(bruCiuProfile, animated: true)
         }, for: .touchUpInside)
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.alignment = .center
-        row.spacing = 14
-        row.translatesAutoresizingMaskIntoConstraints = false
-        control.addSubview(row)
-        row.addArrangedSubview(ErErstPaintLabView(user: user, size: 54))
-        let text = UIStackView()
-        text.axis = .vertical
-        text.spacing = 4
-        let name = UILabel()
-        name.text = user.name.lowercased()
-        name.textColor = .white
-        name.font = PonllyFonts.display(size: 16)
-        let crew = UILabel()
-        crew.text = user.crew
-        crew.textColor = PonllyPalette.muted
-        crew.font = PonllyFonts.mono(size: 12)
-        text.addArrangedSubview(name)
-        text.addArrangedSubview(crew)
-        row.addArrangedSubview(text)
-        let badge = UILabel()
-        badge.text = PonllyDataCenter.isMutual(user.id) ? "Mutual" : (PonllyDataCenter.isFollowing(user.id) ? "Following" : "Follow")
-        badge.textColor = PonllyDataCenter.isMutual(user.id) ? PonllyPalette.green : .white
-        badge.font = PonllyFonts.display(size: 11)
-        badge.textAlignment = .center
-        badge.layer.cornerRadius = 12
-        badge.layer.borderWidth = 1
-        badge.layer.borderColor = (PonllyDataCenter.isMutual(user.id) ? PonllyPalette.green : PonllyPalette.pink).cgColor
-        badge.clipsToBounds = true
-        badge.widthAnchor.constraint(equalToConstant: 92).isActive = true
-        badge.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        row.addArrangedSubview(badge)
+        let flckinkRow = UIStackView()
+        flckinkRow.axis = .horizontal
+        flckinkRow.alignment = .center
+        flckinkRow.spacing = 14
+        flckinkRow.translatesAutoresizingMaskIntoConstraints = false
+        ponllflckinkLetterMaze.addSubview(flckinkRow)
+        flckinkRow.addArrangedSubview(ErErstPaintLabView(user: aerErstUser, size: 54))
+        let aerErstTextStack = UIStackView()
+        aerErstTextStack.axis = .vertical
+        aerErstTextStack.spacing = 4
+        let ponllNameLabel = UILabel()
+        ponllNameLabel.text = aerErstUser.aerosolDream.lowercased()
+        ponllNameLabel.textColor = .white
+        ponllNameLabel.font = PonllyFonts.muralForgepon(neonLab: 16)
+        let bruCiuCrewLabel = UILabel()
+        bruCiuCrewLabel.text = aerErstUser.sprayRhythm
+        bruCiuCrewLabel.textColor = PonllyPalette.muted
+        bruCiuCrewLabel.font = PonllyFonts.steelGate(rollingShutter: 12)
+        aerErstTextStack.addArrangedSubview(ponllNameLabel)
+        aerErstTextStack.addArrangedSubview(bruCiuCrewLabel)
+        flckinkRow.addArrangedSubview(aerErstTextStack)
+        let flcaerErstPaintLab = UILabel()
+        flcaerErstPaintLab.text = PonllyponllTornEdge.ponllBrickCrack(aerErstUser.graffitiPulse) ? "Mutual" : (PonllyponllTornEdge.aerErstCrackedWall(aerErstUser.graffitiPulse) ? "Following" : "Follow")
+        flcaerErstPaintLab.textColor = PonllyponllTornEdge.ponllBrickCrack(aerErstUser.graffitiPulse) ? PonllyPalette.green : .white
+        flcaerErstPaintLab.font = PonllyFonts.muralForgepon(neonLab: 11)
+        flcaerErstPaintLab.textAlignment = .center
+        flcaerErstPaintLab.layer.cornerRadius = 12
+        flcaerErstPaintLab.layer.borderWidth = 1
+        flcaerErstPaintLab.layer.borderColor = (PonllyponllTornEdge.ponllBrickCrack(aerErstUser.graffitiPulse) ? PonllyPalette.green : PonllyPalette.pink).cgColor
+        flcaerErstPaintLab.clipsToBounds = true
+        flcaerErstPaintLab.widthAnchor.constraint(equalToConstant: 92).isActive = true
+        flcaerErstPaintLab.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        flckinkRow.addArrangedSubview(flcaerErstPaintLab)
         NSLayoutConstraint.activate([
-            control.heightAnchor.constraint(equalToConstant: 92),
-            row.leadingAnchor.constraint(equalTo: control.leadingAnchor, constant: 18),
-            row.trailingAnchor.constraint(equalTo: control.trailingAnchor, constant: -18),
-            row.centerYAnchor.constraint(equalTo: control.centerYAnchor)
+            ponllflckinkLetterMaze.heightAnchor.constraint(equalToConstant: 92),
+            flckinkRow.leadingAnchor.constraint(equalTo: ponllflckinkLetterMaze.leadingAnchor, constant: 18),
+            flckinkRow.trailingAnchor.constraint(equalTo: ponllflckinkLetterMaze.trailingAnchor, constant: -18),
+            flckinkRow.centerYAnchor.constraint(equalTo: ponllflckinkLetterMaze.centerYAnchor)
         ])
-        return control
+        return ponllflckinkLetterMaze
     }
 }

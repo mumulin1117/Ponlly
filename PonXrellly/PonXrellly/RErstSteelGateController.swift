@@ -5,11 +5,11 @@ import StoreKit
 import UIKit
 
 final class RErstSteelGateController: UIViewController {
-    private let draft: BruCiuOutlinePlan
-    private let balanceLabel = UILabel()
+    private let ponllaerErstRainWall: BruCiuOutlinePlan
+    private let bruCiuflckinkDawnWallLabel = UILabel()
 
-    init(draft: BruCiuOutlinePlan) {
-        self.draft = draft
+    init(bruCiuPaintedFence bruCiuPaintedFence: BruCiuOutlinePlan) {
+        self.ponllaerErstRainWall = bruCiuPaintedFence
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -25,8 +25,8 @@ final class RErstSteelGateController: UIViewController {
         super.viewDidLoad()
         title = "Theme Store"
         view.backgroundColor = PonllyPalette.background
-        setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(balanceDidChange), name: .ponllyCoinBalanceDidChange, object: nil)
+        bruCiuBridgePillar()
+        NotificationCenter.default.addObserver(self, selector: #selector(aerErstbruCiuBrushMarker), name: .ponllybruCiuColorRackChange, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,229 +35,229 @@ final class RErstSteelGateController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 16
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(stack)
+    private func bruCiuBridgePillar() {
+        let aerErstaerErstWarehouseWall = UIScrollView()
+        aerErstaerErstWarehouseWall.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstaerErstWarehouseWall)
+        let ponllflckinkRoofLine = UIStackView()
+        ponllflckinkRoofLine.axis = .vertical
+        ponllflckinkRoofLine.spacing = 16
+        ponllflckinkRoofLine.translatesAutoresizingMaskIntoConstraints = false
+        aerErstaerErstWarehouseWall.addSubview(ponllflckinkRoofLine)
 
-        stack.addArrangedSubview(balanceStrip())
-        if let spotlight = RErstLayerPlan.themes.first {
-            stack.addArrangedSubview(spotlightCard(spotlight))
+        ponllflckinkRoofLine.addArrangedSubview(bruCiuponllPipeShadow())
+        if let bruCiuSpotlight = AerErstLayerPlan.flckinkShapeStackopl.first {
+            ponllflckinkRoofLine.addArrangedSubview(flckinkSpotlightCard(bruCiuSpotlight))
         }
-        let browse = UILabel()
-        browse.text = "Browse Themes"
-        browse.textColor = PonllyPalette.muted
-        browse.font = PonllyFonts.display(size: 11)
-        stack.addArrangedSubview(browse)
+        let aerErstBrowseLabel = UILabel()
+        aerErstBrowseLabel.text = "Browse Themes"
+        aerErstBrowseLabel.textColor = PonllyPalette.muted
+        aerErstBrowseLabel.font = PonllyFonts.muralForgepon(neonLab: 11)
+        ponllflckinkRoofLine.addArrangedSubview(aerErstBrowseLabel)
 
-        let grid = UIStackView()
-        grid.axis = .vertical
-        grid.spacing = 12
-        let otherThemes = Array(RErstLayerPlan.themes.dropFirst())
-        for index in stride(from: 0, to: otherThemes.count, by: 2) {
-            let row = UIStackView()
-            row.axis = .horizontal
-            row.spacing = 12
-            row.distribution = .fillEqually
-            row.addArrangedSubview(themeTile(otherThemes[index]))
-            if index + 1 < otherThemes.count {
-                row.addArrangedSubview(themeTile(otherThemes[index + 1]))
+        let bruCiuThemeGrid = UIStackView()
+        bruCiuThemeGrid.axis = .vertical
+        bruCiuThemeGrid.spacing = 12
+        let flckinkOtherThemes = Array(AerErstLayerPlan.flckinkShapeStackopl.dropFirst())
+        for aerErstIndex in stride(from: 0, to: flckinkOtherThemes.count, by: 2) {
+            let ponllThemeRow = UIStackView()
+            ponllThemeRow.axis = .horizontal
+            ponllThemeRow.spacing = 12
+            ponllThemeRow.distribution = .fillEqually
+            ponllThemeRow.addArrangedSubview(ponllaerErstLayerMaske(flckinkOtherThemes[aerErstIndex]))
+            if aerErstIndex + 1 < flckinkOtherThemes.count {
+                ponllThemeRow.addArrangedSubview(ponllaerErstLayerMaske(flckinkOtherThemes[aerErstIndex + 1]))
             } else {
-                row.addArrangedSubview(UIView())
+                ponllThemeRow.addArrangedSubview(UIView())
             }
-            grid.addArrangedSubview(row)
+            bruCiuThemeGrid.addArrangedSubview(ponllThemeRow)
         }
-        stack.addArrangedSubview(grid)
+        ponllflckinkRoofLine.addArrangedSubview(bruCiuThemeGrid)
 
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 16),
-            stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -30)
+            aerErstaerErstWarehouseWall.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            aerErstaerErstWarehouseWall.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            aerErstaerErstWarehouseWall.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            aerErstaerErstWarehouseWall.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ponllflckinkRoofLine.leadingAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.frameLayoutGuide.leadingAnchor, constant: 20),
+            ponllflckinkRoofLine.trailingAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.frameLayoutGuide.trailingAnchor, constant: -20),
+            ponllflckinkRoofLine.topAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.contentLayoutGuide.topAnchor, constant: 16),
+            ponllflckinkRoofLine.bottomAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.contentLayoutGuide.bottomAnchor, constant: -30)
         ])
     }
 
-    private func balanceStrip() -> UIView {
-        let strip = UIView()
-        strip.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        strip.layer.cornerRadius = 14
-        strip.layer.borderWidth = 1
-        strip.layer.borderColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 0.42).cgColor
+    private func bruCiuponllPipeShadow() -> UIView {
+        let flckinkStrip = UIView()
+        flckinkStrip.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        flckinkStrip.layer.cornerRadius = 14
+        flckinkStrip.layer.borderWidth = 1
+        flckinkStrip.layer.borderColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 0.42).cgColor
 
-        let icon = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        strip.addSubview(icon)
+        let aerErstaerErstDrainCover = UIImageView(image: UIImage(named: "coin_glow_wrapper"))
+        aerErstaerErstDrainCover.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStrip.addSubview(aerErstaerErstDrainCover)
 
-        balanceLabel.textColor = .white
-        balanceLabel.font = PonllyFonts.display(size: 13)
-        balanceLabel.translatesAutoresizingMaskIntoConstraints = false
-        strip.addSubview(balanceLabel)
-        refreshBalanceLabel()
+        bruCiuflckinkDawnWallLabel.textColor = .white
+        bruCiuflckinkDawnWallLabel.font = PonllyFonts.muralForgepon(neonLab: 13)
+        bruCiuflckinkDawnWallLabel.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStrip.addSubview(bruCiuflckinkDawnWallLabel)
+        ponllflckinkCurbLineLabel()
 
-        let hint = UILabel()
-        hint.text = "Choose a room look"
-        hint.textColor = PonllyPalette.muted
-        hint.font = PonllyFonts.body(size: 12, weight: .medium)
-        hint.translatesAutoresizingMaskIntoConstraints = false
-        strip.addSubview(hint)
-
-        NSLayoutConstraint.activate([
-            strip.heightAnchor.constraint(equalToConstant: 48),
-            icon.leadingAnchor.constraint(equalTo: strip.leadingAnchor, constant: 14),
-            icon.centerYAnchor.constraint(equalTo: strip.centerYAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 22),
-            icon.heightAnchor.constraint(equalToConstant: 22),
-            balanceLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8),
-            balanceLabel.centerYAnchor.constraint(equalTo: strip.centerYAnchor),
-            hint.trailingAnchor.constraint(equalTo: strip.trailingAnchor, constant: -14),
-            hint.centerYAnchor.constraint(equalTo: strip.centerYAnchor),
-            hint.leadingAnchor.constraint(greaterThanOrEqualTo: balanceLabel.trailingAnchor, constant: 10)
-        ])
-        return strip
-    }
-
-    private func refreshBalanceLabel() {
-        balanceLabel.text = "\(PonllyDataCenter.coinBalance.formatted()) Coins"
-    }
-
-    private func spotlightCard(_ theme: OnllPaintPlanTheme) -> UIView {
-        let card = UIControl()
-        card.backgroundColor = PonllyPalette.panel
-        card.layer.cornerRadius = 18
-        card.layer.borderWidth = 1
-        card.layer.borderColor = PonllyPalette.line.cgColor
-        card.translatesAutoresizingMaskIntoConstraints = false
-        card.addTarget(self, action: #selector(previewSpotlight), for: .touchUpInside)
-
-        let image = UIImageView(image: UIImage(named: theme.imageName))
-        image.isUserInteractionEnabled = false
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 12
-        image.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(image)
-        let badge = UILabel()
-        badge.isUserInteractionEnabled = false
-        badge.text = theme.availability
-        badge.textColor = .black
-        badge.backgroundColor = .yellow
-        badge.font = PonllyFonts.themeFont(size: 8)
-        badge.textAlignment = .center
-        badge.layer.cornerRadius = 8
-        badge.clipsToBounds = true
-        badge.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(badge)
-        let title = UILabel()
-        title.isUserInteractionEnabled = false
-        title.text = theme.name
-        title.textColor = .white
-        title.font = PonllyFonts.display(size: 16)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(title)
-        let subtitle = UILabel()
-        subtitle.isUserInteractionEnabled = false
-        subtitle.text = theme.subtitle
-        subtitle.textColor = PonllyPalette.muted
-        subtitle.font = PonllyFonts.body(size: 12, weight: .regular)
-        subtitle.numberOfLines = 2
-        subtitle.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(subtitle)
-        let meta = UILabel()
-        meta.isUserInteractionEnabled = false
-        meta.text = "\(theme.cost.formatted()) Coins"
-        meta.textColor = theme.accent
-        meta.font = PonllyFonts.mono(size: 14)
-        meta.translatesAutoresizingMaskIntoConstraints = false
-        card.addSubview(meta)
-        let preview = UIButton(type: .system)
-        preview.setTitle("Choose", for: .normal)
-        preview.setTitleColor(.black, for: .normal)
-        preview.titleLabel?.font = PonllyFonts.display(size: 10)
-        preview.backgroundColor = PonllyPalette.cyan
-        preview.layer.cornerRadius = 10
-        preview.translatesAutoresizingMaskIntoConstraints = false
-        preview.addTarget(self, action: #selector(previewSpotlight), for: .touchUpInside)
-        card.addSubview(preview)
+        let ponllHintLabel = UILabel()
+        ponllHintLabel.text = "Choose a room look"
+        ponllHintLabel.textColor = PonllyPalette.muted
+        ponllHintLabel.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+        ponllHintLabel.translatesAutoresizingMaskIntoConstraints = false
+        flckinkStrip.addSubview(ponllHintLabel)
 
         NSLayoutConstraint.activate([
-            card.heightAnchor.constraint(equalToConstant: 196),
-            image.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 12),
-            image.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -12),
-            image.topAnchor.constraint(equalTo: card.topAnchor, constant: 12),
-            image.heightAnchor.constraint(equalToConstant: 88),
-            badge.leadingAnchor.constraint(equalTo: image.leadingAnchor, constant: 8),
-            badge.topAnchor.constraint(equalTo: image.topAnchor, constant: 8),
-            badge.widthAnchor.constraint(greaterThanOrEqualToConstant: 88),
-            badge.heightAnchor.constraint(equalToConstant: 18),
-            title.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 14),
-            title.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 12),
-            subtitle.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            subtitle.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -14),
-            subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 4),
-            meta.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            meta.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -16),
-            preview.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -14),
-            preview.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -12),
-            preview.widthAnchor.constraint(equalToConstant: 82),
-            preview.heightAnchor.constraint(equalToConstant: 32)
+            flckinkStrip.heightAnchor.constraint(equalToConstant: 48),
+            aerErstaerErstDrainCover.leadingAnchor.constraint(equalTo: flckinkStrip.leadingAnchor, constant: 14),
+            aerErstaerErstDrainCover.centerYAnchor.constraint(equalTo: flckinkStrip.centerYAnchor),
+            aerErstaerErstDrainCover.widthAnchor.constraint(equalToConstant: 22),
+            aerErstaerErstDrainCover.heightAnchor.constraint(equalToConstant: 22),
+            bruCiuflckinkDawnWallLabel.leadingAnchor.constraint(equalTo: aerErstaerErstDrainCover.trailingAnchor, constant: 8),
+            bruCiuflckinkDawnWallLabel.centerYAnchor.constraint(equalTo: flckinkStrip.centerYAnchor),
+            ponllHintLabel.trailingAnchor.constraint(equalTo: flckinkStrip.trailingAnchor, constant: -14),
+            ponllHintLabel.centerYAnchor.constraint(equalTo: flckinkStrip.centerYAnchor),
+            ponllHintLabel.leadingAnchor.constraint(greaterThanOrEqualTo: bruCiuflckinkDawnWallLabel.trailingAnchor, constant: 10)
         ])
-        return card
+        return flckinkStrip
     }
 
-    private func themeTile(_ theme: OnllPaintPlanTheme) -> UIControl {
-        let tile = PoponllRollingShutterTile(theme: theme)
-        tile.addTarget(self, action: #selector(themeTileTapped(_:)), for: .touchUpInside)
-        return tile
+    private func ponllflckinkCurbLineLabel() {
+        bruCiuflckinkDawnWallLabel.text = "\(PonllyponllTornEdge.flckinkShadowLayer.formatted()) Coins"
     }
 
-    @objc private func previewSpotlight() {
-        guard let theme = RErstLayerPlan.themes.first else { return }
-        showThemeConfirm(theme)
+    private func flckinkSpotlightCard(_ aerErstTheme: PonllPaintPlan) -> UIView {
+        let ponlbruCiuSidewalkEdge = UIControl()
+        ponlbruCiuSidewalkEdge.backgroundColor = PonllyPalette.panel
+        ponlbruCiuSidewalkEdge.layer.cornerRadius = 18
+        ponlbruCiuSidewalkEdge.layer.borderWidth = 1
+        ponlbruCiuSidewalkEdge.layer.borderColor = PonllyPalette.line.cgColor
+        ponlbruCiuSidewalkEdge.translatesAutoresizingMaskIntoConstraints = false
+        ponlbruCiuSidewalkEdge.addTarget(self, action: #selector(bruCiuPreviewSpotlight), for: .touchUpInside)
+
+        let bruCiuImage = UIImageView(image: UIImage(named: aerErstTheme.aerErstTwoToneFill))
+        bruCiuImage.isUserInteractionEnabled = false
+        bruCiuImage.contentMode = .scaleAspectFill
+        bruCiuImage.clipsToBounds = true
+        bruCiuImage.layer.cornerRadius = 12
+        bruCiuImage.translatesAutoresizingMaskIntoConstraints = false
+        ponlbruCiuSidewalkEdge.addSubview(bruCiuImage)
+        let flckbruCiuNeonSpray = UILabel()
+        flckbruCiuNeonSpray.isUserInteractionEnabled = false
+        flckbruCiuNeonSpray.text = aerErstTheme.bruCiuSolidFill
+        flckbruCiuNeonSpray.textColor = .black
+        flckbruCiuNeonSpray.backgroundColor = .yellow
+        flckbruCiuNeonSpray.font = PonllyFonts.graffitiForge(aerosolForge: 8)
+        flckbruCiuNeonSpray.textAlignment = .center
+        flckbruCiuNeonSpray.layer.cornerRadius = 8
+        flckbruCiuNeonSpray.clipsToBounds = true
+        flckbruCiuNeonSpray.translatesAutoresizingMaskIntoConstraints = false
+        ponlbruCiuSidewalkEdge.addSubview(flckbruCiuNeonSpray)
+        let aerErstbruCiuPaintPeel = UILabel()
+        aerErstbruCiuPaintPeel.isUserInteractionEnabled = false
+        aerErstbruCiuPaintPeel.text = aerErstTheme.bruCiuMagentaBurstpobn
+        aerErstbruCiuPaintPeel.textColor = .white
+        aerErstbruCiuPaintPeel.font = PonllyFonts.muralForgepon(neonLab: 16)
+        aerErstbruCiuPaintPeel.translatesAutoresizingMaskIntoConstraints = false
+        ponlbruCiuSidewalkEdge.addSubview(aerErstbruCiuPaintPeel)
+        let ponllponllAlleyDoor = UILabel()
+        ponllponllAlleyDoor.isUserInteractionEnabled = false
+        ponllponllAlleyDoor.text = aerErstTheme.ponllCyanGlow
+        ponllponllAlleyDoor.textColor = PonllyPalette.muted
+        ponllponllAlleyDoor.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .regular)
+        ponllponllAlleyDoor.numberOfLines = 2
+        ponllponllAlleyDoor.translatesAutoresizingMaskIntoConstraints = false
+        ponlbruCiuSidewalkEdge.addSubview(ponllponllAlleyDoor)
+        let bruCiuMetaLabel = UILabel()
+        bruCiuMetaLabel.isUserInteractionEnabled = false
+        bruCiuMetaLabel.text = "\(aerErstTheme.aerErstLayerBlend.formatted()) Coins"
+        bruCiuMetaLabel.textColor = aerErstTheme.flckinkSplitFill
+        bruCiuMetaLabel.font = PonllyFonts.steelGate(rollingShutter: 14)
+        bruCiuMetaLabel.translatesAutoresizingMaskIntoConstraints = false
+        ponlbruCiuSidewalkEdge.addSubview(bruCiuMetaLabel)
+        let flckinkflckinkPlasterDust = UIButton(type: .system)
+        flckinkflckinkPlasterDust.setTitle("Choose", for: .normal)
+        flckinkflckinkPlasterDust.setTitleColor(.black, for: .normal)
+        flckinkflckinkPlasterDust.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 10)
+        flckinkflckinkPlasterDust.backgroundColor = PonllyPalette.cyan
+        flckinkflckinkPlasterDust.layer.cornerRadius = 10
+        flckinkflckinkPlasterDust.translatesAutoresizingMaskIntoConstraints = false
+        flckinkflckinkPlasterDust.addTarget(self, action: #selector(bruCiuPreviewSpotlight), for: .touchUpInside)
+        ponlbruCiuSidewalkEdge.addSubview(flckinkflckinkPlasterDust)
+
+        NSLayoutConstraint.activate([
+            ponlbruCiuSidewalkEdge.heightAnchor.constraint(equalToConstant: 196),
+            bruCiuImage.leadingAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.leadingAnchor, constant: 12),
+            bruCiuImage.trailingAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.trailingAnchor, constant: -12),
+            bruCiuImage.topAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.topAnchor, constant: 12),
+            bruCiuImage.heightAnchor.constraint(equalToConstant: 88),
+            flckbruCiuNeonSpray.leadingAnchor.constraint(equalTo: bruCiuImage.leadingAnchor, constant: 8),
+            flckbruCiuNeonSpray.topAnchor.constraint(equalTo: bruCiuImage.topAnchor, constant: 8),
+            flckbruCiuNeonSpray.widthAnchor.constraint(greaterThanOrEqualToConstant: 88),
+            flckbruCiuNeonSpray.heightAnchor.constraint(equalToConstant: 18),
+            aerErstbruCiuPaintPeel.leadingAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.leadingAnchor, constant: 14),
+            aerErstbruCiuPaintPeel.topAnchor.constraint(equalTo: bruCiuImage.bottomAnchor, constant: 12),
+            ponllponllAlleyDoor.leadingAnchor.constraint(equalTo: aerErstbruCiuPaintPeel.leadingAnchor),
+            ponllponllAlleyDoor.trailingAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.trailingAnchor, constant: -14),
+            ponllponllAlleyDoor.topAnchor.constraint(equalTo: aerErstbruCiuPaintPeel.bottomAnchor, constant: 4),
+            bruCiuMetaLabel.leadingAnchor.constraint(equalTo: aerErstbruCiuPaintPeel.leadingAnchor),
+            bruCiuMetaLabel.bottomAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.bottomAnchor, constant: -16),
+            flckinkflckinkPlasterDust.trailingAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.trailingAnchor, constant: -14),
+            flckinkflckinkPlasterDust.bottomAnchor.constraint(equalTo: ponlbruCiuSidewalkEdge.bottomAnchor, constant: -12),
+            flckinkflckinkPlasterDust.widthAnchor.constraint(equalToConstant: 82),
+            flckinkflckinkPlasterDust.heightAnchor.constraint(equalToConstant: 32)
+        ])
+        return ponlbruCiuSidewalkEdge
     }
 
-    @objc private func themeTileTapped(_ sender: PoponllRollingShutterTile) {
-        showThemeConfirm(sender.theme)
+    private func ponllaerErstLayerMaske(_ bruCiuTheme: PonllPaintPlan) -> UIControl {
+        let flckinkTile = PoponllRollingShutterTile(stencilMood: bruCiuTheme)
+        flckinkTile.addTarget(self, action: #selector(flckinkThemeTileTapped(_:)), for: .touchUpInside)
+        return flckinkTile
     }
 
-    private func showThemeConfirm(_ theme: OnllPaintPlanTheme) {
-        let confirm = PonllysprayRhythmController(theme: theme) { [weak self] selectedTheme in
+    @objc private func bruCiuPreviewSpotlight() {
+        guard let aerErstTheme = AerErstLayerPlan.flckinkShapeStackopl.first else { return }
+        aerErstShowThemeConfirm(aerErstTheme)
+    }
+
+    @objc private func flckinkThemeTileTapped(_ ponllSender: PoponllRollingShutterTile) {
+        aerErstShowThemeConfirm(ponllSender.stencilArc)
+    }
+
+    private func aerErstShowThemeConfirm(_ bruCiuTheme: PonllPaintPlan) {
+        let flckinkflckinkPaintShelf = PonllysprayRhythmController(bruCiuTheme) { [weak self] ponllSelectedTheme in
             guard let self else { return }
-            if PonllyDataCenter.coinBalance < selectedTheme.cost {
-                self.ponllyShowNotice("Add coins to unlock this theme", style: .info)
+            if PonllyponllTornEdge.flckinkShadowLayer < ponllSelectedTheme.aerErstLayerBlend {
+                self.aerErstSketchRush("Add coins to unlock this theme", bruCiuLetterForm: .bruCiuSilverSheen)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                    let store = PoonllFineLineController()
-                    store.hidesBottomBarWhenPushed = true
-                    self.navigationController?.pushViewController(store, animated: true)
+                    let bruCiuStore = PoonllFineLineController()
+                    bruCiuStore.hidesBottomBarWhenPushed = true
+                    self.navigationController?.pushViewController(bruCiuStore, animated: true)
                 }
                 return
             }
-            self.ponllyShowNotice("Preparing room...", style: .loading, autoDismissAfter: 0.75)
+            self.aerErstSketchRush("Preparing room...", bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.75)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
-                guard PonllyDataCenter.spendCoins(selectedTheme.cost) else {
-                    self.ponllyShowNotice("Add coins to unlock this theme", style: .info)
-                    let store = PoonllFineLineController()
-                    store.hidesBottomBarWhenPushed = true
-                    self.navigationController?.pushViewController(store, animated: true)
+                guard PonllyponllTornEdge.aerErstHighlightStroke(ponllSelectedTheme.aerErstLayerBlend) else {
+                    self.aerErstSketchRush("Add coins to unlock this theme", bruCiuLetterForm: .bruCiuSilverSheen)
+                    let aerErstStore = PoonllFineLineController()
+                    aerErstStore.hidesBottomBarWhenPushed = true
+                    self.navigationController?.pushViewController(aerErstStore, animated: true)
                     return
                 }
-                self.navigationController?.pushViewController(PonllyurbanCanvasController(draft: self.draft, theme: selectedTheme), animated: true)
+                self.navigationController?.pushViewController(PonllyurbanCanvasController(freshPiece: self.ponllaerErstRainWall, gritPiece: ponllSelectedTheme), animated: true)
             }
         }
-        confirm.modalPresentationStyle = .overFullScreen
-        confirm.modalTransitionStyle = .crossDissolve
-        present(confirm, animated: true)
+        flckinkflckinkPaintShelf.modalPresentationStyle = .overFullScreen
+        flckinkflckinkPaintShelf.modalTransitionStyle = .crossDissolve
+        present(flckinkflckinkPaintShelf, animated: true)
     }
 
-    @objc private func balanceDidChange() {
-        refreshBalanceLabel()
+    @objc private func aerErstbruCiuBrushMarker() {
+        ponllflckinkCurbLineLabel()
     }
 }

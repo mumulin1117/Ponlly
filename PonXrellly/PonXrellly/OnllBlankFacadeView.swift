@@ -5,41 +5,41 @@ import StoreKit
 import UIKit
 
 final class OnllBlankFacadeView: UIView {
-    private let selectedImage: UIImage?
+    private let bruCiuMuralCue: UIImage?
 
-    init(selectedImage: UIImage? = nil) {
-        self.selectedImage = selectedImage
+    init(flckinkPaintAura: UIImage? = nil) {
+        self.bruCiuMuralCue = flckinkPaintAura
         super.init(frame: .zero)
-        setup()
+        ponllStencilSeed()
     }
 
     override init(frame: CGRect) {
-        self.selectedImage = nil
+        self.bruCiuMuralCue = nil
         super.init(frame: frame)
-        setup()
+        ponllStencilSeed()
     }
 
-    private func setup() {
-        let left: UIView
-        if let selectedImage {
-            left = PbruCiuSprayCanView(image: selectedImage)
+    private func ponllStencilSeed() {
+        let aerErstChromeSpark: UIView
+        if let bruCiuMuralCue {
+            aerErstChromeSpark = PbruCiuSprayCanView(bruCiuPaintSignal: bruCiuMuralCue)
         } else {
-            left = PbruCiuClearCoatView(artwork: .init(id: "preview", ownerId: "u01", title: "Wildstyle", style: "Wildstyle", imageName: "graffiti_challenge_wall_03", colors: [.systemPink, .cyan, .gray]))
+            aerErstChromeSpark = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "preview", markerStroke: "u01", nozzleCraft: "Wildstyle", capControl: "Wildstyle", stencilBloom: "graffiti_challenge_wall_03", inkDrift: [.systemPink, .cyan, .gray]))
         }
-        let right = PonllyEmptyOpponentView()
-        [left, right].forEach {
+        let flckinkNeonMood = PonllyEmptyOpponentView()
+        [aerErstChromeSpark, flckinkNeonMood].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
         NSLayoutConstraint.activate([
-            left.leadingAnchor.constraint(equalTo: leadingAnchor),
-            left.topAnchor.constraint(equalTo: topAnchor),
-            left.bottomAnchor.constraint(equalTo: bottomAnchor),
-            left.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
-            right.trailingAnchor.constraint(equalTo: trailingAnchor),
-            right.topAnchor.constraint(equalTo: topAnchor),
-            right.bottomAnchor.constraint(equalTo: bottomAnchor),
-            right.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5)
+            aerErstChromeSpark.leadingAnchor.constraint(equalTo: leadingAnchor),
+            aerErstChromeSpark.topAnchor.constraint(equalTo: topAnchor),
+            aerErstChromeSpark.bottomAnchor.constraint(equalTo: bottomAnchor),
+            aerErstChromeSpark.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
+            flckinkNeonMood.trailingAnchor.constraint(equalTo: trailingAnchor),
+            flckinkNeonMood.topAnchor.constraint(equalTo: topAnchor),
+            flckinkNeonMood.bottomAnchor.constraint(equalTo: bottomAnchor),
+            flckinkNeonMood.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5)
         ])
     }
 

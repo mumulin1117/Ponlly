@@ -5,10 +5,10 @@ import StoreKit
 import UIKit
 
 final class BruCiuSilverSheenController: UIViewController {
-    private let battle: PonllyBattle
+    private let ponllRoughFill: PonllyBattle
 
-    init(battle: PonllyBattle) {
-        self.battle = battle
+    init(ponllPrimerCoat bruCiuSolidFill: PonllyBattle) {
+        self.ponllRoughFill = bruCiuSolidFill
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -20,7 +20,7 @@ final class BruCiuSilverSheenController: UIViewController {
         super.viewDidLoad()
         title = "Accept Challenge"
         view.backgroundColor = PonllyPalette.background
-        setup()
+        flckinkSplitFill()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,34 +29,34 @@ final class BruCiuSilverSheenController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-    private func setup() {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 26
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stack)
-        let challenger = PbruCiuClearCoatView(artwork: battle.artworkA)
-        challenger.heightAnchor.constraint(equalToConstant: 190).isActive = true
-        let label = UILabel()
-        label.text = "VS\n\nUpload Your Artwork"
-        label.textColor = .white
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.font = PonllyFonts.display(size: 16)
-        let plus = PonllyEmptyOpponentView()
-        plus.heightAnchor.constraint(equalToConstant: 220).isActive = true
-        let submit = PonllyNeonButton(title: "Submit Challenge")
-        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
-        [challenger, label, plus, submit].forEach(stack.addArrangedSubview)
+    private func flckinkSplitFill() {
+        let aerErstTwoToneFill = UIStackView()
+        aerErstTwoToneFill.axis = .vertical
+        aerErstTwoToneFill.spacing = 26
+        aerErstTwoToneFill.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstTwoToneFill)
+        let ponllCyanGlow = PbruCiuClearCoatView(ponllPaintTrace: ponllRoughFill.neonDrip)
+        ponllCyanGlow.heightAnchor.constraint(equalToConstant: 190).isActive = true
+        let bruCiuMagentaBurst = UILabel()
+        bruCiuMagentaBurst.text = "VS\n\nUpload Your Artwork"
+        bruCiuMagentaBurst.textColor = .white
+        bruCiuMagentaBurst.textAlignment = .center
+        bruCiuMagentaBurst.numberOfLines = 0
+        bruCiuMagentaBurst.font = PonllyFonts.muralForgepon(neonLab: 16)
+        let flckinkLimeStroke = PonllyEmptyOpponentView()
+        flckinkLimeStroke.heightAnchor.constraint(equalToConstant: 220).isActive = true
+        let aerErstBlackOutline = PonllyNeonButton("Submit Challenge")
+        aerErstBlackOutline.addTarget(self, action: #selector(ponllWhiteEdge), for: .touchUpInside)
+        [ponllCyanGlow, bruCiuMagentaBurst, flckinkLimeStroke, aerErstBlackOutline].forEach(aerErstTwoToneFill.addArrangedSubview)
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
-            submit.heightAnchor.constraint(equalToConstant: 60)
+            aerErstTwoToneFill.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            aerErstTwoToneFill.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            aerErstTwoToneFill.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
+            aerErstBlackOutline.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
-    @objc private func submitTapped() {
-        navigationController?.pushViewController(MarkerNibController(titleText: "Upload Your Artwork", submitTitle: "Submit Challenge", mode: .accept(battle)), animated: true)
+    @objc private func ponllWhiteEdge() {
+        navigationController?.pushViewController(MarkerNibController(ponllStyleSignal: "Upload Your Artwork", bruCiuPaintQuest: "Submit Challenge", flckinkInkCue: .bruCiuOutlinePlan(ponllRoughFill)), animated: true)
     }
 }

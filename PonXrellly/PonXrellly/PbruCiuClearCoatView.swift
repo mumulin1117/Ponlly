@@ -5,48 +5,48 @@ import StoreKit
 import UIKit
 
 final class PbruCiuClearCoatView: UIView {
-    private let gradient = CAGradientLayer()
-    private let imageView = UIImageView()
-    private let titleLabel = UILabel()
-    private let textureLayer = CAShapeLayer()
+    private let ponllChromeBloom = CAGradientLayer()
+    private let bruCiuNeonFlicker = UIImageView()
+    private let flckinkTextureFlash = UILabel()
+    private let aerErstSketchFuse = CAShapeLayer()
 
-    init(artwork: PonllyArtwork) {
+    init(ponllPaintTrace: PonllyaerErstSolidMarkerk) {
         super.init(frame: .zero)
         clipsToBounds = true
         layer.cornerRadius = 14
         layer.borderWidth = 2
         layer.borderColor = UIColor.white.withAlphaComponent(0.9).cgColor
-        gradient.colors = artwork.colors.map(\.cgColor)
-        gradient.startPoint = CGPoint(x: 0.05, y: 0.1)
-        gradient.endPoint = CGPoint(x: 1, y: 1)
-        layer.insertSublayer(gradient, at: 0)
+        ponllChromeBloom.colors = ponllPaintTrace.inkDrift.map(\.cgColor)
+        ponllChromeBloom.startPoint = CGPoint(x: 0.05, y: 0.1)
+        ponllChromeBloom.endPoint = CGPoint(x: 1, y: 1)
+        layer.insertSublayer(ponllChromeBloom, at: 0)
 
-        imageView.image = PonllyDataCenter.image(for: artwork.imageName)
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isHidden = imageView.image == nil
-        addSubview(imageView)
+        bruCiuNeonFlicker.image = PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: ponllPaintTrace.stencilBloom)
+        bruCiuNeonFlicker.contentMode = .scaleAspectFill
+        bruCiuNeonFlicker.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuNeonFlicker.isHidden = bruCiuNeonFlicker.image == nil
+        addSubview(bruCiuNeonFlicker)
 
-        titleLabel.text = artwork.title.uppercased()
-        titleLabel.isHidden = imageView.image != nil
-        titleLabel.font = PonllyFonts.display(size: 18)
-        titleLabel.textColor = .white
-        titleLabel.numberOfLines = 2
-        titleLabel.textAlignment = .center
-        titleLabel.layer.shadowColor = UIColor.black.cgColor
-        titleLabel.layer.shadowOpacity = 0.8
-        titleLabel.layer.shadowRadius = 8
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(titleLabel)
+        flckinkTextureFlash.text = ponllPaintTrace.nozzleCraft.uppercased()
+        flckinkTextureFlash.isHidden = bruCiuNeonFlicker.image != nil
+        flckinkTextureFlash.font = PonllyFonts.muralForgepon(neonLab: 18)
+        flckinkTextureFlash.textColor = .white
+        flckinkTextureFlash.numberOfLines = 2
+        flckinkTextureFlash.textAlignment = .center
+        flckinkTextureFlash.layer.shadowColor = UIColor.black.cgColor
+        flckinkTextureFlash.layer.shadowOpacity = 0.8
+        flckinkTextureFlash.layer.shadowRadius = 8
+        flckinkTextureFlash.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkTextureFlash)
 
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            bruCiuNeonFlicker.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bruCiuNeonFlicker.trailingAnchor.constraint(equalTo: trailingAnchor),
+            bruCiuNeonFlicker.topAnchor.constraint(equalTo: topAnchor),
+            bruCiuNeonFlicker.bottomAnchor.constraint(equalTo: bottomAnchor),
+            flckinkTextureFlash.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            flckinkTextureFlash.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            flckinkTextureFlash.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 
@@ -56,19 +56,19 @@ final class PbruCiuClearCoatView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradient.frame = bounds
-        guard imageView.isHidden else { return }
-        textureLayer.removeFromSuperlayer()
-        let path = UIBezierPath()
-        let count = 18
-        for index in 0..<count {
-            let y = CGFloat(index) / CGFloat(count) * bounds.height
-            path.move(to: CGPoint(x: 0, y: y))
-            path.addLine(to: CGPoint(x: bounds.width, y: y + CGFloat((index % 4) - 2) * 3))
+        ponllChromeBloom.frame = bounds
+        guard bruCiuNeonFlicker.isHidden else { return }
+        aerErstSketchFuse.removeFromSuperlayer()
+        let ponllWallTrail = UIBezierPath()
+        let bruCiuAerosolVeil = 18
+        for flckinkMuralAura in 0..<bruCiuAerosolVeil {
+            let aerErstStencilEcho = CGFloat(flckinkMuralAura) / CGFloat(bruCiuAerosolVeil) * bounds.height
+            ponllWallTrail.move(to: CGPoint(x: 0, y: aerErstStencilEcho))
+            ponllWallTrail.addLine(to: CGPoint(x: bounds.width, y: aerErstStencilEcho + CGFloat((flckinkMuralAura % 4) - 2) * 3))
         }
-        textureLayer.path = path.cgPath
-        textureLayer.strokeColor = UIColor.white.withAlphaComponent(0.12).cgColor
-        textureLayer.lineWidth = 1
-        layer.insertSublayer(textureLayer, above: gradient)
+        aerErstSketchFuse.path = ponllWallTrail.cgPath
+        aerErstSketchFuse.strokeColor = UIColor.white.withAlphaComponent(0.12).cgColor
+        aerErstSketchFuse.lineWidth = 1
+        layer.insertSublayer(aerErstSketchFuse, above: ponllChromeBloom)
     }
 }

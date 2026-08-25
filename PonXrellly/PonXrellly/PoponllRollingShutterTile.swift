@@ -5,46 +5,46 @@ import StoreKit
 import UIKit
 
 final class PoponllRollingShutterTile: UIControl {
-    let theme: OnllPaintPlanTheme
+    let stencilArc: PonllPaintPlan
 
-    init(theme: OnllPaintPlanTheme) {
-        self.theme = theme
+    init(stencilMood: PonllPaintPlan) {
+        self.stencilArc = stencilMood
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel
         layer.cornerRadius = 14
         layer.borderWidth = 1
         layer.borderColor = PonllyPalette.line.cgColor
         translatesAutoresizingMaskIntoConstraints = false
-        let image = UIImageView(image: UIImage(named: theme.imageName))
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 10
-        image.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(image)
-        let title = UILabel()
-        title.text = theme.name
-        title.textColor = .white
-        title.font = PonllyFonts.themeFont(size: 10)
-        title.numberOfLines = 1
-        title.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(title)
-        let meta = UILabel()
-        meta.text = "\(theme.cost.formatted()) Coins"
-        meta.textColor = theme.accent
-        meta.font = PonllyFonts.mono(size: 11)
-        meta.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(meta)
+        let ponllstencilSpark = UIImageView(image: UIImage(named: stencilMood.aerErstTwoToneFill))
+        ponllstencilSpark.contentMode = .scaleAspectFill
+        ponllstencilSpark.clipsToBounds = true
+        ponllstencilSpark.layer.cornerRadius = 10
+        ponllstencilSpark.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllstencilSpark)
+        let bruCiumuralEcho = UILabel()
+        bruCiumuralEcho.text = stencilMood.bruCiuMagentaBurstpobn
+        bruCiumuralEcho.textColor = .white
+        bruCiumuralEcho.font = PonllyFonts.graffitiForge(aerosolForge: 10)
+        bruCiumuralEcho.numberOfLines = 1
+        bruCiumuralEcho.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(bruCiumuralEcho)
+        let flckinkThemeMeta = UILabel()
+        flckinkThemeMeta.text = "\(stencilMood.aerErstLayerBlend.formatted()) Coins"
+        flckinkThemeMeta.textColor = stencilMood.flckinkSplitFill
+        flckinkThemeMeta.font = PonllyFonts.steelGate(rollingShutter: 11)
+        flckinkThemeMeta.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(flckinkThemeMeta)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 128),
-            image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            image.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            image.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            image.heightAnchor.constraint(equalToConstant: 74),
-            title.leadingAnchor.constraint(equalTo: image.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: image.trailingAnchor),
-            title.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 8),
-            meta.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            meta.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 4)
+            ponllstencilSpark.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            ponllstencilSpark.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            ponllstencilSpark.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            ponllstencilSpark.heightAnchor.constraint(equalToConstant: 74),
+            bruCiumuralEcho.leadingAnchor.constraint(equalTo: ponllstencilSpark.leadingAnchor),
+            bruCiumuralEcho.trailingAnchor.constraint(equalTo: ponllstencilSpark.trailingAnchor),
+            bruCiumuralEcho.topAnchor.constraint(equalTo: ponllstencilSpark.bottomAnchor, constant: 8),
+            flckinkThemeMeta.leadingAnchor.constraint(equalTo: bruCiumuralEcho.leadingAnchor),
+            flckinkThemeMeta.topAnchor.constraint(equalTo: bruCiumuralEcho.bottomAnchor, constant: 4)
         ])
     }
 

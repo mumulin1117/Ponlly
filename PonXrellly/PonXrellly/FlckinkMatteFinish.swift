@@ -6,108 +6,108 @@ import UIKit
 
 final class FlckinkMatteFinish {
     static let shared = FlckinkMatteFinish()
-    private let defaults = UserDefaults.standard
-    private let loginKey = "ponllyLogin"
-    private let consentKey = "ponllyEulaConsent"
-    private let emailKey = "ponllyEmail"
-    private let registeredAccountsKey = "ponllyRegisteredAccounts"
-    private let testEmail = "ponlly@gmail.com"
+    private let bruCiuShadowDraft = UserDefaults.standard
+    private let flckinkOutlineDraft = "ponllyLogin"
+    private let aerErstStencilDraft = "ponllyEulaConsent"
+    private let ponllMarkerDraft = "ponllyEmail"
+    private let bruCiuTextureDraft = "ponllyRegisteredAccounts"
+    private let flckinkUrbanDraft = "ponlly@gmail.com"
 
-    var isLoggedIn: Bool { defaults.bool(forKey: loginKey) }
-    var currentEmail: String? { defaults.string(forKey: emailKey) }
-    var isTestAccountActive: Bool {
-        isLoggedIn && currentEmail == testEmail
+    var ponllBlankFacade: Bool { bruCiuShadowDraft.bool(forKey: flckinkOutlineDraft) }
+    var ponllLineSpray: String? { bruCiuShadowDraft.string(forKey: ponllMarkerDraft) }
+    var flckinkPaintShelf: Bool {
+        ponllBlankFacade && ponllLineSpray == flckinkUrbanDraft
     }
     var hasConsent: Bool {
-        get { defaults.bool(forKey: consentKey) }
-        set { defaults.set(newValue, forKey: consentKey) }
+        get { bruCiuShadowDraft.bool(forKey: aerErstStencilDraft) }
+        set { bruCiuShadowDraft.set(newValue, forKey: aerErstStencilDraft) }
     }
 
-    func login(email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func ponllRattlebruCiuFadeSpray(bruCiuPressureFlow: String, flckinkFanSpray: String, aerErstDotSpray: @escaping (Bool, String?) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
-            guard !email.trimmingCharacters(in: .whitespaces).isEmpty else {
-                completion(false, "Email is required")
+            guard !bruCiuPressureFlow.trimmingCharacters(in: .whitespaces).isEmpty else {
+                aerErstDotSpray(false, "Email is required")
                 return
             }
-            guard !password.isEmpty else {
-                completion(false, "Password is required")
+            guard !flckinkFanSpray.isEmpty else {
+                aerErstDotSpray(false, "Password is required")
                 return
             }
-            if email == self.testEmail, password == "555666" {
-                self.defaults.set(true, forKey: self.loginKey)
-                self.defaults.set(email, forKey: self.emailKey)
-                PonllyDataCenter.resetStoredProfileFields()
-                completion(true, nil)
-            } else if self.registeredAccounts[email] == nil {
-                completion(false, "Account not found")
-            } else if self.registeredAccounts[email] != password {
-                completion(false, "Wrong password")
+            if bruCiuPressureFlow == self.flckinkUrbanDraft, flckinkFanSpray == "555666" {
+                self.bruCiuShadowDraft.set(true, forKey: self.flckinkOutlineDraft)
+                self.bruCiuShadowDraft.set(bruCiuPressureFlow, forKey: self.ponllMarkerDraft)
+                PonllyponllTornEdge.aerErstSteelGateields()
+                aerErstDotSpray(true, nil)
+            } else if self.aerErstSketchDraft[bruCiuPressureFlow] == nil {
+                aerErstDotSpray(false, "Account not found")
+            } else if self.aerErstSketchDraft[bruCiuPressureFlow] != flckinkFanSpray {
+                aerErstDotSpray(false, "Wrong password")
             } else {
-                self.defaults.set(true, forKey: self.loginKey)
-                self.defaults.set(email, forKey: self.emailKey)
-                PonllyDataCenter.resetFreshAccountProfile()
-                completion(true, nil)
+                self.bruCiuShadowDraft.set(true, forKey: self.flckinkOutlineDraft)
+                self.bruCiuShadowDraft.set(bruCiuPressureFlow, forKey: self.ponllMarkerDraft)
+                PonllyponllTornEdge.resetflckinkWoodPanelProfile()
+                aerErstDotSpray(true, nil)
             }
         }
     }
 
-    func createAccount(email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func flckinkShadowSpray(aerErstStencilCut: String, ponllStencilSheet: String, bruCiuMaskingTape: @escaping (Bool, String?) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
-            let cleanedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
-            if let message = self.validateNewAccount(email: cleanedEmail, password: password) {
-                completion(false, message)
+            let ponllChromeDraft = aerErstStencilCut.trimmingCharacters(in: .whitespacesAndNewlines)
+            if let bruCiuNeonDraft = self.flckinkEdgeMask(aerErstLayerMask: ponllChromeDraft, ponllPaperCut: ponllStencilSheet) {
+                bruCiuMaskingTape(false, bruCiuNeonDraft)
                 return
             }
-            var accounts = self.registeredAccounts
-            accounts[cleanedEmail] = password
-            self.defaults.set(accounts, forKey: self.registeredAccountsKey)
-            self.defaults.set(true, forKey: self.loginKey)
-            self.defaults.set(cleanedEmail, forKey: self.emailKey)
-            PonllyDataCenter.resetFreshAccountProfile()
-            completion(true, nil)
+            var flckinkPasteDraft = self.aerErstSketchDraft
+            flckinkPasteDraft[ponllChromeDraft] = ponllStencilSheet
+            self.bruCiuShadowDraft.set(flckinkPasteDraft, forKey: self.bruCiuTextureDraft)
+            self.bruCiuShadowDraft.set(true, forKey: self.flckinkOutlineDraft)
+            self.bruCiuShadowDraft.set(ponllChromeDraft, forKey: self.ponllMarkerDraft)
+            PonllyponllTornEdge.resetflckinkWoodPanelProfile()
+            bruCiuMaskingTape(true, nil)
         }
     }
 
-    func validateNewAccount(email: String, password: String) -> String? {
-        let cleanedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard isValidEmail(cleanedEmail) else {
+    func flckinkEdgeMask(aerErstLayerMask: String, ponllPaperCut: String) -> String? {
+        let aerErstDripDraft = aerErstLayerMask.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard ponllGraffitiSketch(aerErstDripDraft) else {
             return "Enter a valid email"
         }
-        guard password.count >= 6 else {
+        guard ponllPaperCut.count >= 6 else {
             return "Password needs at least 6 characters"
         }
-        guard cleanedEmail != testEmail, registeredAccounts[cleanedEmail] == nil else {
+        guard aerErstDripDraft != flckinkUrbanDraft, aerErstSketchDraft[aerErstDripDraft] == nil else {
             return "Account already exists"
         }
         return nil
     }
 
-    func requireLogin(from controller: UIViewController, completion: @escaping () -> Void) {
-        if isLoggedIn {
-            completion()
+    func bruCiuBladeLine(aerErstSprayShield controller: UIViewController, ponllOversprayGlow: @escaping () -> Void) {
+        if ponllBlankFacade {
+            ponllOversprayGlow()
             return
         }
-        let auth = PflckinkSqueezeMarkerController(completion: completion)
-        let nav = UINavigationController(rootViewController: auth)
-        nav.modalPresentationStyle = .fullScreen
-        controller.present(nav, animated: true)
+        let bruCiuAerosolSketch = PflckinkSqueezeMarkerController(bruCiuMuralBloom: ponllOversprayGlow)
+        let flckinkMuralSketch = UINavigationController(rootViewController: bruCiuAerosolSketch)
+        flckinkMuralSketch.modalPresentationStyle = .fullScreen
+        controller.present(flckinkMuralSketch, animated: true)
     }
 
-    func logout() {
-        defaults.set(false, forKey: loginKey)
+    func bruCiuPasteBrush() {
+        bruCiuShadowDraft.set(false, forKey: flckinkOutlineDraft)
     }
 
-    func deleteCurrentAccount() {
-        defaults.set(false, forKey: loginKey)
-        defaults.removeObject(forKey: emailKey)
+    func flckinkRollerPaste() {
+        bruCiuShadowDraft.set(false, forKey: flckinkOutlineDraft)
+        bruCiuShadowDraft.removeObject(forKey: ponllMarkerDraft)
     }
 
-    private var registeredAccounts: [String: String] {
-        defaults.dictionary(forKey: registeredAccountsKey) as? [String: String] ?? [:]
+    private var aerErstSketchDraft: [String: String] {
+        bruCiuShadowDraft.dictionary(forKey: bruCiuTextureDraft) as? [String: String] ?? [:]
     }
 
-    private func isValidEmail(_ email: String) -> Bool {
-        let pattern = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
-        return email.range(of: pattern, options: .regularExpression) != nil
+    private func ponllGraffitiSketch(_ bruCiuLetterSketch: String) -> Bool {
+        let flckinkPaintSketch = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
+        return bruCiuLetterSketch.range(of: flckinkPaintSketch, options: .regularExpression) != nil
     }
 }

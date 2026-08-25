@@ -1,43 +1,43 @@
 import UIKit
 
 final class PonllMarkerLabController: UIViewController {
-    private enum AuthStep {
-        case landing
-        case login
-        case create
+    private enum bruCiuPaintSignal {
+        case ponllWallQuest
+        case bruCiuAerosolCue
+        case flckinkMuralSeed
     }
 
-    private let completion: () -> Void
-    private let scrollView = UIScrollView()
-    private let contentView = UIView()
-    private let backgroundImageView = UIImageView(image: UIImage(named: "wePPonllaylanding"))
-    private let headerBackButton = UIButton(type: .system)
-    private let headerTitleLabel = UILabel()
-    private let heroView = UIView()
-    private let loginButton = UIButton(type: .system)
-    private let createButton = UIButton(type: .system)
-    private let agreeButton = UIButton(type: .system)
-    private let agreementView = UIView()
-    private let formStack = UIStackView()
-    private let formBrandRow = UIStackView()
-    private let formHeadlineLabel = UILabel()
-    private let formSubtitleLabel = UILabel()
-    private let emailField = UITextField()
-    private let passwordField = UITextField()
-    private let passwordEyeButton = UIButton(type: .system)
-    private let errorLabel = UILabel()
-    private let submitButton = PonllyNeonButton(title: "Login")
-    private var submitButtonBottomConstraint: NSLayoutConstraint?
-    private var step: AuthStep = .landing
-    private var agreed = FlckinkMatteFinish.shared.hasConsent {
+    private let aerErstInkSpark: () -> Void
+    private let ponllStencilMood = UIScrollView()
+    private let bruCiuMarkerPath = UIView()
+    private let flckinkChromeArc = UIImageView(image: UIImage(named: "wePPonllaylanding"))
+    private let aerErstNeonBend = UIButton(type: .system)
+    private let ponllTextureKick = UILabel()
+    private let bruCiuSketchLean = UIView()
+    private let flckinkPaintTwist = UIButton(type: .system)
+    private let aerErstInkWeave = UIButton(type: .system)
+    private let ponllWallDepth = UIButton(type: .system)
+    private let bruCiuAerosolGlow = UIView()
+    private let flckinkMuralGrit = UIStackView()
+    private let aerErstStencilNoise = UIStackView()
+    private let ponllMarkerTexture = UILabel()
+    private let bruCiuChromeContrast = UILabel()
+    private let flckinkNeonBalance = UITextField()
+    private let aerErstTextureRhythm = UITextField()
+    private let ponllSketchMotion = UIButton(type: .system)
+    private let bruCiuPaintCascade = UILabel()
+    private let flckinkInkRipple = PonllyNeonButton("Login")
+    private var aerErstWallSurge: NSLayoutConstraint?
+    private var ponllAerosolBurst: bruCiuPaintSignal = .ponllWallQuest
+    private var bruCiuMuralBloom = FlckinkMatteFinish.shared.hasConsent {
         didSet {
-            FlckinkMatteFinish.shared.hasConsent = agreed
-            refreshAgreementUI()
+            FlckinkMatteFinish.shared.hasConsent = bruCiuMuralBloom
+            aerErstMarkerFlash()
         }
     }
 
-    init(completion: @escaping () -> Void) {
-        self.completion = completion
+    init(aerErstInkSpark: @escaping () -> Void) {
+        self.aerErstInkSpark = aerErstInkSpark
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -50,505 +50,505 @@ final class PonllMarkerLabController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setupUI()
-        refreshAgreementUI()
-        showLanding()
+        flckinkStencilFlicker()
+        aerErstMarkerFlash()
+        ponllChromeFuse()
         if !FlckinkMatteFinish.shared.hasConsent {
-            presentEula()
+            bruCiuNeonTrace()
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(aerErstNeonTexture(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ponllSketchContrast(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    private func setupUI() {
-        backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.frame = UIScreen.main.bounds
-        view.addSubview(backgroundImageView)
+    private func flckinkStencilFlicker() {
+        flckinkChromeArc.contentMode = .scaleAspectFill
+        flckinkChromeArc.frame = UIScreen.main.bounds
+        view.addSubview(flckinkChromeArc)
         
       
 
-        scrollView.keyboardDismissMode = .onDrag
-        scrollView.alwaysBounceVertical = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(contentView)
+        ponllStencilMood.keyboardDismissMode = .onDrag
+        ponllStencilMood.alwaysBounceVertical = true
+        ponllStencilMood.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllStencilMood)
+        bruCiuMarkerPath.translatesAutoresizingMaskIntoConstraints = false
+        ponllStencilMood.addSubview(bruCiuMarkerPath)
 
-        configureHeader()
-        contentView.addSubview(headerBackButton)
-        contentView.addSubview(headerTitleLabel)
+        flckinkTextureTrail()
+        bruCiuMarkerPath.addSubview(aerErstNeonBend)
+        bruCiuMarkerPath.addSubview(ponllTextureKick)
 
-        setupHero()
-        contentView.addSubview(heroView)
+        aerErstSketchVeil()
+        bruCiuMarkerPath.addSubview(bruCiuSketchLean)
 
-        configurePrimaryButton(loginButton, title: "Login with Email", symbol: "envelope.fill")
-        loginButton.addTarget(self, action: #selector(loginChoiceTapped), for: .touchUpInside)
-        contentView.addSubview(loginButton)
+        bruCiuColorFade(flckinkPaintTwist, nozzleCraft: "Login with Email", symbol: "envelope.fill")
+        flckinkPaintTwist.addTarget(self, action: #selector(ponllInkLean), for: .touchUpInside)
+        bruCiuMarkerPath.addSubview(flckinkPaintTwist)
 
-        configureCreateButton()
-        createButton.addTarget(self, action: #selector(createChoiceTapped), for: .touchUpInside)
-        contentView.addSubview(createButton)
+        aerErstAerosolQuest()
+        aerErstInkWeave.addTarget(self, action: #selector(bruCiuWallTwist), for: .touchUpInside)
+        bruCiuMarkerPath.addSubview(aerErstInkWeave)
 
-        setupAgreementRow()
-        contentView.addSubview(agreementView)
+        ponllMuralCue()
+        bruCiuMarkerPath.addSubview(bruCiuAerosolGlow)
 
-        setupFormStack()
-        contentView.addSubview(formStack)
-        contentView.addSubview(submitButton)
-        submitButtonBottomConstraint = submitButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -22)
+        ponllPaintAura()
+        bruCiuMarkerPath.addSubview(flckinkMuralGrit)
+        bruCiuMarkerPath.addSubview(flckinkInkRipple)
+        aerErstWallSurge = flckinkInkRipple.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -22)
 
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor),
-            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-            contentView.heightAnchor.constraint(greaterThanOrEqualTo: scrollView.frameLayoutGuide.heightAnchor),
+            ponllStencilMood.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            ponllStencilMood.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ponllStencilMood.topAnchor.constraint(equalTo: view.topAnchor),
+            ponllStencilMood.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            bruCiuMarkerPath.leadingAnchor.constraint(equalTo: ponllStencilMood.frameLayoutGuide.leadingAnchor),
+            bruCiuMarkerPath.trailingAnchor.constraint(equalTo: ponllStencilMood.frameLayoutGuide.trailingAnchor),
+            bruCiuMarkerPath.topAnchor.constraint(equalTo: ponllStencilMood.contentLayoutGuide.topAnchor),
+            bruCiuMarkerPath.bottomAnchor.constraint(equalTo: ponllStencilMood.contentLayoutGuide.bottomAnchor),
+            bruCiuMarkerPath.heightAnchor.constraint(greaterThanOrEqualTo: ponllStencilMood.frameLayoutGuide.heightAnchor),
 
-            headerBackButton.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            headerBackButton.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 16),
-            headerBackButton.widthAnchor.constraint(equalToConstant: 40),
-            headerBackButton.heightAnchor.constraint(equalToConstant: 40),
-            headerTitleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            headerTitleLabel.centerYAnchor.constraint(equalTo: headerBackButton.centerYAnchor),
+            aerErstNeonBend.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            aerErstNeonBend.topAnchor.constraint(equalTo: bruCiuMarkerPath.safeAreaLayoutGuide.topAnchor, constant: 16),
+            aerErstNeonBend.widthAnchor.constraint(equalToConstant: 40),
+            aerErstNeonBend.heightAnchor.constraint(equalToConstant: 40),
+            ponllTextureKick.centerXAnchor.constraint(equalTo: bruCiuMarkerPath.centerXAnchor),
+            ponllTextureKick.centerYAnchor.constraint(equalTo: aerErstNeonBend.centerYAnchor),
 
-            heroView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            heroView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            heroView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 40),
-            heroView.heightAnchor.constraint(equalToConstant: 280),
+            bruCiuSketchLean.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.leadingAnchor, constant: 24),
+            bruCiuSketchLean.trailingAnchor.constraint(equalTo: bruCiuMarkerPath.trailingAnchor, constant: -24),
+            bruCiuSketchLean.topAnchor.constraint(equalTo: bruCiuMarkerPath.safeAreaLayoutGuide.topAnchor, constant: 40),
+            bruCiuSketchLean.heightAnchor.constraint(equalToConstant: 280),
 
-            loginButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            loginButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            loginButton.bottomAnchor.constraint(equalTo: createButton.topAnchor, constant: -16),
-            loginButton.heightAnchor.constraint(equalToConstant: 62),
-            createButton.leadingAnchor.constraint(equalTo: loginButton.leadingAnchor),
-            createButton.trailingAnchor.constraint(equalTo: loginButton.trailingAnchor),
-            createButton.bottomAnchor.constraint(equalTo: agreementView.topAnchor, constant: -16),
-            createButton.heightAnchor.constraint(equalToConstant: 60),
-            agreementView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
-            agreementView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-            agreementView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8),
+            flckinkPaintTwist.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.leadingAnchor, constant: 24),
+            flckinkPaintTwist.trailingAnchor.constraint(equalTo: bruCiuMarkerPath.trailingAnchor, constant: -24),
+            flckinkPaintTwist.bottomAnchor.constraint(equalTo: aerErstInkWeave.topAnchor, constant: -16),
+            flckinkPaintTwist.heightAnchor.constraint(equalToConstant: 62),
+            aerErstInkWeave.leadingAnchor.constraint(equalTo: flckinkPaintTwist.leadingAnchor),
+            aerErstInkWeave.trailingAnchor.constraint(equalTo: flckinkPaintTwist.trailingAnchor),
+            aerErstInkWeave.bottomAnchor.constraint(equalTo: bruCiuAerosolGlow.topAnchor, constant: -16),
+            aerErstInkWeave.heightAnchor.constraint(equalToConstant: 60),
+            bruCiuAerosolGlow.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.leadingAnchor, constant: 30),
+            bruCiuAerosolGlow.trailingAnchor.constraint(equalTo: bruCiuMarkerPath.trailingAnchor, constant: -30),
+            bruCiuAerosolGlow.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8),
 
-            formStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            formStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            formStack.topAnchor.constraint(equalTo: headerBackButton.bottomAnchor, constant: 40),
-            formStack.bottomAnchor.constraint(lessThanOrEqualTo: submitButton.topAnchor, constant: -20),
-            submitButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            submitButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            submitButtonBottomConstraint!,
-            submitButton.heightAnchor.constraint(equalToConstant: 62)
+            flckinkMuralGrit.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.leadingAnchor, constant: 24),
+            flckinkMuralGrit.trailingAnchor.constraint(equalTo: bruCiuMarkerPath.trailingAnchor, constant: -24),
+            flckinkMuralGrit.topAnchor.constraint(equalTo: aerErstNeonBend.bottomAnchor, constant: 40),
+            flckinkMuralGrit.bottomAnchor.constraint(lessThanOrEqualTo: flckinkInkRipple.topAnchor, constant: -20),
+            flckinkInkRipple.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.leadingAnchor, constant: 24),
+            flckinkInkRipple.trailingAnchor.constraint(equalTo: bruCiuMarkerPath.trailingAnchor, constant: -24),
+            aerErstWallSurge!,
+            flckinkInkRipple.heightAnchor.constraint(equalToConstant: 62)
         ])
     }
 
-    private func configureHeader() {
-        headerBackButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        headerBackButton.tintColor = .white
-        headerBackButton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.78)
-        headerBackButton.layer.cornerRadius = 14
-        headerBackButton.layer.borderWidth = 1
-        headerBackButton.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
-        headerBackButton.translatesAutoresizingMaskIntoConstraints = false
-        headerBackButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
+    private func flckinkTextureTrail() {
+        aerErstNeonBend.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        aerErstNeonBend.tintColor = .white
+        aerErstNeonBend.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.78)
+        aerErstNeonBend.layer.cornerRadius = 14
+        aerErstNeonBend.layer.borderWidth = 1
+        aerErstNeonBend.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
+        aerErstNeonBend.translatesAutoresizingMaskIntoConstraints = false
+        aerErstNeonBend.addTarget(self, action: #selector(flckinkSketchBend), for: .touchUpInside)
 
-        headerTitleLabel.textColor = .white
-        headerTitleLabel.font = PonllyFonts.display(size: 16)
-        headerTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        ponllTextureKick.textColor = .white
+        ponllTextureKick.font = PonllyFonts.muralForgepon(neonLab: 16)
+        ponllTextureKick.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    private func setupHero() {
-        heroView.translatesAutoresizingMaskIntoConstraints = false
+    private func aerErstSketchVeil() {
+        bruCiuSketchLean.translatesAutoresizingMaskIntoConstraints = false
 
-        let heroImage = UIImageView(image: UIImage(named: "brand_hero_group"))
-        heroImage.contentMode = .scaleAspectFit
-        heroImage.translatesAutoresizingMaskIntoConstraints = false
-        heroView.addSubview(heroImage)
+        let aerErstCapRack = UIImageView(image: UIImage(named: "brand_hero_group"))
+        aerErstCapRack.contentMode = .scaleAspectFit
+        aerErstCapRack.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuSketchLean.addSubview(aerErstCapRack)
 
         NSLayoutConstraint.activate([
-            heroImage.leadingAnchor.constraint(equalTo: heroView.leadingAnchor),
-            heroImage.trailingAnchor.constraint(equalTo: heroView.trailingAnchor),
-            heroImage.topAnchor.constraint(equalTo: heroView.topAnchor),
-            heroImage.bottomAnchor.constraint(equalTo: heroView.bottomAnchor)
+            aerErstCapRack.leadingAnchor.constraint(equalTo: bruCiuSketchLean.leadingAnchor),
+            aerErstCapRack.trailingAnchor.constraint(equalTo: bruCiuSketchLean.trailingAnchor),
+            aerErstCapRack.topAnchor.constraint(equalTo: bruCiuSketchLean.topAnchor),
+            aerErstCapRack.bottomAnchor.constraint(equalTo: bruCiuSketchLean.bottomAnchor)
         ])
     }
 
-    private func setupFormStack() {
-        formStack.axis = .vertical
-        formStack.spacing = 12
-        formStack.translatesAutoresizingMaskIntoConstraints = false
-        formStack.isHidden = true
+    private func ponllPaintAura() {
+        flckinkMuralGrit.axis = .vertical
+        flckinkMuralGrit.spacing = 12
+        flckinkMuralGrit.translatesAutoresizingMaskIntoConstraints = false
+        flckinkMuralGrit.isHidden = true
 
-        configureFormBrand()
-        formStack.addArrangedSubview(formBrandRow)
-        formStack.setCustomSpacing(8, after: formBrandRow)
+        bruCiuInkEcho()
+        flckinkMuralGrit.addArrangedSubview(aerErstStencilNoise)
+        flckinkMuralGrit.setCustomSpacing(8, after: aerErstStencilNoise)
 
-        formHeadlineLabel.textColor = .white
-        formHeadlineLabel.font = PonllyFonts.display(size: 28)
-        formHeadlineLabel.numberOfLines = 0
-        formStack.addArrangedSubview(formHeadlineLabel)
+        ponllMarkerTexture.textColor = .white
+        ponllMarkerTexture.font = PonllyFonts.muralForgepon(neonLab: 28)
+        ponllMarkerTexture.numberOfLines = 0
+        flckinkMuralGrit.addArrangedSubview(ponllMarkerTexture)
 
-        formSubtitleLabel.textColor = PonllyPalette.muted
-        formSubtitleLabel.font = PonllyFonts.body(size: 14)
-        formSubtitleLabel.numberOfLines = 0
-        formStack.addArrangedSubview(formSubtitleLabel)
-        formStack.setCustomSpacing(28, after: formSubtitleLabel)
+        bruCiuChromeContrast.textColor = PonllyPalette.muted
+        bruCiuChromeContrast.font = PonllyFonts.utilityBox(blankFacade: 14)
+        bruCiuChromeContrast.numberOfLines = 0
+        flckinkMuralGrit.addArrangedSubview(bruCiuChromeContrast)
+        flckinkMuralGrit.setCustomSpacing(28, after: bruCiuChromeContrast)
 
-        formStack.addArrangedSubview(labeledField(title: "Email", field: emailField))
-        formStack.addArrangedSubview(labeledField(title: "Password", field: passwordField))
+        flckinkMuralGrit.addArrangedSubview(flckinkWallSignal(nozzleCraft: "Email", ponllTunnelWall: flckinkNeonBalance))
+        flckinkMuralGrit.addArrangedSubview(flckinkWallSignal(nozzleCraft: "Password", ponllTunnelWall: aerErstTextureRhythm))
 
-        errorLabel.textColor = PonllyPalette.pink
-        errorLabel.font = PonllyFonts.body(size: 11, weight: .semibold)
-        errorLabel.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.15)
-        errorLabel.layer.cornerRadius = 6
-        errorLabel.clipsToBounds = true
-        errorLabel.isHidden = true
-        errorLabel.translatesAutoresizingMaskIntoConstraints = false
-        formStack.addArrangedSubview(errorLabel)
+        bruCiuPaintCascade.textColor = PonllyPalette.pink
+        bruCiuPaintCascade.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
+        bruCiuPaintCascade.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.15)
+        bruCiuPaintCascade.layer.cornerRadius = 6
+        bruCiuPaintCascade.clipsToBounds = true
+        bruCiuPaintCascade.isHidden = true
+        bruCiuPaintCascade.translatesAutoresizingMaskIntoConstraints = false
+        flckinkMuralGrit.addArrangedSubview(bruCiuPaintCascade)
 
-        submitButton.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
-        submitButton.translatesAutoresizingMaskIntoConstraints = false
-        submitButton.isHidden = true
+        flckinkInkRipple.addTarget(self, action: #selector(flckinkChromeNoise), for: .touchUpInside)
+        flckinkInkRipple.translatesAutoresizingMaskIntoConstraints = false
+        flckinkInkRipple.isHidden = true
 
-        configure(field: emailField, placeholder: "Enter Email")
-        configure(field: passwordField, placeholder: "Password")
-        passwordField.isSecureTextEntry = true
-        passwordEyeButton.setImage(UIImage(systemName: "eye"), for: .normal)
-        passwordEyeButton.tintColor = PonllyPalette.muted
-        passwordEyeButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
-        passwordField.rightView = passwordEyeButton
-        passwordField.rightViewMode = .always
+        flckinkGradientFill(aerErstFreightPanel: flckinkNeonBalance, ponllAlleyDoor: "Enter Email")
+        flckinkGradientFill(aerErstFreightPanel: aerErstTextureRhythm, ponllAlleyDoor: "Password")
+        aerErstTextureRhythm.isSecureTextEntry = true
+        ponllSketchMotion.setImage(UIImage(systemName: "eye"), for: .normal)
+        ponllSketchMotion.tintColor = PonllyPalette.muted
+        ponllSketchMotion.addTarget(self, action: #selector(ponllStencilGlow), for: .touchUpInside)
+        aerErstTextureRhythm.rightView = ponllSketchMotion
+        aerErstTextureRhythm.rightViewMode = .always
 
         NSLayoutConstraint.activate([
-            formBrandRow.heightAnchor.constraint(equalToConstant: 60),
-            emailField.heightAnchor.constraint(equalToConstant: 56),
-            passwordField.heightAnchor.constraint(equalToConstant: 56),
-            errorLabel.heightAnchor.constraint(equalToConstant: 26)
+            aerErstStencilNoise.heightAnchor.constraint(equalToConstant: 60),
+            flckinkNeonBalance.heightAnchor.constraint(equalToConstant: 56),
+            aerErstTextureRhythm.heightAnchor.constraint(equalToConstant: 56),
+            bruCiuPaintCascade.heightAnchor.constraint(equalToConstant: 26)
         ])
     }
 
-    private func configureFormBrand() {
-        formBrandRow.axis = .horizontal
-        formBrandRow.alignment = .center
-        formBrandRow.spacing = 0
-        formBrandRow.translatesAutoresizingMaskIntoConstraints = false
+    private func bruCiuInkEcho() {
+        aerErstStencilNoise.axis = .horizontal
+        aerErstStencilNoise.alignment = .center
+        aerErstStencilNoise.spacing = 0
+        aerErstStencilNoise.translatesAutoresizingMaskIntoConstraints = false
 
-        let brandMark = UIImageView(image: UIImage(named: "brand_form_mark"))
-        brandMark.contentMode = .scaleAspectFit
-        brandMark.translatesAutoresizingMaskIntoConstraints = false
-        formBrandRow.addSubview(brandMark)
+        let aerErstConcreteColumn = UIImageView(image: UIImage(named: "brand_form_mark"))
+        aerErstConcreteColumn.contentMode = .scaleAspectFit
+        aerErstConcreteColumn.translatesAutoresizingMaskIntoConstraints = false
+        aerErstStencilNoise.addSubview(aerErstConcreteColumn)
 
         NSLayoutConstraint.activate([
-            brandMark.leadingAnchor.constraint(equalTo: formBrandRow.leadingAnchor),
-            brandMark.topAnchor.constraint(equalTo: formBrandRow.topAnchor),
-            brandMark.bottomAnchor.constraint(equalTo: formBrandRow.bottomAnchor),
-            brandMark.widthAnchor.constraint(equalToConstant: 160),
-            brandMark.heightAnchor.constraint(equalToConstant: 60)
+            aerErstConcreteColumn.leadingAnchor.constraint(equalTo: aerErstStencilNoise.leadingAnchor),
+            aerErstConcreteColumn.topAnchor.constraint(equalTo: aerErstStencilNoise.topAnchor),
+            aerErstConcreteColumn.bottomAnchor.constraint(equalTo: aerErstStencilNoise.bottomAnchor),
+            aerErstConcreteColumn.widthAnchor.constraint(equalToConstant: 160),
+            aerErstConcreteColumn.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 
-    private func labeledField(title: String, field: UITextField) -> UIView {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 7
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        let label = UILabel()
-        label.text = title
-        label.textColor = PonllyPalette.muted
-        label.font = PonllyFonts.mono(size: 10)
-        stack.addArrangedSubview(label)
-        stack.addArrangedSubview(field)
-        return stack
+    private func flckinkWallSignal(nozzleCraft: String, ponllTunnelWall: UITextField) -> UIView {
+        let aerErstPaintCloud = UIStackView()
+        aerErstPaintCloud.axis = .vertical
+        aerErstPaintCloud.spacing = 7
+        aerErstPaintCloud.translatesAutoresizingMaskIntoConstraints = false
+        let flckinkUnderpassBeam = UILabel()
+        flckinkUnderpassBeam.text = title
+        flckinkUnderpassBeam.textColor = PonllyPalette.muted
+        flckinkUnderpassBeam.font = PonllyFonts.steelGate(rollingShutter: 10)
+        aerErstPaintCloud.addArrangedSubview(flckinkUnderpassBeam)
+        aerErstPaintCloud.addArrangedSubview(ponllTunnelWall)
+        return aerErstPaintCloud
     }
 
-    private func configure(field: UITextField, placeholder: String) {
-        field.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: PonllyPalette.muted])
-        field.textColor = .white
-        field.font = PonllyFonts.body(size: 15)
-        field.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        field.layer.cornerRadius = 14
-        field.layer.borderWidth = 1.5
-        field.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
-        field.leftViewMode = .always
-        field.addTarget(self, action: #selector(fieldDidChange), for: .editingChanged)
+    private func flckinkGradientFill(aerErstFreightPanel: UITextField, ponllAlleyDoor: String) {
+        aerErstFreightPanel.attributedPlaceholder = NSAttributedString(string: ponllAlleyDoor, attributes: [.foregroundColor: PonllyPalette.muted])
+        aerErstFreightPanel.textColor = .white
+        aerErstFreightPanel.font = PonllyFonts.utilityBox(blankFacade: 15)
+        aerErstFreightPanel.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        aerErstFreightPanel.layer.cornerRadius = 14
+        aerErstFreightPanel.layer.borderWidth = 1.5
+        aerErstFreightPanel.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
+        aerErstFreightPanel.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
+        aerErstFreightPanel.leftViewMode = .always
+        aerErstFreightPanel.addTarget(self, action: #selector(bruCiuMarkerGrit), for: .editingChanged)
     }
 
-    private func configurePrimaryButton(_ button: UIButton, title: String, symbol: String) {
-        button.setTitle("  \(title)", for: .normal)
-        button.setImage(UIImage(systemName: symbol), for: .normal)
-        button.tintColor = .white
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = PonllyFonts.display(size: 14)
-        button.backgroundColor = PonllyPalette.pink
-        button.layer.cornerRadius = 18
-        button.layer.shadowColor = PonllyPalette.pink.cgColor
-        button.layer.shadowOpacity = 0.42
-        button.layer.shadowRadius = 18
-        button.layer.shadowOffset = CGSize(width: 0, height: 8)
-        button.translatesAutoresizingMaskIntoConstraints = false
+    private func bruCiuColorFade(_ flckinkShutterPanel: UIButton, nozzleCraft: String, symbol: String) {
+        flckinkShutterPanel.setTitle("  \(title)", for: .normal)
+        flckinkShutterPanel.setImage(UIImage(systemName: symbol), for: .normal)
+        flckinkShutterPanel.tintColor = .white
+        flckinkShutterPanel.setTitleColor(.white, for: .normal)
+        flckinkShutterPanel.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
+        flckinkShutterPanel.backgroundColor = PonllyPalette.pink
+        flckinkShutterPanel.layer.cornerRadius = 18
+        flckinkShutterPanel.layer.shadowColor = PonllyPalette.pink.cgColor
+        flckinkShutterPanel.layer.shadowOpacity = 0.42
+        flckinkShutterPanel.layer.shadowRadius = 18
+        flckinkShutterPanel.layer.shadowOffset = CGSize(width: 0, height: 8)
+        flckinkShutterPanel.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    private func configureCreateButton() {
-        createButton.setTitle("Create An Account", for: .normal)
-        createButton.setImage(UIImage(systemName: "person.crop.circle.badge.plus"), for: .normal)
-        createButton.tintColor = .white
-        createButton.setTitleColor(.white, for: .normal)
-        createButton.titleLabel?.font = PonllyFonts.body(size: 14, weight: .semibold)
-        createButton.backgroundColor = UIColor.black.withAlphaComponent(0.24)
-        createButton.layer.cornerRadius = 18
-        createButton.layer.borderWidth = 2
-        createButton.layer.borderColor = PonllyPalette.cyan.cgColor
-        createButton.layer.shadowColor = PonllyPalette.cyan.cgColor
-        createButton.layer.shadowOpacity = 0.26
-        createButton.layer.shadowRadius = 14
-        createButton.translatesAutoresizingMaskIntoConstraints = false
+    private func aerErstAerosolQuest() {
+        aerErstInkWeave.setTitle("Create An Account", for: .normal)
+        aerErstInkWeave.setImage(UIImage(systemName: "person.crop.circle.badge.plus"), for: .normal)
+        aerErstInkWeave.tintColor = .white
+        aerErstInkWeave.setTitleColor(.white, for: .normal)
+        aerErstInkWeave.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
+        aerErstInkWeave.backgroundColor = UIColor.black.withAlphaComponent(0.24)
+        aerErstInkWeave.layer.cornerRadius = 18
+        aerErstInkWeave.layer.borderWidth = 2
+        aerErstInkWeave.layer.borderColor = PonllyPalette.cyan.cgColor
+        aerErstInkWeave.layer.shadowColor = PonllyPalette.cyan.cgColor
+        aerErstInkWeave.layer.shadowOpacity = 0.26
+        aerErstInkWeave.layer.shadowRadius = 14
+        aerErstInkWeave.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    private func setupAgreementRow() {
-        agreementView.translatesAutoresizingMaskIntoConstraints = false
-        agreeButton.setImage(UIImage(systemName: "square"), for: .normal)
-        agreeButton.tintColor = PonllyPalette.cyan
-        agreeButton.translatesAutoresizingMaskIntoConstraints = false
-        agreeButton.addTarget(self, action: #selector(toggleAgree), for: .touchUpInside)
-        agreementView.addSubview(agreeButton)
+    private func ponllMuralCue() {
+        bruCiuAerosolGlow.translatesAutoresizingMaskIntoConstraints = false
+        ponllWallDepth.setImage(UIImage(systemName: "square"), for: .normal)
+        ponllWallDepth.tintColor = PonllyPalette.cyan
+        ponllWallDepth.translatesAutoresizingMaskIntoConstraints = false
+        ponllWallDepth.addTarget(self, action: #selector(aerErstPaintKick), for: .touchUpInside)
+        bruCiuAerosolGlow.addSubview(ponllWallDepth)
 
-        let prefix = UILabel()
-        prefix.text = "I agree to"
-        prefix.textColor = PonllyPalette.muted
-        prefix.font = PonllyFonts.body(size: 12)
-        prefix.translatesAutoresizingMaskIntoConstraints = false
-        agreementView.addSubview(prefix)
+        let ponllMetalPanelPollm = UILabel()
+        ponllMetalPanelPollm.text = "I agree to"
+        ponllMetalPanelPollm.textColor = PonllyPalette.muted
+        ponllMetalPanelPollm.font = PonllyFonts.utilityBox(blankFacade: 12)
+        ponllMetalPanelPollm.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuAerosolGlow.addSubview(ponllMetalPanelPollm)
 
-        let terms = agreementLink("User Agreement", action: #selector(userAgreementTapped))
-        let middle = UILabel()
-        middle.text = "and"
-        middle.textColor = PonllyPalette.muted
-        middle.font = PonllyFonts.body(size: 12)
-        middle.translatesAutoresizingMaskIntoConstraints = false
-        let eula = agreementLink("EULA Agreement", action: #selector(eulaTapped))
-        agreementView.addSubview(terms)
-        agreementView.addSubview(middle)
-        agreementView.addSubview(eula)
+        let bruCiuGarageDoorPollm = bruCiuStencilSeed("User Agreement", action: #selector(flckinkAerosolWeave))
+        let ponllBlankFacade = UILabel()
+        ponllBlankFacade.text = "and"
+        ponllBlankFacade.textColor = PonllyPalette.muted
+        ponllBlankFacade.font = PonllyFonts.utilityBox(blankFacade: 12)
+        ponllBlankFacade.translatesAutoresizingMaskIntoConstraints = false
+        let bruCiuNightWall = bruCiuStencilSeed("EULA Agreement", action: #selector(aerErstMuralDepth))
+        bruCiuAerosolGlow.addSubview(bruCiuGarageDoorPollm)
+        bruCiuAerosolGlow.addSubview(ponllBlankFacade)
+        bruCiuAerosolGlow.addSubview(bruCiuNightWall)
 
         NSLayoutConstraint.activate([
-            agreementView.heightAnchor.constraint(equalToConstant: 42),
-            agreeButton.leadingAnchor.constraint(equalTo: agreementView.leadingAnchor),
-            agreeButton.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
-            agreeButton.widthAnchor.constraint(equalToConstant: 30),
-            agreeButton.heightAnchor.constraint(equalToConstant: 30),
-            prefix.leadingAnchor.constraint(equalTo: agreeButton.trailingAnchor, constant: 12),
-            prefix.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
-            terms.leadingAnchor.constraint(equalTo: prefix.trailingAnchor, constant: 4),
-            terms.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
-            middle.leadingAnchor.constraint(equalTo: terms.trailingAnchor, constant: 4),
-            middle.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
-            eula.leadingAnchor.constraint(equalTo: middle.trailingAnchor, constant: 4),
-            eula.centerYAnchor.constraint(equalTo: agreementView.centerYAnchor),
-            eula.trailingAnchor.constraint(lessThanOrEqualTo: agreementView.trailingAnchor)
+            bruCiuAerosolGlow.heightAnchor.constraint(equalToConstant: 42),
+            ponllWallDepth.leadingAnchor.constraint(equalTo: bruCiuAerosolGlow.leadingAnchor),
+            ponllWallDepth.centerYAnchor.constraint(equalTo: bruCiuAerosolGlow.centerYAnchor),
+            ponllWallDepth.widthAnchor.constraint(equalToConstant: 30),
+            ponllWallDepth.heightAnchor.constraint(equalToConstant: 30),
+            ponllMetalPanelPollm.leadingAnchor.constraint(equalTo: ponllWallDepth.trailingAnchor, constant: 12),
+            ponllMetalPanelPollm.centerYAnchor.constraint(equalTo: bruCiuAerosolGlow.centerYAnchor),
+            bruCiuGarageDoorPollm.leadingAnchor.constraint(equalTo: ponllMetalPanelPollm.trailingAnchor, constant: 4),
+            bruCiuGarageDoorPollm.centerYAnchor.constraint(equalTo: bruCiuAerosolGlow.centerYAnchor),
+            ponllBlankFacade.leadingAnchor.constraint(equalTo: bruCiuGarageDoorPollm.trailingAnchor, constant: 4),
+            ponllBlankFacade.centerYAnchor.constraint(equalTo: bruCiuAerosolGlow.centerYAnchor),
+            bruCiuNightWall.leadingAnchor.constraint(equalTo: ponllBlankFacade.trailingAnchor, constant: 4),
+            bruCiuNightWall.centerYAnchor.constraint(equalTo: bruCiuAerosolGlow.centerYAnchor),
+            bruCiuNightWall.trailingAnchor.constraint(lessThanOrEqualTo: bruCiuAerosolGlow.trailingAnchor)
         ])
     }
 
-    private func agreementLink(_ title: String, action: Selector) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(PonllyPalette.cyan, for: .normal)
-        button.titleLabel?.font = PonllyFonts.body(size: 12, weight: .bold)
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.titleLabel?.minimumScaleFactor = 0.82
-        button.addTarget(self, action: action, for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+    private func bruCiuStencilSeed(_ nozzleCraft: String, action: Selector) -> UIButton {
+        let ponllNozzleSet = UIButton(type: .system)
+        ponllNozzleSet.setTitle(title, for: .normal)
+        ponllNozzleSet.setTitleColor(PonllyPalette.cyan, for: .normal)
+        ponllNozzleSet.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
+        ponllNozzleSet.titleLabel?.adjustsFontSizeToFitWidth = true
+        ponllNozzleSet.titleLabel?.minimumScaleFactor = 0.82
+        ponllNozzleSet.addTarget(self, action: action, for: .touchUpInside)
+        ponllNozzleSet.translatesAutoresizingMaskIntoConstraints = false
+        return ponllNozzleSet
     }
 
-    private func showLanding() {
-        step = .landing
-        scrollView.isScrollEnabled = false
-        scrollView.alwaysBounceVertical = false
-        headerTitleLabel.text = ""
-        headerBackButton.setImage(UIImage(systemName: "xmark"), for: .normal)
-        heroView.isHidden = false
-        loginButton.isHidden = false
-        createButton.isHidden = false
-        agreementView.isHidden = false
-        formStack.isHidden = true
-        submitButton.isHidden = true
-        clearInlineError()
+    private func ponllChromeFuse() {
+        ponllAerosolBurst = .ponllWallQuest
+        ponllStencilMood.isScrollEnabled = false
+        ponllStencilMood.alwaysBounceVertical = false
+        ponllTextureKick.text = ""
+        aerErstNeonBend.setImage(UIImage(systemName: "xmark"), for: .normal)
+        bruCiuSketchLean.isHidden = false
+        flckinkPaintTwist.isHidden = false
+        aerErstInkWeave.isHidden = false
+        bruCiuAerosolGlow.isHidden = false
+        flckinkMuralGrit.isHidden = true
+        flckinkInkRipple.isHidden = true
+        bruCiuTextureArc()
         view.endEditing(true)
     }
 
-    private func showForm(_ nextStep: AuthStep) {
-        step = nextStep
-        scrollView.isScrollEnabled = true
-        scrollView.alwaysBounceVertical = true
-        headerBackButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        headerTitleLabel.text = nextStep == .login ? "Login" : "Creat Account"
-        heroView.isHidden = true
-        loginButton.isHidden = true
-        createButton.isHidden = true
-        agreementView.isHidden = true
-        formStack.isHidden = false
-        submitButton.isHidden = false
-        formHeadlineLabel.text = nextStep == .login ? "Welcome Back" : "Create Your Account"
-        formSubtitleLabel.text = nextStep == .login ? "Sign in to join the latest graffiti battles and show off your tags." : "Set your access details before building your street art profile."
-        submitButton.setTitle(nextStep == .login ? "Login" : "Next", for: .normal)
-//        if nextStep == .login {
-//            emailField.text = "ponlly@gmail.com"
-//            passwordField.text = "555666"
+    private func flckinkMarkerSpark(_ nextStep: bruCiuPaintSignal) {
+        ponllAerosolBurst = nextStep
+        ponllStencilMood.isScrollEnabled = true
+        ponllStencilMood.alwaysBounceVertical = true
+        aerErstNeonBend.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        ponllTextureKick.text = nextStep == .bruCiuAerosolCue ? "Login" : "Creat Account"
+        bruCiuSketchLean.isHidden = true
+        flckinkPaintTwist.isHidden = true
+        aerErstInkWeave.isHidden = true
+        bruCiuAerosolGlow.isHidden = true
+        flckinkMuralGrit.isHidden = false
+        flckinkInkRipple.isHidden = false
+        ponllMarkerTexture.text = nextStep == .bruCiuAerosolCue ? "Welcome Back" : "Create Your Account"
+        bruCiuChromeContrast.text = nextStep == .bruCiuAerosolCue ? "Sign in to join the latest graffiti battles and show off your tags." : "Set your access details before building your street art profile."
+        flckinkInkRipple.setTitle(nextStep == .bruCiuAerosolCue ? "Login" : "Next", for: .normal)
+//        if nextStep == .bruCiuAerosolCue {
+//            flckinkNeonBalance.text = "ponlly@gmail.com"
+//            aerErstTextureRhythm.text = "555666"
 //        } else {
-//            emailField.text = ""
-//            passwordField.text = ""
+//            flckinkNeonBalance.text = ""
+//            aerErstTextureRhythm.text = ""
 //        }
-        clearInlineError()
-        emailField.becomeFirstResponder()
+        bruCiuTextureArc()
+        flckinkNeonBalance.becomeFirstResponder()
     }
 
-    private func refreshAgreementUI() {
-        agreeButton.setImage(UIImage(systemName: agreed ? "checkmark.square.fill" : "square"), for: .normal)
-        loginButton.alpha = agreed ? 1 : 0.62
-        createButton.alpha = agreed ? 1 : 0.62
+    private func aerErstMarkerFlash() {
+        ponllWallDepth.setImage(UIImage(systemName: bruCiuMuralBloom ? "checkmark.square.fill" : "square"), for: .normal)
+        flckinkPaintTwist.alpha = bruCiuMuralBloom ? 1 : 0.62
+        aerErstInkWeave.alpha = bruCiuMuralBloom ? 1 : 0.62
     }
 
-    private func requireAgreementBeforeNext() -> Bool {
-        guard agreed else {
-            ponllyShowNotice("Please agree before continuing", style: .failure)
+    private func aerErstChromeMood() -> Bool {
+        guard bruCiuMuralBloom else {
+            aerErstSketchRush("Please agree before continuing", bruCiuLetterForm: .ponllWhiteEdge)
             return false
         }
         return true
     }
 
-    private func presentEula() {
+    private func bruCiuNeonTrace() {
         ponllyShowThemeAlert(
             title: "End User License Agreement",
             message: "Ponlly is for lawful street art discussion and creative expression. You must meet the required age in your region, respect other artists, avoid harmful conduct, and use reporting or blocking tools for unsafe behavior. Severe violations may lead to account restrictions and appropriate escalation.",
             actionTitle: "Agree",
-            style: .info,
+            style: .bruCiuSilverSheen,
             showsCancel: true
         ) {
-            self.agreed = true
+            self.bruCiuMuralBloom = true
         }
     }
 
-    private func showInlineError(_ message: String) {
-        errorLabel.text = "  \(message)"
-        errorLabel.isHidden = false
-        passwordField.layer.borderColor = PonllyPalette.pink.cgColor
-        passwordField.layer.shadowColor = PonllyPalette.pink.cgColor
-        passwordField.layer.shadowOpacity = 0.26
-        passwordField.layer.shadowRadius = 10
+    private func ponllNeonPath(_ message: String) {
+        bruCiuPaintCascade.text = "  \(message)"
+        bruCiuPaintCascade.isHidden = false
+        aerErstTextureRhythm.layer.borderColor = PonllyPalette.pink.cgColor
+        aerErstTextureRhythm.layer.shadowColor = PonllyPalette.pink.cgColor
+        aerErstTextureRhythm.layer.shadowOpacity = 0.26
+        aerErstTextureRhythm.layer.shadowRadius = 10
     }
 
-    private func clearInlineError() {
-        errorLabel.isHidden = true
-        [emailField, passwordField].forEach {
+    private func bruCiuTextureArc() {
+        bruCiuPaintCascade.isHidden = true
+        [flckinkNeonBalance, aerErstTextureRhythm].forEach {
             $0.layer.borderColor = PonllyPalette.line.cgColor
             $0.layer.shadowOpacity = 0
         }
     }
 
-    @objc private func backTapped() {
-        if step == .landing {
+    @objc private func flckinkSketchBend() {
+        if ponllAerosolBurst == .ponllWallQuest {
             dismiss(animated: true)
         } else {
-            showLanding()
+            ponllChromeFuse()
         }
     }
 
-    @objc private func toggleAgree() {
-        agreed.toggle()
+    @objc private func aerErstPaintKick() {
+        bruCiuMuralBloom.toggle()
     }
 
-    @objc private func loginChoiceTapped() {
-        guard requireAgreementBeforeNext() else { return }
-        showForm(.login)
+    @objc private func ponllInkLean() {
+        guard aerErstChromeMood() else { return }
+        flckinkMarkerSpark(.bruCiuAerosolCue)
     }
 
-    @objc private func createChoiceTapped() {
-        guard requireAgreementBeforeNext() else { return }
-        showForm(.create)
+    @objc private func bruCiuWallTwist() {
+        guard aerErstChromeMood() else { return }
+        flckinkMarkerSpark(.flckinkMuralSeed)
     }
 
-    @objc private func userAgreementTapped() {
+    @objc private func flckinkAerosolWeave() {
         let doc = SmuralLeanController()
         doc.title = "Terms Of Service"
         navigationController?.pushViewController(doc, animated: true)
     }
 
-    @objc private func eulaTapped() {
+    @objc private func aerErstMuralDepth() {
         let doc = SmuralLeanController()
         doc.title = "EULA Agreement"
         navigationController?.pushViewController(doc, animated: true)
     }
 
-    @objc private func togglePasswordVisibility() {
-        passwordField.isSecureTextEntry.toggle()
-        passwordEyeButton.setImage(UIImage(systemName: passwordField.isSecureTextEntry ? "eye" : "eye.slash"), for: .normal)
+    @objc private func ponllStencilGlow() {
+        aerErstTextureRhythm.isSecureTextEntry.toggle()
+        ponllSketchMotion.setImage(UIImage(systemName: aerErstTextureRhythm.isSecureTextEntry ? "eye" : "eye.slash"), for: .normal)
     }
 
-    @objc private func fieldDidChange() {
-        clearInlineError()
+    @objc private func bruCiuMarkerGrit() {
+        bruCiuTextureArc()
     }
 
-    @objc private func submitTapped() {
-        guard requireAgreementBeforeNext() else { return }
-        let email = emailField.text ?? ""
-        let password = passwordField.text ?? ""
-        if step == .create {
-            if let message = FlckinkMatteFinish.shared.validateNewAccount(email: email, password: password) {
-                showInlineError(message)
+    @objc private func flckinkChromeNoise() {
+        guard aerErstChromeMood() else { return }
+        let bruCiuColorRack = flckinkNeonBalance.text ?? ""
+        let flckinkPaintShelf = aerErstTextureRhythm.text ?? ""
+        if ponllAerosolBurst == .flckinkMuralSeed {
+            if let aerErstCanShake = FlckinkMatteFinish.shared.flckinkEdgeMask(aerErstLayerMask: bruCiuColorRack, ponllPaperCut: flckinkPaintShelf) {
+                ponllNeonPath(aerErstCanShake)
                 return
             }
             view.endEditing(true)
-            submitButton.isEnabled = false
-            submitButton.setTitle("Creating...", for: .normal)
-            FlckinkMatteFinish.shared.createAccount(email: email, password: password) { success, message in
-                self.submitButton.isEnabled = true
-                self.submitButton.setTitle("Next", for: .normal)
-                if success {
-                    let currentUser = PonllyDataCenter.currentUser()
-                    let avatarImage = currentUser.avatarName.flatMap { UIImage(named: $0) }
-                    let done = PonllycyanGlowController(
-                        userName: currentUser.name,
-                        avatar: avatarImage,
-                        completion: self.completion
+            flckinkInkRipple.isEnabled = false
+            flckinkInkRipple.setTitle("Creating...", for: .normal)
+            FlckinkMatteFinish.shared.flckinkShadowSpray(aerErstStencilCut: bruCiuColorRack, ponllStencilSheet: flckinkPaintShelf) { ponllLineSpray, message in
+                self.flckinkInkRipple.isEnabled = true
+                self.flckinkInkRipple.setTitle("Next", for: .normal)
+                if ponllLineSpray {
+                    let ponllRattleSound = PonllyponllTornEdge.ponllBrickFacade()
+                    let bruCiuPressureFlow = ponllRattleSound.brickPalette.flatMap { UIImage(named: $0) }
+                    let flckinkFanSpray = PonllycyanGlowController(
+                        ponllRattleSound.aerosolDream,
+                        bruCiuPressureFlow,
+                        self.aerErstInkSpark
                     )
-                    self.navigationController?.pushViewController(done, animated: true)
+                    self.navigationController?.pushViewController(flckinkFanSpray, animated: true)
                 } else {
-                    self.showInlineError(message ?? "Account could not be created")
+                    self.ponllNeonPath(message ?? "Account could not be created")
                 }
             }
             return
         }
 
-        submitButton.isEnabled = false
-        submitButton.setTitle("Connecting...", for: .normal)
-        FlckinkMatteFinish.shared.login(email: email, password: password) { success, message in
-            self.submitButton.isEnabled = true
-            self.submitButton.setTitle("Login", for: .normal)
-            if success {
-                self.dismiss(animated: true) { self.completion() }
+        flckinkInkRipple.isEnabled = false
+        flckinkInkRipple.setTitle("Connecting...", for: .normal)
+        FlckinkMatteFinish.shared.ponllRattlebruCiuFadeSpray(bruCiuPressureFlow: bruCiuColorRack, flckinkFanSpray: flckinkPaintShelf) { flckinkShadowSpray, message in
+            self.flckinkInkRipple.isEnabled = true
+            self.flckinkInkRipple.setTitle("Login", for: .normal)
+            if flckinkShadowSpray {
+                self.dismiss(animated: true) { self.aerErstInkSpark() }
             } else {
-                self.showInlineError(message ?? "Invalid email or password")
+                self.ponllNeonPath(message ?? "Invalid email or password")
             }
         }
     }
 
-    @objc private func keyboardWillShow(_ note: Notification) {
-        guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        let bottom = max(frame.height - view.safeAreaInsets.bottom, 0) + 18
-        scrollView.contentInset.bottom = bottom
-        scrollView.verticalScrollIndicatorInsets.bottom = bottom
-        submitButtonBottomConstraint?.constant = -bottom
+    @objc private func aerErstNeonTexture(_ ponllColorPrint: Notification) {
+        guard let aerErstAdhesiveLayer = ponllColorPrint.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        let bottom = max(aerErstAdhesiveLayer.height - view.safeAreaInsets.bottom, 0) + 18
+        ponllStencilMood.contentInset.bottom = bottom
+        ponllStencilMood.verticalScrollIndicatorInsets.bottom = bottom
+        aerErstWallSurge?.constant = -bottom
         UIView.animate(withDuration: 0.22) {
             self.view.layoutIfNeeded()
         }
     }
 
-    @objc private func keyboardWillHide(_ note: Notification) {
-        scrollView.contentInset.bottom = 0
-        scrollView.verticalScrollIndicatorInsets.bottom = 0
-        submitButtonBottomConstraint?.constant = -22
+    @objc private func ponllSketchContrast(_ note: Notification) {
+        ponllStencilMood.contentInset.bottom = 0
+        ponllStencilMood.verticalScrollIndicatorInsets.bottom = 0
+        aerErstWallSurge?.constant = -22
         UIView.animate(withDuration: 0.22) {
             self.view.layoutIfNeeded()
         }
