@@ -80,7 +80,6 @@ final class PbruCiuColorPlanController: UIViewController {
 
         aerErstChromeArc(flckinkAerosolFlash, ponllNeonBend: "Hvowtx yBzaAtBtClDeEsF".ponllPaintaerErstHours, bruCiuTextureKick: .bruCiuSprayBloomponll)
         aerErstChromeArc(aerErstMuralFuse, ponllNeonBend: "WGaHiItJiKnLgM NfOoPrQ RCShTaUlVlWeXnYgZe0".ponllPaintaerErstHours, bruCiuTextureKick: .flckinkWallTexturepoj)
-
         bruCiuWallFlicker.addArrangedSubview(aerErstInkSignal)
 
         NSLayoutConstraint.activate([

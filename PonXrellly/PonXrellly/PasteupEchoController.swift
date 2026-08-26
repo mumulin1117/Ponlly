@@ -115,6 +115,8 @@ final class PasteupEchoController: UIViewController {
 
         bruCiuChromeMotion.backgroundColor = PonllyPalette.pink
         bruCiuChromeMotion.layer.cornerRadius = 1.5
+        aerErstAerosolFuse.layer.zPosition = 30
+        bruCiuChromeMotion.layer.zPosition = 31
         bruCiuChromeMotion.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuChromeMotion)
 
@@ -127,6 +129,8 @@ final class PasteupEchoController: UIViewController {
             bruCiuChromeMotion.topAnchor.constraint(equalTo: ponllWallRhythm.bottomAnchor, constant: 6),
             ponllPaintSurge!
         ])
+        view.bringSubviewToFront(aerErstAerosolFuse)
+        view.bringSubviewToFront(bruCiuChromeMotion)
     }
 
     private func ponllInkPath(_ bruCiuPaintSeed: UIButton, bruCiuMuralArc: String, flckinkStencilBend: Selector) {

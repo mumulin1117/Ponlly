@@ -33,6 +33,14 @@ final class PonllystencilBloomController: UIViewController {
         view.addSubview(ponllBackgroundWash)
         ponllBackgroundWash.woodPanelPonlly(steelGate: view)
 
+        let ponllHeaderCanvas = UIStackView()
+        ponllHeaderCanvas.axis = .vertical
+        ponllHeaderCanvas.spacing = 12
+        ponllHeaderCanvas.backgroundColor = PonllyPalette.background.withAlphaComponent(0.98)
+        ponllHeaderCanvas.layer.zPosition = 20
+        ponllHeaderCanvas.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllHeaderCanvas)
+
         ponllScrollCanvas.alwaysBounceVertical = true
         aerErstChromeSignal()
         ponllScrollCanvas.translatesAutoresizingMaskIntoConstraints = false
@@ -57,20 +65,23 @@ final class PonllystencilBloomController: UIViewController {
         ponllSubtitleMark.numberOfLines = 0
         flckinkHeaderStack.addArrangedSubview(aerErstTitleMark)
         flckinkHeaderStack.addArrangedSubview(ponllSubtitleMark)
-        bruCiuStackPath.addArrangedSubview(flckinkHeaderStack)
-        bruCiuStackPath.addArrangedSubview(ponllCategoryRow())
+        ponllHeaderCanvas.addArrangedSubview(flckinkHeaderStack)
+        ponllHeaderCanvas.addArrangedSubview(ponllCategoryRow())
         flckinksqueezeMarkerColumn.axis = .vertical
         flckinksqueezeMarkerColumn.spacing = 14
         bruCiuStackPath.addArrangedSubview(flckinksqueezeMarkerColumn)
 
         NSLayoutConstraint.activate([
+            ponllHeaderCanvas.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllHeaderCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            ponllHeaderCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 14),
             ponllScrollCanvas.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             ponllScrollCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            ponllScrollCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            ponllScrollCanvas.topAnchor.constraint(equalTo: ponllHeaderCanvas.bottomAnchor, constant: 16),
             ponllScrollCanvas.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.leadingAnchor, constant: 20),
             bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.trailingAnchor, constant: -20),
-            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor, constant: 20),
+            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor),
             bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor, constant: -96)
         ])
     }
