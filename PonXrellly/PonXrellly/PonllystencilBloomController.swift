@@ -8,6 +8,8 @@ final class PonllystencilBloomController: UIViewController {
     private let ponllScrollCanvas = UIScrollView()
     private let bruCiuStackPath = UIStackView()
     private let flckinksqueezeMarkerColumn = UIStackView()
+    private let ponllMarkerSignal = UIRefreshControl()
+    private var bruCiuStencilSignal = false
     private var aerErstSelectedCategory: PonllyVoLobbyCategory = .bruCiuSolidFill
     private var ponllCategoryButtons: [UIButton] = []
 
@@ -32,6 +34,7 @@ final class PonllystencilBloomController: UIViewController {
         ponllBackgroundWash.woodPanelPonlly(steelGate: view)
 
         ponllScrollCanvas.alwaysBounceVertical = true
+        aerErstChromeSignal()
         ponllScrollCanvas.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllScrollCanvas)
 
@@ -70,6 +73,19 @@ final class PonllystencilBloomController: UIViewController {
             bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor, constant: 20),
             bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor, constant: -96)
         ])
+    }
+
+    private func aerErstChromeSignal() {
+        ponllMarkerSignal.tintColor = PonllyPalette.cyan
+        ponllMarkerSignal.attributedTitle = NSAttributedString(
+            string: "Rpeofnrlelsbhriuncgi areoroemrss.t.f.l".ponllPaintaerErstHours,
+            attributes: [
+                .foregroundColor: PonllyPalette.muted,
+                .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+            ]
+        )
+        ponllMarkerSignal.addTarget(self, action: #selector(flckinkNeonSignal), for: .valueChanged)
+        ponllScrollCanvas.refreshControl = ponllMarkerSignal
     }
 
     private func ponllCategoryRow() -> UIStackView {
@@ -281,5 +297,18 @@ final class PonllystencilBloomController: UIViewController {
         aerErstSelectedCategory = PonllyVoLobbyCategory.allCases[flckinkSender.tag]
         aerErstglossFinishCategories()
         flckinkReloadRooms()
+    }
+
+    @objc private func flckinkNeonSignal() {
+        guard !bruCiuStencilSignal else { return }
+        bruCiuStencilSignal = true
+        aerErstSketchRush("Rpeofnrlelsbhriuncgi aveoriecres trfolocmksi.n.k.p".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.88) { [weak self] in
+            guard let self else { return }
+            self.flckinkReloadRooms()
+            self.ponllMarkerSignal.endRefreshing()
+            self.bruCiuStencilSignal = false
+            self.aerErstSketchRush("Vpooinclel brrouocmisa eurpedrasttefdl".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
+        }
     }
 }

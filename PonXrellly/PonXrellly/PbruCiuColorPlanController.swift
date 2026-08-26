@@ -9,6 +9,9 @@ final class PbruCiuColorPlanController: UIViewController {
     private let bruCiuWallFlicker = UIStackView()
     private let flckinkAerosolFlash = UIButton(type: .system)
     private let aerErstMuralFuse = UIButton(type: .system)
+    private let ponllPaintSignal = UIRefreshControl()
+    private var bruCiuInkSignal = false
+    private var flckinkWallSignal = false
     private var ponllStencilTrace: PonllyBattleStatus = .bruCiuSprayBloomponll
 
     override func viewDidLoad() {
@@ -17,15 +20,20 @@ final class PbruCiuColorPlanController: UIViewController {
         view.backgroundColor = PonllyPalette.background
         navigationController?.navigationBar.isHidden = true
         bruCiuMarkerTrail()
-        flckinkChromeVeil()
+        ponllInkBloom.alpha = 0
         NotificationCenter.default.addObserver(self, selector: #selector(aerErstNeonAura), name: .ponllyBattlesponllNozzleSet, object: nil)
+        DispatchQueue.main.async { [weak self] in
+            self?.bruCiuPaintSignal()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = false
-        flckinkChromeVeil()
+        if flckinkWallSignal {
+            flckinkChromeVeil()
+        }
     }
 
     private func bruCiuMarkerTrail() {
@@ -36,6 +44,7 @@ final class PbruCiuColorPlanController: UIViewController {
         ponllInkBloom.alwaysBounceVertical = true
         ponllInkBloom.delaysContentTouches = false
         ponllInkBloom.canCancelContentTouches = true
+        flckinkChromeSignal()
         view.addSubview(ponllInkBloom)
         ponllInkBloom.woodPanelPonlly(steelGate: view)
 
@@ -92,6 +101,27 @@ final class PbruCiuColorPlanController: UIViewController {
             flckinkAerosolFlash.heightAnchor.constraint(equalToConstant: 48),
             aerErstMuralFuse.heightAnchor.constraint(equalToConstant: 48)
         ])
+    }
+
+    private func flckinkChromeSignal() {
+        ponllPaintSignal.tintColor = PonllyPalette.cyan
+        ponllPaintSignal.attributedTitle = NSAttributedString(
+            string: "Rpeofnrlelsbhriuncgi abeartetrlset falrceknian.k.p.o".ponllPaintaerErstHours,
+            attributes: [
+                .foregroundColor: PonllyPalette.muted,
+                .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+            ]
+        )
+        ponllPaintSignal.addTarget(self, action: #selector(aerErstPaintSignal), for: .valueChanged)
+        ponllInkBloom.refreshControl = ponllPaintSignal
+    }
+
+    private func bruCiuPaintSignal() {
+        guard !flckinkWallSignal else { return }
+        ponllPaintSignal.beginRefreshing()
+        let aerErstAerosolSignal = CGPoint(x: 0, y: -max(ponllPaintSignal.bounds.height, 52))
+        ponllInkBloom.setContentOffset(aerErstAerosolSignal, animated: true)
+        aerErstPaintSignal()
     }
 
     private func aerErstChromeArc(_ flckinkPaintSpark: UIButton, ponllNeonBend: String, bruCiuTextureKick: PonllyBattleStatus) {
@@ -209,5 +239,26 @@ final class PbruCiuColorPlanController: UIViewController {
     @objc private func aerErstNeonAura() {
         ponllStencilTrace = .bruCiuSprayBloomponll
         flckinkChromeVeil()
+    }
+
+    @objc private func aerErstPaintSignal() {
+        guard !bruCiuInkSignal else { return }
+        bruCiuInkSignal = true
+        aerErstSketchRush("Rpeofnrlelsbhriuncgi abeartetrlset falrceknian".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.82) { [weak self] in
+            guard let self else { return }
+            self.flckinkChromeVeil()
+            self.ponllPaintSignal.endRefreshing()
+            self.bruCiuInkSignal = false
+            let ponllWasInitial = !self.flckinkWallSignal
+            self.flckinkWallSignal = true
+            if ponllWasInitial {
+                UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
+                    self.ponllInkBloom.alpha = 1
+                    self.ponllInkBloom.setContentOffset(.zero, animated: false)
+                }
+            }
+            self.aerErstSketchRush("Bpaotntllleb raurceinaae rueprdsattfeldc".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
+        }
     }
 }
