@@ -76,16 +76,7 @@ final class PonllyurbanCanvasController: UIViewController {
         bruCiuSummaryLabel.woodPanelPonlly(steelGate: ponllSummaryPanel, bruCiuClearCoat: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
         let flckinkEnterButton = PonllyNeonButton("Eknltmenro pRqorosmt".ponllPaintaerErstHours)
         flckinkEnterButton.addTarget(self, action: #selector(bruCiuEnterTapped), for: .touchUpInside)
-        let aerErstShareButton = UIButton(type: .system)
-        aerErstShareButton.setTitle("Suhvawrxey zRAoBoCmD".ponllPaintaerErstHours, for: .normal)
-        aerErstShareButton.setTitleColor(.white, for: .normal)
-        aerErstShareButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
-        aerErstShareButton.layer.cornerRadius = 14
-        aerErstShareButton.layer.borderWidth = 1
-        aerErstShareButton.layer.borderColor = PonllyPalette.line.cgColor
-        aerErstShareButton.translatesAutoresizingMaskIntoConstraints = false
-        aerErstShareButton.addTarget(self, action: #selector(ponllShareTapped), for: .touchUpInside)
-        [bruCiuCheckWrap, flckinkSuccessTitle, aerErstSuccessSubtitle, ponllSummaryPanel, flckinkEnterButton, aerErstShareButton].forEach(aerErstStackPath.addArrangedSubview)
+        [bruCiuCheckWrap, flckinkSuccessTitle, aerErstSuccessSubtitle, ponllSummaryPanel, flckinkEnterButton].forEach(aerErstStackPath.addArrangedSubview)
 
         NSLayoutConstraint.activate([
             aerErstStackPath.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 22),
@@ -97,8 +88,7 @@ final class PonllyurbanCanvasController: UIViewController {
             ponllCheckGlyph.widthAnchor.constraint(equalToConstant: 92),
             ponllCheckGlyph.heightAnchor.constraint(equalToConstant: 92),
             ponllSummaryPanel.heightAnchor.constraint(greaterThanOrEqualToConstant: 112),
-            flckinkEnterButton.heightAnchor.constraint(equalToConstant: 58),
-            aerErstShareButton.heightAnchor.constraint(equalToConstant: 48)
+            flckinkEnterButton.heightAnchor.constraint(equalToConstant: 58)
         ])
     }
 
@@ -127,7 +117,4 @@ final class PonllyurbanCanvasController: UIViewController {
         }
     }
 
-    @objc private func ponllShareTapped() {
-        flckinkPrimerCoatponlu("RBoCoDmE FiGnHvIiJtKeL MrNeOaPdQyR".ponllPaintaerErstHours)
-    }
 }

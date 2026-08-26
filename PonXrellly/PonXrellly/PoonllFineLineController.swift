@@ -99,7 +99,7 @@ final class PoonllFineLineController: UIViewController {
         aerErstaerosolGlowe.translatesAutoresizingMaskIntoConstraints = false
         bruCiuaerosolMood.addSubview(aerErstaerosolGlowe)
         let ponllaerosolPath = UILabel()
-        ponllaerosolPath.text = "RrEsCtHuAvRwGxEy zSATBACSDHE".ponllPaintaerErstHours
+        ponllaerosolPath.text = "\("Yxoxuxrx xBxaxlxaxnxcxex:x ".ponllPaintaerErstHours)\(PonllyponllTornEdge.flckinkShadowLayer.formatted())"
         ponllaerosolPath.textColor = PonllyPalette.muted
         ponllaerosolPath.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
         ponllaerosolPath.translatesAutoresizingMaskIntoConstraints = false
@@ -205,7 +205,7 @@ final class PoonllFineLineController: UIViewController {
                 await MainActor.run {
                     flckinkPlasterDust = Dictionary(uniqueKeysWithValues: aerErstProducts.map { ($0.id, $0) })
                     bruCiuColorRack.forEach { ponllCard in
-                        let bruCiuPrice = flckinkPlasterDust[ponllCard.ponllWallFlicker.ponllPaintKick]?.displayPrice ?? ponllCard.ponllWallFlicker.flckinkWallTwist
+                        let bruCiuPrice = self.bruCiuPriceSignal(for: ponllCard.ponllWallFlicker)
                         ponllCard.flckinkStencilTrace(bruCiuPrice)
                     }
                 }
@@ -219,6 +219,14 @@ final class PoonllFineLineController: UIViewController {
 
     private func ponllpaintWeaveon() {
         bruCiuColorRack.forEach { $0.ponllChromeTrail($0.ponllWallFlicker.ponllPaintKick == aerErstSelectedPackage.ponllPaintKick) }
+    }
+
+    private func bruCiuPriceSignal(for ponllPackage: PonllycapRackge) -> String {
+        let flckinkSoftPiece = "eXrYgZe0h1r2y3j4r5y6r7h8t9hajbrctdjeffcg".ponllPaintaerErstHours
+        if ponllPackage.ponllPaintKick == flckinkSoftPiece {
+            return ponllPackage.flckinkWallTwist
+        }
+        return flckinkPlasterDust[ponllPackage.ponllPaintKick]?.displayPrice ?? ponllPackage.flckinkWallTwist
     }
 
     @objc private func ponllpaintTwisted(_ bruCiuSender: PNeonDripCard) {
