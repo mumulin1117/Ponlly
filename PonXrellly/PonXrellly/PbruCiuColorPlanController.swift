@@ -5,10 +5,12 @@ import StoreKit
 import UIKit
 
 final class PbruCiuColorPlanController: UIViewController {
-    private let ponllInkBloom = UIScrollView()
-    private let bruCiuWallFlicker = UIStackView()
+ 
     private let flckinkAerosolFlash = UIButton(type: .system)
     private let aerErstMuralFuse = UIButton(type: .system)
+    private let ponllInkBloom = UIScrollView()
+    private let bruCiuWallFlicker = UIStackView()
+    
     private let ponllPaintSignal = UIRefreshControl()
     private var bruCiuInkSignal = false
     private var flckinkWallSignal = false
@@ -41,17 +43,7 @@ final class PbruCiuColorPlanController: UIViewController {
         view.addSubview(flckinkPaintEcho)
         flckinkPaintEcho.woodPanelPonlly(steelGate: view)
 
-        ponllInkBloom.alwaysBounceVertical = true
-        ponllInkBloom.delaysContentTouches = false
-        ponllInkBloom.canCancelContentTouches = true
-        flckinkChromeSignal()
-        view.addSubview(ponllInkBloom)
-        ponllInkBloom.woodPanelPonlly(steelGate: view)
-
-        bruCiuWallFlicker.axis = .vertical
-        bruCiuWallFlicker.spacing = 16
-        bruCiuWallFlicker.translatesAutoresizingMaskIntoConstraints = false
-        ponllInkBloom.addSubview(bruCiuWallFlicker)
+      
 
         let aerErstInkSignal = UIView()
         aerErstInkSignal.translatesAutoresizingMaskIntoConstraints = false
@@ -78,16 +70,42 @@ final class PbruCiuColorPlanController: UIViewController {
         flckinkStencilSeed.translatesAutoresizingMaskIntoConstraints = false
         aerErstInkSignal.addSubview(flckinkStencilSeed)
 
+        view.addSubview(aerErstInkSignal)
+        
         aerErstChromeArc(flckinkAerosolFlash, ponllNeonBend: "Hvowtx yBzaAtBtClDeEsF".ponllPaintaerErstHours, bruCiuTextureKick: .bruCiuSprayBloomponll)
         aerErstChromeArc(aerErstMuralFuse, ponllNeonBend: "WGaHiItJiKnLgM NfOoPrQ RCShTaUlVlWeXnYgZe0".ponllPaintaerErstHours, bruCiuTextureKick: .flckinkWallTexturepoj)
-        bruCiuWallFlicker.addArrangedSubview(aerErstInkSignal)
+//        bruCiuWallFlicker.addArrangedSubview(aerErstInkSignal)
 
+        ponllInkBloom.alwaysBounceVertical = true
+        ponllInkBloom.delaysContentTouches = false
+        ponllInkBloom.canCancelContentTouches = true
+        flckinkChromeSignal()
+        view.addSubview(ponllInkBloom)
+        ponllInkBloom.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
+            ponllInkBloom.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:0),
+            ponllInkBloom.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:0),
+            ponllInkBloom.topAnchor.constraint(equalTo: aerErstInkSignal.bottomAnchor, constant: 0),
+            ponllInkBloom.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
+
+        bruCiuWallFlicker.axis = .vertical
+        bruCiuWallFlicker.spacing = 16
+        bruCiuWallFlicker.translatesAutoresizingMaskIntoConstraints = false
+        ponllInkBloom.addSubview(bruCiuWallFlicker)
+        
+        NSLayoutConstraint.activate([
+            aerErstInkSignal.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            aerErstInkSignal.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            aerErstInkSignal.heightAnchor.constraint(equalToConstant: 116),
+            aerErstInkSignal.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            
             bruCiuWallFlicker.leadingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.leadingAnchor, constant: 16),
             bruCiuWallFlicker.trailingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.trailingAnchor, constant: -16),
             bruCiuWallFlicker.topAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.topAnchor, constant: 22),
             bruCiuWallFlicker.bottomAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.bottomAnchor, constant: -30),
-            aerErstInkSignal.heightAnchor.constraint(equalToConstant: 116),
+            
             ponllAerosolQuest.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
             ponllAerosolQuest.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor),
             bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -4),
