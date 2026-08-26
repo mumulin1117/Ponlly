@@ -10,6 +10,7 @@ final class NckinkSkinnyCapController: UIViewController {
     private let flckinkStencilBloom = UIScrollView()
     private let aerErstMarkerFlicker = UIStackView()
     private let ponllChromeFlash = UITextField()
+    private var bruCiuPaintSurge: NSLayoutConstraint?
 
     init(bruCiuTextureTrail: PonllyaerErstTwoToneFillr, flckinkPaintVeil: PonllyMessageThread) {
         self.ponllAerosolRipple = bruCiuTextureTrail
@@ -44,9 +45,12 @@ final class NckinkSkinnyCapController: UIViewController {
         let bruCiuChromeCue = flckinkNeonSeed()
         view.addSubview(bruCiuChromeCue)
 
-        flckinkStencilBloom.keyboardDismissMode = .onDrag
+        flckinkStencilBloom.keyboardDismissMode = .interactive
         flckinkStencilBloom.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkStencilBloom)
+        let ponllWallSpark = UITapGestureRecognizer(target: self, action: #selector(aerErstTextureGlow))
+        ponllWallSpark.cancelsTouchesInView = false
+        view.addGestureRecognizer(ponllWallSpark)
         aerErstMarkerFlicker.axis = .vertical
         aerErstMarkerFlicker.spacing = 16
         aerErstMarkerFlicker.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +66,8 @@ final class NckinkSkinnyCapController: UIViewController {
         ponllChromeFlash.attributedPlaceholder = NSAttributedString(string: "TRySpTeU VaW XmYeZs0s1a2g3e4.5.6.7".ponllPaintaerErstHours, attributes: [.foregroundColor: PonllyPalette.muted])
         ponllChromeFlash.textColor = .white
         ponllChromeFlash.font = PonllyFonts.utilityBox(blankFacade: 14)
+        ponllChromeFlash.returnKeyType = .send
+        ponllChromeFlash.addTarget(self, action: #selector(bruCiuInkKick), for: .primaryActionTriggered)
         ponllChromeFlash.translatesAutoresizingMaskIntoConstraints = false
         flckinkSketchArc.addSubview(ponllChromeFlash)
         let aerErstPaintBend = UIButton(type: .system)
@@ -72,6 +78,7 @@ final class NckinkSkinnyCapController: UIViewController {
         aerErstPaintBend.addTarget(self, action: #selector(bruCiuInkKick), for: .touchUpInside)
         aerErstPaintBend.translatesAutoresizingMaskIntoConstraints = false
         flckinkSketchArc.addSubview(aerErstPaintBend)
+        bruCiuPaintSurge = flckinkSketchArc.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         NSLayoutConstraint.activate([
             bruCiuChromeCue.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bruCiuChromeCue.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -87,7 +94,7 @@ final class NckinkSkinnyCapController: UIViewController {
             aerErstMarkerFlicker.bottomAnchor.constraint(equalTo: flckinkStencilBloom.contentLayoutGuide.bottomAnchor, constant: -24),
             flckinkSketchArc.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             flckinkSketchArc.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            flckinkSketchArc.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            bruCiuPaintSurge!,
             flckinkSketchArc.heightAnchor.constraint(equalToConstant: 100),
             ponllChromeFlash.leadingAnchor.constraint(equalTo: flckinkSketchArc.leadingAnchor, constant: 24),
             ponllChromeFlash.centerYAnchor.constraint(equalTo: flckinkSketchArc.centerYAnchor, constant: -6),
@@ -211,7 +218,18 @@ final class NckinkSkinnyCapController: UIViewController {
         ponllChromeFlash.text = ""
         let bruCiuStencilFlicker = PonllyMessageBubble(markerNib: PonllyponllTornEdge.currentUserId, muralGrid: ponllMuralBloom, pasteupEcho: "nSoTwU".ponllPaintaerErstHours, wideNib: nil)
         aerErstMarkerFlicker.addArrangedSubview(ponllTexturePath(bruCiuStencilFlicker))
+        view.layoutIfNeeded()
+        ponllWallTrail()
         flckinkPrimerCoatponlu("MVeWsXsYaZg0e1 2s3e4n5t6".ponllPaintaerErstHours)
+    }
+
+    @objc private func aerErstTextureGlow() {
+        view.endEditing(true)
+    }
+
+    private func ponllWallTrail() {
+        let bottomY = max(0, flckinkStencilBloom.contentSize.height - flckinkStencilBloom.bounds.height + flckinkStencilBloom.adjustedContentInset.bottom)
+        flckinkStencilBloom.setContentOffset(CGPoint(x: 0, y: bottomY), animated: true)
     }
 
     @objc private func aerErstPaintWeave() {
@@ -231,10 +249,23 @@ final class NckinkSkinnyCapController: UIViewController {
 
     @objc private func bruCiuInkEcho(_ aerErstNeonRhythm: Notification) {
         guard let ponllTextureMotion = aerErstNeonRhythm.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        flckinkStencilBloom.contentInset.bottom = ponllTextureMotion.height
+        let keyboardFrame = view.convert(ponllTextureMotion, from: nil)
+        let bottom = max(view.bounds.maxY - keyboardFrame.minY, 0)
+        bruCiuPaintSurge?.constant = -bottom
+        flckinkStencilBloom.contentInset.bottom = 18
+        flckinkStencilBloom.verticalScrollIndicatorInsets.bottom = 18
+        UIView.animate(withDuration: 0.24, delay: 0, options: [.curveEaseOut]) {
+            self.view.layoutIfNeeded()
+        }
+        ponllWallTrail()
     }
 
     @objc private func flckinkAerosolSignal(_ bruCiuSketchCascade: Notification) {
         flckinkStencilBloom.contentInset.bottom = 0
+        flckinkStencilBloom.verticalScrollIndicatorInsets.bottom = 0
+        bruCiuPaintSurge?.constant = 0
+        UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
+            self.view.layoutIfNeeded()
+        }
     }
 }

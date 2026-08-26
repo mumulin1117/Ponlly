@@ -5,15 +5,7 @@ import StoreKit
 import UIKit
 
 final class PoaerErstWeatheredPaperController: UITabBarController {
-    private let ponllWallAura: [NSAttributedString.Key: Any] = [
-        .foregroundColor: UIColor.white,
-        .font: PonllyFonts.muralForgepon(neonLab: 9)
-    ]
-    private let bruCiuAerosolEcho: [NSAttributedString.Key: Any] = [
-        .foregroundColor: PonllyPalette.pink,
-        .font: PonllyFonts.muralForgepon(neonLab: 9)
-    ]
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         flckinkMuralSignal()
@@ -52,40 +44,24 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
             selectedImage:UIImage(named: "urbanPatina")?.withRenderingMode(.alwaysOriginal)
         )
         viewControllers = [aerErstPaintQuest, ponllInkCue, bruCiuWallSeed, aerErstMarkerMood, ponllChromePath]
+
       
     }
 
 
-
-
-
-
     private func flckinkMuralSignal() {
         let bruCiuNeonArc = UITabBarAppearance()
-        bruCiuNeonArc.configureWithOpaqueBackground()
+
         bruCiuNeonArc.backgroundColor = PonllyPalette.panel
-        bruCiuNeonArc.shadowColor = PonllyPalette.line
-        [bruCiuNeonArc.stackedLayoutAppearance, bruCiuNeonArc.inlineLayoutAppearance, bruCiuNeonArc.compactInlineLayoutAppearance].forEach { flckinkTextureBend in
-            flckinkTextureBend.normal.iconColor = .white
-            flckinkTextureBend.normal.titleTextAttributes = ponllWallAura
-            flckinkTextureBend.selected.iconColor = PonllyPalette.pink
-            flckinkTextureBend.selected.titleTextAttributes = bruCiuAerosolEcho
-            flckinkTextureBend.focused.iconColor = PonllyPalette.pink
-            flckinkTextureBend.focused.titleTextAttributes = bruCiuAerosolEcho
-            flckinkTextureBend.disabled.iconColor = .white
-            flckinkTextureBend.disabled.titleTextAttributes = ponllWallAura
-        }
-        tabBar.standardAppearance = bruCiuNeonArc
-        tabBar.scrollEdgeAppearance = bruCiuNeonArc
-        tabBar.isTranslucent = false
+       
+
         tabBar.tintColor = PonllyPalette.pink
         tabBar.unselectedItemTintColor = .white
-        tabBar.backgroundColor = PonllyPalette.panel
+
+        tabBar.standardAppearance = bruCiuNeonArc
+        tabBar.scrollEdgeAppearance = bruCiuNeonArc
+       
     }
-
-
-   
-
 
    
 }

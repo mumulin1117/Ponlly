@@ -48,6 +48,9 @@ final class PonllyletterFormController: UIViewController {
         flckinkGlossFinish.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkGlossFinish)
         flckinkGlossFinish.woodPanelPonlly(steelGate: view)
+        let ponllPaintSignal = UITapGestureRecognizer(target: self, action: #selector(bruCiuColorGlow))
+        ponllPaintSignal.cancelsTouchesInView = false
+        flckinkGlossFinish.addGestureRecognizer(ponllPaintSignal)
 
         aerErstMetallicSpray.backgroundColor = UIColor(red: 7/255, green: 7/255, blue: 12/255, alpha: 1)
         aerErstMetallicSpray.layer.cornerRadius = 24
@@ -89,7 +92,7 @@ final class PonllyletterFormController: UIViewController {
         aerErstMetallicSpray.addSubview(ponllSprayCan)
 
         let bruCiuPaintCan = UIScrollView()
-        bruCiuPaintCan.keyboardDismissMode = .onDrag
+        bruCiuPaintCan.keyboardDismissMode = .interactive
         bruCiuPaintCan.translatesAutoresizingMaskIntoConstraints = false
         aerErstMetallicSpray.addSubview(bruCiuPaintCan)
 
@@ -119,6 +122,8 @@ final class PonllyletterFormController: UIViewController {
         flckinkPaintMarker.attributedPlaceholder = NSAttributedString(string: "AHdIdJ KaL McNoOmPmQeRnStT.U.V.W".ponllPaintaerErstHours, attributes: [.foregroundColor: PonllyPalette.muted])
         flckinkPaintMarker.textColor = .white
         flckinkPaintMarker.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
+        flckinkPaintMarker.returnKeyType = .send
+        flckinkPaintMarker.addTarget(self, action: #selector(aerErstStreakMarker), for: .primaryActionTriggered)
         flckinkPaintMarker.translatesAutoresizingMaskIntoConstraints = false
         ponllColorRack.addSubview(flckinkPaintMarker)
 
@@ -258,6 +263,10 @@ final class PonllyletterFormController: UIViewController {
         }
     }
 
+    @objc private func bruCiuColorGlow() {
+        view.endEditing(true)
+    }
+
     @objc private func ponllBrushMarker() {
         UIView.animate(withDuration: 0.2, animations: {
             self.flckinkGlossFinish.alpha = 0
@@ -269,10 +278,16 @@ final class PonllyletterFormController: UIViewController {
 
     @objc private func bruCiuAcrylicMarker(_ flckinkDotSpray: Notification) {
         guard let aerErstLineSpray = flckinkDotSpray.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        aerErstMetallicSpray.transform = CGAffineTransform(translationX: 0, y: -aerErstLineSpray.height * 0.34)
+        let keyboardFrame = view.convert(aerErstLineSpray, from: nil)
+        let bottom = max(view.bounds.maxY - keyboardFrame.minY - view.safeAreaInsets.bottom, 0)
+        UIView.animate(withDuration: 0.24, delay: 0, options: [.curveEaseOut]) {
+            self.aerErstMetallicSpray.transform = CGAffineTransform(translationX: 0, y: -bottom)
+        }
     }
 
     @objc private func flckinkEnamelPaint(_ flckinkDotSpray: Notification) {
-        aerErstMetallicSpray.transform = .identity
+        UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
+            self.aerErstMetallicSpray.transform = .identity
+        }
     }
 }

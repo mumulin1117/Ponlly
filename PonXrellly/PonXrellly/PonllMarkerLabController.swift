@@ -67,10 +67,13 @@ final class PonllMarkerLabController: UIViewController {
         
       
 
-        ponllStencilMood.keyboardDismissMode = .onDrag
+        ponllStencilMood.keyboardDismissMode = .interactive
         ponllStencilMood.alwaysBounceVertical = true
         ponllStencilMood.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllStencilMood)
+        let aerErstWallSpark = UITapGestureRecognizer(target: self, action: #selector(ponllTextureGlow))
+        aerErstWallSpark.cancelsTouchesInView = false
+        view.addGestureRecognizer(aerErstWallSpark)
         bruCiuMarkerPath.translatesAutoresizingMaskIntoConstraints = false
         ponllStencilMood.addSubview(bruCiuMarkerPath)
 
@@ -273,6 +276,16 @@ final class PonllMarkerLabController: UIViewController {
         aerErstFreightPanel.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         aerErstFreightPanel.leftViewMode = .always
         aerErstFreightPanel.addTarget(self, action: #selector(bruCiuMarkerGrit), for: .editingChanged)
+        if aerErstFreightPanel === flckinkNeonBalance {
+            aerErstFreightPanel.keyboardType = .emailAddress
+            aerErstFreightPanel.textContentType = .username
+            aerErstFreightPanel.returnKeyType = .next
+            aerErstFreightPanel.addTarget(self, action: #selector(flckinkWallGlow), for: .primaryActionTriggered)
+        } else if aerErstFreightPanel === aerErstTextureRhythm {
+            aerErstFreightPanel.textContentType = .password
+            aerErstFreightPanel.returnKeyType = .done
+            aerErstFreightPanel.addTarget(self, action: #selector(aerErstPaintMotion), for: .primaryActionTriggered)
+        }
     }
 
     private func bruCiuColorFade(_ flckinkShutterPanel: UIButton, nozzleCraft: String, symbol: String) {
@@ -488,6 +501,19 @@ final class PonllMarkerLabController: UIViewController {
 
     @objc private func bruCiuMarkerGrit() {
         bruCiuTextureArc()
+    }
+
+    @objc private func ponllTextureGlow() {
+        view.endEditing(true)
+    }
+
+    @objc private func flckinkWallGlow() {
+        aerErstTextureRhythm.becomeFirstResponder()
+    }
+
+    @objc private func aerErstPaintMotion() {
+        view.endEditing(true)
+        flckinkChromeNoise()
     }
 
     @objc private func flckinkChromeNoise() {

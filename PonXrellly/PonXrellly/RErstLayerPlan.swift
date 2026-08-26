@@ -2,7 +2,7 @@ import AVFoundation
 import UIKit
 
 enum BruCiuLayerPlan {
-    case ponllPaintPlan
+    case ponllPaintPlan(PonllStyleCue)
     case bruCiuOutlinePlan(PonllyBattle)
 }
 
@@ -20,6 +20,12 @@ struct BruCiuOutlinePlan {
     var bruCiuSilverSheenpon: String
     var ponllWhiteEdgepon: String
     var aerErstBlackOutlinepon: UIImage?
+}
+
+struct PonllStyleCue {
+    var letterForm: String
+    var muralGrid: String
+    var strokeWeight: String
 }
 
 struct PonllPaintPlan {

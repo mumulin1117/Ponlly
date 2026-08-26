@@ -5,21 +5,10 @@ import StoreKit
 import UIKit
 
 final class ErstWeatheredPaperController: UIViewController {
-    private let ponllAerosolSignal = UIView()
-    private var bruCiuMuralSignal = false
-    private var flckinkPaintSignal = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
-        ponllAerosolSignal.alpha = 0
-        ponllAerosolSignal.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(ponllAerosolSignal)
-        ponllAerosolSignal.woodPanelPonlly(steelGate: view)
         flckinkGraffitiLab()
-        DispatchQueue.main.async { [weak self] in
-            self?.ponllChromeSignal()
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +20,7 @@ final class ErstWeatheredPaperController: UIViewController {
     private func flckinkGraffitiLab() {
         let aerErstAerosolLab = UIView()
         aerErstAerosolLab.translatesAutoresizingMaskIntoConstraints = false
-        ponllAerosolSignal.addSubview(aerErstAerosolLab)
+        view.addSubview(aerErstAerosolLab)
         let ponllLetterLab = UILabel()
         ponllLetterLab.text = "COrPeQaRtSiToUnV WHXuYbZ".ponllPaintaerErstHours
         ponllLetterLab.textColor = .white
@@ -59,7 +48,7 @@ final class ErstWeatheredPaperController: UIViewController {
         ponllMarkerLab.axis = .vertical
         ponllMarkerLab.spacing = 22
         ponllMarkerLab.translatesAutoresizingMaskIntoConstraints = false
-        ponllAerosolSignal.addSubview(ponllMarkerLab)
+        view.addSubview(ponllMarkerLab)
         ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Piojsktl mVniodpeqor".ponllPaintaerErstHours, bruCiuAerosolMuse: "Sshtaurvew xpyrzoAgBrCeDsEsF GtHiImJeKlLaMpNsOePsQ R&S TtUuVtWoXrYiZa0l1s2".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.cyan, aerErstStreetMuse: "paintFlow", ponllPaintMuse: #selector(bruCiuInkMuse)))
         ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "S3t4a5r6t7 8P9Ka bBcadtetflgeh".ponllPaintaerErstHours, bruCiuAerosolMuse: "Cihjaklllmennogpeq rasntoutvhwexry zwArBiCtDeErF GtHoI JaK LbMaNtOtPlQeR".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.green, aerErstStreetMuse: "wallCraft", ponllPaintMuse: #selector(flckinkStyleLab)))
         ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "CSrTeUaVtWeX YVZo0i1c2e3 4R5o6o7m8".ponllPaintaerErstHours, bruCiuAerosolMuse: "H9aanbgcoduetf,g hriejvkilemwn oypaqrrdsst,u vowrx yczrAiBtCiDqEuFeG".ponllPaintaerErstHours, flckinkMuralMuse: .white, aerErstStreetMuse: "sprayRhythm", ponllPaintMuse: #selector(aerErstWallMuse)))
@@ -70,12 +59,12 @@ final class ErstWeatheredPaperController: UIViewController {
         bruCiuLetterMuse.font = PonllyFonts.muralForgepon(neonLab: 34)
         bruCiuLetterMuse.adjustsFontSizeToFitWidth = true
         bruCiuLetterMuse.translatesAutoresizingMaskIntoConstraints = false
-        ponllAerosolSignal.addSubview(bruCiuLetterMuse)
+        view.addSubview(bruCiuLetterMuse)
 
         NSLayoutConstraint.activate([
-            aerErstAerosolLab.leadingAnchor.constraint(equalTo: ponllAerosolSignal.safeAreaLayoutGuide.leadingAnchor, constant: 32),
-            aerErstAerosolLab.trailingAnchor.constraint(equalTo: ponllAerosolSignal.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-            aerErstAerosolLab.topAnchor.constraint(equalTo: ponllAerosolSignal.safeAreaLayoutGuide.topAnchor, constant: 34),
+            aerErstAerosolLab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            aerErstAerosolLab.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            aerErstAerosolLab.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 34),
             aerErstAerosolLab.heightAnchor.constraint(equalToConstant: 74),
             ponllLetterLab.leadingAnchor.constraint(equalTo: aerErstAerosolLab.leadingAnchor),
             ponllLetterLab.topAnchor.constraint(equalTo: aerErstAerosolLab.topAnchor),
@@ -85,31 +74,13 @@ final class ErstWeatheredPaperController: UIViewController {
             flckinkWallLab.centerYAnchor.constraint(equalTo: aerErstAerosolLab.centerYAnchor),
             flckinkWallLab.widthAnchor.constraint(equalToConstant: 56),
             flckinkWallLab.heightAnchor.constraint(equalToConstant: 56),
-            ponllMarkerLab.leadingAnchor.constraint(equalTo: ponllAerosolSignal.safeAreaLayoutGuide.leadingAnchor, constant: 32),
-            ponllMarkerLab.trailingAnchor.constraint(equalTo: ponllAerosolSignal.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            ponllMarkerLab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            ponllMarkerLab.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
             ponllMarkerLab.topAnchor.constraint(equalTo: aerErstAerosolLab.bottomAnchor, constant: 46),
             bruCiuLetterMuse.leadingAnchor.constraint(equalTo: ponllMarkerLab.leadingAnchor),
             bruCiuLetterMuse.trailingAnchor.constraint(equalTo: ponllMarkerLab.trailingAnchor),
             bruCiuLetterMuse.topAnchor.constraint(equalTo: ponllMarkerLab.bottomAnchor, constant: 76)
         ])
-    }
-
-    private func ponllChromeSignal() {
-        guard !flckinkPaintSignal else { return }
-        flckinkPaintSignal = true
-        aerErstSketchRush("Pproenplalrbirnugc icareeraetrisotnf lhcukbi.n.k.p".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.84) { [weak self] in
-            guard let self else { return }
-            let ponllInitialSignal = !self.bruCiuMuralSignal
-            self.bruCiuMuralSignal = true
-            self.flckinkPaintSignal = false
-            if ponllInitialSignal {
-                UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
-                    self.ponllAerosolSignal.alpha = 1
-                }
-            }
-            self.aerErstSketchRush("Cproenaltlibornu chiuabe rreerasdtyf".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
-        }
     }
 
     private func bruCiuStencilLab(ponllMuralLab: String, bruCiuAerosolMuse: String, flckinkMuralMuse: UIColor, aerErstStreetMuse: String, ponllPaintMuse: Selector) -> UIControl {

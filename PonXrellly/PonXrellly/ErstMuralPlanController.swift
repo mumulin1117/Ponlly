@@ -6,9 +6,11 @@ import UIKit
 
 final class ErstMuralPlanController: UIViewController {
     private let bruCiuWallPlan: UIImage
+    private let ponllStyleCue: PonllStyleCue
 
-    init(flckinkColorPlan aerErstSketchPlan: UIImage) {
+    init(flckinkColorPlan aerErstSketchPlan: UIImage, ponllStyleCue bruCiuPaintCue: PonllStyleCue) {
         self.bruCiuWallPlan = aerErstSketchPlan
+        self.ponllStyleCue = bruCiuPaintCue
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -33,7 +35,7 @@ final class ErstMuralPlanController: UIViewController {
         flckinkOutlinePlan.layer.borderWidth = 1
         flckinkOutlinePlan.layer.borderColor = PonllyPalette.line.cgColor
         let aerErstShadowPlan = UILabel()
-        aerErstShadowPlan.text = "Wildstyle\n\nWildstyle Showdown\nBring Your Absolute Best Chrome Letters And Sharp Outlines to This Burner Arena"
+        aerErstShadowPlan.text = "\(ponllStyleCue.letterForm)\n\n\(ponllStyleCue.muralGrid)\n\n\(ponllStyleCue.strokeWeight)"
         aerErstShadowPlan.numberOfLines = 0
         aerErstShadowPlan.textColor = .white
         aerErstShadowPlan.font = PonllyFonts.muralForgepon(neonLab: 14)
@@ -41,11 +43,7 @@ final class ErstMuralPlanController: UIViewController {
         aerErstShadowPlan.woodPanelPonlly(steelGate: flckinkOutlinePlan, bruCiuClearCoat: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18))
         let ponllFillPlan = PonllyNeonButton("PWuXbYlZi0s1h2 3C4h5a6l7l8e9nagbec".ponllPaintaerErstHours)
         ponllFillPlan.addTarget(self, action: #selector(bruCiuStencilPlan), for: .touchUpInside)
-        let flckinkPastePlan = UIButton(type: .system)
-        flckinkPastePlan.setTitle("Eddeiftg hCihjaklllmennogpeq".ponllPaintaerErstHours, for: .normal)
-        flckinkPastePlan.tintColor = PonllyPalette.muted
-        flckinkPastePlan.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
-        [bruCiuPaintPlan, flckinkOutlinePlan, ponllFillPlan, flckinkPastePlan].forEach(ponllLayerPlan.addArrangedSubview)
+        [bruCiuPaintPlan, flckinkOutlinePlan, ponllFillPlan].forEach(ponllLayerPlan.addArrangedSubview)
         NSLayoutConstraint.activate([
             ponllLayerPlan.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             ponllLayerPlan.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),

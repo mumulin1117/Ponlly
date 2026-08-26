@@ -4,7 +4,7 @@ final class PonllycyanGlowController: UIViewController {
     private let ponllChromeMood: String
     private let bruCiuNeonPath: UIImage?
     private let flckinkTextureArc: () -> Void
-    private let aerErstSketchBend = UIImageView(image: UIImage(named: "whitePop"))
+    private let aerErstSketchBend = UIImageView(image: UIImage(named: "colorFade"))
 
     init(_ ponllChromeMood: String, _ bruCiuNeonPath: UIImage?, _ flckinkTextureArc: @escaping () -> Void) {
         self.ponllChromeMood = ponllChromeMood

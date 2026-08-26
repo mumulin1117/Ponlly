@@ -4,7 +4,7 @@ final class PPonllMopMarkerController: UIViewController {
     private let ponllUserName: String
     private let bruCiuAvatarImage: UIImage?
     private let flckinkCompletionFlow: () -> Void
-    private let aerErstneonMotion = UIImageView(image: UIImage(named: "whitePop"))
+    private let aerErstneonMotion = UIImageView(image: UIImage(named: "colorFade"))
 
     init(userName ponllUserName: String, avatar bruCiuAvatarImage: UIImage?, completion flckinkCompletionFlow: @escaping () -> Void) {
         self.ponllUserName = ponllUserName

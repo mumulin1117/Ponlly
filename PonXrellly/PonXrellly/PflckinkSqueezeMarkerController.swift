@@ -67,10 +67,13 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         
       
 
-        bruCiuWallMood.keyboardDismissMode = .onDrag
+        bruCiuWallMood.keyboardDismissMode = .interactive
         bruCiuWallMood.alwaysBounceVertical = true
         bruCiuWallMood.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuWallMood)
+        let ponllWallSpark = UITapGestureRecognizer(target: self, action: #selector(aerErstTextureGlow))
+        ponllWallSpark.cancelsTouchesInView = false
+        view.addGestureRecognizer(ponllWallSpark)
         flckinkStencilPath.translatesAutoresizingMaskIntoConstraints = false
         bruCiuWallMood.addSubview(flckinkStencilPath)
 
@@ -273,6 +276,16 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         aerErstEnamelPaint.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         aerErstEnamelPaint.leftViewMode = .always
         aerErstEnamelPaint.addTarget(self, action: #selector(ponllPaintCascade), for: .editingChanged)
+        if aerErstEnamelPaint === aerErstChromeBalance {
+            aerErstEnamelPaint.keyboardType = .emailAddress
+            aerErstEnamelPaint.textContentType = .username
+            aerErstEnamelPaint.returnKeyType = .next
+            aerErstEnamelPaint.addTarget(self, action: #selector(bruCiuWallGlow), for: .primaryActionTriggered)
+        } else if aerErstEnamelPaint === ponllNeonRhythm {
+            aerErstEnamelPaint.textContentType = .password
+            aerErstEnamelPaint.returnKeyType = .done
+            aerErstEnamelPaint.addTarget(self, action: #selector(flckinkPaintMotion), for: .primaryActionTriggered)
+        }
     }
 
     private func bruCiuInkAura(_ ponllLatexPaint: UIButton, nozzleCraft: String, symbol: String) {
@@ -488,6 +501,19 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     @objc private func ponllPaintCascade() {
         ponllInkGlow()
+    }
+
+    @objc private func aerErstTextureGlow() {
+        view.endEditing(true)
+    }
+
+    @objc private func bruCiuWallGlow() {
+        ponllNeonRhythm.becomeFirstResponder()
+    }
+
+    @objc private func flckinkPaintMotion() {
+        view.endEditing(true)
+        bruCiuInkRipple()
     }
 
     @objc private func bruCiuInkRipple() {

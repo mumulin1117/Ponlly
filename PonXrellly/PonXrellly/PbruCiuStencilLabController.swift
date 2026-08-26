@@ -46,9 +46,12 @@ final class PbruCiuStencilLabController: UIViewController {
         let aerErstLayerMask = PonllyponllCyanGlowView(bruCiuDripMarker: [PonllyPalette.background, UIColor(red: 13/255, green: 18/255, blue: 20/255, alpha: 1)])
         view.addSubview(aerErstLayerMask)
         aerErstLayerMask.woodPanelPonlly(steelGate: view)
-        bruCiuStencilFlicker.keyboardDismissMode = .onDrag
+        bruCiuStencilFlicker.keyboardDismissMode = .interactive
         view.addSubview(bruCiuStencilFlicker)
         bruCiuStencilFlicker.woodPanelPonlly(steelGate: view)
+        let ponllInkSpark = UITapGestureRecognizer(target: self, action: #selector(aerErstColorGlow))
+        ponllInkSpark.cancelsTouchesInView = false
+        view.addGestureRecognizer(ponllInkSpark)
         flckinkMarkerFlash.axis = .vertical
         flckinkMarkerFlash.spacing = 24
         flckinkMarkerFlash.translatesAutoresizingMaskIntoConstraints = false
@@ -361,6 +364,8 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstChromeFuse.placeholder = "Acddde ftgoh itjhkel manroepnqar sbtuuzvzw.x.y.z".ponllPaintaerErstHours
         aerErstChromeFuse.attributedPlaceholder = NSAttributedString(string: "AAdBdC DtEoF GtHhIeJ KaLrMeNnOaP QbRuSzTzU.V.W.X".ponllPaintaerErstHours, attributes: [.foregroundColor: PonllyPalette.muted])
         aerErstChromeFuse.textColor = .white
+        aerErstChromeFuse.returnKeyType = .send
+        aerErstChromeFuse.addTarget(self, action: #selector(aerErstTextureContrast), for: .primaryActionTriggered)
         aerErstChromeFuse.translatesAutoresizingMaskIntoConstraints = false
         aerErstTextureWall.addSubview(aerErstChromeFuse)
         let ponllPaintMap = UIButton(type: .system)
@@ -417,6 +422,10 @@ final class PbruCiuStencilLabController: UIViewController {
         }
     }
 
+    @objc private func aerErstColorGlow() {
+        view.endEditing(true)
+    }
+
     private func ponllPainaerErstGlossFinish() {
         bruCiuTextureTrail?.text = "Arena Chat (\(ponllMuralBloom.underpassMural.count))"
         guard let ponllNeonTrace else { return }
@@ -456,8 +465,15 @@ final class PbruCiuStencilLabController: UIViewController {
 
     @objc private func flckinkInkMotion(_ note: Notification) {
         guard let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        bruCiuStencilFlicker.contentInset.bottom = frame.height
-        bruCiuStencilFlicker.verticalScrollIndicatorInsets.bottom = frame.height
+        let keyboardFrame = view.convert(frame, from: nil)
+        let bottom = max(view.bounds.maxY - keyboardFrame.minY - view.safeAreaInsets.bottom, 0) + 18
+        bruCiuStencilFlicker.contentInset.bottom = bottom
+        bruCiuStencilFlicker.verticalScrollIndicatorInsets.bottom = bottom
+        UIView.animate(withDuration: 0.24, delay: 0, options: [.curveEaseOut]) {
+            self.view.layoutIfNeeded()
+        }
+        let inputRect = aerErstChromeFuse.convert(aerErstChromeFuse.bounds.insetBy(dx: 0, dy: -22), to: bruCiuStencilFlicker)
+        bruCiuStencilFlicker.scrollRectToVisible(inputRect, animated: true)
     }
 
     @objc private func aerErstWallCascade(_ note: Notification) {

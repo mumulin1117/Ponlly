@@ -39,7 +39,7 @@ final class PonllystrokeWeightController: UIViewController {
     }
 
     private func bruCiuBridgePillar() {
-        let aerErstRemoteImage = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: ponllUserSignal) ?? UIImage(named: "whitePop"))
+        let aerErstRemoteImage = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: ponllUserSignal) ?? UIImage(named: "colorFade"))
         aerErstRemoteImage.contentMode = .scaleAspectFill
         aerErstRemoteImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstRemoteImage)

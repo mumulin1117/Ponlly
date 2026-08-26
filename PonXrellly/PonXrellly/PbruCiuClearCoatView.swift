@@ -12,6 +12,7 @@ final class PbruCiuClearCoatView: UIView {
 
     init(ponllPaintTrace: PonllyaerErstSolidMarkerk) {
         super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         layer.cornerRadius = 14
         layer.borderWidth = 2
@@ -22,6 +23,7 @@ final class PbruCiuClearCoatView: UIView {
         layer.insertSublayer(ponllChromeBloom, at: 0)
 
         bruCiuNeonFlicker.image = PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: ponllPaintTrace.stencilBloom)
+            ?? PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: PbruCiuClearCoatView.bruCiuPaintPiece(for: ponllPaintTrace))
         bruCiuNeonFlicker.contentMode = .scaleAspectFill
         bruCiuNeonFlicker.translatesAutoresizingMaskIntoConstraints = false
         bruCiuNeonFlicker.isHidden = bruCiuNeonFlicker.image == nil
@@ -52,6 +54,21 @@ final class PbruCiuClearCoatView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private static func bruCiuPaintPiece(for ponllPaintTrace: PonllyaerErstSolidMarkerk) -> String {
+        let flckinkWallPiece = [
+            "urbanCanvas",
+            "capControl",
+            "inkDrift",
+            "brickPalette",
+            "markerStroke",
+            "nozzleCraft",
+            "concreteMuse",
+            "chromeShine"
+        ]
+        let aerErstColorPiece = abs(ponllPaintTrace.graffitiPulse.hashValue) % flckinkWallPiece.count
+        return flckinkWallPiece[aerErstColorPiece]
     }
 
     override func layoutSubviews() {

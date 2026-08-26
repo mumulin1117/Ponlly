@@ -25,14 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().scrollEdgeAppearance = aerErstGlossFinish
         UINavigationBar.appearance().compactAppearance = aerErstGlossFinish
         UINavigationBar.appearance().tintColor = .white
-        UITabBarItem.appearance().setTitleTextAttributes(
-            [.foregroundColor: UIColor.white, .font: PonllyFonts.muralForgepon(neonLab: 9)],
-            for: .normal
-        )
-        UITabBarItem.appearance().setTitleTextAttributes(
-            [.foregroundColor: PonllyPalette.pink, .font: PonllyFonts.muralForgepon(neonLab: 9)],
-            for: .selected
-        )
+
 
         let bruCiuInkFlash = UIWindow(frame: UIScreen.main.bounds)
         bruCiuInkFlash.rootViewController = PoaerErstWeatheredPaperController()

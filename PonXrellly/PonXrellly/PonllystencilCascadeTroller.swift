@@ -48,13 +48,12 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         aerErstneonDraftton.layer.cornerRadius = 42
         aerErstneonDraftton.layer.borderWidth = 2
         aerErstneonDraftton.layer.borderColor = PonllyPalette.cyan.cgColor
-        aerErstneonDraftton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
+        aerErstneonDraftton.setImage(nil, for: .normal)
         aerErstneonDraftton.tintColor = PonllyPalette.cyan
         aerErstneonDraftton.translatesAutoresizingMaskIntoConstraints = false
         aerErstneonDraftton.addTarget(self, action: #selector(aerErstCoverTapped), for: .touchUpInside)
         aerErsttextureMuseWrap.addSubview(aerErstneonDraftton)
-        ponllshadowDraftiew.image = UIImage(named: "markerStroke")
-        ponllshadowDraftiew.contentMode = .scaleAspectFill
+        ponllUploadCoverPlaceholder()
         ponllshadowDraftiew.clipsToBounds = true
         ponllshadowDraftiew.layer.cornerRadius = 39
         ponllshadowDraftiew.translatesAutoresizingMaskIntoConstraints = false
@@ -190,6 +189,14 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         bruCiuaerosolDrafton.alpha = ponllReady ? 1 : 0.45
     }
 
+    private func ponllUploadCoverPlaceholder() {
+        let aerErstPlusConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold)
+        ponllshadowDraftiew.image = UIImage(systemName: "plus", withConfiguration: aerErstPlusConfig)
+        ponllshadowDraftiew.contentMode = .center
+        ponllshadowDraftiew.tintColor = PonllyPalette.cyan
+        ponllshadowDraftiew.backgroundColor = UIColor.black.withAlphaComponent(0.32)
+    }
+
     @objc private func ponllCategoryTapped(_ aerErstSender: UIButton) {
         flckinkpasteForgegory = aerErstSender.title(for: .normal) ?? flckinkpasteForgegory
         bruCiuRefreshCategories()
@@ -224,6 +231,9 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
     func imagePickerController(_ ponllPicker: UIImagePickerController, didFinishPickingMediaWithInfo bruCiuInfo: [UIImagePickerController.InfoKey: Any]) {
         aerErstCoverImage = (bruCiuInfo[.editedImage] as? UIImage) ?? (bruCiuInfo[.originalImage] as? UIImage)
         ponllshadowDraftiew.image = aerErstCoverImage
+        ponllshadowDraftiew.contentMode = .scaleAspectFill
+        ponllshadowDraftiew.tintColor = nil
+        ponllshadowDraftiew.backgroundColor = .clear
         ponllPicker.dismiss(animated: true)
     }
 

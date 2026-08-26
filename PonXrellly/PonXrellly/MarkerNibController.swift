@@ -134,8 +134,8 @@ final class MarkerNibController: UIViewController, UIImagePickerControllerDelega
             return
         }
         switch aerErstAerosolVeil {
-        case .ponllPaintPlan:
-            navigationController?.pushViewController(ErstMuralPlanController(flckinkColorPlan: aerErstChromeQuest), animated: true)
+        case .ponllPaintPlan(let bruCiuPaintDraft):
+            navigationController?.pushViewController(ErstMuralPlanController(flckinkColorPlan: aerErstChromeQuest, ponllStyleCue: bruCiuPaintDraft), animated: true)
         case .bruCiuOutlinePlan(let ponllChromeGlow):
             flckinkMarkerSignal.isEnabled = false
             flckinkMarkerSignal.alpha = 0.55

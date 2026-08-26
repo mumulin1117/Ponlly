@@ -643,7 +643,7 @@ enum PonllyponllTornEdge {
     }
 
     static func ponllBlankFacade() -> UIImage? {
-        bruCiuBridgePillar(flckinkUnderpassBeam: dripMarker) ?? UIImage(named: "whitePop")
+        bruCiuBridgePillar(flckinkUnderpassBeam: dripMarker) ?? UIImage(named: "colorFade")
     }
 
     static func saveCurrentaerErstBlackOutline(ponllWhiteEdge printLayer: UIImage?, bruCiuSilverSheen grainPrint: UIImage?) {
