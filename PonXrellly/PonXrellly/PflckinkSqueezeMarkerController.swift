@@ -254,7 +254,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuWallTrace.spacing = 7
         bruCiuWallTrace.translatesAutoresizingMaskIntoConstraints = false
         let bruCiuNeonSpray = UILabel()
-        bruCiuNeonSpray.text = title
+        bruCiuNeonSpray.text = nozzleCraft
         bruCiuNeonSpray.textColor = PonllyPalette.muted
         bruCiuNeonSpray.font = PonllyFonts.steelGate(rollingShutter: 10)
         bruCiuWallTrace.addArrangedSubview(bruCiuNeonSpray)
@@ -276,7 +276,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     }
 
     private func bruCiuInkAura(_ ponllLatexPaint: UIButton, nozzleCraft: String, symbol: String) {
-        ponllLatexPaint.setTitle("  \(title)", for: .normal)
+        ponllLatexPaint.setTitle("  \(nozzleCraft)", for: .normal)
         ponllLatexPaint.setImage(UIImage(systemName: symbol), for: .normal)
         ponllLatexPaint.tintColor = .white
         ponllLatexPaint.setTitleColor(.white, for: .normal)
@@ -352,7 +352,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     private func ponllNeonBend(_ nozzleCraft: String, flckinkPaintShelf: Selector) -> UIButton {
         let bruCiuColorRack = UIButton(type: .system)
-        bruCiuColorRack.setTitle(title, for: .normal)
+        bruCiuColorRack.setTitle(nozzleCraft, for: .normal)
         bruCiuColorRack.setTitleColor(PonllyPalette.cyan, for: .normal)
         bruCiuColorRack.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
         bruCiuColorRack.titleLabel?.adjustsFontSizeToFitWidth = true

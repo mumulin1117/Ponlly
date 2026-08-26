@@ -254,7 +254,7 @@ final class PonllMarkerLabController: UIViewController {
         aerErstPaintCloud.spacing = 7
         aerErstPaintCloud.translatesAutoresizingMaskIntoConstraints = false
         let flckinkUnderpassBeam = UILabel()
-        flckinkUnderpassBeam.text = title
+        flckinkUnderpassBeam.text = nozzleCraft
         flckinkUnderpassBeam.textColor = PonllyPalette.muted
         flckinkUnderpassBeam.font = PonllyFonts.steelGate(rollingShutter: 10)
         aerErstPaintCloud.addArrangedSubview(flckinkUnderpassBeam)
@@ -276,7 +276,7 @@ final class PonllMarkerLabController: UIViewController {
     }
 
     private func bruCiuColorFade(_ flckinkShutterPanel: UIButton, nozzleCraft: String, symbol: String) {
-        flckinkShutterPanel.setTitle("  \(title)", for: .normal)
+        flckinkShutterPanel.setTitle("  \(nozzleCraft)", for: .normal)
         flckinkShutterPanel.setImage(UIImage(systemName: symbol), for: .normal)
         flckinkShutterPanel.tintColor = .white
         flckinkShutterPanel.setTitleColor(.white, for: .normal)
@@ -352,7 +352,7 @@ final class PonllMarkerLabController: UIViewController {
 
     private func bruCiuStencilSeed(_ nozzleCraft: String, action: Selector) -> UIButton {
         let ponllNozzleSet = UIButton(type: .system)
-        ponllNozzleSet.setTitle(title, for: .normal)
+        ponllNozzleSet.setTitle(nozzleCraft, for: .normal)
         ponllNozzleSet.setTitleColor(PonllyPalette.cyan, for: .normal)
         ponllNozzleSet.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
         ponllNozzleSet.titleLabel?.adjustsFontSizeToFitWidth = true
