@@ -65,6 +65,8 @@ final class PbruCiuColorPlanController: UIViewController {
         aerErstInkSignal.addSubview(bruCiuMuralCue)
 
         let flckinkStencilSeed = UIStackView(arrangedSubviews: [flckinkAerosolFlash, aerErstMuralFuse])
+        flckinkAerosolFlash.setTitleColor(.white, for: .normal)
+        aerErstMuralFuse.setTitleColor(.white, for: .normal)
         flckinkStencilSeed.axis = .horizontal
         flckinkStencilSeed.spacing = 10
         flckinkStencilSeed.translatesAutoresizingMaskIntoConstraints = false
@@ -103,11 +105,11 @@ final class PbruCiuColorPlanController: UIViewController {
             
             bruCiuWallFlicker.leadingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.leadingAnchor, constant: 16),
             bruCiuWallFlicker.trailingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.trailingAnchor, constant: -16),
-            bruCiuWallFlicker.topAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.topAnchor, constant: 22),
+            bruCiuWallFlicker.topAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.topAnchor, constant: 18),
             bruCiuWallFlicker.bottomAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.bottomAnchor, constant: -30),
             
             ponllAerosolQuest.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
-            ponllAerosolQuest.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor),
+            ponllAerosolQuest.centerYAnchor.constraint(equalTo: bruCiuMuralCue.centerYAnchor),
             bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -4),
             bruCiuMuralCue.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor, constant: 2),
             bruCiuMuralCue.widthAnchor.constraint(equalToConstant: 52),
@@ -115,8 +117,8 @@ final class PbruCiuColorPlanController: UIViewController {
             flckinkStencilSeed.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
             flckinkStencilSeed.trailingAnchor.constraint(lessThanOrEqualTo: aerErstInkSignal.trailingAnchor, constant: -4),
             flckinkStencilSeed.topAnchor.constraint(equalTo: ponllAerosolQuest.bottomAnchor, constant: 18),
-            flckinkAerosolFlash.heightAnchor.constraint(equalToConstant: 48),
-            aerErstMuralFuse.heightAnchor.constraint(equalToConstant: 48)
+            flckinkAerosolFlash.heightAnchor.constraint(equalToConstant: 32),
+            aerErstMuralFuse.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
 
@@ -146,7 +148,7 @@ final class PbruCiuColorPlanController: UIViewController {
         flckinkPaintSpark.titleLabel?.font = bruCiuTextureKick == .bruCiuSprayBloomponll ? PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium) : PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
         flckinkPaintSpark.titleLabel?.adjustsFontSizeToFitWidth = true
         flckinkPaintSpark.titleLabel?.minimumScaleFactor = 0.86
-        flckinkPaintSpark.layer.cornerRadius = 24
+        flckinkPaintSpark.layer.cornerRadius = 16
         flckinkPaintSpark.layer.borderWidth = 1.5
         flckinkPaintSpark.tag = bruCiuTextureKick == .bruCiuSprayBloomponll ? 0 : 1
         flckinkPaintSpark.addTarget(self, action: #selector(bruCiuSketchWeave(_:)), for: .touchUpInside)
@@ -154,11 +156,11 @@ final class PbruCiuColorPlanController: UIViewController {
     }
 
     private func flckinkChromeVeil() {
-        while bruCiuWallFlicker.arrangedSubviews.count > 1 {
+        while !bruCiuWallFlicker.arrangedSubviews.isEmpty {
             bruCiuWallFlicker.arrangedSubviews.last?.removeFromSuperview()
         }
         ponllWallDepth()
-        bruCiuWallFlicker.addArrangedSubview(aerErstPaintGlow())
+//        bruCiuWallFlicker.addArrangedSubview(aerErstPaintGlow())
         let ponllInkGrit = PonllyponllTornEdge.flckinkPaintRun(aerErstDripTrail: ponllStencilTrace)
         for bruCiuAerosolNoise in ponllInkGrit {
             if ponllStencilTrace == .flckinkWallTexturepoj {
@@ -177,19 +179,22 @@ final class PbruCiuColorPlanController: UIViewController {
         }
     }
 
-    private func aerErstPaintGlow() -> UIView {
-        let bruCiuInkRipple = UILabel()
-        bruCiuInkRipple.text = ponllStencilTrace == .bruCiuSprayBloomponll ? "H1o2t3 4B5a6t7t8l9easb".ponllPaintaerErstHours : "Wcadietfignhgi jFkolrm nCohpaqlrlsetnugvew".ponllPaintaerErstHours
-        bruCiuInkRipple.textColor = .white
-        bruCiuInkRipple.font = PonllyFonts.muralForgepon(neonLab: 12)
-        return bruCiuInkRipple
-    }
+//    private func aerErstPaintGlow() -> UIView {
+//        let bruCiuInkRipple = UILabel()
+//        bruCiuInkRipple.text = ponllStencilTrace == .bruCiuSprayBloomponll ? "H1o2t3 4B5a6t7t8l9easb".ponllPaintaerErstHours : "Wcadietfignhgi jFkolrm nCohpaqlrlsetnugvew".ponllPaintaerErstHours
+//        bruCiuInkRipple.textColor = .white
+//        bruCiuInkRipple.font = PonllyFonts.muralForgepon(neonLab: 12)
+//        return bruCiuInkRipple
+//    }
 
     private func ponllWallDepth() {
         let flckinkMuralSurge = ponllStencilTrace == .bruCiuSprayBloomponll
         flckinkAerosolFlash.backgroundColor = flckinkMuralSurge ? PonllyPalette.pink : .clear
         flckinkAerosolFlash.setTitleColor(.white, for: .normal)
         flckinkAerosolFlash.layer.borderColor = flckinkMuralSurge ? PonllyPalette.pink.cgColor : UIColor.white.withAlphaComponent(0.35).cgColor
+        flckinkAerosolFlash.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        
+        aerErstMuralFuse.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         aerErstMuralFuse.backgroundColor = flckinkMuralSurge ? .clear : PonllyPalette.pink
         aerErstMuralFuse.setTitleColor(.white, for: .normal)
         aerErstMuralFuse.layer.borderColor = flckinkMuralSurge ? UIColor.white.withAlphaComponent(0.35).cgColor : PonllyPalette.pink.cgColor

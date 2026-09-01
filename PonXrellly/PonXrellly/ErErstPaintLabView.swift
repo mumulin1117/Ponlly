@@ -5,15 +5,15 @@ import StoreKit
 import UIKit
 
 final class ErErstPaintLabView: UIView {
-    init(user ponllLayerMap: PonllyaerErstTwoToneFillr, size bruCiuCanMap: CGFloat = 40) {
+    init(user ponllLayerMap: PonllyaerErstTwoToneFillr, size bruCiuCanMap: CGFloat = 40, borderWidth flckinkMuralPlan: CGFloat = 2) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: bruCiuCanMap).isActive = true
         heightAnchor.constraint(equalToConstant: bruCiuCanMap).isActive = true
         layer.cornerRadius = bruCiuCanMap / 2
         clipsToBounds = true
-        layer.borderWidth = 2
-        layer.borderColor = ponllLayerMap.inkDrift[1].cgColor
+        layer.borderWidth = flckinkMuralPlan
+        layer.borderColor = flckinkMuralPlan == 0 ? UIColor.clear.cgColor : ponllLayerMap.inkDrift[1].cgColor
         let flckinkCapMap = PonllyponllCyanGlowView(bruCiuDripMarker: ponllLayerMap.inkDrift)
         flckinkCapMap.translatesAutoresizingMaskIntoConstraints = false
         addSubview(flckinkCapMap)

@@ -22,11 +22,11 @@ final class PonllybruCiuUtilityBoxView: UIView {
         let flckinkStencilNoise = UILabel()
         flckinkStencilNoise.text = "Kai \(Int(aerErstWallDepth * 100))%"
         flckinkStencilNoise.textColor = .white
-        flckinkStencilNoise.font = PonllyFonts.muralForgepon(neonLab: 13)
+        flckinkStencilNoise.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .bold)
         let aerErstMarkerTexture = UILabel()
         aerErstMarkerTexture.text = "Nova \(100 - Int(aerErstWallDepth * 100))%"
         aerErstMarkerTexture.textColor = .white
-        aerErstMarkerTexture.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstMarkerTexture.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .bold)
         aerErstMarkerTexture.textAlignment = .right
         [flckinkStencilNoise, aerErstMarkerTexture].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false

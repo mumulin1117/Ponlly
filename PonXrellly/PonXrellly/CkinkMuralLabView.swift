@@ -34,7 +34,7 @@ final class CkinkMuralLabView: UIControl {
 
         let flckinkInkMarker = UIStackView()
         flckinkInkMarker.axis = .vertical
-        flckinkInkMarker.spacing = 14
+        flckinkInkMarker.spacing = 9
         flckinkInkMarker.translatesAutoresizingMaskIntoConstraints = false
         addSubview(flckinkInkMarker)
 
@@ -43,18 +43,18 @@ final class CkinkMuralLabView: UIControl {
         aerErstPaintMarker.alignment = .center
         aerErstPaintMarker.distribution = .equalSpacing
 
-        let ponllMopMarker = bruCiuDripMarker(ponllMetallicSpray)
+        let ponllMopMarker = bruCiuDripMarker(ponllMetallicSpray, flckinkMuralPlan: 0)
         ponllMopMarker.addTarget(self, action: #selector(flckinkSqueezeMarker), for: .touchUpInside)
-        let aerErstSolidMarker = bruCiuDripMarker(bruCiuNeonSpray)
+        let aerErstSolidMarker = bruCiuDripMarker(bruCiuNeonSpray, flckinkMuralPlan: 0)
         aerErstSolidMarker.addTarget(self, action: #selector(ponllStreakMarker), for: .touchUpInside)
         let bruCiuBrushMarker = UIButton(type: .system)
         bruCiuBrushMarker.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         bruCiuBrushMarker.tintColor = PonllyPalette.muted
-        bruCiuBrushMarker.layer.cornerRadius = 20
+        bruCiuBrushMarker.layer.cornerRadius = 18
         bruCiuBrushMarker.layer.borderWidth = 1
         bruCiuBrushMarker.layer.borderColor = PonllyPalette.line.cgColor
-        bruCiuBrushMarker.widthAnchor.constraint(equalToConstant: 42).isActive = true
-        bruCiuBrushMarker.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        bruCiuBrushMarker.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        bruCiuBrushMarker.heightAnchor.constraint(equalToConstant: 36).isActive = true
         bruCiuBrushMarker.addTarget(self, action: #selector(flckinkAcrylicMarker), for: .touchUpInside)
         aerErstPaintMarker.addArrangedSubview(ponllMopMarker)
         aerErstPaintMarker.addArrangedSubview(aerErstSolidMarker)
@@ -71,35 +71,32 @@ final class CkinkMuralLabView: UIControl {
         let flckinkPaintCan = aerErstCapRack()
         aerErstEnamelPaint.addSubview(flckinkPaintCan)
 
-        let ponllNozzleSet = bruCiuColorRack(ponllFinalCoat.chromeFill.uppercased(), aerErstPaperCut: 14, ponllBladeLine: PonllyPalette.cyan, bruCiuCutoutShape: .black)
-        ponllNozzleSet.font = PonllyFonts.graffitiForge(aerosolForge: 14)
-
         let flckinkPaintShelf = UILabel()
         flckinkPaintShelf.text = ponllFinalCoat.nozzleCraft
-        flckinkPaintShelf.font = PonllyFonts.muralForgepon(neonLab: 16)
+        flckinkPaintShelf.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .bold)
         flckinkPaintShelf.textColor = .white
         flckinkPaintShelf.numberOfLines = 2
 
         let aerErstCanShake = UIStackView()
         aerErstCanShake.axis = .horizontal
         aerErstCanShake.distribution = .equalSpacing
-        let ponllRattleSound = bruCiuColorRack("\(ponllFinalCoat.alleyCanvas + ponllFinalCoat.railYard) votes", aerErstPaperCut: 15, ponllBladeLine: .white, bruCiuCutoutShape: .bold)
-        let bruCiuPressureFlow = bruCiuColorRack("\(ponllFinalCoat.underpassMural.count) comments", aerErstPaperCut: 15, ponllBladeLine: PonllyPalette.muted, bruCiuCutoutShape: .bold)
+        let ponllRattleSound = ponllNozzleMist(image: "chromePiece", text: "\(ponllFinalCoat.alleyCanvas + ponllFinalCoat.railYard) votes", color: .white)
+        let bruCiuPressureFlow = ponllNozzleMist(image: "muralPiece", text: "\(ponllFinalCoat.underpassMural.count) comments", color: PonllyPalette.muted)
         aerErstCanShake.addArrangedSubview(ponllRattleSound)
         aerErstCanShake.addArrangedSubview(bruCiuPressureFlow)
 
         let flckinkFanSpray = PonllybruCiuUtilityBoxView(aVotes: ponllFinalCoat.alleyCanvas, bVotes: ponllFinalCoat.railYard)
 
-        [aerErstPaintMarker, aerErstEnamelPaint, ponllNozzleSet, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(flckinkInkMarker.addArrangedSubview)
-        [aerErstEnamelPaint, ponllNozzleSet, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
+        [aerErstPaintMarker, aerErstEnamelPaint, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(flckinkInkMarker.addArrangedSubview)
+        [aerErstEnamelPaint, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
 
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(greaterThanOrEqualToConstant: 380),
+            heightAnchor.constraint(equalToConstant: 399),
             flckinkInkMarker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
             flckinkInkMarker.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
             flckinkInkMarker.topAnchor.constraint(equalTo: topAnchor, constant: 14),
             flckinkInkMarker.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            aerErstEnamelPaint.heightAnchor.constraint(equalToConstant: 210),
+            aerErstEnamelPaint.heightAnchor.constraint(equalToConstant: 182),
             ponllLatexPaint.leadingAnchor.constraint(equalTo: aerErstEnamelPaint.leadingAnchor),
             ponllLatexPaint.topAnchor.constraint(equalTo: aerErstEnamelPaint.topAnchor),
             ponllLatexPaint.bottomAnchor.constraint(equalTo: aerErstEnamelPaint.bottomAnchor),
@@ -110,13 +107,13 @@ final class CkinkMuralLabView: UIControl {
             bruCiuSprayCan.widthAnchor.constraint(equalTo: aerErstEnamelPaint.widthAnchor, multiplier: 0.49),
             flckinkPaintCan.centerXAnchor.constraint(equalTo: aerErstEnamelPaint.centerXAnchor),
             flckinkPaintCan.centerYAnchor.constraint(equalTo: aerErstEnamelPaint.centerYAnchor),
-            flckinkPaintCan.widthAnchor.constraint(equalToConstant: 70),
-            flckinkPaintCan.heightAnchor.constraint(equalToConstant: 70),
-            flckinkFanSpray.heightAnchor.constraint(equalToConstant: 38)
+            flckinkPaintCan.widthAnchor.constraint(equalToConstant: 72),
+            flckinkPaintCan.heightAnchor.constraint(equalToConstant: 72),
+            flckinkFanSpray.heightAnchor.constraint(equalToConstant: 34)
         ])
     }
 
-    private func bruCiuDripMarker(_ flckinkShadowSpray: PonllyaerErstTwoToneFillr) -> UIControl {
+    private func bruCiuDripMarker(_ flckinkShadowSpray: PonllyaerErstTwoToneFillr, flckinkMuralPlan: CGFloat = 2) -> UIControl {
         let aerErstStencilCut = UIControl()
         let ponllStencilSheet = UIStackView()
         ponllStencilSheet.axis = .horizontal
@@ -125,10 +122,10 @@ final class CkinkMuralLabView: UIControl {
         ponllStencilSheet.isUserInteractionEnabled = false
         ponllStencilSheet.translatesAutoresizingMaskIntoConstraints = false
         aerErstStencilCut.addSubview(ponllStencilSheet)
-        ponllStencilSheet.addArrangedSubview(ErErstPaintLabView(user: flckinkShadowSpray, size: 38))
-        ponllStencilSheet.addArrangedSubview(bruCiuColorRack(flckinkShadowSpray.aerosolDream, aerErstPaperCut: 17, ponllBladeLine: .white, bruCiuCutoutShape: .bold))
+        ponllStencilSheet.addArrangedSubview(ErErstPaintLabView(user: flckinkShadowSpray, size: 36, borderWidth: flckinkMuralPlan))
+        ponllStencilSheet.addArrangedSubview(bruCiuColorRack(flckinkShadowSpray.aerosolDream, aerErstPaperCut: 13, ponllBladeLine: .white, bruCiuCutoutShape: .semibold))
         NSLayoutConstraint.activate([
-            aerErstStencilCut.heightAnchor.constraint(equalToConstant: 48),
+            aerErstStencilCut.heightAnchor.constraint(equalToConstant: 36),
             aerErstStencilCut.widthAnchor.constraint(greaterThanOrEqualToConstant: 92),
             ponllStencilSheet.leadingAnchor.constraint(equalTo: aerErstStencilCut.leadingAnchor),
             ponllStencilSheet.trailingAnchor.constraint(equalTo: aerErstStencilCut.trailingAnchor),
@@ -153,9 +150,28 @@ final class CkinkMuralLabView: UIControl {
         return flckinkSprayShield
     }
 
+    private func ponllNozzleMist(image ponllPaintBase: String, text bruCiuPaintPlan: String, color flckinkPaintMuse: UIColor) -> UIStackView {
+        let aerErstPaintCue = UIStackView()
+        aerErstPaintCue.axis = .horizontal
+        aerErstPaintCue.alignment = .center
+        aerErstPaintCue.spacing = 6
+
+        let ponllPaintSpark = UIImageView(image: UIImage(named: ponllPaintBase))
+        ponllPaintSpark.contentMode = .scaleAspectFit
+        ponllPaintSpark.translatesAutoresizingMaskIntoConstraints = false
+        let bruCiuPaintTrace = bruCiuColorRack(bruCiuPaintPlan, aerErstPaperCut: 12, ponllBladeLine: flckinkPaintMuse, bruCiuCutoutShape: .bold)
+        aerErstPaintCue.addArrangedSubview(ponllPaintSpark)
+        aerErstPaintCue.addArrangedSubview(bruCiuPaintTrace)
+        NSLayoutConstraint.activate([
+            ponllPaintSpark.widthAnchor.constraint(equalToConstant: 16),
+            ponllPaintSpark.heightAnchor.constraint(equalToConstant: 16)
+        ])
+        return aerErstPaintCue
+    }
+
     private func aerErstCapRack() -> UIView {
         let aerErstOversprayGlow = UIImageView(image: UIImage(named: "chromeShine"))
-        aerErstOversprayGlow.contentMode = .scaleAspectFit
+        aerErstOversprayGlow.contentMode = .scaleAspectFill
         aerErstOversprayGlow.translatesAutoresizingMaskIntoConstraints = false
         return aerErstOversprayGlow
     }
