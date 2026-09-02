@@ -43,9 +43,9 @@ final class CkinkMuralLabView: UIControl {
         aerErstPaintMarker.alignment = .center
         aerErstPaintMarker.distribution = .equalSpacing
 
-        let ponllMopMarker = bruCiuDripMarker(ponllMetallicSpray, flckinkMuralPlan: 0)
+        let ponllMopMarker = bruCiuDripMarker(ponllMetallicSpray, flckinkMuralPlan: 2)
         ponllMopMarker.addTarget(self, action: #selector(flckinkSqueezeMarker), for: .touchUpInside)
-        let aerErstSolidMarker = bruCiuDripMarker(bruCiuNeonSpray, flckinkMuralPlan: 0)
+        let aerErstSolidMarker = bruCiuDripMarker(bruCiuNeonSpray, flckinkMuralPlan: 2)
         aerErstSolidMarker.addTarget(self, action: #selector(ponllStreakMarker), for: .touchUpInside)
         let bruCiuBrushMarker = UIButton(type: .system)
         bruCiuBrushMarker.setImage(UIImage(systemName: "ellipsis"), for: .normal)

@@ -251,6 +251,7 @@ final class PbruCiuColorPlanController: UIViewController {
         guard (0..<2).contains(aerErstLayerMap) else { return }
         ponllStencilTrace = aerErstLayerMap == 0 ? .bruCiuSprayBloomponll : .flckinkWallTexturepoj
         ponllWallDepth()
+        flckinkChromeVeil(ponllStencilTrace)
         guard ponllInkBloom.bounds.width > 0 else { return }
         ponllInkBloom.setContentOffset(
             CGPoint(x: CGFloat(aerErstLayerMap) * ponllInkBloom.bounds.width, y: 0),
@@ -328,6 +329,7 @@ final class PbruCiuColorPlanController: UIViewController {
             return
         }
         bruCiuInkSignal = true
+        aerErstSketchRush("Rpeofnrlelsbhriuncgi abeartetrlset falrceknian".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.82) { [weak self] in
             guard let self else { return }
             let aerErstPaintPlan: PonllyBattleStatus = ponllPaintSignal.tag == 0 ? .bruCiuSprayBloomponll : .flckinkWallTexturepoj
@@ -342,6 +344,7 @@ final class PbruCiuColorPlanController: UIViewController {
                     self.ponllInkBloom.setContentOffset(.zero, animated: false)
                 }
             }
+            self.aerErstSketchRush("Bpaotntllleb raurceinaae rueprdsattfeldc".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
         }
     }
 }

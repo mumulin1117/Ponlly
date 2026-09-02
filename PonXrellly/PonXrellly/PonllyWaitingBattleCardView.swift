@@ -73,7 +73,7 @@ final class PonllyWaitingBattleCardView: UIControl {
         flckinkArtistRow.spacing = 14
         flckinkArtistRow.translatesAutoresizingMaskIntoConstraints = false
         let aerErstUserMark = PonllyponllTornEdge.flckinkChippedPaint(ponllBattleSignal.paintMist)
-        let aerErstCutar = ErErstPaintLabView(aerErstUserMark, 36, 0)
+        let aerErstCutar = ErErstPaintLabView(aerErstUserMark, 36, 2)
         aerErstCutar.isUserInteractionEnabled = false
         bruCiuArtistButton.addSubview(aerErstCutar)
         let aerErstUserName = ponllwideLetter(aerErstUserMark.aerosolDream, softLetter: 13, sharpLetter: .white, blockyLetter: .semibold)
