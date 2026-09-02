@@ -125,8 +125,10 @@ extension UIViewController {
         let aerErstCurveFlow = UIView()
         aerErstCurveFlow.tag = 909_301
         aerErstCurveFlow.backgroundColor = UIColor.black.withAlphaComponent(0.22)
+        aerErstCurveFlow.layer.zPosition = 10_000
         aerErstCurveFlow.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstCurveFlow)
+        view.bringSubviewToFront(aerErstCurveFlow)
 
         let ponllAngleBreak = UIView()
         ponllAngleBreak.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.97)
@@ -219,8 +221,10 @@ extension UIViewController {
         let flckinkLimeStroke = UIView()
         flckinkLimeStroke.tag = 909_302
         flckinkLimeStroke.backgroundColor = UIColor.black.withAlphaComponent(0.62)
+        flckinkLimeStroke.layer.zPosition = 10_000
         flckinkLimeStroke.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkLimeStroke)
+        view.bringSubviewToFront(flckinkLimeStroke)
 
         let aerErstBlackOutline = UIView()
         aerErstBlackOutline.backgroundColor = PonllyPalette.panel
