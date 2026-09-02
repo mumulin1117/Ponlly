@@ -4,7 +4,7 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PonllystencilBloomController: UIViewController {
+final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
     private enum PonllAerosolSignal: Int, CaseIterable {
         case graffitiPulse
         case aerosolDream
@@ -33,8 +33,9 @@ final class PonllystencilBloomController: UIViewController {
 
     private let ponllScrollCanvas = UIScrollView()
     private let bruCiuStackPath = UIStackView()
-    private let flckinksqueezeMarkerColumn = UIStackView()
-    private let ponllMarkerSignal = UIRefreshControl()
+    private var flckinkLayerPlans: [PonllLayerPlanView] = []
+    private weak var flckinkStyleMap: UIScrollView?
+    private var aerErstCanvasWall: CGFloat = 0
     private var bruCiuStencilSignal = false
     private var aerErstSelectedCategory: PonllAerosolSignal = .graffitiPulse
     private var ponllCategoryButtons: [UIButton] = []
@@ -45,14 +46,25 @@ final class PonllystencilBloomController: UIViewController {
       
         view.backgroundColor = PonllyPalette.background
         bruCiuSetup()
-        flckinkReloadutilityBox()
+        PonllAerosolSignal.allCases.forEach { flckinkReloadutilityBox($0) }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         tabBarController?.tabBar.isHidden = false
-        flckinkReloadutilityBox()
+        PonllAerosolSignal.allCases.forEach { flckinkReloadutilityBox($0) }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let bruCiuCanvasWall = ponllScrollCanvas.bounds.width
+        guard bruCiuCanvasWall > 0, abs(bruCiuCanvasWall - aerErstCanvasWall) > 0.5 else { return }
+        aerErstCanvasWall = bruCiuCanvasWall
+        ponllScrollCanvas.setContentOffset(
+            CGPoint(x: CGFloat(aerErstSelectedCategory.rawValue) * bruCiuCanvasWall, y: 0),
+            animated: false
+        )
     }
 
     private func bruCiuSetup() {
@@ -66,12 +78,26 @@ final class PonllystencilBloomController: UIViewController {
         ponllHeaderCanvas.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllHeaderCanvas)
 
-        ponllScrollCanvas.alwaysBounceVertical = true
-        aerErstChromeSignal()
+        ponllScrollCanvas.isPagingEnabled = true
+        ponllScrollCanvas.alwaysBounceHorizontal = true
+        ponllScrollCanvas.showsHorizontalScrollIndicator = false
+        ponllScrollCanvas.isDirectionalLockEnabled = true
+        ponllScrollCanvas.isScrollEnabled = false
+        ponllScrollCanvas.delegate = self
+        let aerErstLayerMap = UISwipeGestureRecognizer(target: self, action: #selector(bruCiuPaintFlow(_:)))
+        aerErstLayerMap.direction = .left
+        aerErstLayerMap.cancelsTouchesInView = false
+        aerErstLayerMap.delegate = self
+        ponllScrollCanvas.addGestureRecognizer(aerErstLayerMap)
+        let flckinkLayerMap = UISwipeGestureRecognizer(target: self, action: #selector(bruCiuPaintFlow(_:)))
+        flckinkLayerMap.direction = .right
+        flckinkLayerMap.cancelsTouchesInView = false
+        flckinkLayerMap.delegate = self
+        ponllScrollCanvas.addGestureRecognizer(flckinkLayerMap)
         ponllScrollCanvas.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllScrollCanvas)
 
-        bruCiuStackPath.axis = .vertical
+        bruCiuStackPath.axis = .horizontal
         bruCiuStackPath.spacing = 0
         bruCiuStackPath.translatesAutoresizingMaskIntoConstraints = false
         ponllScrollCanvas.addSubview(bruCiuStackPath)
@@ -84,6 +110,7 @@ final class PonllystencilBloomController: UIViewController {
         ponllHeaderCanvas.addSubview(aerErstTitleMark)
 
         let bruCiuStyleMap = ponllCategoryRow()
+        flckinkStyleMap = bruCiuStyleMap
         ponllHeaderCanvas.addSubview(bruCiuStyleMap)
 
         let flckinkOutlineGlow = UIView()
@@ -91,9 +118,23 @@ final class PonllystencilBloomController: UIViewController {
         flckinkOutlineGlow.translatesAutoresizingMaskIntoConstraints = false
         ponllHeaderCanvas.addSubview(flckinkOutlineGlow)
 
-        flckinksqueezeMarkerColumn.axis = .vertical
-        flckinksqueezeMarkerColumn.spacing = 16
-        bruCiuStackPath.addArrangedSubview(flckinksqueezeMarkerColumn)
+        for aerErstCategory in PonllAerosolSignal.allCases {
+            let ponllLayerPlan = PonllLayerPlanView(
+                aerErstSidewalkEdge: 14,
+                ponllRoofLine: 96,
+                bruCiuWallMark: 15,
+                flckinkLayerBlend: 16
+            )
+            ponllLayerPlan.translatesAutoresizingMaskIntoConstraints = false
+            ponllLayerPlan.flckinkPaintSignal.tag = aerErstCategory.rawValue
+            aerErstChromeSignal(ponllLayerPlan)
+            bruCiuStackPath.addArrangedSubview(ponllLayerPlan)
+            flckinkLayerPlans.append(ponllLayerPlan)
+            NSLayoutConstraint.activate([
+                ponllLayerPlan.widthAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.widthAnchor),
+                ponllLayerPlan.heightAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.heightAnchor)
+            ])
+        }
 
         NSLayoutConstraint.activate([
             ponllHeaderCanvas.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -114,24 +155,24 @@ final class PonllystencilBloomController: UIViewController {
             ponllScrollCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             ponllScrollCanvas.topAnchor.constraint(equalTo: ponllHeaderCanvas.bottomAnchor),
             ponllScrollCanvas.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.leadingAnchor, constant: 14),
-            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.trailingAnchor, constant: -14),
-            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor, constant: 15),
-            bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor, constant: -96)
+            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.leadingAnchor),
+            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.trailingAnchor),
+            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor),
+            bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor),
+            bruCiuStackPath.heightAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.heightAnchor)
         ])
     }
 
-    private func aerErstChromeSignal() {
-        ponllMarkerSignal.tintColor = PonllyPalette.cyan
-        ponllMarkerSignal.attributedTitle = NSAttributedString(
+    private func aerErstChromeSignal(_ ponllLayerPlan: PonllLayerPlanView) {
+        ponllLayerPlan.flckinkPaintSignal.tintColor = PonllyPalette.cyan
+        ponllLayerPlan.flckinkPaintSignal.attributedTitle = NSAttributedString(
             string: "Rpeofnrlelsbhriuncgi areoroemrss.t.f.l".ponllPaintaerErstHours,
             attributes: [
                 .foregroundColor: PonllyPalette.muted,
                 .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
             ]
         )
-        ponllMarkerSignal.addTarget(self, action: #selector(flckinkNeonSignal), for: .valueChanged)
-        ponllScrollCanvas.refreshControl = ponllMarkerSignal
+        ponllLayerPlan.flckinkPaintSignal.addTarget(self, action: #selector(flckinkNeonSignal(_:)), for: .valueChanged)
     }
 
     private func ponllCategoryRow() -> UIScrollView {
@@ -186,24 +227,63 @@ final class PonllystencilBloomController: UIViewController {
         }
     }
 
-    private func flckinkReloadutilityBox() {
-        flckinksqueezeMarkerColumn.arrangedSubviews.forEach {
-            flckinksqueezeMarkerColumn.removeArrangedSubview($0)
-            $0.removeFromSuperview()
+    private func ponllLayerMap(_ aerErstLayerMap: Int, bruCiuMuralBend: Bool) {
+        guard PonllAerosolSignal.allCases.indices.contains(aerErstLayerMap) else { return }
+        aerErstSelectedCategory = PonllAerosolSignal.allCases[aerErstLayerMap]
+        aerErstglossFinishCategories()
+        flckinkReloadutilityBox(aerErstSelectedCategory)
+        if let flckinkStyleMap, ponllCategoryButtons.indices.contains(aerErstLayerMap) {
+            flckinkStyleMap.layoutIfNeeded()
+            let bruCiuStylePath = ponllCategoryButtons[aerErstLayerMap].convert(
+                ponllCategoryButtons[aerErstLayerMap].bounds,
+                to: flckinkStyleMap
+            )
+            let aerErstStylePath = CGRect(
+                x: flckinkStyleMap.contentOffset.x + 12,
+                y: flckinkStyleMap.contentOffset.y,
+                width: max(flckinkStyleMap.bounds.width - 24, 0),
+                height: flckinkStyleMap.bounds.height
+            )
+            if !aerErstStylePath.contains(bruCiuStylePath) {
+                let ponllPaintPath = bruCiuStylePath.midX - flckinkStyleMap.bounds.width * 0.5
+                let flckinkPaintPath = max(flckinkStyleMap.contentSize.width - flckinkStyleMap.bounds.width, 0)
+                let aerErstPaintPath = min(max(ponllPaintPath, 0), flckinkPaintPath)
+                flckinkStyleMap.setContentOffset(CGPoint(x: aerErstPaintPath, y: 0), animated: bruCiuMuralBend)
+            }
         }
-        let ponllmatteFinish = bruCiuPaintSignal()
-        guard !ponllmatteFinish.isEmpty else {
-            flckinksqueezeMarkerColumn.addArrangedSubview(bruCiuEmptyState())
-            return
-        }
-        ponllmatteFinish.forEach { flckinksqueezeMarkerColumn.addArrangedSubview(flckinkutilityBoxCard($0)) }
+        guard ponllScrollCanvas.bounds.width > 0 else { return }
+        ponllScrollCanvas.setContentOffset(
+            CGPoint(x: CGFloat(aerErstLayerMap) * ponllScrollCanvas.bounds.width, y: 0),
+            animated: bruCiuMuralBend
+        )
     }
 
-    private func bruCiuPaintSignal() -> [PonllyaerErstWeatheredPaperm] {
+    private func bruCiuLayerBlend() {
+        guard ponllScrollCanvas.bounds.width > 0 else { return }
+        let flckinkLayerMap = Int(round(ponllScrollCanvas.contentOffset.x / ponllScrollCanvas.bounds.width))
+        ponllLayerMap(flckinkLayerMap, bruCiuMuralBend: false)
+    }
+
+    private func flckinkReloadutilityBox(_ aerErstCategory: PonllAerosolSignal) {
+        guard flckinkLayerPlans.indices.contains(aerErstCategory.rawValue) else { return }
+        let bruCiuLayerPlan = flckinkLayerPlans[aerErstCategory.rawValue].bruCiuLayerPlan
+        bruCiuLayerPlan.arrangedSubviews.forEach {
+            bruCiuLayerPlan.removeArrangedSubview($0)
+            $0.removeFromSuperview()
+        }
+        let ponllmatteFinish = bruCiuPaintSignal(aerErstCategory)
+        guard !ponllmatteFinish.isEmpty else {
+            bruCiuLayerPlan.addArrangedSubview(bruCiuEmptyState())
+            return
+        }
+        ponllmatteFinish.forEach { bruCiuLayerPlan.addArrangedSubview(flckinkutilityBoxCard($0)) }
+    }
+
+    private func bruCiuPaintSignal(_ aerErstCategory: PonllAerosolSignal) -> [PonllyaerErstWeatheredPaperm] {
         let flckinkWallSignal = PonllyponllTornEdge.aerErstAdhesiveLayer.filter {
             !PonllyponllTornEdge.aerErstRustStreak($0.gradientFill)
         }
-        switch aerErstSelectedCategory {
+        switch aerErstCategory {
         case .graffitiPulse:
             return PonllyponllTornEdge.aerErstSoftCap(ponllCleanOutline: .bruCiuSolidFill)
         case .aerosolDream:
@@ -462,21 +542,58 @@ final class PonllystencilBloomController: UIViewController {
     }
 
     @objc private func bruCiuCategoryTapped(_ flckinkSender: UIButton) {
-        aerErstSelectedCategory = PonllAerosolSignal.allCases[flckinkSender.tag]
-        aerErstglossFinishCategories()
-        flckinkReloadutilityBox()
+        ponllLayerMap(flckinkSender.tag, bruCiuMuralBend: true)
     }
 
-    @objc private func flckinkNeonSignal() {
-        guard !bruCiuStencilSignal else { return }
+    @objc private func bruCiuPaintFlow(_ aerErstLayerMap: UISwipeGestureRecognizer) {
+        let flckinkLayerMap = aerErstSelectedCategory.rawValue
+        let ponllLayerMap: Int
+        if aerErstLayerMap.direction == .left {
+            ponllLayerMap = min(flckinkLayerMap + 1, PonllAerosolSignal.allCases.count - 1)
+        } else {
+            ponllLayerMap = max(flckinkLayerMap - 1, 0)
+        }
+        guard ponllLayerMap != flckinkLayerMap else { return }
+        self.ponllLayerMap(ponllLayerMap, bruCiuMuralBend: true)
+    }
+
+    @objc private func flckinkNeonSignal(_ ponllPaintSignal: UIRefreshControl) {
+        guard !bruCiuStencilSignal else {
+            ponllPaintSignal.endRefreshing()
+            return
+        }
         bruCiuStencilSignal = true
         aerErstSketchRush("Rpeofnrlelsbhriuncgi aveoriecres trfolocmksi.n.k.p".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.88) { [weak self] in
             guard let self else { return }
-            self.flckinkReloadutilityBox()
-            self.ponllMarkerSignal.endRefreshing()
+            if PonllAerosolSignal.allCases.indices.contains(ponllPaintSignal.tag) {
+                self.flckinkReloadutilityBox(PonllAerosolSignal.allCases[ponllPaintSignal.tag])
+            }
+            ponllPaintSignal.endRefreshing()
             self.bruCiuStencilSignal = false
             self.aerErstSketchRush("Vpooinclel brrouocmisa eurpedrasttefdl".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
         }
+    }
+
+    func scrollViewDidEndDecelerating(_ aerErstCanvasWall: UIScrollView) {
+        guard aerErstCanvasWall === ponllScrollCanvas else { return }
+        bruCiuLayerBlend()
+    }
+
+    func scrollViewDidEndDragging(_ bruCiuCanvasWall: UIScrollView, willDecelerate flckinkPaintFlow: Bool) {
+        guard bruCiuCanvasWall === ponllScrollCanvas, !flckinkPaintFlow else { return }
+        bruCiuLayerBlend()
+    }
+
+    func scrollViewDidEndScrollingAnimation(_ ponllCanvasWall: UIScrollView) {
+        guard ponllCanvasWall === ponllScrollCanvas else { return }
+        bruCiuLayerBlend()
+    }
+
+    func gestureRecognizer(
+        _ aerErstPaintFlow: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith bruCiuPaintFlow: UIGestureRecognizer
+    ) -> Bool {
+        aerErstPaintFlow is UISwipeGestureRecognizer || bruCiuPaintFlow is UISwipeGestureRecognizer
     }
 }

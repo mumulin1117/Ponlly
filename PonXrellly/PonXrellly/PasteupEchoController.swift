@@ -15,14 +15,26 @@ final class PasteupEchoController: UIViewController {
     let ponllWallRhythm = UIButton(type: .system)
     let bruCiuChromeMotion = UIView()
     let flckinkNeonCascade = UIStackView()
+    let ponllCanvasWall = UIScrollView()
+    let bruCiuLayerPlan = UIStackView()
+    var flckinkTextureRipples: [UICollectionView] = []
     var aerErstTextureRipple: UICollectionView!
     var ponllPaintSurge: NSLayoutConstraint?
     var bruCiuAerosolBurst: ponllAerosolNoise = .flckinkStencilContrast
-    private let bruCiuWallSignal = UIRefreshControl()
     private var flckinkInkSignal = false
     private var aerErststencilPlanSignal = false
+    private var aerErstCanvasWall: CGFloat = 0
     var flckinkMuralBloom: [PonllystencilLab] {
-        switch bruCiuAerosolBurst {
+        ponllPaintMap(bruCiuAerosolBurst)
+    }
+
+    func bruCiuPaintMap(_ aerErstTextureRipple: UICollectionView) -> [PonllystencilLab] {
+        let flckinkLayerMap = flckinkTextureRipples.firstIndex { $0 === aerErstTextureRipple } ?? 1
+        return ponllPaintMap(flckinkLayerMap == 0 ? .bruCiuMuralTexture : .flckinkStencilContrast)
+    }
+
+    private func ponllPaintMap(_ aerErstPaintPlan: ponllAerosolNoise) -> [PonllystencilLab] {
+        switch aerErstPaintPlan {
         case .bruCiuMuralTexture:
             return PonllyponllTornEdge.ponllPaintMap().filter { PonllyponllTornEdge.aerErstCrackedWall($0.letterForm) }
         case .flckinkStencilContrast:
@@ -38,7 +50,7 @@ final class PasteupEchoController: UIViewController {
         bruCiuPaintFlash()
         flckinkInkFuse()
         aerErstMuralTrace()
-        aerErstTextureRipple.alpha = 0
+        ponllCanvasWall.alpha = 0
         DispatchQueue.main.async { [weak self] in
             self?.flckinkstencilPlanl()
         }
@@ -50,56 +62,110 @@ final class PasteupEchoController: UIViewController {
         tabBarController?.tabBar.isHidden = false
         if aerErststencilPlanSignal {
             ponllStencilVeil()
-            aerErstTextureRipple.reloadData()
             bruCiuChromeAura()
         }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
+        ponllStencilDepth()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let bruCiuCanvasWall = ponllCanvasWall.bounds.width
+        guard bruCiuCanvasWall > 0, abs(bruCiuCanvasWall - aerErstCanvasWall) > 0.5 else { return }
+        aerErstCanvasWall = bruCiuCanvasWall
+        flckinkTextureRipples.forEach { $0.collectionViewLayout.invalidateLayout() }
+        let flckinkLayerMap = bruCiuAerosolBurst == .bruCiuMuralTexture ? 0 : 1
+        ponllCanvasWall.setContentOffset(CGPoint(x: CGFloat(flckinkLayerMap) * bruCiuCanvasWall, y: 0), animated: false)
     }
 
     private func ponllSketchFlicker() {
-        let flckinkWallFlash = UICollectionViewFlowLayout()
-        flckinkWallFlash.scrollDirection = .vertical
-        flckinkWallFlash.minimumLineSpacing = 0
-        flckinkWallFlash.minimumInteritemSpacing = 0
-        aerErstTextureRipple = UICollectionView(frame: .zero, collectionViewLayout: flckinkWallFlash)
-        aerErstTextureRipple.backgroundColor = PonllyPalette.background
-        aerErstTextureRipple.isPagingEnabled = false
-        aerErstTextureRipple.decelerationRate = .fast
-        aerErstTextureRipple.alwaysBounceVertical = true
-        aerErstTextureRipple.showsVerticalScrollIndicator = false
-        aerErstTextureRipple.contentInsetAdjustmentBehavior = .never
-        aerErstTextureRipple.dataSource = self
-        aerErstTextureRipple.delegate = self
-        aerErstTextureRipple.register(MMuralGridell.self, forCellWithReuseIdentifier: MMuralGridell.ponllWallQuest)
-        ponllPaintSignal()
-        aerErstTextureRipple.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(aerErstTextureRipple)
-        aerErstTextureRipple.woodPanelPonlly(steelGate: view)
+        ponllCanvasWall.isPagingEnabled = true
+        ponllCanvasWall.alwaysBounceHorizontal = true
+        ponllCanvasWall.showsHorizontalScrollIndicator = false
+        ponllCanvasWall.isDirectionalLockEnabled = true
+        ponllCanvasWall.isScrollEnabled = false
+        ponllCanvasWall.delegate = self
+        let aerErstLayerMap = UISwipeGestureRecognizer(target: self, action: #selector(bruCiuPaintFlow(_:)))
+        aerErstLayerMap.direction = .left
+        aerErstLayerMap.cancelsTouchesInView = false
+        aerErstLayerMap.delegate = self
+        ponllCanvasWall.addGestureRecognizer(aerErstLayerMap)
+        let flckinkLayerMap = UISwipeGestureRecognizer(target: self, action: #selector(bruCiuPaintFlow(_:)))
+        flckinkLayerMap.direction = .right
+        flckinkLayerMap.cancelsTouchesInView = false
+        flckinkLayerMap.delegate = self
+        ponllCanvasWall.addGestureRecognizer(flckinkLayerMap)
+        ponllCanvasWall.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllCanvasWall)
+        ponllCanvasWall.woodPanelPonlly(steelGate: view)
+
+        bruCiuLayerPlan.axis = .horizontal
+        bruCiuLayerPlan.spacing = 0
+        bruCiuLayerPlan.translatesAutoresizingMaskIntoConstraints = false
+        ponllCanvasWall.addSubview(bruCiuLayerPlan)
+
+        for aerErstLayerMap in 0..<2 {
+            let flckinkWallFlash = UICollectionViewFlowLayout()
+            flckinkWallFlash.scrollDirection = .vertical
+            flckinkWallFlash.minimumLineSpacing = 0
+            flckinkWallFlash.minimumInteritemSpacing = 0
+            let ponllTextureRipple = UICollectionView(frame: .zero, collectionViewLayout: flckinkWallFlash)
+            ponllTextureRipple.backgroundColor = PonllyPalette.background
+            ponllTextureRipple.isPagingEnabled = false
+            ponllTextureRipple.decelerationRate = .fast
+            ponllTextureRipple.alwaysBounceVertical = true
+            ponllTextureRipple.showsVerticalScrollIndicator = false
+            ponllTextureRipple.isDirectionalLockEnabled = true
+            ponllTextureRipple.contentInsetAdjustmentBehavior = .never
+            ponllTextureRipple.dataSource = self
+            ponllTextureRipple.delegate = self
+            ponllTextureRipple.register(MMuralGridell.self, forCellWithReuseIdentifier: MMuralGridell.ponllWallQuest)
+            ponllTextureRipple.translatesAutoresizingMaskIntoConstraints = false
+            ponllPaintSignal(ponllTextureRipple, aerErstLayerMap: aerErstLayerMap)
+            bruCiuLayerPlan.addArrangedSubview(ponllTextureRipple)
+            flckinkTextureRipples.append(ponllTextureRipple)
+            NSLayoutConstraint.activate([
+                ponllTextureRipple.widthAnchor.constraint(equalTo: ponllCanvasWall.frameLayoutGuide.widthAnchor),
+                ponllTextureRipple.heightAnchor.constraint(equalTo: ponllCanvasWall.frameLayoutGuide.heightAnchor)
+            ])
+        }
+
+        NSLayoutConstraint.activate([
+            bruCiuLayerPlan.leadingAnchor.constraint(equalTo: ponllCanvasWall.contentLayoutGuide.leadingAnchor),
+            bruCiuLayerPlan.trailingAnchor.constraint(equalTo: ponllCanvasWall.contentLayoutGuide.trailingAnchor),
+            bruCiuLayerPlan.topAnchor.constraint(equalTo: ponllCanvasWall.contentLayoutGuide.topAnchor),
+            bruCiuLayerPlan.bottomAnchor.constraint(equalTo: ponllCanvasWall.contentLayoutGuide.bottomAnchor),
+            bruCiuLayerPlan.heightAnchor.constraint(equalTo: ponllCanvasWall.frameLayoutGuide.heightAnchor)
+        ])
+
+        aerErstTextureRipple = flckinkTextureRipples[1]
     }
 
-    private func ponllPaintSignal() {
-        bruCiuWallSignal.tintColor = PonllyPalette.cyan
-        bruCiuWallSignal.attributedTitle = NSAttributedString(
+    private func ponllPaintSignal(_ aerErstTextureRipple: UICollectionView, aerErstLayerMap: Int) {
+        let bruCiuPaintSignal = UIRefreshControl()
+        bruCiuPaintSignal.tag = aerErstLayerMap
+        bruCiuPaintSignal.tintColor = PonllyPalette.cyan
+        bruCiuPaintSignal.attributedTitle = NSAttributedString(
             string: "Rpeofnrlelsbhriuncgi aveirdeerosst.f.l.c".ponllPaintaerErstHours,
             attributes: [
                 .foregroundColor: PonllyPalette.muted,
                 .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
             ]
         )
-        bruCiuWallSignal.addTarget(self, action: #selector(bruCiuAerosolSignal), for: .valueChanged)
-        aerErstTextureRipple.refreshControl = bruCiuWallSignal
+        bruCiuPaintSignal.addTarget(self, action: #selector(bruCiuAerosolSignal(_:)), for: .valueChanged)
+        aerErstTextureRipple.refreshControl = bruCiuPaintSignal
     }
 
     private func flckinkstencilPlanl() {
         guard !aerErststencilPlanSignal else { return }
-        bruCiuWallSignal.beginRefreshing()
-        let ponllAerosolSignal = CGPoint(x: 0, y: -max(bruCiuWallSignal.bounds.height, 52))
+        guard let bruCiuPaintSignal = aerErstTextureRipple.refreshControl else { return }
+        bruCiuPaintSignal.beginRefreshing()
+        let ponllAerosolSignal = CGPoint(x: 0, y: -max(bruCiuPaintSignal.bounds.height, 52))
         aerErstTextureRipple.setContentOffset(ponllAerosolSignal, animated: true)
-        bruCiuAerosolSignal()
+        bruCiuAerosolSignal(bruCiuPaintSignal)
     }
 
     private func bruCiuPaintFlash() {
@@ -183,8 +249,9 @@ final class PasteupEchoController: UIViewController {
         ponllWallRhythm.setTitleColor(bruCiuStencilEcho ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
         aerErstSignBack.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
         ponllWallRhythm.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
-        flckinkNeonCascade.isHidden = !(bruCiuAerosolBurst == .bruCiuMuralTexture && flckinkMuralBloom.isEmpty)
-        aerErstTextureRipple.isHidden = bruCiuAerosolBurst == .bruCiuMuralTexture && flckinkMuralBloom.isEmpty
+        flckinkTextureRipples.forEach { $0.isHidden = false }
+        flckinkNeonCascade.isHidden = !flckinkMuralBloom.isEmpty
+        aerErstTextureRipple.isHidden = flckinkMuralBloom.isEmpty
         ponllPaintSurge?.isActive = false
         ponllPaintSurge = bruCiuChromeMotion.centerXAnchor.constraint(equalTo: bruCiuStencilEcho ? ponllWallRhythm.centerXAnchor : aerErstSignBack.centerXAnchor)
         ponllPaintSurge?.isActive = true
@@ -194,9 +261,10 @@ final class PasteupEchoController: UIViewController {
     }
 
     func ponllStencilVeil() {
-        aerErstTextureRipple.reloadData()
-        aerErstTextureRipple.layoutIfNeeded()
-        aerErstTextureRipple.setContentOffset(.zero, animated: false)
+        flckinkTextureRipples.forEach {
+            $0.reloadData()
+            $0.layoutIfNeeded()
+        }
         aerErstMuralTrace()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.bruCiuChromeAura()
@@ -224,8 +292,9 @@ final class PasteupEchoController: UIViewController {
     }
 
     func ponllStencilDepth() {
-        guard !aerErstTextureRipple.isHidden else { return }
-        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
+        flckinkTextureRipples.forEach { ponllTextureRipple in
+            ponllTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
+        }
     }
 
     func bruCiuAerosolTrail(flckinkStencilTrail: CGFloat, aerErstMarkerVeil: CGFloat) -> CGFloat {
@@ -252,37 +321,69 @@ final class PasteupEchoController: UIViewController {
         return ponllMuralBend && aerErstPaintLean
     }
 
+    func ponllLayerMap(_ aerErstLayerMap: Int, bruCiuMuralBend: Bool) {
+        guard flckinkTextureRipples.indices.contains(aerErstLayerMap) else { return }
+        let ponllPaintPath = CGFloat(aerErstLayerMap) * ponllCanvasWall.bounds.width
+        let flckinkPaintMotion = abs(ponllCanvasWall.contentOffset.x - ponllPaintPath) > 0.5
+        bruCiuAerosolBurst = aerErstLayerMap == 0 ? .bruCiuMuralTexture : .flckinkStencilContrast
+        aerErstTextureRipple = flckinkTextureRipples[aerErstLayerMap]
+        aerErstMuralTrace()
+        if flckinkPaintMotion {
+            ponllStencilDepth()
+        }
+        ponllCanvasWall.setContentOffset(CGPoint(x: ponllPaintPath, y: 0), animated: bruCiuMuralBend)
+        if !bruCiuMuralBend || !flckinkPaintMotion {
+            bruCiuChromeAura()
+        }
+    }
+
+    func bruCiuLayerBlend() {
+        guard ponllCanvasWall.bounds.width > 0 else { return }
+        let flckinkLayerMap = Int(round(ponllCanvasWall.contentOffset.x / ponllCanvasWall.bounds.width))
+        ponllLayerMap(flckinkLayerMap, bruCiuMuralBend: false)
+    }
+
     func aerErstAerosolLean(_ bruCiuStencilWeave: @escaping () -> Void) {
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self, ponllOversprayGlow: bruCiuStencilWeave)
     }
 
     @objc private func bruCiuTextureSignal() {
-        bruCiuAerosolBurst = .bruCiuMuralTexture
-        ponllStencilVeil()
+        ponllLayerMap(0, bruCiuMuralBend: true)
     }
 
     @objc private func flckinkSketchCue() {
-        bruCiuAerosolBurst = .flckinkStencilContrast
-        ponllStencilVeil()
+        ponllLayerMap(1, bruCiuMuralBend: true)
     }
 
-    @objc private func bruCiuAerosolSignal() {
-        guard !flckinkInkSignal else { return }
+    @objc private func bruCiuPaintFlow(_ aerErstLayerMap: UISwipeGestureRecognizer) {
+        let flckinkLayerMap = bruCiuAerosolBurst == .bruCiuMuralTexture ? 0 : 1
+        let ponllLayerMap = aerErstLayerMap.direction == .left ? min(flckinkLayerMap + 1, 1) : max(flckinkLayerMap - 1, 0)
+        guard ponllLayerMap != flckinkLayerMap else { return }
+        self.ponllLayerMap(ponllLayerMap, bruCiuMuralBend: true)
+    }
+
+    @objc private func bruCiuAerosolSignal(_ ponllPaintSignal: UIRefreshControl) {
+        guard !flckinkInkSignal else {
+            ponllPaintSignal.endRefreshing()
+            return
+        }
         flckinkInkSignal = true
-        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
+        ponllStencilDepth()
         aerErstSketchRush("Rpeofnrlelsbhriuncgi aveirdeerosst".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.86) { [weak self] in
             guard let self else { return }
-            self.aerErstTextureRipple.reloadData()
-            self.aerErstTextureRipple.layoutIfNeeded()
+            if self.flckinkTextureRipples.indices.contains(ponllPaintSignal.tag) {
+                self.flckinkTextureRipples[ponllPaintSignal.tag].reloadData()
+                self.flckinkTextureRipples[ponllPaintSignal.tag].layoutIfNeeded()
+            }
             self.aerErstMuralTrace()
-            self.bruCiuWallSignal.endRefreshing()
+            ponllPaintSignal.endRefreshing()
             self.flckinkInkSignal = false
             let ponllInitialSignal = !self.aerErststencilPlanSignal
             self.aerErststencilPlanSignal = true
             if ponllInitialSignal {
                 UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
-                    self.aerErstTextureRipple.alpha = 1
+                    self.ponllCanvasWall.alpha = 1
                     self.aerErstTextureRipple.setContentOffset(.zero, animated: false)
                 }
             }

@@ -1,14 +1,22 @@
 import AVFoundation
 import UIKit
 
-extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, UIGestureRecognizerDelegate {
+    func gestureRecognizer(
+        _ aerErstPaintFlow: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith bruCiuPaintFlow: UIGestureRecognizer
+    ) -> Bool {
+        aerErstPaintFlow is UISwipeGestureRecognizer || bruCiuPaintFlow is UISwipeGestureRecognizer
+    }
+
     func collectionView(_ ponllUrbanMuse: UICollectionView, numberOfItemsInSection bruCiuNeonMuse: Int) -> Int {
-        flckinkMuralBloom.count
+        bruCiuPaintMap(ponllUrbanMuse).count
     }
 
     func collectionView(_ flckinkChromeMuse: UICollectionView, cellForItemAt aerErstShadowMuse: IndexPath) -> UICollectionViewCell {
         let ponllStencilMuse = flckinkChromeMuse.dequeueReusableCell(withReuseIdentifier: MMuralGridell.ponllWallQuest, for: aerErstShadowMuse) as! MMuralGridell
-        var bruCiuPasteMuse = flckinkMuralBloom[aerErstShadowMuse.item]
+        let aerErstPaintMap = bruCiuPaintMap(flckinkChromeMuse)
+        var bruCiuPasteMuse = aerErstPaintMap[aerErstShadowMuse.item]
         bruCiuPasteMuse.brickTone = PonllyponllTornEdge.aerErstCrackedWall(bruCiuPasteMuse.letterForm)
         ponllStencilMuse.flckinkAerosolLean(ponllMuralTwist: bruCiuPasteMuse)
         ponllStencilMuse.bruCiuInkMood = { [weak self] in
@@ -77,11 +85,23 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
     }
 
     func scrollViewDidEndDecelerating(_ flckinkNeonForge: UIScrollView) {
+        if flckinkNeonForge === ponllCanvasWall {
+            bruCiuLayerBlend()
+            return
+        }
+        guard flckinkNeonForge === aerErstTextureRipple else { return }
         bruCiuInkArc(ponllMuralBend: false)
         bruCiuChromeAura()
     }
 
     func scrollViewDidEndDragging(_ aerErstPasteForge: UIScrollView, willDecelerate ponllGraffitiDraft: Bool) {
+        if aerErstPasteForge === ponllCanvasWall {
+            if !ponllGraffitiDraft {
+                bruCiuLayerBlend()
+            }
+            return
+        }
+        guard aerErstPasteForge === aerErstTextureRipple else { return }
         if !ponllGraffitiDraft {
             if !bruCiuInkArc(ponllMuralBend: true) {
                 bruCiuChromeAura()
@@ -90,10 +110,16 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
     }
 
     func scrollViewDidEndScrollingAnimation(_ bruCiuAerosolDraft: UIScrollView) {
+        if bruCiuAerosolDraft === ponllCanvasWall {
+            bruCiuLayerBlend()
+            return
+        }
+        guard bruCiuAerosolDraft === aerErstTextureRipple else { return }
         bruCiuChromeAura()
     }
 
     func scrollViewWillEndDragging(_ flckinkMuralDraft: UIScrollView, withVelocity aerErstLetterDraft: CGPoint, targetContentOffset ponllPaintDraft: UnsafeMutablePointer<CGPoint>) {
+        guard flckinkMuralDraft === aerErstTextureRipple else { return }
         ponllPaintDraft.pointee.y = bruCiuAerosolTrail(flckinkStencilTrail: ponllPaintDraft.pointee.y, aerErstMarkerVeil: aerErstLetterDraft.y)
         ponllPaintDraft.pointee.x = 0
     }
