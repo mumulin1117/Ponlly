@@ -9,6 +9,8 @@ final class PbruCiuClearCoatView: UIView {
     private let bruCiuNeonFlicker = UIImageView()
     private let flckinkTextureFlash = UILabel()
     private let aerErstSketchFuse = CAShapeLayer()
+    private let ponllMuralCueView = UIButton(type: .system)
+    private var bruCiuMuralCue = false
 
     init(ponllPaintTrace: PonllyaerErstSolidMarkerk) {
         super.init(frame: .zero)
@@ -22,8 +24,7 @@ final class PbruCiuClearCoatView: UIView {
         ponllChromeBloom.endPoint = CGPoint(x: 1, y: 1)
         layer.insertSublayer(ponllChromeBloom, at: 0)
 
-        bruCiuNeonFlicker.image = PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: ponllPaintTrace.stencilBloom)
-            ?? PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: PbruCiuClearCoatView.bruCiuPaintPiece(for: ponllPaintTrace))
+        bruCiuNeonFlicker.image = PbruCiuClearCoatView.ponllPaintMap(for: ponllPaintTrace)
         bruCiuNeonFlicker.contentMode = .scaleAspectFill
         bruCiuNeonFlicker.translatesAutoresizingMaskIntoConstraints = false
         bruCiuNeonFlicker.isHidden = bruCiuNeonFlicker.image == nil
@@ -56,6 +57,11 @@ final class PbruCiuClearCoatView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    static func ponllPaintMap(for ponllPaintTrace: PonllyaerErstSolidMarkerk) -> UIImage? {
+        PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: ponllPaintTrace.stencilBloom)
+            ?? PonllyponllTornEdge.bruCiuChromeShine(flckinkColorFade: bruCiuPaintPiece(for: ponllPaintTrace))
+    }
+
     private static func bruCiuPaintPiece(for ponllPaintTrace: PonllyaerErstSolidMarkerk) -> String {
         let flckinkWallPiece = [
             "urbanCanvas",
@@ -69,6 +75,53 @@ final class PbruCiuClearCoatView: UIView {
         ]
         let aerErstColorPiece = abs(ponllPaintTrace.graffitiPulse.hashValue) % flckinkWallPiece.count
         return flckinkWallPiece[aerErstColorPiece]
+    }
+
+    func ponllMuralCue() {
+        guard ponllMuralCueView.superview == nil else { return }
+        ponllMuralCueView.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        ponllMuralCueView.setTitle("3xDy".ponllPaintaerErstHours, for: .normal)
+        ponllMuralCueView.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
+        ponllMuralCueView.setTitleColor(.white, for: .normal)
+        ponllMuralCueView.tintColor = .white
+        ponllMuralCueView.backgroundColor = UIColor.black.withAlphaComponent(0.76)
+        ponllMuralCueView.contentHorizontalAlignment = .center
+        ponllMuralCueView.imageView?.contentMode = .scaleAspectFit
+        ponllMuralCueView.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 2)
+        ponllMuralCueView.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)
+        ponllMuralCueView.layer.cornerRadius = 14
+        ponllMuralCueView.layer.borderWidth = 1
+        ponllMuralCueView.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.9).cgColor
+        ponllMuralCueView.layer.shadowColor = PonllyPalette.cyan.cgColor
+        ponllMuralCueView.layer.shadowOpacity = 0.42
+        ponllMuralCueView.layer.shadowRadius = 7
+        ponllMuralCueView.isUserInteractionEnabled = false
+        ponllMuralCueView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(ponllMuralCueView)
+        NSLayoutConstraint.activate([
+            ponllMuralCueView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            ponllMuralCueView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+            ponllMuralCueView.widthAnchor.constraint(equalToConstant: 64),
+            ponllMuralCueView.heightAnchor.constraint(equalToConstant: 28)
+        ])
+    }
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        guard window != nil, ponllMuralCueView.superview != nil, !bruCiuMuralCue else { return }
+        bruCiuMuralCue = true
+        ponllMuralCueView.transform = CGAffineTransform(scaleX: 0.78, y: 0.78)
+        ponllMuralCueView.alpha = 0.58
+        UIView.animate(
+            withDuration: 0.72,
+            delay: 0.18,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0.8,
+            options: [.curveEaseOut]
+        ) {
+            self.ponllMuralCueView.transform = .identity
+            self.ponllMuralCueView.alpha = 1
+        }
     }
 
     override func layoutSubviews() {

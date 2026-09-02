@@ -215,12 +215,18 @@ final class PbruCiuColorPlanController: UIViewController {
                 flckinkMuralTexture.zMotion = { [weak self] aerErstStencilMotion in self?.flckinkNeonCascade(aerErstStencilMotion) }
                 flckinkMuralTexture.styleNoise = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
                 flckinkMuralTexture.bruCiuMuralForge = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
+                flckinkMuralTexture.ponllMuralWall = { [weak self] ponllPaintMap, bruCiuStyleMap in
+                    self?.aerErstMuralWall(ponllPaintMap, bruCiuStyleMap)
+                }
                 bruCiuLayerPlan.addArrangedSubview(flckinkMuralTexture)
             } else {
                 let aerErstSketchContrast = CkinkMuralLabView(flckinkWallPaste: bruCiuAerosolNoise)
                 aerErstSketchContrast.bruCiuSilverSheen = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
                 aerErstSketchContrast.flckinkPrimerCoat = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
                 aerErstSketchContrast.aerErstPaintBase = { [weak self] ponllWallBurst in self?.flckinkNeonCascade(ponllWallBurst) }
+                aerErstSketchContrast.ponllMuralWall = { [weak self] ponllPaintMap, bruCiuStyleMap in
+                    self?.aerErstMuralWall(ponllPaintMap, bruCiuStyleMap)
+                }
                 bruCiuLayerPlan.addArrangedSubview(aerErstSketchContrast)
             }
         }
@@ -296,6 +302,18 @@ final class PbruCiuColorPlanController: UIViewController {
             ponllAerosolEcho.modalTransitionStyle = .crossDissolve
             self.present(ponllAerosolEcho, animated: true)
         }
+    }
+
+    private func aerErstMuralWall(
+        _ ponllPaintMap: PonllyaerErstSolidMarkerk,
+        _ bruCiuStyleMap: PonllyaerErstTwoToneFillr
+    ) {
+        let flckinkMuralWall = PonllMuralWallController(
+            ponllPaintMap: ponllPaintMap,
+            bruCiuStyleMap: bruCiuStyleMap
+        )
+        flckinkMuralWall.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(flckinkMuralWall, animated: true)
     }
 
     @objc private func bruCiuSketchWeave(_ aerErstPaintPath: UIButton) {

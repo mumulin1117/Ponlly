@@ -9,6 +9,7 @@ final class CkinkMuralLabView: UIControl {
     var bruCiuSilverSheen: (() -> Void)?
     var flckinkPrimerCoat: (() -> Void)?
     var aerErstPaintBase: ((PonllyaerErstTwoToneFillr) -> Void)?
+    var ponllMuralWall: ((PonllyaerErstSolidMarkerk, PonllyaerErstTwoToneFillr) -> Void)?
     private let ponllFinalCoat: PonllyBattle
 
     init(flckinkWallPaste bruCiuClearCoat: PonllyBattle) {
@@ -64,6 +65,14 @@ final class CkinkMuralLabView: UIControl {
         aerErstEnamelPaint.translatesAutoresizingMaskIntoConstraints = false
         let ponllLatexPaint = PbruCiuClearCoatView(ponllPaintTrace: ponllFinalCoat.neonDrip)
         let bruCiuSprayCan = ponllFinalCoat.concreteMuse.map { PbruCiuClearCoatView(ponllPaintTrace: $0) } ?? PonllyEmptyOpponentView()
+        ponllLatexPaint.ponllMuralCue()
+        ponllLatexPaint.isUserInteractionEnabled = true
+        ponllLatexPaint.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bruCiuWallMap)))
+        if ponllFinalCoat.concreteMuse != nil {
+            (bruCiuSprayCan as? PbruCiuClearCoatView)?.ponllMuralCue()
+            bruCiuSprayCan.isUserInteractionEnabled = true
+            bruCiuSprayCan.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flckinkWallMap)))
+        }
         ponllLatexPaint.translatesAutoresizingMaskIntoConstraints = false
         bruCiuSprayCan.translatesAutoresizingMaskIntoConstraints = false
         aerErstEnamelPaint.addSubview(ponllLatexPaint)
@@ -91,7 +100,7 @@ final class CkinkMuralLabView: UIControl {
         flckinkInkMarker.setCustomSpacing(28, after: aerErstEnamelPaint)
         flckinkInkMarker.setCustomSpacing(10, after: flckinkPaintShelf)
         flckinkInkMarker.setCustomSpacing(16, after: aerErstCanShake)
-        [aerErstEnamelPaint, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
+        [flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
 
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 399),
@@ -193,5 +202,20 @@ final class CkinkMuralLabView: UIControl {
 
     @objc private func ponllStreakMarker() {
         aerErstPaintBase?(PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.colorSplash))
+    }
+
+    @objc private func bruCiuWallMap() {
+        ponllMuralWall?(
+            ponllFinalCoat.neonDrip,
+            PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.paintMist)
+        )
+    }
+
+    @objc private func flckinkWallMap() {
+        guard let aerErstWallMap = ponllFinalCoat.concreteMuse else { return }
+        ponllMuralWall?(
+            aerErstWallMap,
+            PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.colorSplash)
+        )
     }
 }

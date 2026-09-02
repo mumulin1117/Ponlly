@@ -10,6 +10,7 @@ final class PonllyWaitingBattleCardView: UIControl {
     var zMotion: ((PonllyaerErstTwoToneFillr) -> Void)?
     var styleNoise: (() -> Void)?
     var bruCiuMuralForge: (() -> Void)?
+    var ponllMuralWall: ((PonllyaerErstSolidMarkerk, PonllyaerErstTwoToneFillr) -> Void)?
     private let ponllBattleSignal: PonllyBattle
 
     init(fencePiece ponllBattleSignal: PonllyBattle) {
@@ -40,6 +41,9 @@ final class PonllyWaitingBattleCardView: UIControl {
         ponllArtworkPanel.layer.cornerRadius = 14
         ponllArtworkPanel.clipsToBounds = true
         ponllArtworkPanel.heightAnchor.constraint(equalToConstant: 210).isActive = true
+        ponllArtworkPanel.ponllMuralCue()
+        ponllArtworkPanel.isUserInteractionEnabled = true
+        ponllArtworkPanel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ponllWallMap)))
 
         let bruCiuMoreButton = UIButton(type: .system)
         bruCiuMoreButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
@@ -95,7 +99,7 @@ final class PonllyWaitingBattleCardView: UIControl {
         aerErstStackPath.setCustomSpacing(18, after: ponllArtworkPanel)
         aerErstStackPath.setCustomSpacing(12, after: flckinkTitleRow)
         aerErstStackPath.setCustomSpacing(18, after: flckinkArtistRow)
-        [ponllArtworkPanel, flckinkTitleRow].forEach(flckinkAttachangularLetter)
+        [flckinkTitleRow].forEach(flckinkAttachangularLetter)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 399),
             aerErstStackPath.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
@@ -139,5 +143,12 @@ final class PonllyWaitingBattleCardView: UIControl {
 
     @objc private func bruCiuMuralForgeTapped() {
         bruCiuMuralForge?()
+    }
+
+    @objc private func ponllWallMap() {
+        ponllMuralWall?(
+            ponllBattleSignal.neonDrip,
+            PonllyponllTornEdge.flckinkChippedPaint(ponllBattleSignal.paintMist)
+        )
     }
 }

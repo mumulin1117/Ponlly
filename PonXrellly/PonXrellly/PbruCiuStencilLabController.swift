@@ -172,6 +172,14 @@ final class PbruCiuStencilLabController: UIViewController {
         flckinkPasteWrinkle.translatesAutoresizingMaskIntoConstraints = false
         let aerErstAdhesiveLayer = PbruCiuClearCoatView(ponllPaintTrace: ponllMuralBloom.neonDrip)
         let ponllWallPeel = ponllMuralBloom.concreteMuse.map { PbruCiuClearCoatView(ponllPaintTrace: $0) } ?? PonllyEmptyOpponentView()
+        aerErstAdhesiveLayer.ponllMuralCue()
+        aerErstAdhesiveLayer.isUserInteractionEnabled = true
+        aerErstAdhesiveLayer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aerErstWallMap)))
+        if ponllMuralBloom.concreteMuse != nil {
+            (ponllWallPeel as? PbruCiuClearCoatView)?.ponllMuralCue()
+            ponllWallPeel.isUserInteractionEnabled = true
+            ponllWallPeel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ponllWallMap)))
+        }
         [aerErstAdhesiveLayer, ponllWallPeel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             flckinkPasteWrinkle.addSubview($0)
@@ -196,6 +204,24 @@ final class PbruCiuStencilLabController: UIViewController {
             bruCiuPaintPeel.heightAnchor.constraint(equalToConstant: 84)
         ])
         return flckinkPasteWrinkle
+    }
+
+    @objc private func aerErstWallMap() {
+        let bruCiuStyleMap = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralBloom.paintMist)
+        flckinkMuralWall(ponllMuralBloom.neonDrip, bruCiuStyleMap: bruCiuStyleMap)
+    }
+
+    @objc private func ponllWallMap() {
+        guard let bruCiuPaintMap = ponllMuralBloom.concreteMuse,
+              let flckinkStyleMap = ponllMuralBloom.colorSplash else { return }
+        let aerErstStyleMap = PonllyponllTornEdge.flckinkChippedPaint(flckinkStyleMap)
+        flckinkMuralWall(bruCiuPaintMap, bruCiuStyleMap: aerErstStyleMap)
+    }
+
+    private func flckinkMuralWall(_ ponllPaintMap: PonllyaerErstSolidMarkerk, bruCiuStyleMap: PonllyaerErstTwoToneFillr) {
+        let aerErstMuralWall = PonllMuralWallController(ponllPaintMap: ponllPaintMap, bruCiuStyleMap: bruCiuStyleMap)
+        aerErstMuralWall.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(aerErstMuralWall, animated: true)
     }
 
     private func ponllStencilCue() -> UIView {
