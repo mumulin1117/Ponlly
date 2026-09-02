@@ -166,7 +166,8 @@ final class PonllymuralKickntroller: UIViewController {
         aerErstPaperLayer.addSubview(aerErstColorPrint)
 
         let ponllHandbillTexture = UILabel()
-        ponllHandbillTexture.text = aerErstStencilGrit.urbanCanvas
+        let bruCiuWallTrace = aerErstStencilGrit.urbanCanvas.trimmingCharacters(in: .whitespacesAndNewlines)
+        ponllHandbillTexture.text = bruCiuWallTrace.isEmpty ? "Nxoy zsAiBgCnDaEtFuGrHeI".ponllPaintaerErstHours : bruCiuWallTrace
         ponllHandbillTexture.textColor = PonllyPalette.muted
         ponllHandbillTexture.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         ponllHandbillTexture.numberOfLines = 0

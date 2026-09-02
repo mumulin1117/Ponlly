@@ -44,30 +44,17 @@ final class PonllycyanGlowController: UIViewController {
         bruCiuEdgeMask.woodPanelPonlly(steelGate: view)
 
         let flckinkLayerMask = UIView()
-        flckinkLayerMask.backgroundColor = UIColor.black.withAlphaComponent(0.55)
+        flckinkLayerMask.backgroundColor = .clear
         flckinkLayerMask.layer.cornerRadius = 65
-        flckinkLayerMask.layer.borderWidth = 3
-        flckinkLayerMask.layer.borderColor = PonllyPalette.pink.cgColor
-        flckinkLayerMask.layer.shadowColor = PonllyPalette.cyan.cgColor
-        flckinkLayerMask.layer.shadowOpacity = 0.34
-        flckinkLayerMask.layer.shadowRadius = 24
+        flckinkLayerMask.layer.borderWidth = 0
         flckinkLayerMask.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkLayerMask)
 
-        let aerErstPaperCut = UIImageView(image: bruCiuNeonPath ?? PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "pasteupEcho"))
-        aerErstPaperCut.contentMode = .scaleAspectFill
-        aerErstPaperCut.clipsToBounds = true
-        aerErstPaperCut.layer.cornerRadius = 57
+        let aerErstPaperCut = UIImageView(image: UIImage(named: "chromeAura"))
+        aerErstPaperCut.contentMode = .scaleAspectFit
+        aerErstPaperCut.clipsToBounds = false
         aerErstPaperCut.translatesAutoresizingMaskIntoConstraints = false
         flckinkLayerMask.addSubview(aerErstPaperCut)
-
-        let ponllBladeLine = UILabel()
-        ponllBladeLine.text = ponllChromeMood
-        ponllBladeLine.textColor = PonllyPalette.cyan
-        ponllBladeLine.textAlignment = .center
-        ponllBladeLine.font = PonllyFonts.steelGate(rollingShutter: 8)
-        ponllBladeLine.translatesAutoresizingMaskIntoConstraints = false
-        flckinkLayerMask.addSubview(ponllBladeLine)
 
         let ponllSprayHalo = UILabel()
         ponllSprayHalo.text = "Welcome To\nPonlly"
@@ -109,12 +96,9 @@ final class PonllycyanGlowController: UIViewController {
             flckinkLayerMask.widthAnchor.constraint(equalToConstant: 130),
             flckinkLayerMask.heightAnchor.constraint(equalToConstant: 130),
             aerErstPaperCut.centerXAnchor.constraint(equalTo: flckinkLayerMask.centerXAnchor),
-            aerErstPaperCut.centerYAnchor.constraint(equalTo: flckinkLayerMask.centerYAnchor, constant: -1),
-            aerErstPaperCut.widthAnchor.constraint(equalToConstant: 114),
-            aerErstPaperCut.heightAnchor.constraint(equalToConstant: 114),
-            ponllBladeLine.leadingAnchor.constraint(equalTo: flckinkLayerMask.leadingAnchor, constant: 8),
-            ponllBladeLine.trailingAnchor.constraint(equalTo: flckinkLayerMask.trailingAnchor, constant: -8),
-            ponllBladeLine.bottomAnchor.constraint(equalTo: flckinkLayerMask.bottomAnchor, constant: -10),
+            aerErstPaperCut.centerYAnchor.constraint(equalTo: flckinkLayerMask.centerYAnchor),
+            aerErstPaperCut.widthAnchor.constraint(equalTo: flckinkLayerMask.widthAnchor),
+            aerErstPaperCut.heightAnchor.constraint(equalTo: flckinkLayerMask.heightAnchor),
 
             ponllSprayHalo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42),
             ponllSprayHalo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -42),

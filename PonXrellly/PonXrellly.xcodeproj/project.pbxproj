@@ -150,9 +150,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PonXrellly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ponlly;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Ponlly needs camera access so you can join friends graffiti video calls.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ponlly needs microphone access so you can speak during graffiti calls.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Ponlly needs photo library access so you can send graffiti images in conversations.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Ponlly needs camera access so you can join friends graffiti calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ponlly needs microphone access so you can speak after taking a seat in voice rooms and during graffiti calls.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Ponlly needs photo library access so you can upload profile photos and cover images, publish graffiti challenge posts, and send graffiti images in conversations.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -193,9 +193,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PonXrellly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ponlly;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Ponlly needs camera access so you can join friends graffiti video calls.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ponlly needs microphone access so you can speak during graffiti calls.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Ponlly needs photo library access so you can send graffiti images in conversations.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Ponlly needs camera access so you can join friends graffiti calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ponlly needs microphone access so you can speak after taking a seat in voice rooms and during graffiti calls.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Ponlly needs photo library access so you can upload profile photos and cover images, publish graffiti challenge posts, and send graffiti images in conversations.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

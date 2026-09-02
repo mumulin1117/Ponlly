@@ -197,6 +197,57 @@ enum PonllyponllTornEdge {
     private static let paintMarker = "poopnqlrlsytCuuvrwrxeynztAPBrCoDfEiFlGeHIInJtKeLrMeNsOtPsQ".ponllPaintaerErstHours
     private static let mopMarker = "pRoSnTlUlVyWCXuYrZr0e1n2t3P4r5o6f7i8l9eaAbvcadteafrgPhaitjhk".ponllPaintaerErstHours
     private static let dripMarker = "plomnnlolpyqCrusrtruevnwtxPyrzoAfBiClDeECFoGvHeIrJPKaLtMhN".ponllPaintaerErstHours
+    private static var ponllPaintTrace: String {
+        let bruCiuWallTrace = FlckinkMatteFinish.shared.ponllLineSpray?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .lowercased() ?? ""
+        return bruCiuWallTrace.isEmpty ? glossFinish : bruCiuWallTrace
+    }
+
+    private static func flckinkStyleTrace(_ aerErstColorTrace: String) -> String? {
+        if let ponllInkTrace = UserDefaults.standard.dictionary(forKey: aerErstColorTrace),
+           let bruCiuLayerTrace = ponllInkTrace[ponllPaintTrace] as? String {
+            return bruCiuLayerTrace
+        }
+        guard let ponllWallTrace = UserDefaults.standard.string(forKey: aerErstColorTrace) else { return nil }
+        aerErstPaintTrace(ponllWallTrace, bruCiuLayerTrace: aerErstColorTrace)
+        return ponllWallTrace
+    }
+
+    private static func aerErstPaintTrace(_ ponllWallTrace: String, bruCiuLayerTrace: String) {
+        var flckinkColorTrace = UserDefaults.standard.dictionary(forKey: bruCiuLayerTrace) ?? [:]
+        flckinkColorTrace[ponllPaintTrace] = ponllWallTrace
+        UserDefaults.standard.set(flckinkColorTrace, forKey: bruCiuLayerTrace)
+    }
+
+    private static func ponllInkTrace(_ bruCiuLayerTrace: String) -> [String]? {
+        if let flckinkColorTrace = UserDefaults.standard.dictionary(forKey: bruCiuLayerTrace),
+           let aerErstWallTrace = flckinkColorTrace[ponllPaintTrace] as? [String] {
+            return aerErstWallTrace
+        }
+        guard let ponllWallTrace = UserDefaults.standard.stringArray(forKey: bruCiuLayerTrace) else { return nil }
+        bruCiuPaintTrace(ponllWallTrace, aerErstColorTrace: bruCiuLayerTrace)
+        return ponllWallTrace
+    }
+
+    private static func bruCiuPaintTrace(_ ponllWallTrace: [String], aerErstColorTrace: String) {
+        var flckinkColorTrace = UserDefaults.standard.dictionary(forKey: aerErstColorTrace) ?? [:]
+        flckinkColorTrace[ponllPaintTrace] = ponllWallTrace
+        UserDefaults.standard.set(flckinkColorTrace, forKey: aerErstColorTrace)
+    }
+
+    private static func flckinkPaintTrace(_ aerErstColorTrace: String) {
+        if var ponllInkTrace = UserDefaults.standard.dictionary(forKey: aerErstColorTrace) {
+            ponllInkTrace.removeValue(forKey: ponllPaintTrace)
+            if ponllInkTrace.isEmpty {
+                UserDefaults.standard.removeObject(forKey: aerErstColorTrace)
+            } else {
+                UserDefaults.standard.set(ponllInkTrace, forKey: aerErstColorTrace)
+            }
+        } else {
+            UserDefaults.standard.removeObject(forKey: aerErstColorTrace)
+        }
+    }
     static var ponllRattleSounddIds: Set<String> = ["u02", "u05", "u17", "u20"]
     static let bruCiuPressureFlowIds: Set<String> = ["u02", "u05", "u09", "u17", "u20"]
     static var flckinkFanSprayIds: Set<String> = ["u16", "u18"]
@@ -589,12 +640,12 @@ enum PonllyponllTornEdge {
     static var ponllPipeShadowInterests: [String] {
         get {
             if bruCiuFireEscape {
-                return UserDefaults.standard.stringArray(forKey: paintMarker) ?? []
+                return ponllInkTrace(paintMarker) ?? []
             }
-            return UserDefaults.standard.stringArray(forKey: paintMarker) ?? ["W2i3l4d5s6t7y8l9ea".ponllPaintaerErstHours, "Cbhcrdoemfeg hLiejtktlemrnso".ponllPaintaerErstHours, "Sptqrresettu vAwrxty".ponllPaintaerErstHours]
+            return ponllInkTrace(paintMarker) ?? ["W2i3l4d5s6t7y8l9ea".ponllPaintaerErstHours, "Cbhcrdoemfeg hLiejtktlemrnso".ponllPaintaerErstHours, "Sptqrresettu vAwrxty".ponllPaintaerErstHours]
         }
         set {
-            UserDefaults.standard.set(Array(newValue.prefix(5)), forKey: paintMarker)
+            bruCiuPaintTrace(Array(newValue.prefix(5)), aerErstColorTrace: paintMarker)
             NotificationCenter.default.post(name: .ponllyflckinkPaintShelfChange, object: nil)
         }
     }
@@ -606,30 +657,30 @@ enum PonllyponllTornEdge {
         let bruCiuPaintedFence = flckinkChippedPaint(cnowpaintokwinId)
         return PonllyaerErstTwoToneFillr(
             graffitiPulse: bruCiuPaintedFence.graffitiPulse,
-            aerosolDream: UserDefaults.standard.string(forKey: neonSpray) ?? "kryptic_tag",
+            aerosolDream: flckinkStyleTrace(neonSpray) ?? "kryptic_tag",
             streetMural: bruCiuPaintedFence.streetMural,
             wallCraft: bruCiuPaintedFence.wallCraft,
             paintFlow: bruCiuPaintedFence.paintFlow,
             sprayRhythm: bruCiuPaintedFence.sprayRhythm,
-            urbanCanvas: UserDefaults.standard.string(forKey: inkMarker) ?? "SzFA BsCtDrEeFeGtH IaJrKcLhMiNtOePcQtR.S TAUeVrWoXsYoZl0 1i2s3 4m5y6 7b8l9oaobdc.d eAflgwhaiyjsk lsmcnoouptqirnsgt unvewwx yrzaAwB CcDoEnFcGrHeItJeK.L MRNeOsPpQeRcStT UtVhWeX YtZa0g1s2.3".ponllPaintaerErstHours,
+            urbanCanvas: flckinkStyleTrace(inkMarker) ?? "SzFA BsCtDrEeFeGtH IaJrKcLhMiNtOePcQtR.S TAUeVrWoXsYoZl0 1i2s3 4m5y6 7b8l9oaobdc.d eAflgwhaiyjsk lsmcnoouptqirnsgt unvewwx yrzaAwB CcDoEnFcGrHeItJeK.L MRNeOsPpQeRcStT UtVhWeX YtZa0g1s2.3".ponllPaintaerErstHours,
             brickPalette: bruCiuPaintedFence.brickPalette,
             inkDrift: bruCiuPaintedFence.inkDrift
         )
     }
 
     static func resetflckinkWoodPanelProfile() {
-        aerErstSteelGateields()
         UserDefaults.standard.set(0, forKey: metallicSpray)
         aerErstDotSprayMarker.removeAll()
         solidMarker.removeAll()
+        NotificationCenter.default.post(name: .ponllyflckinkPaintShelfChange, object: nil)
     }
 
     static func aerErstSteelGateields() {
-        UserDefaults.standard.removeObject(forKey: neonSpray)
-        UserDefaults.standard.removeObject(forKey: inkMarker)
-        UserDefaults.standard.removeObject(forKey: paintMarker)
-        UserDefaults.standard.removeObject(forKey: mopMarker)
-        UserDefaults.standard.removeObject(forKey: dripMarker)
+        flckinkPaintTrace(neonSpray)
+        flckinkPaintTrace(inkMarker)
+        flckinkPaintTrace(paintMarker)
+        flckinkPaintTrace(mopMarker)
+        flckinkPaintTrace(dripMarker)
         NotificationCenter.default.post(name: .ponllyflckinkPaintShelfChange, object: nil)
     }
 
@@ -638,12 +689,12 @@ enum PonllyponllTornEdge {
         let paperCut = layerMask.split(separator: "@").first.map(String.init) ?? "n4e5w6W7r8i9taebrc".ponllPaintaerErstHours
         return PonllyaerErstTwoToneFillr(
             graffitiPulse: glossFinish,
-            aerosolDream: UserDefaults.standard.string(forKey: neonSpray) ?? paperCut,
+            aerosolDream: flckinkStyleTrace(neonSpray) ?? paperCut,
             streetMural: "",
             wallCraft: "",
             paintFlow: "",
             sprayRhythm: "",
-            urbanCanvas: UserDefaults.standard.string(forKey: inkMarker) ?? "",
+            urbanCanvas: flckinkStyleTrace(inkMarker) ?? "",
             brickPalette: nil,
             inkDrift: [.systemPink, .cyan, .darkGray]
         )
@@ -652,9 +703,9 @@ enum PonllyponllTornEdge {
     static func updatebruCiuNightWall(flckinkDawnWall cutoutShape: String, aerErstRainWall sprayShield: String, ponllSunlitWall oversprayGlow: [String]) {
         let pasteBrush = cutoutShape.trimmingCharacters(in: .whitespacesAndNewlines)
         let rollerPaste = pasteBrush.isEmpty ? "kryptic_tag" : pasteBrush
-        UserDefaults.standard.set(rollerPaste, forKey: neonSpray)
-        UserDefaults.standard.set(sprayShield.trimmingCharacters(in: .whitespacesAndNewlines), forKey: inkMarker)
-        UserDefaults.standard.set(Array(oversprayGlow.prefix(5)), forKey: paintMarker)
+        aerErstPaintTrace(rollerPaste, bruCiuLayerTrace: neonSpray)
+        aerErstPaintTrace(sprayShield.trimmingCharacters(in: .whitespacesAndNewlines), bruCiuLayerTrace: inkMarker)
+        bruCiuPaintTrace(Array(oversprayGlow.prefix(5)), aerErstColorTrace: paintMarker)
         NotificationCenter.default.post(name: .ponllyflckinkPaintShelfChange, object: nil)
     }
 
@@ -680,17 +731,20 @@ enum PonllyponllTornEdge {
     }
 
     private static func bruCiuBridgePillar(flckinkUnderpassBeam monoPrint: String) -> UIImage? {
-        guard let colorPrint = UserDefaults.standard.string(forKey: monoPrint) else { return nil }
+        guard let colorPrint = flckinkStyleTrace(monoPrint) else { return nil }
         return UIImage(contentsOfFile: colorPrint)
     }
 
     private static func flckinkHiddenWall(_ handbillTexture: UIImage, aerErstLegalWall pulpPaper: String, ponllPracticeWall weatheredPaper: String) {
         guard let tornEdge = handbillTexture.jpegData(compressionQuality: 0.86),
               let rippedCorner = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        let pasteWrinkle = rippedCorner.appendingPathComponent(pulpPaper)
+        let flckinkColorTrace = ponllPaintTrace.utf8.map { bruCiuWallTrace in
+            String(format: "%02x", bruCiuWallTrace)
+        }.joined()
+        let pasteWrinkle = rippedCorner.appendingPathComponent("\(pulpPaper).\(flckinkColorTrace)")
         do {
             try tornEdge.write(to: pasteWrinkle, options: .atomic)
-            UserDefaults.standard.set(pasteWrinkle.path, forKey: weatheredPaper)
+            aerErstPaintTrace(pasteWrinkle.path, bruCiuLayerTrace: weatheredPaper)
         } catch {
             assertionFailure("Unable to save profile image: \(error.localizedDescription)")
         }

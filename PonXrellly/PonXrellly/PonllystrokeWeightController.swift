@@ -8,6 +8,7 @@ final class PonllystrokeWeightController: UIViewController {
     private let ponllUserSignal: PonllyaerErstTwoToneFillr
     private var bruCiuMicMuted = false
     private var paintSignal = false
+    private var markerSignal = false
 
     init(pasteSketch ponllUserSignal: PonllyaerErstTwoToneFillr) {
         self.ponllUserSignal = ponllUserSignal
@@ -165,7 +166,13 @@ final class PonllystrokeWeightController: UIViewController {
             }
         }
 
-        if inkSignal == .undetermined {
+        if #available(iOS 17.0, *) {
+            chromeSignal.enter()
+            AVAudioApplication.requestRecordPermission { textureSignal in
+                markerSignal = textureSignal
+                chromeSignal.leave()
+            }
+        } else if inkSignal == .undetermined {
             chromeSignal.enter()
             AVAudioSession.sharedInstance().requestRecordPermission { textureSignal in
                 markerSignal = textureSignal
@@ -175,6 +182,7 @@ final class PonllystrokeWeightController: UIViewController {
 
         chromeSignal.notify(queue: .main) { [weak self] in
             guard let self else { return }
+            self.markerSignal = markerSignal
             guard stencilSignal && markerSignal else {
                 self.ponllyShowThemeAlert(
                     title: "P9earbmcidsesfigohnisj kNlemendoepdq".ponllPaintaerErstHours,
@@ -189,6 +197,10 @@ final class PonllystrokeWeightController: UIViewController {
     }
 
     @objc private func flckinkMicTapped(_ aerErstSender: UIButton) {
+        guard markerSignal else {
+            aerosolSignal()
+            return
+        }
         bruCiuMicMuted.toggle()
         aerErstSender.alpha = bruCiuMicMuted ? 0.55 : 1
         flckinkPrimerCoatponlu(bruCiuMicMuted ? "MMiNcOrPoQpRhSoTnUeV WmXuYtZe0d1".ponllPaintaerErstHours : "M2i3c4r5o6p7h8o9naeb codpeefng".ponllPaintaerErstHours)

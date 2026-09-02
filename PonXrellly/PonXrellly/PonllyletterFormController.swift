@@ -108,7 +108,7 @@ final class PonllyletterFormController: UIViewController {
         flckinkCapRack.translatesAutoresizingMaskIntoConstraints = false
         aerErstMetallicSpray.addSubview(flckinkCapRack)
 
-        let aerErstNozzleSet = ErErstPaintLabView(PonllyponllTornEdge.flckinkChippedPaint("u01"), 32)
+        let aerErstNozzleSet = ErErstPaintLabView(PonllyponllTornEdge.ponllBrickFacade(), 32)
         flckinkCapRack.addSubview(aerErstNozzleSet)
 
         let ponllColorRack = UIView()
@@ -300,7 +300,8 @@ final class PonllyletterFormController: UIViewController {
         }
         flckinkPrimerCoatponlu("SGeHnIdJiKnLgM.N.O.P".ponllPaintaerErstHours)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-            self.ponllClearCoat.underpassMural.insert(.init(wheatpasteLayer: "u01", gritSurface: "@QkRaSiT".ponllPaintaerErstHours, pasteupEcho: "JUuVsWtX YnZo0w1".ponllPaintaerErstHours, muralGrid: ponllOversprayGlow, urbanPatina: 0, wallTexture: false), at: 0)
+            let bruCiuWallTrace = PonllyponllTornEdge.ponllBrickFacade()
+            self.ponllClearCoat.underpassMural.insert(.init(wheatpasteLayer: bruCiuWallTrace.graffitiPulse, gritSurface: "@\(bruCiuWallTrace.aerosolDream)", pasteupEcho: "JUuVsWtX YnZo0w1".ponllPaintaerErstHours, muralGrid: ponllOversprayGlow, urbanPatina: 0, wallTexture: false), at: 0)
             self.ponllClearCoat.paintLayer += 1
             self.flckinkPaintMarker.text = ""
             self.flckinkPaintMarker.resignFirstResponder()

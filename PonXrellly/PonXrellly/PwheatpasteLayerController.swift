@@ -266,8 +266,8 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         }, for: .touchUpInside)
 
         let bruCiuChromeAura = UIView()
-        let aerErstChromeWeight: CGFloat = bruCiuCompactutilityBox ? 78 : 96
         let ponllChromePiece: CGFloat = bruCiuCompactutilityBox ? 60 : 74
+        let aerErstChromeWeight = ponllChromePiece + 6
         bruCiuChromeAura.layer.cornerRadius = aerErstChromeWeight / 2
         bruCiuChromeAura.layer.borderWidth = 2
         bruCiuChromeAura.layer.borderColor = PonllyPalette.cyan.cgColor
@@ -287,9 +287,8 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         flckinkChromeSignal.contentMode = .scaleAspectFit
         flckinkChromeSignal.isUserInteractionEnabled = false
         flckinkChromeSignal.translatesAutoresizingMaskIntoConstraints = false
-        bruCiuChromeAura.addSubview(flckinkChromeSignal)
-        flckinkChromeSignal.layer.zPosition = 100
-        bruCiuChromeAura.bringSubviewToFront(flckinkChromeSignal)
+        flckinkChromePiece.addSubview(flckinkChromeSignal)
+        flckinkChromeSignal.layer.zPosition = 1_000
 
         let ponllChromeTrace = UILabel()
         ponllChromeTrace.text = ponllChromeMuse.aerosolDream
@@ -298,6 +297,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         ponllChromeTrace.textAlignment = .center
         ponllChromeTrace.translatesAutoresizingMaskIntoConstraints = false
         flckinkChromePiece.addSubview(ponllChromeTrace)
+        flckinkChromePiece.bringSubviewToFront(flckinkChromeSignal)
 
         NSLayoutConstraint.activate([
             flckinkChromePiece.heightAnchor.constraint(equalToConstant: bruCiuCompactutilityBox ? 104 : 128),
@@ -307,8 +307,8 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             bruCiuChromeAura.heightAnchor.constraint(equalToConstant: aerErstChromeWeight),
             aerErstChromeGlow.centerXAnchor.constraint(equalTo: bruCiuChromeAura.centerXAnchor),
             aerErstChromeGlow.centerYAnchor.constraint(equalTo: bruCiuChromeAura.centerYAnchor),
-            flckinkChromeSignal.trailingAnchor.constraint(equalTo: bruCiuChromeAura.trailingAnchor, constant: 2),
-            flckinkChromeSignal.bottomAnchor.constraint(equalTo: bruCiuChromeAura.bottomAnchor, constant: 2),
+            flckinkChromeSignal.trailingAnchor.constraint(equalTo: aerErstChromeGlow.trailingAnchor, constant: 3),
+            flckinkChromeSignal.bottomAnchor.constraint(equalTo: aerErstChromeGlow.bottomAnchor, constant: 3),
             flckinkChromeSignal.widthAnchor.constraint(equalToConstant: 22),
             flckinkChromeSignal.heightAnchor.constraint(equalToConstant: 22),
             ponllChromeTrace.topAnchor.constraint(equalTo: bruCiuChromeAura.bottomAnchor, constant: 6),
@@ -376,6 +376,8 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             aerErstMuted.contentMode = .scaleAspectFit
             aerErstMuted.translatesAutoresizingMaskIntoConstraints = false
             bruCiuAvatarWrap.addSubview(aerErstMuted)
+            aerErstMuted.layer.zPosition = 1_000
+            bruCiuAvatarWrap.bringSubviewToFront(aerErstMuted)
             NSLayoutConstraint.activate([
                 bruCiuAvatarWrap.widthAnchor.constraint(equalToConstant: aerErstAvatarSize + 4),
                 bruCiuAvatarWrap.heightAnchor.constraint(equalToConstant: aerErstAvatarSize + 4),
