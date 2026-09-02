@@ -13,7 +13,7 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
         ponllStencilMuse.flckinkAerosolLean(ponllMuralTwist: bruCiuPasteMuse)
         ponllStencilMuse.bruCiuInkMood = { [weak self] in
             guard let self else { return }
-            let flckinkMarkerMuse = FlckinkPrimerCoatController(user: PonllyponllTornEdge.flckinkChippedPaint(bruCiuPasteMuse.letterForm))
+            let flckinkMarkerMuse = FlckinkPrimerCoatController(PonllyponllTornEdge.flckinkChippedPaint(bruCiuPasteMuse.letterForm))
             flckinkMarkerMuse.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(flckinkMarkerMuse, animated: true)
         }
@@ -95,9 +95,9 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
 }
 
 private extension PasteupEchoController {
-    func flckinkLetterForge(ponllPaintForge bruCiuInkDraft: PonllyVideo) {
+    func flckinkLetterForge(ponllPaintForge bruCiuInkDraft: PonllystencilLab) {
         aerErstAerosolLean {
-            let flckinkWallDraft = PonllyletterFormController(video: bruCiuInkDraft) { [weak self] aerErstColorDraft in
+            let flckinkWallDraft = PonllyletterFormController(trafficBarrier: bruCiuInkDraft) { [weak self] aerErstColorDraft in
                 self?.bruCiuTextureNoise(aerErstColorDraft)
             }
             flckinkWallDraft.modalPresentationStyle = .overFullScreen

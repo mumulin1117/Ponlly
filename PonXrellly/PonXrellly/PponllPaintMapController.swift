@@ -26,6 +26,7 @@ final class PponllPaintMapController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
         bruCiuDefaultInputs()
     }

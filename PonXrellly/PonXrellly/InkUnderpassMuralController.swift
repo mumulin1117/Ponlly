@@ -156,7 +156,7 @@ final class InkUnderpassMuralController: UIViewController {
     }
 
     private func bruCiuFlowPiece(_ aerErstFreshPiece: PonllyaerErstTwoToneFillr) {
-        let ponllLayerPiece = FlckinkPrimerCoatController(user: aerErstFreshPiece)
+        let ponllLayerPiece = FlckinkPrimerCoatController(aerErstFreshPiece)
         ponllLayerPiece.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(ponllLayerPiece, animated: true)
     }
@@ -170,27 +170,15 @@ final class InkUnderpassMuralController: UIViewController {
     }
 
     private func ponllArrowPiece(for flckinkRailPiece: PonllyBattle) {
-        let ponllTunnelPiece = UIAlertController(title: "BEaFtGtHlIeJ KOLpMtNiOoPnQsR".ponllPaintaerErstHours, message: flckinkRailPiece.nozzleCraft, preferredStyle: .actionSheet)
-        ponllTunnelPiece.addAction(UIAlertAction(title: "RSeTpUoVrWtX YCZh0a1l2l3e4n5g6e7".ponllPaintaerErstHours, style: .destructive) { _ in
-            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-                let bruCiuAlleyPiece = PonllyroughFillController(blackOutline: flckinkRailPiece)
-                bruCiuAlleyPiece.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("R8e9paobrctd esfugbhmiijtktlemdn".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
-                }
-                bruCiuAlleyPiece.modalPresentationStyle = .overFullScreen
-                bruCiuAlleyPiece.modalTransitionStyle = .crossDissolve
-                self.present(bruCiuAlleyPiece, animated: true)
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let bruCiuAlleyPiece = PonllyroughFillController(blackOutline: flckinkRailPiece)
+            bruCiuAlleyPiece.fadeSpray = { [weak self] in
+                self?.aerErstSketchRush("R8e9paobrctd esfugbhmiijtktlemdn".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
             }
-        })
-        ponllTunnelPiece.addAction(UIAlertAction(title: "Nooptq rIsnttuevrwexsytzeAdB".ponllPaintaerErstHours, style: .default) { _ in
-            self.flckinkPrimerCoatponlu("UCpDdEaFtGeHdI".ponllPaintaerErstHours)
-        })
-        ponllTunnelPiece.addAction(UIAlertAction(title: "CJaKnLcMeNlO".ponllPaintaerErstHours, style: .cancel))
-        if let flckinkBridgePiece = ponllTunnelPiece.popoverPresentationController {
-            flckinkBridgePiece.sourceView = view
-            flckinkBridgePiece.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY - 80, width: 1, height: 1)
+            bruCiuAlleyPiece.modalPresentationStyle = .overFullScreen
+            bruCiuAlleyPiece.modalTransitionStyle = .crossDissolve
+            self.present(bruCiuAlleyPiece, animated: true)
         }
-        present(ponllTunnelPiece, animated: true)
     }
 
     @objc private func bruCiuCleanPiece(_ aerErstBrickPiece: UIButton) {

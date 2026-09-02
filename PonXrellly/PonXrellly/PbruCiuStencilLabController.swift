@@ -31,15 +31,47 @@ final class PbruCiuStencilLabController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
     }
 
     private func ponllInkAura() {
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: PonllyFonts.muralForgepon(neonLab: 16)
+        ]
         title = ponllMuralBloom.nozzleCraft
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: #selector(bruCiuSketchRhythm))
+        let bruCiuDripMuse = UIButton(type: .system)
+        bruCiuDripMuse.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        bruCiuDripMuse.ponllGraffitiDraftBackStyle()
+        bruCiuDripMuse.tintColor = .white
+        bruCiuDripMuse.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
+        bruCiuDripMuse.layer.cornerRadius = 18
+        bruCiuDripMuse.layer.borderWidth = 1
+        bruCiuDripMuse.layer.borderColor = PonllyPalette.line.cgColor
+        bruCiuDripMuse.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuDripMuse.addTarget(self, action: #selector(ponllDripMuse), for: .touchUpInside)
+        bruCiuDripMuse.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        bruCiuDripMuse.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: bruCiuDripMuse)
+        let ponllDripPiece = UIButton(type: .system)
+        ponllDripPiece.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        ponllDripPiece.tintColor = .white
+        ponllDripPiece.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
+        ponllDripPiece.layer.cornerRadius = 18
+        ponllDripPiece.layer.borderWidth = 1
+        ponllDripPiece.layer.borderColor = PonllyPalette.line.cgColor
+        ponllDripPiece.translatesAutoresizingMaskIntoConstraints = false
+        ponllDripPiece.addTarget(self, action: #selector(bruCiuSketchRhythm), for: .touchUpInside)
+        ponllDripPiece.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        ponllDripPiece.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: ponllDripPiece)
+    }
+
+    @objc private func ponllDripMuse() {
+        navigationController?.popViewController(animated: true)
     }
 
     private func bruCiuWallEcho() {
@@ -221,9 +253,9 @@ final class PbruCiuStencilLabController: UIViewController {
         bruCiuGarageDoor.addArrangedSubview(aerErstFreightPanel)
         if aerErstTextureBend {
             ponllMetalPanel.addArrangedSubview(bruCiuGarageDoor)
-            ponllMetalPanel.addArrangedSubview(ErErstPaintLabView(user: flckinkPlasterDust, size: 48))
+            ponllMetalPanel.addArrangedSubview(ErErstPaintLabView(flckinkPlasterDust, 48))
         } else {
-            ponllMetalPanel.addArrangedSubview(ErErstPaintLabView(user: flckinkPlasterDust, size: 48))
+            ponllMetalPanel.addArrangedSubview(ErErstPaintLabView(flckinkPlasterDust, 48))
             ponllMetalPanel.addArrangedSubview(bruCiuGarageDoor)
         }
         NSLayoutConstraint.activate([
@@ -303,13 +335,13 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstConcreteColumn.addArrangedSubview(flckinkUnderpassBeam)
         bruCiuBridgePillar.addArrangedSubview(aerErstConcreteColumn)
         ponllNeonTrace = bruCiuBridgePillar
-        for comment in ponllMuralBloom.underpassMural {
-            bruCiuBridgePillar.addArrangedSubview(flckinkAerosolDepth(comment))
+        for (ponllColorMap, comment) in ponllMuralBloom.underpassMural.enumerated() {
+            bruCiuBridgePillar.addArrangedSubview(flckinkAerosolDepth(comment, colorMap: ponllColorMap))
         }
         return bruCiuBridgePillar
     }
 
-    private func flckinkAerosolDepth(_ comment: PonllyBattleComment) -> UIView {
+    private func flckinkAerosolDepth(_ comment: PonllyBattleComment, colorMap ponllColorMap: Int) -> UIView {
         let flckinkTrafficBarrier = UIStackView()
         flckinkTrafficBarrier.axis = .horizontal
         flckinkTrafficBarrier.alignment = .top
@@ -319,7 +351,7 @@ final class PbruCiuStencilLabController: UIViewController {
         bruCiuNightWall.addAction(UIAction { [weak self] _ in
             self?.aerErstMuralGlow(ponllBlankFacade)
         }, for: .touchUpInside)
-        let flckinkDawnWall = ErErstPaintLabView(user: ponllBlankFacade, size: 34)
+        let flckinkDawnWall = ErErstPaintLabView(ponllBlankFacade, 34)
         flckinkDawnWall.isUserInteractionEnabled = false
         bruCiuNightWall.addSubview(flckinkDawnWall)
         NSLayoutConstraint.activate([
@@ -334,8 +366,7 @@ final class PbruCiuStencilLabController: UIViewController {
         let aerErstRainWall = UIStackView()
         aerErstRainWall.axis = .vertical
         let aerErstSketchWall = UILabel()
-        let reactions = comment.wildstyleCurve == 1 ? "12 3r4e5a6c7t8i9oanb".ponllPaintaerErstHours : "\(comment.wildstyleCurve) reactions"
-        aerErstSketchWall.text = "\(ponllBlankFacade.aerosolDream)   \(comment.pasteupEcho)   \(reactions)"
+        aerErstSketchWall.text = "\(ponllBlankFacade.aerosolDream)   \(comment.pasteupEcho)"
         aerErstSketchWall.textColor = .white
         aerErstSketchWall.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
         let ponllMuralWall = UILabel()
@@ -346,12 +377,66 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstRainWall.addArrangedSubview(aerErstSketchWall)
         aerErstRainWall.addArrangedSubview(ponllMuralWall)
         flckinkTrafficBarrier.addArrangedSubview(aerErstRainWall)
+        flckinkTrafficBarrier.addArrangedSubview(bruCiuInkAura(comment.wallTexture, count: comment.wildstyleCurve, colorMap: ponllColorMap))
         return flckinkTrafficBarrier
     }
 
+    private func bruCiuInkAura(_ flckinkInkEcho: Bool, count aerErstInkSignal: Int, colorMap ponllColorMap: Int) -> UIStackView {
+        let ponllInkQuest = UIStackView()
+        ponllInkQuest.axis = .vertical
+        ponllInkQuest.alignment = .center
+        ponllInkQuest.spacing = 0
+        ponllInkQuest.widthAnchor.constraint(equalToConstant: 36).isActive = true
+
+        let bruCiuInkSeed = UIButton(type: .custom)
+        bruCiuInkSeed.setImage(UIImage(named: flckinkInkEcho ? "inkAura" : "inkEcho"), for: .normal)
+        bruCiuInkSeed.imageView?.contentMode = .scaleAspectFit
+        bruCiuInkSeed.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuInkSeed.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        bruCiuInkSeed.heightAnchor.constraint(equalToConstant: 28).isActive = true
+
+        let flckinkInkSpark = UILabel()
+        flckinkInkSpark.text = "\(ponllInkMood(aerErstInkSignal))"
+        flckinkInkSpark.textColor = PonllyPalette.muted
+        flckinkInkSpark.font = PonllyFonts.steelGate(rollingShutter: 10)
+        flckinkInkSpark.textAlignment = .center
+
+        bruCiuInkSeed.addAction(UIAction { [weak self, weak bruCiuInkSeed, weak flckinkInkSpark] _ in
+            guard let self, let bruCiuInkSeed, let flckinkInkSpark else { return }
+            self.aerErstInkglossFinish(colorMap: ponllColorMap, inkSeed: bruCiuInkSeed, inkSpark: flckinkInkSpark)
+        }, for: .touchUpInside)
+
+        ponllInkQuest.addArrangedSubview(bruCiuInkSeed)
+        ponllInkQuest.addArrangedSubview(flckinkInkSpark)
+        return ponllInkQuest
+    }
+
+    private func aerErstInkglossFinish(colorMap ponllColorMap: Int, inkSeed bruCiuInkSeed: UIButton, inkSpark flckinkInkSpark: UILabel) {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) { [weak self, weak bruCiuInkSeed, weak flckinkInkSpark] in
+            guard let self,
+                  let bruCiuInkSeed,
+                  let flckinkInkSpark,
+                  self.ponllMuralBloom.underpassMural.indices.contains(ponllColorMap) else { return }
+            var ponllInkPath = self.ponllMuralBloom.underpassMural[ponllColorMap]
+            let flckinkInkEcho = !ponllInkPath.wallTexture
+            let aerErstInkSignal = self.ponllInkMood(ponllInkPath.wildstyleCurve)
+            ponllInkPath.wallTexture = flckinkInkEcho
+            ponllInkPath.wildstyleCurve = flckinkInkEcho ? min(5, aerErstInkSignal + 1) : max(0, aerErstInkSignal - 1)
+            self.ponllMuralBloom.underpassMural[ponllColorMap] = ponllInkPath
+            bruCiuInkSeed.setImage(UIImage(named: flckinkInkEcho ? "inkAura" : "inkEcho"), for: .normal)
+            flckinkInkSpark.text = "\(ponllInkPath.wildstyleCurve)"
+            PonllyponllTornEdge.ponllOutlinePlan(self.ponllMuralBloom)
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        }
+    }
+
+    private func ponllInkMood(_ bruCiuInkPath: Int) -> Int {
+        min(5, max(0, bruCiuInkPath))
+    }
+
     private func aerErstMuralGlow(_ bruCiuLetterWall: PonllyaerErstTwoToneFillr) {
-        guard bruCiuLetterWall.graffitiPulse != PonllyponllTornEdge.currentUserId else { return }
-        let flckinkColorWall = FlckinkPrimerCoatController(user: bruCiuLetterWall)
+        guard bruCiuLetterWall.graffitiPulse != PonllyponllTornEdge.cnowpaintokwinId else { return }
+        let flckinkColorWall = FlckinkPrimerCoatController(bruCiuLetterWall)
         flckinkColorWall.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(flckinkColorWall, animated: true)
     }
@@ -434,33 +519,24 @@ final class PbruCiuStencilLabController: UIViewController {
             ponllNeonTrace.removeArrangedSubview(row)
             row.removeFromSuperview()
         }
-        ponllMuralBloom.underpassMural.forEach { ponllNeonTrace.addArrangedSubview(flckinkAerosolDepth($0)) }
+        ponllMuralBloom.underpassMural.enumerated().forEach {
+            ponllNeonTrace.addArrangedSubview(flckinkAerosolDepth($0.element, colorMap: $0.offset))
+        }
         view.layoutIfNeeded()
         let bottomY = max(0, bruCiuStencilFlicker.contentSize.height - bruCiuStencilFlicker.bounds.height + bruCiuStencilFlicker.adjustedContentInset.bottom)
         bruCiuStencilFlicker.setContentOffset(CGPoint(x: 0, y: bottomY), animated: true)
     }
 
     @objc private func bruCiuSketchRhythm() {
-        let aerErstLayerMask = UIAlertController(title: "Bsattutvlwex yOzpAtBiCoDnEsF".ponllPaintaerErstHours, message: ponllMuralBloom.nozzleCraft, preferredStyle: .actionSheet)
-        aerErstLayerMask.addAction(UIAlertAction(title: "RGeHpIoJrKtL MCNhOaPlQlReSnTgUeV".ponllPaintaerErstHours, style: .destructive) { _ in
-            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-                let report = PonllyroughFillController(blackOutline: self.ponllMuralBloom)
-                report.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("RWeXpYoZr0t1 2s3u4b5m6i7t8t9eadb".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
-                }
-                report.modalPresentationStyle = .overFullScreen
-                report.modalTransitionStyle = .crossDissolve
-                self.present(report, animated: true)
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let ponllMuralPiece = PonllyroughFillController(blackOutline: self.ponllMuralBloom)
+            ponllMuralPiece.fadeSpray = { [weak self] in
+                self?.aerErstSketchRush("RWeXpYoZr0t1 2s3u4b5m6i7t8t9eadb".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
             }
-        })
-        aerErstLayerMask.addAction(UIAlertAction(title: "Ncodte fIgnhtiejrkelsmtneodp".ponllPaintaerErstHours, style: .default) { _ in
-            self.flckinkPrimerCoatponlu("Uqprdsattuevdw".ponllPaintaerErstHours)
-        })
-        aerErstLayerMask.addAction(UIAlertAction(title: "CxaynzcAeBlC".ponllPaintaerErstHours, style: .cancel))
-        if let popover = aerErstLayerMask.popoverPresentationController {
-            popover.barButtonItem = navigationItem.rightBarButtonItem
+            ponllMuralPiece.modalPresentationStyle = .overFullScreen
+            ponllMuralPiece.modalTransitionStyle = .crossDissolve
+            self.present(ponllMuralPiece, animated: true)
         }
-        present(aerErstLayerMask, animated: true)
     }
 
     @objc private func flckinkInkMotion(_ note: Notification) {

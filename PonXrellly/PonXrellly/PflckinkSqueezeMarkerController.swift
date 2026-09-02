@@ -1,6 +1,6 @@
 import UIKit
 
-final class PflckinkSqueezeMarkerController: UIViewController {
+final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelegate {
     private enum ponllGraffitiSignal {
         case bruCiuAerosolQuest
         case flckinkMuralCue
@@ -22,12 +22,11 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     private let ponllMuralNoise = UIStackView()
     private let bruCiuStencilTexture = UILabel()
     private let flckinkMarkerContrast = UILabel()
-    private let aerErstChromeBalance = UITextField()
+    private let aerErstglossFinish = UITextField()
     private let ponllNeonRhythm = UITextField()
     private let bruCiuTextureMotion = UIButton(type: .system)
     private let flckinkSketchCascade = UILabel()
     private let aerErstPaintRipple = PonllyNeonButton("LDoEgFiGnH".ponllPaintaerErstHours)
-    private var ponllInkSurge: NSLayoutConstraint?
     private var bruCiuWallBurst: ponllGraffitiSignal = .bruCiuAerosolQuest
     private var flckinkAerosolBloom = FlckinkMatteFinish.shared.hasConsent {
         didSet {
@@ -62,10 +61,8 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     private func aerErstMuralFlicker() {
         aerErstMarkerArc.contentMode = .scaleAspectFill
-        aerErstMarkerArc.frame = UIScreen.main.bounds
+        aerErstMarkerArc.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstMarkerArc)
-        
-      
 
         bruCiuWallMood.keyboardDismissMode = .interactive
         bruCiuWallMood.alwaysBounceVertical = true
@@ -78,8 +75,8 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuWallMood.addSubview(flckinkStencilPath)
 
         aerErstTextureTrail()
-        flckinkStencilPath.addSubview(ponllChromeBend)
-        flckinkStencilPath.addSubview(bruCiuNeonKick)
+        view.addSubview(ponllChromeBend)
+        view.addSubview(bruCiuNeonKick)
 
         ponllPaintVeil()
         flckinkStencilPath.addSubview(flckinkTextureLean)
@@ -98,9 +95,12 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         ponllMuralQuest()
         flckinkStencilPath.addSubview(aerErstAerosolGrit)
         flckinkStencilPath.addSubview(aerErstPaintRipple)
-        ponllInkSurge = aerErstPaintRipple.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -22)
 
         NSLayoutConstraint.activate([
+            aerErstMarkerArc.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            aerErstMarkerArc.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            aerErstMarkerArc.topAnchor.constraint(equalTo: view.topAnchor),
+            aerErstMarkerArc.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             bruCiuWallMood.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bruCiuWallMood.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bruCiuWallMood.topAnchor.constraint(equalTo: view.topAnchor),
@@ -111,11 +111,11 @@ final class PflckinkSqueezeMarkerController: UIViewController {
             flckinkStencilPath.bottomAnchor.constraint(equalTo: bruCiuWallMood.contentLayoutGuide.bottomAnchor),
             flckinkStencilPath.heightAnchor.constraint(greaterThanOrEqualTo: bruCiuWallMood.frameLayoutGuide.heightAnchor),
 
-            ponllChromeBend.leadingAnchor.constraint(equalTo: flckinkStencilPath.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            ponllChromeBend.topAnchor.constraint(equalTo: flckinkStencilPath.safeAreaLayoutGuide.topAnchor, constant: 16),
-            ponllChromeBend.widthAnchor.constraint(equalToConstant: 40),
-            ponllChromeBend.heightAnchor.constraint(equalToConstant: 40),
-            bruCiuNeonKick.centerXAnchor.constraint(equalTo: flckinkStencilPath.centerXAnchor),
+            ponllChromeBend.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllChromeBend.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            ponllChromeBend.widthAnchor.constraint(equalToConstant: 36),
+            ponllChromeBend.heightAnchor.constraint(equalToConstant: 36),
+            bruCiuNeonKick.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bruCiuNeonKick.centerYAnchor.constraint(equalTo: ponllChromeBend.centerYAnchor),
 
             flckinkTextureLean.leadingAnchor.constraint(equalTo: flckinkStencilPath.leadingAnchor, constant: 24),
@@ -137,20 +137,21 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
             aerErstAerosolGrit.leadingAnchor.constraint(equalTo: flckinkStencilPath.leadingAnchor, constant: 24),
             aerErstAerosolGrit.trailingAnchor.constraint(equalTo: flckinkStencilPath.trailingAnchor, constant: -24),
-            aerErstAerosolGrit.topAnchor.constraint(equalTo: ponllChromeBend.bottomAnchor, constant: 40),
-            aerErstAerosolGrit.bottomAnchor.constraint(lessThanOrEqualTo: aerErstPaintRipple.topAnchor, constant: -20),
+            aerErstAerosolGrit.topAnchor.constraint(equalTo: flckinkStencilPath.topAnchor, constant: 88),
             aerErstPaintRipple.leadingAnchor.constraint(equalTo: flckinkStencilPath.leadingAnchor, constant: 24),
             aerErstPaintRipple.trailingAnchor.constraint(equalTo: flckinkStencilPath.trailingAnchor, constant: -24),
-            ponllInkSurge!,
-            aerErstPaintRipple.heightAnchor.constraint(equalToConstant: 62)
+            aerErstPaintRipple.topAnchor.constraint(equalTo: aerErstAerosolGrit.bottomAnchor, constant: 60),
+            aerErstPaintRipple.heightAnchor.constraint(equalToConstant: 49),
+            aerErstPaintRipple.bottomAnchor.constraint(lessThanOrEqualTo: flckinkStencilPath.bottomAnchor, constant: -32)
         ])
     }
 
     private func aerErstTextureTrail() {
         ponllChromeBend.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        ponllChromeBend.ponllGraffitiDraftBackStyle()
         ponllChromeBend.tintColor = .white
         ponllChromeBend.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.78)
-        ponllChromeBend.layer.cornerRadius = 14
+        ponllChromeBend.layer.cornerRadius = 18
         ponllChromeBend.layer.borderWidth = 1
         ponllChromeBend.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
         ponllChromeBend.translatesAutoresizingMaskIntoConstraints = false
@@ -158,6 +159,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
         bruCiuNeonKick.textColor = .white
         bruCiuNeonKick.font = PonllyFonts.muralForgepon(neonLab: 16)
+        bruCiuNeonKick.ponllGraffitiDraftTitleStyle()
         bruCiuNeonKick.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -179,7 +181,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     private func ponllMuralQuest() {
         aerErstAerosolGrit.axis = .vertical
-        aerErstAerosolGrit.spacing = 12
+        aerErstAerosolGrit.spacing = 0
         aerErstAerosolGrit.translatesAutoresizingMaskIntoConstraints = false
         aerErstAerosolGrit.isHidden = true
 
@@ -191,30 +193,36 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuStencilTexture.font = PonllyFonts.muralForgepon(neonLab: 28)
         bruCiuStencilTexture.numberOfLines = 0
         aerErstAerosolGrit.addArrangedSubview(bruCiuStencilTexture)
+        aerErstAerosolGrit.setCustomSpacing(8, after: bruCiuStencilTexture)
 
-        flckinkMarkerContrast.textColor = PonllyPalette.muted
+        flckinkMarkerContrast.textColor = UIColor(red: 142/255, green: 142/255, blue: 168/255, alpha: 1)
         flckinkMarkerContrast.font = PonllyFonts.utilityBox(blankFacade: 14)
         flckinkMarkerContrast.numberOfLines = 0
         aerErstAerosolGrit.addArrangedSubview(flckinkMarkerContrast)
-        aerErstAerosolGrit.setCustomSpacing(28, after: flckinkMarkerContrast)
+        aerErstAerosolGrit.setCustomSpacing(20, after: flckinkMarkerContrast)
 
-        aerErstAerosolGrit.addArrangedSubview(flckinkMarkerPath(nozzleCraft: "EYmZa0i1l2".ponllPaintaerErstHours, field: aerErstChromeBalance))
-        aerErstAerosolGrit.addArrangedSubview(flckinkMarkerPath(nozzleCraft: "P3a4s5s6w7o8r9da".ponllPaintaerErstHours, field: ponllNeonRhythm))
+        let ponllMarkerSignal = flckinkMarkerPath(nozzleCraft: "EYmZa0i1l2".ponllPaintaerErstHours, field: aerErstglossFinish)
+        aerErstAerosolGrit.addArrangedSubview(ponllMarkerSignal)
+        aerErstAerosolGrit.setCustomSpacing(14, after: ponllMarkerSignal)
+        let bruCiuMarkerQuest = flckinkMarkerPath(nozzleCraft: "P3a4s5s6w7o8r9da".ponllPaintaerErstHours, field: ponllNeonRhythm)
+        aerErstAerosolGrit.addArrangedSubview(bruCiuMarkerQuest)
+        aerErstAerosolGrit.setCustomSpacing(16, after: bruCiuMarkerQuest)
 
         flckinkSketchCascade.textColor = PonllyPalette.pink
-        flckinkSketchCascade.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
-        flckinkSketchCascade.backgroundColor = PonllyPalette.pink.withAlphaComponent(0.15)
-        flckinkSketchCascade.layer.cornerRadius = 6
+        flckinkSketchCascade.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+        flckinkSketchCascade.backgroundColor = UIColor(red: 42/255, green: 30/255, blue: 43/255, alpha: 1)
+        flckinkSketchCascade.layer.cornerRadius = 8
         flckinkSketchCascade.clipsToBounds = true
-        flckinkSketchCascade.isHidden = true
+        flckinkSketchCascade.alpha = 0
         flckinkSketchCascade.translatesAutoresizingMaskIntoConstraints = false
         aerErstAerosolGrit.addArrangedSubview(flckinkSketchCascade)
 
         aerErstPaintRipple.addTarget(self, action: #selector(bruCiuInkRipple), for: .touchUpInside)
         aerErstPaintRipple.translatesAutoresizingMaskIntoConstraints = false
         aerErstPaintRipple.isHidden = true
+        aerErstPaintRipple.layer.cornerRadius = 16
 
-        aerErstChromeArc(aerErstEnamelPaint: aerErstChromeBalance, placeholder: "Ebnctdeerf gEhmiajikll".ponllPaintaerErstHours)
+        aerErstChromeArc(aerErstEnamelPaint: aerErstglossFinish, placeholder: "Ebnctdeerf gEhmiajikll".ponllPaintaerErstHours)
         aerErstChromeArc(aerErstEnamelPaint: ponllNeonRhythm, placeholder: "Pmansospwqorrsdt".ponllPaintaerErstHours)
         ponllNeonRhythm.isSecureTextEntry = true
         bruCiuTextureMotion.setImage(UIImage(systemName: "eye"), for: .normal)
@@ -222,12 +230,18 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuTextureMotion.addTarget(self, action: #selector(aerErstTextureMotion), for: .touchUpInside)
         ponllNeonRhythm.rightView = bruCiuTextureMotion
         ponllNeonRhythm.rightViewMode = .always
+        aerErstglossFinish.delegate = self
+        ponllNeonRhythm.delegate = self
 
         NSLayoutConstraint.activate([
             ponllMuralNoise.heightAnchor.constraint(equalToConstant: 60),
-            aerErstChromeBalance.heightAnchor.constraint(equalToConstant: 56),
+            bruCiuStencilTexture.heightAnchor.constraint(equalToConstant: 34),
+            flckinkMarkerContrast.heightAnchor.constraint(equalToConstant: 42),
+            ponllMarkerSignal.heightAnchor.constraint(equalToConstant: 78),
+            bruCiuMarkerQuest.heightAnchor.constraint(equalToConstant: 78),
+            aerErstglossFinish.heightAnchor.constraint(equalToConstant: 56),
             ponllNeonRhythm.heightAnchor.constraint(equalToConstant: 56),
-            flckinkSketchCascade.heightAnchor.constraint(equalToConstant: 26)
+            flckinkSketchCascade.heightAnchor.constraint(equalToConstant: 34)
         ])
     }
 
@@ -254,12 +268,12 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     private func flckinkMarkerPath(nozzleCraft: String, field: UITextField) -> UIView {
         let bruCiuWallTrace = UIStackView()
         bruCiuWallTrace.axis = .vertical
-        bruCiuWallTrace.spacing = 7
+        bruCiuWallTrace.spacing = 8
         bruCiuWallTrace.translatesAutoresizingMaskIntoConstraints = false
         let bruCiuNeonSpray = UILabel()
         bruCiuNeonSpray.text = nozzleCraft
-        bruCiuNeonSpray.textColor = PonllyPalette.muted
-        bruCiuNeonSpray.font = PonllyFonts.steelGate(rollingShutter: 10)
+        bruCiuNeonSpray.textColor = UIColor(red: 142/255, green: 142/255, blue: 168/255, alpha: 1)
+        bruCiuNeonSpray.font = PonllyFonts.steelGate(rollingShutter: 11)
         bruCiuWallTrace.addArrangedSubview(bruCiuNeonSpray)
         bruCiuWallTrace.addArrangedSubview(field)
         return bruCiuWallTrace
@@ -276,15 +290,15 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         aerErstEnamelPaint.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         aerErstEnamelPaint.leftViewMode = .always
         aerErstEnamelPaint.addTarget(self, action: #selector(ponllPaintCascade), for: .editingChanged)
-        if aerErstEnamelPaint === aerErstChromeBalance {
+        aerErstEnamelPaint.addTarget(self, action: #selector(bruCiuChromeMotion(_:)), for: .editingDidBegin)
+        aerErstEnamelPaint.addTarget(self, action: #selector(flckinkNeonCascade(_:)), for: .editingDidEnd)
+        if aerErstEnamelPaint === aerErstglossFinish {
             aerErstEnamelPaint.keyboardType = .emailAddress
             aerErstEnamelPaint.textContentType = .username
             aerErstEnamelPaint.returnKeyType = .next
-            aerErstEnamelPaint.addTarget(self, action: #selector(bruCiuWallGlow), for: .primaryActionTriggered)
         } else if aerErstEnamelPaint === ponllNeonRhythm {
             aerErstEnamelPaint.textContentType = .password
             aerErstEnamelPaint.returnKeyType = .done
-            aerErstEnamelPaint.addTarget(self, action: #selector(flckinkPaintMotion), for: .primaryActionTriggered)
         }
     }
 
@@ -379,6 +393,10 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuWallBurst = .bruCiuAerosolQuest
         bruCiuWallMood.isScrollEnabled = false
         bruCiuWallMood.alwaysBounceVertical = false
+        bruCiuWallMood.setContentOffset(.zero, animated: false)
+        view.backgroundColor = PonllyPalette.background
+        aerErstMarkerArc.isHidden = false
+        aerErstMarkerArc.alpha = 1
         bruCiuNeonKick.text = ""
         ponllChromeBend.setImage(UIImage(systemName: "xmark"), for: .normal)
         flckinkTextureLean.isHidden = false
@@ -395,6 +413,8 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuWallBurst = nextStep
         bruCiuWallMood.isScrollEnabled = true
         bruCiuWallMood.alwaysBounceVertical = true
+        view.backgroundColor = UIColor(red: 13/255, green: 13/255, blue: 26/255, alpha: 1)
+        aerErstMarkerArc.isHidden = true
         ponllChromeBend.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         bruCiuNeonKick.text = nextStep == .flckinkMuralCue ? "Lqorgsitnu".ponllPaintaerErstHours : "Cvrwexaytz AABcCcDoEuFnGtH".ponllPaintaerErstHours
         flckinkTextureLean.isHidden = true
@@ -406,15 +426,9 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         bruCiuStencilTexture.text = nextStep == .flckinkMuralCue ? "WIeJlKcLoMmNeO PBQaRcSkT".ponllPaintaerErstHours : "CUrVeWaXtYeZ 0Y1o2u3r4 5A6c7c8o9uanbtc".ponllPaintaerErstHours
         flckinkMarkerContrast.text = nextStep == .flckinkMuralCue ? "Sdiegfng hiinj ktlom njoopiqnr stthuev wlxaytzeAsBtC DgErFaGfHfIiJtKiL MbNaOtPtQlReSsT UaVnWdX YsZh0o1w2 3o4f5f6 7y8o9uarb ctdaegfsg.h".ponllPaintaerErstHours : "Siejtk lymonuorp qarcscteusvsw xdyeztAaBiClDsE FbGeHfIoJrKeL MbNuOiPlQdRiSnTgU VyWoXuYrZ 0s1t2r3e4e5t6 7a8r9ta bpcrdoeffiglhei.j".ponllPaintaerErstHours
         aerErstPaintRipple.setTitle(nextStep == .flckinkMuralCue ? "Lkolgminno".ponllPaintaerErstHours : "Npeqxrts".ponllPaintaerErstHours, for: .normal)
-//        if nextStep == .flckinkMuralCue {
-//            aerErstChromeBalance.text = "ptounvlwlxyy@zgAmBaCiDlE.FcGoHmI".ponllPaintCipher
-//            ponllNeonRhythm.text = "555666"
-//        } else {
-//            aerErstChromeBalance.text = ""
-//            ponllNeonRhythm.text = ""
-//        }
+
         ponllInkGlow()
-        aerErstChromeBalance.becomeFirstResponder()
+        aerErstglossFinish.becomeFirstResponder()
     }
 
     private func ponllStencilFlash() {
@@ -444,8 +458,21 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     }
 
     private func aerErstPaintDepth(_ message: String) {
-        flckinkSketchCascade.text = "  \(message)"
-        flckinkSketchCascade.isHidden = false
+        let ponllOutlineDraft = UIImage(systemName: "exclamationmark.circle.fill")?.withTintColor(PonllyPalette.pink, renderingMode: .alwaysOriginal)
+        let bruCiuStencilDraft = NSTextAttachment()
+        bruCiuStencilDraft.image = ponllOutlineDraft
+        bruCiuStencilDraft.bounds = CGRect(x: 0, y: -2, width: 14, height: 14)
+        let flckinkMarkerDraft = NSMutableAttributedString(string: "    ")
+        flckinkMarkerDraft.append(NSAttributedString(attachment: bruCiuStencilDraft))
+        flckinkMarkerDraft.append(NSAttributedString(
+            string: "  \(message)",
+            attributes: [
+                .foregroundColor: PonllyPalette.pink,
+                .font: PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+            ]
+        ))
+        flckinkSketchCascade.attributedText = flckinkMarkerDraft
+        flckinkSketchCascade.alpha = 1
         ponllNeonRhythm.layer.borderColor = PonllyPalette.pink.cgColor
         ponllNeonRhythm.layer.shadowColor = PonllyPalette.pink.cgColor
         ponllNeonRhythm.layer.shadowOpacity = 0.26
@@ -453,9 +480,10 @@ final class PflckinkSqueezeMarkerController: UIViewController {
     }
 
     private func ponllInkGlow() {
-        flckinkSketchCascade.isHidden = true
-        [aerErstChromeBalance, ponllNeonRhythm].forEach {
-            $0.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkSketchCascade.alpha = 0
+        flckinkSketchCascade.attributedText = nil
+        [aerErstglossFinish, ponllNeonRhythm].forEach {
+            $0.layer.borderColor = ($0.isFirstResponder ? PonllyPalette.pink : PonllyPalette.line).cgColor
             $0.layer.shadowOpacity = 0
         }
     }
@@ -518,7 +546,7 @@ final class PflckinkSqueezeMarkerController: UIViewController {
 
     @objc private func bruCiuInkRipple() {
         guard flckinkSketchWeave() else { return }
-        let bruCiuFadeSpray = aerErstChromeBalance.text ?? ""
+        let bruCiuFadeSpray = aerErstglossFinish.text ?? ""
         let flckinkShadowSpray = ponllNeonRhythm.text ?? ""
         if bruCiuWallBurst == .aerErstPaintSeed {
             if let message = FlckinkMatteFinish.shared.flckinkEdgeMask(aerErstLayerMask: bruCiuFadeSpray, ponllPaperCut: flckinkShadowSpray) {
@@ -526,24 +554,12 @@ final class PflckinkSqueezeMarkerController: UIViewController {
                 return
             }
             view.endEditing(true)
-            aerErstPaintRipple.isEnabled = false
-            aerErstPaintRipple.setTitle("C7r8e9aatbicndge.f.g.h".ponllPaintaerErstHours, for: .normal)
-            FlckinkMatteFinish.shared.flckinkShadowSpray(aerErstStencilCut: bruCiuFadeSpray, ponllStencilSheet: flckinkShadowSpray) { success, message in
-                self.aerErstPaintRipple.isEnabled = true
-                self.aerErstPaintRipple.setTitle("Niejxktl".ponllPaintaerErstHours, for: .normal)
-                if success {
-                    let currentUser = PonllyponllTornEdge.ponllBrickFacade()
-                    let avatarImage = currentUser.brickPalette.flatMap { UIImage(named: $0) }
-                    let done = PonllycyanGlowController(
-                        currentUser.aerosolDream,
-                        avatarImage,
-                        self.ponllInkSpark
-                    )
-                    self.navigationController?.pushViewController(done, animated: true)
-                } else {
-                    self.aerErstPaintDepth(message ?? "Amcncoopuqnrts tcuovuwlxdy znAoBtC DbEeF GcHrIeJaKtLeMdN".ponllPaintaerErstHours)
-                }
-            }
+            let ponllGraffitiDraft = PonllGraffitiDraftController(
+                aerErstStencilDraft: bruCiuFadeSpray,
+                ponllMarkerDraft: flckinkShadowSpray,
+                bruCiuTextureDraft: ponllInkSpark
+            )
+            navigationController?.pushViewController(ponllGraffitiDraft, animated: true)
             return
         }
 
@@ -565,18 +581,429 @@ final class PflckinkSqueezeMarkerController: UIViewController {
         let ponllStencilSheet = max(aerErstStencilCut.height - view.safeAreaInsets.bottom, 0) + 18
         bruCiuWallMood.contentInset.bottom = ponllStencilSheet
         bruCiuWallMood.verticalScrollIndicatorInsets.bottom = ponllStencilSheet
-        ponllInkSurge?.constant = -ponllStencilSheet
         UIView.animate(withDuration: 0.22) {
             self.view.layoutIfNeeded()
+        }
+        let bruCiuPaintDraft = aerErstglossFinish.isFirstResponder ? aerErstglossFinish : (ponllNeonRhythm.isFirstResponder ? ponllNeonRhythm : nil)
+        if let bruCiuPaintDraft {
+            let flckinkInkDraft = bruCiuPaintDraft.convert(bruCiuPaintDraft.bounds, to: bruCiuWallMood).insetBy(dx: 0, dy: -18)
+            bruCiuWallMood.scrollRectToVisible(flckinkInkDraft, animated: true)
         }
     }
 
     @objc private func aerErstAerosolBurst(_ note: Notification) {
         bruCiuWallMood.contentInset.bottom = 0
         bruCiuWallMood.verticalScrollIndicatorInsets.bottom = 0
-        ponllInkSurge?.constant = -22
         UIView.animate(withDuration: 0.22) {
             self.view.layoutIfNeeded()
         }
+    }
+
+    @objc private func bruCiuChromeMotion(_ ponllNeonDraft: UITextField) {
+        ponllNeonDraft.layer.borderColor = PonllyPalette.pink.cgColor
+    }
+
+    @objc private func flckinkNeonCascade(_ ponllNeonDraft: UITextField) {
+        ponllNeonDraft.layer.borderColor = PonllyPalette.line.cgColor
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField === aerErstglossFinish {
+            ponllNeonRhythm.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            bruCiuInkRipple()
+        }
+        return true
+    }
+}
+
+private final class PonllGraffitiDraftController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    private let aerErstStencilDraft: String
+    private let ponllMarkerDraft: String
+    private let bruCiuTextureDraft: () -> Void
+    private let flckinkUrbanDraft = UIScrollView()
+    private let ponllSketchDraft = UIView()
+    private let bruCiuChromeDraft = UIView()
+    private let flckinkOutlineDraft = UIButton(type: .system)
+    private let aerErstPaintDraft = UILabel()
+    private let ponllInkDraft = UIButton(type: .system)
+    private let bruCiuWallDraft = UILabel()
+    private let flckinkMuralDraft = UILabel()
+    private let aerErstAerosolDraft = UITextField()
+    private let ponllStencilDraft = UILabel()
+    private let bruCiuMarkerDraft = UILabel()
+    private let flckinkGraffitiDraft: UICollectionView
+    private let aerErstLetterDraft = PonllyNeonButton("Cpoomnplllebtreu CPiruoffliclkei".ponllPaintaerErstHours)
+    private let ponllPaintDraft = [
+        "Gproanflflibtriu".ponllPaintaerErstHours,
+        "WpiolndlsltbyrlueC".ponllPaintaerErstHours,
+        "Sptorneleltb rAurCti".ponllPaintaerErstHours,
+        "Mpuornalll".ponllPaintaerErstHours,
+        "Spkoentlclhb".ponllPaintaerErstHours,
+        "CphoanrlalcbtreurC iAurftl".ponllPaintaerErstHours,
+        "Hpiopn-lHlobpr uCCuilutfulrcek".ponllPaintaerErstHours,
+        "Bpaotntllleb".ponllPaintaerErstHours,
+        "Sptorneleltb rPuhCoituofglrcakpihnyk".ponllPaintaerErstHours,
+        "Dpiogniltlablr uACritu".ponllPaintaerErstHours
+    ]
+    private var bruCiuInkDraft: Set<Int> = [1, 2, 5, 7]
+    private var flckinkWallDraft: UIImage?
+
+    init(aerErstStencilDraft: String, ponllMarkerDraft: String, bruCiuTextureDraft: @escaping () -> Void) {
+        self.aerErstStencilDraft = aerErstStencilDraft
+        self.ponllMarkerDraft = ponllMarkerDraft
+        self.bruCiuTextureDraft = bruCiuTextureDraft
+        let ponllLayerDraft = UICollectionViewFlowLayout()
+        ponllLayerDraft.minimumInteritemSpacing = 8
+        ponllLayerDraft.minimumLineSpacing = 10
+        self.flckinkGraffitiDraft = UICollectionView(frame: .zero, collectionViewLayout: ponllLayerDraft)
+        super.init(nibName: nil, bundle: nil)
+        hidesBottomBarWhenPushed = true
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 13/255, green: 13/255, blue: 26/255, alpha: 1)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        ponllAerosolDraft()
+        NotificationCenter.default.addObserver(self, selector: #selector(bruCiuMuralDraft(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(flckinkStencilDraft(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    private func ponllAerosolDraft() {
+        bruCiuChromeDraft.backgroundColor = UIColor(red: 13/255, green: 13/255, blue: 26/255, alpha: 1)
+        bruCiuChromeDraft.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bruCiuChromeDraft)
+
+        flckinkUrbanDraft.keyboardDismissMode = .interactive
+        flckinkUrbanDraft.alwaysBounceVertical = true
+        flckinkUrbanDraft.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkUrbanDraft)
+
+        ponllSketchDraft.translatesAutoresizingMaskIntoConstraints = false
+        flckinkUrbanDraft.addSubview(ponllSketchDraft)
+
+        let bruCiuPaintDraft = UITapGestureRecognizer(target: self, action: #selector(aerErstInkDraft))
+        bruCiuPaintDraft.cancelsTouchesInView = false
+        view.addGestureRecognizer(bruCiuPaintDraft)
+
+        flckinkOutlineDraft.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkOutlineDraft.ponllGraffitiDraftBackStyle()
+        flckinkOutlineDraft.tintColor = .white
+        flckinkOutlineDraft.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
+        flckinkOutlineDraft.layer.cornerRadius = 18
+        flckinkOutlineDraft.layer.borderWidth = 1
+        flckinkOutlineDraft.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
+        flckinkOutlineDraft.addTarget(self, action: #selector(ponllWallDraft), for: .touchUpInside)
+        flckinkOutlineDraft.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flckinkOutlineDraft)
+
+        aerErstPaintDraft.text = "Cproenaltleb rPurCoifuifllec".ponllPaintaerErstHours
+        aerErstPaintDraft.textColor = .white
+        aerErstPaintDraft.textAlignment = .center
+        aerErstPaintDraft.font = PonllyFonts.muralForgepon(neonLab: 16)
+        aerErstPaintDraft.ponllGraffitiDraftTitleStyle()
+        aerErstPaintDraft.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aerErstPaintDraft)
+
+        ponllInkDraft.backgroundColor = UIColor.black.withAlphaComponent(0.72)
+        ponllInkDraft.tintColor = .white
+        ponllInkDraft.setImage(UIImage(systemName: "camera", withConfiguration: UIImage.SymbolConfiguration(pointSize: 27, weight: .medium)), for: .normal)
+        ponllInkDraft.layer.cornerRadius = 56
+        ponllInkDraft.layer.borderWidth = 2
+        ponllInkDraft.layer.borderColor = PonllyPalette.cyan.cgColor
+        ponllInkDraft.imageView?.contentMode = .scaleAspectFill
+        ponllInkDraft.clipsToBounds = true
+        ponllInkDraft.addTarget(self, action: #selector(bruCiuSketchDraft), for: .touchUpInside)
+        ponllInkDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(ponllInkDraft)
+
+        bruCiuWallDraft.text = "Tpaopn ltlob ruupCliouafdl cakviantkaare".ponllPaintaerErstHours
+        bruCiuWallDraft.textColor = PonllyPalette.cyan
+        bruCiuWallDraft.textAlignment = .center
+        bruCiuWallDraft.font = PonllyFonts.steelGate(rollingShutter: 11)
+        bruCiuWallDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(bruCiuWallDraft)
+
+        flckinkMuralDraft.text = "Npiocnklnlabmreu".ponllPaintaerErstHours
+        flckinkMuralDraft.textColor = UIColor(red: 142/255, green: 142/255, blue: 168/255, alpha: 1)
+        flckinkMuralDraft.font = PonllyFonts.steelGate(rollingShutter: 11)
+        flckinkMuralDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(flckinkMuralDraft)
+
+        aerErstAerosolDraft.attributedPlaceholder = NSAttributedString(
+            string: "Eqnwteerrt yyuoiuorp ansidcfkgnhajmkel".ponllPaintaerErstHours,
+            attributes: [.foregroundColor: UIColor(red: 142/255, green: 142/255, blue: 168/255, alpha: 1)]
+        )
+        aerErstAerosolDraft.textColor = .white
+        aerErstAerosolDraft.font = PonllyFonts.utilityBox(blankFacade: 15)
+        aerErstAerosolDraft.textContentType = .nickname
+        aerErstAerosolDraft.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.94)
+        aerErstAerosolDraft.layer.cornerRadius = 14
+        aerErstAerosolDraft.layer.borderWidth = 1.5
+        aerErstAerosolDraft.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
+        aerErstAerosolDraft.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
+        aerErstAerosolDraft.leftViewMode = .always
+        aerErstAerosolDraft.returnKeyType = .done
+        aerErstAerosolDraft.delegate = self
+        aerErstAerosolDraft.addTarget(self, action: #selector(bruCiuOutlineDraft(_:)), for: .editingDidBegin)
+        aerErstAerosolDraft.addTarget(self, action: #selector(flckinkChromeDraft(_:)), for: .editingDidEnd)
+        aerErstAerosolDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(aerErstAerosolDraft)
+
+        ponllStencilDraft.text = "2p-o2n0l lcbhraurCaicutfelrcsk".ponllPaintaerErstHours
+        ponllStencilDraft.textColor = UIColor(red: 142/255, green: 142/255, blue: 168/255, alpha: 1)
+        ponllStencilDraft.font = PonllyFonts.utilityBox(blankFacade: 12)
+        ponllStencilDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(ponllStencilDraft)
+
+        bruCiuMarkerDraft.text = "Gproanflflibtriu CIinutfelrceksitnsk".ponllPaintaerErstHours
+        bruCiuMarkerDraft.textColor = .white
+        bruCiuMarkerDraft.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuMarkerDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(bruCiuMarkerDraft)
+
+        flckinkGraffitiDraft.backgroundColor = .clear
+        flckinkGraffitiDraft.showsVerticalScrollIndicator = false
+        flckinkGraffitiDraft.isScrollEnabled = false
+        flckinkGraffitiDraft.dataSource = self
+        flckinkGraffitiDraft.delegate = self
+        flckinkGraffitiDraft.register(PonllStencilDraftCell.self, forCellWithReuseIdentifier: "PpoonnllllSbtreunCciiulfDlrcakfitnCkealelr".ponllPaintaerErstHours)
+        flckinkGraffitiDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(flckinkGraffitiDraft)
+
+        aerErstLetterDraft.layer.cornerRadius = 16
+        aerErstLetterDraft.addTarget(self, action: #selector(aerErstTextureDraft), for: .touchUpInside)
+        aerErstLetterDraft.translatesAutoresizingMaskIntoConstraints = false
+        ponllSketchDraft.addSubview(aerErstLetterDraft)
+
+        NSLayoutConstraint.activate([
+            bruCiuChromeDraft.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bruCiuChromeDraft.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bruCiuChromeDraft.topAnchor.constraint(equalTo: view.topAnchor),
+            bruCiuChromeDraft.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            flckinkUrbanDraft.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flckinkUrbanDraft.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flckinkUrbanDraft.topAnchor.constraint(equalTo: view.topAnchor),
+            flckinkUrbanDraft.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ponllSketchDraft.leadingAnchor.constraint(equalTo: flckinkUrbanDraft.frameLayoutGuide.leadingAnchor),
+            ponllSketchDraft.trailingAnchor.constraint(equalTo: flckinkUrbanDraft.frameLayoutGuide.trailingAnchor),
+            ponllSketchDraft.topAnchor.constraint(equalTo: flckinkUrbanDraft.contentLayoutGuide.topAnchor),
+            ponllSketchDraft.bottomAnchor.constraint(equalTo: flckinkUrbanDraft.contentLayoutGuide.bottomAnchor),
+            ponllSketchDraft.heightAnchor.constraint(greaterThanOrEqualTo: flckinkUrbanDraft.frameLayoutGuide.heightAnchor),
+
+            flckinkOutlineDraft.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
+            flckinkOutlineDraft.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            flckinkOutlineDraft.widthAnchor.constraint(equalToConstant: 36),
+            flckinkOutlineDraft.heightAnchor.constraint(equalToConstant: 36),
+            aerErstPaintDraft.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            aerErstPaintDraft.centerYAnchor.constraint(equalTo: flckinkOutlineDraft.centerYAnchor),
+
+            ponllInkDraft.centerXAnchor.constraint(equalTo: ponllSketchDraft.centerXAnchor),
+            ponllInkDraft.topAnchor.constraint(equalTo: ponllSketchDraft.topAnchor, constant: 80),
+            ponllInkDraft.widthAnchor.constraint(equalToConstant: 112),
+            ponllInkDraft.heightAnchor.constraint(equalToConstant: 112),
+            bruCiuWallDraft.centerXAnchor.constraint(equalTo: ponllSketchDraft.centerXAnchor),
+            bruCiuWallDraft.topAnchor.constraint(equalTo: ponllInkDraft.bottomAnchor, constant: 12),
+            bruCiuWallDraft.heightAnchor.constraint(equalToConstant: 14),
+
+            flckinkMuralDraft.leadingAnchor.constraint(equalTo: ponllSketchDraft.leadingAnchor, constant: 24),
+            flckinkMuralDraft.trailingAnchor.constraint(equalTo: ponllSketchDraft.trailingAnchor, constant: -24),
+            flckinkMuralDraft.topAnchor.constraint(equalTo: bruCiuWallDraft.bottomAnchor, constant: 28),
+            flckinkMuralDraft.heightAnchor.constraint(equalToConstant: 14),
+            aerErstAerosolDraft.leadingAnchor.constraint(equalTo: flckinkMuralDraft.leadingAnchor),
+            aerErstAerosolDraft.trailingAnchor.constraint(equalTo: flckinkMuralDraft.trailingAnchor),
+            aerErstAerosolDraft.topAnchor.constraint(equalTo: flckinkMuralDraft.bottomAnchor, constant: 10),
+            aerErstAerosolDraft.heightAnchor.constraint(equalToConstant: 56),
+            ponllStencilDraft.leadingAnchor.constraint(equalTo: flckinkMuralDraft.leadingAnchor),
+            ponllStencilDraft.topAnchor.constraint(equalTo: aerErstAerosolDraft.bottomAnchor, constant: 12),
+            ponllStencilDraft.heightAnchor.constraint(equalToConstant: 16),
+
+            bruCiuMarkerDraft.leadingAnchor.constraint(equalTo: flckinkMuralDraft.leadingAnchor),
+            bruCiuMarkerDraft.trailingAnchor.constraint(equalTo: flckinkMuralDraft.trailingAnchor),
+            bruCiuMarkerDraft.topAnchor.constraint(equalTo: ponllStencilDraft.bottomAnchor, constant: 28),
+            bruCiuMarkerDraft.heightAnchor.constraint(equalToConstant: 17),
+            flckinkGraffitiDraft.leadingAnchor.constraint(equalTo: flckinkMuralDraft.leadingAnchor),
+            flckinkGraffitiDraft.trailingAnchor.constraint(equalTo: flckinkMuralDraft.trailingAnchor),
+            flckinkGraffitiDraft.topAnchor.constraint(equalTo: bruCiuMarkerDraft.bottomAnchor, constant: 20),
+            flckinkGraffitiDraft.heightAnchor.constraint(equalToConstant: 130),
+
+            aerErstLetterDraft.leadingAnchor.constraint(equalTo: flckinkMuralDraft.leadingAnchor),
+            aerErstLetterDraft.trailingAnchor.constraint(equalTo: flckinkMuralDraft.trailingAnchor),
+            aerErstLetterDraft.topAnchor.constraint(equalTo: flckinkGraffitiDraft.bottomAnchor, constant: 42),
+            aerErstLetterDraft.heightAnchor.constraint(equalToConstant: 49),
+            aerErstLetterDraft.bottomAnchor.constraint(lessThanOrEqualTo: ponllSketchDraft.bottomAnchor, constant: -32)
+        ])
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        ponllPaintDraft.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let ponllChromeDraft = collectionView.dequeueReusableCell(withReuseIdentifier: "PpoonnllllSbtreunCciiulfDlrcakfitnCkealelr".ponllPaintaerErstHours, for: indexPath) as? PonllStencilDraftCell else {
+            return UICollectionViewCell()
+        }
+        ponllChromeDraft.ponllMuralDraft(ponllPaintDraft[indexPath.item], bruCiuPaintDraft: bruCiuInkDraft.contains(indexPath.item))
+        return ponllChromeDraft
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if bruCiuInkDraft.contains(indexPath.item) {
+            bruCiuInkDraft.remove(indexPath.item)
+        } else if bruCiuInkDraft.count < 5 {
+            bruCiuInkDraft.insert(indexPath.item)
+        }
+        collectionView.reloadItems(at: [indexPath])
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flckinkLetterDraft = (ponllPaintDraft[indexPath.item] as NSString).size(withAttributes: [.font: PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)]).width
+        return CGSize(width: ceil(flckinkLetterDraft) + 32, height: 36)
+    }
+
+    @objc private func ponllWallDraft() {
+        navigationController?.popViewController(animated: true)
+    }
+
+    @objc private func bruCiuSketchDraft() {
+        view.endEditing(true)
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
+        let flckinkImageDraft = UIImagePickerController()
+        flckinkImageDraft.sourceType = .photoLibrary
+        flckinkImageDraft.allowsEditing = true
+        flckinkImageDraft.delegate = self
+        present(flckinkImageDraft, animated: true)
+    }
+
+    @objc private func aerErstTextureDraft() {
+        view.endEditing(true)
+        let ponllChromeDraft = (aerErstAerosolDraft.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !ponllChromeDraft.isEmpty else {
+            aerErstMarkerDraft("Pploenalsleb reunCtieurf lac kniinckkanearmEer".ponllPaintaerErstHours)
+            return
+        }
+        guard (2...20).contains(ponllChromeDraft.count) else {
+            aerErstMarkerDraft("Npiocnklnlabmreu Cmiuusftl cbkei n2k-a2e0r Ecrhsatrpaocntlelrbsr".ponllPaintaerErstHours)
+            return
+        }
+        guard !bruCiuInkDraft.isEmpty else {
+            aerErstMarkerDraft("Speolnelcltb rautC iluefalsctk ionnkea eirnEtresrtepsotn".ponllPaintaerErstHours)
+            return
+        }
+
+        aerErstLetterDraft.isEnabled = false
+        flckinkOutlineDraft.isEnabled = false
+        aerErstLetterDraft.setTitle("Cproenaltlibnrgu.C.i.u".ponllPaintaerErstHours, for: .normal)
+        FlckinkMatteFinish.shared.flckinkShadowSpray(aerErstStencilCut: aerErstStencilDraft, ponllStencilSheet: ponllMarkerDraft) { success, message in
+            self.aerErstLetterDraft.isEnabled = true
+            self.flckinkOutlineDraft.isEnabled = true
+            self.aerErstLetterDraft.setTitle("Cpoomnplllebtreu CPiruoffliclkei".ponllPaintaerErstHours, for: .normal)
+            guard success else {
+                self.aerErstMarkerDraft(message ?? "Amcncoopuqnrts tcuovuwlxdy znAoBtC DbEeF GcHrIeJaKtLeMdN".ponllPaintaerErstHours)
+                return
+            }
+            let bruCiuStencilDraft = self.bruCiuInkDraft.sorted().map { self.ponllPaintDraft[$0] }
+            PonllyponllTornEdge.updatebruCiuNightWall(
+                flckinkDawnWall: ponllChromeDraft,
+                aerErstRainWall: "",
+                ponllSunlitWall: bruCiuStencilDraft
+            )
+            PonllyponllTornEdge.saveCurrentaerErstBlackOutline(ponllWhiteEdge: self.flckinkWallDraft, bruCiuSilverSheen: nil)
+            let flckinkProfileDraft = PonllycyanGlowController(ponllChromeDraft, self.flckinkWallDraft, self.bruCiuTextureDraft)
+            self.navigationController?.pushViewController(flckinkProfileDraft, animated: true)
+        }
+    }
+
+    private func aerErstMarkerDraft(_ ponllPaintDraft: String) {
+        ponllyShowThemeAlert(title: "Cproenaltleb rPurCoifuifllec".ponllPaintaerErstHours, message: ponllPaintDraft, actionTitle: "OBKT".ponllPaintaerErstHours, style: .bruCiuSilverSheen)
+    }
+
+    @objc private func aerErstInkDraft() {
+        view.endEditing(true)
+    }
+
+    @objc private func bruCiuOutlineDraft(_ ponllAerosolDraft: UITextField) {
+        ponllAerosolDraft.layer.borderColor = PonllyPalette.pink.cgColor
+    }
+
+    @objc private func flckinkChromeDraft(_ ponllAerosolDraft: UITextField) {
+        ponllAerosolDraft.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        aerErstTextureDraft()
+        return true
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        let ponllImageDraft = (info[.editedImage] ?? info[.originalImage]) as? UIImage
+        flckinkWallDraft = ponllImageDraft
+        if let ponllImageDraft {
+            ponllInkDraft.contentHorizontalAlignment = .fill
+            ponllInkDraft.contentVerticalAlignment = .fill
+            ponllInkDraft.setImage(ponllImageDraft.withRenderingMode(.alwaysOriginal), for: .normal)
+            ponllInkDraft.imageView?.contentMode = .scaleAspectFill
+        }
+        picker.dismiss(animated: true)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+
+    @objc private func bruCiuMuralDraft(_ note: Notification) {
+        guard let ponllKeyboardDraft = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        let bruCiuKeyboardDraft = max(ponllKeyboardDraft.height - view.safeAreaInsets.bottom, 0) + 18
+        flckinkUrbanDraft.contentInset.bottom = bruCiuKeyboardDraft
+        flckinkUrbanDraft.verticalScrollIndicatorInsets.bottom = bruCiuKeyboardDraft
+        let flckinkKeyboardDraft = aerErstAerosolDraft.convert(aerErstAerosolDraft.bounds, to: flckinkUrbanDraft).insetBy(dx: 0, dy: -18)
+        flckinkUrbanDraft.scrollRectToVisible(flckinkKeyboardDraft, animated: true)
+    }
+
+    @objc private func flckinkStencilDraft(_ note: Notification) {
+        flckinkUrbanDraft.contentInset.bottom = 0
+        flckinkUrbanDraft.verticalScrollIndicatorInsets.bottom = 0
+    }
+}
+
+private final class PonllStencilDraftCell: UICollectionViewCell {
+    private let ponllOutlineDraft = UILabel()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.layer.cornerRadius = 18
+        contentView.layer.borderWidth = 1.5
+        ponllOutlineDraft.textAlignment = .center
+        ponllOutlineDraft.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
+        ponllOutlineDraft.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(ponllOutlineDraft)
+        NSLayoutConstraint.activate([
+            ponllOutlineDraft.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            ponllOutlineDraft.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            ponllOutlineDraft.topAnchor.constraint(equalTo: contentView.topAnchor),
+            ponllOutlineDraft.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func ponllMuralDraft(_ bruCiuLetterDraft: String, bruCiuPaintDraft: Bool) {
+        ponllOutlineDraft.text = bruCiuLetterDraft
+        ponllOutlineDraft.textColor = bruCiuPaintDraft ? UIColor(red: 255/255, green: 45/255, blue: 120/255, alpha: 1) : .white
+        ponllOutlineDraft.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: bruCiuPaintDraft ? .bold : .medium)
+        contentView.backgroundColor = bruCiuPaintDraft ? UIColor(red: 45/255, green: 19/255, blue: 35/255, alpha: 1) : PonllyPalette.panel.withAlphaComponent(0.92)
+        contentView.layer.borderColor = (bruCiuPaintDraft ? UIColor(red: 255/255, green: 45/255, blue: 120/255, alpha: 1) : UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1)).cgColor
+        contentView.layer.shadowColor = bruCiuPaintDraft ? UIColor(red: 255/255, green: 45/255, blue: 120/255, alpha: 1).cgColor : UIColor.clear.cgColor
+        contentView.layer.shadowOpacity = bruCiuPaintDraft ? 0.26 : 0
+        contentView.layer.shadowRadius = bruCiuPaintDraft ? 8 : 0
     }
 }

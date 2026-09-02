@@ -5,7 +5,7 @@ import StoreKit
 import UIKit
 
 final class ErErstPaintLabView: UIView {
-    init(user ponllLayerMap: PonllyaerErstTwoToneFillr, size bruCiuCanMap: CGFloat = 40, borderWidth flckinkMuralPlan: CGFloat = 2) {
+    init(_ ponllLayerMap: PonllyaerErstTwoToneFillr, _ bruCiuCanMap: CGFloat = 40, _ flckinkMuralPlan: CGFloat = 2) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: bruCiuCanMap).isActive = true

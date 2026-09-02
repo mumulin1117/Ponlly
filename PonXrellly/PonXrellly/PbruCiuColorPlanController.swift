@@ -88,7 +88,7 @@ final class PbruCiuColorPlanController: UIViewController {
         NSLayoutConstraint.activate([
             ponllInkBloom.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:0),
             ponllInkBloom.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:0),
-            ponllInkBloom.topAnchor.constraint(equalTo: aerErstInkSignal.bottomAnchor, constant: 0),
+            ponllInkBloom.topAnchor.constraint(equalTo: flckinkStencilSeed.bottomAnchor, constant: 28),
             ponllInkBloom.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
 
@@ -105,17 +105,17 @@ final class PbruCiuColorPlanController: UIViewController {
             
             bruCiuWallFlicker.leadingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.leadingAnchor, constant: 16),
             bruCiuWallFlicker.trailingAnchor.constraint(equalTo: ponllInkBloom.frameLayoutGuide.trailingAnchor, constant: -16),
-            bruCiuWallFlicker.topAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.topAnchor, constant: 18),
+            bruCiuWallFlicker.topAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.topAnchor, constant: 0),
             bruCiuWallFlicker.bottomAnchor.constraint(equalTo: ponllInkBloom.contentLayoutGuide.bottomAnchor, constant: -30),
             
-            ponllAerosolQuest.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
+            ponllAerosolQuest.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 20),
             ponllAerosolQuest.centerYAnchor.constraint(equalTo: bruCiuMuralCue.centerYAnchor),
-            bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -4),
+            bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -24),
             bruCiuMuralCue.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor, constant: 2),
             bruCiuMuralCue.widthAnchor.constraint(equalToConstant: 52),
             bruCiuMuralCue.heightAnchor.constraint(equalToConstant: 52),
-            flckinkStencilSeed.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 4),
-            flckinkStencilSeed.trailingAnchor.constraint(lessThanOrEqualTo: aerErstInkSignal.trailingAnchor, constant: -4),
+            flckinkStencilSeed.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 20),
+            flckinkStencilSeed.trailingAnchor.constraint(lessThanOrEqualTo: aerErstInkSignal.trailingAnchor, constant: -20),
             flckinkStencilSeed.topAnchor.constraint(equalTo: ponllAerosolQuest.bottomAnchor, constant: 18),
             flckinkAerosolFlash.heightAnchor.constraint(equalToConstant: 32),
             aerErstMuralFuse.heightAnchor.constraint(equalToConstant: 32)
@@ -165,13 +165,14 @@ final class PbruCiuColorPlanController: UIViewController {
         for bruCiuAerosolNoise in ponllInkGrit {
             if ponllStencilTrace == .flckinkWallTexturepoj {
                 let flckinkMuralTexture = PonllyWaitingBattleCardView(fencePiece: bruCiuAerosolNoise)
-                flckinkMuralTexture.paintQuest = { [weak self] in self?.bruCiuChromeBalance(bruCiuAerosolNoise) }
+                flckinkMuralTexture.paintQuest = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
                 flckinkMuralTexture.zMotion = { [weak self] aerErstStencilMotion in self?.flckinkNeonCascade(aerErstStencilMotion) }
-                flckinkMuralTexture.styleNoise = { [weak self] in self?.ponllTextureRipple(bruCiuAerosolNoise) }
+                flckinkMuralTexture.styleNoise = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
+                flckinkMuralTexture.bruCiuMuralForge = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
                 bruCiuWallFlicker.addArrangedSubview(flckinkMuralTexture)
             } else {
                 let aerErstSketchContrast = CkinkMuralLabView(flckinkWallPaste: bruCiuAerosolNoise)
-                aerErstSketchContrast.bruCiuSilverSheen = { [weak self] in self?.bruCiuChromeBalance(bruCiuAerosolNoise) }
+                aerErstSketchContrast.bruCiuSilverSheen = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
                 aerErstSketchContrast.flckinkPrimerCoat = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
                 aerErstSketchContrast.aerErstPaintBase = { [weak self] ponllWallBurst in self?.flckinkNeonCascade(ponllWallBurst) }
                 bruCiuWallFlicker.addArrangedSubview(aerErstSketchContrast)
@@ -200,7 +201,7 @@ final class PbruCiuColorPlanController: UIViewController {
         aerErstMuralFuse.layer.borderColor = flckinkMuralSurge ? UIColor.white.withAlphaComponent(0.35).cgColor : PonllyPalette.pink.cgColor
     }
 
-    private func bruCiuChromeBalance(_ aerErstInkMotion: PonllyBattle) {
+    private func bruCiuaerosolHazece(_ aerErstInkMotion: PonllyBattle) {
         let ponllPaintCascade = PonllyponllTornEdge.flckinkPaintRun().first { $0.graffitiPulse == aerErstInkMotion.graffitiPulse } ?? aerErstInkMotion
         let bruCiuMuralFlicker = PbruCiuStencilLabController(flckinkPaintVeil: ponllPaintCascade)
         bruCiuMuralFlicker.hidesBottomBarWhenPushed = true
@@ -208,7 +209,7 @@ final class PbruCiuColorPlanController: UIViewController {
     }
 
     private func flckinkNeonCascade(_ flckinkStencilFlash: PonllyaerErstTwoToneFillr) {
-        let aerErstChromeFuse = FlckinkPrimerCoatController(user: flckinkStencilFlash)
+        let aerErstChromeFuse = FlckinkPrimerCoatController(flckinkStencilFlash)
         aerErstChromeFuse.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(aerErstChromeFuse, animated: true)
     }
@@ -222,27 +223,15 @@ final class PbruCiuColorPlanController: UIViewController {
     }
 
     private func bruCiuPaintSurge(for flckinkInkVeil: PonllyBattle) {
-        let aerErstWallAura = UIAlertController(title: "BxaytztAlBeC DOEpFtGiHoInJsK".ponllPaintaerErstHours, message: flckinkInkVeil.nozzleCraft, preferredStyle: .actionSheet)
-        aerErstWallAura.addAction(UIAlertAction(title: "RLeMpNoOrPtQ RCShTaUlVlWeXnYgZe0".ponllPaintaerErstHours, style: .destructive) { _ in
-            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-                let ponllAerosolEcho = PonllyroughFillController(blackOutline: flckinkInkVeil)
-                ponllAerosolEcho.fadeSpray = { [weak self] in
-                    self?.aerErstSketchRush("R1e2p3o4r5t6 7s8u9bambictdteefdg".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
-                }
-                ponllAerosolEcho.modalPresentationStyle = .overFullScreen
-                ponllAerosolEcho.modalTransitionStyle = .crossDissolve
-                self.present(ponllAerosolEcho, animated: true)
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+            let ponllAerosolEcho = PonllyroughFillController(blackOutline: flckinkInkVeil)
+            ponllAerosolEcho.fadeSpray = { [weak self] in
+                self?.aerErstSketchRush("R1e2p3o4r5t6 7s8u9bambictdteefdg".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
             }
-        })
-        aerErstWallAura.addAction(UIAlertAction(title: "Nhoitj kIlnmtneorpeqsrtsetdu".ponllPaintaerErstHours, style: .default) { _ in
-            self.flckinkPrimerCoatponlu("UvpwdxaytzeAdB".ponllPaintaerErstHours)
-        })
-        aerErstWallAura.addAction(UIAlertAction(title: "CCaDnEcFeGlH".ponllPaintaerErstHours, style: .cancel))
-        if let bruCiuMarkerSignal = aerErstWallAura.popoverPresentationController {
-            bruCiuMarkerSignal.sourceView = view
-            bruCiuMarkerSignal.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY - 80, width: 1, height: 1)
+            ponllAerosolEcho.modalPresentationStyle = .overFullScreen
+            ponllAerosolEcho.modalTransitionStyle = .crossDissolve
+            self.present(ponllAerosolEcho, animated: true)
         }
-        present(aerErstWallAura, animated: true)
     }
 
     @objc private func bruCiuSketchWeave(_ aerErstPaintPath: UIButton) {

@@ -23,10 +23,10 @@ final class CkinkMuralLabView: UIControl {
     }
 
     private func flckinkMatteFinish() {
-        backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 25/255, alpha: 1)
         layer.cornerRadius = 18
-        layer.borderWidth = 1.3
-        layer.borderColor = PonllyPalette.line.cgColor
+        layer.borderWidth = 1
+        layer.borderColor = UIColor(red: 37/255, green: 37/255, blue: 48/255, alpha: 1).cgColor
         translatesAutoresizingMaskIntoConstraints = false
 
         let ponllMetallicSpray = PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.paintMist)
@@ -88,6 +88,9 @@ final class CkinkMuralLabView: UIControl {
         let flckinkFanSpray = PonllybruCiuUtilityBoxView(aVotes: ponllFinalCoat.alleyCanvas, bVotes: ponllFinalCoat.railYard)
 
         [aerErstPaintMarker, aerErstEnamelPaint, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(flckinkInkMarker.addArrangedSubview)
+        flckinkInkMarker.setCustomSpacing(28, after: aerErstEnamelPaint)
+        flckinkInkMarker.setCustomSpacing(10, after: flckinkPaintShelf)
+        flckinkInkMarker.setCustomSpacing(16, after: aerErstCanShake)
         [aerErstEnamelPaint, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
 
         NSLayoutConstraint.activate([
@@ -95,8 +98,8 @@ final class CkinkMuralLabView: UIControl {
             flckinkInkMarker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
             flckinkInkMarker.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
             flckinkInkMarker.topAnchor.constraint(equalTo: topAnchor, constant: 14),
-            flckinkInkMarker.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            aerErstEnamelPaint.heightAnchor.constraint(equalToConstant: 182),
+            flckinkInkMarker.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -9),
+            aerErstEnamelPaint.heightAnchor.constraint(equalToConstant: 210),
             ponllLatexPaint.leadingAnchor.constraint(equalTo: aerErstEnamelPaint.leadingAnchor),
             ponllLatexPaint.topAnchor.constraint(equalTo: aerErstEnamelPaint.topAnchor),
             ponllLatexPaint.bottomAnchor.constraint(equalTo: aerErstEnamelPaint.bottomAnchor),
@@ -122,7 +125,7 @@ final class CkinkMuralLabView: UIControl {
         ponllStencilSheet.isUserInteractionEnabled = false
         ponllStencilSheet.translatesAutoresizingMaskIntoConstraints = false
         aerErstStencilCut.addSubview(ponllStencilSheet)
-        ponllStencilSheet.addArrangedSubview(ErErstPaintLabView(user: flckinkShadowSpray, size: 36, borderWidth: flckinkMuralPlan))
+        ponllStencilSheet.addArrangedSubview(ErErstPaintLabView(flckinkShadowSpray, 36, flckinkMuralPlan))
         ponllStencilSheet.addArrangedSubview(bruCiuColorRack(flckinkShadowSpray.aerosolDream, aerErstPaperCut: 13, ponllBladeLine: .white, bruCiuCutoutShape: .semibold))
         NSLayoutConstraint.activate([
             aerErstStencilCut.heightAnchor.constraint(equalToConstant: 36),

@@ -5,27 +5,54 @@ import StoreKit
 import UIKit
 
 final class PonllystencilBloomController: UIViewController {
+    private enum PonllAerosolSignal: Int, CaseIterable {
+        case graffitiPulse
+        case aerosolDream
+        case streetMural
+        case wallCraft
+        case paintFlow
+        case sprayRhythm
+
+        var chromeShine: String {
+            switch self {
+            case .graffitiPulse:
+                return "Pqowpeurltayru".ponllPaintaerErstHours
+            case .aerosolDream:
+                return "Fqowlelrotwyiunigo".ponllPaintaerErstHours
+            case .streetMural:
+                return "Nqewwe rRtoyoumiso".ponllPaintaerErstHours
+            case .wallCraft:
+                return "Gqrwaefrftiytuii oTpaqlwke".ponllPaintaerErstHours
+            case .paintFlow:
+                return "Mquwseirct".ponllPaintaerErstHours
+            case .sprayRhythm:
+                return "Bqawtetrltey uDiiospcquwsesritoynu".ponllPaintaerErstHours
+            }
+        }
+    }
+
     private let ponllScrollCanvas = UIScrollView()
     private let bruCiuStackPath = UIStackView()
     private let flckinksqueezeMarkerColumn = UIStackView()
     private let ponllMarkerSignal = UIRefreshControl()
     private var bruCiuStencilSignal = false
-    private var aerErstSelectedCategory: PonllyVoLobbyCategory = .bruCiuSolidFill
+    private var aerErstSelectedCategory: PonllAerosolSignal = .graffitiPulse
     private var ponllCategoryButtons: [UIButton] = []
+    private var ponllWallMap: Set<String> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
       
         view.backgroundColor = PonllyPalette.background
         bruCiuSetup()
-        flckinkReloadRooms()
+        flckinkReloadutilityBox()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         tabBarController?.tabBar.isHidden = false
-        flckinkReloadRooms()
+        flckinkReloadutilityBox()
     }
 
     private func bruCiuSetup() {
@@ -33,9 +60,7 @@ final class PonllystencilBloomController: UIViewController {
         view.addSubview(ponllBackgroundWash)
         ponllBackgroundWash.woodPanelPonlly(steelGate: view)
 
-        let ponllHeaderCanvas = UIStackView()
-        ponllHeaderCanvas.axis = .vertical
-        ponllHeaderCanvas.spacing = 12
+        let ponllHeaderCanvas = UIView()
         ponllHeaderCanvas.backgroundColor = PonllyPalette.background.withAlphaComponent(0.98)
         ponllHeaderCanvas.layer.zPosition = 20
         ponllHeaderCanvas.translatesAutoresizingMaskIntoConstraints = false
@@ -47,41 +72,51 @@ final class PonllystencilBloomController: UIViewController {
         view.addSubview(ponllScrollCanvas)
 
         bruCiuStackPath.axis = .vertical
-        bruCiuStackPath.spacing = 18
+        bruCiuStackPath.spacing = 0
         bruCiuStackPath.translatesAutoresizingMaskIntoConstraints = false
         ponllScrollCanvas.addSubview(bruCiuStackPath)
 
-        let flckinkHeaderStack = UIStackView()
-        flckinkHeaderStack.axis = .vertical
-        flckinkHeaderStack.spacing = 6
         let aerErstTitleMark = UILabel()
-        aerErstTitleMark.text = "VwoxiyczeA BRCoDoEmF".ponllPaintaerErstHours
+        aerErstTitleMark.text = "Vqowiecret yRuoioompsq".ponllPaintaerErstHours
         aerErstTitleMark.textColor = .white
-        aerErstTitleMark.font = PonllyFonts.muralForgepon(neonLab: 32)
-        let ponllSubtitleMark = UILabel()
-        ponllSubtitleMark.text = "DGrHoIpJ KiLnMtNoO PwQaRlSlT-UtVaWlXkY Zs0e1s2s3i4o5n6s7 8w9iatbhc dwerfigtheirjsk,l mcnroiptqircsst,u vawnxdy zpArBoCcDeEsFsG HcIrJeKwLsM.N".ponllPaintaerErstHours
-        ponllSubtitleMark.textColor = PonllyPalette.muted
-        ponllSubtitleMark.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
-        ponllSubtitleMark.numberOfLines = 0
-        flckinkHeaderStack.addArrangedSubview(aerErstTitleMark)
-        flckinkHeaderStack.addArrangedSubview(ponllSubtitleMark)
-        ponllHeaderCanvas.addArrangedSubview(flckinkHeaderStack)
-        ponllHeaderCanvas.addArrangedSubview(ponllCategoryRow())
+        aerErstTitleMark.font = PonllyFonts.muralForgepon(neonLab: 22)
+        aerErstTitleMark.translatesAutoresizingMaskIntoConstraints = false
+        ponllHeaderCanvas.addSubview(aerErstTitleMark)
+
+        let bruCiuStyleMap = ponllCategoryRow()
+        ponllHeaderCanvas.addSubview(bruCiuStyleMap)
+
+        let flckinkOutlineGlow = UIView()
+        flckinkOutlineGlow.backgroundColor = PonllyPalette.line.withAlphaComponent(0.66)
+        flckinkOutlineGlow.translatesAutoresizingMaskIntoConstraints = false
+        ponllHeaderCanvas.addSubview(flckinkOutlineGlow)
+
         flckinksqueezeMarkerColumn.axis = .vertical
-        flckinksqueezeMarkerColumn.spacing = 14
+        flckinksqueezeMarkerColumn.spacing = 16
         bruCiuStackPath.addArrangedSubview(flckinksqueezeMarkerColumn)
 
         NSLayoutConstraint.activate([
-            ponllHeaderCanvas.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            ponllHeaderCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            ponllHeaderCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 14),
+            ponllHeaderCanvas.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            ponllHeaderCanvas.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ponllHeaderCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            aerErstTitleMark.leadingAnchor.constraint(equalTo: ponllHeaderCanvas.leadingAnchor, constant: 16),
+            aerErstTitleMark.topAnchor.constraint(equalTo: ponllHeaderCanvas.topAnchor, constant: 14),
+            bruCiuStyleMap.leadingAnchor.constraint(equalTo: ponllHeaderCanvas.leadingAnchor),
+            bruCiuStyleMap.trailingAnchor.constraint(equalTo: ponllHeaderCanvas.trailingAnchor),
+            bruCiuStyleMap.topAnchor.constraint(equalTo: aerErstTitleMark.bottomAnchor, constant: 25),
+            bruCiuStyleMap.heightAnchor.constraint(equalToConstant: 32),
+            flckinkOutlineGlow.leadingAnchor.constraint(equalTo: ponllHeaderCanvas.leadingAnchor),
+            flckinkOutlineGlow.trailingAnchor.constraint(equalTo: ponllHeaderCanvas.trailingAnchor),
+            flckinkOutlineGlow.topAnchor.constraint(equalTo: bruCiuStyleMap.bottomAnchor, constant: 17),
+            flckinkOutlineGlow.bottomAnchor.constraint(equalTo: ponllHeaderCanvas.bottomAnchor),
+            flckinkOutlineGlow.heightAnchor.constraint(equalToConstant: 1),
             ponllScrollCanvas.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             ponllScrollCanvas.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            ponllScrollCanvas.topAnchor.constraint(equalTo: ponllHeaderCanvas.bottomAnchor, constant: 16),
+            ponllScrollCanvas.topAnchor.constraint(equalTo: ponllHeaderCanvas.bottomAnchor),
             ponllScrollCanvas.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.leadingAnchor, constant: 20),
-            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.trailingAnchor, constant: -20),
-            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor),
+            bruCiuStackPath.leadingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.leadingAnchor, constant: 14),
+            bruCiuStackPath.trailingAnchor.constraint(equalTo: ponllScrollCanvas.frameLayoutGuide.trailingAnchor, constant: -14),
+            bruCiuStackPath.topAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.topAnchor, constant: 15),
             bruCiuStackPath.bottomAnchor.constraint(equalTo: ponllScrollCanvas.contentLayoutGuide.bottomAnchor, constant: -96)
         ])
     }
@@ -99,151 +134,275 @@ final class PonllystencilBloomController: UIViewController {
         ponllScrollCanvas.refreshControl = ponllMarkerSignal
     }
 
-    private func ponllCategoryRow() -> UIStackView {
+    private func ponllCategoryRow() -> UIScrollView {
+        let aerErstStylePath = UIScrollView()
+        aerErstStylePath.showsHorizontalScrollIndicator = false
+        aerErstStylePath.alwaysBounceHorizontal = true
+        aerErstStylePath.translatesAutoresizingMaskIntoConstraints = false
+
         let bruCiuCategoryRow = UIStackView()
         bruCiuCategoryRow.axis = .horizontal
         bruCiuCategoryRow.spacing = 8
-        bruCiuCategoryRow.distribution = .fillEqually
-        ponllCategoryButtons = PonllyVoLobbyCategory.allCases.enumerated().map { flckinkIndex, aerErstCategory in
+        bruCiuCategoryRow.translatesAutoresizingMaskIntoConstraints = false
+        aerErstStylePath.addSubview(bruCiuCategoryRow)
+
+        ponllCategoryButtons = PonllAerosolSignal.allCases.enumerated().map { flckinkIndex, aerErstCategory in
             let ponllCategoryButton = UIButton(type: .system)
             ponllCategoryButton.tag = flckinkIndex
-            ponllCategoryButton.setTitle(aerErstCategory.rawValue, for: .normal)
-            ponllCategoryButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 10)
-            ponllCategoryButton.layer.cornerRadius = 17
+            ponllCategoryButton.setTitle(aerErstCategory.chromeShine, for: .normal)
+            ponllCategoryButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
+            ponllCategoryButton.layer.cornerRadius = 12
             ponllCategoryButton.layer.borderWidth = 1
-            ponllCategoryButton.heightAnchor.constraint(equalToConstant: 38).isActive = true
+            ponllCategoryButton.heightAnchor.constraint(equalToConstant: 26).isActive = true
+            let flckinkStyleWeight = (aerErstCategory.chromeShine as NSString).size(
+                withAttributes: [.font: PonllyFonts.muralForgepon(neonLab: 11)]
+            ).width
+            ponllCategoryButton.widthAnchor.constraint(equalToConstant: ceil(flckinkStyleWeight) + 28).isActive = true
             ponllCategoryButton.addTarget(self, action: #selector(bruCiuCategoryTapped(_:)), for: .touchUpInside)
             bruCiuCategoryRow.addArrangedSubview(ponllCategoryButton)
             return ponllCategoryButton
         }
+        NSLayoutConstraint.activate([
+            bruCiuCategoryRow.leadingAnchor.constraint(equalTo: aerErstStylePath.contentLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuCategoryRow.trailingAnchor.constraint(equalTo: aerErstStylePath.contentLayoutGuide.trailingAnchor, constant: -16),
+            bruCiuCategoryRow.centerYAnchor.constraint(equalTo: aerErstStylePath.frameLayoutGuide.centerYAnchor),
+            bruCiuCategoryRow.heightAnchor.constraint(equalToConstant: 26)
+        ])
         aerErstglossFinishCategories()
-        return bruCiuCategoryRow
+        return aerErstStylePath
     }
 
     private func aerErstglossFinishCategories() {
         for (flckinkIndex, ponllCategoryButton) in ponllCategoryButtons.enumerated() {
-            let bruCiuCategory = PonllyVoLobbyCategory.allCases[flckinkIndex]
+            let bruCiuCategory = PonllAerosolSignal.allCases[flckinkIndex]
             let aerErstSelected = bruCiuCategory == aerErstSelectedCategory
-            ponllCategoryButton.backgroundColor = aerErstSelected ? PonllyPalette.pink : PonllyPalette.panel
-            ponllCategoryButton.setTitleColor(aerErstSelected ? .white : PonllyPalette.muted, for: .normal)
-            ponllCategoryButton.layer.borderColor = (aerErstSelected ? PonllyPalette.pink : PonllyPalette.line).cgColor
+            ponllCategoryButton.backgroundColor = aerErstSelected ? UIColor(red: 5/255, green: 26/255, blue: 30/255, alpha: 1) : PonllyPalette.panel
+            ponllCategoryButton.setTitleColor(aerErstSelected ? PonllyPalette.cyan : PonllyPalette.muted, for: .normal)
+            ponllCategoryButton.layer.borderColor = (aerErstSelected ? PonllyPalette.cyan : PonllyPalette.line).cgColor
+            ponllCategoryButton.layer.shadowColor = PonllyPalette.cyan.cgColor
+            ponllCategoryButton.layer.shadowOpacity = aerErstSelected ? 0.42 : 0
+            ponllCategoryButton.layer.shadowRadius = aerErstSelected ? 7 : 0
+            ponllCategoryButton.layer.shadowOffset = .zero
         }
     }
 
-    private func flckinkReloadRooms() {
+    private func flckinkReloadutilityBox() {
         flckinksqueezeMarkerColumn.arrangedSubviews.forEach {
             flckinksqueezeMarkerColumn.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        let ponllmatteFinish = PonllyponllTornEdge.aerErstSoftCap(ponllCleanOutline: aerErstSelectedCategory)
+        let ponllmatteFinish = bruCiuPaintSignal()
         guard !ponllmatteFinish.isEmpty else {
             flckinksqueezeMarkerColumn.addArrangedSubview(bruCiuEmptyState())
             return
         }
-        ponllmatteFinish.forEach { flckinksqueezeMarkerColumn.addArrangedSubview(flckinkRoomCard($0)) }
+        ponllmatteFinish.forEach { flckinksqueezeMarkerColumn.addArrangedSubview(flckinkutilityBoxCard($0)) }
     }
 
-    private func flckinkRoomCard(_ ponllRoom: PonllyaerErstWeatheredPaperm) -> UIControl {
+    private func bruCiuPaintSignal() -> [PonllyaerErstWeatheredPaperm] {
+        let flckinkWallSignal = PonllyponllTornEdge.aerErstAdhesiveLayer.filter {
+            !PonllyponllTornEdge.aerErstRustStreak($0.gradientFill)
+        }
+        switch aerErstSelectedCategory {
+        case .graffitiPulse:
+            return PonllyponllTornEdge.aerErstSoftCap(ponllCleanOutline: .bruCiuSolidFill)
+        case .aerosolDream:
+            return PonllyponllTornEdge.aerErstSoftCap(ponllCleanOutline: .ponllGritSurface)
+        case .streetMural:
+            return Array(flckinkWallSignal.reversed())
+        case .wallCraft:
+            return flckinkWallSignal.filter { $0.chromeShine == .bruCiuSolidFill }
+        case .paintFlow:
+            return PonllyponllTornEdge.aerErstSoftCap(ponllCleanOutline: .lateWall)
+        case .sprayRhythm:
+            return PonllyponllTornEdge.aerErstSoftCap(ponllCleanOutline: .critique)
+        }
+    }
+
+    private func flckinkutilityBoxCard(_ ponllutilityBox: PonllyaerErstWeatheredPaperm) -> UIControl {
         let bruCiublackOutline = UIControl()
         bruCiublackOutline.backgroundColor = PonllyPalette.panel
-        bruCiublackOutline.layer.cornerRadius = 22
+        bruCiublackOutline.layer.cornerRadius = 14
         bruCiublackOutline.layer.borderWidth = 1
         bruCiublackOutline.layer.borderColor = PonllyPalette.line.cgColor
         bruCiublackOutline.clipsToBounds = true
         bruCiublackOutline.addAction(UIAction { [weak self] _ in
-            self?.aerErstOpen(ponllRoom)
+            self?.aerErstOpen(ponllutilityBox)
         }, for: .touchUpInside)
 
-        let flckinklimeStroke = UIImageView(image: UIImage(named: ponllRoom.aerosolHaze))
+        let flckinklimeStroke = UIImageView(image: ponllutilityBox.graffitiPiece ?? UIImage(named: ponllutilityBox.aerosolHaze))
         flckinklimeStroke.contentMode = .scaleAspectFill
         flckinklimeStroke.clipsToBounds = true
+        flckinklimeStroke.layer.cornerRadius = 10
         flckinklimeStroke.isUserInteractionEnabled = false
         flckinklimeStroke.translatesAutoresizingMaskIntoConstraints = false
         bruCiublackOutline.addSubview(flckinklimeStroke)
-        let aerErstShadeLayer = PonllyponllCyanGlowView(bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.05), UIColor.black.withAlphaComponent(0.78)], CGPoint(x: 0.5, y: 0), CGPoint(x: 0.5, y: 1))
-        aerErstShadeLayer.isUserInteractionEnabled = false
-        aerErstShadeLayer.translatesAutoresizingMaskIntoConstraints = false
-        bruCiublackOutline.addSubview(aerErstShadeLayer)
-        let ponllmagentaBurst = UIButton(type: .system)
-        ponllmagentaBurst.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        ponllmagentaBurst.tintColor = .white
-        ponllmagentaBurst.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.86)
-        ponllmagentaBurst.layer.cornerRadius = 20
-        ponllmagentaBurst.layer.borderWidth = 1
-        ponllmagentaBurst.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
-        ponllmagentaBurst.translatesAutoresizingMaskIntoConstraints = false
-        ponllmagentaBurst.addAction(UIAction { [weak self] _ in
-            self?.ponllmuralGrid(pasteupEcho: ponllRoom)
-        }, for: .touchUpInside)
-        bruCiublackOutline.addSubview(ponllmagentaBurst)
 
-        let bruCiuHost = PonllyponllTornEdge.flckinkChippedPaint(ponllRoom.gradientFill)
+        let bruCiuMoreButton = UIButton(type: .system)
+        bruCiuMoreButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        bruCiuMoreButton.tintColor = .white
+        bruCiuMoreButton.backgroundColor = UIColor.black.withAlphaComponent(0.58)
+        bruCiuMoreButton.layer.cornerRadius = 18
+        bruCiuMoreButton.layer.borderWidth = 1
+        bruCiuMoreButton.layer.borderColor = UIColor.white.withAlphaComponent(0.14).cgColor
+        bruCiuMoreButton.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuMoreButton.addAction(UIAction { [weak self] _ in
+            self?.ponllmuralGrid(pasteupEcho: ponllutilityBox)
+        }, for: .touchUpInside)
+        bruCiublackOutline.addSubview(bruCiuMoreButton)
+
+        let bruCiuHost = PonllyponllTornEdge.flckinkChippedPaint(ponllutilityBox.gradientFill)
         let flckinkAvatarButton = UIControl()
+        flckinkAvatarButton.backgroundColor = UIColor.black.withAlphaComponent(0.18)
+        flckinkAvatarButton.layer.cornerRadius = 12
+        flckinkAvatarButton.layer.borderWidth = 1
+        flckinkAvatarButton.layer.borderColor = PonllyPalette.line.cgColor
         flckinkAvatarButton.translatesAutoresizingMaskIntoConstraints = false
         flckinkAvatarButton.addAction(UIAction { [weak self] _ in
             self?.bruCiuOpenArtist(bruCiuHost)
         }, for: .touchUpInside)
         bruCiublackOutline.addSubview(flckinkAvatarButton)
-        let aerErstcolorFade = ErErstPaintLabView(user: bruCiuHost, size: 44)
+        let aerErstcolorFade = ErErstPaintLabView(bruCiuHost, 22, 0)
         aerErstcolorFade.isUserInteractionEnabled = false
         flckinkAvatarButton.addSubview(aerErstcolorFade)
+        let ponllWallMark = UILabel()
+        ponllWallMark.text = bruCiuHost.aerosolDream
+        ponllWallMark.textColor = .white
+        ponllWallMark.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .bold)
+        ponllWallMark.isUserInteractionEnabled = false
+        ponllWallMark.translatesAutoresizingMaskIntoConstraints = false
+        flckinkAvatarButton.addSubview(ponllWallMark)
+
         let ponllroughFill = UILabel()
-        ponllroughFill.text = ponllRoom.nozzleCraft
+        ponllroughFill.text = ponllutilityBox.nozzleCraft
         ponllroughFill.textColor = .white
-        ponllroughFill.font = PonllyFonts.muralForgepon(neonLab: 17)
-        ponllroughFill.numberOfLines = 2
+        ponllroughFill.font = PonllyFonts.muralForgepon(neonLab: 15)
+        ponllroughFill.numberOfLines = 1
         ponllroughFill.isUserInteractionEnabled = false
         ponllroughFill.translatesAutoresizingMaskIntoConstraints = false
         bruCiublackOutline.addSubview(ponllroughFill)
-        let bruCiuRoomTopic = UILabel()
-        bruCiuRoomTopic.text = ponllRoom.colorFade
-        bruCiuRoomTopic.textColor = UIColor.white.withAlphaComponent(0.76)
-        bruCiuRoomTopic.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
-        bruCiuRoomTopic.numberOfLines = 2
-        bruCiuRoomTopic.isUserInteractionEnabled = false
-        bruCiuRoomTopic.translatesAutoresizingMaskIntoConstraints = false
-        bruCiublackOutline.addSubview(bruCiuRoomTopic)
+
+        let bruCiuutilityBoxTopic = UILabel()
+        bruCiuutilityBoxTopic.text = aerErstStyleCue(ponllutilityBox.chromeShine)
+        bruCiuutilityBoxTopic.textColor = ponllutilityBox.whitePop
+        bruCiuutilityBoxTopic.font = PonllyFonts.muralForgepon(neonLab: 10)
+        bruCiuutilityBoxTopic.textAlignment = .center
+        bruCiuutilityBoxTopic.backgroundColor = ponllutilityBox.whitePop.withAlphaComponent(0.10)
+        bruCiuutilityBoxTopic.layer.cornerRadius = 9
+        bruCiuutilityBoxTopic.layer.borderWidth = 1
+        bruCiuutilityBoxTopic.layer.borderColor = ponllutilityBox.whitePop.withAlphaComponent(0.74).cgColor
+        bruCiuutilityBoxTopic.clipsToBounds = true
+        bruCiuutilityBoxTopic.isUserInteractionEnabled = false
+        bruCiuutilityBoxTopic.translatesAutoresizingMaskIntoConstraints = false
+        bruCiublackOutline.addSubview(bruCiuutilityBoxTopic)
+
+        let flckinkMuralPath = UIStackView()
+        flckinkMuralPath.axis = .horizontal
+        flckinkMuralPath.spacing = -6
+        flckinkMuralPath.isUserInteractionEnabled = false
+        flckinkMuralPath.translatesAutoresizingMaskIntoConstraints = false
+        ponllutilityBox.muralfanSpray.forEach { ponllWallMark in
+            let aerErstStreetMuse = PonllyponllTornEdge.flckinkChippedPaint(ponllWallMark)
+            flckinkMuralPath.addArrangedSubview(ErErstPaintLabView(aerErstStreetMuse, 22, 1))
+        }
+        bruCiublackOutline.addSubview(flckinkMuralPath)
+
+        let aerErstNeonGlow = UIView()
+        aerErstNeonGlow.backgroundColor = UIColor(red: 57/255, green: 1, blue: 20/255, alpha: 1)
+        aerErstNeonGlow.layer.cornerRadius = 4
+        aerErstNeonGlow.isUserInteractionEnabled = false
+        aerErstNeonGlow.translatesAutoresizingMaskIntoConstraints = false
+        bruCiublackOutline.addSubview(aerErstNeonGlow)
+
         let flckinklayerBlend = UILabel()
-        flckinklayerBlend.text = "\(ponllRoom.paintCloud.count) seats  •  \(ponllRoom.sprayHalo.count) listening  •  \(bruCiuHost.aerosolDream)"
-        flckinklayerBlend.textColor = ponllRoom.whitePop
+        flckinklayerBlend.text = "\(aerErstPaintwoToneFillce(ponllutilityBox)) \("oqnwleirntey".ponllPaintaerErstHours)"
+        flckinklayerBlend.textColor = PonllyPalette.muted
         flckinklayerBlend.font = PonllyFonts.steelGate(rollingShutter: 11)
         flckinklayerBlend.isUserInteractionEnabled = false
         flckinklayerBlend.translatesAutoresizingMaskIntoConstraints = false
         bruCiublackOutline.addSubview(flckinklayerBlend)
 
+        let ponllmagentaBurst = UIButton(type: .system)
+        let aerErstWallMark = ponllWallMap.contains(ponllutilityBox.graffitiPulse)
+        ponllmagentaBurst.setImage(UIImage(systemName: aerErstWallMark ? "heart.fill" : "heart"), for: .normal)
+        ponllmagentaBurst.tintColor = aerErstWallMark ? PonllyPalette.pink : .white
+        ponllmagentaBurst.backgroundColor = UIColor.black.withAlphaComponent(0.18)
+        ponllmagentaBurst.layer.cornerRadius = 17
+        ponllmagentaBurst.layer.borderWidth = 1
+        ponllmagentaBurst.layer.borderColor = PonllyPalette.line.cgColor
+        ponllmagentaBurst.translatesAutoresizingMaskIntoConstraints = false
+        ponllmagentaBurst.addAction(UIAction { [weak self, weak ponllmagentaBurst] _ in
+            guard let self, let ponllmagentaBurst else { return }
+            self.ponllNeonSignal(ponllmagentaBurst, wallMark: ponllutilityBox.graffitiPulse)
+        }, for: .touchUpInside)
+        bruCiublackOutline.addSubview(ponllmagentaBurst)
+
         NSLayoutConstraint.activate([
-            bruCiublackOutline.heightAnchor.constraint(equalToConstant: 210),
-            flckinklimeStroke.leadingAnchor.constraint(equalTo: bruCiublackOutline.leadingAnchor),
-            flckinklimeStroke.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor),
-            flckinklimeStroke.topAnchor.constraint(equalTo: bruCiublackOutline.topAnchor),
-            flckinklimeStroke.bottomAnchor.constraint(equalTo: bruCiublackOutline.bottomAnchor),
-            aerErstShadeLayer.leadingAnchor.constraint(equalTo: bruCiublackOutline.leadingAnchor),
-            aerErstShadeLayer.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor),
-            aerErstShadeLayer.topAnchor.constraint(equalTo: bruCiublackOutline.topAnchor),
-            aerErstShadeLayer.bottomAnchor.constraint(equalTo: bruCiublackOutline.bottomAnchor),
+            bruCiublackOutline.heightAnchor.constraint(equalToConstant: 292),
+            flckinklimeStroke.leadingAnchor.constraint(equalTo: bruCiublackOutline.leadingAnchor, constant: 14),
+            flckinklimeStroke.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -14),
+            flckinklimeStroke.topAnchor.constraint(equalTo: bruCiublackOutline.topAnchor, constant: 14),
+            flckinklimeStroke.heightAnchor.constraint(equalToConstant: 136),
+            bruCiuMoreButton.trailingAnchor.constraint(equalTo: flckinklimeStroke.trailingAnchor, constant: -10),
+            bruCiuMoreButton.topAnchor.constraint(equalTo: flckinklimeStroke.topAnchor, constant: 10),
+            bruCiuMoreButton.widthAnchor.constraint(equalToConstant: 36),
+            bruCiuMoreButton.heightAnchor.constraint(equalToConstant: 36),
+            ponllroughFill.leadingAnchor.constraint(equalTo: bruCiublackOutline.leadingAnchor, constant: 14),
+            ponllroughFill.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -14),
+            ponllroughFill.topAnchor.constraint(equalTo: flckinklimeStroke.bottomAnchor, constant: 12),
+            flckinkAvatarButton.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
+            flckinkAvatarButton.topAnchor.constraint(equalTo: ponllroughFill.bottomAnchor, constant: 8),
+            flckinkAvatarButton.heightAnchor.constraint(equalToConstant: 24),
+            aerErstcolorFade.leadingAnchor.constraint(equalTo: flckinkAvatarButton.leadingAnchor, constant: 1),
+            aerErstcolorFade.centerYAnchor.constraint(equalTo: flckinkAvatarButton.centerYAnchor),
+            ponllWallMark.leadingAnchor.constraint(equalTo: aerErstcolorFade.trailingAnchor, constant: 7),
+            ponllWallMark.trailingAnchor.constraint(equalTo: flckinkAvatarButton.trailingAnchor, constant: -9),
+            ponllWallMark.centerYAnchor.constraint(equalTo: flckinkAvatarButton.centerYAnchor),
+            flckinkMuralPath.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -16),
+            flckinkMuralPath.centerYAnchor.constraint(equalTo: flckinkAvatarButton.centerYAnchor),
+            flckinkMuralPath.leadingAnchor.constraint(greaterThanOrEqualTo: flckinkAvatarButton.trailingAnchor, constant: 12),
+            bruCiuutilityBoxTopic.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
+            bruCiuutilityBoxTopic.topAnchor.constraint(equalTo: flckinkAvatarButton.bottomAnchor, constant: 8),
+            bruCiuutilityBoxTopic.heightAnchor.constraint(equalToConstant: 19),
+            bruCiuutilityBoxTopic.widthAnchor.constraint(greaterThanOrEqualToConstant: 58),
+            aerErstNeonGlow.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
+            aerErstNeonGlow.bottomAnchor.constraint(equalTo: bruCiublackOutline.bottomAnchor, constant: -14),
+            aerErstNeonGlow.widthAnchor.constraint(equalToConstant: 8),
+            aerErstNeonGlow.heightAnchor.constraint(equalToConstant: 8),
+            flckinklayerBlend.leadingAnchor.constraint(equalTo: aerErstNeonGlow.trailingAnchor, constant: 6),
+            flckinklayerBlend.centerYAnchor.constraint(equalTo: aerErstNeonGlow.centerYAnchor),
             ponllmagentaBurst.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -14),
-            ponllmagentaBurst.topAnchor.constraint(equalTo: bruCiublackOutline.topAnchor, constant: 14),
-            ponllmagentaBurst.widthAnchor.constraint(equalToConstant: 40),
-            ponllmagentaBurst.heightAnchor.constraint(equalToConstant: 40),
-            flckinkAvatarButton.leadingAnchor.constraint(equalTo: bruCiublackOutline.leadingAnchor, constant: 16),
-            flckinkAvatarButton.bottomAnchor.constraint(equalTo: bruCiublackOutline.bottomAnchor, constant: -18),
-            flckinkAvatarButton.widthAnchor.constraint(equalToConstant: 44),
-            flckinkAvatarButton.heightAnchor.constraint(equalToConstant: 44),
-            aerErstcolorFade.leadingAnchor.constraint(equalTo: flckinkAvatarButton.leadingAnchor),
-            aerErstcolorFade.trailingAnchor.constraint(equalTo: flckinkAvatarButton.trailingAnchor),
-            aerErstcolorFade.topAnchor.constraint(equalTo: flckinkAvatarButton.topAnchor),
-            aerErstcolorFade.bottomAnchor.constraint(equalTo: flckinkAvatarButton.bottomAnchor),
-            ponllroughFill.leadingAnchor.constraint(equalTo: flckinkAvatarButton.trailingAnchor, constant: 12),
-            ponllroughFill.trailingAnchor.constraint(equalTo: ponllmagentaBurst.leadingAnchor, constant: -12),
-            ponllroughFill.topAnchor.constraint(greaterThanOrEqualTo: bruCiublackOutline.topAnchor, constant: 94),
-            bruCiuRoomTopic.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
-            bruCiuRoomTopic.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -16),
-            bruCiuRoomTopic.topAnchor.constraint(equalTo: ponllroughFill.bottomAnchor, constant: 8),
-            flckinklayerBlend.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
-            flckinklayerBlend.trailingAnchor.constraint(equalTo: bruCiuRoomTopic.trailingAnchor),
-            flckinklayerBlend.bottomAnchor.constraint(equalTo: flckinkAvatarButton.bottomAnchor)
+            ponllmagentaBurst.bottomAnchor.constraint(equalTo: bruCiublackOutline.bottomAnchor, constant: -10),
+            ponllmagentaBurst.widthAnchor.constraint(equalToConstant: 34),
+            ponllmagentaBurst.heightAnchor.constraint(equalToConstant: 34)
         ])
         return bruCiublackOutline
+    }
+
+    private func aerErstStyleCue(_ ponllStyleMap: PonllyVoLobbyCategory) -> String {
+        switch ponllStyleMap {
+        case .bruCiuSolidFill, .ponllGritSurface:
+            return "Gqrwaefrftiytuii".ponllPaintaerErstHours
+        case .critique:
+            return "Bqawtetrltey".ponllPaintaerErstHours
+        case .lateWall:
+            return "Hqiwpe-rhtoypu".ponllPaintaerErstHours
+        }
+    }
+
+    private func aerErstPaintwoToneFillce(_ ponllMuralPiece: PonllyaerErstWeatheredPaperm) -> Int {
+        ponllMuralPiece.muralfanSpray.count
+    }
+
+    private func ponllNeonSignal(_ bruCiuNeonGlow: UIButton, wallMark flckinkWallMark: String) {
+        if ponllWallMap.contains(flckinkWallMark) {
+            ponllWallMap.remove(flckinkWallMark)
+        } else {
+            ponllWallMap.insert(flckinkWallMark)
+        }
+        let aerErstWallMark = ponllWallMap.contains(flckinkWallMark)
+        bruCiuNeonGlow.setImage(UIImage(systemName: aerErstWallMark ? "heart.fill" : "heart"), for: .normal)
+        bruCiuNeonGlow.tintColor = aerErstWallMark ? PonllyPalette.pink : .white
     }
 
     private func bruCiuEmptyState() -> UIView {
@@ -286,28 +445,26 @@ final class PonllystencilBloomController: UIViewController {
     }
 
     private func bruCiuOpenArtist(_ neonDrip: PonllyaerErstTwoToneFillr) {
-        guard neonDrip.graffitiPulse != PonllyponllTornEdge.currentUserId else { return }
-        let flckinkcolorSplash = FlckinkPrimerCoatController(user: neonDrip)
+        guard neonDrip.graffitiPulse != PonllyponllTornEdge.cnowpaintokwinId else { return }
+        let flckinkcolorSplash = FlckinkPrimerCoatController(neonDrip)
         flckinkcolorSplash.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(flckinkcolorSplash, animated: true)
     }
 
-    private func ponllmuralGrid(pasteupEcho bruCiuRoom: PonllyaerErstWeatheredPaperm) {
-        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            let             capControl = PonllyroughFillController(lineSpray: bruCiuRoom)
-                        capControl.fadeSpray = { [weak self] in
+    private func ponllmuralGrid(pasteupEcho bruCiuutilityBox: PonllyaerErstWeatheredPaperm) {
+        let capControl = PonllyroughFillController(lineSpray: bruCiuutilityBox)
+        capControl.fadeSpray = { [weak self] in
                 self?.aerErstSketchRush("RxeypzoArBtC DsEuFbGmHiItJtKeLdM".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill)
-            }
-                        capControl.modalPresentationStyle = .overFullScreen
-                        capControl.modalTransitionStyle = .crossDissolve
-            self.present(            capControl, animated: true)
         }
+        capControl.modalPresentationStyle = .overFullScreen
+        capControl.modalTransitionStyle = .crossDissolve
+        present(capControl, animated: true)
     }
 
     @objc private func bruCiuCategoryTapped(_ flckinkSender: UIButton) {
-        aerErstSelectedCategory = PonllyVoLobbyCategory.allCases[flckinkSender.tag]
+        aerErstSelectedCategory = PonllAerosolSignal.allCases[flckinkSender.tag]
         aerErstglossFinishCategories()
-        flckinkReloadRooms()
+        flckinkReloadutilityBox()
     }
 
     @objc private func flckinkNeonSignal() {
@@ -316,7 +473,7 @@ final class PonllystencilBloomController: UIViewController {
         aerErstSketchRush("Rpeofnrlelsbhriuncgi aveoriecres trfolocmksi.n.k.p".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.88) { [weak self] in
             guard let self else { return }
-            self.flckinkReloadRooms()
+            self.flckinkReloadutilityBox()
             self.ponllMarkerSignal.endRefreshing()
             self.bruCiuStencilSignal = false
             self.aerErstSketchRush("Vpooinclel brrouocmisa eurpedrasttefdl".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)

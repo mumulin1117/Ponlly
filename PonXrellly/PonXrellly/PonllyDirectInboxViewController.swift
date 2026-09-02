@@ -35,9 +35,10 @@ final class PonllyDirectInboxViewController: UIViewController {
 
     private func aerErstWallCraft() {
         flckinkStreetMural.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkStreetMural.ponllGraffitiDraftBackStyle()
         flckinkStreetMural.tintColor = .white
         flckinkStreetMural.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        flckinkStreetMural.layer.cornerRadius = 22
+        flckinkStreetMural.layer.cornerRadius = 18
         flckinkStreetMural.layer.borderWidth = 1
         flckinkStreetMural.layer.borderColor = PonllyPalette.line.cgColor
         flckinkStreetMural.isHidden = bruCiuAerosolDream
@@ -46,10 +47,11 @@ final class PonllyDirectInboxViewController: UIViewController {
         view.addSubview(flckinkStreetMural)
 
         let flckinkUrbanCanvas = UILabel()
-        flckinkUrbanCanvas.text = "PXrYiZv0a1t2e3 4M5e6s7s8a9gaibncgd".ponllPaintaerErstHours
+        flckinkUrbanCanvas.text = "Sptqarsuhv wDxMy".ponllPaintaerErstHours
         flckinkUrbanCanvas.textColor = .white
         flckinkUrbanCanvas.textAlignment = .center
-        flckinkUrbanCanvas.font = PonllyFonts.muralForgepon(neonLab: 22)
+        flckinkUrbanCanvas.font = PonllyFonts.muralForgepon(neonLab: 16)
+        flckinkUrbanCanvas.ponllGraffitiDraftTitleStyle()
         flckinkUrbanCanvas.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkUrbanCanvas)
 
@@ -60,10 +62,10 @@ final class PonllyDirectInboxViewController: UIViewController {
         NSLayoutConstraint.activate([
             flckinkStreetMural.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
             flckinkStreetMural.centerYAnchor.constraint(equalTo: flckinkUrbanCanvas.centerYAnchor),
-            flckinkStreetMural.widthAnchor.constraint(equalToConstant: 44),
-            flckinkStreetMural.heightAnchor.constraint(equalToConstant: 44),
+            flckinkStreetMural.widthAnchor.constraint(equalToConstant: 36),
+            flckinkStreetMural.heightAnchor.constraint(equalToConstant: 36),
             flckinkUrbanCanvas.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            flckinkUrbanCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            flckinkUrbanCanvas.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
             ponllGraffitiPulse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             ponllGraffitiPulse.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             ponllGraffitiPulse.topAnchor.constraint(equalTo: flckinkUrbanCanvas.bottomAnchor, constant: 28)
@@ -99,7 +101,7 @@ final class PonllyDirectInboxViewController: UIViewController {
             }
         }, for: .touchUpInside)
 
-        let flckinkPasteupEcho = ErErstPaintLabView(user: bruCiuCapControl, size: 48)
+        let flckinkPasteupEcho = ErErstPaintLabView(bruCiuCapControl, 48)
         flckinkPasteupEcho.isUserInteractionEnabled = false
         flckinkPasteupEcho.translatesAutoresizingMaskIntoConstraints = false
         flckinkStencilBloom.addSubview(flckinkPasteupEcho)
@@ -131,14 +133,6 @@ final class PonllyDirectInboxViewController: UIViewController {
         flckinkChromeFill.translatesAutoresizingMaskIntoConstraints = false
         flckinkStencilBloom.addSubview(flckinkChromeFill)
 
-        let aerErstOutlineGlow = UILabel()
-        aerErstOutlineGlow.text = ponllNozzleCraft.fineLine
-        aerErstOutlineGlow.textColor = PonllyPalette.muted
-        aerErstOutlineGlow.font = PonllyFonts.steelGate(rollingShutter: 10)
-        aerErstOutlineGlow.isUserInteractionEnabled = false
-        aerErstOutlineGlow.translatesAutoresizingMaskIntoConstraints = false
-        flckinkStencilBloom.addSubview(aerErstOutlineGlow)
-
         NSLayoutConstraint.activate([
             flckinkStencilBloom.heightAnchor.constraint(equalToConstant: 78),
             flckinkPasteupEcho.leadingAnchor.constraint(equalTo: flckinkStencilBloom.leadingAnchor, constant: 14),
@@ -151,9 +145,7 @@ final class PonllyDirectInboxViewController: UIViewController {
             aerErstMuralGrid.heightAnchor.constraint(equalToConstant: 12),
             flckinkChromeFill.leadingAnchor.constraint(equalTo: flckinkPasteupEcho.trailingAnchor, constant: 14),
             flckinkChromeFill.centerYAnchor.constraint(equalTo: flckinkStencilBloom.centerYAnchor),
-            flckinkChromeFill.trailingAnchor.constraint(equalTo: aerErstOutlineGlow.leadingAnchor, constant: -12),
-            aerErstOutlineGlow.trailingAnchor.constraint(equalTo: flckinkStencilBloom.trailingAnchor, constant: -16),
-            aerErstOutlineGlow.centerYAnchor.constraint(equalTo: flckinkStencilBloom.centerYAnchor)
+            flckinkChromeFill.trailingAnchor.constraint(equalTo: flckinkStencilBloom.trailingAnchor, constant: -14)
         ])
         return flckinkStencilBloom
     }

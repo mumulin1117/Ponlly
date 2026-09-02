@@ -18,7 +18,7 @@ final class PonllyletterMazeController: UIViewController {
 
     private func ponllFadeSpray() {
         view.backgroundColor = PonllyPalette.background
-        if let bruCiuShadowSpray = PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: PonllyponllTornEdge.currentUserId).first {
+        if let bruCiuShadowSpray = PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: PonllyponllTornEdge.cnowpaintokwinId).first {
             let flckinkStencilCut = PbruCiuClearCoatView(ponllPaintTrace: bruCiuShadowSpray)
             flckinkStencilCut.alpha = 0.18
             view.addSubview(flckinkStencilCut)

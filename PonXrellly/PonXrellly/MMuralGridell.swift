@@ -23,7 +23,7 @@ final class MMuralGridell: UICollectionViewCell {
     private let ponllStencilNoise = UIButton(type: .system)
     private let bruCiuMarkerTexture = UILabel()
     private let flckinkChromeContrast = UILabel()
-    private let aerErstNeonBalance = UIView()
+    private let aerErstNeonlayerBlend = UIView()
     private let ponllTextureRhythm = UIView()
     private let bruCiuSketchMotion = UIButton(type: .system)
     private let flckinkPaintCascade = UILabel()
@@ -57,18 +57,23 @@ final class MMuralGridell: UICollectionViewCell {
         bruCiuWallDepth.frame = contentView.bounds
     }
 
-    func flckinkAerosolLean(ponllMuralTwist: PonllyVideo) {
+    func flckinkAerosolLean(ponllMuralTwist: PonllystencilLab) {
         let bruCiuStencilWeave = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralTwist.letterForm)
         bruCiuMarkerTexture.text = "@\(bruCiuStencilWeave.aerosolDream.lowercased())"
         flckinkChromeContrast.text = ponllMuralTwist.fillPattern
         flckinkPaintCascade.text = aerErstPaintDepth(ponllMuralTwist.wildstyleCurve)
         ponllWallSurge.text = aerErstPaintDepth(ponllMuralTwist.paintLayer)
         ponllStencilNoise.setTitle(ponllMuralTwist.brickTone ? "F2o3l4l5o6w7i8n9ga".ponllPaintaerErstHours : "Fbocldleofwg".ponllPaintaerErstHours, for: .normal)
-        bruCiuSketchMotion.tintColor = ponllMuralTwist.wallTexture ? PonllyPalette.pink : .white
-        bruCiuSketchMotion.setImage(UIImage(systemName: ponllMuralTwist.wallTexture ? "heart.fill" : "hheiajrktl".ponllPaintaerErstHours), for: .normal)
+        if ponllMuralTwist.wallTexture {
+            bruCiuSketchMotion.tintColor = .white
+            bruCiuSketchMotion.setImage(UIImage(named: "neonSignal")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else {
+            bruCiuSketchMotion.tintColor = .white
+            bruCiuSketchMotion.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
 
         aerErstMuralGrit.subviews.forEach { $0.removeFromSuperview() }
-        let flckinkAerosolDepth = ErErstPaintLabView(user: bruCiuStencilWeave, size: 44)
+        let flckinkAerosolDepth = ErErstPaintLabView(bruCiuStencilWeave, 44)
         flckinkAerosolDepth.isUserInteractionEnabled = false
         aerErstMuralGrit.addSubview(flckinkAerosolDepth)
         flckinkAerosolDepth.woodPanelPonlly(steelGate: aerErstMuralGrit)
@@ -102,28 +107,24 @@ final class MMuralGridell: UICollectionViewCell {
         contentView.layer.addSublayer(flckinkSketchLean)
 
         bruCiuWallDepth.colors = [
-            UIColor.black.withAlphaComponent(0.15).cgColor,
-            UIColor.black.withAlphaComponent(0.05).cgColor,
-            UIColor.black.withAlphaComponent(0.78).cgColor
+            UIColor.black.withAlphaComponent(0.12).cgColor,
+            UIColor.black.withAlphaComponent(0.03).cgColor,
+            UIColor.black.withAlphaComponent(0.9).cgColor
         ]
-        bruCiuWallDepth.locations = [0, 0.48, 1]
+        bruCiuWallDepth.locations = [0, 0.52, 1]
         contentView.layer.addSublayer(bruCiuWallDepth)
 
-        [flckinkAerosolGlow, aerErstMuralGrit, ponllStencilNoise, bruCiuMarkerTexture, flckinkChromeContrast, aerErstNeonBalance, bruCiuSketchMotion, flckinkPaintCascade, aerErstInkRipple, ponllWallSurge, bruCiuAerosolBurst, flckinkMuralBloom].forEach {
+        [flckinkAerosolGlow, aerErstMuralGrit, ponllStencilNoise, bruCiuMarkerTexture, flckinkChromeContrast, aerErstNeonlayerBlend, bruCiuSketchMotion, flckinkPaintCascade, aerErstInkRipple, ponllWallSurge, bruCiuAerosolBurst, flckinkMuralBloom].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         }
 
-        flckinkAerosolGlow.backgroundColor = UIColor.black.withAlphaComponent(0.42)
+        flckinkAerosolGlow.backgroundColor = UIColor.black.withAlphaComponent(0.24)
         flckinkAerosolGlow.tintColor = .white
-        flckinkAerosolGlow.layer.cornerRadius = 34
-        flckinkAerosolGlow.layer.borderWidth = 2
-        flckinkAerosolGlow.layer.borderColor = PonllyPalette.cyan.cgColor
-        flckinkAerosolGlow.layer.shadowColor = PonllyPalette.cyan.cgColor
-        flckinkAerosolGlow.layer.shadowOpacity = 0.35
-        flckinkAerosolGlow.layer.shadowRadius = 14
-        flckinkAerosolGlow.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 24, weight: .bold), forImageIn: .normal)
-        flckinkAerosolGlow.addTarget(self, action: #selector(ponllWallBalance), for: .touchUpInside)
+        flckinkAerosolGlow.layer.cornerRadius = 24
+        flckinkAerosolGlow.layer.borderWidth = 0
+        flckinkAerosolGlow.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 18, weight: .bold), forImageIn: .normal)
+        flckinkAerosolGlow.addTarget(self, action: #selector(neonForge), for: .touchUpInside)
         bruCiuChromeFlash()
 
         aerErstMuralGrit.layer.cornerRadius = 22
@@ -133,7 +134,7 @@ final class MMuralGridell: UICollectionViewCell {
         aerErstMuralGrit.addTarget(self, action: #selector(bruCiuAerosolRhythm), for: .touchUpInside)
 
         ponllStencilNoise.backgroundColor = PonllyPalette.pink
-        ponllStencilNoise.layer.cornerRadius = 15
+        ponllStencilNoise.layer.cornerRadius = 6
         ponllStencilNoise.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 9)
         ponllStencilNoise.titleLabel?.adjustsFontSizeToFitWidth = true
         ponllStencilNoise.titleLabel?.minimumScaleFactor = 0.72
@@ -150,16 +151,16 @@ final class MMuralGridell: UICollectionViewCell {
         flckinkChromeContrast.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         flckinkChromeContrast.numberOfLines = 3
 
-        aerErstNeonBalance.backgroundColor = UIColor.white.withAlphaComponent(0.16)
-        aerErstNeonBalance.layer.cornerRadius = 3
-        aerErstNeonBalance.addSubview(ponllTextureRhythm)
+        aerErstNeonlayerBlend.backgroundColor = UIColor.white.withAlphaComponent(0.14)
+        aerErstNeonlayerBlend.layer.cornerRadius = 3
+        aerErstNeonlayerBlend.addSubview(ponllTextureRhythm)
         ponllTextureRhythm.backgroundColor = PonllyPalette.pink
         ponllTextureRhythm.layer.cornerRadius = 3
         ponllTextureRhythm.translatesAutoresizingMaskIntoConstraints = false
 
-        bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "hwexayrztA".ponllPaintaerErstHours)
-        bruCiuPaintCascade(aerErstInkRipple, ponllInkSurge: "bubble.left")
-        bruCiuPaintCascade(bruCiuAerosolBurst, ponllInkSurge: "exclamationmark.circle")
+        bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "heart")
+        bruCiuPaintCascade(aerErstInkRipple, ponllInkSurge: "chromeCue")
+        bruCiuPaintCascade(bruCiuAerosolBurst, ponllInkSurge: "stencilQuest")
         bruCiuSketchMotion.addTarget(self, action: #selector(aerErstChromeBurst), for: .touchUpInside)
         aerErstInkRipple.addTarget(self, action: #selector(ponllNeonBloom), for: .touchUpInside)
         bruCiuAerosolBurst.addTarget(self, action: #selector(bruCiuTextureFlicker), for: .touchUpInside)
@@ -177,63 +178,65 @@ final class MMuralGridell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             flckinkAerosolGlow.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             flckinkAerosolGlow.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            flckinkAerosolGlow.widthAnchor.constraint(equalToConstant: 68),
-            flckinkAerosolGlow.heightAnchor.constraint(equalToConstant: 68),
+            flckinkAerosolGlow.widthAnchor.constraint(equalToConstant: 48),
+            flckinkAerosolGlow.heightAnchor.constraint(equalToConstant: 48),
 
-            aerErstMuralGrit.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            aerErstMuralGrit.bottomAnchor.constraint(equalTo: ponllStencilNoise.topAnchor, constant: -8),
+            aerErstMuralGrit.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -18),
+            aerErstMuralGrit.bottomAnchor.constraint(equalTo: bruCiuSketchMotion.topAnchor, constant: -38),
             aerErstMuralGrit.widthAnchor.constraint(equalToConstant: 44),
             aerErstMuralGrit.heightAnchor.constraint(equalToConstant: 44),
-            ponllStencilNoise.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
-            ponllStencilNoise.bottomAnchor.constraint(equalTo: bruCiuSketchMotion.topAnchor, constant: -32),
-            ponllStencilNoise.widthAnchor.constraint(equalToConstant: 80),
-            ponllStencilNoise.heightAnchor.constraint(equalToConstant: 30),
+            ponllStencilNoise.leadingAnchor.constraint(equalTo: bruCiuMarkerTexture.trailingAnchor, constant: 16),
+            ponllStencilNoise.centerYAnchor.constraint(equalTo: bruCiuMarkerTexture.centerYAnchor),
+            ponllStencilNoise.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -80),
+            ponllStencilNoise.widthAnchor.constraint(equalToConstant: 59),
+            ponllStencilNoise.heightAnchor.constraint(equalToConstant: 22),
 
             bruCiuSketchMotion.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
-            bruCiuSketchMotion.bottomAnchor.constraint(equalTo: flckinkPaintCascade.topAnchor, constant: -10),
-            bruCiuSketchMotion.widthAnchor.constraint(equalToConstant: 44),
-            bruCiuSketchMotion.heightAnchor.constraint(equalToConstant: 44),
+            bruCiuSketchMotion.bottomAnchor.constraint(equalTo: flckinkPaintCascade.topAnchor, constant: -8),
+            bruCiuSketchMotion.widthAnchor.constraint(equalToConstant: 28),
+            bruCiuSketchMotion.heightAnchor.constraint(equalToConstant: 28),
             flckinkPaintCascade.centerXAnchor.constraint(equalTo: bruCiuSketchMotion.centerXAnchor),
-            flckinkPaintCascade.bottomAnchor.constraint(equalTo: aerErstInkRipple.topAnchor, constant: -28),
+            flckinkPaintCascade.bottomAnchor.constraint(equalTo: aerErstInkRipple.topAnchor, constant: -36),
 
             aerErstInkRipple.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
-            aerErstInkRipple.bottomAnchor.constraint(equalTo: ponllWallSurge.topAnchor, constant: -10),
-            aerErstInkRipple.widthAnchor.constraint(equalToConstant: 44),
-            aerErstInkRipple.heightAnchor.constraint(equalToConstant: 44),
+            aerErstInkRipple.bottomAnchor.constraint(equalTo: ponllWallSurge.topAnchor, constant: -8),
+            aerErstInkRipple.widthAnchor.constraint(equalToConstant: 28),
+            aerErstInkRipple.heightAnchor.constraint(equalToConstant: 28),
             ponllWallSurge.centerXAnchor.constraint(equalTo: aerErstInkRipple.centerXAnchor),
-            ponllWallSurge.bottomAnchor.constraint(equalTo: bruCiuAerosolBurst.topAnchor, constant: -32),
+            ponllWallSurge.bottomAnchor.constraint(equalTo: bruCiuAerosolBurst.topAnchor, constant: -36),
 
             bruCiuAerosolBurst.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
-            bruCiuAerosolBurst.bottomAnchor.constraint(equalTo: flckinkMuralBloom.topAnchor, constant: -8),
-            bruCiuAerosolBurst.widthAnchor.constraint(equalToConstant: 44),
-            bruCiuAerosolBurst.heightAnchor.constraint(equalToConstant: 44),
+            bruCiuAerosolBurst.bottomAnchor.constraint(equalTo: flckinkMuralBloom.topAnchor, constant: -5),
+            bruCiuAerosolBurst.widthAnchor.constraint(equalToConstant: 28),
+            bruCiuAerosolBurst.heightAnchor.constraint(equalToConstant: 28),
             flckinkMuralBloom.centerXAnchor.constraint(equalTo: bruCiuAerosolBurst.centerXAnchor),
-            flckinkMuralBloom.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -58),
+            flckinkMuralBloom.bottomAnchor.constraint(equalTo: aerErstNeonlayerBlend.topAnchor, constant: -9),
 
             bruCiuMarkerTexture.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             bruCiuMarkerTexture.bottomAnchor.constraint(equalTo: flckinkChromeContrast.topAnchor, constant: -8),
 
             flckinkChromeContrast.leadingAnchor.constraint(equalTo: bruCiuMarkerTexture.leadingAnchor),
             flckinkChromeContrast.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -80),
-            flckinkChromeContrast.bottomAnchor.constraint(equalTo: aerErstNeonBalance.topAnchor, constant: -18),
+            flckinkChromeContrast.bottomAnchor.constraint(equalTo: aerErstNeonlayerBlend.topAnchor, constant: -10),
 
-            aerErstNeonBalance.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            aerErstNeonBalance.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -96),
-            aerErstNeonBalance.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -28),
-            aerErstNeonBalance.heightAnchor.constraint(equalToConstant: 6),
-            ponllTextureRhythm.leadingAnchor.constraint(equalTo: aerErstNeonBalance.leadingAnchor),
-            ponllTextureRhythm.topAnchor.constraint(equalTo: aerErstNeonBalance.topAnchor),
-            ponllTextureRhythm.bottomAnchor.constraint(equalTo: aerErstNeonBalance.bottomAnchor),
-            ponllTextureRhythm.widthAnchor.constraint(equalTo: aerErstNeonBalance.widthAnchor, multiplier: 0.58)
+            aerErstNeonlayerBlend.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            aerErstNeonlayerBlend.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -80),
+            aerErstNeonlayerBlend.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: -22),
+            aerErstNeonlayerBlend.heightAnchor.constraint(equalToConstant: 6),
+            ponllTextureRhythm.leadingAnchor.constraint(equalTo: aerErstNeonlayerBlend.leadingAnchor),
+            ponllTextureRhythm.topAnchor.constraint(equalTo: aerErstNeonlayerBlend.topAnchor),
+            ponllTextureRhythm.bottomAnchor.constraint(equalTo: aerErstNeonlayerBlend.bottomAnchor),
+            ponllTextureRhythm.widthAnchor.constraint(equalTo: aerErstNeonlayerBlend.widthAnchor, multiplier: 0.58)
         ])
     }
 
-    private func bruCiuPaintCascade(_ flckinkInkBalance: UIButton, ponllInkSurge: String) {
-        flckinkInkBalance.setImage(UIImage(systemName: ponllInkSurge), for: .normal)
-        flckinkInkBalance.tintColor = .white
-        flckinkInkBalance.contentVerticalAlignment = .fill
-        flckinkInkBalance.contentHorizontalAlignment = .fill
-        flckinkInkBalance.imageView?.contentMode = .scaleAspectFit
+    private func bruCiuPaintCascade(_ flckinkInkstencilMuse: UIButton, ponllInkSurge: String) {
+        let aerErstInkBloom = UIImage(named: ponllInkSurge)?.withRenderingMode(.alwaysOriginal) ?? UIImage(systemName: ponllInkSurge)
+        flckinkInkstencilMuse.setImage(aerErstInkBloom, for: .normal)
+        flckinkInkstencilMuse.tintColor = .white
+        flckinkInkstencilMuse.contentVerticalAlignment = .fill
+        flckinkInkstencilMuse.contentHorizontalAlignment = .fill
+        flckinkInkstencilMuse.imageView?.contentMode = .scaleAspectFit
     }
 
     private func aerErstPaintDepth(_ bruCiuMuralRipple: Int) -> String {
@@ -246,7 +249,8 @@ final class MMuralGridell: UICollectionViewCell {
 
     private func bruCiuChromeFlash() {
         let ponllTextureBurst = ponllInkWeave ? "pause.fill" : "play.fill"
-        flckinkAerosolGlow.setImage(UIImage(systemName: ponllTextureBurst), for: .normal)
+        flckinkAerosolGlow.setImage(ponllInkWeave ? nil : UIImage(systemName: ponllTextureBurst), for: .normal)
+        flckinkAerosolGlow.backgroundColor = ponllInkWeave ? .clear : UIColor.black.withAlphaComponent(0.24)
     }
 
     @objc private func flckinkTextureContrast() {
@@ -254,7 +258,7 @@ final class MMuralGridell: UICollectionViewCell {
         aerErstPaintTwist?.play()
     }
 
-    @objc private func ponllWallBalance() {
+    @objc private func neonForge() {
         ponllInkWeave ? ponllPaintDepth() : aerErstStencilWeave()
     }
 

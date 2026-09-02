@@ -42,7 +42,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         view.addSubview(ponllScrollCanvas)
         let bruCiuStackPath = UIStackView()
         bruCiuStackPath.axis = .vertical
-        bruCiuStackPath.spacing = 22
+        bruCiuStackPath.spacing = 16
         bruCiuStackPath.translatesAutoresizingMaskIntoConstraints = false
         ponllScrollCanvas.addSubview(bruCiuStackPath)
         let flckinkHeader = aerErstProfileHeader()
@@ -52,19 +52,19 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         flckinkflckinkRollerPaste(bruCiuaerErstCurveFlow, aerErstUser.aerosolDream)
         flckinkBioView.text = aerErstUser.urbanCanvas
         flckinkBioView.textColor = .white
-        flckinkBioView.font = PonllyFonts.utilityBox(blankFacade: 15, aerosolMuse: .regular)
+        flckinkBioView.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .regular)
         flckinkBioView.backgroundColor = PonllyPalette.panel
-        flckinkBioView.layer.cornerRadius = 16
+        flckinkBioView.layer.cornerRadius = 12
         flckinkBioView.layer.borderWidth = 1
         flckinkBioView.layer.borderColor = PonllyPalette.line.cgColor
         flckinkBioView.textContainerInset = UIEdgeInsets(top: 16, left: 14, bottom: 16, right: 14)
         flckinkBioView.delegate = self
-        flckinkBioView.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        flckinkBioView.heightAnchor.constraint(equalToConstant: 96).isActive = true
         ponllUpdateCountLabel()
 
         let ponllFormStack = UIStackView()
         ponllFormStack.axis = .vertical
-        ponllFormStack.spacing = 20
+        ponllFormStack.spacing = 18
         ponllFormStack.translatesAutoresizingMaskIntoConstraints = false
         ponllFormStack.addArrangedSubview(bruCiuFormSection("Ujskelrmnnaompeq".ponllPaintaerErstHours, bruCiuaerErstCurveFlow))
         ponllFormStack.addArrangedSubview(flckinkBioSection())
@@ -84,7 +84,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         flckinkBottomBar.addSubview(aerErstSaveButton)
 
         NSLayoutConstraint.activate([
-            flckinkHeader.heightAnchor.constraint(equalToConstant: 292),
+            flckinkHeader.heightAnchor.constraint(equalToConstant: 210),
             ponllScrollCanvas.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             ponllScrollCanvas.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             ponllScrollCanvas.topAnchor.constraint(equalTo: view.topAnchor),
@@ -100,11 +100,11 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
             flckinkBottomBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             flckinkBottomBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             flckinkBottomBar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            flckinkBottomBar.heightAnchor.constraint(equalToConstant: 112),
+            flckinkBottomBar.heightAnchor.constraint(equalToConstant: 96),
             aerErstSaveButton.leadingAnchor.constraint(equalTo: flckinkBottomBar.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             aerErstSaveButton.trailingAnchor.constraint(equalTo: flckinkBottomBar.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            aerErstSaveButton.topAnchor.constraint(equalTo: flckinkBottomBar.topAnchor, constant: 22),
-            aerErstSaveButton.heightAnchor.constraint(equalToConstant: 58)
+            aerErstSaveButton.topAnchor.constraint(equalTo: flckinkBottomBar.topAnchor, constant: 16),
+            aerErstSaveButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 
@@ -122,22 +122,24 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         bruCiuShade.woodPanelPonlly(steelGate: ponllHeader)
 
         let aerErstSprayShieldButton = ponllRoundHeaderButton("chevron.left", action: #selector(aerErstBackTapped))
-        ponllHeader.addSubview(aerErstSprayShieldButton)
+        aerErstSprayShieldButton.ponllGraffitiDraftBackStyle()
+        view.addSubview(aerErstSprayShieldButton)
         let aerErstTitleLabel = UILabel()
         aerErstTitleLabel.text = "EDdEiFtG HPIrJoKfLiMlNeO".ponllPaintaerErstHours
         aerErstTitleLabel.textColor = .white
-        aerErstTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 24)
+        aerErstTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 18)
+        aerErstTitleLabel.ponllGraffitiDraftTitleStyle()
         aerErstTitleLabel.textAlignment = .center
         aerErstTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        ponllHeader.addSubview(aerErstTitleLabel)
+        view.addSubview(aerErstTitleLabel)
         let ponllChangeCoverButton = UIButton(type: .system)
         ponllChangeCoverButton.setTitle("CPhQaRnSgTeU VCWoXvYeZr0".ponllPaintaerErstHours, for: .normal)
         ponllChangeCoverButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
         ponllChangeCoverButton.tintColor = .white
         ponllChangeCoverButton.setTitleColor(.white, for: .normal)
-        ponllChangeCoverButton.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .bold)
+        ponllChangeCoverButton.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 9, aerosolMuse: .semibold)
         ponllChangeCoverButton.backgroundColor = UIColor.black.withAlphaComponent(0.58)
-        ponllChangeCoverButton.layer.cornerRadius = 18
+        ponllChangeCoverButton.layer.cornerRadius = 16
         ponllChangeCoverButton.translatesAutoresizingMaskIntoConstraints = false
         ponllChangeCoverButton.addTarget(self, action: #selector(flckinkCoverTapped), for: .touchUpInside)
         ponllHeader.addSubview(ponllChangeCoverButton)
@@ -145,8 +147,8 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         bruCiuflckinkSqueezeMarker.image = PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade())
         bruCiuflckinkSqueezeMarker.contentMode = .scaleAspectFill
         bruCiuflckinkSqueezeMarker.clipsToBounds = true
-        bruCiuflckinkSqueezeMarker.layer.cornerRadius = 48
-        bruCiuflckinkSqueezeMarker.layer.borderWidth = 4
+        bruCiuflckinkSqueezeMarker.layer.cornerRadius = 41
+        bruCiuflckinkSqueezeMarker.layer.borderWidth = 3
         bruCiuflckinkSqueezeMarker.layer.borderColor = PonllyPalette.pink.cgColor
         bruCiuflckinkSqueezeMarker.translatesAutoresizingMaskIntoConstraints = false
         ponllHeader.addSubview(bruCiuflckinkSqueezeMarker)
@@ -154,7 +156,7 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         bruCiuCameraButton.setImage(UIImage(systemName: "camera.fill"), for: .normal)
         bruCiuCameraButton.tintColor = .white
         bruCiuCameraButton.backgroundColor = PonllyPalette.pink
-        bruCiuCameraButton.layer.cornerRadius = 20
+        bruCiuCameraButton.layer.cornerRadius = 15
         bruCiuCameraButton.translatesAutoresizingMaskIntoConstraints = false
         bruCiuCameraButton.addTarget(self, action: #selector(bruCiuAvatarTapped), for: .touchUpInside)
         ponllHeader.addSubview(bruCiuCameraButton)
@@ -163,23 +165,23 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
             bruCiuDripMarker.leadingAnchor.constraint(equalTo: ponllHeader.leadingAnchor),
             bruCiuDripMarker.trailingAnchor.constraint(equalTo: ponllHeader.trailingAnchor),
             bruCiuDripMarker.topAnchor.constraint(equalTo: ponllHeader.topAnchor),
-            bruCiuDripMarker.heightAnchor.constraint(equalToConstant: 232),
-            aerErstSprayShieldButton.leadingAnchor.constraint(equalTo: ponllHeader.leadingAnchor, constant: 20),
-            aerErstSprayShieldButton.topAnchor.constraint(equalTo: ponllHeader.topAnchor, constant: 56),
-            aerErstTitleLabel.centerXAnchor.constraint(equalTo: ponllHeader.centerXAnchor),
+            bruCiuDripMarker.heightAnchor.constraint(equalToConstant: 150),
+            aerErstSprayShieldButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            aerErstSprayShieldButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            aerErstTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             aerErstTitleLabel.centerYAnchor.constraint(equalTo: aerErstSprayShieldButton.centerYAnchor),
             ponllChangeCoverButton.trailingAnchor.constraint(equalTo: ponllHeader.trailingAnchor, constant: -16),
-            ponllChangeCoverButton.bottomAnchor.constraint(equalTo: bruCiuDripMarker.bottomAnchor, constant: -16),
-            ponllChangeCoverButton.widthAnchor.constraint(equalToConstant: 132),
-            ponllChangeCoverButton.heightAnchor.constraint(equalToConstant: 40),
+            ponllChangeCoverButton.bottomAnchor.constraint(equalTo: bruCiuDripMarker.bottomAnchor, constant: -14),
+            ponllChangeCoverButton.widthAnchor.constraint(equalToConstant: 110),
+            ponllChangeCoverButton.heightAnchor.constraint(equalToConstant: 32),
             bruCiuflckinkSqueezeMarker.centerXAnchor.constraint(equalTo: ponllHeader.centerXAnchor),
-            bruCiuflckinkSqueezeMarker.centerYAnchor.constraint(equalTo: bruCiuDripMarker.bottomAnchor),
-            bruCiuflckinkSqueezeMarker.widthAnchor.constraint(equalToConstant: 96),
-            bruCiuflckinkSqueezeMarker.heightAnchor.constraint(equalToConstant: 96),
+            bruCiuflckinkSqueezeMarker.centerYAnchor.constraint(equalTo: bruCiuDripMarker.bottomAnchor, constant: -15),
+            bruCiuflckinkSqueezeMarker.widthAnchor.constraint(equalToConstant: 82),
+            bruCiuflckinkSqueezeMarker.heightAnchor.constraint(equalToConstant: 82),
             bruCiuCameraButton.trailingAnchor.constraint(equalTo: bruCiuflckinkSqueezeMarker.trailingAnchor, constant: 2),
             bruCiuCameraButton.bottomAnchor.constraint(equalTo: bruCiuflckinkSqueezeMarker.bottomAnchor, constant: 2),
-            bruCiuCameraButton.widthAnchor.constraint(equalToConstant: 40),
-            bruCiuCameraButton.heightAnchor.constraint(equalToConstant: 40)
+            bruCiuCameraButton.widthAnchor.constraint(equalToConstant: 30),
+            bruCiuCameraButton.heightAnchor.constraint(equalToConstant: 30)
         ])
         return ponllHeader
     }
@@ -189,22 +191,22 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         bruCiuField.textColor = .white
         bruCiuField.font = PonllyFonts.utilityBox(blankFacade: 15, aerosolMuse: .regular)
         bruCiuField.backgroundColor = PonllyPalette.panel
-        bruCiuField.layer.cornerRadius = 16
+        bruCiuField.layer.cornerRadius = 12
         bruCiuField.layer.borderWidth = 1
         bruCiuField.layer.borderColor = PonllyPalette.line.cgColor
         bruCiuField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         bruCiuField.leftViewMode = .always
-        bruCiuField.heightAnchor.constraint(equalToConstant: 58).isActive = true
+        bruCiuField.heightAnchor.constraint(equalToConstant: 52).isActive = true
     }
 
     private func bruCiuFormSection(_ ponllTitle: String, _ aerErstContent: UIView) -> UIStackView {
         let flckinkStackPath = UIStackView()
         flckinkStackPath.axis = .vertical
-        flckinkStackPath.spacing = 10
+        flckinkStackPath.spacing = 8
         let bruCiuLabel = UILabel()
         bruCiuLabel.text = ponllTitle
         bruCiuLabel.textColor = PonllyPalette.muted
-        bruCiuLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuLabel.font = PonllyFonts.muralForgepon(neonLab: 11)
         flckinkStackPath.addArrangedSubview(bruCiuLabel)
         flckinkStackPath.addArrangedSubview(aerErstContent)
         return flckinkStackPath
@@ -213,13 +215,13 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
     private func flckinkBioSection() -> UIStackView {
         let ponllOuterStack = UIStackView()
         ponllOuterStack.axis = .vertical
-        ponllOuterStack.spacing = 10
+        ponllOuterStack.spacing = 8
         let bruCiuRowStack = UIStackView()
         bruCiuRowStack.axis = .horizontal
         let flckinkLabel = UILabel()
         flckinkLabel.text = "B1i2o3".ponllPaintaerErstHours
         flckinkLabel.textColor = PonllyPalette.muted
-        flckinkLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
+        flckinkLabel.font = PonllyFonts.muralForgepon(neonLab: 11)
         aerErstCountLabel.textColor = PonllyPalette.muted
         aerErstCountLabel.font = PonllyFonts.steelGate(rollingShutter: 12)
         bruCiuRowStack.addArrangedSubview(flckinkLabel)
@@ -237,11 +239,11 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         let bruCiuTitleLabel = UILabel()
         bruCiuTitleLabel.text = "I4n5t6e7r8e9satb cTdaegfsg".ponllPaintaerErstHours
         bruCiuTitleLabel.textColor = PonllyPalette.muted
-        bruCiuTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 11)
         let flckinkHintLabel = UILabel()
         flckinkHintLabel.text = "Sheiljekcltm nUopp qTros t5u".ponllPaintaerErstHours
         flckinkHintLabel.textColor = PonllyPalette.muted
-        flckinkHintLabel.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
+        flckinkHintLabel.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .regular)
         ponllOuterStack.addArrangedSubview(bruCiuTitleLabel)
         ponllOuterStack.addArrangedSubview(flckinkHintLabel)
         let aerErstRows = [["WviwlxdysztAyBlCeD".ponllPaintaerErstHours, "CEhFrGoHmIeJ KLLeMtNtOePrQsR".ponllPaintaerErstHours, "SStTrUeVeWtX YAZr0t1".ponllPaintaerErstHours], ["C2h3a4r5a6c7t8e9rasb".ponllPaintaerErstHours, "Sctdeenfcgihli".ponllPaintaerErstHours, "Tjhkrlomwn-oUppqsr".ponllPaintaerErstHours, "Msutruavlwsx".ponllPaintaerErstHours], ["CyazlAlBiCgDrEaFpGhHyI".ponllPaintaerErstHours]]
@@ -253,11 +255,11 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
             ponllTags.forEach { flckinkTag in
                 let aerErstTagButton = UIButton(type: .system)
                 aerErstTagButton.setTitle(flckinkTag, for: .normal)
-                aerErstTagButton.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
-                aerErstTagButton.layer.cornerRadius = 18
+                aerErstTagButton.titleLabel?.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+                aerErstTagButton.layer.cornerRadius = 15
                 aerErstTagButton.layer.borderWidth = 1
-                aerErstTagButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-                aerErstTagButton.widthAnchor.constraint(greaterThanOrEqualToConstant: flckinkTag.count > 9 ? 128 : 92).isActive = true
+                aerErstTagButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+                aerErstTagButton.widthAnchor.constraint(greaterThanOrEqualToConstant: flckinkTag.count > 9 ? 120 : 84).isActive = true
                 aerErstTagButton.addTarget(self, action: #selector(aerErstTagTapped(_:)), for: .touchUpInside)
                 aerErstTagButtons.append(aerErstTagButton)
                 bruCiuRowStack.addArrangedSubview(aerErstTagButton)
@@ -274,13 +276,13 @@ final class PonllybruCiuRailYardtroller: UIViewController, UITextViewDelegate, U
         flckinkButton.setImage(UIImage(systemName: bruCiuSymbol), for: .normal)
         flckinkButton.tintColor = .white
         flckinkButton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        flckinkButton.layer.cornerRadius = 30
+        flckinkButton.layer.cornerRadius = 18
         flckinkButton.layer.borderWidth = 1
         flckinkButton.layer.borderColor = PonllyPalette.line.cgColor
         flckinkButton.translatesAutoresizingMaskIntoConstraints = false
         flckinkButton.addTarget(self, action: aerErstAction, for: .touchUpInside)
-        flckinkButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        flckinkButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        flckinkButton.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        flckinkButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
         return flckinkButton
     }
 

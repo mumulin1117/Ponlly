@@ -43,7 +43,8 @@ struct PonllyBattleComment {
     let wheatpasteLayer: String
     let pasteupEcho: String
     let muralGrid: String
-    let wildstyleCurve: Int
+    var wildstyleCurve: Int
+    var wallTexture: Bool = false
 }
 
 enum PonllyBattleStatus {
@@ -69,7 +70,7 @@ struct PonllyBattle {
     var lineBurst: String
 }
 
-struct PonllyVideo {
+struct PonllystencilLab {
     let graffitiPulse: String
     let letterForm: String
     let nozzleCraft: String
@@ -80,11 +81,11 @@ struct PonllyVideo {
     var sprayBloom: Int
     var wallTexture: Bool
     var brickTone: Bool
-    var underpassMural: [PonllyVideoComment]
+    var underpassMural: [PonllyletterMusent]
     let inkDrift: [UIColor]
 }
 
-struct PonllyVideoComment {
+struct PonllyletterMusent {
     let wheatpasteLayer: String
     let gritSurface: String
     let pasteupEcho: String
@@ -162,15 +163,29 @@ struct PonllyaerErstWeatheredPaperm {
     var paintCloud: [PonllyponllPaperLayerSeat]
     var sprayHalo: [String]
     var aerosolHaze: String
+    var muralMuse: String = "colorFade"
     var whitePop: UIColor
     var nozzleMist: [PonllyflckinkUrbanCanvasge]
+    var graffitiPiece: UIImage? = nil
+    var ponllStenciloutlineLab: Int = 8
+
+    var muralfanSpray: [String] {
+        guard let muralPiece = paintCloud.first(where: { $0.wheatpasteLayer == gradientFill }) ?? paintCloud.first else {
+            return []
+        }
+        var styleMap = Set<String>()
+        let paintMap = [muralPiece] + paintCloud.filter { $0.wheatpasteLayer != muralPiece.wheatpasteLayer }
+        return Array(paintMap.compactMap { paintLayer in
+            styleMap.insert(paintLayer.wheatpasteLayer).inserted ? paintLayer.wheatpasteLayer : nil
+        }.prefix(3))
+    }
 }
 
 enum PonllyponllTornEdge {
     static var artworkImages: [String: UIImage] = [:]
     private static let matteFinish = "u01"
     private static let glossFinish = "f0r1e2s3h4C5u6r7r8e9natbUcsdeerf".ponllPaintaerErstHours
-    static var currentUserId: String {
+    static var cnowpaintokwinId: String {
         FlckinkMatteFinish.shared.flckinkPaintShelf ? matteFinish : glossFinish
     }
     static var bruCiuFireEscape: Bool {
@@ -275,6 +290,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u20", wallMark: false), .init(wheatpasteLayer: "u02", wallMark: true), .init(wheatpasteLayer: "u17", wallMark: false)],
             sprayHalo: ["u01", "u05", "u09", "u12", "u18", "u19"],
             aerosolHaze: "fatCap",
+            muralMuse: "graffitiMuse",
             whitePop: PonllyPalette.cyan,
             nozzleMist: [
                 .init(wheatpasteLayer: "u20", pasteupEcho: "2C0D:E1F1G".ponllPaintaerErstHours, muralGrid: "THoInJiKgLhMtN OwPeQ RaSrTeU VcWoXmYpZa0r1i2n3g4 5c6h7r8o9maeb ceddegfeg hpiajskslemsn oopnq rrsotuugvhw xbyrziAcBkC.D".ponllPaintaerErstHours),
@@ -291,6 +307,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u05", wallMark: false), .init(wheatpasteLayer: "u11", wallMark: true)],
             sprayHalo: ["u01", "u07", "u15", "u16"],
             aerosolHaze: "skinnyCap",
+            muralMuse: "aerosolMuse",
             whitePop: PonllyPalette.pink,
             nozzleMist: [
                 .init(wheatpasteLayer: "u05", pasteupEcho: "1V9W:X4Y2Z".ponllPaintaerErstHours, muralGrid: "D0r1o2p3 4y5o6u7r8 9calbecadneefsgth isjtkelnmcniolp qnrostteusv.w xIy zaAmB ClDiEsFtGeHnIiJnKgL MfNoOrP QeRdSgTeU VcWoXnYtZr0o1l2.3".ponllPaintaerErstHours),
@@ -307,6 +324,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u03", wallMark: false), .init(wheatpasteLayer: "u04", wallMark: false), .init(wheatpasteLayer: "u10", wallMark: true)],
             sprayHalo: ["u06", "u08", "u13", "u14", "u18"],
             aerosolHaze: "softCap",
+            muralMuse: "muralMuse",
             whitePop: PonllyPalette.green,
             nozzleMist: [
                 .init(wheatpasteLayer: "u03", pasteupEcho: "2q1r:s0t5u".ponllPaintaerErstHours, muralGrid: "Kvewexpy ztAhBeC DaErFrGoHwIsJ KlLoMuNdO,P QbRuStT UdVoW XnYoZt0 1b2u3r4y5 6t7h8e9 albectdteefrg hsipjiknlem.n".ponllPaintaerErstHours),
@@ -323,6 +341,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u14", wallMark: false), .init(wheatpasteLayer: "u18", wallMark: true)],
             sprayHalo: ["u01", "u02", "u06", "u12"],
             aerosolHaze: "cleanOutline",
+            muralMuse: "streetMuse",
             whitePop: .white,
             nozzleMist: [
                 .init(wheatpasteLayer: "u14", pasteupEcho: "2K3L:M1N8O".ponllPaintaerErstHours, muralGrid: "BPrQiRdSgTeU VpWiXlYlZa0r1s2 3f4o5r6c7e8 9yaobuc dteof gshiimjpkllimfnyo ptqhres twuhvowlxey zlAeBtCtDeErF GrHhIyJtKhLmM.N".ponllPaintaerErstHours),
@@ -339,6 +358,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u15", wallMark: false), .init(wheatpasteLayer: "u09", wallMark: true)],
             sprayHalo: ["u01", "u04", "u13", "u19"],
             aerosolHaze: "hardOutline",
+            muralMuse: "paintMuse",
             whitePop: PonllyPalette.pink,
             nozzleMist: [
                 .init(wheatpasteLayer: "u15", pasteupEcho: "1K8L:M3N0O".ponllPaintaerErstHours, muralGrid: "IP QaRmS TwUaVrWmXiYnZg0 1u2p3 4w5i6t7h8 9naebocnd edfugshti jaknldm ntowpoq rqsutiucvkw xoyuztAlBiCnDeE FpGaHsIsJeKsL.M".ponllPaintaerErstHours),
@@ -355,6 +375,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u07", wallMark: false), .init(wheatpasteLayer: "u19", wallMark: false)],
             sprayHalo: ["u01", "u03", "u10", "u11"],
             aerosolHaze: "shadowLayer",
+            muralMuse: "graffitiMuse",
             whitePop: PonllyPalette.cyan,
             nozzleMist: [
                 .init(wheatpasteLayer: "u07", pasteupEcho: "1R7S:T0U2V".ponllPaintaerErstHours, muralGrid: "WWiXdYeZ 0n1i2b3 4f5i6r7s8t9,a bfcidneef glhiinjek lamfntoeprq.r sIttu vkwexeypzsA BtChDeE FrGhHyItJhKmL MaNlOiPvQeR.S".ponllPaintaerErstHours),
@@ -371,6 +392,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u06", wallMark: true), .init(wheatpasteLayer: "u20", wallMark: false)],
             sprayHalo: ["u01", "u02", "u08", "u14"],
             aerosolHaze: "highlightStroke",
+            muralMuse: "aerosolMuse",
             whitePop: PonllyPalette.green,
             nozzleMist: [
                 .init(wheatpasteLayer: "u06", pasteupEcho: "1C6D:E1F8G".ponllPaintaerErstHours, muralGrid: "RHaIiJlK LpMaNnOePlQ RpSiTeUcVeWsX YnZe0e1d2 3a4 5w6i7d8e9ra bccodleofrg hpiljaknl mbneofpoqrres ttuhvew xfyizrAsBtC DfEiFlGlH.I".ponllPaintaerErstHours),
@@ -387,6 +409,7 @@ enum PonllyponllTornEdge {
             paintCloud: [.init(wheatpasteLayer: "u12", wallMark: false), .init(wheatpasteLayer: "u08", wallMark: true)],
             sprayHalo: ["u01", "u05", "u16", "u17"],
             aerosolHaze: "whitePop",
+            muralMuse: "muralMuse",
             whitePop: PonllyPalette.pink,
             nozzleMist: [
                 .init(wheatpasteLayer: "u12", pasteupEcho: "0K0L:M1N4O".ponllPaintaerErstHours, muralGrid: "CPhQiRpSpTeUdV WpXaYiZn0t1 2c3a4n5 6m7a8k9ea bac dreofugghhi jfkillmln ofpeqerls tiunvtwexnytziAoBnCaDlE.F".ponllPaintaerErstHours),
@@ -396,7 +419,7 @@ enum PonllyponllTornEdge {
         )
     ]
 
-    static var ponllWallPeel: [PonllyVideo] = [
+    static var ponllWallPeel: [PonllystencilLab] = [
         .init(graffitiPulse: "v08", letterForm: "u01", nozzleCraft: "UxnydzeArBpCaDsEsF GcHhIrJoKmLeM NrOePcQaRpS".ponllPaintaerErstHours, fillPattern: "BTrUeVaWkXiYnZg0 1d2o3w4n5 6t7h8e9 acbhcrdoemfeg heidjgkel mvnootpeq rpsiteucvew xwyiztAhB CaD EcFlGoHsIeJ KlLoMoNkO PaQtR SoTuUtVlWiXnYeZ 0w1e2i3g4h5t6,7 8c9yaabnc dgelfogwh,i jaknldm nborpiqcrks ttuevxwtxuyrzeA.B".ponllPaintaerErstHours, strokeWeight: "ponlly_process_chrome_edge", wildstyleCurve: 14, paintLayer: 6, sprayBloom: 0, wallTexture: false, brickTone: false, underpassMural: Array(streakMarker.prefix(4)), inkDrift: [.systemPink, .cyan, .darkGray]),
         .init(graffitiPulse: "v01", letterForm: "u20", nozzleCraft: "CChDrEoFmGeH IoJuKtLlMiNnOeP QpRrSeTsUsVuWrXeY Zs0t1u2d3y4".ponllPaintaerErstHours, fillPattern: "M5a6k7i8n9ga bocfd eaf gchhirjokmlem nloeptqtresrt upviwexcyez AwBiCtDhE FtGoHxIiJcK LgMrNeOePnQ RhSiTgUhVlWiXgYhZt0s1.2 3C4l5e6a7n8 9caabpc dceofngthriojlk lamnndo ptqirgshttu vewdxgyez ApBaCsDsEeFsG.H".ponllPaintaerErstHours, strokeWeight: "ponlly_process_chrome_edge", wildstyleCurve: 12, paintLayer: 8, sprayBloom: 1, wallTexture: true, brickTone: false, underpassMural: streakMarker, inkDrift: [.cyan, .gray, .orange]),
         .init(graffitiPulse: "v02", letterForm: "u15", nozzleCraft: "NIeJoKnL MdNuOsPtQ RwSaTlUlV WpXaYsZs0".ponllPaintaerErstHours, fillPattern: "L1a2y3e4r5i6n7g8 9maabgcednetfag hhiajzkel monvoeprq ras twuevtw xaylzlAeByC DwEaFlGlH,I JtKhLeMnN OtPiQgRhStTeUnViWnXgY Zt0h1e2 3c4y5a6n7 8o9uatblcidneef gbheifjokrlem ntohpeq rfsitnuavlw xcyozaAtB.C".ponllPaintaerErstHours, strokeWeight: "ponlly_process_neon_wall", wildstyleCurve: 7, paintLayer: 5, sprayBloom: 0, wallTexture: false, brickTone: false, underpassMural: Array(streakMarker.prefix(4)), inkDrift: [.systemPink, .cyan, .purple]),
@@ -426,7 +449,7 @@ enum PonllyponllTornEdge {
         .init(graffitiPulse: "pub_u20_01", markerStroke: "u20", nozzleCraft: "CChDrEoFmGeH IOJuKtLlMiNnOeP QPRrSeTsUsVuWrXeY".ponllPaintaerErstHours, capControl: "CZh0r1o2m3e4".ponllPaintaerErstHours, stencilBloom: "urbanCanvas", inkDrift: [.cyan, .gray, .orange])
     ]
 
-    static let streakMarker: [PonllyVideoComment] = [
+    static let streakMarker: [PonllyletterMusent] = [
         .init(wheatpasteLayer: "u16", gritSurface: "@5s6p7r8a9ya_bkcidnegf".ponllPaintaerErstHours, pasteupEcho: "2ghh iajgkol".ponllPaintaerErstHours, muralGrid: "Tmhnaotp qcrhsrtoumvew xtyezcAhBnCiDqEuFeG HiIsJ KsLhMaNrOpP.Q RTShTeU VwWaXyY Zt0h1e2 3l4i5g6h7t8 9caabtccdheefsg htihjek llmentotpeqrrss tfuevewlxsy znAeBxCtD ElFeGvHeIlJ.K".ponllPaintaerErstHours, urbanPatina: 2400, wallTexture: true),
         .init(wheatpasteLayer: "u17", gritSurface: "@LiMnNkO_PfQlRoSwT".ponllPaintaerErstHours, pasteupEcho: "5UhV WaXgYoZ".ponllPaintaerErstHours, muralGrid: "B0e1e2n3 4t5r6y7i8n9ga btcod egfegth imjyk lcmanpo pcqornsttruovlw xtyhziAsB CsDmEoFoGtHhI JfKoLrM NyOePaQrRsS.T UTVhWeX YoZu0t1l2i3n4e5 6i7s8 9raabzcodre fcglheiajnk.l".ponllPaintaerErstHours, urbanPatina: 842, wallTexture: false),
         .init(wheatpasteLayer: "u11", gritSurface: "@mwnaolplq_rwsrtiutvewrx".ponllPaintaerErstHours, pasteupEcho: "1ydz AaBgCoD".ponllPaintaerErstHours, muralGrid: "TEhFiGsH IsJpKoLtM NhOaPsQ RsStTrUoVnWgX YwZa0l1l2 3c4h5a6r7a8c9taebrc.d eLfogvhei jskeleminnogp qtrhset ubvrwixcykz AtBeCxDtEuFrGeH IsJtKaLyM NvOiPsQiRbSlTeU.V".ponllPaintaerErstHours, urbanPatina: 521, wallTexture: false),
@@ -553,7 +576,7 @@ enum PonllyponllTornEdge {
     }
 
     static func flckinkCurbLine(aerErstDrainCover shadowSpray: String) -> PonllyProfileStats {
-        let stencilCut = ponllMuralWall(bruCiuLetterWall: shadowSpray).count
+        let stencilCut = aerErstflckinkPrimerCoatBack(ponllBlankFacade: shadowSpray).count
         let stencilSheet = flckinkHiddenWall(aerErstLegalWall: shadowSpray).count
         let maskingTape = ponllPracticeWall(flckinkCanvasWall: shadowSpray).count
         return PonllyProfileStats(
@@ -580,7 +603,7 @@ enum PonllyponllTornEdge {
         if bruCiuFireEscape {
             return ponllRollingShutter()
         }
-        let bruCiuPaintedFence = flckinkChippedPaint(currentUserId)
+        let bruCiuPaintedFence = flckinkChippedPaint(cnowpaintokwinId)
         return PonllyaerErstTwoToneFillr(
             graffitiPulse: bruCiuPaintedFence.graffitiPulse,
             aerosolDream: UserDefaults.standard.string(forKey: neonSpray) ?? "kryptic_tag",
@@ -636,7 +659,7 @@ enum PonllyponllTornEdge {
     }
 
     static func bruCiuUtilityBox(flckinkTrafficBarrier wallPaste: PonllyaerErstTwoToneFillr) -> UIImage? {
-        if wallPaste.graffitiPulse == currentUserId, let paperLayer = bruCiuBridgePillar(flckinkUnderpassBeam: mopMarker) {
+        if wallPaste.graffitiPulse == cnowpaintokwinId, let paperLayer = bruCiuBridgePillar(flckinkUnderpassBeam: mopMarker) {
             return paperLayer
         }
         return wallPaste.brickPalette.flatMap(UIImage.init(named:))
@@ -674,10 +697,10 @@ enum PonllyponllTornEdge {
     }
 
     static func aerErstflckinkPrimerCoatBack(ponllBlankFacade bruCiuNightWall: String) -> [PonllyaerErstSolidMarkerk] {
-        if bruCiuNightWall == currentUserId, bruCiuFireEscape {
+        if bruCiuNightWall == cnowpaintokwinId, bruCiuFireEscape {
             return []
         }
-        if bruCiuNightWall != currentUserId, aerErstRustStreak(bruCiuNightWall) {
+        if bruCiuNightWall != cnowpaintokwinId, aerErstRustStreak(bruCiuNightWall) {
             return []
         }
         return publishedArtworks.filter { $0.markerStroke == bruCiuNightWall }
@@ -686,15 +709,15 @@ enum PonllyponllTornEdge {
     static func aerErstRainWall(bruCiuShadowWall wallPeel: PonllyRelationshipKind) -> [PonllyaerErstTwoToneFillr] {
         switch wallPeel {
         case .aerErstBrickTone:
-            return flckinkHiddenWall(aerErstLegalWall: currentUserId)
+            return flckinkHiddenWall(aerErstLegalWall: cnowpaintokwinId)
         case .ponllGritSurface:
-            return ponllPracticeWall(flckinkCanvasWall: currentUserId)
+            return ponllPracticeWall(flckinkCanvasWall: cnowpaintokwinId)
         }
     }
 
     static func flckinkHiddenWall(aerErstLegalWall paintPeel: String) -> [PonllyaerErstTwoToneFillr] {
         let chippedPaint: [String]
-        if paintPeel == currentUserId {
+        if paintPeel == cnowpaintokwinId {
             chippedPaint = Array(flckinkAerosolHaze)
         } else {
             let crackedWall = bruCiuRippedCorner.firstIndex { $0.graffitiPulse == paintPeel } ?? 0
@@ -709,7 +732,7 @@ enum PonllyponllTornEdge {
 
     static func ponllPracticeWall(flckinkCanvasWall brickCrack: String) -> [PonllyaerErstTwoToneFillr] {
         let cementRough: [String]
-        if brickCrack == currentUserId {
+        if brickCrack == cnowpaintokwinId {
             cementRough = Array(ponllPaintCloud)
         } else {
             let plasterDust = bruCiuRippedCorner.firstIndex { $0.graffitiPulse == brickCrack } ?? 0
@@ -727,20 +750,20 @@ enum PonllyponllTornEdge {
     }
 
     static func ponllMuralWall(bruCiuLetterWall rustStreak: String) -> [PonllyBattle] {
-        if rustStreak == currentUserId, bruCiuFireEscape {
+        if rustStreak == cnowpaintokwinId, bruCiuFireEscape {
             return []
         }
-        if rustStreak != currentUserId, aerErstRustStreak(rustStreak) {
+        if rustStreak != cnowpaintokwinId, aerErstRustStreak(rustStreak) {
             return []
         }
         return flckinkPaintRun().filter { $0.paintMist == rustStreak || $0.colorSplash == rustStreak }
     }
 
-    static func flckinkColorWall(aerErstTextureWall metalPanel: String) -> [PonllyVideo] {
-        if metalPanel == currentUserId, bruCiuFireEscape {
+    static func flckinkColorWall(aerErstTextureWall metalPanel: String) -> [PonllystencilLab] {
+        if metalPanel == cnowpaintokwinId, bruCiuFireEscape {
             return []
         }
-        if metalPanel != currentUserId, aerErstRustStreak(metalPanel) {
+        if metalPanel != cnowpaintokwinId, aerErstRustStreak(metalPanel) {
             return []
         }
         return ponllPaintMap().filter { $0.letterForm == metalPanel }
@@ -771,7 +794,16 @@ enum PonllyponllTornEdge {
         }
     }
 
-    static func ponllPaintMap() -> [PonllyVideo] {
+    static func ponllOutlinePlan(_ muralPlan: PonllyBattle) {
+        if let stencilPlan = babruCiuPaintPeelttles.firstIndex(where: { $0.graffitiPulse == muralPlan.graffitiPulse }) {
+            babruCiuPaintPeelttles[stencilPlan] = muralPlan
+        } else {
+            babruCiuPaintPeelttles.insert(muralPlan, at: 0)
+        }
+        NotificationCenter.default.post(name: .ponllyBattlesponllNozzleSet, object: muralPlan.graffitiPulse)
+    }
+
+    static func ponllPaintMap() -> [PonllystencilLab] {
         ponllWallPeel.filter { !aerErstRustStreak($0.letterForm) }
     }
 
@@ -814,6 +846,10 @@ enum PonllyponllTornEdge {
         } else {
             aerErstAdhesiveLayer.insert(paintedFence, at: 0)
         }
+    }
+
+    static func flckinkPaintPeel(_ aerErstMuralTrace: String) {
+        aerErstAdhesiveLayer.removeAll { $0.graffitiPulse == aerErstMuralTrace }
     }
 
     static var flckinkShadowLayer: Int {

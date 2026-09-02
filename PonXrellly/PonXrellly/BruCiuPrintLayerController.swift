@@ -15,6 +15,7 @@ final class BruCiuPrintLayerController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
     }
 
@@ -29,7 +30,11 @@ final class BruCiuPrintLayerController: UIViewController {
         flckinkLetterMaze.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .semibold)
         flckinkLetterMaze.textColor = PonllyPalette.muted
         flckinkLetterMaze.numberOfLines = 0
-        let aerErstCurveFlow = PbruCiuClearCoatView(ponllPaintTrace: .init(graffitiPulse: "h6e7r8o9".ponllPaintaerErstHours, markerStroke: "u01", nozzleCraft: "Naebocnd eFfugrhyi jCkhlrmonmoep qCrlsatsuhv".ponllPaintaerErstHours, capControl: "BwaxtytzlAeB".ponllPaintaerErstHours, stencilBloom: "nozzleCraft", inkDrift: [.cyan, .systemPink, .orange]))
+        let aerErstCurveFlow = UIImageView(image: UIImage(named: "graffitiForge"))
+        aerErstCurveFlow.contentMode = .scaleAspectFill
+        aerErstCurveFlow.clipsToBounds = true
+        aerErstCurveFlow.layer.cornerRadius = 14
+        aerErstCurveFlow.translatesAutoresizingMaskIntoConstraints = false
         aerErstCurveFlow.heightAnchor.constraint(equalToConstant: 240).isActive = true
         let ponllAngleBreak = UILabel()
         ponllAngleBreak.text = "HCoDwE FPGKH IBJaKtLtMlNeOsP QWRoSrTkU".ponllPaintaerErstHours

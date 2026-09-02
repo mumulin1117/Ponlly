@@ -39,7 +39,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         super.init(nibName: nil, bundle: nil)
     }
 
-    init(solidMarker: PonllyVideo) {
+    init(solidMarker: PonllystencilLab) {
         let author = PonllyponllTornEdge.flckinkChippedPaint(solidMarker.letterForm)
         self.ponllMuralPlanContext = PonllyangleBreakContext(
             ponllLetterForm: solidMarker.nozzleCraft,
@@ -80,12 +80,14 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         bruCiuLayerBlend.woodPanelPonlly(steelGate: view)
 
         let flckinkBackButton = bruCiuRoundButton("chevron.left")
+        flckinkBackButton.ponllGraffitiDraftBackStyle()
         view.addSubview(flckinkBackButton)
         let aerErstskinnyCap = UILabel()
         aerErstskinnyCap.text = "RPeQpRoSrTtU".ponllPaintaerErstHours
         aerErstskinnyCap.textColor = .white
         aerErstskinnyCap.textAlignment = .center
-        aerErstskinnyCap.font = PonllyFonts.muralForgepon(neonLab: 24)
+        aerErstskinnyCap.font = PonllyFonts.muralForgepon(neonLab: 16)
+        aerErstskinnyCap.ponllGraffitiDraftTitleStyle()
         aerErstskinnyCap.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstskinnyCap)
 
@@ -139,9 +141,9 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
 
         NSLayoutConstraint.activate([
             flckinkBackButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            flckinkBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
-            flckinkBackButton.widthAnchor.constraint(equalToConstant: 56),
-            flckinkBackButton.heightAnchor.constraint(equalToConstant: 56),
+            flckinkBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            flckinkBackButton.widthAnchor.constraint(equalToConstant: 36),
+            flckinkBackButton.heightAnchor.constraint(equalToConstant: 36),
             aerErstskinnyCap.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             aerErstskinnyCap.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
             ponllLineMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -166,7 +168,7 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         flckinkButtonFrame.setImage(UIImage(systemName: ponllStreetGlyph), for: .normal)
         flckinkButtonFrame.tintColor = .white
         flckinkButtonFrame.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        flckinkButtonFrame.layer.cornerRadius = 28
+        flckinkButtonFrame.layer.cornerRadius = 18
         flckinkButtonFrame.layer.borderWidth = 1.2
         flckinkButtonFrame.layer.borderColor = PonllyPalette.line.cgColor
         flckinkButtonFrame.translatesAutoresizingMaskIntoConstraints = false

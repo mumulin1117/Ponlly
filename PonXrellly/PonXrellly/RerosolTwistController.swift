@@ -47,14 +47,14 @@ final class RerosolTwistController: UIViewController {
             aerErstNozzleMist.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             aerErstNozzleMist.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             aerErstNozzleMist.topAnchor.constraint(equalTo: view.topAnchor),
-            aerErstNozzleMist.heightAnchor.constraint(equalToConstant: 122),
+            aerErstNozzleMist.heightAnchor.constraint(equalToConstant: 112),
             bruCiuStencilFlicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             bruCiuStencilFlicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             bruCiuStencilFlicker.topAnchor.constraint(equalTo: aerErstNozzleMist.bottomAnchor),
             bruCiuStencilFlicker.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             flckinkMarkerFlash.leadingAnchor.constraint(equalTo: bruCiuStencilFlicker.frameLayoutGuide.leadingAnchor, constant: 18),
             flckinkMarkerFlash.trailingAnchor.constraint(equalTo: bruCiuStencilFlicker.frameLayoutGuide.trailingAnchor, constant: -18),
-            flckinkMarkerFlash.topAnchor.constraint(equalTo: bruCiuStencilFlicker.contentLayoutGuide.topAnchor, constant: 22),
+            flckinkMarkerFlash.topAnchor.constraint(equalTo: bruCiuStencilFlicker.contentLayoutGuide.topAnchor, constant: 2),
             flckinkMarkerFlash.bottomAnchor.constraint(equalTo: bruCiuStencilFlicker.contentLayoutGuide.bottomAnchor, constant: -34)
         ])
     }
@@ -82,9 +82,10 @@ final class RerosolTwistController: UIViewController {
         flckinkColorFade.translatesAutoresizingMaskIntoConstraints = false
         let bruCiuChromeShine = UIButton(type: .system)
         bruCiuChromeShine.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        bruCiuChromeShine.ponllGraffitiDraftBackStyle()
         bruCiuChromeShine.tintColor = .white
         bruCiuChromeShine.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        bruCiuChromeShine.layer.cornerRadius = 28
+        bruCiuChromeShine.layer.cornerRadius = 18
         bruCiuChromeShine.layer.borderWidth = 1
         bruCiuChromeShine.layer.borderColor = PonllyPalette.line.cgColor
         bruCiuChromeShine.translatesAutoresizingMaskIntoConstraints = false
@@ -94,16 +95,17 @@ final class RerosolTwistController: UIViewController {
         let ponllWhitePop = UILabel()
         ponllWhitePop.text = "Bkaltmtnloep qWrosrtkusv".ponllPaintaerErstHours
         ponllWhitePop.textColor = .white
-        ponllWhitePop.font = PonllyFonts.muralForgepon(neonLab: 24)
+        ponllWhitePop.font = PonllyFonts.muralForgepon(neonLab: 16)
+        ponllWhitePop.ponllGraffitiDraftTitleStyle()
         ponllWhitePop.textAlignment = .center
         ponllWhitePop.translatesAutoresizingMaskIntoConstraints = false
         flckinkColorFade.addSubview(ponllWhitePop)
 
         NSLayoutConstraint.activate([
             bruCiuChromeShine.leadingAnchor.constraint(equalTo: flckinkColorFade.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            bruCiuChromeShine.bottomAnchor.constraint(equalTo: flckinkColorFade.bottomAnchor, constant: -12),
-            bruCiuChromeShine.widthAnchor.constraint(equalToConstant: 56),
-            bruCiuChromeShine.heightAnchor.constraint(equalToConstant: 56),
+            bruCiuChromeShine.topAnchor.constraint(equalTo: flckinkColorFade.safeAreaLayoutGuide.topAnchor, constant: 12),
+            bruCiuChromeShine.widthAnchor.constraint(equalToConstant: 36),
+            bruCiuChromeShine.heightAnchor.constraint(equalToConstant: 36),
             ponllWhitePop.centerXAnchor.constraint(equalTo: flckinkColorFade.centerXAnchor),
             ponllWhitePop.centerYAnchor.constraint(equalTo: bruCiuChromeShine.centerYAnchor)
         ])

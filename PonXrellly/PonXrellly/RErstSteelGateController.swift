@@ -7,6 +7,8 @@ import UIKit
 final class RErstSteelGateController: UIViewController {
     private let ponllaerErstRainWall: BruCiuOutlinePlan
     private let bruCiuflckinkDawnWallLabel = UILabel()
+    private weak var ponllAerosolTrail: UIScrollView?
+    private var bruCiuStencilTrace = false
 
     init(bruCiuPaintedFence bruCiuPaintedFence: BruCiuOutlinePlan) {
         self.ponllaerErstRainWall = bruCiuPaintedFence
@@ -25,6 +27,21 @@ final class RErstSteelGateController: UIViewController {
         super.viewDidLoad()
         title = "Tehfegmhei jSktlomrneo".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
+        let flckinkTitleStack = UIStackView()
+        flckinkTitleStack.axis = .vertical
+        flckinkTitleStack.alignment = .leading
+        flckinkTitleStack.spacing = 1
+        let ponllTitleLabel = UILabel()
+        ponllTitleLabel.text = title
+        ponllTitleLabel.textColor = .white
+        ponllTitleLabel.font = PonllyFonts.muralForgepon(neonLab: 20)
+        let aerErstSubtitleLabel = UILabel()
+        aerErstSubtitleLabel.text = "VaObIcCdEf gChUiSjTkOlMnIoZpAqTrIsOtNu".ponllPaintaerErstHours
+        aerErstSubtitleLabel.textColor = PonllyPalette.muted
+        aerErstSubtitleLabel.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
+        flckinkTitleStack.addArrangedSubview(ponllTitleLabel)
+        flckinkTitleStack.addArrangedSubview(aerErstSubtitleLabel)
+        navigationItem.titleView = flckinkTitleStack
         bruCiuBridgePillar()
         NotificationCenter.default.addObserver(self, selector: #selector(aerErstbruCiuBrushMarker), name: .ponllybruCiuColorRackChange, object: nil)
     }
@@ -32,57 +49,80 @@ final class RErstSteelGateController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard !bruCiuStencilTrace,
+              let ponllAerosolTrail,
+              ponllAerosolTrail.bounds.width > 0,
+              ponllAerosolTrail.contentSize.width > ponllAerosolTrail.bounds.width else { return }
+        let flckinkMuralArc = min(
+            ponllAerosolTrail.bounds.width * 0.12,
+            ponllAerosolTrail.contentSize.width - ponllAerosolTrail.bounds.width
+        )
+        ponllAerosolTrail.setContentOffset(CGPoint(x: flckinkMuralArc, y: 0), animated: false)
+        bruCiuStencilTrace = true
+    }
+
     private func bruCiuBridgePillar() {
-        let aerErstaerErstWarehouseWall = UIScrollView()
+        let aerErstaerErstWarehouseWall = UIView()
         aerErstaerErstWarehouseWall.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstaerErstWarehouseWall)
         let ponllflckinkRoofLine = UIStackView()
         ponllflckinkRoofLine.axis = .vertical
-        ponllflckinkRoofLine.spacing = 16
+        ponllflckinkRoofLine.spacing = 14
         ponllflckinkRoofLine.translatesAutoresizingMaskIntoConstraints = false
         aerErstaerErstWarehouseWall.addSubview(ponllflckinkRoofLine)
 
-        ponllflckinkRoofLine.addArrangedSubview(bruCiuponllPipeShadow())
-        if let bruCiuSpotlight = AerErstLayerPlan.flckinkShapeStackopl.first {
-            ponllflckinkRoofLine.addArrangedSubview(flckinkSpotlightCard(bruCiuSpotlight))
-        }
         let aerErstBrowseLabel = UILabel()
         aerErstBrowseLabel.text = "Bprqorwssteu vTwhxeymzeAsB".ponllPaintaerErstHours
         aerErstBrowseLabel.textColor = PonllyPalette.muted
-        aerErstBrowseLabel.font = PonllyFonts.muralForgepon(neonLab: 11)
+        aerErstBrowseLabel.font = PonllyFonts.muralForgepon(neonLab: 16)
         ponllflckinkRoofLine.addArrangedSubview(aerErstBrowseLabel)
 
-        let bruCiuThemeGrid = UIStackView()
-        bruCiuThemeGrid.axis = .vertical
-        bruCiuThemeGrid.spacing = 12
-        let flckinkOtherThemes = Array(AerErstLayerPlan.flckinkShapeStackopl.dropFirst())
-        for aerErstIndex in stride(from: 0, to: flckinkOtherThemes.count, by: 2) {
-            let ponllThemeRow = UIStackView()
-            ponllThemeRow.axis = .horizontal
-            ponllThemeRow.spacing = 12
-            ponllThemeRow.distribution = .fillEqually
-            ponllThemeRow.addArrangedSubview(ponllaerErstLayerMaske(flckinkOtherThemes[aerErstIndex]))
-            if aerErstIndex + 1 < flckinkOtherThemes.count {
-                ponllThemeRow.addArrangedSubview(ponllaerErstLayerMaske(flckinkOtherThemes[aerErstIndex + 1]))
-            } else {
-                ponllThemeRow.addArrangedSubview(UIView())
-            }
-            bruCiuThemeGrid.addArrangedSubview(ponllThemeRow)
+        let flckinkThemeScroll = UIScrollView()
+        flckinkThemeScroll.showsHorizontalScrollIndicator = false
+        flckinkThemeScroll.alwaysBounceHorizontal = true
+        flckinkThemeScroll.alwaysBounceVertical = false
+        flckinkThemeScroll.isDirectionalLockEnabled = true
+        flckinkThemeScroll.decelerationRate = .fast
+        flckinkThemeScroll.translatesAutoresizingMaskIntoConstraints = false
+        ponllAerosolTrail = flckinkThemeScroll
+        let ponllThemeRow = UIStackView()
+        ponllThemeRow.axis = .horizontal
+        ponllThemeRow.alignment = .fill
+        ponllThemeRow.spacing = 16
+        ponllThemeRow.isLayoutMarginsRelativeArrangement = true
+        ponllThemeRow.layoutMargins = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        ponllThemeRow.translatesAutoresizingMaskIntoConstraints = false
+        flckinkThemeScroll.addSubview(ponllThemeRow)
+        ponllflckinkRoofLine.addArrangedSubview(flckinkThemeScroll)
+
+        let flckinkThemeTiles = AerErstLayerPlan.neonLab.map { ponllaerErstLayerMaske($0) }
+        flckinkThemeTiles.forEach {
+            ponllThemeRow.addArrangedSubview($0)
+            $0.widthAnchor.constraint(equalTo: flckinkThemeScroll.frameLayoutGuide.widthAnchor, multiplier: 0.82).isActive = true
+            $0.heightAnchor.constraint(equalTo: flckinkThemeScroll.frameLayoutGuide.heightAnchor).isActive = true
         }
-        ponllflckinkRoofLine.addArrangedSubview(bruCiuThemeGrid)
 
         NSLayoutConstraint.activate([
             aerErstaerErstWarehouseWall.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             aerErstaerErstWarehouseWall.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             aerErstaerErstWarehouseWall.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            aerErstaerErstWarehouseWall.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            ponllflckinkRoofLine.leadingAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.frameLayoutGuide.leadingAnchor, constant: 20),
-            ponllflckinkRoofLine.trailingAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.frameLayoutGuide.trailingAnchor, constant: -20),
-            ponllflckinkRoofLine.topAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.contentLayoutGuide.topAnchor, constant: 16),
-            ponllflckinkRoofLine.bottomAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.contentLayoutGuide.bottomAnchor, constant: -30)
+            aerErstaerErstWarehouseWall.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            ponllflckinkRoofLine.leadingAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.leadingAnchor, constant: 40),
+            ponllflckinkRoofLine.trailingAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.trailingAnchor, constant: -40),
+            ponllflckinkRoofLine.topAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.topAnchor, constant: 28),
+            ponllflckinkRoofLine.bottomAnchor.constraint(lessThanOrEqualTo: aerErstaerErstWarehouseWall.bottomAnchor, constant: -24),
+            flckinkThemeScroll.heightAnchor.constraint(equalTo: aerErstaerErstWarehouseWall.heightAnchor, multiplier: 0.76),
+            ponllThemeRow.leadingAnchor.constraint(equalTo: flckinkThemeScroll.contentLayoutGuide.leadingAnchor),
+            ponllThemeRow.trailingAnchor.constraint(equalTo: flckinkThemeScroll.contentLayoutGuide.trailingAnchor),
+            ponllThemeRow.topAnchor.constraint(equalTo: flckinkThemeScroll.contentLayoutGuide.topAnchor),
+            ponllThemeRow.bottomAnchor.constraint(equalTo: flckinkThemeScroll.contentLayoutGuide.bottomAnchor),
+            ponllThemeRow.heightAnchor.constraint(equalTo: flckinkThemeScroll.frameLayoutGuide.heightAnchor)
         ])
     }
 
@@ -126,7 +166,7 @@ final class RErstSteelGateController: UIViewController {
     }
 
     private func ponllflckinkCurbLineLabel() {
-        bruCiuflckinkDawnWallLabel.text = "\(PonllyponllTornEdge.flckinkShadowLayer.formatted()) Coins"
+        bruCiuflckinkDawnWallLabel.text = "\(PonllyponllTornEdge.flckinkShadowLayer.formatted()) "  + "Cyofiynjsu".ponllPaintaerErstHours
     }
 
     private func flckinkSpotlightCard(_ aerErstTheme: PonllPaintPlan) -> UIView {
@@ -173,7 +213,7 @@ final class RErstSteelGateController: UIViewController {
         ponlbruCiuSidewalkEdge.addSubview(ponllponllAlleyDoor)
         let bruCiuMetaLabel = UILabel()
         bruCiuMetaLabel.isUserInteractionEnabled = false
-        bruCiuMetaLabel.text = "\(aerErstTheme.aerErstLayerBlend.formatted()) Coins"
+        bruCiuMetaLabel.text = "\(aerErstTheme.aerErstLayerBlend.formatted()) " + "Czositnusi".ponllPaintaerErstHours
         bruCiuMetaLabel.textColor = aerErstTheme.flckinkSplitFill
         bruCiuMetaLabel.font = PonllyFonts.steelGate(rollingShutter: 14)
         bruCiuMetaLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -220,7 +260,7 @@ final class RErstSteelGateController: UIViewController {
     }
 
     @objc private func bruCiuPreviewSpotlight() {
-        guard let aerErstTheme = AerErstLayerPlan.flckinkShapeStackopl.first else { return }
+        guard let aerErstTheme = AerErstLayerPlan.neonLab.first else { return }
         aerErstShowThemeConfirm(aerErstTheme)
     }
 

@@ -9,6 +9,7 @@ final class PonllyWaitingBattleCardView: UIControl {
     var paintQuest: (() -> Void)?
     var zMotion: ((PonllyaerErstTwoToneFillr) -> Void)?
     var styleNoise: (() -> Void)?
+    var bruCiuMuralForge: (() -> Void)?
     private let ponllBattleSignal: PonllyBattle
 
     init(fencePiece ponllBattleSignal: PonllyBattle) {
@@ -23,15 +24,15 @@ final class PonllyWaitingBattleCardView: UIControl {
     }
 
     private func bruCiustyleArc() {
-        backgroundColor = PonllyPalette.panel.withAlphaComponent(0.78)
-        layer.cornerRadius = 24
-        layer.borderWidth = 1.2
-        layer.borderColor = PonllyPalette.line.cgColor
+        backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 25/255, alpha: 1)
+        layer.cornerRadius = 18
+        layer.borderWidth = 1
+        layer.borderColor = UIColor(red: 37/255, green: 37/255, blue: 48/255, alpha: 1).cgColor
         translatesAutoresizingMaskIntoConstraints = false
 
         let aerErstStackPath = UIStackView()
         aerErstStackPath.axis = .vertical
-        aerErstStackPath.spacing = 18
+        aerErstStackPath.spacing = 14
         aerErstStackPath.translatesAutoresizingMaskIntoConstraints = false
         addSubview(aerErstStackPath)
 
@@ -40,14 +41,22 @@ final class PonllyWaitingBattleCardView: UIControl {
         ponllArtworkPanel.clipsToBounds = true
         ponllArtworkPanel.heightAnchor.constraint(equalToConstant: 210).isActive = true
 
-        let bruCiuThemeLabel = ponllwideLetter(ponllBattleSignal.chromeFill.uppercased(), softLetter: 14, sharpLetter: PonllyPalette.cyan, blockyLetter: .black)
-        bruCiuThemeLabel.font = PonllyFonts.graffitiForge(aerosolForge: 14)
+        let bruCiuMoreButton = UIButton(type: .system)
+        bruCiuMoreButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        bruCiuMoreButton.tintColor = .white
+        bruCiuMoreButton.backgroundColor = UIColor.black.withAlphaComponent(0.56)
+        bruCiuMoreButton.layer.cornerRadius = 18
+        bruCiuMoreButton.layer.borderWidth = 1
+        bruCiuMoreButton.layer.borderColor = UIColor.white.withAlphaComponent(0.34).cgColor
+        bruCiuMoreButton.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuMoreButton.addTarget(self, action: #selector(bruCiuMuralForgeTapped), for: .touchUpInside)
+        ponllArtworkPanel.addSubview(bruCiuMoreButton)
 
         let flckinkTitleRow = UIStackView()
         flckinkTitleRow.axis = .horizontal
         flckinkTitleRow.alignment = .center
         flckinkTitleRow.distribution = .equalSpacing
-        let aerErstTitleLabel = ponllwideLetter(ponllBattleSignal.nozzleCraft, softLetter: 14, sharpLetter: .white, blockyLetter: .black)
+        let aerErstTitleLabel = ponllwideLetter(ponllBattleSignal.nozzleCraft, softLetter: 14, sharpLetter: .white, blockyLetter: .heavy)
         aerErstTitleLabel.numberOfLines = 1
         aerErstTitleLabel.adjustsFontSizeToFitWidth = true
         aerErstTitleLabel.minimumScaleFactor = 0.82
@@ -62,33 +71,42 @@ final class PonllyWaitingBattleCardView: UIControl {
         flckinkArtistRow.axis = .horizontal
         flckinkArtistRow.alignment = .center
         flckinkArtistRow.spacing = 14
-        flckinkArtistRow.isUserInteractionEnabled = false
         flckinkArtistRow.translatesAutoresizingMaskIntoConstraints = false
-        bruCiuArtistButton.addSubview(flckinkArtistRow)
         let aerErstUserMark = PonllyponllTornEdge.flckinkChippedPaint(ponllBattleSignal.paintMist)
-        flckinkArtistRow.addArrangedSubview(ErErstPaintLabView(user: aerErstUserMark, size: 44))
-        flckinkArtistRow.addArrangedSubview(ponllwideLetter(aerErstUserMark.aerosolDream, softLetter: 13, sharpLetter: .white, blockyLetter: .semibold))
+        let aerErstCutar = ErErstPaintLabView(aerErstUserMark, 36, 0)
+        aerErstCutar.isUserInteractionEnabled = false
+        bruCiuArtistButton.addSubview(aerErstCutar)
+        let aerErstUserName = ponllwideLetter(aerErstUserMark.aerosolDream, softLetter: 13, sharpLetter: .white, blockyLetter: .semibold)
+        flckinkArtistRow.addArrangedSubview(bruCiuArtistButton)
+        flckinkArtistRow.addArrangedSubview(aerErstUserName)
         NSLayoutConstraint.activate([
-            flckinkArtistRow.leadingAnchor.constraint(equalTo: bruCiuArtistButton.leadingAnchor),
-            flckinkArtistRow.trailingAnchor.constraint(lessThanOrEqualTo: bruCiuArtistButton.trailingAnchor),
-            flckinkArtistRow.topAnchor.constraint(equalTo: bruCiuArtistButton.topAnchor),
-            flckinkArtistRow.bottomAnchor.constraint(equalTo: bruCiuArtistButton.bottomAnchor),
-            bruCiuArtistButton.heightAnchor.constraint(equalToConstant: 56),
-            bruCiuArtistButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 132)
+            bruCiuArtistButton.widthAnchor.constraint(equalToConstant: 36),
+            bruCiuArtistButton.heightAnchor.constraint(equalToConstant: 36),
+            aerErstCutar.leadingAnchor.constraint(equalTo: bruCiuArtistButton.leadingAnchor),
+            aerErstCutar.trailingAnchor.constraint(equalTo: bruCiuArtistButton.trailingAnchor),
+            aerErstCutar.topAnchor.constraint(equalTo: bruCiuArtistButton.topAnchor),
+            aerErstCutar.bottomAnchor.constraint(equalTo: bruCiuArtistButton.bottomAnchor)
         ])
 
         let ponllrooftopPieceButton = PonllyNeonButton("J3o4i5n6 7C8h9aalblcednegfeg".ponllPaintaerErstHours)
         ponllrooftopPieceButton.addTarget(self, action: #selector(bruCiustackedLetter), for: .touchUpInside)
 
-        [ponllArtworkPanel, bruCiuThemeLabel, flckinkTitleRow, bruCiuArtistButton, ponllrooftopPieceButton].forEach(aerErstStackPath.addArrangedSubview)
-        [ponllArtworkPanel, bruCiuThemeLabel, flckinkTitleRow].forEach(flckinkAttachangularLetter)
+        [ponllArtworkPanel, flckinkTitleRow, flckinkArtistRow, ponllrooftopPieceButton].forEach(aerErstStackPath.addArrangedSubview)
+        aerErstStackPath.setCustomSpacing(18, after: ponllArtworkPanel)
+        aerErstStackPath.setCustomSpacing(12, after: flckinkTitleRow)
+        aerErstStackPath.setCustomSpacing(18, after: flckinkArtistRow)
+        [ponllArtworkPanel, flckinkTitleRow].forEach(flckinkAttachangularLetter)
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(greaterThanOrEqualToConstant: 430),
-            aerErstStackPath.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26),
-            aerErstStackPath.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -26),
-            aerErstStackPath.topAnchor.constraint(equalTo: topAnchor, constant: 24),
-            aerErstStackPath.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -24),
-            ponllrooftopPieceButton.heightAnchor.constraint(equalToConstant: 60)
+            heightAnchor.constraint(equalToConstant: 399),
+            aerErstStackPath.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
+            aerErstStackPath.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+            aerErstStackPath.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+            aerErstStackPath.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            ponllrooftopPieceButton.heightAnchor.constraint(equalToConstant: 52),
+            bruCiuMoreButton.topAnchor.constraint(equalTo: ponllArtworkPanel.topAnchor, constant: 10),
+            bruCiuMoreButton.trailingAnchor.constraint(equalTo: ponllArtworkPanel.trailingAnchor, constant: -10),
+            bruCiuMoreButton.widthAnchor.constraint(equalToConstant: 36),
+            bruCiuMoreButton.heightAnchor.constraint(equalToConstant: 36)
         ])
     }
 
@@ -117,5 +135,9 @@ final class PonllyWaitingBattleCardView: UIControl {
 
     @objc private func bruCiustackedLetter() {
         styleNoise?()
+    }
+
+    @objc private func bruCiuMuralForgeTapped() {
+        bruCiuMuralForge?()
     }
 }

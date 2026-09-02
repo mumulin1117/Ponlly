@@ -6,15 +6,15 @@ import UIKit
 
 @MainActor
 final class PonllyletterFormController: UIViewController {
-    private var ponllClearCoat: PonllyVideo
-    private let bruCiuMatteFinish: (PonllyVideo) -> Void
+    private var ponllClearCoat: PonllystencilLab
+    private let bruCiuMatteFinish: (PonllystencilLab) -> Void
     private let flckinkGlossFinish = UIView()
     private let aerErstMetallicSpray = UIView()
     private let ponllNeonSpray = UIStackView()
     private let bruCiuInkMarker = UILabel()
     private let flckinkPaintMarker = UITextField()
 
-    init(video ponllClearCoat: PonllyVideo, onUpdate bruCiuMatteFinish: @escaping (PonllyVideo) -> Void) {
+    init(trafficBarrier ponllClearCoat: PonllystencilLab, onUpdate bruCiuMatteFinish: @escaping (PonllystencilLab) -> Void) {
         self.ponllClearCoat = ponllClearCoat
         self.bruCiuMatteFinish = bruCiuMatteFinish
         super.init(nibName: nil, bundle: nil)
@@ -108,7 +108,7 @@ final class PonllyletterFormController: UIViewController {
         flckinkCapRack.translatesAutoresizingMaskIntoConstraints = false
         aerErstMetallicSpray.addSubview(flckinkCapRack)
 
-        let aerErstNozzleSet = ErErstPaintLabView(user: PonllyponllTornEdge.flckinkChippedPaint("u01"), size: 32)
+        let aerErstNozzleSet = ErErstPaintLabView(PonllyponllTornEdge.flckinkChippedPaint("u01"), 32)
         flckinkCapRack.addSubview(aerErstNozzleSet)
 
         let ponllColorRack = UIView()
@@ -194,16 +194,16 @@ final class PonllyletterFormController: UIViewController {
             ponllNeonSpray.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-        ponllClearCoat.underpassMural.forEach { ponllNeonSpray.addArrangedSubview(bruCiuSqueezeMarker($0)) }
+        ponllClearCoat.underpassMural.enumerated().forEach { ponllNeonSpray.addArrangedSubview(bruCiuSqueezeMarker($0.element, colorMap: $0.offset)) }
     }
 
-    private func bruCiuSqueezeMarker(_ bruCiuPasteBrush: PonllyVideoComment) -> UIView {
+    private func bruCiuSqueezeMarker(_ bruCiuPasteBrush: PonllyletterMusent, colorMap ponllColorMap: Int) -> UIView {
         let bruCiuBladeLine = UIStackView()
         bruCiuBladeLine.axis = .horizontal
         bruCiuBladeLine.alignment = .top
         bruCiuBladeLine.spacing = 12
 
-        bruCiuBladeLine.addArrangedSubview(ErErstPaintLabView(user: PonllyponllTornEdge.flckinkChippedPaint(bruCiuPasteBrush.wheatpasteLayer), size: 36))
+        bruCiuBladeLine.addArrangedSubview(ErErstPaintLabView(PonllyponllTornEdge.flckinkChippedPaint(bruCiuPasteBrush.wheatpasteLayer), 36))
 
         let flckinkCanShake = UIStackView()
         flckinkCanShake.axis = .vertical
@@ -228,14 +228,61 @@ final class PonllyletterFormController: UIViewController {
         [flckinkCutoutShape, aerErstSprayShield, aerErstRattleSound].forEach(flckinkCanShake.addArrangedSubview)
         bruCiuBladeLine.addArrangedSubview(flckinkCanShake)
 
-        let ponllPressureFlow = UILabel()
-        ponllPressureFlow.text = flckinkSolidMarker(bruCiuPasteBrush.urbanPatina)
-        ponllPressureFlow.textColor = PonllyPalette.muted
-        ponllPressureFlow.font = PonllyFonts.steelGate(rollingShutter: 10)
-        ponllPressureFlow.textAlignment = .right
-        ponllPressureFlow.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        let ponllPressureFlow = bruCiuInkAura(bruCiuPasteBrush.wallTexture, count: bruCiuPasteBrush.urbanPatina, colorMap: ponllColorMap)
         bruCiuBladeLine.addArrangedSubview(ponllPressureFlow)
         return bruCiuBladeLine
+    }
+
+    private func bruCiuInkAura(_ flckinkInkEcho: Bool, count aerErstInkSignal: Int, colorMap ponllColorMap: Int) -> UIStackView {
+        let ponllInkQuest = UIStackView()
+        ponllInkQuest.axis = .vertical
+        ponllInkQuest.alignment = .center
+        ponllInkQuest.spacing = 0
+        ponllInkQuest.widthAnchor.constraint(equalToConstant: 36).isActive = true
+
+        let bruCiuInkSeed = UIButton(type: .custom)
+        bruCiuInkSeed.setImage(UIImage(named: flckinkInkEcho ? "inkAura" : "inkEcho"), for: .normal)
+        bruCiuInkSeed.imageView?.contentMode = .scaleAspectFit
+        bruCiuInkSeed.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuInkSeed.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        bruCiuInkSeed.heightAnchor.constraint(equalToConstant: 28).isActive = true
+
+        let flckinkInkSpark = UILabel()
+        flckinkInkSpark.text = "\(ponllInkMood(aerErstInkSignal))"
+        flckinkInkSpark.textColor = PonllyPalette.muted
+        flckinkInkSpark.font = PonllyFonts.steelGate(rollingShutter: 10)
+        flckinkInkSpark.textAlignment = .center
+
+        bruCiuInkSeed.addAction(UIAction { [weak self, weak bruCiuInkSeed, weak flckinkInkSpark] _ in
+            guard let self, let bruCiuInkSeed, let flckinkInkSpark else { return }
+            self.aerErstInkglossFinishfs(colorMap: ponllColorMap, inkSeed: bruCiuInkSeed, inkSpark: flckinkInkSpark)
+        }, for: .touchUpInside)
+
+        ponllInkQuest.addArrangedSubview(bruCiuInkSeed)
+        ponllInkQuest.addArrangedSubview(flckinkInkSpark)
+        return ponllInkQuest
+    }
+
+    private func aerErstInkglossFinishfs(colorMap ponllColorMap: Int, inkSeed bruCiuInkSeed: UIButton, inkSpark flckinkInkSpark: UILabel) {
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) { [weak self, weak bruCiuInkSeed, weak flckinkInkSpark] in
+            guard let self,
+                  let bruCiuInkSeed,
+                  let flckinkInkSpark,
+                  self.ponllClearCoat.underpassMural.indices.contains(ponllColorMap) else { return }
+            var ponllInkPath = self.ponllClearCoat.underpassMural[ponllColorMap]
+            let flckinkInkEcho = !ponllInkPath.wallTexture
+            let aerErstInkSignal = self.ponllInkMood(ponllInkPath.urbanPatina)
+            ponllInkPath.wallTexture = flckinkInkEcho
+            ponllInkPath.urbanPatina = flckinkInkEcho ? min(5, aerErstInkSignal + 1) : max(0, aerErstInkSignal - 1)
+            self.ponllClearCoat.underpassMural[ponllColorMap] = ponllInkPath
+            bruCiuInkSeed.setImage(UIImage(named: flckinkInkEcho ? "inkAura" : "inkEcho"), for: .normal)
+            flckinkInkSpark.text = "\(ponllInkPath.urbanPatina)"
+            self.bruCiuMatteFinish(self.ponllClearCoat)
+        }
+    }
+
+    private func ponllInkMood(_ bruCiuInkPath: Int) -> Int {
+        min(5, max(0, bruCiuInkPath))
     }
 
     private func flckinkSolidMarker(_ bruCiuFanSpray: Int) -> String {

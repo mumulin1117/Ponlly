@@ -29,7 +29,7 @@ final class ConcreteMuseTile: UIControl {
         aerErstWeatheredPaper.translatesAutoresizingMaskIntoConstraints = false
         addSubview(aerErstWeatheredPaper)
         let ponllTornEdge = UILabel()
-        ponllTornEdge.text = "\(bruCiuHandbillTexture.aerErstLayerBlend.formatted()) Coins"
+        ponllTornEdge.text = "\(bruCiuHandbillTexture.aerErstLayerBlend.formatted()) " + "Cfogihnjsk".ponllPaintaerErstHours
         ponllTornEdge.textColor = bruCiuHandbillTexture.flckinkSplitFill
         ponllTornEdge.font = PonllyFonts.steelGate(rollingShutter: 11)
         ponllTornEdge.translatesAutoresizingMaskIntoConstraints = false

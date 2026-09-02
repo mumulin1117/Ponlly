@@ -74,29 +74,31 @@ final class PaerErstPaintBaseController: UIViewController {
         let bruCiuSketchCue = UIView()
         let flckinkPaintSeed = UIButton(type: .system)
         flckinkPaintSeed.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkPaintSeed.ponllGraffitiDraftBackStyle()
         flckinkPaintSeed.tintColor = .white
         flckinkPaintSeed.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        flckinkPaintSeed.layer.cornerRadius = 28
+        flckinkPaintSeed.layer.cornerRadius = 18
         flckinkPaintSeed.layer.borderWidth = 1
         flckinkPaintSeed.layer.borderColor = PonllyPalette.line.cgColor
         flckinkPaintSeed.translatesAutoresizingMaskIntoConstraints = false
         flckinkPaintSeed.addTarget(self, action: #selector(aerErstWallPath), for: .touchUpInside)
-        bruCiuSketchCue.addSubview(flckinkPaintSeed)
+        view.addSubview(flckinkPaintSeed)
 
         let ponllInkArc = UILabel()
         ponllInkArc.text = "AMrNtOwPoQrRkS".ponllPaintaerErstHours
         ponllInkArc.textColor = .white
         ponllInkArc.textAlignment = .center
-        ponllInkArc.font = PonllyFonts.muralForgepon(neonLab: 24)
+        ponllInkArc.font = PonllyFonts.muralForgepon(neonLab: 16)
+        ponllInkArc.ponllGraffitiDraftTitleStyle()
         ponllInkArc.translatesAutoresizingMaskIntoConstraints = false
-        bruCiuSketchCue.addSubview(ponllInkArc)
+        view.addSubview(ponllInkArc)
 
         NSLayoutConstraint.activate([
-            flckinkPaintSeed.leadingAnchor.constraint(equalTo: bruCiuSketchCue.leadingAnchor),
-            flckinkPaintSeed.bottomAnchor.constraint(equalTo: bruCiuSketchCue.bottomAnchor, constant: -8),
-            flckinkPaintSeed.widthAnchor.constraint(equalToConstant: 56),
-            flckinkPaintSeed.heightAnchor.constraint(equalToConstant: 56),
-            ponllInkArc.centerXAnchor.constraint(equalTo: bruCiuSketchCue.centerXAnchor),
+            flckinkPaintSeed.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18),
+            flckinkPaintSeed.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            flckinkPaintSeed.widthAnchor.constraint(equalToConstant: 36),
+            flckinkPaintSeed.heightAnchor.constraint(equalToConstant: 36),
+            ponllInkArc.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             ponllInkArc.centerYAnchor.constraint(equalTo: flckinkPaintSeed.centerYAnchor)
         ])
         return bruCiuSketchCue
@@ -109,7 +111,7 @@ final class PaerErstPaintBaseController: UIViewController {
         bruCiuMuralBend.layer.borderWidth = 1
         bruCiuMuralBend.layer.borderColor = PonllyPalette.line.cgColor
 
-        let flckinkStencilKick = ErErstPaintLabView(user: bruCiuInkSurge, size: 46)
+        let flckinkStencilKick = ErErstPaintLabView(bruCiuInkSurge, 46)
         bruCiuMuralBend.addSubview(flckinkStencilKick)
         let aerErstMarkerLean = UILabel()
         aerErstMarkerLean.text = ponllPaintRipple.nozzleCraft

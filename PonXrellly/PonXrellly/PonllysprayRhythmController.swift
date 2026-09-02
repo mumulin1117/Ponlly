@@ -59,10 +59,28 @@ final class PonllysprayRhythmController: UIViewController {
         flckinkThemePanel.addSubview(flckinkInfoPanel)
 
         let aerErstInfoText = UILabel()
-        aerErstInfoText.text = "Theme Cost                 \(ponllThemeForge.aerErstLayerBlend.formatted()) Coins\nYour Balance              \(PonllyponllTornEdge.flckinkShadowLayer.formatted()) Coins\nRoom Capacity          \(ponllThemeForge.ponllRoughFill)"
-        aerErstInfoText.textColor = .white
+        let ponllColorMap = NSMutableAttributedString()
+        let bruCiuStrokeMap = PonllyFonts.steelGate(rollingShutter: 12)
+        let flckinkColorFade = UIColor(red: 138 / 255, green: 138 / 255, blue: 147 / 255, alpha: 1)
+        let aerErstPaintGlow = UIColor(red: 1, green: 184 / 255, blue: 0, alpha: 1)
+        let ponllCyanGlow = UIColor(red: 0, green: 240 / 255, blue: 1, alpha: 1)
+        func bruCiuLetterFlow(_ flckinkPaintMap: String, aerErstColorFade: UIColor) {
+            ponllColorMap.append(NSAttributedString(
+                string: flckinkPaintMap,
+                attributes: [.font: bruCiuStrokeMap, .foregroundColor: aerErstColorFade]
+            ))
+        }
+        bruCiuLetterFlow("ThhseDmOeZ kCvoGsRtc n y J U f q B M X i t E P a l w H".ponllPaintaerErstHours, aerErstColorFade: flckinkColorFade)
+        bruCiuLetterFlow(ponllThemeForge.aerErstLayerBlend.formatted(), aerErstColorFade: aerErstPaintGlow)
+        bruCiuLetterFlow(" yCJoUifnqsB\nM".ponllPaintaerErstHours, aerErstColorFade: flckinkColorFade)
+        bruCiuLetterFlow("YPoaulrw HBSadloaznKcVeg r C N Y j u F Q b m x I T e".ponllPaintaerErstHours, aerErstColorFade: flckinkColorFade)
+        bruCiuLetterFlow(PonllyponllTornEdge.flckinkShadowLayer.formatted(), aerErstColorFade: ponllCyanGlow)
+        bruCiuLetterFlow(" yCJoUifnqsB\nM".ponllPaintaerErstHours, aerErstColorFade: flckinkColorFade)
+        bruCiuLetterFlow("RgoroCmN YCjaupFaQcbimtxyI T e p A L W h s D O".ponllPaintaerErstHours, aerErstColorFade: flckinkColorFade)
+        bruCiuLetterFlow(ponllThemeForge.ponllRoughFill, aerErstColorFade: ponllCyanGlow)
+        aerErstInfoText.attributedText = ponllColorMap
         aerErstInfoText.numberOfLines = 0
-        aerErstInfoText.font = PonllyFonts.steelGate(rollingShutter: 12)
+        aerErstInfoText.font = bruCiuStrokeMap
         aerErstInfoText.translatesAutoresizingMaskIntoConstraints = false
         flckinkInfoPanel.addSubview(aerErstInfoText)
 

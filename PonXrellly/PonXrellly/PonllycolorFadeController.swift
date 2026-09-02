@@ -56,9 +56,10 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         view.addSubview(bruCiuPaintShelf)
         let flckinkCanShake = UIButton(type: .system)
         flckinkCanShake.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        flckinkCanShake.ponllGraffitiDraftBackStyle()
         flckinkCanShake.tintColor = .white
         flckinkCanShake.backgroundColor = PonllyPalette.panel
-        flckinkCanShake.layer.cornerRadius = 28
+        flckinkCanShake.layer.cornerRadius = 18
         flckinkCanShake.layer.borderWidth = 1
         flckinkCanShake.layer.borderColor = PonllyPalette.line.cgColor
         flckinkCanShake.addTarget(self, action: #selector(flckinkSketchSeed), for: .touchUpInside)
@@ -68,7 +69,8 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         bruCiuNozzleSet.text = "RGeHpIoJrKtL MUNsOePrQ".ponllPaintaerErstHours
         bruCiuNozzleSet.textColor = .white
         bruCiuNozzleSet.textAlignment = .center
-        bruCiuNozzleSet.font = PonllyFonts.muralForgepon(neonLab: 22)
+        bruCiuNozzleSet.font = PonllyFonts.muralForgepon(neonLab: 16)
+        bruCiuNozzleSet.ponllGraffitiDraftTitleStyle()
         bruCiuNozzleSet.translatesAutoresizingMaskIntoConstraints = false
         bruCiuPaintShelf.addSubview(bruCiuNozzleSet)
 
@@ -102,9 +104,9 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
             bruCiuPaintShelf.topAnchor.constraint(equalTo: view.topAnchor),
             bruCiuPaintShelf.heightAnchor.constraint(equalToConstant: 112),
             flckinkCanShake.leadingAnchor.constraint(equalTo: bruCiuPaintShelf.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            flckinkCanShake.bottomAnchor.constraint(equalTo: bruCiuPaintShelf.bottomAnchor, constant: -18),
-            flckinkCanShake.widthAnchor.constraint(equalToConstant: 56),
-            flckinkCanShake.heightAnchor.constraint(equalToConstant: 56),
+            flckinkCanShake.topAnchor.constraint(equalTo: bruCiuPaintShelf.safeAreaLayoutGuide.topAnchor, constant: 12),
+            flckinkCanShake.widthAnchor.constraint(equalToConstant: 36),
+            flckinkCanShake.heightAnchor.constraint(equalToConstant: 36),
             bruCiuNozzleSet.centerXAnchor.constraint(equalTo: bruCiuPaintShelf.centerXAnchor),
             bruCiuNozzleSet.centerYAnchor.constraint(equalTo: flckinkCanShake.centerYAnchor),
             bruCiuInkFuse.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -126,7 +128,7 @@ final class PonllycolorFadeController: UIViewController, UITextViewDelegate {
         aerErstRattleSound.layer.cornerRadius = 16
         aerErstRattleSound.layer.borderWidth = 1
         aerErstRattleSound.layer.borderColor = PonllyPalette.line.cgColor
-        let ponllPressureFlow = ErErstPaintLabView(user: ponllPaintFlash, size: 54)
+        let ponllPressureFlow = ErErstPaintLabView(ponllPaintFlash, 54)
         aerErstRattleSound.addSubview(ponllPressureFlow)
         let bruCiuFanSpray = UIStackView()
         bruCiuFanSpray.axis = .vertical

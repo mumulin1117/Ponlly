@@ -28,6 +28,7 @@ final class VuonllMetallicSprayontroller: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
     }
 
@@ -66,7 +67,7 @@ final class VuonllMetallicSprayontroller: UIViewController {
         ponllflckinkLetterMaze.layer.borderWidth = 1
         ponllflckinkLetterMaze.layer.borderColor = PonllyPalette.line.cgColor
         ponllflckinkLetterMaze.addAction(UIAction { [weak self] _ in
-            let bruCiuProfile = FlckinkPrimerCoatController(user: aerErstUser)
+            let bruCiuProfile = FlckinkPrimerCoatController(aerErstUser)
             bruCiuProfile.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(bruCiuProfile, animated: true)
         }, for: .touchUpInside)
@@ -76,7 +77,7 @@ final class VuonllMetallicSprayontroller: UIViewController {
         flckinkRow.spacing = 14
         flckinkRow.translatesAutoresizingMaskIntoConstraints = false
         ponllflckinkLetterMaze.addSubview(flckinkRow)
-        flckinkRow.addArrangedSubview(ErErstPaintLabView(user: aerErstUser, size: 54))
+        flckinkRow.addArrangedSubview(ErErstPaintLabView(aerErstUser, 54))
         let aerErstTextStack = UIStackView()
         aerErstTextStack.axis = .vertical
         aerErstTextStack.spacing = 4

@@ -29,24 +29,26 @@ final class SmuralLeanController: UIViewController {
 
         let aerErstaerErstLayerPlan = UIButton(type: .system)
         aerErstaerErstLayerPlan.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        aerErstaerErstLayerPlan.ponllGraffitiDraftBackStyle()
         aerErstaerErstLayerPlan.tintColor = .white
         aerErstaerErstLayerPlan.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        aerErstaerErstLayerPlan.layer.cornerRadius = 28
+        aerErstaerErstLayerPlan.layer.cornerRadius = 18
         aerErstaerErstLayerPlan.layer.borderWidth = 1
         aerErstaerErstLayerPlan.layer.borderColor = PonllyPalette.line.cgColor
         aerErstaerErstLayerPlan.translatesAutoresizingMaskIntoConstraints = false
         aerErstaerErstLayerPlan.addTarget(self, action: #selector(ponllbruCiuShadowWall), for: .touchUpInside)
-        flckinponllPaintPlan.addSubview(aerErstaerErstLayerPlan)
+        view.addSubview(aerErstaerErstLayerPlan)
 
         let ponllHeading = UILabel()
         ponllHeading.text = aerErstaerErstMuralPlan
         ponllHeading.textColor = .white
-        ponllHeading.font = PonllyFonts.muralForgepon(neonLab: 22)
+        ponllHeading.font = PonllyFonts.muralForgepon(neonLab: 16)
+        ponllHeading.ponllGraffitiDraftTitleStyle()
         ponllHeading.textAlignment = .center
         ponllHeading.adjustsFontSizeToFitWidth = true
         ponllHeading.minimumScaleFactor = 0.76
         ponllHeading.translatesAutoresizingMaskIntoConstraints = false
-        flckinponllPaintPlan.addSubview(ponllHeading)
+        view.addSubview(ponllHeading)
 
         ponllflckinkShadowPlanView.isEditable = false
         ponllflckinkShadowPlanView.showsVerticalScrollIndicator = true
@@ -61,12 +63,12 @@ final class SmuralLeanController: UIViewController {
             flckinponllPaintPlan.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             flckinponllPaintPlan.topAnchor.constraint(equalTo: view.topAnchor),
             flckinponllPaintPlan.heightAnchor.constraint(equalToConstant: 122),
-            aerErstaerErstLayerPlan.leadingAnchor.constraint(equalTo: flckinponllPaintPlan.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            aerErstaerErstLayerPlan.bottomAnchor.constraint(equalTo: flckinponllPaintPlan.bottomAnchor, constant: -12),
-            aerErstaerErstLayerPlan.widthAnchor.constraint(equalToConstant: 56),
-            aerErstaerErstLayerPlan.heightAnchor.constraint(equalToConstant: 56),
+            aerErstaerErstLayerPlan.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            aerErstaerErstLayerPlan.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            aerErstaerErstLayerPlan.widthAnchor.constraint(equalToConstant: 36),
+            aerErstaerErstLayerPlan.heightAnchor.constraint(equalToConstant: 36),
             ponllHeading.leadingAnchor.constraint(equalTo: aerErstaerErstLayerPlan.trailingAnchor, constant: 14),
-            ponllHeading.trailingAnchor.constraint(equalTo: flckinponllPaintPlan.safeAreaLayoutGuide.trailingAnchor, constant: -28),
+            ponllHeading.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
             ponllHeading.centerYAnchor.constraint(equalTo: aerErstaerErstLayerPlan.centerYAnchor),
             ponllflckinkShadowPlanView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             ponllflckinkShadowPlanView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),

@@ -20,8 +20,8 @@ final class PasteupEchoController: UIViewController {
     var bruCiuAerosolBurst: ponllAerosolNoise = .flckinkStencilContrast
     private let bruCiuWallSignal = UIRefreshControl()
     private var flckinkInkSignal = false
-    private var aerErstVideoSignal = false
-    var flckinkMuralBloom: [PonllyVideo] {
+    private var aerErststencilPlanSignal = false
+    var flckinkMuralBloom: [PonllystencilLab] {
         switch bruCiuAerosolBurst {
         case .bruCiuMuralTexture:
             return PonllyponllTornEdge.ponllPaintMap().filter { PonllyponllTornEdge.aerErstCrackedWall($0.letterForm) }
@@ -40,7 +40,7 @@ final class PasteupEchoController: UIViewController {
         aerErstMuralTrace()
         aerErstTextureRipple.alpha = 0
         DispatchQueue.main.async { [weak self] in
-            self?.flckinkVideoSignal()
+            self?.flckinkstencilPlanl()
         }
     }
 
@@ -48,7 +48,7 @@ final class PasteupEchoController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = false
-        if aerErstVideoSignal {
+        if aerErststencilPlanSignal {
             ponllStencilVeil()
             aerErstTextureRipple.reloadData()
             bruCiuChromeAura()
@@ -94,8 +94,8 @@ final class PasteupEchoController: UIViewController {
         aerErstTextureRipple.refreshControl = bruCiuWallSignal
     }
 
-    private func flckinkVideoSignal() {
-        guard !aerErstVideoSignal else { return }
+    private func flckinkstencilPlanl() {
+        guard !aerErststencilPlanSignal else { return }
         bruCiuWallSignal.beginRefreshing()
         let ponllAerosolSignal = CGPoint(x: 0, y: -max(bruCiuWallSignal.bounds.height, 52))
         aerErstTextureRipple.setContentOffset(ponllAerosolSignal, animated: true)
@@ -105,12 +105,12 @@ final class PasteupEchoController: UIViewController {
     private func bruCiuPaintFlash() {
         let aerErstAerosolFuse = UIStackView(arrangedSubviews: [aerErstSignBack, ponllWallRhythm])
         aerErstAerosolFuse.axis = .horizontal
-        aerErstAerosolFuse.spacing = 24
+        aerErstAerosolFuse.spacing = 12
         aerErstAerosolFuse.alignment = .center
         aerErstAerosolFuse.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstAerosolFuse)
 
-        ponllInkPath(aerErstSignBack, bruCiuMuralArc: "FSoTlUlVoWwX".ponllPaintaerErstHours, flckinkStencilBend: #selector(bruCiuTextureSignal))
+        ponllInkPath(aerErstSignBack, bruCiuMuralArc: "FxoylzlAoBwCiDnEg".ponllPaintaerErstHours, flckinkStencilBend: #selector(bruCiuTextureSignal))
         ponllInkPath(ponllWallRhythm, bruCiuMuralArc: "PYrZo0c1e2s3s4".ponllPaintaerErstHours, flckinkStencilBend: #selector(flckinkSketchCue))
 
         bruCiuChromeMotion.backgroundColor = PonllyPalette.pink
@@ -123,8 +123,8 @@ final class PasteupEchoController: UIViewController {
         ponllPaintSurge = bruCiuChromeMotion.centerXAnchor.constraint(equalTo: ponllWallRhythm.centerXAnchor)
         NSLayoutConstraint.activate([
             aerErstAerosolFuse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            aerErstAerosolFuse.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
-            bruCiuChromeMotion.widthAnchor.constraint(equalToConstant: 40),
+            aerErstAerosolFuse.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            bruCiuChromeMotion.widthAnchor.constraint(equalToConstant: 20),
             bruCiuChromeMotion.heightAnchor.constraint(equalToConstant: 3),
             bruCiuChromeMotion.topAnchor.constraint(equalTo: ponllWallRhythm.bottomAnchor, constant: 6),
             ponllPaintSurge!
@@ -136,6 +136,8 @@ final class PasteupEchoController: UIViewController {
     private func ponllInkPath(_ bruCiuPaintSeed: UIButton, bruCiuMuralArc: String, flckinkStencilBend: Selector) {
         bruCiuPaintSeed.setTitle(bruCiuMuralArc, for: .normal)
         bruCiuPaintSeed.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        bruCiuPaintSeed.titleLabel?.adjustsFontSizeToFitWidth = true
+        bruCiuPaintSeed.titleLabel?.minimumScaleFactor = 0.9
         bruCiuPaintSeed.addTarget(self, action: flckinkStencilBend, for: .touchUpInside)
     }
 
@@ -201,13 +203,13 @@ final class PasteupEchoController: UIViewController {
         }
     }
 
-    func bruCiuTextureNoise(_ flckinkSketchContrast: PonllyVideo) {
-        guard let aerErstPaintBalance = PonllyponllTornEdge.ponllWallPeel.firstIndex(where: { $0.graffitiPulse == flckinkSketchContrast.graffitiPulse }) else { return }
-        PonllyponllTornEdge.ponllWallPeel[aerErstPaintBalance] = flckinkSketchContrast
+    func bruCiuTextureNoise(_ flckinkSketchContrast: PonllystencilLab) {
+        guard let aerErstsprayHaloe = PonllyponllTornEdge.ponllWallPeel.firstIndex(where: { $0.graffitiPulse == flckinkSketchContrast.graffitiPulse }) else { return }
+        PonllyponllTornEdge.ponllWallPeel[aerErstsprayHaloe] = flckinkSketchContrast
         ponllStencilVeil()
     }
 
-    func flckinkAerosolRhythm(bruCiuMuralMotion: IndexPath) -> PonllyVideo? {
+    func flckinkAerosolRhythm(bruCiuMuralMotion: IndexPath) -> PonllystencilLab? {
         guard flckinkMuralBloom.indices.contains(bruCiuMuralMotion.item) else { return nil }
         return flckinkMuralBloom[bruCiuMuralMotion.item]
     }
@@ -278,8 +280,8 @@ final class PasteupEchoController: UIViewController {
             self.aerErstMuralTrace()
             self.bruCiuWallSignal.endRefreshing()
             self.flckinkInkSignal = false
-            let ponllInitialSignal = !self.aerErstVideoSignal
-            self.aerErstVideoSignal = true
+            let ponllInitialSignal = !self.aerErststencilPlanSignal
+            self.aerErststencilPlanSignal = true
             if ponllInitialSignal {
                 UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
                     self.aerErstTextureRipple.alpha = 1

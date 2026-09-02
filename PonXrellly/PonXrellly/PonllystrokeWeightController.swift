@@ -64,40 +64,34 @@ final class PonllystrokeWeightController: UIViewController {
         bruCiuVeilLayer.woodPanelPonlly(steelGate: view)
 
         let flckinkBackButton = UIButton(type: .system)
-        flckinkBackButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        flckinkBackButton.tintColor = .white
-        flckinkBackButton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-        flckinkBackButton.layer.cornerRadius = 38
-        flckinkBackButton.layer.borderWidth = 1
-        flckinkBackButton.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
+        flckinkBackButton.setImage(UIImage(named: "wallSignal")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        flckinkBackButton.ponllGraffitiDraftBackStyle()
+        flckinkBackButton.imageView?.contentMode = .scaleAspectFit
         flckinkBackButton.translatesAutoresizingMaskIntoConstraints = false
         flckinkBackButton.addTarget(self, action: #selector(ponllpaintSketch), for: .touchUpInside)
         view.addSubview(flckinkBackButton)
 
         let aerErstneonSketchutton = UIButton(type: .system)
-        aerErstneonSketchutton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        aerErstneonSketchutton.tintColor = .white
-        aerErstneonSketchutton.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.82)
-        aerErstneonSketchutton.layer.cornerRadius = 38
-        aerErstneonSketchutton.layer.borderWidth = 1
-        aerErstneonSketchutton.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
+        aerErstneonSketchutton.setImage(UIImage(named: "markerSignal")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        aerErstneonSketchutton.imageView?.contentMode = .scaleAspectFit
         aerErstneonSketchutton.translatesAutoresizingMaskIntoConstraints = false
         aerErstneonSketchutton.addTarget(self, action: #selector(bruCiuMoreTapped), for: .touchUpInside)
         view.addSubview(aerErstneonSketchutton)
 
-        let ponllCallTitle = UILabel()
-        ponllCallTitle.text = ponllUserSignal.aerosolDream.replacingOccurrences(of: "@", with: "")
-        ponllCallTitle.textColor = .white
-        ponllCallTitle.textAlignment = .center
-        ponllCallTitle.font = PonllyFonts.muralForgepon(neonLab: 24)
-        ponllCallTitle.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(ponllCallTitle)
+        let ponllchromeForgeTitle = UILabel()
+        ponllchromeForgeTitle.text = ponllUserSignal.aerosolDream.replacingOccurrences(of: "@", with: "")
+        ponllchromeForgeTitle.textColor = .white
+        ponllchromeForgeTitle.textAlignment = .center
+        ponllchromeForgeTitle.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .bold)
+        ponllchromeForgeTitle.ponllGraffitiDraftTitleStyle()
+        ponllchromeForgeTitle.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllchromeForgeTitle)
 
         let bruCiuchromeSketchew = UIImageView(image: PonllyponllTornEdge.bruCiuUtilityBox(flckinkTrafficBarrier: PonllyponllTornEdge.ponllBrickFacade()) ?? UIImage(named: "pasteupEcho"))
         bruCiuchromeSketchew.contentMode = .scaleAspectFill
         bruCiuchromeSketchew.clipsToBounds = true
         bruCiuchromeSketchew.layer.cornerRadius = 16
-        bruCiuchromeSketchew.layer.borderWidth = 2.5
+        bruCiuchromeSketchew.layer.borderWidth = 2
         bruCiuchromeSketchew.layer.borderColor = UIColor.white.cgColor
         bruCiuchromeSketchew.layer.shadowColor = UIColor.black.cgColor
         bruCiuchromeSketchew.layer.shadowOpacity = 0.35
@@ -110,34 +104,34 @@ final class PonllystrokeWeightController: UIViewController {
         flckinkurbanSketch.text = "CWoXnYnZe0c1t2i3n4g5.6.7.8".ponllPaintaerErstHours
         flckinkurbanSketch.textColor = .white
         flckinkurbanSketch.textAlignment = .center
-        flckinkurbanSketch.font = PonllyFonts.utilityBox(blankFacade: 24, aerosolMuse: .black)
+        flckinkurbanSketch.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
         flckinkurbanSketch.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkurbanSketch)
 
-        let aerErstmarkerSketchutton = aerErststencilSketchtton(outlineSketch: "mic.fill", shadowSketch: .black.withAlphaComponent(0.78), styleSketch: .white, wallSketch: 76, colorSketch: #selector(flckinkMicTapped(_:)))
-        let ponllEndButton = aerErststencilSketchtton(outlineSketch: "phone.down.fill", shadowSketch: UIColor(red: 1, green: 31/255, blue: 39/255, alpha: 1), styleSketch: .white, wallSketch: 92, colorSketch: #selector(aerErstEndTapped))
-        let bruCiuCameraButton = aerErststencilSketchtton(outlineSketch: "video.fill", shadowSketch: .black.withAlphaComponent(0.78), styleSketch: .white, wallSketch: 76, colorSketch: #selector(ponllCameraTapped))
+        let aerErstmarkerSketchutton = aerErststencilSketchtton(outlineSketch: "inkSignal", wallSketch: 56, colorSketch: #selector(flckinkMicTapped(_:)))
+        let ponllEndButton = aerErststencilSketchtton(outlineSketch: "aerosolSignal", wallSketch: 72, colorSketch: #selector(aerErstEndTapped))
+        let bruCiuCameraButton = aerErststencilSketchtton(outlineSketch: "chromeSignal", wallSketch: 56, colorSketch: #selector(ponllCameraTapped))
         [aerErstmarkerSketchutton, ponllEndButton, bruCiuCameraButton].forEach(view.addSubview)
 
         NSLayoutConstraint.activate([
             flckinkBackButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            flckinkBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 28),
-            flckinkBackButton.widthAnchor.constraint(equalToConstant: 76),
-            flckinkBackButton.heightAnchor.constraint(equalToConstant: 76),
+            flckinkBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            flckinkBackButton.widthAnchor.constraint(equalToConstant: 36),
+            flckinkBackButton.heightAnchor.constraint(equalToConstant: 36),
             aerErstneonSketchutton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             aerErstneonSketchutton.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
-            aerErstneonSketchutton.widthAnchor.constraint(equalToConstant: 76),
-            aerErstneonSketchutton.heightAnchor.constraint(equalToConstant: 76),
-            ponllCallTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            ponllCallTitle.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
-            bruCiuchromeSketchew.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-            bruCiuchromeSketchew.bottomAnchor.constraint(equalTo: flckinkurbanSketch.topAnchor, constant: -16),
-            bruCiuchromeSketchew.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.38),
-            bruCiuchromeSketchew.heightAnchor.constraint(equalTo: bruCiuchromeSketchew.widthAnchor, multiplier: 1.25),
+            aerErstneonSketchutton.widthAnchor.constraint(equalToConstant: 36),
+            aerErstneonSketchutton.heightAnchor.constraint(equalToConstant: 36),
+            ponllchromeForgeTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ponllchromeForgeTitle.centerYAnchor.constraint(equalTo: flckinkBackButton.centerYAnchor),
+            bruCiuchromeSketchew.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -12),
+            bruCiuchromeSketchew.bottomAnchor.constraint(equalTo: flckinkurbanSketch.topAnchor, constant: -18),
+            bruCiuchromeSketchew.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.393),
+            bruCiuchromeSketchew.heightAnchor.constraint(equalTo: bruCiuchromeSketchew.widthAnchor, multiplier: 1.4),
             flckinkurbanSketch.centerXAnchor.constraint(equalTo: bruCiuchromeSketchew.centerXAnchor),
-            flckinkurbanSketch.bottomAnchor.constraint(equalTo: aerErstmarkerSketchutton.topAnchor, constant: -54),
+            flckinkurbanSketch.bottomAnchor.constraint(equalTo: aerErstmarkerSketchutton.topAnchor, constant: -62),
             ponllEndButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            ponllEndButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -76),
+            ponllEndButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -63),
             aerErstmarkerSketchutton.centerYAnchor.constraint(equalTo: ponllEndButton.centerYAnchor),
             aerErstmarkerSketchutton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 36),
             bruCiuCameraButton.centerYAnchor.constraint(equalTo: ponllEndButton.centerYAnchor),
@@ -145,12 +139,9 @@ final class PonllystrokeWeightController: UIViewController {
         ])
     }
 
-    private func aerErststencilSketchtton(outlineSketch ponllSymbol: String, shadowSketch bruCiuBackground: UIColor, styleSketch flckinkTint: UIColor, wallSketch aerErstSize: CGFloat, colorSketch ponllAction: Selector) -> UIButton {
+    private func aerErststencilSketchtton(outlineSketch ponllSymbol: String, wallSketch aerErstSize: CGFloat, colorSketch ponllAction: Selector) -> UIButton {
         let bruCiuButton = UIButton(type: .system)
-        bruCiuButton.setImage(UIImage(systemName: ponllSymbol), for: .normal)
-        bruCiuButton.tintColor = flckinkTint
-        bruCiuButton.backgroundColor = bruCiuBackground
-        bruCiuButton.layer.cornerRadius = aerErstSize / 2
+        bruCiuButton.setImage(UIImage(named: ponllSymbol)?.withRenderingMode(.alwaysOriginal), for: .normal)
         bruCiuButton.imageView?.contentMode = .scaleAspectFit
         bruCiuButton.translatesAutoresizingMaskIntoConstraints = false
         bruCiuButton.widthAnchor.constraint(equalToConstant: aerErstSize).isActive = true
@@ -199,9 +190,7 @@ final class PonllystrokeWeightController: UIViewController {
 
     @objc private func flckinkMicTapped(_ aerErstSender: UIButton) {
         bruCiuMicMuted.toggle()
-        aerErstSender.setImage(UIImage(systemName: bruCiuMicMuted ? "mic.slash.fill" : "mic.fill"), for: .normal)
-        aerErstSender.tintColor = .white
-        aerErstSender.backgroundColor = bruCiuMicMuted ? PonllyPalette.pink.withAlphaComponent(0.86) : .black.withAlphaComponent(0.78)
+        aerErstSender.alpha = bruCiuMicMuted ? 0.55 : 1
         flckinkPrimerCoatponlu(bruCiuMicMuted ? "MMiNcOrPoQpRhSoTnUeV WmXuYtZe0d1".ponllPaintaerErstHours : "M2i3c4r5o6p7h8o9naeb codpeefng".ponllPaintaerErstHours)
     }
 

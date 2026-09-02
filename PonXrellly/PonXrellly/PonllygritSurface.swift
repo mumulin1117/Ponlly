@@ -18,6 +18,29 @@ enum PonllyFonts {
     }
 }
 
+extension UIButton {
+    func ponllGraffitiDraftBackStyle() {
+        let bruCiuAerosolDraft = UIImage.SymbolConfiguration(pointSize: 14, weight: .semibold)
+        setImage(UIImage(systemName: "chevron.left", withConfiguration: bruCiuAerosolDraft), for: .normal)
+        setTitle(nil, for: .normal)
+        tintColor = .white
+        backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        layer.cornerRadius = 18
+        layer.borderWidth = 1
+        layer.borderColor = PonllyPalette.line.cgColor
+        clipsToBounds = true
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+
+extension UILabel {
+    func ponllGraffitiDraftTitleStyle() {
+        textColor = .white
+        textAlignment = .center
+        font = PonllyFonts.muralForgepon(neonLab: 16)
+    }
+}
+
 extension UIView {
     func woodPanelPonlly(steelGate ponllChromeShine: UIView, bruCiuClearCoat bruCiuColorFade: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -54,6 +77,32 @@ extension UIViewController {
             case .bruCiuSilverSheen: return "bSeTlUlV".ponllPaintaerErstHours
             }
         }
+    }
+
+    func ponllGraffitiDraftNavigationStyle() {
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: PonllyFonts.muralForgepon(neonLab: 16)
+        ]
+        guard let ponllAerosolDraft = navigationController,
+              ponllAerosolDraft.viewControllers.first !== self else { return }
+
+        if let bruCiuStencilDraft = navigationItem.leftBarButtonItem?.customView as? UIButton {
+            bruCiuStencilDraft.ponllGraffitiDraftBackStyle()
+            return
+        }
+
+        let flckinkMarkerDraft = UIButton(type: .system)
+        flckinkMarkerDraft.ponllGraffitiDraftBackStyle()
+        NSLayoutConstraint.activate([
+            flckinkMarkerDraft.widthAnchor.constraint(equalToConstant: 36),
+            flckinkMarkerDraft.heightAnchor.constraint(equalToConstant: 36)
+        ])
+        flckinkMarkerDraft.addAction(UIAction { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }, for: .touchUpInside)
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: flckinkMarkerDraft)
     }
 
     func flckinkPrimerCoatponlu(_ ponllSprayHalo: String) {

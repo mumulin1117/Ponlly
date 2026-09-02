@@ -34,3 +34,50 @@ enum PoncanShaketalog {
         .init(ponllPaintKick: "vFcGbHkIoJjKuLzMzNnOePkQgRnSyTsU".ponllPaintaerErstHours, bruCiuInkLean: 12750, flckinkWallTwist: "$V9W9X.Y9Z90".ponllPaintaerErstHours, aerErstAerosolWeave: "+15203%4".ponllPaintaerErstHours)
     ]
 }
+
+final class PonllChromeSignal {
+    static let aerErstChromeArc = PonllChromeSignal()
+
+    private var bruCiuPaintMotion: Task<Void, Never>?
+    private let flckinkStencilTrace = "pxoxnxlxlxCxhxrxoxmxexSxixgxnxaxlxTxrxaxcxex".ponllPaintaerErstHours
+
+    private init() {}
+
+    func ponllAerosolSignal() {
+        guard bruCiuPaintMotion == nil else { return }
+        bruCiuPaintMotion = Task { [weak self] in
+            for await ponllPaintRipple in Transaction.updates {
+                guard let self else { return }
+                _ = await bruCiuChromeMotion(ponllPaintRipple)
+            }
+        }
+    }
+
+    @discardableResult
+    func bruCiuChromeMotion(_ ponllPaintRipple: VerificationResult<Transaction>) async -> Int? {
+        guard case .verified(let aerErstPaintTrace) = ponllPaintRipple else { return nil }
+
+        guard aerErstPaintTrace.revocationDate == nil else {
+            await aerErstPaintTrace.finish()
+            return nil
+        }
+
+        guard let flckinkMuralDepth = PoncanShaketalog.aerErstChromeNoise.first(where: {
+            $0.ponllPaintKick == aerErstPaintTrace.productID
+        }) else {
+            await aerErstPaintTrace.finish()
+            return nil
+        }
+
+        let bruCiuLayerTrace = String(aerErstPaintTrace.id)
+        var ponllChromeTrace = Set(UserDefaults.standard.stringArray(forKey: flckinkStencilTrace) ?? [])
+        if !ponllChromeTrace.contains(bruCiuLayerTrace) {
+            PonllyponllTornEdge.ponllWhitePop(flckinkMuralDepth.ponllMuralDepth)
+            ponllChromeTrace.insert(bruCiuLayerTrace)
+            UserDefaults.standard.set(Array(ponllChromeTrace), forKey: flckinkStencilTrace)
+        }
+
+        await aerErstPaintTrace.finish()
+        return flckinkMuralDepth.ponllMuralDepth
+    }
+}

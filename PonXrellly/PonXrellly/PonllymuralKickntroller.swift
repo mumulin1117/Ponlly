@@ -28,13 +28,14 @@ final class PonllymuralKickntroller: UIViewController {
     private func ponllMarkerNoise() {
         flckinkMuralGlow.image = PonllyponllTornEdge.ponllBlankFacade()
         flckinkMuralGlow.contentMode = .scaleAspectFill
-        flckinkMuralGlow.alpha = 0.34
+        flckinkMuralGlow.alpha = 1
         view.addSubview(flckinkMuralGlow)
         flckinkMuralGlow.woodPanelPonlly(steelGate: view)
-        let aerErstNightWall = PonllyponllCyanGlowView(bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.34), PonllyPalette.background.withAlphaComponent(0.96)], CGPoint(x: 0.5, y: 0), CGPoint(x: 0.5, y: 1))
+        let aerErstNightWall = UIView()
+        aerErstNightWall.backgroundColor = UIColor.black.withAlphaComponent(0.56)
         view.addSubview(aerErstNightWall)
         aerErstNightWall.woodPanelPonlly(steelGate: view)
-
+        ponllWallWeave.contentInsetAdjustmentBehavior = .never
         ponllWallWeave.alwaysBounceVertical = true
         ponllWallWeave.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllWallWeave)
@@ -62,22 +63,21 @@ final class PonllymuralKickntroller: UIViewController {
             $0.removeFromSuperview()
         }
         if FlckinkMatteFinish.shared.ponllBlankFacade {
-            aerErstTextureBalance().forEach(bruCiuAerosolDepth.addArrangedSubview)
+            aerErstTextureglossFinishce().forEach(bruCiuAerosolDepth.addArrangedSubview)
         } else {
             bruCiuAerosolDepth.addArrangedSubview(ponllSketchRhythm())
         }
     }
 
-    private func aerErstTextureBalance() -> [UIView] {
+    private func aerErstTextureglossFinishce() -> [UIView] {
         [
             bruCiuPaintMotion(),
             flckinkInkCascade(),
             aerErstWallRipple(),
             ponllAerosolSurge([
-                bruCiuMuralBurst(inkMood: "MKyL MANrOtPwQoRrSkT".ponllPaintaerErstHours, styleSeed: "SUhVoWwX YyZo0u1r2 3a4r5t6w7o8r9ka".ponllPaintaerErstHours, paintSurge: "pbacidnetfpgahliejtktlem".ponllPaintaerErstHours, paintRipple: PonllyPalette.cyan, action: #selector(bruCiuInkAura)),
                 bruCiuMuralBurst(inkMood: "Bnloapcqkrlsitsutv".ponllPaintaerErstHours, styleSeed: "MwaxnyazgAeB CbDlEoFcGkHeIdJ KuLsMeNrOsP".ponllPaintaerErstHours, paintSurge: "sQhRiSeTlUdV".ponllPaintaerErstHours, paintRipple: PonllyPalette.cyan, action: #selector(bruCiuStencilCue))
             ]),
-            flckinkStencilBloom("PWoXlYiZc0i1e2s3".ponllPaintaerErstHours),
+            flckinkStencilBloom("Aqbwoeurtt yAunido pHaesldpf".ponllPaintaerErstHours),
             ponllAerosolSurge([
                 bruCiuMuralBurst(inkMood: "T4e5r6m7s8 9Oafb cSdeerfvgihciej".ponllPaintaerErstHours, styleSeed: "Rkelamdn oopuqrr stteurvmwsx yaznAdB CcDoEnFdGiHtIiJoKnLsM".ponllPaintaerErstHours, paintSurge: "doc.text", paintRipple: PonllyPalette.pink, action: #selector(flckinkMarkerPath)),
                 bruCiuMuralBurst(inkMood: "PNrOiPvQaRcSyT UPVoWlXiYcZy0".ponllPaintaerErstHours, styleSeed: "H1o2w3 4w5e6 7p8r9oatbeccdte fygohuirj kdlamtnao".ponllPaintaerErstHours, paintSurge: "lpoqcrks".ponllPaintaerErstHours, paintRipple: PonllyPalette.pink, action: #selector(aerErstChromeArc))
@@ -124,7 +124,7 @@ final class PonllymuralKickntroller: UIViewController {
         let aerErstPaperLayer = UIView()
         aerErstPaperLayer.translatesAutoresizingMaskIntoConstraints = false
 
-        let ponllPrintLayer = ErErstPaintLabView(user: aerErstStencilGrit, size: 92)
+        let ponllPrintLayer = ErErstPaintLabView(aerErstStencilGrit, 66)
         ponllPrintLayer.layer.borderWidth = 3
         ponllPrintLayer.layer.borderColor = PonllyPalette.pink.cgColor
         ponllPrintLayer.layer.shadowColor = PonllyPalette.pink.cgColor
@@ -135,7 +135,7 @@ final class PonllymuralKickntroller: UIViewController {
         let bruCiuGrainPrint = UILabel()
         bruCiuGrainPrint.text = "@\(aerErstStencilGrit.aerosolDream.lowercased())"
         bruCiuGrainPrint.textColor = .white
-        bruCiuGrainPrint.font = PonllyFonts.muralForgepon(neonLab: 24)
+        bruCiuGrainPrint.font = PonllyFonts.muralForgepon(neonLab: 18)
         bruCiuGrainPrint.adjustsFontSizeToFitWidth = true
         bruCiuGrainPrint.minimumScaleFactor = 0.78
         bruCiuGrainPrint.translatesAutoresizingMaskIntoConstraints = false
@@ -145,7 +145,7 @@ final class PonllymuralKickntroller: UIViewController {
         flckinkMonoPrint.text = "\(aerErstStencilGrit.sprayRhythm) • \(aerErstStencilGrit.paintFlow)"
         flckinkMonoPrint.textColor = PonllyPalette.cyan
         flckinkMonoPrint.backgroundColor = UIColor(red: 38/255, green: 40/255, blue: 56/255, alpha: 0.92)
-        flckinkMonoPrint.font = PonllyFonts.muralForgepon(neonLab: 11)
+        flckinkMonoPrint.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
         flckinkMonoPrint.textAlignment = .center
         flckinkMonoPrint.layer.cornerRadius = 8
         flckinkMonoPrint.clipsToBounds = true
@@ -157,9 +157,9 @@ final class PonllymuralKickntroller: UIViewController {
         aerErstColorPrint.setImage(UIImage(systemName: "pencil"), for: .normal)
         aerErstColorPrint.tintColor = PonllyPalette.pink
         aerErstColorPrint.setTitleColor(PonllyPalette.pink, for: .normal)
-        aerErstColorPrint.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
-        aerErstColorPrint.layer.cornerRadius = 16
-        aerErstColorPrint.layer.borderWidth = 1.6
+        aerErstColorPrint.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
+        aerErstColorPrint.layer.cornerRadius = 15
+        aerErstColorPrint.layer.borderWidth = 1
         aerErstColorPrint.layer.borderColor = PonllyPalette.pink.cgColor
         aerErstColorPrint.translatesAutoresizingMaskIntoConstraints = false
         aerErstColorPrint.addTarget(self, action: #selector(aerErstSketchTrail), for: .touchUpInside)
@@ -168,30 +168,30 @@ final class PonllymuralKickntroller: UIViewController {
         let ponllHandbillTexture = UILabel()
         ponllHandbillTexture.text = aerErstStencilGrit.urbanCanvas
         ponllHandbillTexture.textColor = PonllyPalette.muted
-        ponllHandbillTexture.font = PonllyFonts.utilityBox(blankFacade: 15, aerosolMuse: .medium)
+        ponllHandbillTexture.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         ponllHandbillTexture.numberOfLines = 0
         ponllHandbillTexture.translatesAutoresizingMaskIntoConstraints = false
         aerErstPaperLayer.addSubview(ponllHandbillTexture)
 
         NSLayoutConstraint.activate([
-            aerErstPaperLayer.heightAnchor.constraint(greaterThanOrEqualToConstant: 210),
-            ponllPrintLayer.leadingAnchor.constraint(equalTo: aerErstPaperLayer.leadingAnchor, constant: 22),
-            ponllPrintLayer.topAnchor.constraint(equalTo: aerErstPaperLayer.topAnchor, constant: 8),
-            bruCiuGrainPrint.leadingAnchor.constraint(equalTo: ponllPrintLayer.trailingAnchor, constant: 18),
-            bruCiuGrainPrint.trailingAnchor.constraint(lessThanOrEqualTo: aerErstColorPrint.leadingAnchor, constant: -12),
-            bruCiuGrainPrint.topAnchor.constraint(equalTo: ponllPrintLayer.topAnchor, constant: 18),
+            aerErstPaperLayer.heightAnchor.constraint(equalToConstant: 132),
+            ponllPrintLayer.leadingAnchor.constraint(equalTo: aerErstPaperLayer.leadingAnchor, constant: 19),
+            ponllPrintLayer.topAnchor.constraint(equalTo: aerErstPaperLayer.topAnchor, constant: 1),
+            bruCiuGrainPrint.leadingAnchor.constraint(equalTo: ponllPrintLayer.trailingAnchor, constant: 19),
+            bruCiuGrainPrint.trailingAnchor.constraint(lessThanOrEqualTo: aerErstColorPrint.leadingAnchor, constant: -10),
+            bruCiuGrainPrint.topAnchor.constraint(equalTo: ponllPrintLayer.topAnchor, constant: 8),
             flckinkMonoPrint.leadingAnchor.constraint(equalTo: bruCiuGrainPrint.leadingAnchor),
-            flckinkMonoPrint.topAnchor.constraint(equalTo: bruCiuGrainPrint.bottomAnchor, constant: 8),
-            flckinkMonoPrint.widthAnchor.constraint(greaterThanOrEqualToConstant: 128),
-            flckinkMonoPrint.heightAnchor.constraint(equalToConstant: 28),
-            aerErstColorPrint.trailingAnchor.constraint(equalTo: aerErstPaperLayer.trailingAnchor, constant: -4),
+            flckinkMonoPrint.topAnchor.constraint(equalTo: bruCiuGrainPrint.bottomAnchor, constant: 5),
+            flckinkMonoPrint.widthAnchor.constraint(greaterThanOrEqualToConstant: 88),
+            flckinkMonoPrint.heightAnchor.constraint(equalToConstant: 20),
+            aerErstColorPrint.trailingAnchor.constraint(equalTo: aerErstPaperLayer.trailingAnchor, constant: -16),
             aerErstColorPrint.centerYAnchor.constraint(equalTo: bruCiuGrainPrint.centerYAnchor),
-            aerErstColorPrint.widthAnchor.constraint(equalToConstant: 116),
-            aerErstColorPrint.heightAnchor.constraint(equalToConstant: 48),
+            aerErstColorPrint.widthAnchor.constraint(equalToConstant: 72),
+            aerErstColorPrint.heightAnchor.constraint(equalToConstant: 30),
             ponllHandbillTexture.leadingAnchor.constraint(equalTo: ponllPrintLayer.leadingAnchor),
-            ponllHandbillTexture.trailingAnchor.constraint(equalTo: aerErstPaperLayer.trailingAnchor, constant: -12),
-            ponllHandbillTexture.topAnchor.constraint(equalTo: ponllPrintLayer.bottomAnchor, constant: 26),
-            ponllHandbillTexture.bottomAnchor.constraint(equalTo: aerErstPaperLayer.bottomAnchor, constant: -6)
+            ponllHandbillTexture.trailingAnchor.constraint(equalTo: aerErstPaperLayer.trailingAnchor, constant: -16),
+            ponllHandbillTexture.topAnchor.constraint(equalTo: ponllPrintLayer.bottomAnchor, constant: 19),
+            ponllHandbillTexture.bottomAnchor.constraint(lessThanOrEqualTo: aerErstPaperLayer.bottomAnchor)
         ])
         return aerErstPaperLayer
     }
@@ -200,20 +200,20 @@ final class PonllymuralKickntroller: UIViewController {
         let bruCiuPulpPaper = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: aerErstStencilGrit.graffitiPulse)
         let flckinkWeatheredPaper = UIView()
         flckinkWeatheredPaper.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
-        flckinkWeatheredPaper.layer.cornerRadius = 18
+        flckinkWeatheredPaper.layer.cornerRadius = 14
         flckinkWeatheredPaper.layer.borderWidth = 1
         flckinkWeatheredPaper.layer.borderColor = PonllyPalette.line.cgColor
         let aerErstTornEdge = UIStackView(arrangedSubviews: [
-            aerErstMarkerFlicker("\(bruCiuPulpPaper.paintRun)", "WHOIRJKKSL".ponllPaintaerErstHours, action: #selector(flckinkWallEcho)),
-            aerErstMarkerFlicker("\(bruCiuPulpPaper.dripTrail)", "FMONLOLPOQWRESRTSU".ponllPaintaerErstHours, action: #selector(aerErstAerosolSignal)),
-            aerErstMarkerFlicker("\(bruCiuPulpPaper.inkBleed)", "FVOWLXLYOZW0I1N2G3".ponllPaintaerErstHours, action: #selector(ponllMuralQuest))
+            aerErstMarkerFlicker(bruCiuNeonFuse(bruCiuPulpPaper.paintRun), "WHOIRJKKSL".ponllPaintaerErstHours, action: #selector(flckinkWallEcho)),
+            aerErstMarkerFlicker(bruCiuNeonFuse(bruCiuPulpPaper.dripTrail), "FMONLOLPOQWRESRTSU".ponllPaintaerErstHours, action: #selector(aerErstAerosolSignal)),
+            aerErstMarkerFlicker(bruCiuNeonFuse(bruCiuPulpPaper.inkBleed), "FVOWLXLYOZW0I1N2G3".ponllPaintaerErstHours, action: #selector(ponllMuralQuest))
         ])
         aerErstTornEdge.axis = .horizontal
         aerErstTornEdge.distribution = .fillEqually
         aerErstTornEdge.translatesAutoresizingMaskIntoConstraints = false
         flckinkWeatheredPaper.addSubview(aerErstTornEdge)
         NSLayoutConstraint.activate([
-            flckinkWeatheredPaper.heightAnchor.constraint(equalToConstant: 108),
+            flckinkWeatheredPaper.heightAnchor.constraint(equalToConstant: 72),
             aerErstTornEdge.leadingAnchor.constraint(equalTo: flckinkWeatheredPaper.leadingAnchor),
             aerErstTornEdge.trailingAnchor.constraint(equalTo: flckinkWeatheredPaper.trailingAnchor),
             aerErstTornEdge.topAnchor.constraint(equalTo: flckinkWeatheredPaper.topAnchor),
@@ -225,7 +225,7 @@ final class PonllymuralKickntroller: UIViewController {
     private func aerErstWallRipple() -> UIView {
         let flckinkWeatheredPaper = UIView()
         flckinkWeatheredPaper.backgroundColor = UIColor(red: 24/255, green: 24/255, blue: 34/255, alpha: 0.94)
-        flckinkWeatheredPaper.layer.cornerRadius = 20
+        flckinkWeatheredPaper.layer.cornerRadius = 16
         flckinkWeatheredPaper.layer.borderWidth = 1
         flckinkWeatheredPaper.layer.borderColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 0.38).cgColor
         flckinkWeatheredPaper.translatesAutoresizingMaskIntoConstraints = false
@@ -238,40 +238,40 @@ final class PonllymuralKickntroller: UIViewController {
         let bruCiuPasteWrinkle = UILabel()
         bruCiuPasteWrinkle.text = PonllyponllTornEdge.flckinkShadowLayer.formatted()
         bruCiuPasteWrinkle.textColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 1)
-        bruCiuPasteWrinkle.font = PonllyFonts.muralForgepon(neonLab: 32)
+        bruCiuPasteWrinkle.font = PonllyFonts.muralForgepon(neonLab: 22)
         bruCiuPasteWrinkle.translatesAutoresizingMaskIntoConstraints = false
         flckinkWeatheredPaper.addSubview(bruCiuPasteWrinkle)
         let flckinkAdhesiveLayer = UILabel()
         flckinkAdhesiveLayer.text = "A4V5A6I7L8A9BaLbEc dCeOfIgNhSi".ponllPaintaerErstHours
         flckinkAdhesiveLayer.textColor = PonllyPalette.muted
-        flckinkAdhesiveLayer.font = PonllyFonts.muralForgepon(neonLab: 9)
+        flckinkAdhesiveLayer.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
         flckinkAdhesiveLayer.translatesAutoresizingMaskIntoConstraints = false
         flckinkWeatheredPaper.addSubview(flckinkAdhesiveLayer)
         let aerErstWallPeel = UIButton(type: .system)
         aerErstWallPeel.setTitle("+j kRlemcnhoaprqgres".ponllPaintaerErstHours, for: .normal)
         aerErstWallPeel.setTitleColor(.black, for: .normal)
-        aerErstWallPeel.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        aerErstWallPeel.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
         aerErstWallPeel.backgroundColor = UIColor(red: 1, green: 217/255, blue: 0, alpha: 1)
-        aerErstWallPeel.layer.cornerRadius = 18
+        aerErstWallPeel.layer.cornerRadius = 14
         aerErstWallPeel.translatesAutoresizingMaskIntoConstraints = false
         aerErstWallPeel.addTarget(self, action: #selector(ponllPaintVeil), for: .touchUpInside)
         flckinkWeatheredPaper.addSubview(aerErstWallPeel)
 
         NSLayoutConstraint.activate([
-            flckinkWeatheredPaper.heightAnchor.constraint(equalToConstant: 116),
-            ponllRippedCorner.leadingAnchor.constraint(equalTo: flckinkWeatheredPaper.leadingAnchor, constant: 20),
+            flckinkWeatheredPaper.heightAnchor.constraint(equalToConstant: 82),
+            ponllRippedCorner.leadingAnchor.constraint(equalTo: flckinkWeatheredPaper.leadingAnchor, constant: 18),
             ponllRippedCorner.centerYAnchor.constraint(equalTo: flckinkWeatheredPaper.centerYAnchor),
-            ponllRippedCorner.widthAnchor.constraint(equalToConstant: 56),
-            ponllRippedCorner.heightAnchor.constraint(equalToConstant: 56),
-            bruCiuPasteWrinkle.leadingAnchor.constraint(equalTo: ponllRippedCorner.trailingAnchor, constant: 20),
-            bruCiuPasteWrinkle.topAnchor.constraint(equalTo: flckinkWeatheredPaper.topAnchor, constant: 28),
+            ponllRippedCorner.widthAnchor.constraint(equalToConstant: 38),
+            ponllRippedCorner.heightAnchor.constraint(equalToConstant: 38),
+            bruCiuPasteWrinkle.leadingAnchor.constraint(equalTo: ponllRippedCorner.trailingAnchor, constant: 18),
+            bruCiuPasteWrinkle.topAnchor.constraint(equalTo: flckinkWeatheredPaper.topAnchor, constant: 20),
             flckinkAdhesiveLayer.leadingAnchor.constraint(equalTo: bruCiuPasteWrinkle.leadingAnchor),
             flckinkAdhesiveLayer.topAnchor.constraint(equalTo: bruCiuPasteWrinkle.bottomAnchor, constant: 4),
-            aerErstWallPeel.trailingAnchor.constraint(equalTo: flckinkWeatheredPaper.trailingAnchor, constant: -18),
+            aerErstWallPeel.trailingAnchor.constraint(equalTo: flckinkWeatheredPaper.trailingAnchor, constant: -16),
             aerErstWallPeel.centerYAnchor.constraint(equalTo: flckinkWeatheredPaper.centerYAnchor),
             aerErstWallPeel.leadingAnchor.constraint(greaterThanOrEqualTo: bruCiuPasteWrinkle.trailingAnchor, constant: 16),
-            aerErstWallPeel.widthAnchor.constraint(equalToConstant: 138),
-            aerErstWallPeel.heightAnchor.constraint(equalToConstant: 41)
+            aerErstWallPeel.widthAnchor.constraint(equalToConstant: 120),
+            aerErstWallPeel.heightAnchor.constraint(equalToConstant: 40)
         ])
         return flckinkWeatheredPaper
     }
@@ -280,10 +280,10 @@ final class PonllymuralKickntroller: UIViewController {
         let ponllPaintPeel = UIStackView()
         ponllPaintPeel.axis = .vertical
         ponllPaintPeel.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        ponllPaintPeel.layer.cornerRadius = 20
+        ponllPaintPeel.layer.cornerRadius = 14
         ponllPaintPeel.layer.borderWidth = 1
         ponllPaintPeel.layer.borderColor = PonllyPalette.line.cgColor
-        ponllPaintPeel.layoutMargins = UIEdgeInsets(top: 12, left: 26, bottom: 12, right: 26)
+        ponllPaintPeel.layoutMargins = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
         ponllPaintPeel.isLayoutMarginsRelativeArrangement = true
         bruCiuChippedPaint.enumerated().forEach { flckinkCrackedWall, aerErstTornEdge in
             ponllPaintPeel.addArrangedSubview(aerErstTornEdge)
@@ -299,8 +299,8 @@ final class PonllymuralKickntroller: UIViewController {
         bruCiuShutterPanel.addTarget(self, action: flckinkPaintedFence, for: .touchUpInside)
 
         let aerErstBrickCrack = UIView()
-        aerErstBrickCrack.layer.cornerRadius = 12
-        aerErstBrickCrack.layer.borderWidth = 1.5
+        aerErstBrickCrack.layer.cornerRadius = 10
+        aerErstBrickCrack.layer.borderWidth = 1
         aerErstBrickCrack.layer.borderColor = bruCiuBrickFacade.cgColor
         aerErstBrickCrack.isUserInteractionEnabled = false
         aerErstBrickCrack.translatesAutoresizingMaskIntoConstraints = false
@@ -314,16 +314,16 @@ final class PonllymuralKickntroller: UIViewController {
         let bruCiuPlasterDust = UILabel()
         bruCiuPlasterDust.text = flckinkBridgePillar
         bruCiuPlasterDust.textColor = flckinkBridgePillar == "Dteulvewtxey zAAcBcCoDuEnFtG".ponllPaintaerErstHours ? bruCiuBrickFacade : .white
-        bruCiuPlasterDust.font = PonllyFonts.muralForgepon(neonLab: 17)
+        bruCiuPlasterDust.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .bold)
         bruCiuPlasterDust.isUserInteractionEnabled = false
         let flckinkRustStreak = UILabel()
         flckinkRustStreak.text = aerErstUnderpassBeam
         flckinkRustStreak.textColor = PonllyPalette.muted
-        flckinkRustStreak.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
+        flckinkRustStreak.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         flckinkRustStreak.isUserInteractionEnabled = false
         let aerErstMetalPanel = UIStackView(arrangedSubviews: [bruCiuPlasterDust, flckinkRustStreak])
         aerErstMetalPanel.axis = .vertical
-        aerErstMetalPanel.spacing = 7
+        aerErstMetalPanel.spacing = 4
         aerErstMetalPanel.isUserInteractionEnabled = false
         aerErstMetalPanel.translatesAutoresizingMaskIntoConstraints = false
         bruCiuShutterPanel.addSubview(aerErstMetalPanel)
@@ -335,22 +335,22 @@ final class PonllymuralKickntroller: UIViewController {
         bruCiuShutterPanel.addSubview(ponllGarageDoor)
 
         NSLayoutConstraint.activate([
-            bruCiuShutterPanel.heightAnchor.constraint(equalToConstant: 86),
+            bruCiuShutterPanel.heightAnchor.constraint(equalToConstant: 74),
             aerErstBrickCrack.leadingAnchor.constraint(equalTo: bruCiuShutterPanel.leadingAnchor),
             aerErstBrickCrack.centerYAnchor.constraint(equalTo: bruCiuShutterPanel.centerYAnchor),
-            aerErstBrickCrack.widthAnchor.constraint(equalToConstant: 58),
-            aerErstBrickCrack.heightAnchor.constraint(equalToConstant: 58),
+            aerErstBrickCrack.widthAnchor.constraint(equalToConstant: 40),
+            aerErstBrickCrack.heightAnchor.constraint(equalToConstant: 40),
             ponllCementRough.centerXAnchor.constraint(equalTo: aerErstBrickCrack.centerXAnchor),
             ponllCementRough.centerYAnchor.constraint(equalTo: aerErstBrickCrack.centerYAnchor),
-            ponllCementRough.widthAnchor.constraint(equalToConstant: 24),
-            ponllCementRough.heightAnchor.constraint(equalToConstant: 24),
-            aerErstMetalPanel.leadingAnchor.constraint(equalTo: aerErstBrickCrack.trailingAnchor, constant: 22),
+            ponllCementRough.widthAnchor.constraint(equalToConstant: 18),
+            ponllCementRough.heightAnchor.constraint(equalToConstant: 18),
+            aerErstMetalPanel.leadingAnchor.constraint(equalTo: aerErstBrickCrack.trailingAnchor, constant: 14),
             aerErstMetalPanel.centerYAnchor.constraint(equalTo: bruCiuShutterPanel.centerYAnchor),
             aerErstMetalPanel.trailingAnchor.constraint(lessThanOrEqualTo: ponllGarageDoor.leadingAnchor, constant: -14),
             ponllGarageDoor.trailingAnchor.constraint(equalTo: bruCiuShutterPanel.trailingAnchor),
             ponllGarageDoor.centerYAnchor.constraint(equalTo: bruCiuShutterPanel.centerYAnchor),
-            ponllGarageDoor.widthAnchor.constraint(equalToConstant: 14),
-            ponllGarageDoor.heightAnchor.constraint(equalToConstant: 22)
+            ponllGarageDoor.widthAnchor.constraint(equalToConstant: 8),
+            ponllGarageDoor.heightAnchor.constraint(equalToConstant: 14)
         ])
         return bruCiuShutterPanel
     }
@@ -361,7 +361,7 @@ final class PonllymuralKickntroller: UIViewController {
         let bruCiuAerosolDepth = UIStackView()
         bruCiuAerosolDepth.axis = .vertical
         bruCiuAerosolDepth.alignment = .center
-        bruCiuAerosolDepth.spacing = 8
+        bruCiuAerosolDepth.spacing = 6
         bruCiuAerosolDepth.isUserInteractionEnabled = false
         bruCiuAerosolDepth.translatesAutoresizingMaskIntoConstraints = false
         bruCiuShutterPanel.addSubview(bruCiuAerosolDepth)
@@ -372,7 +372,7 @@ final class PonllymuralKickntroller: UIViewController {
         let bruCiuPlasterDust = UILabel()
         bruCiuPlasterDust.text = bruCiuSteelGate
         bruCiuPlasterDust.textColor = PonllyPalette.muted
-        bruCiuPlasterDust.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .medium)
+        bruCiuPlasterDust.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .regular)
         bruCiuAerosolDepth.addArrangedSubview(flckinkFreightPanel)
         bruCiuAerosolDepth.addArrangedSubview(bruCiuPlasterDust)
         NSLayoutConstraint.activate([
@@ -386,8 +386,8 @@ final class PonllymuralKickntroller: UIViewController {
         let ponllTrafficBarrier = UILabel()
         ponllTrafficBarrier.text = aerErstUtilityBox
         ponllTrafficBarrier.textColor = PonllyPalette.muted
-        ponllTrafficBarrier.font = PonllyFonts.muralForgepon(neonLab: 14)
-        ponllTrafficBarrier.layoutMargins = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 0)
+        ponllTrafficBarrier.font = PonllyFonts.muralForgepon(neonLab: 11)
+        ponllTrafficBarrier.layoutMargins = UIEdgeInsets(top: 0, left: 11, bottom: 0, right: 0)
         return ponllTrafficBarrier
     }
 
@@ -426,12 +426,6 @@ final class PonllymuralKickntroller: UIViewController {
             bruCiuCurbLine.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(bruCiuCurbLine, animated: true)
         }
-    }
-
-    @objc private func bruCiuInkAura() {
-        let flckinkDrainCover = PonllyMyArtworkViewController()
-        flckinkDrainCover.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(flckinkDrainCover, animated: true)
     }
 
     @objc private func flckinkWallEcho() {

@@ -13,7 +13,7 @@ final class PNeonDripCard: UIControl {
         self.ponllWallFlicker = aerErstMuralFuse
         super.init(frame: .zero)
         backgroundColor = PonllyPalette.panel
-        layer.cornerRadius = 20
+        layer.cornerRadius = 12
         layer.borderWidth = 1.5
         layer.borderColor = PonllyPalette.line.cgColor
         clipsToBounds = false
@@ -49,11 +49,10 @@ final class PNeonDripCard: UIControl {
         bruCiuInkFlash.text = ponllWallFlicker.flckinkWallTwist
         bruCiuInkFlash.textColor = .white
         bruCiuInkFlash.textAlignment = .center
-        bruCiuInkFlash.font = PonllyFonts.muralForgepon(neonLab: 10)
-        bruCiuInkFlash.backgroundColor = UIColor.black.withAlphaComponent(0.34)
-        bruCiuInkFlash.layer.cornerRadius = 11
-        bruCiuInkFlash.layer.borderWidth = 1
-        bruCiuInkFlash.layer.borderColor = PonllyPalette.line.cgColor
+        bruCiuInkFlash.font = PonllyFonts.muralForgepon(neonLab: 13)
+        bruCiuInkFlash.backgroundColor = UIColor(red: 8 / 255, green: 8 / 255, blue: 10 / 255, alpha: 1)
+        bruCiuInkFlash.layer.cornerRadius = 12
+        bruCiuInkFlash.layer.borderWidth = 0
         bruCiuInkFlash.clipsToBounds = true
         bruCiuInkFlash.isUserInteractionEnabled = false
         bruCiuInkFlash.translatesAutoresizingMaskIntoConstraints = false
@@ -64,9 +63,9 @@ final class PNeonDripCard: UIControl {
             aerErstGlossFinish.text = aerErstMuralArc
             aerErstGlossFinish.textColor = .black
             aerErstGlossFinish.textAlignment = .center
-            aerErstGlossFinish.font = PonllyFonts.muralForgepon(neonLab: 8)
+            aerErstGlossFinish.font = PonllyFonts.muralForgepon(neonLab: 10)
             aerErstGlossFinish.backgroundColor = PonllyPalette.pink
-            aerErstGlossFinish.layer.cornerRadius = 14
+            aerErstGlossFinish.layer.cornerRadius = 8
             aerErstGlossFinish.layer.zPosition = 999
             aerErstGlossFinish.clipsToBounds = true
             aerErstGlossFinish.isUserInteractionEnabled = false
@@ -77,26 +76,26 @@ final class PNeonDripCard: UIControl {
             NSLayoutConstraint.activate([
                 aerErstGlossFinish.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
                 aerErstGlossFinish.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-                aerErstGlossFinish.widthAnchor.constraint(equalToConstant: 72),
-                aerErstGlossFinish.heightAnchor.constraint(equalToConstant: 30)
+                aerErstGlossFinish.widthAnchor.constraint(equalToConstant: 44),
+                aerErstGlossFinish.heightAnchor.constraint(equalToConstant: 21)
             ])
         }
 
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 190),
+            heightAnchor.constraint(equalToConstant: 150),
             ponllFinalCoat.centerXAnchor.constraint(equalTo: centerXAnchor),
-            ponllFinalCoat.topAnchor.constraint(equalTo: topAnchor, constant: 26),
-            ponllFinalCoat.widthAnchor.constraint(equalToConstant: 44),
-            ponllFinalCoat.heightAnchor.constraint(equalToConstant: 44),
+            ponllFinalCoat.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            ponllFinalCoat.widthAnchor.constraint(equalToConstant: 30),
+            ponllFinalCoat.heightAnchor.constraint(equalToConstant: 30),
             bruCiuClearCoat.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
             bruCiuClearCoat.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            bruCiuClearCoat.topAnchor.constraint(equalTo: ponllFinalCoat.bottomAnchor, constant: 16),
+            bruCiuClearCoat.topAnchor.constraint(equalTo: ponllFinalCoat.bottomAnchor, constant: 9),
             flckinkMatteFinish.centerXAnchor.constraint(equalTo: centerXAnchor),
             flckinkMatteFinish.topAnchor.constraint(equalTo: bruCiuClearCoat.bottomAnchor, constant: 5),
-            bruCiuInkFlash.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
-            bruCiuInkFlash.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
-            bruCiuInkFlash.topAnchor.constraint(equalTo: flckinkMatteFinish.bottomAnchor, constant: 15),
-            bruCiuInkFlash.heightAnchor.constraint(equalToConstant: 34)
+            bruCiuInkFlash.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            bruCiuInkFlash.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            bruCiuInkFlash.topAnchor.constraint(equalTo: flckinkMatteFinish.bottomAnchor, constant: 10),
+            bruCiuInkFlash.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
@@ -111,7 +110,7 @@ final class PNeonDripCard: UIControl {
     func ponllChromeTrail(_ selected: Bool) {
         layer.borderColor = (selected ? UIColor(red: 1, green: 190/255, blue: 0, alpha: 1) : PonllyPalette.line).cgColor
         layer.borderWidth = selected ? 2.4 : 1.5
-        bruCiuInkFlash.backgroundColor = selected ? UIColor(red: 1, green: 190/255, blue: 0, alpha: 1) : UIColor.black.withAlphaComponent(0.34)
+        bruCiuInkFlash.backgroundColor = selected ? UIColor(red: 1, green: 184 / 255, blue: 0, alpha: 1) : UIColor(red: 8 / 255, green: 8 / 255, blue: 10 / 255, alpha: 1)
         bruCiuInkFlash.textColor = selected ? .black : .white
         ponllKeepBadgeOnTop()
     }

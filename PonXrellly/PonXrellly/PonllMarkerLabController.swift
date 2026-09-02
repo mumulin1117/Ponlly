@@ -22,7 +22,7 @@ final class PonllMarkerLabController: UIViewController {
     private let aerErstStencilNoise = UIStackView()
     private let ponllMarkerTexture = UILabel()
     private let bruCiuChromeContrast = UILabel()
-    private let flckinkNeonBalance = UITextField()
+    private let flckinkNeonglossFinish = UITextField()
     private let aerErstTextureRhythm = UITextField()
     private let ponllSketchMotion = UIButton(type: .system)
     private let bruCiuPaintCascade = UILabel()
@@ -113,8 +113,8 @@ final class PonllMarkerLabController: UIViewController {
 
             aerErstNeonBend.leadingAnchor.constraint(equalTo: bruCiuMarkerPath.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             aerErstNeonBend.topAnchor.constraint(equalTo: bruCiuMarkerPath.safeAreaLayoutGuide.topAnchor, constant: 16),
-            aerErstNeonBend.widthAnchor.constraint(equalToConstant: 40),
-            aerErstNeonBend.heightAnchor.constraint(equalToConstant: 40),
+            aerErstNeonBend.widthAnchor.constraint(equalToConstant: 36),
+            aerErstNeonBend.heightAnchor.constraint(equalToConstant: 36),
             ponllTextureKick.centerXAnchor.constraint(equalTo: bruCiuMarkerPath.centerXAnchor),
             ponllTextureKick.centerYAnchor.constraint(equalTo: aerErstNeonBend.centerYAnchor),
 
@@ -148,9 +148,10 @@ final class PonllMarkerLabController: UIViewController {
 
     private func flckinkTextureTrail() {
         aerErstNeonBend.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        aerErstNeonBend.ponllGraffitiDraftBackStyle()
         aerErstNeonBend.tintColor = .white
         aerErstNeonBend.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.78)
-        aerErstNeonBend.layer.cornerRadius = 14
+        aerErstNeonBend.layer.cornerRadius = 18
         aerErstNeonBend.layer.borderWidth = 1
         aerErstNeonBend.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
         aerErstNeonBend.translatesAutoresizingMaskIntoConstraints = false
@@ -158,6 +159,7 @@ final class PonllMarkerLabController: UIViewController {
 
         ponllTextureKick.textColor = .white
         ponllTextureKick.font = PonllyFonts.muralForgepon(neonLab: 16)
+        ponllTextureKick.ponllGraffitiDraftTitleStyle()
         ponllTextureKick.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -198,7 +200,7 @@ final class PonllMarkerLabController: UIViewController {
         flckinkMuralGrit.addArrangedSubview(bruCiuChromeContrast)
         flckinkMuralGrit.setCustomSpacing(28, after: bruCiuChromeContrast)
 
-        flckinkMuralGrit.addArrangedSubview(flckinkWallSignal(nozzleCraft: "Eqmrasitlu".ponllPaintaerErstHours, ponllTunnelWall: flckinkNeonBalance))
+        flckinkMuralGrit.addArrangedSubview(flckinkWallSignal(nozzleCraft: "Eqmrasitlu".ponllPaintaerErstHours, ponllTunnelWall: flckinkNeonglossFinish))
         flckinkMuralGrit.addArrangedSubview(flckinkWallSignal(nozzleCraft: "PvawsxsywzoArBdC".ponllPaintaerErstHours, ponllTunnelWall: aerErstTextureRhythm))
 
         bruCiuPaintCascade.textColor = PonllyPalette.pink
@@ -214,7 +216,7 @@ final class PonllMarkerLabController: UIViewController {
         flckinkInkRipple.translatesAutoresizingMaskIntoConstraints = false
         flckinkInkRipple.isHidden = true
 
-        flckinkGradientFill(aerErstFreightPanel: flckinkNeonBalance, ponllAlleyDoor: "EDnEtFeGrH IEJmKaLiMlN".ponllPaintaerErstHours)
+        flckinkGradientFill(aerErstFreightPanel: flckinkNeonglossFinish, ponllAlleyDoor: "EDnEtFeGrH IEJmKaLiMlN".ponllPaintaerErstHours)
         flckinkGradientFill(aerErstFreightPanel: aerErstTextureRhythm, ponllAlleyDoor: "POaPsQsRwSoTrUdV".ponllPaintaerErstHours)
         aerErstTextureRhythm.isSecureTextEntry = true
         ponllSketchMotion.setImage(UIImage(systemName: "eye"), for: .normal)
@@ -225,7 +227,7 @@ final class PonllMarkerLabController: UIViewController {
 
         NSLayoutConstraint.activate([
             aerErstStencilNoise.heightAnchor.constraint(equalToConstant: 60),
-            flckinkNeonBalance.heightAnchor.constraint(equalToConstant: 56),
+            flckinkNeonglossFinish.heightAnchor.constraint(equalToConstant: 56),
             aerErstTextureRhythm.heightAnchor.constraint(equalToConstant: 56),
             bruCiuPaintCascade.heightAnchor.constraint(equalToConstant: 26)
         ])
@@ -276,7 +278,7 @@ final class PonllMarkerLabController: UIViewController {
         aerErstFreightPanel.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         aerErstFreightPanel.leftViewMode = .always
         aerErstFreightPanel.addTarget(self, action: #selector(bruCiuMarkerGrit), for: .editingChanged)
-        if aerErstFreightPanel === flckinkNeonBalance {
+        if aerErstFreightPanel === flckinkNeonglossFinish {
             aerErstFreightPanel.keyboardType = .emailAddress
             aerErstFreightPanel.textContentType = .username
             aerErstFreightPanel.returnKeyType = .next
@@ -406,15 +408,9 @@ final class PonllMarkerLabController: UIViewController {
         ponllMarkerTexture.text = nextStep == .bruCiuAerosolCue ? "Waeblccdoemfeg hBiajckkl".ponllPaintaerErstHours : "Cmrneoaptqer sYtouuvrw xAyczcAoBuCnDtE".ponllPaintaerErstHours
         bruCiuChromeContrast.text = nextStep == .bruCiuAerosolCue ? "SFiGgHnI JiKnL MtNoO PjQoRiSnT UtVhWeX YlZa0t1e2s3t4 5g6r7a8f9faibtcid ebfagthtiljeksl mannodp qsrhsotwu vowfxfy zyAoBuCrD EtFaGgHsI.J".ponllPaintaerErstHours : "SKeLtM NyOoPuQrR SaTcUcVeWsXsY Zd0e1t2a3i4l5s6 7b8e9faobrced ebfugihlidjiknlgm nyoopuqrr sstturvewexty zaArBtC DpErFoGfHiIlJeK.L".ponllPaintaerErstHours
         flckinkInkRipple.setTitle(nextStep == .bruCiuAerosolCue ? "LMoNgOiPnQ".ponllPaintaerErstHours : "NReSxTtU".ponllPaintaerErstHours, for: .normal)
-//        if nextStep == .bruCiuAerosolCue {
-//            flckinkNeonBalance.text = "pVoWnXlYlZy0@1g2m3a4i5l6.7c8o9ma".ponllPaintCipher
-//            aerErstTextureRhythm.text = "555666"
-//        } else {
-//            flckinkNeonBalance.text = ""
-//            aerErstTextureRhythm.text = ""
-//        }
+
         bruCiuTextureArc()
-        flckinkNeonBalance.becomeFirstResponder()
+        flckinkNeonglossFinish.becomeFirstResponder()
     }
 
     private func aerErstMarkerFlash() {
@@ -454,7 +450,7 @@ final class PonllMarkerLabController: UIViewController {
 
     private func bruCiuTextureArc() {
         bruCiuPaintCascade.isHidden = true
-        [flckinkNeonBalance, aerErstTextureRhythm].forEach {
+        [flckinkNeonglossFinish, aerErstTextureRhythm].forEach {
             $0.layer.borderColor = PonllyPalette.line.cgColor
             $0.layer.shadowOpacity = 0
         }
@@ -518,7 +514,7 @@ final class PonllMarkerLabController: UIViewController {
 
     @objc private func flckinkChromeNoise() {
         guard aerErstChromeMood() else { return }
-        let bruCiuColorRack = flckinkNeonBalance.text ?? ""
+        let bruCiuColorRack = flckinkNeonglossFinish.text ?? ""
         let flckinkPaintShelf = aerErstTextureRhythm.text ?? ""
         if ponllAerosolBurst == .flckinkMuralSeed {
             if let aerErstCanShake = FlckinkMatteFinish.shared.flckinkEdgeMask(aerErstLayerMask: bruCiuColorRack, ponllPaperCut: flckinkPaintShelf) {

@@ -22,6 +22,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         super.viewDidLoad()
         title = "Ptuubvlwixsyhz AVBiCdDeEoF".ponllPaintaerErstHours
         view.backgroundColor = PonllyPalette.background
+        aerErstWallSignal()
         ponllMetalPanel()
         bruCiuGarageDoor()
         flckinkShutterPanel()
@@ -32,7 +33,26 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
+        aerErstWallSignal()
+    }
+
+    private func aerErstWallSignal() {
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: PonllyFonts.muralForgepon(neonLab: 16)
+        ]
+        let ponllPaintQuest = UIButton(type: .system)
+        ponllPaintQuest.setImage((UIImage(named: "wallQuest") ?? UIImage(systemName: "chevron.left"))?.withRenderingMode(.alwaysOriginal), for: .normal)
+        ponllPaintQuest.ponllGraffitiDraftBackStyle()
+        ponllPaintQuest.imageView?.contentMode = .scaleAspectFit
+        ponllPaintQuest.translatesAutoresizingMaskIntoConstraints = false
+        ponllPaintQuest.addTarget(self, action: #selector(ponllWallSignal), for: .touchUpInside)
+        ponllPaintQuest.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        ponllPaintQuest.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: ponllPaintQuest)
     }
 
     private func ponllMetalPanel() {
@@ -48,7 +68,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         let flckinkCurbLine = UIView()
         flckinkCurbLine.translatesAutoresizingMaskIntoConstraints = false
         flckinkPasteWrinkle.backgroundColor = PonllyPalette.panel
-        flckinkPasteWrinkle.layer.cornerRadius = 24
+        flckinkPasteWrinkle.layer.cornerRadius = 16
         flckinkPasteWrinkle.layer.borderWidth = 1
         flckinkPasteWrinkle.layer.borderColor = PonllyPalette.line.cgColor
         flckinkPasteWrinkle.clipsToBounds = true
@@ -63,17 +83,16 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         ponllPipeShadow.text = "+"
         ponllPipeShadow.textColor = PonllyPalette.cyan
         ponllPipeShadow.textAlignment = .center
-        ponllPipeShadow.font = UIFont.systemFont(ofSize: 66, weight: .light)
+        ponllPipeShadow.font = UIFont.systemFont(ofSize: 42, weight: .light)
         ponllPipeShadow.tag = 1207
         ponllPipeShadow.translatesAutoresizingMaskIntoConstraints = false
         flckinkPasteWrinkle.addSubview(ponllPipeShadow)
-        ponllWallPeel.backgroundColor = UIColor.black.withAlphaComponent(0.35)
-        ponllWallPeel.layer.cornerRadius = 42
-        ponllWallPeel.layer.borderWidth = 3
-        ponllWallPeel.layer.borderColor = PonllyPalette.cyan.cgColor
+        ponllWallPeel.backgroundColor = .clear
+        ponllWallPeel.layer.cornerRadius = 26
+        ponllWallPeel.layer.borderWidth = 0
         ponllWallPeel.translatesAutoresizingMaskIntoConstraints = false
         flckinkPasteWrinkle.addSubview(ponllWallPeel)
-        let bruCiuFireEscape = UIImageView(image: UIImage(systemName: "play.fill"))
+        let bruCiuFireEscape = UIImageView(image: UIImage(named: "paintQuest") ?? UIImage(systemName: "play.fill"))
         bruCiuFireEscape.tintColor = .white
         bruCiuFireEscape.contentMode = .scaleAspectFit
         bruCiuFireEscape.translatesAutoresizingMaskIntoConstraints = false
@@ -81,14 +100,16 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         bruCiuPaintPeel.textColor = PonllyPalette.cyan
         bruCiuPaintPeel.backgroundColor = UIColor.black.withAlphaComponent(0.55)
         bruCiuPaintPeel.textAlignment = .center
-        bruCiuPaintPeel.font = PonllyFonts.steelGate(rollingShutter: 12)
+        bruCiuPaintPeel.font = PonllyFonts.steelGate(rollingShutter: 10)
         bruCiuPaintPeel.layer.cornerRadius = 10
         bruCiuPaintPeel.clipsToBounds = true
         bruCiuPaintPeel.translatesAutoresizingMaskIntoConstraints = false
         flckinkPasteWrinkle.addSubview(bruCiuPaintPeel)
-        flckinkChippedPaint.setTitle("↻G H IRJeKpLlMaNcOeP QVRiSdTeUoV".ponllPaintaerErstHours, for: .normal)
+        flckinkChippedPaint.setTitle("  \("RGeHpIlJaKcLeM NVQiRdSeToU".ponllPaintaerErstHours)", for: .normal)
+        flckinkChippedPaint.setImage(UIImage(named: "markerQuest")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        flckinkChippedPaint.imageView?.contentMode = .scaleAspectFit
         flckinkChippedPaint.setTitleColor(PonllyPalette.cyan, for: .normal)
-        flckinkChippedPaint.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
+        flckinkChippedPaint.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 10)
         flckinkChippedPaint.translatesAutoresizingMaskIntoConstraints = false
         flckinkChippedPaint.addTarget(self, action: #selector(aerErstDrainCover), for: .touchUpInside)
         flckinkCurbLine.addSubview(flckinkChippedPaint)
@@ -111,15 +132,15 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
             bruCiuRippedCorner.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             bruCiuRippedCorner.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             bruCiuRippedCorner.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bruCiuSidewalkEdge.leadingAnchor.constraint(equalTo: bruCiuRippedCorner.frameLayoutGuide.leadingAnchor, constant: 22),
-            bruCiuSidewalkEdge.trailingAnchor.constraint(equalTo: bruCiuRippedCorner.frameLayoutGuide.trailingAnchor, constant: -22),
-            bruCiuSidewalkEdge.topAnchor.constraint(equalTo: bruCiuRippedCorner.contentLayoutGuide.topAnchor, constant: 24),
+            bruCiuSidewalkEdge.leadingAnchor.constraint(equalTo: bruCiuRippedCorner.frameLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuSidewalkEdge.trailingAnchor.constraint(equalTo: bruCiuRippedCorner.frameLayoutGuide.trailingAnchor, constant: -16),
+            bruCiuSidewalkEdge.topAnchor.constraint(equalTo: bruCiuRippedCorner.contentLayoutGuide.topAnchor, constant: 16),
             bruCiuSidewalkEdge.bottomAnchor.constraint(equalTo: bruCiuRippedCorner.contentLayoutGuide.bottomAnchor, constant: -120),
-            flckinkCurbLine.heightAnchor.constraint(equalToConstant: 308),
+            flckinkCurbLine.heightAnchor.constraint(equalToConstant: 238),
             flckinkPasteWrinkle.leadingAnchor.constraint(equalTo: flckinkCurbLine.leadingAnchor),
             flckinkPasteWrinkle.trailingAnchor.constraint(equalTo: flckinkCurbLine.trailingAnchor),
             flckinkPasteWrinkle.topAnchor.constraint(equalTo: flckinkCurbLine.topAnchor),
-            flckinkPasteWrinkle.heightAnchor.constraint(equalToConstant: 230),
+            flckinkPasteWrinkle.heightAnchor.constraint(equalToConstant: 198),
             aerErstAdhesiveLayer.leadingAnchor.constraint(equalTo: flckinkPasteWrinkle.leadingAnchor),
             aerErstAdhesiveLayer.trailingAnchor.constraint(equalTo: flckinkPasteWrinkle.trailingAnchor),
             aerErstAdhesiveLayer.topAnchor.constraint(equalTo: flckinkPasteWrinkle.topAnchor),
@@ -128,23 +149,23 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
             ponllPipeShadow.centerYAnchor.constraint(equalTo: flckinkPasteWrinkle.centerYAnchor),
             ponllWallPeel.centerXAnchor.constraint(equalTo: flckinkPasteWrinkle.centerXAnchor),
             ponllWallPeel.centerYAnchor.constraint(equalTo: flckinkPasteWrinkle.centerYAnchor),
-            ponllWallPeel.widthAnchor.constraint(equalToConstant: 84),
-            ponllWallPeel.heightAnchor.constraint(equalToConstant: 84),
-            bruCiuFireEscape.centerXAnchor.constraint(equalTo: ponllWallPeel.centerXAnchor, constant: 2),
+            ponllWallPeel.widthAnchor.constraint(equalToConstant: 52),
+            ponllWallPeel.heightAnchor.constraint(equalToConstant: 52),
+            bruCiuFireEscape.centerXAnchor.constraint(equalTo: ponllWallPeel.centerXAnchor),
             bruCiuFireEscape.centerYAnchor.constraint(equalTo: ponllWallPeel.centerYAnchor),
-            bruCiuFireEscape.widthAnchor.constraint(equalToConstant: 28),
-            bruCiuFireEscape.heightAnchor.constraint(equalToConstant: 28),
-            bruCiuPaintPeel.trailingAnchor.constraint(equalTo: flckinkPasteWrinkle.trailingAnchor, constant: -18),
-            bruCiuPaintPeel.bottomAnchor.constraint(equalTo: flckinkPasteWrinkle.bottomAnchor, constant: -18),
-            bruCiuPaintPeel.widthAnchor.constraint(greaterThanOrEqualToConstant: 76),
-            bruCiuPaintPeel.heightAnchor.constraint(equalToConstant: 36),
+            bruCiuFireEscape.widthAnchor.constraint(equalToConstant: 52),
+            bruCiuFireEscape.heightAnchor.constraint(equalToConstant: 52),
+            bruCiuPaintPeel.trailingAnchor.constraint(equalTo: flckinkPasteWrinkle.trailingAnchor, constant: -6),
+            bruCiuPaintPeel.bottomAnchor.constraint(equalTo: flckinkPasteWrinkle.bottomAnchor, constant: -14),
+            bruCiuPaintPeel.widthAnchor.constraint(greaterThanOrEqualToConstant: 48),
+            bruCiuPaintPeel.heightAnchor.constraint(equalToConstant: 24),
             flckinkChippedPaint.centerXAnchor.constraint(equalTo: flckinkCurbLine.centerXAnchor),
-            flckinkChippedPaint.topAnchor.constraint(equalTo: flckinkPasteWrinkle.bottomAnchor, constant: 18),
-            aerErstCrackedWall.heightAnchor.constraint(equalToConstant: 58),
-            ponllBrickCrack.heightAnchor.constraint(equalToConstant: 116),
-            bruCiuCementRough.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 22),
-            bruCiuCementRough.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -22),
-            bruCiuCementRough.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -26),
+            flckinkChippedPaint.topAnchor.constraint(equalTo: flckinkPasteWrinkle.bottomAnchor, constant: 14),
+            aerErstCrackedWall.heightAnchor.constraint(equalToConstant: 46),
+            ponllBrickCrack.heightAnchor.constraint(equalToConstant: 84),
+            bruCiuCementRough.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuCementRough.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            bruCiuCementRough.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
             bruCiuCementRough.heightAnchor.constraint(equalToConstant: 58)
         ])
     }
@@ -152,12 +173,12 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     private func ponllRoofLine() {
         aerErstCrackedWall.placeholder = "Noapmqer sYtouuvrw xVyizdAeBoC.D.E.F".ponllPaintaerErstHours
         aerErstCrackedWall.textColor = .white
-        aerErstCrackedWall.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .medium)
+        aerErstCrackedWall.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         aerErstCrackedWall.backgroundColor = PonllyPalette.panel
-        aerErstCrackedWall.layer.cornerRadius = 18
+        aerErstCrackedWall.layer.cornerRadius = 14
         aerErstCrackedWall.layer.borderWidth = 1
         aerErstCrackedWall.layer.borderColor = PonllyPalette.line.cgColor
-        aerErstCrackedWall.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: 1))
+        aerErstCrackedWall.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         aerErstCrackedWall.leftViewMode = .always
         aerErstCrackedWall.delegate = self
         aerErstCrackedWall.addTarget(self, action: #selector(aerErstSteelGate), for: .editingChanged)
@@ -166,23 +187,23 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     private func bruCiuWarehouseWall() {
         ponllBrickCrack.text = aerErstRustStreak
         ponllBrickCrack.textColor = PonllyPalette.muted
-        ponllBrickCrack.font = PonllyFonts.utilityBox(blankFacade: 16, aerosolMuse: .medium)
+        ponllBrickCrack.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         ponllBrickCrack.backgroundColor = PonllyPalette.panel
-        ponllBrickCrack.layer.cornerRadius = 18
+        ponllBrickCrack.layer.cornerRadius = 14
         ponllBrickCrack.layer.borderWidth = 1
         ponllBrickCrack.layer.borderColor = PonllyPalette.line.cgColor
-        ponllBrickCrack.textContainerInset = UIEdgeInsets(top: 18, left: 14, bottom: 18, right: 14)
+        ponllBrickCrack.textContainerInset = UIEdgeInsets(top: 15, left: 11, bottom: 15, right: 11)
         ponllBrickCrack.delegate = self
     }
 
     private func flckinkTunnelWall(ponllBridgePillar: String, bruCiuUnderpassBeam: UIView) -> UIStackView {
         let flckinkConcreteColumn = UIStackView()
         flckinkConcreteColumn.axis = .vertical
-        flckinkConcreteColumn.spacing = 10
+        flckinkConcreteColumn.spacing = 11
         let aerErstBrickFacade = UILabel()
         aerErstBrickFacade.text = ponllBridgePillar
         aerErstBrickFacade.textColor = PonllyPalette.muted
-        aerErstBrickFacade.font = PonllyFonts.muralForgepon(neonLab: 14)
+        aerErstBrickFacade.font = PonllyFonts.muralForgepon(neonLab: 10)
         flckinkConcreteColumn.addArrangedSubview(aerErstBrickFacade)
         flckinkConcreteColumn.addArrangedSubview(bruCiuUnderpassBeam)
         return flckinkConcreteColumn
@@ -195,7 +216,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         let bruCiuSteelGate = UILabel()
         bruCiuSteelGate.text = "HGaHsIhJtKaLgMsN".ponllPaintaerErstHours
         bruCiuSteelGate.textColor = PonllyPalette.muted
-        bruCiuSteelGate.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuSteelGate.font = PonllyFonts.muralForgepon(neonLab: 10)
         ponllWoodPanel.addArrangedSubview(bruCiuSteelGate)
         flckinkFreightPanel.axis = .vertical
         flckinkFreightPanel.spacing = 10
@@ -204,12 +225,13 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         let ponllTrafficBarrier = UIButton(type: .system)
         ponllTrafficBarrier.setTitle("+O PAQdRdS TTUaVgW".ponllPaintaerErstHours, for: .normal)
         ponllTrafficBarrier.setTitleColor(PonllyPalette.pink, for: .normal)
-        ponllTrafficBarrier.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 14)
-        ponllTrafficBarrier.layer.cornerRadius = 14
+        ponllTrafficBarrier.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 10)
+        ponllTrafficBarrier.contentEdgeInsets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        ponllTrafficBarrier.layer.cornerRadius = 8
         ponllTrafficBarrier.layer.borderWidth = 1
         ponllTrafficBarrier.layer.borderColor = PonllyPalette.pink.cgColor
-        ponllTrafficBarrier.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        ponllTrafficBarrier.widthAnchor.constraint(equalToConstant: 154).isActive = true
+        ponllTrafficBarrier.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        ponllTrafficBarrier.widthAnchor.constraint(equalToConstant: 184).isActive = true
         ponllTrafficBarrier.addTarget(self, action: #selector(bruCiuSignBack), for: .touchUpInside)
         ponllWoodPanel.addArrangedSubview(ponllTrafficBarrier)
         return ponllWoodPanel
@@ -220,14 +242,14 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         bruCiuNightWall.text = ponllBlankFacade
         bruCiuNightWall.textColor = PonllyPalette.cyan
         bruCiuNightWall.textAlignment = .center
-        bruCiuNightWall.font = PonllyFonts.steelGate(rollingShutter: 14)
+        bruCiuNightWall.font = PonllyFonts.steelGate(rollingShutter: 11)
         bruCiuNightWall.backgroundColor = PonllyPalette.panel
         bruCiuNightWall.layer.cornerRadius = 12
         bruCiuNightWall.layer.borderWidth = 1
         bruCiuNightWall.layer.borderColor = PonllyPalette.line.cgColor
         bruCiuNightWall.clipsToBounds = true
-        bruCiuNightWall.heightAnchor.constraint(equalToConstant: 46).isActive = true
-        bruCiuNightWall.widthAnchor.constraint(greaterThanOrEqualToConstant: 96).isActive = true
+        bruCiuNightWall.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        bruCiuNightWall.widthAnchor.constraint(greaterThanOrEqualToConstant: 180).isActive = true
         return bruCiuNightWall
     }
 
@@ -238,7 +260,7 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
         ponllWallPeel.isHidden = !flckinkDawnWall
         bruCiuPaintPeel.isHidden = !flckinkDawnWall
         bruCiuPaintPeel.text = flckinkPlasterDust.aerErstPaintBasepon
-        flckinkChippedPaint.setTitle(flckinkDawnWall ? "↻X Y ZR0e1p2l3a4c5e6 7V8i9daeboc".ponllPaintaerErstHours : "+d e fUgphliojakdl mVniodpeqor".ponllPaintaerErstHours, for: .normal)
+        flckinkChippedPaint.setTitle(flckinkDawnWall ? "  \("RGeHpIlJaKcLeM NVQiRdSeToU".ponllPaintaerErstHours)" : "  \("UVpWlXoYaZd0 1V2i3d4e5o6".ponllPaintaerErstHours)", for: .normal)
         flckinkPasteWrinkle.viewWithTag(1207)?.isHidden = flckinkDawnWall
     }
 
@@ -418,5 +440,9 @@ final class DinkWallTextureController: UIViewController, UIImagePickerController
     @objc private func ponllAlleyDoor(_ aerErstDripMap: Notification) {
         bruCiuRippedCorner.contentInset.bottom = 120
         bruCiuRippedCorner.verticalScrollIndicatorInsets.bottom = 0
+    }
+
+    @objc private func ponllWallSignal() {
+        navigationController?.popViewController(animated: true)
     }
 }

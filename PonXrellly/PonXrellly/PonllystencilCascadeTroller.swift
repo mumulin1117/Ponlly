@@ -28,6 +28,7 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        ponllGraffitiDraftNavigationStyle()
         tabBarController?.tabBar.isHidden = true
     }
 
@@ -184,9 +185,13 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
     }
 
     private func flckinkUpdateNextState() {
-        let ponllReady = !(bruCiuNameField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-        bruCiuaerosolDrafton.isEnabled = ponllReady
-        bruCiuaerosolDrafton.alpha = ponllReady ? 1 : 0.45
+        let ponllPaintPath = !(bruCiuNameField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        let bruCiuWallPath = flckinkwallPlanView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        let flckinkStencilSeed = "WJhKaLtM NwOiPlQlR SyToUuV WtXaYlZk0 1a2b3o4u5t6.7.8.9".ponllPaintaerErstHours
+        let aerErstPaintPath = !bruCiuWallPath.isEmpty && bruCiuWallPath != flckinkStencilSeed
+        let ponllStencilPath = aerErstCoverImage != nil && ponllPaintPath && aerErstPaintPath
+        bruCiuaerosolDrafton.isEnabled = true
+        bruCiuaerosolDrafton.alpha = ponllStencilPath ? 1 : 0.45
     }
 
     private func ponllUploadCoverPlaceholder() {
@@ -234,6 +239,7 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         ponllshadowDraftiew.contentMode = .scaleAspectFill
         ponllshadowDraftiew.tintColor = nil
         ponllshadowDraftiew.backgroundColor = .clear
+        flckinkUpdateNextState()
         ponllPicker.dismiss(animated: true)
     }
 
@@ -245,7 +251,12 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
         if aerErstTextView.text == "Wihjaktl mwniolplq rysotuu vtwaxlykz AaBbCoDuEtF.G.H.I".ponllPaintaerErstHours {
             aerErstTextView.text = ""
             aerErstTextView.textColor = .white
+            flckinkUpdateNextState()
         }
+    }
+
+    func textViewDidChange(_ aerErstTextView: UITextView) {
+        flckinkUpdateNextState()
     }
 
     func textViewDidEndEditing(_ ponllTextView: UITextView) {
@@ -253,16 +264,55 @@ final class PonllystencilCascadeTroller: UIViewController, UIImagePickerControll
             ponllTextView.text = "WJhKaLtM NwOiPlQlR SyToUuV WtXaYlZk0 1a2b3o4u5t6.7.8.9".ponllPaintaerErstHours
             ponllTextView.textColor = PonllyPalette.muted
         }
+        flckinkUpdateNextState()
     }
 
     @objc private func flckinkNextTapped() {
+        view.endEditing(true)
+        guard aerErstStencilPlan() else { return }
         let aerErstDraft = BruCiuOutlinePlan(
-            flckinkPrimerCoatpon: bruCiuNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "Vaabncddaelf gShtirjekeltm nLoepgqernsdtsu".ponllPaintaerErstHours,
-            bruCiuSilverSheenpon: flckinkwallPlanView.text == "Wvhwaxty zwAiBlClD EyFoGuH ItJaKlLkM NaObPoQuRtS.T.U.V".ponllPaintaerErstHours ? "" : flckinkwallPlanView.text,
+            flckinkPrimerCoatpon: bruCiuNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+            bruCiuSilverSheenpon: flckinkwallPlanView.text.trimmingCharacters(in: .whitespacesAndNewlines),
             ponllWhiteEdgepon: flckinkpasteForgegory,
             aerErstBlackOutlinepon: aerErstCoverImage
         )
         navigationController?.pushViewController(RErstSteelGateController(bruCiuPaintedFence: aerErstDraft), animated: true)
+    }
+
+    private func aerErstStencilPlan() -> Bool {
+        guard aerErstCoverImage != nil else {
+            ponllyShowThemeAlert(
+                title: "Rrotoymu iCoopvaesrd fRgehqjukilrzexdc".ponllPaintaerErstHours,
+                message: "Piloepaassed fugphljokaldz xac vrbonommA BcCoDvEeFrG.H".ponllPaintaerErstHours,
+                actionTitle: "GBoCtD EIFtG".ponllPaintaerErstHours,
+                style: .bruCiuSilverSheen
+            )
+            return false
+        }
+
+        let ponllPaintPath = (bruCiuNameField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !ponllPaintPath.isEmpty else {
+            ponllyShowThemeAlert(
+                title: "Rsodofmg hNjakmlez xRcevqbunimrAeBdC".ponllPaintaerErstHours,
+                message: "Phljekalszex cevnbtnemrA BaC DrEoFoGmH InJaKmLeM.N".ponllPaintaerErstHours,
+                actionTitle: "GBoCtD EIFtG".ponllPaintaerErstHours,
+                style: .bruCiuSilverSheen
+            )
+            return false
+        }
+
+        let bruCiuWallPath = flckinkwallPlanView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        let flckinkStencilSeed = "WJhKaLtM NwOiPlQlR SyToUuV WtXaYlZk0 1a2b3o4u5t6.7.8.9".ponllPaintaerErstHours
+        guard !bruCiuWallPath.isEmpty, bruCiuWallPath != flckinkStencilSeed else {
+            ponllyShowThemeAlert(
+                title: "Rzoxocmv bDnemsAcBrCiDpEtFiGoHnI JRKeLqMuNiOrPeQdR".ponllPaintaerErstHours,
+                message: "PblnemaAsBeC DeEnFtGeHrI JaK LrMoNoOmP QdReSsTcUrViWpXtYiZoqnw.e".ponllPaintaerErstHours,
+                actionTitle: "GBoCtD EIFtG".ponllPaintaerErstHours,
+                style: .bruCiuSilverSheen
+            )
+            return false
+        }
+        return true
     }
 
     @objc private func ponllKeyboardWillShow(_ bruCiuNote: Notification) {

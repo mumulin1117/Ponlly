@@ -30,8 +30,22 @@ final class FlckinkPrimerCoatController: UIViewController {
     private var ponllInkLetter: bruCiuConcretePiece = .flckinkWarehousePiece
     private var bruCiuMuralLetter: [UIButton] = []
 
-    init(user: PonllyaerErstTwoToneFillr) {
-        self.flckinkCornerPiece = user
+    private var ponllPaintMuse: [PonllyaerErstSolidMarkerk] {
+        PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse)
+    }
+
+    private var bruCiuMuralMuse: [PonllystencilLab] {
+        PonllyponllTornEdge.flckinkColorWall(aerErstTextureWall: flckinkCornerPiece.graffitiPulse)
+    }
+
+    private var flckinkAerosolMuse: [PonllyBattle] {
+        PonllyponllTornEdge.ponllMuralWall(bruCiuLetterWall: flckinkCornerPiece.graffitiPulse)
+    }
+
+    init(_ usponllyer: PonllyaerErstTwoToneFillr) {
+        self.flckinkCornerPiece = PonllyponllTornEdge.bruCiuRippedCorner.first {
+            $0.graffitiPulse == usponllyer.graffitiPulse
+        } ?? usponllyer
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
@@ -51,6 +65,9 @@ final class FlckinkPrimerCoatController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         tabBarController?.tabBar.isHidden = true
+        if isViewLoaded {
+            flckinkDripLetter()
+        }
     }
 
     private func flckinkWildstyleLetter() {
@@ -59,18 +76,19 @@ final class FlckinkPrimerCoatController: UIViewController {
         aerErstBubbleLettering.woodPanelPonlly(steelGate: view)
 
         aerErstPillarPiece.alwaysBounceVertical = true
+        aerErstPillarPiece.contentInsetAdjustmentBehavior = .never
         aerErstPillarPiece.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstPillarPiece)
 
         ponllFacadePiece.axis = .vertical
         ponllFacadePiece.alignment = .center
-        ponllFacadePiece.spacing = 18
+        ponllFacadePiece.spacing = 14
         ponllFacadePiece.translatesAutoresizingMaskIntoConstraints = false
         aerErstPillarPiece.addSubview(ponllFacadePiece)
 
         let ponllbruCiuHandbillTextureLetter = bruCiuLetterStretch()
         ponllFacadePiece.addArrangedSubview(ponllbruCiuHandbillTextureLetter)
-        let bruCiuSoftLetter = aerErstTallLetter("@\(flckinkCornerPiece.aerosolDream.lowercased())", bruCiuWideLetter: 24, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
+        let bruCiuSoftLetter = aerErstTallLetter("@\(flckinkCornerPiece.aerosolDream.lowercased())", bruCiuWideLetter: 18, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
         bruCiuSoftLetter.textAlignment = .center
         let ponllCurvedLetter = aerErstTallLetter(flckinkCornerPiece.urbanCanvas, bruCiuWideLetter: 13, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
         ponllCurvedLetter.numberOfLines = 0
@@ -94,8 +112,8 @@ final class FlckinkPrimerCoatController: UIViewController {
             ponllFacadePiece.bottomAnchor.constraint(equalTo: aerErstPillarPiece.contentLayoutGuide.bottomAnchor, constant: -32),
             ponllbruCiuHandbillTextureLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor),
             ponllbruCiuHandbillTextureLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor),
-            ponllCurvedLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 24),
-            ponllCurvedLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -24),
+            ponllCurvedLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
+            ponllCurvedLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -16),
             flckinkLinkedLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
             flckinkLinkedLetter.trailingAnchor.constraint(equalTo: ponllFacadePiece.trailingAnchor, constant: -16),
             aerErstFlaredLetter.leadingAnchor.constraint(equalTo: ponllFacadePiece.leadingAnchor, constant: 16),
@@ -121,7 +139,7 @@ final class FlckinkPrimerCoatController: UIViewController {
     private func ponllSharpLetter() -> UIView {
         let flckinkBoldLetter = UIView()
         flckinkBoldLetter.translatesAutoresizingMaskIntoConstraints = false
-        let aerErstSkinnyLetter = PbruCiuClearCoatView(ponllPaintTrace: PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).first ?? PonllyaerErstSolidMarkerk(
+        let aerErstSkinnyLetter = PbruCiuClearCoatView(ponllPaintTrace: ponllPaintMuse.first ?? PonllyaerErstSolidMarkerk(
             graffitiPulse: "\(flckinkCornerPiece.graffitiPulse)_profile_empty",
             markerStroke: flckinkCornerPiece.graffitiPulse,
             nozzleCraft: "Wqarlslt uSvtwuxdyyz".ponllPaintaerErstHours,
@@ -137,9 +155,10 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllFatLetter.translatesAutoresizingMaskIntoConstraints = false
         flckinkBoldLetter.addSubview(ponllFatLetter)
         let bruCiuLetterGrid = flckinkLetterFlow("chevron.left", aerErstLetterSnap: #selector(ponllLetterArc))
+        bruCiuLetterGrid.ponllGraffitiDraftBackStyle()
         let flckinkLetterBend = flckinkLetterFlow("eIlJlKiLpMsNiOsP".ponllPaintaerErstHours, aerErstLetterSnap: #selector(bruCiuLetterKick))
-        flckinkBoldLetter.addSubview(bruCiuLetterGrid)
-        flckinkBoldLetter.addSubview(flckinkLetterBend)
+        view.addSubview(bruCiuLetterGrid)
+        view.addSubview(flckinkLetterBend)
         NSLayoutConstraint.activate([
             flckinkBoldLetter.heightAnchor.constraint(equalToConstant: 246),
             aerErstSkinnyLetter.leadingAnchor.constraint(equalTo: flckinkBoldLetter.leadingAnchor),
@@ -150,9 +169,9 @@ final class FlckinkPrimerCoatController: UIViewController {
             ponllFatLetter.trailingAnchor.constraint(equalTo: flckinkBoldLetter.trailingAnchor),
             ponllFatLetter.topAnchor.constraint(equalTo: flckinkBoldLetter.topAnchor),
             ponllFatLetter.bottomAnchor.constraint(equalTo: flckinkBoldLetter.bottomAnchor),
-            bruCiuLetterGrid.leadingAnchor.constraint(equalTo: flckinkBoldLetter.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            bruCiuLetterGrid.topAnchor.constraint(equalTo: flckinkBoldLetter.safeAreaLayoutGuide.topAnchor, constant: 22),
-            flckinkLetterBend.trailingAnchor.constraint(equalTo: flckinkBoldLetter.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            bruCiuLetterGrid.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            bruCiuLetterGrid.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            flckinkLetterBend.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             flckinkLetterBend.topAnchor.constraint(equalTo: bruCiuLetterGrid.topAnchor)
         ])
         return flckinkBoldLetter
@@ -163,13 +182,13 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllLetterSwing.setImage(UIImage(systemName: aerErstLetterLean), for: .normal)
         ponllLetterSwing.tintColor = .white
         ponllLetterSwing.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
-        ponllLetterSwing.layer.cornerRadius = 28
+        ponllLetterSwing.layer.cornerRadius = 18
         ponllLetterSwing.layer.borderWidth = 1
         ponllLetterSwing.layer.borderColor = PonllyPalette.line.cgColor
         ponllLetterSwing.translatesAutoresizingMaskIntoConstraints = false
         ponllLetterSwing.addTarget(self, action: aerErstLetterSnap, for: .touchUpInside)
-        ponllLetterSwing.widthAnchor.constraint(equalToConstant: 56).isActive = true
-        ponllLetterSwing.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        ponllLetterSwing.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        ponllLetterSwing.heightAnchor.constraint(equalToConstant: 36).isActive = true
         return ponllLetterSwing
     }
 
@@ -178,7 +197,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         bruCiuLetterTwist.translatesAutoresizingMaskIntoConstraints = false
         let flckinkLetterWeave = ponllSharpLetter()
         bruCiuLetterTwist.addSubview(flckinkLetterWeave)
-        let aerErstLetterPuzzle = ErErstPaintLabView(user: flckinkCornerPiece, size: 82)
+        let aerErstLetterPuzzle = ErErstPaintLabView(flckinkCornerPiece, 82)
         aerErstLetterPuzzle.layer.borderColor = PonllyPalette.pink.cgColor
         aerErstLetterPuzzle.layer.shadowColor = PonllyPalette.pink.cgColor
         aerErstLetterPuzzle.layer.shadowOpacity = 0.55
@@ -186,38 +205,37 @@ final class FlckinkPrimerCoatController: UIViewController {
         aerErstLetterPuzzle.layer.shadowOffset = CGSize(width: 0, height: 0)
         bruCiuLetterTwist.addSubview(aerErstLetterPuzzle)
         NSLayoutConstraint.activate([
-            bruCiuLetterTwist.heightAnchor.constraint(equalToConstant: 246),
+            bruCiuLetterTwist.heightAnchor.constraint(equalToConstant: 286),
             flckinkLetterWeave.leadingAnchor.constraint(equalTo: bruCiuLetterTwist.leadingAnchor),
             flckinkLetterWeave.trailingAnchor.constraint(equalTo: bruCiuLetterTwist.trailingAnchor),
             flckinkLetterWeave.topAnchor.constraint(equalTo: bruCiuLetterTwist.topAnchor),
-            flckinkLetterWeave.bottomAnchor.constraint(equalTo: bruCiuLetterTwist.bottomAnchor),
             aerErstLetterPuzzle.centerXAnchor.constraint(equalTo: bruCiuLetterTwist.centerXAnchor),
-            aerErstLetterPuzzle.topAnchor.constraint(equalTo: bruCiuLetterTwist.topAnchor, constant: 78)
+            aerErstLetterPuzzle.topAnchor.constraint(equalTo: bruCiuLetterTwist.topAnchor, constant: 203)
         ])
         return bruCiuLetterTwist
     }
 
     private func flckinkStackedLetter(_ ponllLetterRhythm: [String]) -> UIStackView {
-        let bruCiuLetterBalance = UIStackView()
-        bruCiuLetterBalance.axis = .horizontal
-        bruCiuLetterBalance.alignment = .center
-        bruCiuLetterBalance.spacing = 10
+        let bruCiuLetterBthrowieSketch = UIStackView()
+        bruCiuLetterBthrowieSketch.axis = .horizontal
+        bruCiuLetterBthrowieSketch.alignment = .center
+        bruCiuLetterBthrowieSketch.spacing = 10
         ponllLetterRhythm.forEach { flckinkLetterContrast in
             let aerErstLetterWeight = UILabel()
             aerErstLetterWeight.text = flckinkLetterContrast
             aerErstLetterWeight.textAlignment = .center
             aerErstLetterWeight.textColor = PonllyPalette.muted
             aerErstLetterWeight.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .semibold)
-            aerErstLetterWeight.backgroundColor = PonllyPalette.panel
+            aerErstLetterWeight.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
             aerErstLetterWeight.layer.cornerRadius = 17
             aerErstLetterWeight.layer.borderWidth = 1
             aerErstLetterWeight.layer.borderColor = PonllyPalette.line.cgColor
             aerErstLetterWeight.clipsToBounds = true
-            aerErstLetterWeight.widthAnchor.constraint(greaterThanOrEqualToConstant: 92).isActive = true
-            aerErstLetterWeight.heightAnchor.constraint(equalToConstant: 36).isActive = true
-            bruCiuLetterBalance.addArrangedSubview(aerErstLetterWeight)
+            aerErstLetterWeight.widthAnchor.constraint(greaterThanOrEqualToConstant: 84).isActive = true
+            aerErstLetterWeight.heightAnchor.constraint(equalToConstant: 28).isActive = true
+            bruCiuLetterBthrowieSketch.addArrangedSubview(aerErstLetterWeight)
         }
-        return bruCiuLetterBalance
+        return bruCiuLetterBthrowieSketch
     }
 
     private func aerErstLoopedLetter() -> UIView {
@@ -233,10 +251,10 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllLetterSpacing.addSubview(bruCiuLetterOverlap)
         let flckinkLetterDepth = PonllyponllTornEdge.flckinkCurbLine(aerErstDrainCover: flckinkCornerPiece.graffitiPulse)
         bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.paintRun)", title: "AQrRtSwToUrVkWsX".ponllPaintaerErstHours, action: nil))
-        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.dripTrail)", title: "FYoZl0l1o2w3e4r5s6".ponllPaintaerErstHours, action: #selector(ponllLetterShadow)))
-        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.inkBleed)", title: "F7o8l9laobwcidnegf".ponllPaintaerErstHours, action: #selector(bruCiuLetterHighlight)))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.dripTrail)", title: "FYoZl0l1o2w3e4r5s6".ponllPaintaerErstHours, action: nil))
+        bruCiuLetterOverlap.addArrangedSubview(aerErstLetterDimension(value: "\(flckinkLetterDepth.inkBleed)", title: "F7o8l9laobwcidnegf".ponllPaintaerErstHours, action: nil))
         NSLayoutConstraint.activate([
-            ponllLetterSpacing.heightAnchor.constraint(equalToConstant: 96),
+            ponllLetterSpacing.heightAnchor.constraint(equalToConstant: 66),
             bruCiuLetterOverlap.leadingAnchor.constraint(equalTo: ponllLetterSpacing.leadingAnchor),
             bruCiuLetterOverlap.trailingAnchor.constraint(equalTo: ponllLetterSpacing.trailingAnchor),
             bruCiuLetterOverlap.topAnchor.constraint(equalTo: ponllLetterSpacing.topAnchor),
@@ -278,7 +296,11 @@ final class FlckinkPrimerCoatController: UIViewController {
         aerErstLetterGrit.spacing = 14
         aerErstLetterGrit.distribution = .fillEqually
         bruCiuUrbanLetter.backgroundColor = PonllyPalette.pink
-        bruCiuUrbanLetter.layer.cornerRadius = 22
+        bruCiuUrbanLetter.layer.cornerRadius = 21
+        bruCiuUrbanLetter.layer.shadowColor = PonllyPalette.pink.cgColor
+        bruCiuUrbanLetter.layer.shadowOpacity = 0.55
+        bruCiuUrbanLetter.layer.shadowRadius = 18
+        bruCiuUrbanLetter.layer.shadowOffset = CGSize(width: 0, height: 8)
         bruCiuUrbanLetter.setTitleColor(.white, for: .normal)
         bruCiuUrbanLetter.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
         bruCiuUrbanLetter.addTarget(self, action: #selector(aerErstStyleTexture), for: .touchUpInside)
@@ -286,12 +308,12 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllLetterNoise.setTitle("Mpeqsrssatguev".ponllPaintaerErstHours, for: .normal)
         ponllLetterNoise.setTitleColor(PonllyPalette.cyan, for: .normal)
         ponllLetterNoise.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 12)
-        ponllLetterNoise.layer.cornerRadius = 22
+        ponllLetterNoise.layer.cornerRadius = 21
         ponllLetterNoise.layer.borderWidth = 1.4
         ponllLetterNoise.layer.borderColor = PonllyPalette.cyan.cgColor
         ponllLetterNoise.addTarget(self, action: #selector(ponllStyleDrift), for: .touchUpInside)
         [bruCiuUrbanLetter, ponllLetterNoise].forEach {
-            $0.heightAnchor.constraint(equalToConstant: 58).isActive = true
+            $0.heightAnchor.constraint(equalToConstant: 42).isActive = true
             aerErstLetterGrit.addArrangedSubview($0)
         }
         return aerErstLetterGrit
@@ -307,10 +329,10 @@ final class FlckinkPrimerCoatController: UIViewController {
             aerErstStylePulse.tag = flckinkStyleShift.rawValue
             aerErstStylePulse.setTitle(flckinkStyleShift.nozzleCraft, for: .normal)
             aerErstStylePulse.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
-            aerErstStylePulse.layer.cornerRadius = 16
-            aerErstStylePulse.layer.borderWidth = 1
+            aerErstStylePulse.layer.cornerRadius = 0
+            aerErstStylePulse.layer.borderWidth = 0
             aerErstStylePulse.addTarget(self, action: #selector(bruCiuStyleEcho(_:)), for: .touchUpInside)
-            aerErstStylePulse.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            aerErstStylePulse.heightAnchor.constraint(equalToConstant: 34).isActive = true
             bruCiuStyleBurst.addArrangedSubview(aerErstStylePulse)
             return aerErstStylePulse
         }
@@ -320,9 +342,9 @@ final class FlckinkPrimerCoatController: UIViewController {
     private func bruCiuNeonLetter() {
         bruCiuMuralLetter.forEach { flckinkStyleFrame in
             let aerErstStyleCue = flckinkStyleFrame.tag == ponllInkLetter.rawValue
-            flckinkStyleFrame.backgroundColor = aerErstStyleCue ? PonllyPalette.pink : PonllyPalette.panel.withAlphaComponent(0.72)
-            flckinkStyleFrame.setTitleColor(aerErstStyleCue ? .white : PonllyPalette.muted, for: .normal)
-            flckinkStyleFrame.layer.borderColor = (aerErstStyleCue ? PonllyPalette.pink : PonllyPalette.line).cgColor
+            flckinkStyleFrame.backgroundColor = .clear
+            flckinkStyleFrame.setTitleColor(aerErstStyleCue ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
+            flckinkStyleFrame.layer.borderColor = UIColor.clear.cgColor
         }
     }
 
@@ -346,64 +368,81 @@ final class FlckinkPrimerCoatController: UIViewController {
     private func ponllStyleSeed() -> UIStackView {
         let ponllStylePath = UIStackView()
         ponllStylePath.axis = .vertical
-        ponllStylePath.spacing = 10
-        let bruCiuStyleFlow = Array(PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).prefix(2))
+        ponllStylePath.spacing = 8
+        let bruCiuStyleFlow = Array(ponllPaintMuse.prefix(6))
         guard !bruCiuStyleFlow.isEmpty else {
             ponllStylePath.addArrangedSubview(ponllPaintSignal(title: "Nwox yazrAtBwCoDrEkF GyHeItJ".ponllPaintaerErstHours, subtitle: "PKuLbMlNiOsPhQeRdS TpUiVeWcXeYsZ 0f1r2o3m4 5t6h7i8s9 aabrctdiesftg hwiijlkll manpoppeqarrs thuevrwex.y".ponllPaintaerErstHours))
             return ponllStylePath
         }
-        let flckinkStyleGrid = UIStackView()
-        flckinkStyleGrid.axis = .horizontal
-        flckinkStyleGrid.spacing = 10
-        flckinkStyleGrid.distribution = .fillEqually
-        bruCiuStyleFlow.forEach { aerErstStyleArc in
-            let ponllStyleBend = PbruCiuClearCoatView(ponllPaintTrace: aerErstStyleArc)
-            ponllStyleBend.layer.borderColor = UIColor.white.withAlphaComponent(0.18).cgColor
-            ponllStyleBend.heightAnchor.constraint(equalTo: ponllStyleBend.widthAnchor, multiplier: 0.92).isActive = true
-            flckinkStyleGrid.addArrangedSubview(ponllStyleBend)
-        }
-        if bruCiuStyleFlow.count == 1 {
-            flckinkStyleGrid.addArrangedSubview(UIView())
-        }
-        ponllStylePath.addArrangedSubview(flckinkStyleGrid)
+        ponllStylePath.addArrangedSubview(bruCiuPaintSignal(bruCiuStyleFlow, accent: UIColor.white.withAlphaComponent(0.18)))
         return ponllStylePath
     }
 
     private func bruCiuStylePrompt() -> UIStackView {
         let bruCiuStyleKick = UIStackView()
         bruCiuStyleKick.axis = .vertical
-        bruCiuStyleKick.spacing = 12
-        let flckinkStyleLean = PonllyponllTornEdge.flckinkColorWall(aerErstTextureWall: flckinkCornerPiece.graffitiPulse)
-        let aerErstStyleTwist = PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse)
-        if flckinkStyleLean.isEmpty {
-            for ponllStyleWeave in 0..<min(3, aerErstStyleTwist.count) {
-                bruCiuStyleKick.addArrangedSubview(bruCiuPaintQuest(
-                    artwork: aerErstStyleTwist[ponllStyleWeave],
-                    title: ["WzaAlBlC DpErFeGpH IpJrKoLcMeNsOsP".ponllPaintaerErstHours, "CQaRpS TpUrVeWsXsYuZr0e1 2s3t4u5d6y7".ponllPaintaerErstHours, "C8o9laobrc dpeafsgsh ibjrkelamkndoopwqnr".ponllPaintaerErstHours][ponllStyleWeave],
-                    subtitle: "\(flckinkCornerPiece.aerosolDream) keeps the process focused on \(aerErstStyleTwist[ponllStyleWeave].capControl.lowercased()) control.",
-                    meta: "\(6 + ponllStyleWeave * 3) reactions  •  \(2 + ponllStyleWeave) notes",
-                    accent: PonllyPalette.cyan
-                ))
-            }
-        } else {
-            for (bruCiuStyleLayer, flckinkStyleDepth) in flckinkStyleLean.enumerated() {
-                bruCiuStyleKick.addArrangedSubview(bruCiuPaintQuest(
-                    artwork: aerErstStyleTwist[bruCiuStyleLayer % aerErstStyleTwist.count],
-                    title: flckinkStyleDepth.nozzleCraft,
-                    subtitle: flckinkStyleDepth.fillPattern,
-                    meta: "\(flckinkStyleDepth.wildstyleCurve) reactions  •  \(flckinkStyleDepth.paintLayer) notes",
-                    accent: PonllyPalette.cyan
-                ))
-            }
+        bruCiuStyleKick.spacing = 8
+        let flckinkStyleLean = bruCiuMuralMuse
+        guard let ponllStyleCue = flckinkStyleLean.first else {
+            return bruCiuStyleKick
         }
+        bruCiuStyleKick.addArrangedSubview(aerErstPaintSignal(ponllStyleCue))
         return bruCiuStyleKick
+    }
+
+    private func aerErstPaintSignal(_ ponllPaintNoise: PonllystencilLab) -> UIView {
+        let flckinkPaintContrast = UIView()
+        flckinkPaintContrast.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.9)
+        flckinkPaintContrast.layer.cornerRadius = 14
+        flckinkPaintContrast.layer.borderWidth = 1
+        flckinkPaintContrast.layer.borderColor = PonllyPalette.line.cgColor
+        flckinkPaintContrast.clipsToBounds = true
+
+        let aerErstPaintthrowieSketche = UIImageView(image: bruCiuPaintFrame(ponllPaintNoise))
+        aerErstPaintthrowieSketche.contentMode = .scaleAspectFill
+        aerErstPaintthrowieSketche.backgroundColor = PonllyPalette.panel
+        aerErstPaintthrowieSketche.translatesAutoresizingMaskIntoConstraints = false
+        flckinkPaintContrast.addSubview(aerErstPaintthrowieSketche)
+
+        let ponllPaintRhythm = PonllyponllCyanGlowView(bruCiuDripMarker: [UIColor.black.withAlphaComponent(0.02), UIColor.black.withAlphaComponent(0.42)])
+        ponllPaintRhythm.translatesAutoresizingMaskIntoConstraints = false
+        flckinkPaintContrast.addSubview(ponllPaintRhythm)
+
+        let bruCiuPaintMotion = UIButton(type: .system)
+        bruCiuPaintMotion.setImage(UIImage(named: "paintQuest") ?? UIImage(systemName: "play.fill"), for: .normal)
+        bruCiuPaintMotion.tintColor = .white
+        bruCiuPaintMotion.adjustsImageWhenHighlighted = true
+        bruCiuPaintMotion.isUserInteractionEnabled = false
+        bruCiuPaintMotion.translatesAutoresizingMaskIntoConstraints = false
+        flckinkPaintContrast.addSubview(bruCiuPaintMotion)
+
+        flckinkPaintContrast.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ponllPaintMotion(_:))))
+        flckinkPaintContrast.accessibilityIdentifier = ponllPaintNoise.graffitiPulse
+        flckinkPaintContrast.isUserInteractionEnabled = true
+
+        NSLayoutConstraint.activate([
+            flckinkPaintContrast.heightAnchor.constraint(equalToConstant: 178),
+            aerErstPaintthrowieSketche.leadingAnchor.constraint(equalTo: flckinkPaintContrast.leadingAnchor),
+            aerErstPaintthrowieSketche.trailingAnchor.constraint(equalTo: flckinkPaintContrast.trailingAnchor),
+            aerErstPaintthrowieSketche.topAnchor.constraint(equalTo: flckinkPaintContrast.topAnchor),
+            aerErstPaintthrowieSketche.bottomAnchor.constraint(equalTo: flckinkPaintContrast.bottomAnchor),
+            ponllPaintRhythm.leadingAnchor.constraint(equalTo: flckinkPaintContrast.leadingAnchor),
+            ponllPaintRhythm.trailingAnchor.constraint(equalTo: flckinkPaintContrast.trailingAnchor),
+            ponllPaintRhythm.topAnchor.constraint(equalTo: flckinkPaintContrast.topAnchor),
+            ponllPaintRhythm.bottomAnchor.constraint(equalTo: flckinkPaintContrast.bottomAnchor),
+            bruCiuPaintMotion.centerXAnchor.constraint(equalTo: flckinkPaintContrast.centerXAnchor),
+            bruCiuPaintMotion.centerYAnchor.constraint(equalTo: flckinkPaintContrast.centerYAnchor),
+            bruCiuPaintMotion.widthAnchor.constraint(equalToConstant: 52),
+            bruCiuPaintMotion.heightAnchor.constraint(equalToConstant: 52)
+        ])
+        return flckinkPaintContrast
     }
 
     private func flckinkStyleSpark() -> UIStackView {
         let aerErstStyleGlow = UIStackView()
         aerErstStyleGlow.axis = .vertical
         aerErstStyleGlow.spacing = 12
-        let ponllStyleGrit = PonllyponllTornEdge.ponllMuralWall(bruCiuLetterWall: flckinkCornerPiece.graffitiPulse)
+        let ponllStyleGrit = flckinkAerosolMuse
         if ponllStyleGrit.isEmpty {
             aerErstStyleGlow.addArrangedSubview(ponllPaintSignal(title: "Nsot uPvKw xpyoznAlBlCMDuErFaGlHBIlJoKoLmM NrOePcQoRrSdTsU VyWeXtY".ponllPaintaerErstHours, subtitle: "FZr0e1s2h3 4c5h6a7l8l9eanbgcedse ffgrhoimj ktlhminso paqrrtsitsutv wwxiylzlA BaCpDpEeFaGrH IhJeKrLeM.N".ponllPaintaerErstHours))
             return aerErstStyleGlow
@@ -411,12 +450,12 @@ final class FlckinkPrimerCoatController: UIViewController {
         for bruCiuStyleNoise in ponllStyleGrit {
             let flckinkStyleTexture = bruCiuStyleNoise.paintMist == flckinkCornerPiece.graffitiPulse ? bruCiuStyleNoise.neonDrip : (bruCiuStyleNoise.concreteMuse ?? bruCiuStyleNoise.neonDrip)
             let aerErstStyleContrast = max(bruCiuStyleNoise.alleyCanvas + bruCiuStyleNoise.railYard, 1)
-            let ponllStyleBalance = bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll ? "\(aerErstStyleContrast) votes  •  \(bruCiuStyleNoise.sketchRush)" : "Waiting  •  \(bruCiuStyleNoise.sketchRush)"
+            let ponllStylelayerBlend = bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll ? "\(aerErstStyleContrast) votes  •  \(bruCiuStyleNoise.sketchRush)" : "Waiting  •  \(bruCiuStyleNoise.sketchRush)"
             let bruCiuStyleRhythm = bruCiuPaintQuest(
                     artwork: flckinkStyleTexture,
                     title: bruCiuStyleNoise.nozzleCraft,
                 subtitle: bruCiuStyleNoise.chromeFill,
-                meta: ponllStyleBalance,
+                meta: ponllStylelayerBlend,
                 accent: bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll ? PonllyPalette.pink : PonllyPalette.cyan
             )
             let flckinkStyleMotion = UITapGestureRecognizer(target: self, action: #selector(aerErstPaintCue(_:)))
@@ -431,27 +470,70 @@ final class FlckinkPrimerCoatController: UIViewController {
     private func aerErstStyleMood() -> UIStackView {
         let ponllPaintSeed = UIStackView()
         ponllPaintSeed.axis = .vertical
-        ponllPaintSeed.spacing = 10
-        let bruCiuPaintSpark = Array(PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse).suffix(2))
+        ponllPaintSeed.spacing = 8
+        let bruCiuPaintSpark = Array(ponllPaintMuse.suffix(6))
         guard !bruCiuPaintSpark.isEmpty else {
             ponllPaintSeed.addArrangedSubview(ponllPaintSignal(title: "NOoP QfRaSvToUrViWtXeYsZ 0y1e2t3".ponllPaintaerErstHours, subtitle: "S4a5v6e7d8 9waablcld eifngshpiijrkaltminoonp qfrrsotmu vtwhxiysz AaBrCtDiEsFtG HwIiJlKlL MaNpOpPeQaRrS ThUeVrWeX.Y".ponllPaintaerErstHours))
             return ponllPaintSeed
         }
-        let flckinkPaintMood = UIStackView()
-        flckinkPaintMood.axis = .horizontal
-        flckinkPaintMood.spacing = 10
-        flckinkPaintMood.distribution = .fillEqually
-        bruCiuPaintSpark.forEach { aerErstPaintPath in
-            let ponllPaintFlowline = PbruCiuClearCoatView(ponllPaintTrace: aerErstPaintPath)
-            ponllPaintFlowline.layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.45).cgColor
-            ponllPaintFlowline.heightAnchor.constraint(equalTo: ponllPaintFlowline.widthAnchor, multiplier: 0.76).isActive = true
-            flckinkPaintMood.addArrangedSubview(ponllPaintFlowline)
-        }
-        if bruCiuPaintSpark.count == 1 {
-            flckinkPaintMood.addArrangedSubview(UIView())
-        }
-        ponllPaintSeed.addArrangedSubview(flckinkPaintMood)
+        ponllPaintSeed.addArrangedSubview(bruCiuPaintSignal(bruCiuPaintSpark, accent: PonllyPalette.cyan.withAlphaComponent(0.45)))
         return ponllPaintSeed
+    }
+
+    private func bruCiuPaintSignal(_ ponllPaintArc: [PonllyaerErstSolidMarkerk], accent flckinkPaintBend: UIColor) -> UIStackView {
+        let aerErstPaintKick = UIStackView()
+        aerErstPaintKick.axis = .vertical
+        aerErstPaintKick.spacing = 8
+        var bruCiuPaintLean = 0
+        while bruCiuPaintLean < ponllPaintArc.count {
+            let flckinkPaintTwist = UIStackView()
+            flckinkPaintTwist.axis = .horizontal
+            flckinkPaintTwist.spacing = 8
+            flckinkPaintTwist.distribution = .fillEqually
+            for ponllPaintWeave in 0..<3 {
+                let aerErstPaintDepth = bruCiuPaintLean + ponllPaintWeave
+                if aerErstPaintDepth < ponllPaintArc.count {
+                    let bruCiuPaintGlow = PbruCiuClearCoatView(ponllPaintTrace: ponllPaintArc[aerErstPaintDepth])
+                    bruCiuPaintGlow.layer.cornerRadius = 10
+                    bruCiuPaintGlow.layer.borderWidth = 1
+                    bruCiuPaintGlow.layer.borderColor = flckinkPaintBend.cgColor
+                    bruCiuPaintGlow.heightAnchor.constraint(equalTo: bruCiuPaintGlow.widthAnchor).isActive = true
+                    flckinkPaintTwist.addArrangedSubview(bruCiuPaintGlow)
+                } else {
+                    let aerErstPaintGrit = UIView()
+                    aerErstPaintGrit.alpha = 0
+                    flckinkPaintTwist.addArrangedSubview(aerErstPaintGrit)
+                }
+            }
+            aerErstPaintKick.addArrangedSubview(flckinkPaintTwist)
+            bruCiuPaintLean += 3
+        }
+        return aerErstPaintKick
+    }
+
+    private func flckinkPaintPath(_ ponllPaintNoise: PonllystencilLab) -> URL? {
+        Bundle.main.url(forResource: ponllPaintNoise.strokeWeight, withExtension: "mp4")
+    }
+
+    private func bruCiuPaintFrame(_ ponllPaintNoise: PonllystencilLab) -> UIImage? {
+        guard let flckinkPaintPath = flckinkPaintPath(ponllPaintNoise) else { return nil }
+        let aerErstPaintFrame = AVAssetImageGenerator(asset: AVURLAsset(url: flckinkPaintPath))
+        aerErstPaintFrame.appliesPreferredTrackTransform = true
+        aerErstPaintFrame.maximumSize = CGSize(width: 720, height: 720)
+        guard let ponllPaintFrame = try? aerErstPaintFrame.copyCGImage(
+            at: CMTime(seconds: 0.1, preferredTimescale: 600),
+            actualTime: nil
+        ) else { return nil }
+        return UIImage(cgImage: ponllPaintFrame)
+    }
+
+    private func aerErstPaintMotion(_ ponllPaintNoise: PonllystencilLab) {
+        guard let bruCiuPaintPath = flckinkPaintPath(ponllPaintNoise) else { return }
+        let flckinkPaintMotion = AVPlayerViewController()
+        flckinkPaintMotion.player = AVPlayer(url: bruCiuPaintPath)
+        present(flckinkPaintMotion, animated: true) {
+            flckinkPaintMotion.player?.play()
+        }
     }
 
     private func bruCiuPaintQuest(artwork flckinkPaintArc: PonllyaerErstSolidMarkerk, title aerErstPaintBend: String, subtitle ponllPaintKick: String, meta bruCiuPaintLean: String, accent flckinkPaintTwist: UIColor) -> UIView {
@@ -480,11 +562,11 @@ final class FlckinkPrimerCoatController: UIViewController {
         [flckinkPaintGrit, aerErstPaintNoise, ponllPaintTexture].forEach(bruCiuPaintGlow.addArrangedSubview)
 
         NSLayoutConstraint.activate([
-            aerErstPaintWeave.heightAnchor.constraint(greaterThanOrEqualToConstant: 122),
+            aerErstPaintWeave.heightAnchor.constraint(equalToConstant: 112),
             ponllPaintDepth.leadingAnchor.constraint(equalTo: aerErstPaintWeave.leadingAnchor, constant: 12),
-            ponllPaintDepth.topAnchor.constraint(equalTo: aerErstPaintWeave.topAnchor, constant: 12),
-            ponllPaintDepth.bottomAnchor.constraint(equalTo: aerErstPaintWeave.bottomAnchor, constant: -12),
-            ponllPaintDepth.widthAnchor.constraint(equalTo: aerErstPaintWeave.widthAnchor, multiplier: 0.34),
+            ponllPaintDepth.centerYAnchor.constraint(equalTo: aerErstPaintWeave.centerYAnchor),
+            ponllPaintDepth.widthAnchor.constraint(equalToConstant: 88),
+            ponllPaintDepth.heightAnchor.constraint(equalToConstant: 88),
             bruCiuPaintGlow.leadingAnchor.constraint(equalTo: ponllPaintDepth.trailingAnchor, constant: 14),
             bruCiuPaintGlow.trailingAnchor.constraint(equalTo: aerErstPaintWeave.trailingAnchor, constant: -14),
             bruCiuPaintGlow.centerYAnchor.constraint(equalTo: aerErstPaintWeave.centerYAnchor)
@@ -492,7 +574,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         return aerErstPaintWeave
     }
 
-    private func ponllPaintSignal(title bruCiuPaintContrast: String, subtitle flckinkPaintBalance: String) -> UIView {
+    private func ponllPaintSignal(title bruCiuPaintContrast: String, subtitle flckinkPainlayerBlend: String) -> UIView {
         let aerErstPaintRhythm = UIStackView()
         aerErstPaintRhythm.axis = .vertical
         aerErstPaintRhythm.alignment = .center
@@ -509,7 +591,7 @@ final class FlckinkPrimerCoatController: UIViewController {
         ponllPaintMotion.heightAnchor.constraint(equalToConstant: 28).isActive = true
         let bruCiuPaintCascade = aerErstTallLetter(bruCiuPaintContrast, bruCiuWideLetter: 15, flckinkCompactLetter: .white, aerErstAngularLetter: .black)
         bruCiuPaintCascade.textAlignment = .center
-        let flckinkPaintRipple = aerErstTallLetter(flckinkPaintBalance, bruCiuWideLetter: 12, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
+        let flckinkPaintRipple = aerErstTallLetter(flckinkPainlayerBlend, bruCiuWideLetter: 12, flckinkCompactLetter: PonllyPalette.muted, aerErstAngularLetter: .regular)
         flckinkPaintRipple.textAlignment = .center
         flckinkPaintRipple.numberOfLines = 0
         [ponllPaintMotion, bruCiuPaintCascade, flckinkPaintRipple].forEach(aerErstPaintRhythm.addArrangedSubview)
@@ -566,6 +648,12 @@ final class FlckinkPrimerCoatController: UIViewController {
         let bruCiuInkSignal = PbruCiuStencilLabController(flckinkPaintVeil: ponllPaintEcho)
         bruCiuInkSignal.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(bruCiuInkSignal, animated: true)
+    }
+
+    @objc private func ponllPaintMotion(_ flckinkPaintMotion: UITapGestureRecognizer) {
+        guard let aerErstPaintCue = flckinkPaintMotion.view?.accessibilityIdentifier,
+              let bruCiuPaintMotion = bruCiuMuralMuse.first(where: { $0.graffitiPulse == aerErstPaintCue }) else { return }
+        aerErstPaintMotion(bruCiuPaintMotion)
     }
 
     @objc private func aerErstStyleTexture() {
