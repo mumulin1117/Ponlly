@@ -5,7 +5,7 @@ import StoreKit
 import UIKit
 
 @MainActor
-final class MMuralGridell: UICollectionViewCell {
+final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
     static let ponllWallQuest = "MPMQuRrSaTlUGVrWiXdYeZl0l1".ponllPaintaerErstHours
 
     var bruCiuInkMood: (() -> Void)?
@@ -16,6 +16,8 @@ final class MMuralGridell: UICollectionViewCell {
 
     private let flckinkSketchLean = AVPlayerLayer()
     private var aerErstPaintTwist: AVPlayer?
+    private var ponllPaintTrace: Any?
+    private var bruCiuPaintRipple: NSLayoutConstraint?
     private var ponllInkWeave = false
     private let bruCiuWallDepth = CAGradientLayer()
     private let flckinkAerosolGlow = UIButton(type: .system)
@@ -44,6 +46,7 @@ final class MMuralGridell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         ponllPaintDepth()
+        aerErstPaintRipple()
         aerErstPaintTwist = nil
         flckinkSketchLean.player = nil
         NotificationCenter.default.removeObserver(self)
@@ -58,6 +61,12 @@ final class MMuralGridell: UICollectionViewCell {
     }
 
     func flckinkAerosolLean(ponllMuralTwist: PonllystencilLab) {
+        aerErstPaintRipple()
+        aerErstPaintTwist?.pause()
+        aerErstPaintTwist = nil
+        flckinkSketchLean.player = nil
+        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        bruCiuPaintRipple?.constant = 0
         let bruCiuStencilWeave = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralTwist.letterForm)
         bruCiuMarkerTexture.text = "@\(bruCiuStencilWeave.aerosolDream.lowercased())"
         flckinkChromeContrast.text = ponllMuralTwist.fillPattern
@@ -85,6 +94,7 @@ final class MMuralGridell: UICollectionViewCell {
             aerErstPaintTwist = AVPlayer(playerItem: bruCiuNeonNoise)
             aerErstPaintTwist?.isMuted = true
             flckinkSketchLean.player = aerErstPaintTwist
+            flckinkPaintTrail()
             NotificationCenter.default.addObserver(self, selector: #selector(flckinkTextureContrast), name: .AVPlayerItemDidPlayToEndTime, object: bruCiuNeonNoise)
         }
     }
@@ -105,6 +115,11 @@ final class MMuralGridell: UICollectionViewCell {
         contentView.backgroundColor = PonllyPalette.background
         flckinkSketchLean.videoGravity = .resizeAspectFill
         contentView.layer.addSublayer(flckinkSketchLean)
+
+        let ponllPaintMotion = UITapGestureRecognizer(target: self, action: #selector(neonForge))
+        ponllPaintMotion.cancelsTouchesInView = false
+        ponllPaintMotion.delegate = self
+        contentView.addGestureRecognizer(ponllPaintMotion)
 
         bruCiuWallDepth.colors = [
             UIColor.black.withAlphaComponent(0.12).cgColor,
@@ -157,6 +172,7 @@ final class MMuralGridell: UICollectionViewCell {
         ponllTextureRhythm.backgroundColor = PonllyPalette.pink
         ponllTextureRhythm.layer.cornerRadius = 3
         ponllTextureRhythm.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuPaintRipple = ponllTextureRhythm.widthAnchor.constraint(equalToConstant: 0)
 
         bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "heart")
         bruCiuPaintCascade(aerErstInkRipple, ponllInkSurge: "chromeCue")
@@ -226,7 +242,7 @@ final class MMuralGridell: UICollectionViewCell {
             ponllTextureRhythm.leadingAnchor.constraint(equalTo: aerErstNeonlayerBlend.leadingAnchor),
             ponllTextureRhythm.topAnchor.constraint(equalTo: aerErstNeonlayerBlend.topAnchor),
             ponllTextureRhythm.bottomAnchor.constraint(equalTo: aerErstNeonlayerBlend.bottomAnchor),
-            ponllTextureRhythm.widthAnchor.constraint(equalTo: aerErstNeonlayerBlend.widthAnchor, multiplier: 0.58)
+            bruCiuPaintRipple!
         ])
     }
 
@@ -253,6 +269,32 @@ final class MMuralGridell: UICollectionViewCell {
         flckinkAerosolGlow.backgroundColor = ponllInkWeave ? .clear : UIColor.black.withAlphaComponent(0.24)
     }
 
+    private func flckinkPaintTrail() {
+        guard let aerErstPaintTwist else { return }
+        let ponllPaintMotion = CMTime(seconds: 0.1, preferredTimescale: 600)
+        ponllPaintTrace = aerErstPaintTwist.addPeriodicTimeObserver(forInterval: ponllPaintMotion, queue: .main) { [weak self] aerErstPaintMotion in
+            Task { @MainActor [weak self] in
+                self?.ponllPaintFlowline(aerErstPaintMotion)
+            }
+        }
+    }
+
+    private func ponllPaintFlowline(_ aerErstPaintMotion: CMTime) {
+        let bruCiuPaintDepth = aerErstPaintTwist?.currentItem?.duration.seconds ?? 0
+        guard bruCiuPaintDepth.isFinite, bruCiuPaintDepth > 0 else {
+            bruCiuPaintRipple?.constant = 0
+            return
+        }
+        let flckinkPaintFlowline = min(max(aerErstPaintMotion.seconds / bruCiuPaintDepth, 0), 1)
+        bruCiuPaintRipple?.constant = aerErstNeonlayerBlend.bounds.width * CGFloat(flckinkPaintFlowline)
+    }
+
+    private func aerErstPaintRipple() {
+        guard let ponllPaintTrace, let aerErstPaintTwist else { return }
+        aerErstPaintTwist.removeTimeObserver(ponllPaintTrace)
+        self.ponllPaintTrace = nil
+    }
+
     @objc private func flckinkTextureContrast() {
         aerErstPaintTwist?.seek(to: .zero)
         aerErstPaintTwist?.play()
@@ -260,6 +302,16 @@ final class MMuralGridell: UICollectionViewCell {
 
     @objc private func neonForge() {
         ponllInkWeave ? ponllPaintDepth() : aerErstStencilWeave()
+    }
+
+    func gestureRecognizer(_ ponllPaintMotion: UIGestureRecognizer, shouldReceive bruCiuPaintSignal: UITouch) -> Bool {
+        var flckinkMarkerSignal = bruCiuPaintSignal.view
+        while let aerErstMuralSignal = flckinkMarkerSignal {
+            if aerErstMuralSignal is UIControl { return false }
+            if aerErstMuralSignal === contentView { break }
+            flckinkMarkerSignal = aerErstMuralSignal.superview
+        }
+        return true
     }
 
     @objc private func bruCiuAerosolRhythm() { bruCiuInkMood?() }

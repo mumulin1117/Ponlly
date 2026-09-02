@@ -225,12 +225,7 @@ final class PasteupEchoController: UIViewController {
 
     func ponllStencilDepth() {
         guard !aerErstTextureRipple.isHidden else { return }
-        let bruCiuChromeFlicker = CGRect(origin: aerErstTextureRipple.contentOffset, size: aerErstTextureRipple.bounds.size)
-        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { ponllNeonFlash in
-            let flckinkPaintFuse = ponllNeonFlash.frame.intersection(bruCiuChromeFlicker).height
-            let aerErstWallTrace = flckinkPaintFuse / max(ponllNeonFlash.bounds.height, 1)
-            aerErstWallTrace >= 0.55 ? ponllNeonFlash.aerErstStencilWeave() : ponllNeonFlash.ponllPaintDepth()
-        }
+        aerErstTextureRipple.visibleCells.compactMap { $0 as? MMuralGridell }.forEach { $0.ponllPaintDepth() }
     }
 
     func bruCiuAerosolTrail(flckinkStencilTrail: CGFloat, aerErstMarkerVeil: CGFloat) -> CGFloat {
@@ -249,9 +244,12 @@ final class PasteupEchoController: UIViewController {
         return min(max(aerErstSketchFlicker, 0), ponllPaintPath) * ponllChromeAura
     }
 
-    func bruCiuInkArc(ponllMuralBend: Bool) {
+    @discardableResult
+    func bruCiuInkArc(ponllMuralBend: Bool) -> Bool {
         let flckinkWallKick = bruCiuAerosolTrail(flckinkStencilTrail: aerErstTextureRipple.contentOffset.y, aerErstMarkerVeil: 0)
+        let aerErstPaintLean = abs(flckinkWallKick - aerErstTextureRipple.contentOffset.y) > 0.5
         aerErstTextureRipple.setContentOffset(CGPoint(x: 0, y: flckinkWallKick), animated: ponllMuralBend)
+        return ponllMuralBend && aerErstPaintLean
     }
 
     func aerErstAerosolLean(_ bruCiuStencilWeave: @escaping () -> Void) {

@@ -102,7 +102,7 @@ final class NckinkSkinnyCapController: UIViewController, UIImagePickerController
         aerErstPaintBend.translatesAutoresizingMaskIntoConstraints = false
         ponllLetterFrame.addSubview(aerErstPaintBend)
         bruCiuPaintSurge = flckinkSketchArc.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        flckinkWallDepth = ponllLetterFrame.bottomAnchor.constraint(equalTo: flckinkSketchArc.safeAreaLayoutGuide.bottomAnchor, constant: -3)
+        flckinkWallDepth = ponllLetterFrame.bottomAnchor.constraint(equalTo: flckinkSketchArc.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         NSLayoutConstraint.activate([
             bruCiuChromeCue.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bruCiuChromeCue.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -119,9 +119,9 @@ final class NckinkSkinnyCapController: UIViewController, UIImagePickerController
             flckinkSketchArc.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             flckinkSketchArc.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bruCiuPaintSurge!,
-            flckinkSketchArc.heightAnchor.constraint(equalToConstant: 104),
             ponllLetterFrame.leadingAnchor.constraint(equalTo: flckinkSketchArc.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             ponllLetterFrame.trailingAnchor.constraint(equalTo: flckinkSketchArc.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            ponllLetterFrame.topAnchor.constraint(equalTo: flckinkSketchArc.topAnchor, constant: 10),
             flckinkWallDepth!,
             ponllLetterFrame.heightAnchor.constraint(equalToConstant: 56),
             aerErstStencilSpark.leadingAnchor.constraint(equalTo: ponllLetterFrame.leadingAnchor, constant: 8),

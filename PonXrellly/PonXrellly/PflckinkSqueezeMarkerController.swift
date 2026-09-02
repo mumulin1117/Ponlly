@@ -51,7 +51,12 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
         navigationController?.setNavigationBarHidden(true, animated: false)
         aerErstMuralFlicker()
         ponllStencilFlash()
-        bruCiuChromeFuse()
+        switch bruCiuWallBurst {
+        case .bruCiuAerosolQuest:
+            bruCiuChromeFuse()
+        case .flckinkMuralCue, .aerErstPaintSeed:
+            bruCiuTextureKick(bruCiuWallBurst)
+        }
         if !FlckinkMatteFinish.shared.hasConsent {
             flckinkNeonTrace()
         }
@@ -491,6 +496,8 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     @objc private func bruCiuWallGrit() {
         if bruCiuWallBurst == .bruCiuAerosolQuest {
             dismiss(animated: true)
+        } else if navigationController?.viewControllers.first !== self {
+            navigationController?.popViewController(animated: true)
         } else {
             bruCiuChromeFuse()
         }
@@ -502,12 +509,16 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
 
     @objc private func aerErstMuralTexture() {
         guard flckinkSketchWeave() else { return }
-        bruCiuTextureKick(.flckinkMuralCue)
+        let flckinkMuralCue = PflckinkSqueezeMarkerController(bruCiuMuralBloom: ponllInkSpark)
+        flckinkMuralCue.bruCiuWallBurst = .flckinkMuralCue
+        navigationController?.pushViewController(flckinkMuralCue, animated: true)
     }
 
     @objc private func ponllStencilContrast() {
         guard flckinkSketchWeave() else { return }
-        bruCiuTextureKick(.aerErstPaintSeed)
+        let aerErstPaintSeed = PflckinkSqueezeMarkerController(bruCiuMuralBloom: ponllInkSpark)
+        aerErstPaintSeed.bruCiuWallBurst = .aerErstPaintSeed
+        navigationController?.pushViewController(aerErstPaintSeed, animated: true)
     }
 
     @objc private func bruCiuCbruCiuPressureFlow() {

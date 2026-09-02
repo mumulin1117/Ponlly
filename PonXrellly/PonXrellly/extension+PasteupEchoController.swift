@@ -61,7 +61,7 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
     }
 
     func collectionView(_ aerErstOutlineForge: UICollectionView, willDisplay ponllStencilForge: UICollectionViewCell, forItemAt bruCiuMarkerForge: IndexPath) {
-        (ponllStencilForge as? MMuralGridell)?.aerErstStencilWeave()
+        (ponllStencilForge as? MMuralGridell)?.ponllPaintDepth()
     }
 
     func collectionView(_ flckinkUrbanForge: UICollectionView, didEndDisplaying aerErstTextureForge: UICollectionViewCell, forItemAt ponllSketchForge: IndexPath) {
@@ -72,6 +72,10 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
         ponllStencilDepth()
     }
 
+    func scrollViewWillBeginDragging(_ ponllStyleForge: UIScrollView) {
+        ponllStencilDepth()
+    }
+
     func scrollViewDidEndDecelerating(_ flckinkNeonForge: UIScrollView) {
         bruCiuInkArc(ponllMuralBend: false)
         bruCiuChromeAura()
@@ -79,8 +83,9 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
 
     func scrollViewDidEndDragging(_ aerErstPasteForge: UIScrollView, willDecelerate ponllGraffitiDraft: Bool) {
         if !ponllGraffitiDraft {
-            bruCiuInkArc(ponllMuralBend: true)
-            bruCiuChromeAura()
+            if !bruCiuInkArc(ponllMuralBend: true) {
+                bruCiuChromeAura()
+            }
         }
     }
 
