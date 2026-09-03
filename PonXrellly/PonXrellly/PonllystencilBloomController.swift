@@ -178,13 +178,13 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
     }
 
     private func aerErstChromeSignal(_ ponllLayerPlan: PonllLayerPlanView) {
-        ponllLayerPlan.flckinkPaintSignal.flckinkPaintSignal(NSAttributedString(
-            string: "Rpeofnrlelsbhriuncgi areoroemrss.t.f.l".ponllPaintaerErstHours,
-            attributes: [
-                .foregroundColor: PonllyPalette.muted,
-                .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
-            ]
-        ))
+//        ponllLayerPlan.flckinkPaintSignal.flckinkPaintSignal(NSAttributedString(
+//            string: "Rpeofnrlelsbhriuncgi areoroemrss.t.f.l".ponllPaintaerErstHours,
+//            attributes: [
+//                .foregroundColor: PonllyPalette.muted,
+//                .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+//            ]
+//        ))
         ponllLayerPlan.flckinkPaintSignal.addTarget(self, action: #selector(flckinkNeonSignal(_:)), for: .valueChanged)
     }
 
@@ -320,7 +320,7 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         bruCiublackOutline.layer.borderColor = PonllyPalette.line.cgColor
         bruCiublackOutline.clipsToBounds = true
 
-        let flckinklimeStroke = UIImageView(image: ponllutilityBox.graffitiPiece ?? UIImage(named: ponllutilityBox.aerosolHaze))
+        let flckinklimeStroke = PonllSprayBloomView(image: ponllutilityBox.graffitiPiece ?? UIImage(named: ponllutilityBox.aerosolHaze))
         flckinklimeStroke.accessibilityIdentifier = ponllutilityBox.graffitiPulse
         flckinklimeStroke.contentMode = .scaleAspectFill
         flckinklimeStroke.clipsToBounds = true
@@ -489,6 +489,34 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         ponllMuralPiece.muralfanSpray.count
     }
 
+    private func aerErstSprayBloom(_ ponllPaintLayer: UIView) -> [PonllSprayBloomView] {
+        var bruCiuSprayBloom: [PonllSprayBloomView] = []
+        if let flckinkPaintBloom = ponllPaintLayer as? PonllSprayBloomView {
+            bruCiuSprayBloom.append(flckinkPaintBloom)
+        }
+        ponllPaintLayer.subviews.forEach {
+            bruCiuSprayBloom.append(contentsOf: aerErstSprayBloom($0))
+        }
+        return bruCiuSprayBloom
+    }
+
+    private func bruCiuSprayBloom(_ ponllPaintLayer: UIView) {
+        guard let flckinkCanvasWall = view.window else { return }
+        let aerErstPaintBloom = aerErstSprayBloom(ponllPaintLayer)
+            .filter {
+                flckinkCanvasWall.bounds.intersects($0.convert($0.bounds, to: flckinkCanvasWall))
+            }
+            .sorted {
+                $0.convert($0.bounds, to: flckinkCanvasWall).minY
+                    < $1.convert($1.bounds, to: flckinkCanvasWall).minY
+            }
+        aerErstPaintBloom.enumerated().forEach { ponllPaintDepth, flckinkPaintBloom in
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(ponllPaintDepth) * 0.06) {
+                flckinkPaintBloom.aerErstAerosolBloom()
+            }
+        }
+    }
+
     private func ponllNeonSignal(_ bruCiuNeonGlow: UIButton, wallMark flckinkWallMark: String) {
         if ponllWallMap.contains(flckinkWallMark) {
             ponllWallMap.remove(flckinkWallMark)
@@ -532,11 +560,15 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
     }
 
     private func aerErstOpen(_ letterForm: PonllyaerErstWeatheredPaperm) {
-        flckinkPrimerCoatponlu("Ehnitjekrlimnngo prqorosmt.u.v.w".ponllPaintaerErstHours)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-            let bruCiuconcreteMuse = PwheatpasteLayerController(aerErstConcreteMuse: letterForm)
-            bruCiuconcreteMuse.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(bruCiuconcreteMuse, animated: true)
+        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) { [weak self] in
+            guard let self else { return }
+            self.flckinkPrimerCoatponlu("Ehnitjekrlimnngo prqorosmt.u.v.w".ponllPaintaerErstHours)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) { [weak self] in
+                guard let self else { return }
+                let bruCiuconcreteMuse = PwheatpasteLayerController(aerErstConcreteMuse: letterForm)
+                bruCiuconcreteMuse.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(bruCiuconcreteMuse, animated: true)
+            }
         }
     }
 
@@ -577,6 +609,7 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         }
         guard ponllLayerMap != flckinkLayerMap else { return }
         self.ponllLayerMap(ponllLayerMap, bruCiuMuralBend: true)
+        aerErstPaintSignal(PonllAerosolSignal.allCases[ponllLayerMap], flckinkPaintVeil: true)
     }
 
     @objc private func flckinkNeonSignal(_ ponllPaintSignal: UIRefreshControl) {
@@ -611,6 +644,10 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.88) { [weak self] in
             guard let self else { return }
             self.flckinkReloadutilityBox(aerErstPaintSignal)
+            if flckinkPaintVeil, aerErstPaintSignal == self.aerErstSelectedCategory {
+                self.view.layoutIfNeeded()
+                self.bruCiuSprayBloom(flckinkLayerPlan)
+            }
             UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut, .allowUserInteraction]) {
                 flckinkLayerPlan.alpha = 1
             }
@@ -639,5 +676,18 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         shouldRecognizeSimultaneouslyWith bruCiuPaintFlow: UIGestureRecognizer
     ) -> Bool {
         aerErstPaintFlow is UISwipeGestureRecognizer || bruCiuPaintFlow is UISwipeGestureRecognizer
+    }
+}
+
+private final class PonllSprayBloomView: UIImageView {
+    private let flckinkSprayShield = CALayer()
+    private var bruCiuSprayBloom = false
+
+    func aerErstAerosolBloom() {
+        guard !bruCiuSprayBloom else { return }
+        layoutIfNeeded()
+        guard bounds.width > 0, bounds.height > 0 else { return }
+        bruCiuSprayBloom = true
+        ponllSprayBloom(layer, bruCiuSprayShield: flckinkSprayShield)
     }
 }

@@ -4,6 +4,72 @@ import AVKit
 import StoreKit
 import UIKit
 
+@MainActor
+func ponllSprayBloom(_ aerErstPaintLayer: CALayer, bruCiuSprayShield: CALayer) {
+    guard aerErstPaintLayer.bounds.width > 0, aerErstPaintLayer.bounds.height > 0 else { return }
+    guard !UIAccessibility.isReduceMotionEnabled else {
+        aerErstPaintLayer.mask = nil
+        return
+    }
+
+    bruCiuSprayShield.frame = aerErstPaintLayer.bounds
+    bruCiuSprayShield.sublayers?.forEach { $0.removeFromSuperlayer() }
+    aerErstPaintLayer.mask = bruCiuSprayShield
+    let flckinkPaintDepth = hypot(
+        aerErstPaintLayer.bounds.width,
+        aerErstPaintLayer.bounds.height
+    ) / 96 * 1.18
+    let ponllMuralGrid: [(CGFloat, CGFloat, CGFloat, CFTimeInterval)] = [
+        (0.12, 0.22, 0.74, 0.00),
+        (0.31, 0.66, 0.92, 0.06),
+        (0.55, 0.28, 0.80, 0.10),
+        (0.77, 0.72, 0.96, 0.14),
+        (0.91, 0.18, 0.66, 0.18),
+        (0.48, 0.50, flckinkPaintDepth, 0.16)
+    ]
+    let aerErstPaintSignal = CACurrentMediaTime()
+
+    CATransaction.begin()
+    CATransaction.setCompletionBlock { [weak aerErstPaintLayer, weak bruCiuSprayShield] in
+        aerErstPaintLayer?.mask = nil
+        bruCiuSprayShield?.sublayers?.forEach { $0.removeFromSuperlayer() }
+    }
+    for (flckinkWallFlowline, aerErstAerosolArc, ponllPaintDepth, bruCiuSprayRhythm) in ponllMuralGrid {
+        let ponllAerosolVeil = CAGradientLayer()
+        ponllAerosolVeil.type = .radial
+        ponllAerosolVeil.colors = [
+            UIColor.white.cgColor,
+            UIColor.white.cgColor,
+            UIColor.white.withAlphaComponent(0.82).cgColor,
+            UIColor.clear.cgColor
+        ]
+        ponllAerosolVeil.locations = [0, 0.58, 0.82, 1]
+        ponllAerosolVeil.startPoint = CGPoint(x: 0.5, y: 0.5)
+        ponllAerosolVeil.endPoint = CGPoint(x: 1, y: 1)
+        ponllAerosolVeil.bounds = CGRect(x: 0, y: 0, width: 96, height: 96)
+        ponllAerosolVeil.position = CGPoint(
+            x: aerErstPaintLayer.bounds.width * flckinkWallFlowline,
+            y: aerErstPaintLayer.bounds.height * aerErstAerosolArc
+        )
+        ponllAerosolVeil.setAffineTransform(CGAffineTransform(scaleX: ponllPaintDepth, y: ponllPaintDepth))
+        bruCiuSprayShield.addSublayer(ponllAerosolVeil)
+
+        let aerErstPaintFlowline = CAKeyframeAnimation(keyPath: "transform.scale")
+        aerErstPaintFlowline.values = [0.025, ponllPaintDepth * 0.42, ponllPaintDepth]
+        aerErstPaintFlowline.keyTimes = [0, 0.48, 1]
+        aerErstPaintFlowline.timingFunctions = [
+            CAMediaTimingFunction(name: .easeOut),
+            CAMediaTimingFunction(name: .easeInEaseOut)
+        ]
+        aerErstPaintFlowline.beginTime = aerErstPaintSignal + bruCiuSprayRhythm
+        aerErstPaintFlowline.duration = 0.88
+        aerErstPaintFlowline.fillMode = .both
+        aerErstPaintFlowline.isRemovedOnCompletion = false
+        ponllAerosolVeil.add(aerErstPaintFlowline, forKey: nil)
+    }
+    CATransaction.commit()
+}
+
 final class PbruCiuClearCoatView: UIView {
     var aerErstMuralCue: (() -> Void)?
     private let ponllChromeBloom = CAGradientLayer()

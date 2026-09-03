@@ -11,6 +11,7 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     private let bruCiuWallMood = UIScrollView()
     private let flckinkStencilPath = UIView()
     private let aerErstMarkerArc = UIImageView(image: UIImage(named: "colorFade"))
+    private let aerErstSprayBloom = UIImageView(image: UIImage(named: "aerosolDream"))
     private let ponllChromeBend = UIButton(type: .system)
     private let bruCiuNeonKick = UILabel()
     private let flckinkTextureLean = UIView()
@@ -27,7 +28,9 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     private let bruCiuTextureMotion = UIButton(type: .system)
     private let flckinkSketchCascade = UILabel()
     private let aerErstPaintRipple = PonllyNeonButton("LDoEgFiGnH".ponllPaintaerErstHours)
+    private let bruCiuPaintSignal = UINotificationFeedbackGenerator()
     private var bruCiuWallBurst: ponllGraffitiSignal = .bruCiuAerosolQuest
+    private var ponllPaintBloom = false
     private var flckinkAerosolBloom = FlckinkMatteFinish.shared.hasConsent {
         didSet {
             FlckinkMatteFinish.shared.hasConsent = flckinkAerosolBloom
@@ -62,6 +65,11 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
         }
         NotificationCenter.default.addObserver(self, selector: #selector(flckinkWallSurge(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(aerErstAerosolBurst(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewDidAppear(_ aerErstPaintMotion: Bool) {
+        super.viewDidAppear(aerErstPaintMotion)
+        bruCiuSprayBloom()
     }
 
     private func aerErstMuralFlicker() {
@@ -171,17 +179,102 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     private func ponllPaintVeil() {
         flckinkTextureLean.translatesAutoresizingMaskIntoConstraints = false
 
-        let heroImage = UIImageView(image: UIImage(named: "aerosolDream"))
-        heroImage.contentMode = .scaleAspectFit
-        heroImage.translatesAutoresizingMaskIntoConstraints = false
-        flckinkTextureLean.addSubview(heroImage)
+        aerErstSprayBloom.contentMode = .scaleAspectFit
+        aerErstSprayBloom.translatesAutoresizingMaskIntoConstraints = false
+        flckinkTextureLean.addSubview(aerErstSprayBloom)
 
         NSLayoutConstraint.activate([
-            heroImage.leadingAnchor.constraint(equalTo: flckinkTextureLean.leadingAnchor),
-            heroImage.trailingAnchor.constraint(equalTo: flckinkTextureLean.trailingAnchor),
-            heroImage.topAnchor.constraint(equalTo: flckinkTextureLean.topAnchor),
-            heroImage.bottomAnchor.constraint(equalTo: flckinkTextureLean.bottomAnchor)
+            aerErstSprayBloom.leadingAnchor.constraint(equalTo: flckinkTextureLean.leadingAnchor),
+            aerErstSprayBloom.trailingAnchor.constraint(equalTo: flckinkTextureLean.trailingAnchor),
+            aerErstSprayBloom.topAnchor.constraint(equalTo: flckinkTextureLean.topAnchor),
+            aerErstSprayBloom.bottomAnchor.constraint(equalTo: flckinkTextureLean.bottomAnchor)
         ])
+    }
+
+    private func bruCiuSprayBloom() {
+        guard bruCiuWallBurst == .bruCiuAerosolQuest, !ponllPaintBloom else { return }
+        ponllPaintBloom = true
+        let flckinkPaintLayer = [aerErstSketchTwist, ponllPaintWeave, flckinkWallGlow]
+
+        guard !UIAccessibility.isReduceMotionEnabled else {
+            aerErstSprayBloom.alpha = 1
+            flckinkPaintLayer.forEach {
+                $0.alpha = 1
+                $0.transform = .identity
+            }
+            return
+        }
+
+        view.layoutIfNeeded()
+        let ponllLayerMask = CALayer()
+        ponllLayerMask.frame = aerErstSprayBloom.bounds
+
+        let aerErstPaintMist = CAGradientLayer()
+        aerErstPaintMist.type = .radial
+        aerErstPaintMist.colors = [
+            UIColor.white.cgColor,
+            UIColor.white.withAlphaComponent(0.92).cgColor,
+            UIColor.clear.cgColor
+        ]
+        aerErstPaintMist.locations = [0, 0.72, 1]
+        aerErstPaintMist.startPoint = CGPoint(x: 0.5, y: 0.5)
+        aerErstPaintMist.endPoint = CGPoint(x: 1, y: 1)
+        aerErstPaintMist.frame = ponllLayerMask.bounds.insetBy(
+            dx: -ponllLayerMask.bounds.width * 0.18,
+            dy: -ponllLayerMask.bounds.height * 0.18
+        )
+        ponllLayerMask.addSublayer(aerErstPaintMist)
+
+        let bruCiuSprayMist: [(CGFloat, CGFloat, CGFloat)] = [
+            (0.14, 0.32, 0.038), (0.21, 0.67, 0.026), (0.29, 0.18, 0.032),
+            (0.34, 0.79, 0.022), (0.42, 0.12, 0.025), (0.48, 0.88, 0.035),
+            (0.57, 0.17, 0.021), (0.64, 0.82, 0.028), (0.72, 0.22, 0.034),
+            (0.79, 0.69, 0.025), (0.86, 0.37, 0.031), (0.89, 0.55, 0.019)
+        ]
+        let flckinkSprayMist = max(min(ponllLayerMask.bounds.width, ponllLayerMask.bounds.height), 1)
+        bruCiuSprayMist.forEach { ponllPaintMist in
+            let bruCiuPaintMist = CALayer()
+            let aerErstPaintMist = flckinkSprayMist * ponllPaintMist.2
+            bruCiuPaintMist.frame = CGRect(
+                x: ponllLayerMask.bounds.width * ponllPaintMist.0 - aerErstPaintMist * 0.5,
+                y: ponllLayerMask.bounds.height * ponllPaintMist.1 - aerErstPaintMist * 0.5,
+                width: aerErstPaintMist,
+                height: aerErstPaintMist
+            )
+            bruCiuPaintMist.backgroundColor = UIColor.white.cgColor
+            bruCiuPaintMist.cornerRadius = aerErstPaintMist * 0.5
+            ponllLayerMask.addSublayer(bruCiuPaintMist)
+        }
+
+        ponllLayerMask.setAffineTransform(CGAffineTransform(scaleX: 0.08, y: 0.08))
+        aerErstSprayBloom.layer.mask = ponllLayerMask
+        aerErstSprayBloom.alpha = 1
+        let ponllPaintMotion = CABasicAnimation(keyPath: "transform.scale")
+        ponllPaintMotion.fromValue = 0.08
+        ponllPaintMotion.toValue = 1.35
+        ponllPaintMotion.duration = 0.68
+        ponllPaintMotion.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        ponllPaintMotion.isRemovedOnCompletion = false
+        ponllPaintMotion.fillMode = .forwards
+        ponllLayerMask.add(ponllPaintMotion, forKey: nil)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self, weak ponllLayerMask] in
+            guard let self, self.aerErstSprayBloom.layer.mask === ponllLayerMask else { return }
+            self.aerErstSprayBloom.layer.mask = nil
+        }
+
+        flckinkPaintLayer.enumerated().forEach { aerErstPaintDepth, ponllPaintLayer in
+            UIView.animate(
+                withDuration: 0.34,
+                delay: 0.16 + Double(aerErstPaintDepth) * 0.06,
+                usingSpringWithDamping: 0.88,
+                initialSpringVelocity: 0.2,
+                options: [.curveEaseOut, .beginFromCurrentState]
+            ) {
+                ponllPaintLayer.alpha = 1
+                ponllPaintLayer.transform = .identity
+            }
+        }
     }
 
     private func ponllMuralQuest() {
@@ -292,6 +385,10 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
         aerErstEnamelPaint.layer.cornerRadius = 14
         aerErstEnamelPaint.layer.borderWidth = 1.5
         aerErstEnamelPaint.layer.borderColor = UIColor(red: 42/255, green: 42/255, blue: 66/255, alpha: 1).cgColor
+        aerErstEnamelPaint.layer.shadowColor = PonllyPalette.cyan.cgColor
+        aerErstEnamelPaint.layer.shadowOffset = .zero
+        aerErstEnamelPaint.layer.shadowRadius = 0
+        aerErstEnamelPaint.layer.shadowOpacity = 0
         aerErstEnamelPaint.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
         aerErstEnamelPaint.leftViewMode = .always
         aerErstEnamelPaint.addTarget(self, action: #selector(ponllPaintCascade), for: .editingChanged)
@@ -411,6 +508,13 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
         aerErstAerosolGrit.isHidden = true
         aerErstPaintRipple.isHidden = true
         ponllInkGlow()
+        if !ponllPaintBloom {
+            aerErstSprayBloom.alpha = 0
+            [aerErstSketchTwist, ponllPaintWeave, flckinkWallGlow].forEach {
+                $0.alpha = 0
+                $0.transform = CGAffineTransform(translationX: 0, y: 14)
+            }
+        }
         view.endEditing(true)
     }
 
@@ -488,8 +592,57 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
         flckinkSketchCascade.alpha = 0
         flckinkSketchCascade.attributedText = nil
         [aerErstglossFinish, ponllNeonRhythm].forEach {
-            $0.layer.borderColor = ($0.isFirstResponder ? PonllyPalette.pink : PonllyPalette.line).cgColor
-            $0.layer.shadowOpacity = 0
+            let aerErstPaintGlow = $0.isFirstResponder
+            $0.layer.borderColor = (aerErstPaintGlow ? PonllyPalette.pink : PonllyPalette.line).cgColor
+            $0.layer.shadowRadius = aerErstPaintGlow ? 9 : 0
+            $0.layer.shadowOpacity = aerErstPaintGlow ? 0.22 : 0
+        }
+    }
+
+    private func aerErstNeonFlash(_ ponllPaintLayer: UIButton, flckinkPaintBloom: @escaping () -> Void) {
+        bruCiuPaintSignal.prepare()
+        bruCiuPaintSignal.notificationOccurred(.success)
+        guard !UIAccessibility.isReduceMotionEnabled else {
+            flckinkPaintBloom()
+            return
+        }
+
+        let aerErstPaintGlow = ponllPaintLayer.layer.shadowColor
+        let bruCiuPaintGlow = ponllPaintLayer.layer.shadowOpacity
+        let flckinkPaintGlow = ponllPaintLayer.layer.shadowRadius
+        let ponllPaintGlow = ponllPaintLayer.layer.shadowOffset
+        ponllPaintLayer.isEnabled = false
+        ponllPaintLayer.layer.shadowColor = PonllyPalette.cyan.cgColor
+        ponllPaintLayer.layer.shadowOffset = .zero
+
+        UIView.animateKeyframes(
+            withDuration: 0.36,
+            delay: 0,
+            options: [.calculationModeCubic, .beginFromCurrentState]
+        ) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.28) {
+                ponllPaintLayer.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
+                ponllPaintLayer.layer.shadowOpacity = 0.2
+                ponllPaintLayer.layer.shadowRadius = 10
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.28, relativeDuration: 0.42) {
+                ponllPaintLayer.transform = CGAffineTransform(scaleX: 1.025, y: 1.025)
+                ponllPaintLayer.layer.shadowOpacity = 0.58
+                ponllPaintLayer.layer.shadowRadius = 22
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.7, relativeDuration: 0.3) {
+                ponllPaintLayer.transform = .identity
+                ponllPaintLayer.layer.shadowOpacity = bruCiuPaintGlow
+                ponllPaintLayer.layer.shadowRadius = flckinkPaintGlow
+            }
+        } completion: { _ in
+            ponllPaintLayer.transform = .identity
+            ponllPaintLayer.layer.shadowColor = aerErstPaintGlow
+            ponllPaintLayer.layer.shadowOpacity = bruCiuPaintGlow
+            ponllPaintLayer.layer.shadowRadius = flckinkPaintGlow
+            ponllPaintLayer.layer.shadowOffset = ponllPaintGlow
+            ponllPaintLayer.isEnabled = true
+            flckinkPaintBloom()
         }
     }
 
@@ -570,7 +723,9 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
                 ponllMarkerDraft: flckinkShadowSpray,
                 bruCiuTextureDraft: ponllInkSpark
             )
-            navigationController?.pushViewController(ponllGraffitiDraft, animated: true)
+            aerErstNeonFlash(aerErstPaintRipple) {
+                self.navigationController?.pushViewController(ponllGraffitiDraft, animated: true)
+            }
             return
         }
 
@@ -580,7 +735,9 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
             self.aerErstPaintRipple.isEnabled = true
             self.aerErstPaintRipple.setTitle("L1o2g3i4n5".ponllPaintaerErstHours, for: .normal)
             if bruCiuMaskingTape {
-                self.dismiss(animated: true) { self.ponllInkSpark() }
+                self.aerErstNeonFlash(self.aerErstPaintRipple) {
+                    self.dismiss(animated: true) { self.ponllInkSpark() }
+                }
             } else {
                 self.aerErstPaintDepth(message ?? "I6n7v8a9laibdc deemfagihli jokrl mpnaospsqwrosrtdu".ponllPaintaerErstHours)
             }
@@ -611,11 +768,19 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     }
 
     @objc private func bruCiuChromeMotion(_ ponllNeonDraft: UITextField) {
-        ponllNeonDraft.layer.borderColor = PonllyPalette.pink.cgColor
+        UIView.animate(withDuration: 0.18, delay: 0, options: [.curveEaseOut, .beginFromCurrentState]) {
+            ponllNeonDraft.layer.borderColor = PonllyPalette.pink.cgColor
+            ponllNeonDraft.layer.shadowRadius = 9
+            ponllNeonDraft.layer.shadowOpacity = 0.22
+        }
     }
 
     @objc private func flckinkNeonCascade(_ ponllNeonDraft: UITextField) {
-        ponllNeonDraft.layer.borderColor = PonllyPalette.line.cgColor
+        UIView.animate(withDuration: 0.18, delay: 0, options: [.curveEaseOut, .beginFromCurrentState]) {
+            ponllNeonDraft.layer.borderColor = PonllyPalette.line.cgColor
+            ponllNeonDraft.layer.shadowRadius = 0
+            ponllNeonDraft.layer.shadowOpacity = 0
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -21,6 +21,7 @@ final class PasteupEchoController: UIViewController {
     var bruCiuAerosolBurst: ponllAerosolNoise = .flckinkStencilContrast
     private var flckinkInkSignal = false
     private var aerErststencilPlanSignal = false
+    private var ponllSprayBloom = false
     private var aerErstCanvasWall: CGFloat = 0
     var flckinkMuralBloom: [PonllystencilLab] {
         ponllPaintMap(bruCiuAerosolBurst)
@@ -32,11 +33,22 @@ final class PasteupEchoController: UIViewController {
     }
 
     private func ponllPaintMap(_ aerErstPaintPlan: ponllAerosolNoise) -> [PonllystencilLab] {
+        let flckinkPaintMap: [PonllystencilLab]
         switch aerErstPaintPlan {
         case .bruCiuMuralTexture:
-            return PonllyponllTornEdge.ponllPaintMap().filter { PonllyponllTornEdge.aerErstCrackedWall($0.letterForm) }
+            guard FlckinkMatteFinish.shared.ponllBlankFacade else { return [] }
+            flckinkPaintMap = PonllyponllTornEdge.ponllPaintMap().filter {
+                PonllyponllTornEdge.aerErstCrackedWall($0.letterForm)
+            }
         case .flckinkStencilContrast:
-            return PonllyponllTornEdge.ponllPaintMap()
+            flckinkPaintMap = PonllyponllTornEdge.ponllPaintMap()
+        }
+        guard !FlckinkMatteFinish.shared.ponllBlankFacade else { return flckinkPaintMap }
+        return flckinkPaintMap.map { ponllPaintLayer in
+            var bruCiuPaintLayer = ponllPaintLayer
+            bruCiuPaintLayer.wallTexture = false
+            bruCiuPaintLayer.brickTone = false
+            return bruCiuPaintLayer
         }
     }
 
@@ -145,24 +157,53 @@ final class PasteupEchoController: UIViewController {
     private func ponllPaintSignal(_ aerErstTextureRipple: UICollectionView, aerErstLayerMap: Int) {
         let bruCiuPaintSignal = PonllSprayCanControl()
         bruCiuPaintSignal.tag = aerErstLayerMap
-        bruCiuPaintSignal.flckinkPaintSignal(NSAttributedString(
-            string: "Rpeofnrlelsbhriuncgi aveirdeerosst.f.l.c".ponllPaintaerErstHours,
-            attributes: [
-                .foregroundColor: PonllyPalette.muted,
-                .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
-            ]
-        ))
+//        bruCiuPaintSignal.flckinkPaintSignal(NSAttributedString(
+//            string: "Rpeofnrlelsbhriuncgi aveirdeerosst.f.l.c".ponllPaintaerErstHours,
+//            attributes: [
+//                .foregroundColor: PonllyPalette.muted,
+//                .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
+//            ]
+//        ))
         bruCiuPaintSignal.addTarget(self, action: #selector(bruCiuAerosolSignal(_:)), for: .valueChanged)
         aerErstTextureRipple.refreshControl = bruCiuPaintSignal
     }
 
     private func flckinkstencilPlanl() {
         guard !aerErststencilPlanSignal else { return }
-        guard let bruCiuPaintSignal = aerErstTextureRipple.refreshControl else { return }
+        view.layoutIfNeeded()
+        flckinkTextureRipples.forEach { ponllTextureRipple in
+            ponllTextureRipple.visibleCells.forEach { $0.alpha = 0 }
+        }
+        ponllCanvasWall.alpha = 1
+        flckinkSprayBloom()
+    }
+
+    private func flckinkSprayBloom() {
+        guard !flckinkInkSignal, let bruCiuPaintSignal = aerErstTextureRipple.refreshControl else { return }
+        ponllSprayBloom = true
         bruCiuPaintSignal.beginRefreshing()
-        let ponllAerosolSignal = CGPoint(x: 0, y: -max(bruCiuPaintSignal.bounds.height, 52))
-        aerErstTextureRipple.setContentOffset(ponllAerosolSignal, animated: true)
+        let ponllAerosolSignal = aerErstPaintPath()
+        UIView.animate(
+            withDuration: 0.42,
+            delay: 0,
+            usingSpringWithDamping: 0.86,
+            initialSpringVelocity: 0.22,
+            options: [.curveEaseOut, .beginFromCurrentState, .allowUserInteraction]
+        ) {
+            self.aerErstTextureRipple.setContentOffset(ponllAerosolSignal, animated: false)
+            self.view.layoutIfNeeded()
+        }
         bruCiuAerosolSignal(bruCiuPaintSignal)
+    }
+
+    private func aerErstPaintPath() -> CGPoint {
+        view.layoutIfNeeded()
+        let ponllStylePath = aerErstSignBack.convert(aerErstSignBack.bounds, to: view)
+        let bruCiuStylePath = ponllWallRhythm.convert(ponllWallRhythm.bounds, to: view)
+        let flckinkPaintPath = max(ponllStylePath.maxY, bruCiuStylePath.maxY)
+            - aerErstTextureRipple.frame.minY + 66
+        let aerErstPaintDepth = max(flckinkPaintPath, 112)
+        return CGPoint(x: 0, y: -aerErstPaintDepth)
     }
 
     private func bruCiuPaintFlash() {
@@ -359,11 +400,15 @@ final class PasteupEchoController: UIViewController {
     }
 
     @objc private func bruCiuTextureSignal() {
+        guard bruCiuAerosolBurst != .bruCiuMuralTexture else { return }
         ponllLayerMap(0, bruCiuMuralBend: true)
+        flckinkSprayBloom()
     }
 
     @objc private func flckinkSketchCue() {
+        guard bruCiuAerosolBurst != .flckinkStencilContrast else { return }
         ponllLayerMap(1, bruCiuMuralBend: true)
+        flckinkSprayBloom()
     }
 
     @objc private func bruCiuPaintFlow(_ aerErstLayerMap: UISwipeGestureRecognizer) {
@@ -371,6 +416,7 @@ final class PasteupEchoController: UIViewController {
         let ponllLayerMap = aerErstLayerMap.direction == .left ? min(flckinkLayerMap + 1, 1) : max(flckinkLayerMap - 1, 0)
         guard ponllLayerMap != flckinkLayerMap else { return }
         self.ponllLayerMap(ponllLayerMap, bruCiuMuralBend: true)
+        flckinkSprayBloom()
     }
 
     @objc private func bruCiuAerosolSignal(_ ponllPaintSignal: UIRefreshControl) {
@@ -378,9 +424,19 @@ final class PasteupEchoController: UIViewController {
             ponllPaintSignal.endRefreshing()
             return
         }
+        if !ponllSprayBloom {
+            UIView.animate(
+                withDuration: 0.24,
+                delay: 0,
+                options: [.curveEaseOut, .beginFromCurrentState, .allowUserInteraction]
+            ) {
+                self.aerErstTextureRipple.setContentOffset(self.aerErstPaintPath(), animated: false)
+                self.view.layoutIfNeeded()
+            }
+        }
         flckinkInkSignal = true
         ponllStencilDepth()
-        aerErstSketchRush("Rpeofnrlelsbhriuncgi aveirdeerosst".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
+//        aerErstSketchRush("Rpeofnrlelsbhriuncgi aveirdeerosst".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.86) { [weak self] in
             guard let self else { return }
             if self.flckinkTextureRipples.indices.contains(ponllPaintSignal.tag) {
@@ -391,15 +447,22 @@ final class PasteupEchoController: UIViewController {
             ponllPaintSignal.endRefreshing()
             self.flckinkInkSignal = false
             let ponllInitialSignal = !self.aerErststencilPlanSignal
+            let flckinkSprayBloom = self.ponllSprayBloom
             self.aerErststencilPlanSignal = true
+            self.ponllSprayBloom = false
             if ponllInitialSignal {
-                UIView.animate(withDuration: 0.22, delay: 0, options: [.curveEaseOut]) {
-                    self.ponllCanvasWall.alpha = 1
-                    self.aerErstTextureRipple.setContentOffset(.zero, animated: false)
-                }
+                self.ponllCanvasWall.alpha = 1
+                self.aerErstTextureRipple.visibleCells.forEach { $0.alpha = 1 }
+            }
+            if flckinkSprayBloom,
+               self.flckinkTextureRipples.indices.contains(ponllPaintSignal.tag) {
+                let aerErstTextureRipple = self.flckinkTextureRipples[ponllPaintSignal.tag]
+                aerErstTextureRipple.layoutIfNeeded()
+                aerErstTextureRipple.visibleCells
+                    .compactMap { $0 as? MMuralGridell }
+                    .forEach { $0.aerErstAerosolBloom() }
             }
             self.bruCiuChromeAura()
-            self.aerErstSketchRush("Vpiodnelolsb ruupcdiaateerde".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
         }
     }
 }

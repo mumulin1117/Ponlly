@@ -15,10 +15,12 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
     var bruCiuTextureKick: (() -> Void)?
 
     private let flckinkSketchLean = AVPlayerLayer()
+    private let aerErstSprayShield = CALayer()
     private var aerErstPaintTwist: AVPlayer?
     private var ponllPaintTrace: Any?
     private var bruCiuPaintRipple: NSLayoutConstraint?
     private var ponllInkWeave = false
+    private var bruCiuSprayBloom = false
     private let bruCiuWallDepth = CAGradientLayer()
     private let flckinkAerosolGlow = UIButton(type: .system)
     private let aerErstMuralGrit = UIButton(type: .system)
@@ -56,6 +58,9 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         flckinkSketchLean.player = nil
         NotificationCenter.default.removeObserver(self)
         ponllInkWeave = false
+        bruCiuSprayBloom = false
+        flckinkSketchLean.mask = nil
+        aerErstSprayShield.sublayers?.forEach { $0.removeFromSuperlayer() }
         bruCiuChromeFlash()
     }
 
@@ -66,6 +71,9 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
     }
 
     func flckinkAerosolLean(ponllMuralTwist: PonllystencilLab) {
+        bruCiuSprayBloom = false
+        flckinkSketchLean.mask = nil
+        aerErstSprayShield.sublayers?.forEach { $0.removeFromSuperlayer() }
         aerErstPaintRipple()
         aerErstPaintTwist?.pause()
         aerErstPaintTwist = nil
@@ -102,6 +110,14 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         ponllInkWeave = true
         bruCiuChromeFlash()
         aerErstPaintTwist?.play()
+    }
+
+    func aerErstAerosolBloom() {
+        guard !bruCiuSprayBloom else { return }
+        layoutIfNeeded()
+        guard flckinkSketchLean.bounds.width > 0, flckinkSketchLean.bounds.height > 0 else { return }
+        bruCiuSprayBloom = true
+        ponllSprayBloom(flckinkSketchLean, bruCiuSprayShield: aerErstSprayShield)
     }
 
     func ponllPaintDepth() {

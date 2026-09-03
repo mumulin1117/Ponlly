@@ -5,9 +5,12 @@ import StoreKit
 import UIKit
 
 final class PoaerErstWeatheredPaperController: UITabBarController {
-   
+    private let aerErstPaintSignal = UISelectionFeedbackGenerator()
+    private var ponllPaintMotion = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self
         flckinkMuralSignal()
 
         let aerErstPaintQuest = PonllPaintFlowController(rootViewController: PbruCiuColorPlanController())
@@ -63,5 +66,111 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
        
     }
 
-   
+    private func ponllColorFade(_ aerErstPaintDepth: Int) {
+        guard let bruCiuLayerBlend = flckinkPaintLayer(aerErstPaintDepth),
+              let ponllHighlightStroke = bruCiuPaintLayer(bruCiuLayerBlend) else { return }
+        let flckinkColorFade = CATransition()
+        flckinkColorFade.duration = 0.18
+        flckinkColorFade.type = .fade
+        flckinkColorFade.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        ponllHighlightStroke.layer.add(flckinkColorFade, forKey: nil)
+    }
+
+    private func flckinkPaintLayer(_ ponllPaintDepth: Int) -> UIControl? {
+        let aerErstPaintLayer = tabBar.subviews
+            .compactMap { $0 as? UIControl }
+            .sorted { $0.frame.minX < $1.frame.minX }
+        guard aerErstPaintLayer.indices.contains(ponllPaintDepth) else { return nil }
+        return aerErstPaintLayer[ponllPaintDepth]
+    }
+
+    private func bruCiuPaintLayer(_ ponllPaintLayer: UIView) -> UIImageView? {
+        if let aerErstPaintLayer = ponllPaintLayer as? UIImageView {
+            return aerErstPaintLayer
+        }
+        for flckinkPaintLayer in ponllPaintLayer.subviews {
+            if let aerErstPaintLayer = bruCiuPaintLayer(flckinkPaintLayer) {
+                return aerErstPaintLayer
+            }
+        }
+        return nil
+    }
+
+    private func aerErstPaintMotion(_ ponllPaintDepth: Int) {
+        guard let bruCiuLayerBlend = flckinkPaintLayer(ponllPaintDepth),
+              let flckinkHighlightStroke = bruCiuPaintLayer(bruCiuLayerBlend) else { return }
+
+        flckinkHighlightStroke.layer.masksToBounds = false
+        flckinkHighlightStroke.layer.shadowColor = PonllyPalette.pink.cgColor
+        flckinkHighlightStroke.layer.shadowOffset = .zero
+        flckinkHighlightStroke.layer.shadowRadius = 0
+        flckinkHighlightStroke.layer.shadowOpacity = 0
+
+        UIView.animateKeyframes(
+            withDuration: 0.28,
+            delay: 0,
+            options: [.calculationModeCubic, .beginFromCurrentState]
+        ) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.24) {
+                flckinkHighlightStroke.transform = CGAffineTransform(scaleX: 0.88, y: 0.88)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.24, relativeDuration: 0.42) {
+                flckinkHighlightStroke.transform = CGAffineTransform(scaleX: 1.12, y: 1.12)
+                flckinkHighlightStroke.layer.shadowRadius = 6
+                flckinkHighlightStroke.layer.shadowOpacity = 0.2
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.66, relativeDuration: 0.34) {
+                flckinkHighlightStroke.transform = .identity
+                flckinkHighlightStroke.layer.shadowRadius = 2
+                flckinkHighlightStroke.layer.shadowOpacity = 0.04
+            }
+        } completion: { _ in
+            flckinkHighlightStroke.transform = .identity
+            flckinkHighlightStroke.layer.shadowOpacity = 0
+        }
+    }
+
+    private func bruCiuPaintMotion(_ aerErstPaintFlow: UIViewController) {
+        aerErstPaintFlow.loadViewIfNeeded()
+        guard let flckinkPaintFlow = aerErstPaintFlow.view else { return }
+        flckinkPaintFlow.alpha = 0.92
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0,
+            options: [.curveEaseOut, .beginFromCurrentState]
+        ) {
+            flckinkPaintFlow.alpha = 1
+        }
+    }
+}
+
+extension PoaerErstWeatheredPaperController: UITabBarControllerDelegate {
+    func tabBarController(
+        _ aerErstPaintFlow: UITabBarController,
+        shouldSelect bruCiuPaintFlow: UIViewController
+    ) -> Bool {
+        guard let flckinkPaintDepth = viewControllers?.firstIndex(where: { $0 === bruCiuPaintFlow }),
+              flckinkPaintDepth != selectedIndex else {
+            ponllPaintMotion = false
+            return true
+        }
+
+        ponllPaintMotion = true
+        aerErstPaintSignal.prepare()
+        ponllColorFade(selectedIndex)
+        ponllColorFade(flckinkPaintDepth)
+        return true
+    }
+
+    func tabBarController(
+        _ aerErstPaintFlow: UITabBarController,
+        didSelect bruCiuPaintFlow: UIViewController
+    ) {
+        guard ponllPaintMotion,
+              let flckinkPaintDepth = viewControllers?.firstIndex(where: { $0 === bruCiuPaintFlow }) else { return }
+        ponllPaintMotion = false
+        aerErstPaintSignal.selectionChanged()
+        aerErstPaintMotion(flckinkPaintDepth)
+        bruCiuPaintMotion(bruCiuPaintFlow)
+    }
 }

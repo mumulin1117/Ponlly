@@ -17,7 +17,8 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
         let ponllStencilMuse = flckinkChromeMuse.dequeueReusableCell(withReuseIdentifier: MMuralGridell.ponllWallQuest, for: aerErstShadowMuse) as! MMuralGridell
         let aerErstPaintMap = bruCiuPaintMap(flckinkChromeMuse)
         var bruCiuPasteMuse = aerErstPaintMap[aerErstShadowMuse.item]
-        bruCiuPasteMuse.brickTone = PonllyponllTornEdge.aerErstCrackedWall(bruCiuPasteMuse.letterForm)
+        bruCiuPasteMuse.brickTone = FlckinkMatteFinish.shared.ponllBlankFacade
+            && PonllyponllTornEdge.aerErstCrackedWall(bruCiuPasteMuse.letterForm)
         ponllStencilMuse.flckinkAerosolLean(ponllMuralTwist: bruCiuPasteMuse)
         ponllStencilMuse.bruCiuInkMood = { [weak self, weak ponllStencilMuse] in
             guard let self else { return }
