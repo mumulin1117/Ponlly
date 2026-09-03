@@ -98,13 +98,18 @@ final class BlckinkHiddenWallController: UIViewController {
         ponllStencilBloom.layer.cornerRadius = 12
         ponllStencilBloom.layer.borderWidth = 1
         ponllStencilBloom.layer.borderColor = PonllyPalette.line.cgColor
-        ponllStencilBloom.addAction(UIAction { [weak self] _ in
+        let aerErstWildstyleCurve = ErErstPaintLabView(bruCiuSprayRhythm, 44)
+        aerErstWildstyleCurve.accessibilityIdentifier = bruCiuSprayRhythm.graffitiPulse
+        ponllStencilBloom.addSubview(aerErstWildstyleCurve)
+        ponllStencilBloom.addAction(UIAction { [weak self, weak aerErstWildstyleCurve] _ in
             let flckinkMuralGrid = FlckinkPrimerCoatController(bruCiuSprayRhythm)
             flckinkMuralGrid.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(flckinkMuralGrid, animated: true)
+            self?.ponllPaintFlowPush(
+                flckinkMuralGrid,
+                bruCiuPaintFlow: aerErstWildstyleCurve,
+                aerErstGraffitiPulse: bruCiuSprayRhythm.graffitiPulse
+            )
         }, for: .touchUpInside)
-        let aerErstWildstyleCurve = ErErstPaintLabView(bruCiuSprayRhythm, 44)
-        ponllStencilBloom.addSubview(aerErstWildstyleCurve)
         let ponllBubbleLetter = UILabel()
         ponllBubbleLetter.text = bruCiuSprayRhythm.aerosolDream.lowercased()
         ponllBubbleLetter.textColor = .white

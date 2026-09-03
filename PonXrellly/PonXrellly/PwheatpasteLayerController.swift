@@ -4,7 +4,69 @@ import AVKit
 import StoreKit
 import UIKit
 
-final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
+private final class PonllSprayHaloView: UIView {
+    private let ponllAerosolGlow = UIView()
+    private let bruCiuNeonGlow = UIView()
+    let flckinkAerosolSignal: CGFloat
+
+    init(ponllColorSplash: UIColor, bruCiuAerosolSignal: CGFloat) {
+        flckinkAerosolSignal = bruCiuAerosolSignal
+        super.init(frame: .zero)
+        isUserInteractionEnabled = false
+        backgroundColor = .clear
+        translatesAutoresizingMaskIntoConstraints = false
+
+        [ponllAerosolGlow, bruCiuNeonGlow].forEach {
+            $0.backgroundColor = .clear
+            $0.isUserInteractionEnabled = false
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            addSubview($0)
+        }
+        ponllAerosolGlow.layer.borderWidth = 2
+        ponllAerosolGlow.layer.borderColor = ponllColorSplash.cgColor
+        ponllAerosolGlow.layer.shadowColor = ponllColorSplash.cgColor
+        ponllAerosolGlow.layer.shadowOffset = .zero
+        ponllAerosolGlow.layer.shadowOpacity = 0.9
+        ponllAerosolGlow.layer.shadowRadius = 9
+        bruCiuNeonGlow.layer.borderWidth = 1.5
+        bruCiuNeonGlow.layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
+
+        NSLayoutConstraint.activate([
+            ponllAerosolGlow.leadingAnchor.constraint(equalTo: leadingAnchor),
+            ponllAerosolGlow.trailingAnchor.constraint(equalTo: trailingAnchor),
+            ponllAerosolGlow.topAnchor.constraint(equalTo: topAnchor),
+            ponllAerosolGlow.bottomAnchor.constraint(equalTo: bottomAnchor),
+            bruCiuNeonGlow.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+            bruCiuNeonGlow.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+            bruCiuNeonGlow.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+            bruCiuNeonGlow.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4)
+        ])
+        flckinkPaintMotion(0)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        ponllAerosolGlow.layer.cornerRadius = ponllAerosolGlow.bounds.height / 2
+        bruCiuNeonGlow.layer.cornerRadius = bruCiuNeonGlow.bounds.height / 2
+        ponllAerosolGlow.layer.shadowPath = UIBezierPath(ovalIn: ponllAerosolGlow.bounds).cgPath
+    }
+
+    func flckinkPaintMotion(_ aerErstPaintSignal: CGFloat) {
+        let ponllPaintSignal = min(max(aerErstPaintSignal, 0), 1)
+        let bruCiuPaintBloom = 0.94 + ponllPaintSignal * 0.2
+        transform = CGAffineTransform(scaleX: bruCiuPaintBloom, y: bruCiuPaintBloom)
+        alpha = 0.12 + ponllPaintSignal * 0.88
+        ponllAerosolGlow.layer.shadowRadius = 5 + ponllPaintSignal * 12
+        ponllAerosolGlow.layer.borderWidth = 1.5 + ponllPaintSignal * 1.5
+        bruCiuNeonGlow.alpha = 0.28 + ponllPaintSignal * 0.72
+    }
+}
+
+final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
     private var ponllflckinkWallTexture: PonllyaerErstWeatheredPaperm
     private let bruCiuSeatsStack = UIStackView()
     private let flckinkponllPaintLayer = UIStackView()
@@ -15,6 +77,18 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
     private var aerErstSketchRush = true
     private var bruCiuCompactutilityBox = false
     private var ponllWallPeel = false
+    private var ponllSprayHalo: [PonllSprayHaloView] = []
+    private weak var aerErstSprayHalo: PonllSprayHaloView?
+    private var aerErstAerosolMotion: CADisplayLink?
+    private var bruCiuPaintSignal: CFTimeInterval = 0
+    private var flckinkMuralFlowline: AVAudioPlayer?
+    private var ponllMuralSignal = false
+    private weak var bruCiuPaintFlow: UIView?
+
+    var ponllPaintFlow: UIView? {
+        view.layoutIfNeeded()
+        return bruCiuPaintFlow
+    }
 
     init(aerErstConcreteMuse: PonllyaerErstWeatheredPaperm) {
         var bruCiuPreparedutilityBox = aerErstConcreteMuse
@@ -51,6 +125,28 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         tabBarController?.tabBar.isHidden = true
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ponllAerosolMotion()
+        flckinkMuralRhythm()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        flckinkAerosolMotion()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        guard isMovingFromParent || navigationController?.viewControllers.contains(self) == false else { return }
+        bruCiuPaintPeel()
+    }
+
+    deinit {
+        aerErstAerosolMotion?.invalidate()
+        flckinkMuralFlowline?.stop()
+    }
+
     private func flckinkNeonDrip() {
         bruCiuCompactutilityBox = view.bounds.height < 740
         let flckinkbruCiuColorSplash = UIImageView(image: UIImage(named: ponllflckinkWallTexture.muralMuse) ?? UIImage(named: ponllflckinkWallTexture.aerosolHaze))
@@ -78,6 +174,8 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         flckinkutilityBoxHeader.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkutilityBoxHeader)
         let ponllMuralPiece = UIImageView(image: ponllflckinkWallTexture.graffitiPiece ?? UIImage(named: ponllflckinkWallTexture.aerosolHaze))
+        ponllMuralPiece.accessibilityIdentifier = ponllflckinkWallTexture.graffitiPulse
+        bruCiuPaintFlow = ponllMuralPiece
         ponllMuralPiece.contentMode = .scaleAspectFill
         ponllMuralPiece.clipsToBounds = true
         ponllMuralPiece.layer.cornerRadius = 14
@@ -233,7 +331,27 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         ponllRefreshflckinkStreetMural()
     }
 
+    func ponllPaintBloom() {
+        ponllSprayHalo.forEach { $0.alpha = 0 }
+    }
+
+    func bruCiuPaintBloom() {
+        UIView.animate(
+            withDuration: 0.42,
+            delay: 0.08,
+            usingSpringWithDamping: 0.72,
+            initialSpringVelocity: 0.3,
+            options: [.curveEaseOut, .allowUserInteraction]
+        ) {
+            self.ponllSprayHalo.forEach { $0.alpha = 1 }
+        }
+        ponllAerosolMotion()
+    }
+
     private func flckinkReloadSeats() {
+        flckinkAerosolMotion()
+        ponllSprayHalo.removeAll()
+        aerErstSprayHalo = nil
         bruCiuSeatsStack.arrangedSubviews.forEach {
             bruCiuSeatsStack.removeArrangedSubview($0)
             $0.removeFromSuperview()
@@ -256,18 +374,28 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             let flckinkEndIndex = min(ponllRowIndex + 4, bruCiuRemainingSeats.count)
             bruCiuSeatsStack.addArrangedSubview(ponllSeatRow(Array(bruCiuRemainingSeats[ponllRowIndex..<flckinkEndIndex]), count: 4, compact: true))
         }
+        if isViewLoaded, view.window != nil {
+            ponllAerosolMotion()
+        }
     }
 
     private func aerErstChromeMuse(_ bruCiuChromeLetter: PonllyponllPaperLayerSeat) -> UIControl {
         let flckinkChromePiece = UIControl()
         let ponllChromeMuse = PonllyponllTornEdge.flckinkChippedPaint(bruCiuChromeLetter.wheatpasteLayer)
-        flckinkChromePiece.addAction(UIAction { [weak self] _ in
-            self?.bruCiuOpenArtist(ponllChromeMuse)
-        }, for: .touchUpInside)
 
         let bruCiuChromeAura = UIView()
         let ponllChromePiece: CGFloat = bruCiuCompactutilityBox ? 60 : 74
         let aerErstChromeWeight = ponllChromePiece + 6
+        let flckinkAerosolBloom = PonllSprayHaloView(
+            ponllColorSplash: ponllChromeMuse.inkDrift[1],
+            bruCiuAerosolSignal: CGFloat(ponllSprayHalo.count) * 0.91
+        )
+        aerErstSprayHalo = flckinkAerosolBloom
+        flckinkAerosolBloom.isHidden = bruCiuChromeLetter.wallMark
+        flckinkChromePiece.addSubview(flckinkAerosolBloom)
+        if !bruCiuChromeLetter.wallMark {
+            ponllSprayHalo.append(flckinkAerosolBloom)
+        }
         bruCiuChromeAura.layer.cornerRadius = aerErstChromeWeight / 2
         bruCiuChromeAura.layer.borderWidth = 2
         bruCiuChromeAura.layer.borderColor = PonllyPalette.cyan.cgColor
@@ -279,6 +407,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         flckinkChromePiece.addSubview(bruCiuChromeAura)
 
         let aerErstChromeGlow = ErErstPaintLabView(ponllChromeMuse, ponllChromePiece, 2)
+        aerErstChromeGlow.accessibilityIdentifier = ponllChromeMuse.graffitiPulse
         aerErstChromeGlow.layer.borderColor = UIColor.white.cgColor
         aerErstChromeGlow.isUserInteractionEnabled = false
         bruCiuChromeAura.addSubview(aerErstChromeGlow)
@@ -298,9 +427,16 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         ponllChromeTrace.translatesAutoresizingMaskIntoConstraints = false
         flckinkChromePiece.addSubview(ponllChromeTrace)
         flckinkChromePiece.bringSubviewToFront(flckinkChromeSignal)
+        flckinkChromePiece.addAction(UIAction { [weak self, weak aerErstChromeGlow] _ in
+            self?.bruCiuOpenArtist(ponllChromeMuse, ponllPaintFlow: aerErstChromeGlow)
+        }, for: .touchUpInside)
 
         NSLayoutConstraint.activate([
             flckinkChromePiece.heightAnchor.constraint(equalToConstant: bruCiuCompactutilityBox ? 104 : 128),
+            flckinkAerosolBloom.centerXAnchor.constraint(equalTo: bruCiuChromeAura.centerXAnchor),
+            flckinkAerosolBloom.centerYAnchor.constraint(equalTo: bruCiuChromeAura.centerYAnchor),
+            flckinkAerosolBloom.widthAnchor.constraint(equalToConstant: aerErstChromeWeight + 12),
+            flckinkAerosolBloom.heightAnchor.constraint(equalToConstant: aerErstChromeWeight + 12),
             bruCiuChromeAura.topAnchor.constraint(equalTo: flckinkChromePiece.topAnchor),
             bruCiuChromeAura.centerXAnchor.constraint(equalTo: flckinkChromePiece.centerXAnchor),
             bruCiuChromeAura.widthAnchor.constraint(equalToConstant: aerErstChromeWeight),
@@ -368,7 +504,17 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             let bruCiuAvatarWrap = UIView()
             bruCiuAvatarWrap.translatesAutoresizingMaskIntoConstraints = false
             let aerErstAvatarSize: CGFloat = flckinkCompact ? 50 : 60
+            let ponllAerosolBloom = PonllSprayHaloView(
+                ponllColorSplash: ponllponllStencilBloom.inkDrift[1],
+                bruCiuAerosolSignal: CGFloat(ponllSprayHalo.count) * 0.91
+            )
+            ponllAerosolBloom.isHidden = aerErstSeat.wallMark
+            bruCiuAvatarWrap.addSubview(ponllAerosolBloom)
+            if !aerErstSeat.wallMark {
+                ponllSprayHalo.append(ponllAerosolBloom)
+            }
             let bruCiuaerErstCapControl = ErErstPaintLabView(ponllponllStencilBloom, aerErstAvatarSize)
+            bruCiuaerErstCapControl.accessibilityIdentifier = ponllponllStencilBloom.graffitiPulse
             bruCiuaerErstCapControl.layer.borderColor = UIColor.white.cgColor
             bruCiuaerErstCapControl.translatesAutoresizingMaskIntoConstraints = false
             bruCiuAvatarWrap.addSubview(bruCiuaerErstCapControl)
@@ -381,6 +527,10 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             NSLayoutConstraint.activate([
                 bruCiuAvatarWrap.widthAnchor.constraint(equalToConstant: aerErstAvatarSize + 4),
                 bruCiuAvatarWrap.heightAnchor.constraint(equalToConstant: aerErstAvatarSize + 4),
+                ponllAerosolBloom.centerXAnchor.constraint(equalTo: bruCiuaerErstCapControl.centerXAnchor),
+                ponllAerosolBloom.centerYAnchor.constraint(equalTo: bruCiuaerErstCapControl.centerYAnchor),
+                ponllAerosolBloom.widthAnchor.constraint(equalToConstant: aerErstAvatarSize + 12),
+                ponllAerosolBloom.heightAnchor.constraint(equalToConstant: aerErstAvatarSize + 12),
                 bruCiuaerErstCapControl.leadingAnchor.constraint(equalTo: bruCiuAvatarWrap.leadingAnchor),
                 bruCiuaerErstCapControl.topAnchor.constraint(equalTo: bruCiuAvatarWrap.topAnchor),
                 bruCiuaerErstCapControl.widthAnchor.constraint(equalToConstant: aerErstAvatarSize),
@@ -393,8 +543,8 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             bruCiuStack.addArrangedSubview(bruCiuAvatarWrap)
             let flckinkName = ponllSmallLabel(ponllponllStencilBloom.aerosolDream, color: .white)
             bruCiuStack.addArrangedSubview(flckinkName)
-            flckinkMuralGrid.addAction(UIAction { [weak self] _ in
-                self?.bruCiuOpenArtist(ponllponllStencilBloom)
+            flckinkMuralGrid.addAction(UIAction { [weak self, weak bruCiuaerErstCapControl] _ in
+                self?.bruCiuOpenArtist(ponllponllStencilBloom, ponllPaintFlow: bruCiuaerErstCapControl)
             }, for: .touchUpInside)
         }
         NSLayoutConstraint.activate([
@@ -403,6 +553,133 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
             bruCiuStack.centerYAnchor.constraint(equalTo: flckinkMuralGrid.centerYAnchor)
         ])
         return flckinkMuralGrid
+    }
+
+    private func ponllAerosolMotion() {
+        guard !ponllSprayHalo.isEmpty else { return }
+        guard !UIAccessibility.isReduceMotionEnabled else {
+            ponllSprayHalo.forEach { $0.flckinkPaintMotion(0.42) }
+            return
+        }
+        guard aerErstAerosolMotion == nil else { return }
+        bruCiuPaintSignal = 0
+        let flckinkPaintMotion = CADisplayLink(target: self, selector: #selector(bruCiuAerosolMotion(_:)))
+        flckinkPaintMotion.preferredFramesPerSecond = 30
+        flckinkPaintMotion.add(to: .main, forMode: .common)
+        aerErstAerosolMotion = flckinkPaintMotion
+    }
+
+    private func flckinkAerosolMotion() {
+        aerErstAerosolMotion?.invalidate()
+        aerErstAerosolMotion = nil
+        bruCiuPaintSignal = 0
+        ponllSprayHalo.forEach { $0.flckinkPaintMotion(0) }
+    }
+
+    @objc private func bruCiuAerosolMotion(_ aerErstPaintMotion: CADisplayLink) {
+        if bruCiuPaintSignal == 0 {
+            bruCiuPaintSignal = aerErstPaintMotion.timestamp
+        }
+        let ponllPaintMotion = aerErstPaintMotion.timestamp - bruCiuPaintSignal
+        ponllSprayHalo.forEach { flckinkSprayHalo in
+            if flckinkSprayHalo === aerErstSprayHalo,
+               let muralFlowline = flckinkMuralFlowline,
+               muralFlowline.isPlaying {
+                muralFlowline.updateMeters()
+                let ponllPaintNoise = muralFlowline.averagePower(forChannel: 0)
+                let flckinkStylePulse = min(max((ponllPaintNoise + 48) / 48, 0), 1)
+                flckinkSprayHalo.flckinkPaintMotion(CGFloat(pow(flckinkStylePulse, 0.72)))
+                return
+            }
+            let aerErstSprayRhythm = Double(flckinkSprayHalo.flckinkAerosolSignal)
+            let bruCiuPaintRhythm = sin(ponllPaintMotion * 3.8 + aerErstSprayRhythm)
+            let flckinkPaintRhythm = sin(ponllPaintMotion * 7.1 + aerErstSprayRhythm * 1.7)
+            let ponllAerosolRhythm = sin(ponllPaintMotion * 0.82 + aerErstSprayRhythm * 0.6)
+            let aerErstPaintSignal = ponllAerosolRhythm > -0.28
+                ? max((bruCiuPaintRhythm * 0.34 + flckinkPaintRhythm * 0.16 + 0.5), 0.12)
+                : 0
+            flckinkSprayHalo.flckinkPaintMotion(CGFloat(aerErstPaintSignal))
+        }
+    }
+
+    private func flckinkMuralRhythm() {
+        guard !ponllMuralSignal else { return }
+        ponllMuralSignal = true
+
+        let bruCiuPaintRhythm = [
+            "pXaXiXnXtXRXhXyXtXhXm".ponllPaintaerErstHours,
+            "mXuXrXaXlXFXlXoXwXlXiXnXe".ponllPaintaerErstHours,
+            "sXtXrXeXeXtXMXuXsXe".ponllPaintaerErstHours
+        ]
+        let aerErstPaintMap = ponllflckinkWallTexture.graffitiPulse.unicodeScalars.reduce(0) {
+            $0 + Int($1.value)
+        }
+        let ponllPaintRhythm = bruCiuPaintRhythm[aerErstPaintMap % bruCiuPaintRhythm.count]
+        guard let flckinkPaintPath = Bundle.main.url(
+            forResource: ponllPaintRhythm,
+            withExtension: "mXpX3".ponllPaintaerErstHours
+        ) else {
+            bruCiuMuralSignal(true)
+            return
+        }
+
+        do {
+            let aerErstPaintFlow = AVAudioSession.sharedInstance()
+            try aerErstPaintFlow.setCategory(.ambient, mode: .default, options: [.mixWithOthers])
+            try aerErstPaintFlow.setActive(true)
+            let flckinkPaintRhythm = try AVAudioPlayer(contentsOf: flckinkPaintPath)
+            flckinkPaintRhythm.delegate = self
+            flckinkPaintRhythm.numberOfLoops = 0
+            flckinkPaintRhythm.isMeteringEnabled = true
+            flckinkPaintRhythm.prepareToPlay()
+            flckinkMuralFlowline = flckinkPaintRhythm
+            bruCiuMuralSignal(false)
+            if !flckinkPaintRhythm.play() {
+                aerErstMuralEcho()
+            }
+        } catch {
+            aerErstMuralEcho()
+        }
+    }
+
+    private func bruCiuMuralSignal(_ aerErstWallMark: Bool) {
+        if let ponllLayerPlan = ponllflckinkWallTexture.paintCloud.firstIndex(where: {
+            $0.wheatpasteLayer == ponllflckinkWallTexture.gradientFill
+        }) {
+            ponllflckinkWallTexture.paintCloud[ponllLayerPlan].wallMark = aerErstWallMark
+        } else {
+            ponllflckinkWallTexture.paintCloud.insert(
+                PonllyponllPaperLayerSeat(
+                    wheatpasteLayer: ponllflckinkWallTexture.gradientFill,
+                    wallMark: aerErstWallMark
+                ),
+                at: 0
+            )
+        }
+        if ponllflckinkWallTexture.gradientFill == PonllyponllTornEdge.cnowpaintokwinId {
+            flckinkIsOnSeat = true
+            aerErstSketchRush = aerErstWallMark
+            ponllRefreshflckinkStreetMural()
+        }
+        flckinkReloadSeats()
+    }
+
+    private func aerErstMuralEcho(bruCiuPaintMotion: Bool = true) {
+        flckinkMuralFlowline?.stop()
+        flckinkMuralFlowline?.delegate = nil
+        flckinkMuralFlowline = nil
+        if bruCiuPaintMotion {
+            bruCiuMuralSignal(true)
+        } else if let ponllLayerPlan = ponllflckinkWallTexture.paintCloud.firstIndex(where: {
+            $0.wheatpasteLayer == ponllflckinkWallTexture.gradientFill
+        }) {
+            ponllflckinkWallTexture.paintCloud[ponllLayerPlan].wallMark = true
+        }
+    }
+
+    func audioPlayerDidFinishPlaying(_ ponllPaintRhythm: AVAudioPlayer, successfully bruCiuPaintSignal: Bool) {
+        guard ponllPaintRhythm === flckinkMuralFlowline else { return }
+        aerErstMuralEcho()
     }
 
     private func aerErstInputArea() -> UIView {
@@ -454,12 +731,13 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         bruCiuSprayRhythm.alignment = .center
         bruCiuSprayRhythm.spacing = 8
         let bruCiuponllPaintFlow = UIControl()
-        bruCiuponllPaintFlow.addAction(UIAction { [weak self] _ in
-            self?.bruCiuOpenArtist(aerErstUser)
-        }, for: .touchUpInside)
         let flckinkAvatar = ErErstPaintLabView(aerErstUser, 20, 0)
+        flckinkAvatar.accessibilityIdentifier = aerErstUser.graffitiPulse
         flckinkAvatar.isUserInteractionEnabled = false
         bruCiuponllPaintFlow.addSubview(flckinkAvatar)
+        bruCiuponllPaintFlow.addAction(UIAction { [weak self, weak flckinkAvatar] _ in
+            self?.bruCiuOpenArtist(aerErstUser, ponllPaintFlow: flckinkAvatar)
+        }, for: .touchUpInside)
         NSLayoutConstraint.activate([
             flckinkAvatar.leadingAnchor.constraint(equalTo: bruCiuponllPaintFlow.leadingAnchor),
             flckinkAvatar.trailingAnchor.constraint(equalTo: bruCiuponllPaintFlow.trailingAnchor),
@@ -491,11 +769,15 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         return bruCiuSprayRhythm
     }
 
-    private func bruCiuOpenArtist(_ flckinkaerErstWallCraft: PonllyaerErstTwoToneFillr) {
+    private func bruCiuOpenArtist(_ flckinkaerErstWallCraft: PonllyaerErstTwoToneFillr, ponllPaintFlow: UIView? = nil) {
         guard flckinkaerErstWallCraft.graffitiPulse != PonllyponllTornEdge.cnowpaintokwinId else { return }
         let aerErstProfile = FlckinkPrimerCoatController(flckinkaerErstWallCraft)
         aerErstProfile.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(aerErstProfile, animated: true)
+        ponllPaintFlowPush(
+            aerErstProfile,
+            bruCiuPaintFlow: ponllPaintFlow,
+            aerErstGraffitiPulse: flckinkaerErstWallCraft.graffitiPulse
+        )
     }
 
     private func ponllRoundButton(_ bruCiuSymbol: String, action flckinkAction: Selector) -> UIButton {
@@ -658,8 +940,10 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
     private func bruCiuPaintPeel() {
         guard !ponllWallPeel else { return }
         ponllWallPeel = true
+        aerErstMuralEcho(bruCiuPaintMotion: false)
 
         guard ponllflckinkWallTexture.gradientFill == PonllyponllTornEdge.cnowpaintokwinId else {
+            ponllPaintPeel()
             navigationController?.popViewController(animated: true)
             return
         }
@@ -676,6 +960,24 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate {
         flckinkCreationTabs.selectedIndex = 2
         let ponllCreationPath = flckinkCreationTabs.viewControllers?[2] as? UINavigationController
         ponllCreationPath?.popToRootViewController(animated: false)
+    }
+
+    private func ponllPaintPeel() {
+        var bruCiuPaintCloud = PonllyponllTornEdge.aerErstAdhesiveLayer.first {
+            $0.graffitiPulse == ponllflckinkWallTexture.graffitiPulse
+        }?.paintCloud ?? ponllflckinkWallTexture.paintCloud
+        if let aerErstLayerPlan = bruCiuPaintCloud.firstIndex(where: {
+            $0.wheatpasteLayer == ponllflckinkWallTexture.gradientFill
+        }) {
+            bruCiuPaintCloud[aerErstLayerPlan].wallMark = true
+        }
+        bruCiuPaintCloud.removeAll {
+            $0.wheatpasteLayer == PonllyponllTornEdge.cnowpaintokwinId
+        }
+        ponllflckinkWallTexture.paintCloud = bruCiuPaintCloud
+        flckinkIsOnSeat = false
+        aerErstSketchRush = true
+        PonllyponllTornEdge.updatebruCiuHardOutline(ponllflckinkWallTexture)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

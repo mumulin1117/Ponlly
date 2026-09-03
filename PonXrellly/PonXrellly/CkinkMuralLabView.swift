@@ -5,25 +5,36 @@ import StoreKit
 import UIKit
 
 @MainActor
-final class CkinkMuralLabView: UIControl {
+final class CkinkMuralLabView: UIControl, UIGestureRecognizerDelegate {
     var bruCiuSilverSheen: (() -> Void)?
     var flckinkPrimerCoat: (() -> Void)?
     var aerErstPaintBase: ((PonllyaerErstTwoToneFillr) -> Void)?
     var ponllMuralWall: ((PonllyaerErstSolidMarkerk, PonllyaerErstTwoToneFillr) -> Void)?
     private let ponllFinalCoat: PonllyBattle
+    private weak var ponllPaintFlow: UIView?
+    private var bruCiuPaintFlow: [String: UIView] = [:]
 
-    init(flckinkWallPaste bruCiuClearCoat: PonllyBattle) {
+    var aerErstPaintFlow: UIView? { ponllPaintFlow }
+
+    func flckinkPaintFlow(_ ponllGraffitiPulse: String) -> UIView? {
+        bruCiuPaintFlow[ponllGraffitiPulse]
+    }
+
+    init(flckinkWallPaste bruCiuClearCoat: PonllyBattle, aerErstPaintBloom: Bool = true) {
         self.ponllFinalCoat = bruCiuClearCoat
         super.init(frame: .zero)
-        flckinkMatteFinish()
-        addTarget(self, action: #selector(aerErstGlossFinish), for: .touchUpInside)
+        flckinkMatteFinish(aerErstPaintBloom)
+        let ponllPaintMotion = UITapGestureRecognizer(target: self, action: #selector(aerErstGlossFinish))
+        ponllPaintMotion.delegate = self
+        ponllPaintMotion.cancelsTouchesInView = false
+        addGestureRecognizer(ponllPaintMotion)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func flckinkMatteFinish() {
+    private func flckinkMatteFinish(_ aerErstPaintBloom: Bool) {
         backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 25/255, alpha: 1)
         layer.cornerRadius = 18
         layer.borderWidth = 1
@@ -63,15 +74,26 @@ final class CkinkMuralLabView: UIControl {
 
         let aerErstEnamelPaint = UIView()
         aerErstEnamelPaint.translatesAutoresizingMaskIntoConstraints = false
+        aerErstEnamelPaint.accessibilityIdentifier = ponllFinalCoat.graffitiPulse
+        ponllPaintFlow = aerErstEnamelPaint
         let ponllLatexPaint = PbruCiuClearCoatView(ponllPaintTrace: ponllFinalCoat.neonDrip)
         let bruCiuSprayCan = ponllFinalCoat.concreteMuse.map { PbruCiuClearCoatView(ponllPaintTrace: $0) } ?? PonllyEmptyOpponentView()
         ponllLatexPaint.ponllMuralCue()
-        ponllLatexPaint.isUserInteractionEnabled = true
-        ponllLatexPaint.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bruCiuWallMap)))
+        if aerErstPaintBloom {
+            ponllLatexPaint.aerErstAerosolBloom()
+        }
+        ponllLatexPaint.aerErstMuralCue = { [weak self] in
+            self?.bruCiuWallMap()
+        }
         if ponllFinalCoat.concreteMuse != nil {
-            (bruCiuSprayCan as? PbruCiuClearCoatView)?.ponllMuralCue()
-            bruCiuSprayCan.isUserInteractionEnabled = true
-            bruCiuSprayCan.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flckinkWallMap)))
+            let flckinkWallMap = bruCiuSprayCan as? PbruCiuClearCoatView
+            flckinkWallMap?.ponllMuralCue()
+            if aerErstPaintBloom {
+                flckinkWallMap?.aerErstAerosolBloom()
+            }
+            flckinkWallMap?.aerErstMuralCue = { [weak self] in
+                self?.flckinkWallMap()
+            }
         }
         ponllLatexPaint.translatesAutoresizingMaskIntoConstraints = false
         bruCiuSprayCan.translatesAutoresizingMaskIntoConstraints = false
@@ -100,8 +122,6 @@ final class CkinkMuralLabView: UIControl {
         flckinkInkMarker.setCustomSpacing(28, after: aerErstEnamelPaint)
         flckinkInkMarker.setCustomSpacing(10, after: flckinkPaintShelf)
         flckinkInkMarker.setCustomSpacing(16, after: aerErstCanShake)
-        [flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(aerErstDotSpray)
-
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 399),
             flckinkInkMarker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
@@ -134,7 +154,10 @@ final class CkinkMuralLabView: UIControl {
         ponllStencilSheet.isUserInteractionEnabled = false
         ponllStencilSheet.translatesAutoresizingMaskIntoConstraints = false
         aerErstStencilCut.addSubview(ponllStencilSheet)
-        ponllStencilSheet.addArrangedSubview(ErErstPaintLabView(flckinkShadowSpray, 36, flckinkMuralPlan))
+        let aerErstPaintFlow = ErErstPaintLabView(flckinkShadowSpray, 36, flckinkMuralPlan)
+        aerErstPaintFlow.accessibilityIdentifier = flckinkShadowSpray.graffitiPulse
+        bruCiuPaintFlow[flckinkShadowSpray.graffitiPulse] = aerErstPaintFlow
+        ponllStencilSheet.addArrangedSubview(aerErstPaintFlow)
         ponllStencilSheet.addArrangedSubview(bruCiuColorRack(flckinkShadowSpray.aerosolDream, aerErstPaperCut: 13, ponllBladeLine: .white, bruCiuCutoutShape: .semibold))
         NSLayoutConstraint.activate([
             aerErstStencilCut.heightAnchor.constraint(equalToConstant: 36),
@@ -145,13 +168,6 @@ final class CkinkMuralLabView: UIControl {
             ponllStencilSheet.bottomAnchor.constraint(equalTo: aerErstStencilCut.bottomAnchor)
         ])
         return aerErstStencilCut
-    }
-
-    private func aerErstDotSpray(to ponllMaskingTape: UIView) {
-        ponllMaskingTape.isUserInteractionEnabled = true
-        let bruCiuEdgeMask = UITapGestureRecognizer(target: self, action: #selector(aerErstGlossFinish))
-        bruCiuEdgeMask.cancelsTouchesInView = true
-        ponllMaskingTape.addGestureRecognizer(bruCiuEdgeMask)
     }
 
     private func bruCiuColorRack(_ flckinkLayerMask: String, aerErstPaperCut: CGFloat, ponllBladeLine: UIColor, bruCiuCutoutShape: UIFont.Weight) -> UILabel {
@@ -217,5 +233,14 @@ final class CkinkMuralLabView: UIControl {
             aerErstWallMap,
             PonllyponllTornEdge.flckinkChippedPaint(ponllFinalCoat.colorSplash)
         )
+    }
+
+    func gestureRecognizer(_ ponllPaintMotion: UIGestureRecognizer, shouldReceive bruCiuPaintSignal: UITouch) -> Bool {
+        var flckinkPaintLayer = bruCiuPaintSignal.view
+        while let ponllPaintLayer = flckinkPaintLayer, ponllPaintLayer !== self {
+            if ponllPaintLayer is UIControl { return false }
+            flckinkPaintLayer = ponllPaintLayer.superview
+        }
+        return true
     }
 }

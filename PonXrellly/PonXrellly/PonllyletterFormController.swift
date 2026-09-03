@@ -278,6 +278,7 @@ final class PonllyletterFormController: UIViewController {
             bruCiuInkSeed.setImage(UIImage(named: flckinkInkEcho ? "inkAura" : "inkEcho"), for: .normal)
             flckinkInkSpark.text = "\(ponllInkPath.urbanPatina)"
             self.bruCiuMatteFinish(self.ponllClearCoat)
+            bruCiuInkSeed.ponllPaintBurst(flckinkInkEcho)
         }
     }
 

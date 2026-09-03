@@ -19,11 +19,16 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
         var bruCiuPasteMuse = aerErstPaintMap[aerErstShadowMuse.item]
         bruCiuPasteMuse.brickTone = PonllyponllTornEdge.aerErstCrackedWall(bruCiuPasteMuse.letterForm)
         ponllStencilMuse.flckinkAerosolLean(ponllMuralTwist: bruCiuPasteMuse)
-        ponllStencilMuse.bruCiuInkMood = { [weak self] in
+        ponllStencilMuse.bruCiuInkMood = { [weak self, weak ponllStencilMuse] in
             guard let self else { return }
-            let flckinkMarkerMuse = FlckinkPrimerCoatController(PonllyponllTornEdge.flckinkChippedPaint(bruCiuPasteMuse.letterForm))
+            let aerErstPaintMuse = PonllyponllTornEdge.flckinkChippedPaint(bruCiuPasteMuse.letterForm)
+            let flckinkMarkerMuse = FlckinkPrimerCoatController(aerErstPaintMuse)
             flckinkMarkerMuse.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(flckinkMarkerMuse, animated: true)
+            self.ponllPaintFlowPush(
+                flckinkMarkerMuse,
+                bruCiuPaintFlow: ponllStencilMuse?.ponllPaintFlow,
+                aerErstGraffitiPulse: aerErstPaintMuse.graffitiPulse
+            )
         }
         ponllStencilMuse.flckinkMarkerPath = { [weak self] in
             guard let self else { return }
@@ -35,14 +40,13 @@ extension PasteupEchoController: UICollectionViewDataSource, UICollectionViewDel
                 self.flckinkPrimerCoatponlu(ponllAerosolForge ? "Atrutviwsxty zfAoBlClDoEwFeGdH".ponllPaintaerErstHours : "AIrJtKiLsMtN OuPnQfRoSlTlUoVwWeXdY".ponllPaintaerErstHours)
             }
         }
-        ponllStencilMuse.aerErstChromeArc = { [weak self] in
+        ponllStencilMuse.aerErstChromeArc = { [weak self, weak ponllStencilMuse] in
             guard let self else { return }
             self.aerErstAerosolLean {
-                var bruCiuMuralForge = bruCiuPasteMuse
-                bruCiuMuralForge.wallTexture.toggle()
-                bruCiuMuralForge.wildstyleCurve += bruCiuMuralForge.wallTexture ? 1 : -1
-                self.bruCiuTextureNoise(bruCiuMuralForge)
-                self.flckinkPrimerCoatponlu(bruCiuMuralForge.wallTexture ? "AZd0d1e2d3 4t5o6 7y8o9uarb cldiekfegsh".ponllPaintaerErstHours : "Uipjdkaltmendo".ponllPaintaerErstHours)
+                bruCiuPasteMuse.wallTexture.toggle()
+                bruCiuPasteMuse.wildstyleCurve += bruCiuPasteMuse.wallTexture ? 1 : -1
+                self.ponllPaintBloom(bruCiuPasteMuse)
+                ponllStencilMuse?.ponllAerosolBurst(bruCiuPasteMuse.wallTexture)
             }
         }
         ponllStencilMuse.ponllNeonBend = { [weak self] in

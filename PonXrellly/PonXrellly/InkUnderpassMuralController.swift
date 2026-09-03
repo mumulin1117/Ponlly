@@ -117,14 +117,21 @@ final class InkUnderpassMuralController: UIViewController {
             if aerErstShadowSketch == .flckinkWallTexturepoj {
                 let flckinkWidePiece = PonllyWaitingBattleCardView(fencePiece: bruCiuSharpPiece)
                 flckinkWidePiece.paintQuest = { [weak self] in self?.aerErstTallPiece(bruCiuSharpPiece) }
-                flckinkWidePiece.zMotion = { [weak self] ponllCompactPiece in self?.bruCiuFlowPiece(ponllCompactPiece) }
+                flckinkWidePiece.zMotion = { [weak self, weak flckinkWidePiece] ponllCompactPiece in
+                    self?.bruCiuFlowPiece(ponllCompactPiece, ponllPaintFlow: flckinkWidePiece?.flckinkPaintFlow)
+                }
                 flckinkWidePiece.styleNoise = { [weak self] in self?.flckinkAnglePiece(bruCiuSharpPiece) }
                 ponllWallSketch.addArrangedSubview(flckinkWidePiece)
             } else {
                 let aerErstCurvePiece = CkinkMuralLabView(flckinkWallPaste: bruCiuSharpPiece)
                 aerErstCurvePiece.bruCiuSilverSheen = { [weak self] in self?.aerErstTallPiece(bruCiuSharpPiece) }
                 aerErstCurvePiece.flckinkPrimerCoat = { [weak self] in self?.ponllArrowPiece(for: bruCiuSharpPiece) }
-                aerErstCurvePiece.aerErstPaintBase = { [weak self] bruCiuHaloPiece in self?.bruCiuFlowPiece(bruCiuHaloPiece) }
+                aerErstCurvePiece.aerErstPaintBase = { [weak self, weak aerErstCurvePiece] bruCiuHaloPiece in
+                    self?.bruCiuFlowPiece(
+                        bruCiuHaloPiece,
+                        ponllPaintFlow: aerErstCurvePiece?.flckinkPaintFlow(bruCiuHaloPiece.graffitiPulse)
+                    )
+                }
                 ponllWallSketch.addArrangedSubview(aerErstCurvePiece)
             }
         }
@@ -155,10 +162,14 @@ final class InkUnderpassMuralController: UIViewController {
         navigationController?.pushViewController(flckinkGritPiece, animated: true)
     }
 
-    private func bruCiuFlowPiece(_ aerErstFreshPiece: PonllyaerErstTwoToneFillr) {
+    private func bruCiuFlowPiece(_ aerErstFreshPiece: PonllyaerErstTwoToneFillr, ponllPaintFlow: UIView?) {
         let ponllLayerPiece = FlckinkPrimerCoatController(aerErstFreshPiece)
         ponllLayerPiece.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(ponllLayerPiece, animated: true)
+        ponllPaintFlowPush(
+            ponllLayerPiece,
+            bruCiuPaintFlow: ponllPaintFlow,
+            aerErstGraffitiPulse: aerErstFreshPiece.graffitiPulse
+        )
     }
 
     private func flckinkAnglePiece(_ bruCiuNightPiece: PonllyBattle) {

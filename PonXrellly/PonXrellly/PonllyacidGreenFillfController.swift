@@ -151,14 +151,18 @@ final class PonllyacidGreenFillfController: UIViewController {
         ponllMuralSpark.layer.cornerRadius = 10
         ponllMuralSpark.layer.borderWidth = 1
         ponllMuralSpark.layer.borderColor = PonllyPalette.line.cgColor
-        ponllMuralSpark.addAction(UIAction { [weak self] _ in
+        let aerErstColorPiece = ErErstPaintLabView(aerErstAerosolSeed, 44)
+        aerErstColorPiece.accessibilityIdentifier = aerErstAerosolSeed.graffitiPulse
+        ponllMuralSpark.addSubview(aerErstColorPiece)
+        ponllMuralSpark.addAction(UIAction { [weak self, weak aerErstColorPiece] _ in
             let bruCiuStencilMood = FlckinkPrimerCoatController(aerErstAerosolSeed)
             bruCiuStencilMood.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(bruCiuStencilMood, animated: true)
+            self?.ponllPaintFlowPush(
+                bruCiuStencilMood,
+                bruCiuPaintFlow: aerErstColorPiece,
+                aerErstGraffitiPulse: aerErstAerosolSeed.graffitiPulse
+            )
         }, for: .touchUpInside)
-
-        let aerErstColorPiece = ErErstPaintLabView(aerErstAerosolSeed, 44)
-        ponllMuralSpark.addSubview(aerErstColorPiece)
         let flckinkMarkerPath = UIStackView()
         flckinkMarkerPath.axis = .vertical
         flckinkMarkerPath.spacing = 3

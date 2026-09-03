@@ -13,13 +13,11 @@ final class PasteupEchoController: UIViewController {
 
     let aerErstSignBack = UIButton(type: .system)
     let ponllWallRhythm = UIButton(type: .system)
-    let bruCiuChromeMotion = UIView()
     let flckinkNeonCascade = UIStackView()
     let ponllCanvasWall = UIScrollView()
     let bruCiuLayerPlan = UIStackView()
     var flckinkTextureRipples: [UICollectionView] = []
     var aerErstTextureRipple: UICollectionView!
-    var ponllPaintSurge: NSLayoutConstraint?
     var bruCiuAerosolBurst: ponllAerosolNoise = .flckinkStencilContrast
     private var flckinkInkSignal = false
     private var aerErststencilPlanSignal = false
@@ -145,16 +143,15 @@ final class PasteupEchoController: UIViewController {
     }
 
     private func ponllPaintSignal(_ aerErstTextureRipple: UICollectionView, aerErstLayerMap: Int) {
-        let bruCiuPaintSignal = UIRefreshControl()
+        let bruCiuPaintSignal = PonllSprayCanControl()
         bruCiuPaintSignal.tag = aerErstLayerMap
-        bruCiuPaintSignal.tintColor = PonllyPalette.cyan
-        bruCiuPaintSignal.attributedTitle = NSAttributedString(
+        bruCiuPaintSignal.flckinkPaintSignal(NSAttributedString(
             string: "Rpeofnrlelsbhriuncgi aveirdeerosst.f.l.c".ponllPaintaerErstHours,
             attributes: [
                 .foregroundColor: PonllyPalette.muted,
                 .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
             ]
-        )
+        ))
         bruCiuPaintSignal.addTarget(self, action: #selector(bruCiuAerosolSignal(_:)), for: .valueChanged)
         aerErstTextureRipple.refreshControl = bruCiuPaintSignal
     }
@@ -171,7 +168,7 @@ final class PasteupEchoController: UIViewController {
     private func bruCiuPaintFlash() {
         let aerErstAerosolFuse = UIStackView(arrangedSubviews: [aerErstSignBack, ponllWallRhythm])
         aerErstAerosolFuse.axis = .horizontal
-        aerErstAerosolFuse.spacing = 12
+        aerErstAerosolFuse.spacing = 10
         aerErstAerosolFuse.alignment = .center
         aerErstAerosolFuse.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aerErstAerosolFuse)
@@ -179,32 +176,45 @@ final class PasteupEchoController: UIViewController {
         ponllInkPath(aerErstSignBack, bruCiuMuralArc: "FxoylzlAoBwCiDnEg".ponllPaintaerErstHours, flckinkStencilBend: #selector(bruCiuTextureSignal))
         ponllInkPath(ponllWallRhythm, bruCiuMuralArc: "PYrZo0c1e2s3s4".ponllPaintaerErstHours, flckinkStencilBend: #selector(flckinkSketchCue))
 
-        bruCiuChromeMotion.backgroundColor = PonllyPalette.pink
-        bruCiuChromeMotion.layer.cornerRadius = 1.5
         aerErstAerosolFuse.layer.zPosition = 30
-        bruCiuChromeMotion.layer.zPosition = 31
-        bruCiuChromeMotion.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bruCiuChromeMotion)
-
-        ponllPaintSurge = bruCiuChromeMotion.centerXAnchor.constraint(equalTo: ponllWallRhythm.centerXAnchor)
         NSLayoutConstraint.activate([
             aerErstAerosolFuse.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             aerErstAerosolFuse.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
-            bruCiuChromeMotion.widthAnchor.constraint(equalToConstant: 20),
-            bruCiuChromeMotion.heightAnchor.constraint(equalToConstant: 3),
-            bruCiuChromeMotion.topAnchor.constraint(equalTo: ponllWallRhythm.bottomAnchor, constant: 6),
-            ponllPaintSurge!
+            aerErstSignBack.widthAnchor.constraint(equalToConstant: 106),
+            ponllWallRhythm.widthAnchor.constraint(equalToConstant: 106)
         ])
         view.bringSubviewToFront(aerErstAerosolFuse)
-        view.bringSubviewToFront(bruCiuChromeMotion)
     }
 
     private func ponllInkPath(_ bruCiuPaintSeed: UIButton, bruCiuMuralArc: String, flckinkStencilBend: Selector) {
-        bruCiuPaintSeed.setTitle(bruCiuMuralArc, for: .normal)
-        bruCiuPaintSeed.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        var ponllPaintLayer = UIButton.Configuration.plain()
+        ponllPaintLayer.title = bruCiuMuralArc
+        ponllPaintLayer.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 14, bottom: 0, trailing: 14)
+        ponllPaintLayer.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { ponllPaintLayer in
+            var bruCiuPaintLayer = ponllPaintLayer
+            bruCiuPaintLayer.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+            return bruCiuPaintLayer
+        }
+        bruCiuPaintSeed.configuration = ponllPaintLayer
         bruCiuPaintSeed.titleLabel?.adjustsFontSizeToFitWidth = true
         bruCiuPaintSeed.titleLabel?.minimumScaleFactor = 0.9
+        bruCiuPaintSeed.layer.cornerRadius = 16
+        bruCiuPaintSeed.heightAnchor.constraint(equalToConstant: 32).isActive = true
         bruCiuPaintSeed.addTarget(self, action: flckinkStencilBend, for: .touchUpInside)
+    }
+
+    private func flckinkInkGlow(_ bruCiuPaintSeed: UIButton, bruCiuPaintBloom: Bool) {
+        var ponllPaintLayer = bruCiuPaintSeed.configuration ?? UIButton.Configuration.plain()
+        ponllPaintLayer.baseForegroundColor = .white
+        ponllPaintLayer.background.backgroundColor = bruCiuPaintBloom
+            ? PonllyPalette.pink
+            : .clear
+        ponllPaintLayer.background.strokeColor = bruCiuPaintBloom
+            ? PonllyPalette.pink
+            : UIColor.white.withAlphaComponent(0.35)
+        ponllPaintLayer.background.strokeWidth = 1.5
+        ponllPaintLayer.background.cornerRadius = 16
+        bruCiuPaintSeed.configuration = ponllPaintLayer
     }
 
     private func flckinkInkFuse() {
@@ -212,6 +222,7 @@ final class PasteupEchoController: UIViewController {
         flckinkNeonCascade.alignment = .center
         flckinkNeonCascade.spacing = 14
         flckinkNeonCascade.isHidden = true
+        flckinkNeonCascade.isUserInteractionEnabled = false
         flckinkNeonCascade.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(flckinkNeonCascade)
 
@@ -227,14 +238,7 @@ final class PasteupEchoController: UIViewController {
         flckinkWallVeil.font = PonllyFonts.muralForgepon(neonLab: 18)
         flckinkWallVeil.textAlignment = .center
 
-        let ponllMuralAura = UILabel()
-        ponllMuralAura.text = "Fsotlulvowwx ysztArBeCeDtE FaGrHtIiJsKtLsM NfOrPoQmR SPTrUoVcWeXsYsZ 0t1o2 3b4u5i6l7d8 9yaobucrd ecflgihpi jlkalnmen.o".ponllPaintaerErstHours
-        ponllMuralAura.textColor = PonllyPalette.muted
-        ponllMuralAura.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
-        ponllMuralAura.numberOfLines = 0
-        ponllMuralAura.textAlignment = .center
-
-        [aerErstAerosolTrail, flckinkWallVeil, ponllMuralAura].forEach(flckinkNeonCascade.addArrangedSubview)
+        [aerErstAerosolTrail, flckinkWallVeil].forEach(flckinkNeonCascade.addArrangedSubview)
         NSLayoutConstraint.activate([
             flckinkNeonCascade.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             flckinkNeonCascade.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -245,19 +249,13 @@ final class PasteupEchoController: UIViewController {
 
     func aerErstMuralTrace() {
         let bruCiuStencilEcho = bruCiuAerosolBurst == .flckinkStencilContrast
-        aerErstSignBack.setTitleColor(bruCiuStencilEcho ? PonllyPalette.muted : PonllyPalette.pink, for: .normal)
-        ponllWallRhythm.setTitleColor(bruCiuStencilEcho ? PonllyPalette.pink : PonllyPalette.muted, for: .normal)
-        aerErstSignBack.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
-        ponllWallRhythm.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 13)
+        flckinkInkGlow(aerErstSignBack, bruCiuPaintBloom: !bruCiuStencilEcho)
+        flckinkInkGlow(ponllWallRhythm, bruCiuPaintBloom: bruCiuStencilEcho)
+        aerErstSignBack.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        ponllWallRhythm.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         flckinkTextureRipples.forEach { $0.isHidden = false }
-        flckinkNeonCascade.isHidden = !flckinkMuralBloom.isEmpty
-        aerErstTextureRipple.isHidden = flckinkMuralBloom.isEmpty
-        ponllPaintSurge?.isActive = false
-        ponllPaintSurge = bruCiuChromeMotion.centerXAnchor.constraint(equalTo: bruCiuStencilEcho ? ponllWallRhythm.centerXAnchor : aerErstSignBack.centerXAnchor)
-        ponllPaintSurge?.isActive = true
-        UIView.animate(withDuration: 0.22) {
-            self.view.layoutIfNeeded()
-        }
+        let ponllPaintBloom = bruCiuAerosolBurst == .bruCiuMuralTexture && flckinkMuralBloom.isEmpty
+        flckinkNeonCascade.isHidden = !ponllPaintBloom
     }
 
     func ponllStencilVeil() {
@@ -272,9 +270,22 @@ final class PasteupEchoController: UIViewController {
     }
 
     func bruCiuTextureNoise(_ flckinkSketchContrast: PonllystencilLab) {
+        ponllPaintBloom(flckinkSketchContrast)
+        ponllStencilVeil()
+    }
+
+    func ponllPaintBloom(_ flckinkSketchContrast: PonllystencilLab) {
         guard let aerErstsprayHaloe = PonllyponllTornEdge.ponllWallPeel.firstIndex(where: { $0.graffitiPulse == flckinkSketchContrast.graffitiPulse }) else { return }
         PonllyponllTornEdge.ponllWallPeel[aerErstsprayHaloe] = flckinkSketchContrast
-        ponllStencilVeil()
+        for aerErstTextureRipple in flckinkTextureRipples {
+            let bruCiuPaintPlan = bruCiuPaintMap(aerErstTextureRipple)
+            guard let flckinkLayerMap = bruCiuPaintPlan.firstIndex(where: { $0.graffitiPulse == flckinkSketchContrast.graffitiPulse }) else { continue }
+            let ponllPaintMap = IndexPath(item: flckinkLayerMap, section: 0)
+            (aerErstTextureRipple.cellForItem(at: ponllPaintMap) as? MMuralGridell)?.ponllPaintBloom(
+                flckinkSketchContrast.wallTexture,
+                aerErstPaintDepth: flckinkSketchContrast.wildstyleCurve
+            )
+        }
     }
 
     func flckinkAerosolRhythm(bruCiuMuralMotion: IndexPath) -> PonllystencilLab? {

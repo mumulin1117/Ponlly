@@ -66,18 +66,24 @@ final class VuonllMetallicSprayontroller: UIViewController {
         ponllflckinkLetterMaze.layer.cornerRadius = 18
         ponllflckinkLetterMaze.layer.borderWidth = 1
         ponllflckinkLetterMaze.layer.borderColor = PonllyPalette.line.cgColor
-        ponllflckinkLetterMaze.addAction(UIAction { [weak self] _ in
-            let bruCiuProfile = FlckinkPrimerCoatController(aerErstUser)
-            bruCiuProfile.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(bruCiuProfile, animated: true)
-        }, for: .touchUpInside)
         let flckinkRow = UIStackView()
         flckinkRow.axis = .horizontal
         flckinkRow.alignment = .center
         flckinkRow.spacing = 14
         flckinkRow.translatesAutoresizingMaskIntoConstraints = false
         ponllflckinkLetterMaze.addSubview(flckinkRow)
-        flckinkRow.addArrangedSubview(ErErstPaintLabView(aerErstUser, 54))
+        let ponllPaintFlow = ErErstPaintLabView(aerErstUser, 54)
+        ponllPaintFlow.accessibilityIdentifier = aerErstUser.graffitiPulse
+        flckinkRow.addArrangedSubview(ponllPaintFlow)
+        ponllflckinkLetterMaze.addAction(UIAction { [weak self, weak ponllPaintFlow] _ in
+            let bruCiuProfile = FlckinkPrimerCoatController(aerErstUser)
+            bruCiuProfile.hidesBottomBarWhenPushed = true
+            self?.ponllPaintFlowPush(
+                bruCiuProfile,
+                bruCiuPaintFlow: ponllPaintFlow,
+                aerErstGraffitiPulse: aerErstUser.graffitiPulse
+            )
+        }, for: .touchUpInside)
         let aerErstTextStack = UIStackView()
         aerErstTextStack.axis = .vertical
         aerErstTextStack.spacing = 4

@@ -88,7 +88,10 @@ final class FlckinkMatteFinish {
             return
         }
         let bruCiuAerosolSketch = PflckinkSqueezeMarkerController(bruCiuMuralBloom: ponllOversprayGlow)
-        let flckinkMuralSketch = UINavigationController(rootViewController: bruCiuAerosolSketch)
+        let flckinkMuralSketch = PonllPaintFlowController(
+            rootViewController: bruCiuAerosolSketch,
+            ponllPaintFlowStyle: .neonGlow
+        )
         flckinkMuralSketch.modalPresentationStyle = .fullScreen
         controller.present(flckinkMuralSketch, animated: true)
     }

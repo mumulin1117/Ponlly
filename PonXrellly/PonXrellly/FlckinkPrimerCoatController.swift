@@ -29,6 +29,12 @@ final class FlckinkPrimerCoatController: UIViewController {
     private let aerErstPaintLetter = UIStackView()
     private var ponllInkLetter: bruCiuConcretePiece = .flckinkWarehousePiece
     private var bruCiuMuralLetter: [UIButton] = []
+    private weak var ponllPaintFlow: UIView?
+
+    var bruCiuPaintFlow: UIView? {
+        view.layoutIfNeeded()
+        return ponllPaintFlow
+    }
 
     private var ponllPaintMuse: [PonllyaerErstSolidMarkerk] {
         PonllyponllTornEdge.aerErstflckinkPrimerCoatBack(ponllBlankFacade: flckinkCornerPiece.graffitiPulse)
@@ -198,6 +204,8 @@ final class FlckinkPrimerCoatController: UIViewController {
         let flckinkLetterWeave = ponllSharpLetter()
         bruCiuLetterTwist.addSubview(flckinkLetterWeave)
         let aerErstLetterPuzzle = ErErstPaintLabView(flckinkCornerPiece, 82)
+        aerErstLetterPuzzle.accessibilityIdentifier = flckinkCornerPiece.graffitiPulse
+        ponllPaintFlow = aerErstLetterPuzzle
         aerErstLetterPuzzle.layer.borderColor = PonllyPalette.pink.cgColor
         aerErstLetterPuzzle.layer.shadowColor = PonllyPalette.pink.cgColor
         aerErstLetterPuzzle.layer.shadowOpacity = 0.55

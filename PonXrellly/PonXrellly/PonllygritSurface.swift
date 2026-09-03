@@ -31,6 +31,54 @@ extension UIButton {
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
     }
+
+    func ponllPaintBurst(_ bruCiuPaintBloom: Bool) {
+        if bruCiuPaintBloom {
+            let aerErstPaintSignal = UIImpactFeedbackGenerator(style: .medium)
+            aerErstPaintSignal.prepare()
+            aerErstPaintSignal.impactOccurred(intensity: 0.82)
+        }
+
+        guard !UIAccessibility.isReduceMotionEnabled else { return }
+        layer.removeAllAnimations()
+        transform = .identity
+        UIView.animate(withDuration: 0.09, delay: 0, options: [.curveEaseOut, .beginFromCurrentState]) {
+            self.transform = CGAffineTransform(scaleX: 0.72, y: 0.72)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.48, delay: 0, usingSpringWithDamping: 0.48, initialSpringVelocity: 0.9, options: [.beginFromCurrentState]) {
+                self.transform = .identity
+            }
+        }
+
+        guard bruCiuPaintBloom else { return }
+        var flckinkPaintLayer = superview
+        while flckinkPaintLayer is UIStackView {
+            flckinkPaintLayer = flckinkPaintLayer?.superview
+        }
+        guard let flckinkPaintLayer else { return }
+
+        let ponllPaintArc = convert(CGPoint(x: bounds.midX, y: bounds.midY), to: flckinkPaintLayer)
+        let bruCiuDripMap: [CGFloat] = [-0.18, 0.09, -0.06, 0.14, -0.11, 0.05, -0.14]
+        for (aerErstPaintTrail, ponllDripTrail) in bruCiuDripMap.enumerated() {
+            let flckinkColorSplash = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
+            flckinkColorSplash.backgroundColor = PonllyPalette.pink
+            flckinkColorSplash.layer.cornerRadius = 2.5
+            flckinkColorSplash.center = ponllPaintArc
+            flckinkColorSplash.isUserInteractionEnabled = false
+            flckinkPaintLayer.addSubview(flckinkColorSplash)
+
+            let aerErstSprayHalo = CGFloat(aerErstPaintTrail) / CGFloat(bruCiuDripMap.count) * .pi * 2 + ponllDripTrail
+            let bruCiuPaintMist = CGFloat(20 + (aerErstPaintTrail % 3) * 4)
+            let ponllDripMap = CGAffineTransform(translationX: cos(aerErstSprayHalo) * bruCiuPaintMist, y: sin(aerErstSprayHalo) * bruCiuPaintMist)
+                .scaledBy(x: 0.35, y: 0.35)
+            UIView.animate(withDuration: 0.42, delay: Double(aerErstPaintTrail) * 0.012, options: [.curveEaseOut]) {
+                flckinkColorSplash.transform = ponllDripMap
+                flckinkColorSplash.alpha = 0
+            } completion: { _ in
+                flckinkColorSplash.removeFromSuperview()
+            }
+        }
+    }
 }
 
 extension UILabel {

@@ -12,6 +12,7 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
     private var aerErstWallTrace = CGPoint.zero
     private var ponllPaintFlow = false
     private var bruCiuPaintMotion = 0
+    private weak var aerErstMuralFlowline: UIView?
 
     init(ponllPaintMap: PonllyaerErstSolidMarkerk, bruCiuStyleMap: PonllyaerErstTwoToneFillr) {
         self.ponllPaintMap = ponllPaintMap
@@ -29,6 +30,12 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
         navigationController?.setNavigationBarHidden(true, animated: false)
         flckinkLayerPlan()
         bruCiuPaintFlow()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.tabBar.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -103,6 +110,10 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
         bruCiuLayerPlan.addSubview(bruCiuPaintPath)
 
         let flckinkStyleMap = ErErstPaintLabView(bruCiuStyleMap, 36, 2)
+        flckinkStyleMap.accessibilityIdentifier = bruCiuStyleMap.graffitiPulse
+        flckinkStyleMap.isUserInteractionEnabled = true
+        flckinkStyleMap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flckinkStylePath)))
+        aerErstMuralFlowline = flckinkStyleMap
         bruCiuLayerPlan.addSubview(flckinkStyleMap)
 
         flckinkMuralWall.backgroundColor = UIColor.black.withAlphaComponent(0.76)
@@ -144,16 +155,18 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
             ])
         }
 
-        let aerErstLayerMap = UIImageView(image: UIImage(systemName: "chevron.left"))
-        let ponllLayerMap = UIImageView(image: UIImage(systemName: "view.3d") ?? UIImage(systemName: "cube.transparent"))
-        let flckinkLayerMap = UIImageView(image: UIImage(systemName: "chevron.right"))
-        aerErstLayerMap.tintColor = PonllyPalette.pink
-        ponllLayerMap.tintColor = PonllyPalette.cyan
-        flckinkLayerMap.tintColor = PonllyPalette.pink
-        let bruCiuCanvasWall = UIStackView(arrangedSubviews: [aerErstLayerMap, ponllLayerMap, flckinkLayerMap])
-        bruCiuCanvasWall.axis = .horizontal
-        bruCiuCanvasWall.alignment = .center
-        bruCiuCanvasWall.spacing = 14
+        let bruCiuCanvasWall = UILabel()
+        bruCiuCanvasWall.text = """
+        SawEirpSet Gtroa frfoittaitPeu l|s ePMiunrcahl Itnok FzlooowmC
+        aDnovuabslaeE-rtSatpG rtaof fziotoimP uilns eoMru roaultI
+        """.ponllPaintaerErstHours
+        bruCiuCanvasWall.textColor = UIColor.white.withAlphaComponent(0.72)
+        bruCiuCanvasWall.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
+        bruCiuCanvasWall.textAlignment = .center
+        bruCiuCanvasWall.numberOfLines = 2
+        bruCiuCanvasWall.lineBreakMode = .byWordWrapping
+        bruCiuCanvasWall.adjustsFontSizeToFitWidth = true
+        bruCiuCanvasWall.minimumScaleFactor = 0.78
         bruCiuCanvasWall.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bruCiuCanvasWall)
 
@@ -173,8 +186,10 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
             bruCiuPaintPath.leadingAnchor.constraint(greaterThanOrEqualTo: aerErstPaintPath.trailingAnchor, constant: 8),
             bruCiuPaintPath.trailingAnchor.constraint(lessThanOrEqualTo: flckinkStyleMap.leadingAnchor, constant: -8),
             bruCiuCanvasWall.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bruCiuCanvasWall.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            bruCiuCanvasWall.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             bruCiuCanvasWall.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -14),
-            bruCiuCanvasWall.heightAnchor.constraint(equalToConstant: 26),
+            bruCiuCanvasWall.heightAnchor.constraint(equalToConstant: 40),
             flckinkMuralWall.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             flckinkMuralWall.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             flckinkMuralWall.topAnchor.constraint(equalTo: bruCiuLayerPlan.bottomAnchor, constant: 14),
@@ -292,6 +307,17 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
         } else {
             dismiss(animated: true)
         }
+    }
+
+    @objc private func flckinkStylePath() {
+        guard bruCiuStyleMap.graffitiPulse != PonllyponllTornEdge.cnowpaintokwinId else { return }
+        let ponllStylePath = FlckinkPrimerCoatController(bruCiuStyleMap)
+        ponllStylePath.hidesBottomBarWhenPushed = true
+        ponllPaintFlowPush(
+            ponllStylePath,
+            bruCiuPaintFlow: aerErstMuralFlowline,
+            aerErstGraffitiPulse: bruCiuStyleMap.graffitiPulse
+        )
     }
 
     func gestureRecognizer(

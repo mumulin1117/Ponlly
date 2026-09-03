@@ -128,6 +128,7 @@ final class PbruCiuColorPlanController: UIViewController {
             )
             ponllLayerPlan.translatesAutoresizingMaskIntoConstraints = false
             ponllLayerPlan.flckinkPaintSignal.tag = aerErstPaintPlan
+            ponllLayerPlan.ponllCanvasWall.delegate = self
             flckinkChromeSignal(ponllLayerPlan)
             bruCiuWallFlicker.addArrangedSubview(ponllLayerPlan)
             aerErstLayerPlans.append(ponllLayerPlan)
@@ -168,20 +169,26 @@ final class PbruCiuColorPlanController: UIViewController {
     }
 
     private func flckinkChromeSignal(_ ponllLayerPlan: PonllLayerPlanView) {
-        ponllLayerPlan.flckinkPaintSignal.tintColor = PonllyPalette.cyan
-        ponllLayerPlan.flckinkPaintSignal.attributedTitle = NSAttributedString(
+        ponllLayerPlan.flckinkPaintSignal.flckinkPaintSignal(NSAttributedString(
             string: "Rpeofnrlelsbhriuncgi abeartetrlset falrceknian.k.p.o".ponllPaintaerErstHours,
             attributes: [
                 .foregroundColor: PonllyPalette.muted,
                 .font: PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
             ]
-        )
+        ))
         ponllLayerPlan.flckinkPaintSignal.addTarget(self, action: #selector(aerErstPaintSignal(_:)), for: .valueChanged)
     }
 
     private func bruCiuPaintSignal() {
         guard !flckinkWallSignal else { return }
-        guard let ponllLayerPlan = aerErstLayerPlans.first else { return }
+        bruCiuPaintSignal(.bruCiuSprayBloomponll)
+    }
+
+    private func bruCiuPaintSignal(_ aerErstPaintPlan: PonllyBattleStatus) {
+        let ponllLayerMap = aerErstPaintPlan == .bruCiuSprayBloomponll ? 0 : 1
+        guard aerErstLayerPlans.indices.contains(ponllLayerMap) else { return }
+        let ponllLayerPlan = aerErstLayerPlans[ponllLayerMap]
+        guard !ponllLayerPlan.flckinkPaintSignal.isRefreshing else { return }
         ponllLayerPlan.flckinkPaintSignal.beginRefreshing()
         let aerErstAerosolSignal = CGPoint(x: 0, y: -max(ponllLayerPlan.flckinkPaintSignal.bounds.height, 52))
         ponllLayerPlan.ponllCanvasWall.setContentOffset(aerErstAerosolSignal, animated: true)
@@ -211,19 +218,35 @@ final class PbruCiuColorPlanController: UIViewController {
         for bruCiuAerosolNoise in ponllInkGrit {
             if aerErstPaintPlan == .flckinkWallTexturepoj {
                 let flckinkMuralTexture = PonllyWaitingBattleCardView(fencePiece: bruCiuAerosolNoise)
-                flckinkMuralTexture.paintQuest = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
-                flckinkMuralTexture.zMotion = { [weak self] aerErstStencilMotion in self?.flckinkNeonCascade(aerErstStencilMotion) }
-                flckinkMuralTexture.styleNoise = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
+                flckinkMuralTexture.paintQuest = { [weak self] in
+                    self?.bruCiuaerosolHazece(bruCiuAerosolNoise)
+                }
+                flckinkMuralTexture.zMotion = { [weak self, weak flckinkMuralTexture] aerErstStencilMotion in
+                    self?.flckinkNeonCascade(aerErstStencilMotion, ponllPaintFlow: flckinkMuralTexture?.flckinkPaintFlow)
+                }
+                flckinkMuralTexture.styleNoise = { [weak self] in
+                    self?.bruCiuaerosolHazece(bruCiuAerosolNoise)
+                }
                 flckinkMuralTexture.bruCiuMuralForge = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
                 flckinkMuralTexture.ponllMuralWall = { [weak self] ponllPaintMap, bruCiuStyleMap in
                     self?.aerErstMuralWall(ponllPaintMap, bruCiuStyleMap)
                 }
                 bruCiuLayerPlan.addArrangedSubview(flckinkMuralTexture)
             } else {
-                let aerErstSketchContrast = CkinkMuralLabView(flckinkWallPaste: bruCiuAerosolNoise)
-                aerErstSketchContrast.bruCiuSilverSheen = { [weak self] in self?.bruCiuaerosolHazece(bruCiuAerosolNoise) }
+                let aerErstSketchContrast = CkinkMuralLabView(
+                    flckinkWallPaste: bruCiuAerosolNoise,
+                    aerErstPaintBloom: false
+                )
+                aerErstSketchContrast.bruCiuSilverSheen = { [weak self] in
+                    self?.bruCiuaerosolHazece(bruCiuAerosolNoise)
+                }
                 aerErstSketchContrast.flckinkPrimerCoat = { [weak self] in self?.bruCiuPaintSurge(for: bruCiuAerosolNoise) }
-                aerErstSketchContrast.aerErstPaintBase = { [weak self] ponllWallBurst in self?.flckinkNeonCascade(ponllWallBurst) }
+                aerErstSketchContrast.aerErstPaintBase = { [weak self, weak aerErstSketchContrast] ponllWallBurst in
+                    self?.flckinkNeonCascade(
+                        ponllWallBurst,
+                        ponllPaintFlow: aerErstSketchContrast?.flckinkPaintFlow(ponllWallBurst.graffitiPulse)
+                    )
+                }
                 aerErstSketchContrast.ponllMuralWall = { [weak self] ponllPaintMap, bruCiuStyleMap in
                     self?.aerErstMuralWall(ponllPaintMap, bruCiuStyleMap)
                 }
@@ -278,10 +301,14 @@ final class PbruCiuColorPlanController: UIViewController {
         navigationController?.pushViewController(bruCiuMuralFlicker, animated: true)
     }
 
-    private func flckinkNeonCascade(_ flckinkStencilFlash: PonllyaerErstTwoToneFillr) {
+    private func flckinkNeonCascade(_ flckinkStencilFlash: PonllyaerErstTwoToneFillr, ponllPaintFlow: UIView?) {
         let aerErstChromeFuse = FlckinkPrimerCoatController(flckinkStencilFlash)
         aerErstChromeFuse.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(aerErstChromeFuse, animated: true)
+        ponllPaintFlowPush(
+            aerErstChromeFuse,
+            bruCiuPaintFlow: ponllPaintFlow,
+            aerErstGraffitiPulse: flckinkStencilFlash.graffitiPulse
+        )
     }
 
     private func ponllTextureRipple(_ ponllNeonTrace: PonllyBattle) {
@@ -317,7 +344,10 @@ final class PbruCiuColorPlanController: UIViewController {
     }
 
     @objc private func bruCiuSketchWeave(_ aerErstPaintPath: UIButton) {
+        let aerErstPaintPlan: PonllyBattleStatus = aerErstPaintPath.tag == 0 ? .bruCiuSprayBloomponll : .flckinkWallTexturepoj
+        guard aerErstPaintPlan != ponllStencilTrace else { return }
         ponllLayerMap(aerErstPaintPath.tag, bruCiuMuralBend: true)
+        bruCiuPaintSignal(aerErstPaintPlan)
     }
 
     @objc private func bruCiuPaintFlow(_ aerErstLayerMap: UISwipeGestureRecognizer) {
@@ -325,6 +355,7 @@ final class PbruCiuColorPlanController: UIViewController {
         let ponllLayerMap = aerErstLayerMap.direction == .left ? min(flckinkLayerMap + 1, 1) : max(flckinkLayerMap - 1, 0)
         guard ponllLayerMap != flckinkLayerMap else { return }
         self.ponllLayerMap(ponllLayerMap, bruCiuMuralBend: true)
+        bruCiuPaintSignal(ponllStencilTrace)
     }
 
     @objc private func ponllTexturePath() {
@@ -347,7 +378,7 @@ final class PbruCiuColorPlanController: UIViewController {
             return
         }
         bruCiuInkSignal = true
-        aerErstSketchRush("Rpeofnrlelsbhriuncgi abeartetrlset falrceknian".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
+//        aerErstSketchRush("Rpeofnrlelsbhriuncgi abeartetrlset falrceknian".ponllPaintaerErstHours, bruCiuLetterForm: .bruCiuEdgeSnap, flckinkFillPattern: 0.72)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.82) { [weak self] in
             guard let self else { return }
             let aerErstPaintPlan: PonllyBattleStatus = ponllPaintSignal.tag == 0 ? .bruCiuSprayBloomponll : .flckinkWallTexturepoj
@@ -362,7 +393,22 @@ final class PbruCiuColorPlanController: UIViewController {
                     self.ponllInkBloom.setContentOffset(.zero, animated: false)
                 }
             }
-            self.aerErstSketchRush("Bpaotntllleb raurceinaae rueprdsattfeldc".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
+            if self.aerErstLayerPlans.indices.contains(ponllPaintSignal.tag) {
+                self.flckinkAerosolBloom(self.aerErstLayerPlans[ponllPaintSignal.tag].bruCiuLayerPlan)
+            }
+//            self.aerErstSketchRush("Bpaotntllleb raurceinaae rueprdsattfeldc".ponllPaintaerErstHours, bruCiuLetterForm: .flckinkSplitFill, flckinkFillPattern: 1.1)
+        }
+    }
+
+    private func flckinkAerosolBloom(_ ponllWallMap: UIView) {
+        if let bruCiuPaintBloom = ponllWallMap as? PbruCiuClearCoatView {
+            bruCiuPaintBloom.aerErstAerosolBloom()
+        }
+        if let aerErstPaintFlowline = ponllWallMap as? PonllybruCiuUtilityBoxView {
+            aerErstPaintFlowline.aerErstPaintMotion()
+        }
+        for aerErstPaintLayer in ponllWallMap.subviews {
+            flckinkAerosolBloom(aerErstPaintLayer)
         }
     }
 }

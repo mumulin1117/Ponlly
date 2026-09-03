@@ -5,6 +5,9 @@ import StoreKit
 import UIKit
 
 final class ErstWeatheredPaperController: UIViewController {
+    private var ponllPaintCascade: [UIControl] = []
+    private var bruCiuPaintMotion = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
@@ -15,6 +18,31 @@ final class ErstWeatheredPaperController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = true
+        bruCiuPaintMotion = false
+        ponllPaintCascade.forEach {
+            $0.alpha = 0
+            $0.transform = CGAffineTransform(translationX: 0, y: 24)
+            $0.isUserInteractionEnabled = false
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        for (flckinkPaintDepth, aerErstPaintArc) in ponllPaintCascade.enumerated() {
+            UIView.animate(
+                withDuration: 0.42,
+                delay: Double(flckinkPaintDepth) * 0.06,
+                usingSpringWithDamping: 0.88,
+                initialSpringVelocity: 0.3,
+                options: [.curveEaseOut, .beginFromCurrentState]
+            ) {
+                aerErstPaintArc.alpha = 1
+                aerErstPaintArc.transform = .identity
+            } completion: { [weak self] _ in
+                guard flckinkPaintDepth == (self?.ponllPaintCascade.count ?? 0) - 1 else { return }
+                self?.ponllPaintCascade.forEach { $0.isUserInteractionEnabled = true }
+            }
+        }
     }
 
     private func flckinkGraffitiLab() {
@@ -47,9 +75,12 @@ final class ErstWeatheredPaperController: UIViewController {
         ponllMarkerLab.spacing = 17
         ponllMarkerLab.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(ponllMarkerLab)
-        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "Piojsktl mVniodpeqor".ponllPaintaerErstHours, bruCiuAerosolMuse: "Sshtaurvew xpyrzoAgBrCeDsEsF GtHiImJeKlLaMpNsOePsQ R&S TtUuVtWoXrYiZa0l1s2".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.cyan, aerErstStreetMuse: "aerosolQuest", ponllPaintMuse: #selector(bruCiuInkMuse)))
-        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "S3t4a5r6t7 8P9Ka bBcadtetflgeh".ponllPaintaerErstHours, bruCiuAerosolMuse: "Cihjaklllmennogpeq rasntoutvhwexry zwArBiCtDeErF GtHoI JaK LbMaNtOtPlQeR".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.green, aerErstStreetMuse: "muralCue", ponllPaintMuse: #selector(flckinkStyleLab)))
-        ponllMarkerLab.addArrangedSubview(bruCiuStencilLab(ponllMuralLab: "CSrTeUaVtWeX YVZo0i1c2e3 4R5o6o7m8".ponllPaintaerErstHours, bruCiuAerosolMuse: "H9aanbgcoduetf,g hriejvkilemwn oypaqrrdsst,u vowrx yczrAiBtCiDqEuFeG".ponllPaintaerErstHours, flckinkMuralMuse: .white, aerErstStreetMuse: "stencilSeed", ponllPaintMuse: #selector(aerErstWallMuse)))
+        ponllPaintCascade = [
+            bruCiuStencilLab(ponllMuralLab: "Piojsktl mVniodpeqor".ponllPaintaerErstHours, bruCiuAerosolMuse: "Sshtaurvew xpyrzoAgBrCeDsEsF GtHiImJeKlLaMpNsOePsQ R&S TtUuVtWoXrYiZa0l1s2".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.cyan, aerErstStreetMuse: "aerosolQuest", ponllPaintMuse: #selector(bruCiuInkMuse(_:))),
+            bruCiuStencilLab(ponllMuralLab: "S3t4a5r6t7 8P9Ka bBcadtetflgeh".ponllPaintaerErstHours, bruCiuAerosolMuse: "Cihjaklllmennogpeq rasntoutvhwexry zwArBiCtDeErF GtHoI JaK LbMaNtOtPlQeR".ponllPaintaerErstHours, flckinkMuralMuse: PonllyPalette.green, aerErstStreetMuse: "muralCue", ponllPaintMuse: #selector(flckinkStyleLab(_:))),
+            bruCiuStencilLab(ponllMuralLab: "CSrTeUaVtWeX YVZo0i1c2e3 4R5o6o7m8".ponllPaintaerErstHours, bruCiuAerosolMuse: "H9aanbgcoduetf,g hriejvkilemwn oypaqrrdsst,u vowrx yczrAiBtCiDqEuFeG".ponllPaintaerErstHours, flckinkMuralMuse: .white, aerErstStreetMuse: "stencilSeed", ponllPaintMuse: #selector(aerErstWallMuse(_:)))
+        ]
+        ponllPaintCascade.forEach { ponllMarkerLab.addArrangedSubview($0) }
 
         let bruCiuLetterMuse = UILabel()
         bruCiuLetterMuse.text = "LHeIaJvKeL MYNoOuPrQ RMSaTrUkV".ponllPaintaerErstHours
@@ -127,11 +158,14 @@ final class ErstWeatheredPaperController: UIViewController {
         return bruCiuInkMuse
     }
 
-    @objc private func flckinkStyleLab() {
-        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            let bruCiuWallMuse = BruCiuPrintLayerController()
-            bruCiuWallMuse.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(bruCiuWallMuse, animated: true)
+    @objc private func flckinkStyleLab(_ ponllPaintArc: UIControl) {
+        aerErstPaintBloom(ponllPaintArc) { [weak self] in
+            guard let self else { return }
+            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+                let bruCiuWallMuse = BruCiuPrintLayerController()
+                bruCiuWallMuse.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(bruCiuWallMuse, animated: true)
+            }
         }
     }
 
@@ -139,19 +173,48 @@ final class ErstWeatheredPaperController: UIViewController {
         tabBarController?.selectedIndex = 0
     }
 
-    @objc private func bruCiuInkMuse() {
-        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            let flckinkDripMuse = DinkWallTextureController()
-            flckinkDripMuse.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(flckinkDripMuse, animated: true)
+    @objc private func bruCiuInkMuse(_ ponllPaintArc: UIControl) {
+        aerErstPaintBloom(ponllPaintArc) { [weak self] in
+            guard let self else { return }
+            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+                let flckinkDripMuse = DinkWallTextureController()
+                flckinkDripMuse.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(flckinkDripMuse, animated: true)
+            }
         }
     }
 
-    @objc private func aerErstWallMuse() {
-        FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
-            let ponllTextureMuse = PonllystencilCascadeTroller()
-            ponllTextureMuse.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(ponllTextureMuse, animated: true)
+    @objc private func aerErstWallMuse(_ ponllPaintArc: UIControl) {
+        aerErstPaintBloom(ponllPaintArc) { [weak self] in
+            guard let self else { return }
+            FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
+                let ponllTextureMuse = PonllystencilCascadeTroller()
+                ponllTextureMuse.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(ponllTextureMuse, animated: true)
+            }
+        }
+    }
+
+    private func aerErstPaintBloom(_ ponllPaintArc: UIControl, bruCiuPaintFlow: @escaping () -> Void) {
+        guard !bruCiuPaintMotion else { return }
+        bruCiuPaintMotion = true
+        ponllPaintCascade.forEach { $0.isUserInteractionEnabled = false }
+
+        UIView.animate(
+            withDuration: 0.24,
+            delay: 0,
+            options: [.curveEaseInOut, .beginFromCurrentState]
+        ) {
+            self.ponllPaintCascade.forEach {
+                if $0 === ponllPaintArc {
+                    $0.transform = CGAffineTransform(scaleX: 1.04, y: 1.04)
+                } else {
+                    $0.alpha = 0
+                    $0.transform = CGAffineTransform(scaleX: 0.96, y: 0.96)
+                }
+            }
+        } completion: { _ in
+            bruCiuPaintFlow()
         }
     }
 }

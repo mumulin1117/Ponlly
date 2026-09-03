@@ -5,19 +5,27 @@ import StoreKit
 import UIKit
 
 @MainActor
-final class PonllyWaitingBattleCardView: UIControl {
+final class PonllyWaitingBattleCardView: UIControl, UIGestureRecognizerDelegate {
     var paintQuest: (() -> Void)?
     var zMotion: ((PonllyaerErstTwoToneFillr) -> Void)?
     var styleNoise: (() -> Void)?
     var bruCiuMuralForge: (() -> Void)?
     var ponllMuralWall: ((PonllyaerErstSolidMarkerk, PonllyaerErstTwoToneFillr) -> Void)?
     private let ponllBattleSignal: PonllyBattle
+    private weak var ponllPaintFlow: UIView?
+    private weak var bruCiuPaintFlow: UIView?
+
+    var aerErstPaintFlow: UIView? { ponllPaintFlow }
+    var flckinkPaintFlow: UIView? { bruCiuPaintFlow }
 
     init(fencePiece ponllBattleSignal: PonllyBattle) {
         self.ponllBattleSignal = ponllBattleSignal
         super.init(frame: .zero)
         bruCiustyleArc()
-        addTarget(self, action: #selector(flckinkcurvedLetter), for: .touchUpInside)
+        let ponllPaintMotion = UITapGestureRecognizer(target: self, action: #selector(flckinkcurvedLetter))
+        ponllPaintMotion.delegate = self
+        ponllPaintMotion.cancelsTouchesInView = false
+        addGestureRecognizer(ponllPaintMotion)
     }
 
     required init?(coder: NSCoder) {
@@ -38,12 +46,16 @@ final class PonllyWaitingBattleCardView: UIControl {
         addSubview(aerErstStackPath)
 
         let ponllArtworkPanel = PbruCiuClearCoatView(ponllPaintTrace: ponllBattleSignal.neonDrip)
+        ponllArtworkPanel.accessibilityIdentifier = ponllBattleSignal.graffitiPulse
+        ponllPaintFlow = ponllArtworkPanel
         ponllArtworkPanel.layer.cornerRadius = 14
         ponllArtworkPanel.clipsToBounds = true
         ponllArtworkPanel.heightAnchor.constraint(equalToConstant: 210).isActive = true
         ponllArtworkPanel.ponllMuralCue()
-        ponllArtworkPanel.isUserInteractionEnabled = true
-        ponllArtworkPanel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ponllWallMap)))
+        ponllArtworkPanel.aerErstAerosolBloom()
+        ponllArtworkPanel.aerErstMuralCue = { [weak self] in
+            self?.ponllWallMap()
+        }
 
         let bruCiuMoreButton = UIButton(type: .system)
         bruCiuMoreButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
@@ -78,6 +90,8 @@ final class PonllyWaitingBattleCardView: UIControl {
         flckinkArtistRow.translatesAutoresizingMaskIntoConstraints = false
         let aerErstUserMark = PonllyponllTornEdge.flckinkChippedPaint(ponllBattleSignal.paintMist)
         let aerErstCutar = ErErstPaintLabView(aerErstUserMark, 36, 2)
+        aerErstCutar.accessibilityIdentifier = aerErstUserMark.graffitiPulse
+        bruCiuPaintFlow = aerErstCutar
         aerErstCutar.isUserInteractionEnabled = false
         bruCiuArtistButton.addSubview(aerErstCutar)
         let aerErstUserName = ponllwideLetter(aerErstUserMark.aerosolDream, softLetter: 13, sharpLetter: .white, blockyLetter: .semibold)
@@ -99,7 +113,6 @@ final class PonllyWaitingBattleCardView: UIControl {
         aerErstStackPath.setCustomSpacing(18, after: ponllArtworkPanel)
         aerErstStackPath.setCustomSpacing(12, after: flckinkTitleRow)
         aerErstStackPath.setCustomSpacing(18, after: flckinkArtistRow)
-        [flckinkTitleRow].forEach(flckinkAttachangularLetter)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 399),
             aerErstStackPath.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
@@ -120,13 +133,6 @@ final class PonllyWaitingBattleCardView: UIControl {
         bruCiuLabel.font = ponllWeight == .black ? PonllyFonts.muralForgepon(neonLab: flckinkSize) : PonllyFonts.utilityBox(blankFacade: flckinkSize, aerosolMuse: ponllWeight)
         bruCiuLabel.textColor = aerErstColor
         return bruCiuLabel
-    }
-
-    private func flckinkAttachangularLetter(compactLetter aerErstView: UIView) {
-        aerErstView.isUserInteractionEnabled = true
-        let tallLetter = UITapGestureRecognizer(target: self, action: #selector(flckinkcurvedLetter))
-        tallLetter.cancelsTouchesInView = true
-        aerErstView.addGestureRecognizer(tallLetter)
     }
 
     @objc private func flckinkcurvedLetter() {
@@ -150,5 +156,14 @@ final class PonllyWaitingBattleCardView: UIControl {
             ponllBattleSignal.neonDrip,
             PonllyponllTornEdge.flckinkChippedPaint(ponllBattleSignal.paintMist)
         )
+    }
+
+    func gestureRecognizer(_ ponllPaintMotion: UIGestureRecognizer, shouldReceive bruCiuPaintSignal: UITouch) -> Bool {
+        var flckinkPaintLayer = bruCiuPaintSignal.view
+        while let ponllPaintLayer = flckinkPaintLayer, ponllPaintLayer !== self {
+            if ponllPaintLayer is UIControl { return false }
+            flckinkPaintLayer = ponllPaintLayer.superview
+        }
+        return true
     }
 }

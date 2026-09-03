@@ -33,6 +33,11 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
     private let ponllWallSurge = UILabel()
     private let bruCiuAerosolBurst = UIButton(type: .system)
     private let flckinkMuralBloom = UILabel()
+    private let ponllPaintSignal = UIImpactFeedbackGenerator(style: .medium)
+
+    var ponllPaintFlow: UIView? {
+        aerErstMuralGrit.subviews.first { $0 is ErErstPaintLabView }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,19 +75,13 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         let bruCiuStencilWeave = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralTwist.letterForm)
         bruCiuMarkerTexture.text = "@\(bruCiuStencilWeave.aerosolDream.lowercased())"
         flckinkChromeContrast.text = ponllMuralTwist.fillPattern
-        flckinkPaintCascade.text = aerErstPaintDepth(ponllMuralTwist.wildstyleCurve)
         ponllWallSurge.text = aerErstPaintDepth(ponllMuralTwist.paintLayer)
-        ponllStencilNoise.setTitle(ponllMuralTwist.brickTone ? "F2o3l4l5o6w7i8n9ga".ponllPaintaerErstHours : "Fbocldleofwg".ponllPaintaerErstHours, for: .normal)
-        if ponllMuralTwist.wallTexture {
-            bruCiuSketchMotion.tintColor = .white
-            bruCiuSketchMotion.setImage(UIImage(named: "neonSignal")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        } else {
-            bruCiuSketchMotion.tintColor = .white
-            bruCiuSketchMotion.setImage(UIImage(systemName: "heart"), for: .normal)
-        }
+        ponllStencilGlow(ponllMuralTwist.brickTone)
+        ponllPaintBloom(ponllMuralTwist.wallTexture, aerErstPaintDepth: ponllMuralTwist.wildstyleCurve)
 
         aerErstMuralGrit.subviews.forEach { $0.removeFromSuperview() }
         let flckinkAerosolDepth = ErErstPaintLabView(bruCiuStencilWeave, 44)
+        flckinkAerosolDepth.accessibilityIdentifier = bruCiuStencilWeave.graffitiPulse
         flckinkAerosolDepth.isUserInteractionEnabled = false
         aerErstMuralGrit.addSubview(flckinkAerosolDepth)
         flckinkAerosolDepth.woodPanelPonlly(steelGate: aerErstMuralGrit)
@@ -109,6 +108,40 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         ponllInkWeave = false
         bruCiuChromeFlash()
         aerErstPaintTwist?.pause()
+    }
+
+    func ponllPaintBloom(_ bruCiuPaintBloom: Bool, aerErstPaintDepth: Int) {
+        flckinkNeonSignal(bruCiuPaintBloom)
+        flckinkPaintCascade.text = self.aerErstPaintDepth(aerErstPaintDepth)
+    }
+
+    func ponllAerosolBurst(_ bruCiuPaintBloom: Bool) {
+        if bruCiuPaintBloom {
+            ponllPaintSignal.prepare()
+            ponllPaintSignal.impactOccurred(intensity: 0.82)
+        }
+        guard !UIAccessibility.isReduceMotionEnabled else { return }
+        bruCiuSketchMotion.layer.removeAllAnimations()
+        bruCiuSketchMotion.transform = .identity
+        UIView.animate(
+            withDuration: 0.09,
+            delay: 0,
+            options: [.curveEaseIn, .beginFromCurrentState, .allowUserInteraction]
+        ) {
+            self.bruCiuSketchMotion.transform = CGAffineTransform(scaleX: 0.72, y: 0.72)
+        } completion: { _ in
+            UIView.animate(
+                withDuration: 0.48,
+                delay: 0,
+                usingSpringWithDamping: 0.48,
+                initialSpringVelocity: 0.9,
+                options: [.curveEaseOut, .beginFromCurrentState, .allowUserInteraction]
+            ) {
+                self.bruCiuSketchMotion.transform = .identity
+            }
+        }
+        guard bruCiuPaintBloom else { return }
+        bruCiuPaintBurst()
     }
 
     private func aerErstMarkerFlicker() {
@@ -148,16 +181,23 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         aerErstMuralGrit.clipsToBounds = true
         aerErstMuralGrit.addTarget(self, action: #selector(bruCiuAerosolRhythm), for: .touchUpInside)
 
-        ponllStencilNoise.backgroundColor = PonllyPalette.pink
-        ponllStencilNoise.layer.cornerRadius = 6
-        ponllStencilNoise.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 9)
-        ponllStencilNoise.titleLabel?.adjustsFontSizeToFitWidth = true
-        ponllStencilNoise.titleLabel?.minimumScaleFactor = 0.72
-        ponllStencilNoise.setTitleColor(.white, for: .normal)
+        ponllStencilNoise.layer.cornerRadius = 14
+        var aerErstStencilBloom = UIButton.Configuration.plain()
+        aerErstStencilBloom.imagePlacement = .leading
+        aerErstStencilBloom.imagePadding = 5
+        aerErstStencilBloom.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        aerErstStencilBloom.cornerStyle = .capsule
+        ponllStencilNoise.configuration = aerErstStencilBloom
+        ponllStencilNoise.layer.shadowOffset = .zero
+        ponllStencilNoise.layer.shadowRadius = 8
+        ponllStencilNoise.addTarget(self, action: #selector(aerErstStencilGlow), for: .touchDown)
+        ponllStencilNoise.addTarget(self, action: #selector(bruCiuStencilGlow), for: [.touchUpInside, .touchCancel, .touchDragExit])
         ponllStencilNoise.addTarget(self, action: #selector(flckinkMuralMotion), for: .touchUpInside)
 
         bruCiuMarkerTexture.textColor = PonllyPalette.cyan
         bruCiuMarkerTexture.font = PonllyFonts.muralForgepon(neonLab: 14)
+        bruCiuMarkerTexture.lineBreakMode = .byTruncatingTail
+        bruCiuMarkerTexture.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         bruCiuMarkerTexture.layer.shadowColor = PonllyPalette.cyan.cgColor
         bruCiuMarkerTexture.layer.shadowOpacity = 0.35
         bruCiuMarkerTexture.layer.shadowRadius = 10
@@ -175,6 +215,8 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         bruCiuPaintRipple = ponllTextureRhythm.widthAnchor.constraint(equalToConstant: 0)
 
         bruCiuPaintCascade(bruCiuSketchMotion, ponllInkSurge: "heart")
+        bruCiuSketchMotion.contentVerticalAlignment = .center
+        bruCiuSketchMotion.contentHorizontalAlignment = .center
         bruCiuPaintCascade(aerErstInkRipple, ponllInkSurge: "chromeCue")
         bruCiuPaintCascade(bruCiuAerosolBurst, ponllInkSurge: "stencilQuest")
         bruCiuSketchMotion.addTarget(self, action: #selector(aerErstChromeBurst), for: .touchUpInside)
@@ -201,11 +243,11 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
             aerErstMuralGrit.bottomAnchor.constraint(equalTo: bruCiuSketchMotion.topAnchor, constant: -38),
             aerErstMuralGrit.widthAnchor.constraint(equalToConstant: 44),
             aerErstMuralGrit.heightAnchor.constraint(equalToConstant: 44),
-            ponllStencilNoise.leadingAnchor.constraint(equalTo: bruCiuMarkerTexture.trailingAnchor, constant: 16),
+            ponllStencilNoise.leadingAnchor.constraint(equalTo: bruCiuMarkerTexture.trailingAnchor, constant: 12),
             ponllStencilNoise.centerYAnchor.constraint(equalTo: bruCiuMarkerTexture.centerYAnchor),
             ponllStencilNoise.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -80),
-            ponllStencilNoise.widthAnchor.constraint(equalToConstant: 59),
-            ponllStencilNoise.heightAnchor.constraint(equalToConstant: 22),
+            ponllStencilNoise.widthAnchor.constraint(equalToConstant: 97),
+            ponllStencilNoise.heightAnchor.constraint(equalToConstant: 28),
 
             bruCiuSketchMotion.centerXAnchor.constraint(equalTo: aerErstMuralGrit.centerXAnchor),
             bruCiuSketchMotion.bottomAnchor.constraint(equalTo: flckinkPaintCascade.topAnchor, constant: -8),
@@ -255,6 +297,51 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         flckinkInkstencilMuse.imageView?.contentMode = .scaleAspectFit
     }
 
+    private func flckinkNeonSignal(_ aerErstPaintBloom: Bool) {
+        let ponllNeonSignal = UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)
+        let bruCiuNeonSignal = UIImage(
+            systemName: aerErstPaintBloom ? "heart.fill" : "heart",
+            withConfiguration: ponllNeonSignal
+        )
+        bruCiuSketchMotion.setImage(bruCiuNeonSignal, for: .normal)
+        bruCiuSketchMotion.setBackgroundImage(
+            aerErstPaintBloom ? UIImage(named: "neonSignal")?.withRenderingMode(.alwaysOriginal) : nil,
+            for: .normal
+        )
+        bruCiuSketchMotion.tintColor = aerErstPaintBloom ? PonllyPalette.pink : .white
+    }
+
+    private func ponllStencilGlow(_ bruCiuPaintBloom: Bool) {
+        let aerErstOutlineGlow = UIImage.SymbolConfiguration(pointSize: 10, weight: .black)
+        let flckinkStencilBloom = bruCiuPaintBloom ? PonllyPalette.cyan : UIColor.white
+        var ponllStencilBloom = ponllStencilNoise.configuration ?? UIButton.Configuration.plain()
+        ponllStencilBloom.image = UIImage(
+            systemName: bruCiuPaintBloom ? "checkmark" : "plus",
+            withConfiguration: aerErstOutlineGlow
+        )
+        ponllStencilBloom.title = bruCiuPaintBloom
+            ? "F2o3l4l5o6w7i8n9ga".ponllPaintaerErstHours
+            : "Fbocldleofwg".ponllPaintaerErstHours
+        ponllStencilBloom.baseForegroundColor = flckinkStencilBloom
+        ponllStencilBloom.background.backgroundColor = bruCiuPaintBloom
+            ? UIColor.black.withAlphaComponent(0.58)
+            : PonllyPalette.pink
+        ponllStencilBloom.background.strokeWidth = 1
+        ponllStencilBloom.background.strokeColor = bruCiuPaintBloom
+            ? PonllyPalette.cyan
+            : UIColor.white.withAlphaComponent(0.5)
+        ponllStencilBloom.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { ponllPaintLayer in
+            var bruCiuPaintLayer = ponllPaintLayer
+            bruCiuPaintLayer.font = PonllyFonts.utilityBox(blankFacade: 10, aerosolMuse: .bold)
+            return bruCiuPaintLayer
+        }
+        ponllStencilNoise.configuration = ponllStencilBloom
+        ponllStencilNoise.layer.shadowColor = (
+            bruCiuPaintBloom ? PonllyPalette.cyan : PonllyPalette.pink
+        ).cgColor
+        ponllStencilNoise.layer.shadowOpacity = bruCiuPaintBloom ? 0.3 : 0.48
+    }
+
     private func aerErstPaintDepth(_ bruCiuMuralRipple: Int) -> String {
         if bruCiuMuralRipple >= 1000 {
             let flckinkStencilSurge = Double(bruCiuMuralRipple) / 1000
@@ -295,6 +382,49 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
         self.ponllPaintTrace = nil
     }
 
+    private func bruCiuPaintBurst() {
+        let aerErstPaintArc = bruCiuSketchMotion.convert(
+            CGPoint(x: bruCiuSketchMotion.bounds.midX, y: bruCiuSketchMotion.bounds.midY),
+            to: contentView
+        )
+        let flckinkDripMap: [(CGFloat, CGFloat, CGFloat, TimeInterval)] = [
+            (-18, -13, 3.8, 0.00),
+            (-15, 9, 2.6, 0.02),
+            (-6, -20, 2.3, 0.01),
+            (6, 19, 3.0, 0.03),
+            (14, -15, 3.4, 0.02),
+            (19, 7, 2.5, 0.00),
+            (3, -14, 2.0, 0.04)
+        ]
+        for (ponllDripTrail, aerErstPaintTrail, bruCiuPaintMist, flckinkSprayRhythm) in flckinkDripMap {
+            let ponllColorSplash = UIView(
+                frame: CGRect(x: 0, y: 0, width: bruCiuPaintMist, height: bruCiuPaintMist)
+            )
+            ponllColorSplash.center = aerErstPaintArc
+            ponllColorSplash.backgroundColor = PonllyPalette.pink
+            ponllColorSplash.layer.cornerRadius = bruCiuPaintMist / 2
+            ponllColorSplash.layer.shadowColor = PonllyPalette.pink.cgColor
+            ponllColorSplash.layer.shadowOpacity = 0.75
+            ponllColorSplash.layer.shadowRadius = 4
+            contentView.addSubview(ponllColorSplash)
+            contentView.bringSubviewToFront(bruCiuSketchMotion)
+            UIView.animate(
+                withDuration: 0.42,
+                delay: flckinkSprayRhythm,
+                options: [.curveEaseOut, .allowUserInteraction]
+            ) {
+                ponllColorSplash.center = CGPoint(
+                    x: aerErstPaintArc.x + ponllDripTrail,
+                    y: aerErstPaintArc.y + aerErstPaintTrail
+                )
+                ponllColorSplash.alpha = 0
+                ponllColorSplash.transform = CGAffineTransform(scaleX: 0.45, y: 0.45)
+            } completion: { _ in
+                ponllColorSplash.removeFromSuperview()
+            }
+        }
+    }
+
     @objc private func flckinkTextureContrast() {
         aerErstPaintTwist?.seek(to: .zero)
         aerErstPaintTwist?.play()
@@ -315,6 +445,29 @@ final class MMuralGridell: UICollectionViewCell, UIGestureRecognizerDelegate {
     }
 
     @objc private func bruCiuAerosolRhythm() { bruCiuInkMood?() }
+    @objc private func aerErstStencilGlow() {
+        guard !UIAccessibility.isReduceMotionEnabled else { return }
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseOut, .allowUserInteraction]) {
+            self.ponllStencilNoise.transform = CGAffineTransform(scaleX: 0.94, y: 0.94)
+        }
+    }
+
+    @objc private func bruCiuStencilGlow() {
+        guard !UIAccessibility.isReduceMotionEnabled else {
+            ponllStencilNoise.transform = .identity
+            return
+        }
+        UIView.animate(
+            withDuration: 0.32,
+            delay: 0,
+            usingSpringWithDamping: 0.58,
+            initialSpringVelocity: 0.75,
+            options: [.curveEaseOut, .allowUserInteraction]
+        ) {
+            self.ponllStencilNoise.transform = .identity
+        }
+    }
+
     @objc private func flckinkMuralMotion() { flckinkMarkerPath?() }
     @objc private func aerErstChromeBurst() { aerErstChromeArc?() }
     @objc private func ponllNeonBloom() { ponllNeonBend?() }
