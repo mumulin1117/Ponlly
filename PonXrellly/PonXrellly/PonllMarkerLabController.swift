@@ -11,6 +11,7 @@ final class PonllMarkerLabController: UIViewController {
     private let ponllStencilMood = UIScrollView()
     private let bruCiuMarkerPath = UIView()
     private let flckinkChromeArc = UIImageView(image: UIImage(named: "colorFade"))
+    private let aerErstAerosolLetter = UIImageView()
     private let aerErstNeonBend = UIButton(type: .system)
     private let ponllTextureKick = UILabel()
     private let bruCiuSketchLean = UIView()
@@ -20,6 +21,7 @@ final class PonllMarkerLabController: UIViewController {
     private let bruCiuAerosolGlow = UIView()
     private let flckinkMuralGrit = UIStackView()
     private let aerErstStencilNoise = UIStackView()
+    private let ponllPaintLetter = UIImageView()
     private let ponllMarkerTexture = UILabel()
     private let bruCiuChromeContrast = UILabel()
     private let flckinkNeonglossFinish = UITextField()
@@ -58,6 +60,11 @@ final class PonllMarkerLabController: UIViewController {
         }
         NotificationCenter.default.addObserver(self, selector: #selector(aerErstNeonTexture(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ponllSketchContrast(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillAppear(_ aerErstPaintMotion: Bool) {
+        super.viewWillAppear(aerErstPaintMotion)
+        ponllNeonSignal()
     }
 
     private func flckinkStencilFlicker() {
@@ -166,16 +173,15 @@ final class PonllMarkerLabController: UIViewController {
     private func aerErstSketchVeil() {
         bruCiuSketchLean.translatesAutoresizingMaskIntoConstraints = false
 
-        let aerErstCapRack = UIImageView(image: UIImage(named: "aerosolDream"))
-        aerErstCapRack.contentMode = .scaleAspectFit
-        aerErstCapRack.translatesAutoresizingMaskIntoConstraints = false
-        bruCiuSketchLean.addSubview(aerErstCapRack)
+        aerErstAerosolLetter.contentMode = .scaleAspectFit
+        aerErstAerosolLetter.translatesAutoresizingMaskIntoConstraints = false
+        bruCiuSketchLean.addSubview(aerErstAerosolLetter)
 
         NSLayoutConstraint.activate([
-            aerErstCapRack.leadingAnchor.constraint(equalTo: bruCiuSketchLean.leadingAnchor),
-            aerErstCapRack.trailingAnchor.constraint(equalTo: bruCiuSketchLean.trailingAnchor),
-            aerErstCapRack.topAnchor.constraint(equalTo: bruCiuSketchLean.topAnchor),
-            aerErstCapRack.bottomAnchor.constraint(equalTo: bruCiuSketchLean.bottomAnchor)
+            aerErstAerosolLetter.leadingAnchor.constraint(equalTo: bruCiuSketchLean.leadingAnchor),
+            aerErstAerosolLetter.trailingAnchor.constraint(equalTo: bruCiuSketchLean.trailingAnchor),
+            aerErstAerosolLetter.topAnchor.constraint(equalTo: bruCiuSketchLean.topAnchor),
+            aerErstAerosolLetter.bottomAnchor.constraint(equalTo: bruCiuSketchLean.bottomAnchor)
         ])
     }
 
@@ -239,18 +245,23 @@ final class PonllMarkerLabController: UIViewController {
         aerErstStencilNoise.spacing = 0
         aerErstStencilNoise.translatesAutoresizingMaskIntoConstraints = false
 
-        let aerErstConcreteColumn = UIImageView(image: UIImage(named: "graffitiPulse"))
-        aerErstConcreteColumn.contentMode = .scaleAspectFit
-        aerErstConcreteColumn.translatesAutoresizingMaskIntoConstraints = false
-        aerErstStencilNoise.addSubview(aerErstConcreteColumn)
+        ponllPaintLetter.contentMode = .scaleAspectFit
+        ponllPaintLetter.translatesAutoresizingMaskIntoConstraints = false
+        aerErstStencilNoise.addSubview(ponllPaintLetter)
 
         NSLayoutConstraint.activate([
-            aerErstConcreteColumn.leadingAnchor.constraint(equalTo: aerErstStencilNoise.leadingAnchor),
-            aerErstConcreteColumn.topAnchor.constraint(equalTo: aerErstStencilNoise.topAnchor),
-            aerErstConcreteColumn.bottomAnchor.constraint(equalTo: aerErstStencilNoise.bottomAnchor),
-            aerErstConcreteColumn.widthAnchor.constraint(equalToConstant: 160),
-            aerErstConcreteColumn.heightAnchor.constraint(equalToConstant: 60)
+            ponllPaintLetter.leadingAnchor.constraint(equalTo: aerErstStencilNoise.leadingAnchor),
+            ponllPaintLetter.topAnchor.constraint(equalTo: aerErstStencilNoise.topAnchor),
+            ponllPaintLetter.bottomAnchor.constraint(equalTo: aerErstStencilNoise.bottomAnchor),
+            ponllPaintLetter.widthAnchor.constraint(equalToConstant: 160),
+            ponllPaintLetter.heightAnchor.constraint(equalToConstant: 60)
         ])
+    }
+
+    private func ponllNeonSignal() {
+        let flckinkStyleMap = PonllGraffitiMuse.graffitiPulse.colorMap == .muralPlan
+        aerErstAerosolLetter.image = UIImage(named: flckinkStyleMap ? "aerosolDream" : "aerosolLetter")
+        ponllPaintLetter.image = UIImage(named: flckinkStyleMap ? "graffitiPulse" : "paintLetter")
     }
 
     private func flckinkWallSignal(nozzleCraft: String, ponllTunnelWall: UITextField) -> UIView {

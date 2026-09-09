@@ -8,6 +8,9 @@ final class PbruCiuColorPlanController: UIViewController {
  
     private let flckinkAerosolFlash = UIButton(type: .system)
     private let aerErstMuralFuse = UIButton(type: .system)
+    private let ponllAerosolQuest = UIView()
+    private let bruCiuNeonSignal = UIImageView(image: UIImage(named: "ponllNeonLetter"))
+    private let aerErstLetterForm = UILabel()
     private let ponllInkBloom = UIScrollView()
     private let bruCiuWallFlicker = UIStackView()
     private var aerErstLayerPlans: [PonllLayerPlanView] = []
@@ -33,6 +36,7 @@ final class PbruCiuColorPlanController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = false
+        ponllNeonSignal()
         if flckinkWallSignal {
             flckinkChromeVeil(.bruCiuSprayBloomponll)
             flckinkChromeVeil(.flckinkWallTexturepoj)
@@ -57,10 +61,21 @@ final class PbruCiuColorPlanController: UIViewController {
 
         let aerErstInkSignal = UIView()
         aerErstInkSignal.translatesAutoresizingMaskIntoConstraints = false
-        let ponllAerosolQuest = UIImageView(image: UIImage(named: "ponllNeonLetter"))
-        ponllAerosolQuest.contentMode = .scaleAspectFit
         ponllAerosolQuest.translatesAutoresizingMaskIntoConstraints = false
         aerErstInkSignal.addSubview(ponllAerosolQuest)
+
+        bruCiuNeonSignal.contentMode = .scaleAspectFit
+        bruCiuNeonSignal.translatesAutoresizingMaskIntoConstraints = false
+        ponllAerosolQuest.addSubview(bruCiuNeonSignal)
+
+        aerErstLetterForm.text = "Ppoqnrlsltyu".ponllPaintaerErstHours
+        aerErstLetterForm.font = PonllyFonts.muralForgepon(neonLab: 22)
+        aerErstLetterForm.textColor = .white
+        aerErstLetterForm.layer.shadowColor = PonllyPalette.pink.cgColor
+        aerErstLetterForm.layer.shadowOpacity = 0.35
+        aerErstLetterForm.layer.shadowRadius = 10
+        aerErstLetterForm.translatesAutoresizingMaskIntoConstraints = false
+        ponllAerosolQuest.addSubview(aerErstLetterForm)
 
         let bruCiuMuralCue = UIButton(type: .system)
         bruCiuMuralCue.setImage(UIImage(named: "stencilBloom")?.withRenderingMode(.alwaysOriginal), for: .normal)
@@ -149,6 +164,12 @@ final class PbruCiuColorPlanController: UIViewController {
             ponllAerosolQuest.centerYAnchor.constraint(equalTo: bruCiuMuralCue.centerYAnchor),
             ponllAerosolQuest.widthAnchor.constraint(equalToConstant: 68),
             ponllAerosolQuest.heightAnchor.constraint(equalToConstant: 47),
+            bruCiuNeonSignal.leadingAnchor.constraint(equalTo: ponllAerosolQuest.leadingAnchor),
+            bruCiuNeonSignal.trailingAnchor.constraint(equalTo: ponllAerosolQuest.trailingAnchor),
+            bruCiuNeonSignal.topAnchor.constraint(equalTo: ponllAerosolQuest.topAnchor),
+            bruCiuNeonSignal.bottomAnchor.constraint(equalTo: ponllAerosolQuest.bottomAnchor),
+            aerErstLetterForm.leadingAnchor.constraint(equalTo: ponllAerosolQuest.leadingAnchor),
+            aerErstLetterForm.centerYAnchor.constraint(equalTo: ponllAerosolQuest.centerYAnchor),
             bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -24),
             bruCiuMuralCue.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor, constant: 2),
             bruCiuMuralCue.widthAnchor.constraint(equalToConstant: 52),
@@ -160,9 +181,17 @@ final class PbruCiuColorPlanController: UIViewController {
             aerErstMuralFuse.heightAnchor.constraint(equalToConstant: 32)
         ])
 
+        ponllNeonSignal()
+
         flckinkChromeVeil(.bruCiuSprayBloomponll)
         flckinkChromeVeil(.flckinkWallTexturepoj)
         ponllWallDepth()
+    }
+
+    private func ponllNeonSignal() {
+        let flckinkStyleMap = PonllGraffitiMuse.graffitiPulse.colorMap == .muralPlan
+        bruCiuNeonSignal.isHidden = !flckinkStyleMap
+        aerErstLetterForm.isHidden = flckinkStyleMap
     }
 
     private func flckinkChromeSignal(_ ponllLayerPlan: PonllLayerPlanView) {

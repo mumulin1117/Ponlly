@@ -6,6 +6,7 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
     private let bruCiuStyleMap: PonllyaerErstTwoToneFillr
     private let flckinkMuralWall = UIView()
     private let aerErstCanvasWall = UIView()
+    private let ponllPaintCue = UILabel()
     private var ponllWallArc: CGFloat = 0
     private var bruCiuWallBend: CGFloat = 0
     private var flckinkWallDepth: CGFloat = 1
@@ -30,12 +31,18 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
         navigationController?.setNavigationBarHidden(true, animated: false)
         flckinkLayerPlan()
         bruCiuPaintFlow()
+        NotificationCenter.default.addObserver(self, selector: #selector(bruCiuLetterCue), name: .ponllStyleShift, object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         tabBarController?.tabBar.isHidden = true
+        bruCiuLetterCue()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -155,20 +162,16 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
             ])
         }
 
-        let bruCiuCanvasWall = UILabel()
-        bruCiuCanvasWall.text = """
-        SawEirpSet Gtroa frfoittaitPeu l|s ePMiunrcahl Itnok FzlooowmC
-        aDnovuabslaeE-rtSatpG rtaof fziotoimP uilns eoMru roaultI
-        """.ponllPaintaerErstHours
-        bruCiuCanvasWall.textColor = UIColor.white.withAlphaComponent(0.72)
-        bruCiuCanvasWall.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
-        bruCiuCanvasWall.textAlignment = .center
-        bruCiuCanvasWall.numberOfLines = 2
-        bruCiuCanvasWall.lineBreakMode = .byWordWrapping
-        bruCiuCanvasWall.adjustsFontSizeToFitWidth = true
-        bruCiuCanvasWall.minimumScaleFactor = 0.78
-        bruCiuCanvasWall.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bruCiuCanvasWall)
+        ponllPaintCue.textColor = UIColor.white.withAlphaComponent(0.72)
+        ponllPaintCue.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .semibold)
+        ponllPaintCue.textAlignment = .center
+        ponllPaintCue.numberOfLines = 2
+        ponllPaintCue.lineBreakMode = .byWordWrapping
+        ponllPaintCue.adjustsFontSizeToFitWidth = true
+        ponllPaintCue.minimumScaleFactor = 0.78
+        ponllPaintCue.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ponllPaintCue)
+        bruCiuLetterCue()
 
         NSLayoutConstraint.activate([
             bruCiuLayerPlan.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -185,20 +188,34 @@ final class PonllMuralWallController: UIViewController, UIGestureRecognizerDeleg
             bruCiuPaintPath.centerYAnchor.constraint(equalTo: bruCiuLayerPlan.centerYAnchor),
             bruCiuPaintPath.leadingAnchor.constraint(greaterThanOrEqualTo: aerErstPaintPath.trailingAnchor, constant: 8),
             bruCiuPaintPath.trailingAnchor.constraint(lessThanOrEqualTo: flckinkStyleMap.leadingAnchor, constant: -8),
-            bruCiuCanvasWall.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bruCiuCanvasWall.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            bruCiuCanvasWall.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            bruCiuCanvasWall.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -14),
-            bruCiuCanvasWall.heightAnchor.constraint(equalToConstant: 40),
+            ponllPaintCue.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ponllPaintCue.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            ponllPaintCue.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            ponllPaintCue.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -14),
+            ponllPaintCue.heightAnchor.constraint(equalToConstant: 40),
             flckinkMuralWall.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             flckinkMuralWall.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             flckinkMuralWall.topAnchor.constraint(equalTo: bruCiuLayerPlan.bottomAnchor, constant: 14),
-            flckinkMuralWall.bottomAnchor.constraint(equalTo: bruCiuCanvasWall.topAnchor, constant: -16),
+            flckinkMuralWall.bottomAnchor.constraint(equalTo: ponllPaintCue.topAnchor, constant: -16),
             aerErstCanvasWall.leadingAnchor.constraint(equalTo: flckinkMuralWall.leadingAnchor),
             aerErstCanvasWall.trailingAnchor.constraint(equalTo: flckinkMuralWall.trailingAnchor),
             aerErstCanvasWall.topAnchor.constraint(equalTo: flckinkMuralWall.topAnchor),
             aerErstCanvasWall.bottomAnchor.constraint(equalTo: flckinkMuralWall.bottomAnchor)
         ])
+    }
+
+    @objc private func bruCiuLetterCue() {
+        if PonllGraffitiMuse.graffitiPulse.colorMap == .muralPlan {
+            ponllPaintCue.text = """
+            스a와b이c프d해e f회g전h i|j k핀l치m로n o확p대q/r축s소t
+            u두v w번x y탭z해A B확C대D하E거F나G H축I소J
+            """.ponllPaintaerErstHours
+        } else {
+            ponllPaintCue.text = """
+            Sawbicpdee ftgoh irjoktlamtneo p|q rPsitnucvhw xtyoz AzBoCoDmE
+            FDGoHuIbJlKeL-MtNaOpP QtRoS TzUoVoWmX YiZn0 1o2r3 4o5u6t7
+            """.ponllPaintaerErstHours
+        }
     }
 
     private func bruCiuPaintFlow() {

@@ -11,7 +11,7 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     private let bruCiuWallMood = UIScrollView()
     private let flckinkStencilPath = UIView()
     private let aerErstMarkerArc = UIImageView(image: UIImage(named: "colorFade"))
-    private let aerErstSprayBloom = UIImageView(image: UIImage(named: "aerosolDream"))
+    private let aerErstSprayBloom = UIImageView()
     private let ponllChromeBend = UIButton(type: .system)
     private let bruCiuNeonKick = UILabel()
     private let flckinkTextureLean = UIView()
@@ -21,6 +21,7 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     private let flckinkWallGlow = UIView()
     private let aerErstAerosolGrit = UIStackView()
     private let ponllMuralNoise = UIStackView()
+    private let flckinkPaintLetter = UIImageView()
     private let bruCiuStencilTexture = UILabel()
     private let flckinkMarkerContrast = UILabel()
     private let aerErstglossFinish = UITextField()
@@ -70,6 +71,11 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     override func viewDidAppear(_ aerErstPaintMotion: Bool) {
         super.viewDidAppear(aerErstPaintMotion)
         bruCiuSprayBloom()
+    }
+
+    override func viewWillAppear(_ aerErstPaintMotion: Bool) {
+        super.viewWillAppear(aerErstPaintMotion)
+        ponllNeonSignal()
     }
 
     private func aerErstMuralFlicker() {
@@ -349,18 +355,23 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
         ponllMuralNoise.spacing = 0
         ponllMuralNoise.translatesAutoresizingMaskIntoConstraints = false
 
-        let brandMark = UIImageView(image: UIImage(named: "graffitiPulse"))
-        brandMark.contentMode = .scaleAspectFit
-        brandMark.translatesAutoresizingMaskIntoConstraints = false
-        ponllMuralNoise.addSubview(brandMark)
+        flckinkPaintLetter.contentMode = .scaleAspectFit
+        flckinkPaintLetter.translatesAutoresizingMaskIntoConstraints = false
+        ponllMuralNoise.addSubview(flckinkPaintLetter)
 
         NSLayoutConstraint.activate([
-            brandMark.leadingAnchor.constraint(equalTo: ponllMuralNoise.leadingAnchor),
-            brandMark.topAnchor.constraint(equalTo: ponllMuralNoise.topAnchor),
-            brandMark.bottomAnchor.constraint(equalTo: ponllMuralNoise.bottomAnchor),
-            brandMark.widthAnchor.constraint(equalToConstant: 160),
-            brandMark.heightAnchor.constraint(equalToConstant: 60)
+            flckinkPaintLetter.leadingAnchor.constraint(equalTo: ponllMuralNoise.leadingAnchor),
+            flckinkPaintLetter.topAnchor.constraint(equalTo: ponllMuralNoise.topAnchor),
+            flckinkPaintLetter.bottomAnchor.constraint(equalTo: ponllMuralNoise.bottomAnchor),
+            flckinkPaintLetter.widthAnchor.constraint(equalToConstant: 160),
+            flckinkPaintLetter.heightAnchor.constraint(equalToConstant: 60)
         ])
+    }
+
+    private func ponllNeonSignal() {
+        let bruCiuStyleMap = PonllGraffitiMuse.graffitiPulse.colorMap == .muralPlan
+        aerErstSprayBloom.image = UIImage(named: bruCiuStyleMap ? "aerosolDream" : "aerosolLetter")
+        flckinkPaintLetter.image = UIImage(named: bruCiuStyleMap ? "graffitiPulse" : "paintLetter")
     }
 
     private func flckinkMarkerPath(nozzleCraft: String, field: UITextField) -> UIView {
