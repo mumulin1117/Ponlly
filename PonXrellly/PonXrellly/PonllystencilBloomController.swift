@@ -339,6 +339,13 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         flckinklimeStroke.isUserInteractionEnabled = false
         flckinklimeStroke.translatesAutoresizingMaskIntoConstraints = false
         bruCiublackOutline.addSubview(flckinklimeStroke)
+
+        let aerErstShadowVeil = UIView()
+        aerErstShadowVeil.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2500)
+        aerErstShadowVeil.isUserInteractionEnabled = false
+        aerErstShadowVeil.translatesAutoresizingMaskIntoConstraints = false
+        flckinklimeStroke.addSubview(aerErstShadowVeil)
+
         bruCiublackOutline.addAction(UIAction { [weak self] _ in
             self?.aerErstOpen(ponllutilityBox)
         }, for: .touchUpInside)
@@ -355,6 +362,10 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
             self?.ponllmuralGrid(pasteupEcho: ponllutilityBox)
         }, for: .touchUpInside)
         bruCiublackOutline.addSubview(bruCiuMoreButton)
+
+        let ponllPaintRhythm = PonllPaintRhythmView()
+        ponllPaintRhythm.translatesAutoresizingMaskIntoConstraints = false
+        bruCiublackOutline.addSubview(ponllPaintRhythm)
 
         let bruCiuHost = PonllyponllTornEdge.flckinkChippedPaint(ponllutilityBox.gradientFill)
         let flckinkAvatarButton = UIControl()
@@ -449,10 +460,18 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
             flckinklimeStroke.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -14),
             flckinklimeStroke.topAnchor.constraint(equalTo: bruCiublackOutline.topAnchor, constant: 14),
             flckinklimeStroke.heightAnchor.constraint(equalToConstant: 136),
+            aerErstShadowVeil.leadingAnchor.constraint(equalTo: flckinklimeStroke.leadingAnchor),
+            aerErstShadowVeil.trailingAnchor.constraint(equalTo: flckinklimeStroke.trailingAnchor),
+            aerErstShadowVeil.topAnchor.constraint(equalTo: flckinklimeStroke.topAnchor),
+            aerErstShadowVeil.bottomAnchor.constraint(equalTo: flckinklimeStroke.bottomAnchor),
             bruCiuMoreButton.trailingAnchor.constraint(equalTo: flckinklimeStroke.trailingAnchor, constant: -10),
             bruCiuMoreButton.topAnchor.constraint(equalTo: flckinklimeStroke.topAnchor, constant: 10),
             bruCiuMoreButton.widthAnchor.constraint(equalToConstant: 36),
             bruCiuMoreButton.heightAnchor.constraint(equalToConstant: 36),
+            ponllPaintRhythm.trailingAnchor.constraint(equalTo: bruCiuMoreButton.leadingAnchor, constant: -8),
+            ponllPaintRhythm.centerYAnchor.constraint(equalTo: bruCiuMoreButton.centerYAnchor),
+            ponllPaintRhythm.widthAnchor.constraint(equalToConstant: 46),
+            ponllPaintRhythm.heightAnchor.constraint(equalToConstant: 24),
             ponllroughFill.leadingAnchor.constraint(equalTo: bruCiublackOutline.leadingAnchor, constant: 14),
             ponllroughFill.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -14),
             ponllroughFill.topAnchor.constraint(equalTo: flckinklimeStroke.bottomAnchor, constant: 12),
@@ -464,13 +483,15 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
             ponllWallMark.leadingAnchor.constraint(equalTo: aerErstcolorFade.trailingAnchor, constant: 7),
             ponllWallMark.trailingAnchor.constraint(equalTo: flckinkAvatarButton.trailingAnchor, constant: -9),
             ponllWallMark.centerYAnchor.constraint(equalTo: flckinkAvatarButton.centerYAnchor),
-            flckinkMuralPath.trailingAnchor.constraint(equalTo: bruCiublackOutline.trailingAnchor, constant: -16),
-            flckinkMuralPath.centerYAnchor.constraint(equalTo: flckinkAvatarButton.centerYAnchor),
-            flckinkMuralPath.leadingAnchor.constraint(greaterThanOrEqualTo: flckinkAvatarButton.trailingAnchor, constant: 12),
-            bruCiuutilityBoxTopic.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
-            bruCiuutilityBoxTopic.topAnchor.constraint(equalTo: flckinkAvatarButton.bottomAnchor, constant: 8),
+            bruCiuutilityBoxTopic.leadingAnchor.constraint(equalTo: flckinkAvatarButton.trailingAnchor, constant: 8),
+            bruCiuutilityBoxTopic.centerYAnchor.constraint(equalTo: flckinkAvatarButton.centerYAnchor),
+            bruCiuutilityBoxTopic.trailingAnchor.constraint(lessThanOrEqualTo: bruCiublackOutline.trailingAnchor, constant: -14),
             bruCiuutilityBoxTopic.heightAnchor.constraint(equalToConstant: 19),
             bruCiuutilityBoxTopic.widthAnchor.constraint(greaterThanOrEqualToConstant: 58),
+            flckinkMuralPath.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
+            flckinkMuralPath.topAnchor.constraint(equalTo: flckinkAvatarButton.bottomAnchor, constant: 8),
+            flckinkMuralPath.heightAnchor.constraint(equalToConstant: 22),
+            flckinkMuralPath.trailingAnchor.constraint(lessThanOrEqualTo: bruCiublackOutline.trailingAnchor, constant: -16),
             aerErstNeonGlow.leadingAnchor.constraint(equalTo: ponllroughFill.leadingAnchor),
             aerErstNeonGlow.bottomAnchor.constraint(equalTo: bruCiublackOutline.bottomAnchor, constant: -14),
             aerErstNeonGlow.widthAnchor.constraint(equalToConstant: 8),
@@ -687,6 +708,72 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         shouldRecognizeSimultaneouslyWith bruCiuPaintFlow: UIGestureRecognizer
     ) -> Bool {
         aerErstPaintFlow is UISwipeGestureRecognizer || bruCiuPaintFlow is UISwipeGestureRecognizer
+    }
+}
+
+private final class PonllPaintRhythmView: UIView {
+    private let bruCiuPaintLayer = CAReplicatorLayer()
+    private let flckinkPaintLayer = CALayer()
+    private let aerErstPaintSignal = "ponllPaintRhythm"
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        isUserInteractionEnabled = false
+        backgroundColor = UIColor.black.withAlphaComponent(0.46)
+        layer.cornerRadius = 12
+        layer.borderWidth = 1
+        layer.borderColor = PonllyPalette.cyan.withAlphaComponent(0.28).cgColor
+        layer.masksToBounds = true
+        bruCiuPaintLayer.masksToBounds = true
+        layer.addSublayer(bruCiuPaintLayer)
+        bruCiuPaintLayer.addSublayer(flckinkPaintLayer)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bruCiuPaintLayer.frame = bounds
+        let ponllPaintLayer: CGFloat = 3
+        let aerErstPaintLayer: CGFloat = 4
+        let flckinkPaintMotion = 5
+        let bruCiuPaintMotion = CGFloat(flckinkPaintMotion) * ponllPaintLayer + CGFloat(flckinkPaintMotion - 1) * aerErstPaintLayer
+        let ponllPaintMotion = max((bounds.width - bruCiuPaintMotion) * 0.5, 0)
+        flckinkPaintLayer.bounds = CGRect(x: 0, y: 0, width: ponllPaintLayer, height: max(bounds.height - 10, 4))
+        flckinkPaintLayer.position = CGPoint(x: ponllPaintMotion + ponllPaintLayer * 0.5, y: bounds.height - 5)
+        flckinkPaintLayer.anchorPoint = CGPoint(x: 0.5, y: 1)
+        flckinkPaintLayer.cornerRadius = ponllPaintLayer * 0.5
+        flckinkPaintLayer.backgroundColor = PonllyPalette.cyan.cgColor
+        bruCiuPaintLayer.instanceCount = flckinkPaintMotion
+        bruCiuPaintLayer.instanceTransform = CATransform3DMakeTranslation(ponllPaintLayer + aerErstPaintLayer, 0, 0)
+        bruCiuPaintLayer.instanceDelay = 0.09
+        bruCiuPaintLayer.instanceAlphaOffset = -0.06
+        aerErstPaintMotion()
+    }
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        window == nil ? flckinkPaintLayer.removeAnimation(forKey: aerErstPaintSignal) : aerErstPaintMotion()
+    }
+
+    private func aerErstPaintMotion() {
+        guard window != nil, flckinkPaintLayer.animation(forKey: aerErstPaintSignal) == nil else { return }
+        let ponllPaintMotion = CAKeyframeAnimation(keyPath: "transform.scale.y")
+        ponllPaintMotion.values = [0.28, 0.92, 0.42, 1, 0.36, 0.72, 0.28]
+        ponllPaintMotion.keyTimes = [0, 0.16, 0.34, 0.5, 0.68, 0.84, 1]
+        ponllPaintMotion.duration = 0.86
+        ponllPaintMotion.repeatCount = .infinity
+        ponllPaintMotion.timingFunctions = [
+            CAMediaTimingFunction(name: .easeInEaseOut),
+            CAMediaTimingFunction(name: .easeOut),
+            CAMediaTimingFunction(name: .easeInEaseOut),
+            CAMediaTimingFunction(name: .easeOut),
+            CAMediaTimingFunction(name: .easeInEaseOut),
+            CAMediaTimingFunction(name: .easeOut)
+        ]
+        flckinkPaintLayer.add(ponllPaintMotion, forKey: aerErstPaintSignal)
     }
 }
 

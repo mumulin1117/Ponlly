@@ -66,7 +66,7 @@ private final class PonllSprayHaloView: UIView {
     }
 }
 
-final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
+final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate, AVAudioPlayerDelegate {
     private var ponllflckinkWallTexture: PonllyaerErstWeatheredPaperm
     private let bruCiuSeatsStack = UIStackView()
     private let flckinkponllPaintLayer = UIStackView()
@@ -115,6 +115,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
         super.viewDidLoad()
         view.backgroundColor = PonllyPalette.background
         flckinkNeonDrip()
+        ponllPaintRipple()
         NotificationCenter.default.addObserver(self, selector: #selector(flckinkKeysketchContrast(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(aerErstsketchTexturee(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -236,6 +237,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
 
         aerErstaerErstStrokeWeight.translatesAutoresizingMaskIntoConstraints = false
         aerErstaerErstStrokeWeight.backgroundColor = UIColor.black.withAlphaComponent(0.52)
+        aerErstaerErstStrokeWeight.keyboardDismissMode = .interactive
         aerErstaerErstStrokeWeight.layer.cornerRadius = 14
         aerErstaerErstStrokeWeight.layer.borderWidth = 1
         aerErstaerErstStrokeWeight.layer.borderColor = UIColor.white.withAlphaComponent(0.13).cgColor
@@ -293,7 +295,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
             bruCiuHeaderStack.trailingAnchor.constraint(equalTo: flckinkutilityBoxHeader.trailingAnchor, constant: -10),
             bruCiuHeaderStack.centerYAnchor.constraint(equalTo: flckinkutilityBoxHeader.centerYAnchor),
             aerErstmuralForgeel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            aerErstmuralForgeel.topAnchor.constraint(equalTo: flckinkutilityBoxHeader.bottomAnchor, constant: 18),
+            aerErstmuralForgeel.topAnchor.constraint(equalTo: flckinkutilityBoxHeader.bottomAnchor, constant: 10),
             aerErstmuralForgeel.widthAnchor.constraint(greaterThanOrEqualToConstant: 92),
             aerErstmuralForgeel.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, constant: -96),
             aerErstmuralForgeel.heightAnchor.constraint(equalToConstant: 20),
@@ -412,6 +414,26 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
         aerErstChromeGlow.isUserInteractionEnabled = false
         bruCiuChromeAura.addSubview(aerErstChromeGlow)
 
+        let ponllLetterCrown = UIView()
+        ponllLetterCrown.backgroundColor = UIColor(red: 0, green: 240 / 255, blue: 1, alpha: 1)
+        ponllLetterCrown.layer.cornerRadius = 10
+        ponllLetterCrown.layer.borderWidth = 1.5
+        ponllLetterCrown.layer.borderColor = UIColor.black.withAlphaComponent(0.28).cgColor
+        ponllLetterCrown.layer.shadowColor = UIColor(red: 0, green: 240 / 255, blue: 1, alpha: 1).cgColor
+        ponllLetterCrown.layer.shadowOpacity = 0.55
+        ponllLetterCrown.layer.shadowRadius = 8
+        ponllLetterCrown.layer.shadowOffset = .zero
+        ponllLetterCrown.translatesAutoresizingMaskIntoConstraints = false
+        flckinkChromePiece.addSubview(ponllLetterCrown)
+        ponllLetterCrown.layer.zPosition = 1_100
+
+        let bruCiuLetterCrown = UIImageView(image: UIImage(systemName: "crown.fill"))
+        bruCiuLetterCrown.tintColor = .black
+        bruCiuLetterCrown.contentMode = .scaleAspectFit
+        bruCiuLetterCrown.isUserInteractionEnabled = false
+        bruCiuLetterCrown.translatesAutoresizingMaskIntoConstraints = false
+        ponllLetterCrown.addSubview(bruCiuLetterCrown)
+
         let flckinkChromeSignal = UIImageView(image: UIImage(named: bruCiuChromeLetter.wallMark ? "chiselNib" : "fineLine"))
         flckinkChromeSignal.contentMode = .scaleAspectFit
         flckinkChromeSignal.isUserInteractionEnabled = false
@@ -427,6 +449,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
         ponllChromeTrace.translatesAutoresizingMaskIntoConstraints = false
         flckinkChromePiece.addSubview(ponllChromeTrace)
         flckinkChromePiece.bringSubviewToFront(flckinkChromeSignal)
+        flckinkChromePiece.bringSubviewToFront(ponllLetterCrown)
         flckinkChromePiece.addAction(UIAction { [weak self, weak aerErstChromeGlow] _ in
             self?.bruCiuOpenArtist(ponllChromeMuse, ponllPaintFlow: aerErstChromeGlow)
         }, for: .touchUpInside)
@@ -437,12 +460,20 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
             flckinkAerosolBloom.centerYAnchor.constraint(equalTo: bruCiuChromeAura.centerYAnchor),
             flckinkAerosolBloom.widthAnchor.constraint(equalToConstant: aerErstChromeWeight + 12),
             flckinkAerosolBloom.heightAnchor.constraint(equalToConstant: aerErstChromeWeight + 12),
-            bruCiuChromeAura.topAnchor.constraint(equalTo: flckinkChromePiece.topAnchor),
+            bruCiuChromeAura.topAnchor.constraint(equalTo: flckinkChromePiece.topAnchor, constant: 8),
             bruCiuChromeAura.centerXAnchor.constraint(equalTo: flckinkChromePiece.centerXAnchor),
             bruCiuChromeAura.widthAnchor.constraint(equalToConstant: aerErstChromeWeight),
             bruCiuChromeAura.heightAnchor.constraint(equalToConstant: aerErstChromeWeight),
             aerErstChromeGlow.centerXAnchor.constraint(equalTo: bruCiuChromeAura.centerXAnchor),
             aerErstChromeGlow.centerYAnchor.constraint(equalTo: bruCiuChromeAura.centerYAnchor),
+            ponllLetterCrown.centerXAnchor.constraint(equalTo: bruCiuChromeAura.centerXAnchor),
+            ponllLetterCrown.bottomAnchor.constraint(equalTo: bruCiuChromeAura.topAnchor, constant: 8),
+            ponllLetterCrown.widthAnchor.constraint(equalToConstant: 28),
+            ponllLetterCrown.heightAnchor.constraint(equalToConstant: 20),
+            bruCiuLetterCrown.centerXAnchor.constraint(equalTo: ponllLetterCrown.centerXAnchor),
+            bruCiuLetterCrown.centerYAnchor.constraint(equalTo: ponllLetterCrown.centerYAnchor),
+            bruCiuLetterCrown.widthAnchor.constraint(equalToConstant: 14),
+            bruCiuLetterCrown.heightAnchor.constraint(equalToConstant: 14),
             flckinkChromeSignal.trailingAnchor.constraint(equalTo: aerErstChromeGlow.trailingAnchor, constant: 3),
             flckinkChromeSignal.bottomAnchor.constraint(equalTo: aerErstChromeGlow.bottomAnchor, constant: 3),
             flckinkChromeSignal.widthAnchor.constraint(equalToConstant: 22),
@@ -690,7 +721,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
         ponllbruCiuLetterFormld.textColor = .white
         ponllbruCiuLetterFormld.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .regular)
         ponllbruCiuLetterFormld.delegate = self
-        ponllbruCiuLetterFormld.returnKeyType = .send
+        ponllbruCiuLetterFormld.returnKeyType = .done
         ponllbruCiuLetterFormld.backgroundColor = UIColor.black.withAlphaComponent(0.36)
         ponllbruCiuLetterFormld.layer.cornerRadius = 22
         ponllbruCiuLetterFormld.layer.borderWidth = 1.2
@@ -722,6 +753,18 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
             aerErstflckinkNozzleCraft.heightAnchor.constraint(equalToConstant: 36)
         ])
         return flckinkBar
+    }
+
+    private func ponllPaintRipple() {
+        let bruCiuWallMotion = UITapGestureRecognizer(target: self, action: #selector(flckinkPaintRipple))
+        bruCiuWallMotion.cancelsTouchesInView = false
+        bruCiuWallMotion.delegate = self
+        view.addGestureRecognizer(bruCiuWallMotion)
+
+        let aerErstWallMotion = UIPanGestureRecognizer(target: self, action: #selector(flckinkPaintRipple))
+        aerErstWallMotion.cancelsTouchesInView = false
+        aerErstWallMotion.delegate = self
+        view.addGestureRecognizer(aerErstWallMotion)
     }
 
     private func bruCiubruCiuMarkerStrokeow(_ ponllInkDrift: PonllyflckinkUrbanCanvasge) -> UIView {
@@ -770,13 +813,16 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
     }
 
     private func bruCiuOpenArtist(_ flckinkaerErstWallCraft: PonllyaerErstTwoToneFillr, ponllPaintFlow: UIView? = nil) {
-        guard flckinkaerErstWallCraft.graffitiPulse != PonllyponllTornEdge.cnowpaintokwinId else { return }
-        let aerErstProfile = FlckinkPrimerCoatController(flckinkaerErstWallCraft)
+        view.endEditing(true)
+        let ponllWallCraft = flckinkaerErstWallCraft.graffitiPulse == PonllyponllTornEdge.cnowpaintokwinId
+            ? PonllyponllTornEdge.ponllBrickFacade()
+            : flckinkaerErstWallCraft
+        let aerErstProfile = FlckinkPrimerCoatController(ponllWallCraft)
         aerErstProfile.hidesBottomBarWhenPushed = true
         ponllPaintFlowPush(
             aerErstProfile,
             bruCiuPaintFlow: ponllPaintFlow,
-            aerErstGraffitiPulse: flckinkaerErstWallCraft.graffitiPulse
+            aerErstGraffitiPulse: ponllWallCraft.graffitiPulse
         )
     }
 
@@ -898,6 +944,7 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
     }
 
     @objc private func aerErstSendTapped() {
+        view.endEditing(true)
         FlckinkMatteFinish.shared.bruCiuBladeLine(aerErstSprayShield: self) {
             let textureEcho = (self.ponllbruCiuLetterFormld.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
             guard !textureEcho.isEmpty else {
@@ -914,6 +961,10 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
             let flckinkBottom = CGPoint(x: 0, y: max(self.aerErstaerErstStrokeWeight.contentSize.height - self.aerErstaerErstStrokeWeight.bounds.height, 0))
             self.aerErstaerErstStrokeWeight.setContentOffset(flckinkBottom, animated: true)
         }
+    }
+
+    @objc private func flckinkPaintRipple() {
+        view.endEditing(true)
     }
 
     @objc private func bruCiuMtextureVeil() {
@@ -981,8 +1032,17 @@ final class PwheatpasteLayerController: UIViewController, UITextFieldDelegate, A
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        aerErstSendTapped()
+        textField.resignFirstResponder()
         return true
+    }
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        guard let bruCiuWallTexture = touch.view else { return true }
+        return !bruCiuWallTexture.isDescendant(of: ponllbruCiuLetterFormld)
+    }
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        true
     }
 
     @objc private func flckinkKeysketchContrast(_ bruCiuNote: Notification) {
