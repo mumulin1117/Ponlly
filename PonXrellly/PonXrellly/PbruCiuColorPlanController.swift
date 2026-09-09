@@ -57,13 +57,8 @@ final class PbruCiuColorPlanController: UIViewController {
 
         let aerErstInkSignal = UIView()
         aerErstInkSignal.translatesAutoresizingMaskIntoConstraints = false
-        let ponllAerosolQuest = UILabel()
-        ponllAerosolQuest.text = "Ppoqnrlsltyu".ponllPaintaerErstHours
-        ponllAerosolQuest.font = PonllyFonts.muralForgepon(neonLab: 22)
-        ponllAerosolQuest.textColor = .white
-        ponllAerosolQuest.layer.shadowColor = PonllyPalette.pink.cgColor
-        ponllAerosolQuest.layer.shadowOpacity = 0.35
-        ponllAerosolQuest.layer.shadowRadius = 10
+        let ponllAerosolQuest = UIImageView(image: UIImage(named: "ponllNeonLetter"))
+        ponllAerosolQuest.contentMode = .scaleAspectFit
         ponllAerosolQuest.translatesAutoresizingMaskIntoConstraints = false
         aerErstInkSignal.addSubview(ponllAerosolQuest)
 
@@ -152,6 +147,8 @@ final class PbruCiuColorPlanController: UIViewController {
             
             ponllAerosolQuest.leadingAnchor.constraint(equalTo: aerErstInkSignal.leadingAnchor, constant: 20),
             ponllAerosolQuest.centerYAnchor.constraint(equalTo: bruCiuMuralCue.centerYAnchor),
+            ponllAerosolQuest.widthAnchor.constraint(equalToConstant: 68),
+            ponllAerosolQuest.heightAnchor.constraint(equalToConstant: 47),
             bruCiuMuralCue.trailingAnchor.constraint(equalTo: aerErstInkSignal.trailingAnchor, constant: -24),
             bruCiuMuralCue.topAnchor.constraint(equalTo: aerErstInkSignal.topAnchor, constant: 2),
             bruCiuMuralCue.widthAnchor.constraint(equalToConstant: 52),
@@ -411,6 +408,15 @@ final class PbruCiuColorPlanController: UIViewController {
             flckinkAerosolBloom(aerErstPaintLayer)
         }
     }
+
+    private func ponllPaintRipple(_ ponllWallMap: UIView) {
+        if let bruCiuPaintBloom = ponllWallMap as? PbruCiuClearCoatView {
+            bruCiuPaintBloom.aerErstAerosolBloom()
+        }
+        for aerErstPaintLayer in ponllWallMap.subviews {
+            ponllPaintRipple(aerErstPaintLayer)
+        }
+    }
 }
 
 extension PbruCiuColorPlanController: UIScrollViewDelegate, UIGestureRecognizerDelegate {
@@ -419,6 +425,14 @@ extension PbruCiuColorPlanController: UIScrollViewDelegate, UIGestureRecognizerD
         shouldRecognizeSimultaneouslyWith bruCiuPaintFlow: UIGestureRecognizer
     ) -> Bool {
         aerErstPaintFlow is UISwipeGestureRecognizer || bruCiuPaintFlow is UISwipeGestureRecognizer
+    }
+
+    func scrollViewDidScroll(_ ponllCanvasWall: UIScrollView) {
+        guard flckinkWallSignal,
+              ponllCanvasWall !== ponllInkBloom,
+              let aerErstLayerPlan = aerErstLayerPlans.first(where: { $0.ponllCanvasWall === ponllCanvasWall }),
+              !aerErstLayerPlan.flckinkPaintSignal.isRefreshing else { return }
+        ponllPaintRipple(aerErstLayerPlan.bruCiuLayerPlan)
     }
 
     func scrollViewDidEndDecelerating(_ aerErstCanvasWall: UIScrollView) {

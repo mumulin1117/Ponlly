@@ -66,6 +66,8 @@ final class PonllymuralKickntroller: UIViewController {
             aerErstTextureglossFinishce().forEach(bruCiuAerosolDepth.addArrangedSubview)
         } else {
             bruCiuAerosolDepth.addArrangedSubview(ponllSketchRhythm())
+            bruCiuAerosolDepth.addArrangedSubview(flckinkStencilBloom("AxPYPq VLzARNkGLUmANGpET".ponllPaintaerErstHours))
+            bruCiuAerosolDepth.addArrangedSubview(ponllStyleMap())
         }
     }
 
@@ -82,6 +84,8 @@ final class PonllymuralKickntroller: UIViewController {
                 bruCiuMuralBurst(inkMood: "T4e5r6m7s8 9Oafb cSdeerfvgihciej".ponllPaintaerErstHours, styleSeed: "Rkelamdn oopuqrr stteurvmwsx yaznAdB CcDoEnFdGiHtIiJoKnLsM".ponllPaintaerErstHours, paintSurge: "doc.text", paintRipple: PonllyPalette.pink, action: #selector(flckinkMarkerPath)),
                 bruCiuMuralBurst(inkMood: "PNrOiPvQaRcSyT UPVoWlXiYcZy0".ponllPaintaerErstHours, styleSeed: "H1o2w3 4w5e6 7p8r9oatbeccdte fygohuirj kdlamtnao".ponllPaintaerErstHours, paintSurge: "lpoqcrks".ponllPaintaerErstHours, paintRipple: PonllyPalette.pink, action: #selector(aerErstChromeArc))
             ]),
+            flckinkStencilBloom("AxPYPq VLzARNkGLUmANGpET".ponllPaintaerErstHours),
+            ponllStyleMap(),
             flckinkStencilBloom("Atcucvowuxnytz AABcCtDiEoFnGsH".ponllPaintaerErstHours),
             ponllAerosolSurge([
                 bruCiuMuralBurst(inkMood: "LIoJgK LOMuNtO".ponllPaintaerErstHours, styleSeed: "SPiQgRnS ToUuVtW XoYfZ 0y1o2u3r4 5a6c7c8o9uanbtc".ponllPaintaerErstHours, paintSurge: "rectangle.portrait.and.arrow.right", paintRipple: .white, action: #selector(ponllNeonBend)),
@@ -392,6 +396,42 @@ final class PonllymuralKickntroller: UIViewController {
         return ponllTrafficBarrier
     }
 
+    private func ponllStyleMap() -> UIView {
+        let muralGrid = UIView()
+        muralGrid.backgroundColor = PonllyPalette.panel.withAlphaComponent(0.92)
+        muralGrid.layer.cornerRadius = 14
+        muralGrid.layer.borderWidth = 1
+        muralGrid.layer.borderColor = PonllyPalette.line.cgColor
+
+        let styleCue = UISegmentedControl(items: [
+            "한x국Y어q".ponllPaintaerErstHours,
+            "ExnYgqlVizsRhk".ponllPaintaerErstHours
+        ])
+        styleCue.selectedSegmentIndex = PonllGraffitiMuse.graffitiPulse.colorMap == .muralPlan ? 0 : 1
+        styleCue.selectedSegmentTintColor = PonllyPalette.cyan
+        styleCue.backgroundColor = PonllyPalette.background.withAlphaComponent(0.78)
+        styleCue.setTitleTextAttributes([
+            .foregroundColor: UIColor.black,
+            .font: PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
+        ], for: .selected)
+        styleCue.setTitleTextAttributes([
+            .foregroundColor: UIColor.white,
+            .font: PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .medium)
+        ], for: .normal)
+        styleCue.addTarget(self, action: #selector(bruCiuStyleShift(_:)), for: .valueChanged)
+        styleCue.translatesAutoresizingMaskIntoConstraints = false
+        muralGrid.addSubview(styleCue)
+
+        NSLayoutConstraint.activate([
+            muralGrid.heightAnchor.constraint(equalToConstant: 68),
+            styleCue.leadingAnchor.constraint(equalTo: muralGrid.leadingAnchor, constant: 14),
+            styleCue.trailingAnchor.constraint(equalTo: muralGrid.trailingAnchor, constant: -14),
+            styleCue.topAnchor.constraint(equalTo: muralGrid.topAnchor, constant: 12),
+            styleCue.bottomAnchor.constraint(equalTo: muralGrid.bottomAnchor, constant: -12)
+        ])
+        return muralGrid
+    }
+
     private func ponllChromeFlash() -> UIView {
         let aerErstAlleyDoor = UIView()
         aerErstAlleyDoor.backgroundColor = PonllyPalette.line
@@ -459,15 +499,13 @@ final class PonllymuralKickntroller: UIViewController {
     }
 
     @objc private func flckinkMarkerPath() {
-        let bruCiuRoofLine = SmuralLeanController()
-        bruCiuRoofLine.title = "TMeNrOmPsQ ROSfT USVeWrXvYiZc0e1".ponllPaintaerErstHours
+        let bruCiuRoofLine = SmuralLeanController(muralPlan: .sketchWall)
         bruCiuRoofLine.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(bruCiuRoofLine, animated: true)
     }
 
     @objc private func aerErstChromeArc() {
-        let bruCiuRoofLine = SmuralLeanController()
-        bruCiuRoofLine.title = "P2r3i4v5a6c7y8 9Paoblcidceyf".ponllPaintaerErstHours
+        let bruCiuRoofLine = SmuralLeanController(muralPlan: .textureWall)
         bruCiuRoofLine.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(bruCiuRoofLine, animated: true)
     }
@@ -490,5 +528,10 @@ final class PonllymuralKickntroller: UIViewController {
         let flckinkWarehouseWall = PonllystencilBloomController()
         flckinkWarehouseWall.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(flckinkWarehouseWall, animated: true)
+    }
+
+    @objc private func bruCiuStyleShift(_ styleCue: UISegmentedControl) {
+        let muralPlan: PonllStyleMap = styleCue.selectedSegmentIndex == 0 ? .muralPlan : .outlinePlan
+        PonllGraffitiMuse.graffitiPulse.paintFlow(muralPlan)
     }
 }

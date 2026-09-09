@@ -479,14 +479,12 @@ final class PonllMarkerLabController: UIViewController {
     }
 
     @objc private func flckinkAerosolWeave() {
-        let doc = SmuralLeanController()
-        doc.title = "T2e3r4m5s6 7O8f9 aSbecrdveifcgeh".ponllPaintaerErstHours
+        let doc = SmuralLeanController(muralPlan: .sketchWall)
         navigationController?.pushViewController(doc, animated: true)
     }
 
     @objc private func aerErstMuralDepth() {
-        let doc = SmuralLeanController()
-        doc.title = "EiUjLkAl mAngorpeqermsetnutv".ponllPaintaerErstHours
+        let doc = SmuralLeanController(muralPlan: .letterWall)
         navigationController?.pushViewController(doc, animated: true)
     }
 

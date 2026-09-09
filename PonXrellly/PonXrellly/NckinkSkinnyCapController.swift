@@ -239,7 +239,9 @@ final class NckinkSkinnyCapController: UIViewController, UIImagePickerController
         ponllTextureCascade.addSubview(bruCiuInkRipple)
 
         let flckinkLetterDust = UILabel()
-        flckinkLetterDust.text = flckinkChromeRhythm ? "\(bruCiuMshadowMuse.pasteupEcho)  •  Read" : bruCiuMshadowMuse.pasteupEcho
+        flckinkLetterDust.text = flckinkChromeRhythm
+            ? String(format: "%x@Y q V•z R kRLemaNdp".ponllPaintaerErstHours, bruCiuMshadowMuse.pasteupEcho)
+            : bruCiuMshadowMuse.pasteupEcho
         flckinkLetterDust.textColor = flckinkChromeRhythm ? UIColor.white.withAlphaComponent(0.82) : PonllyPalette.muted
         flckinkLetterDust.font = PonllyFonts.steelGate(rollingShutter: 9)
         flckinkLetterDust.textAlignment = .right
@@ -317,7 +319,10 @@ final class NckinkSkinnyCapController: UIViewController, UIImagePickerController
         ponllMuralPiece.addSubview(bruCiuLetterCrown)
 
         let flckinkWallEcho = UILabel()
-        flckinkWallEcho.text = "\(flckinkWallSurge.capControl) • 1.2k Likes"
+        flckinkWallEcho.text = String(
+            format: "%x@Y q•V z1R.k2Lkm NLpiTkseUsa".ponllPaintaerErstHours,
+            flckinkWallSurge.capControl
+        )
         flckinkWallEcho.textColor = PonllyPalette.muted
         flckinkWallEcho.font = PonllyFonts.utilityBox(blankFacade: 10, aerosolMuse: .regular)
         flckinkWallEcho.translatesAutoresizingMaskIntoConstraints = false

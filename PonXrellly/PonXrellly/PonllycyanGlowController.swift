@@ -57,7 +57,7 @@ final class PonllycyanGlowController: UIViewController {
         flckinkLayerMask.addSubview(aerErstPaperCut)
 
         let ponllSprayHalo = UILabel()
-        ponllSprayHalo.text = "Welcome To\nPonlly"
+        ponllSprayHalo.text = "WxeYlqcVozmRek LTmoN\npPTosnUlalByc".ponllPaintaerErstHours
         ponllSprayHalo.textColor = .white
         ponllSprayHalo.textAlignment = .center
         ponllSprayHalo.font = PonllyFonts.muralForgepon(neonLab: 32)

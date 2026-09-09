@@ -127,7 +127,14 @@ final class PbruCiuStencilLabController: UIViewController {
         } else {
             flckinkMarkerFlash.addArrangedSubview(flckinkSketchKick())
         }
-        let flckinkRollerPaste = PonllybruCiuUtilityBoxView(aVotes: ponllMuralBloom.alleyCanvas, bVotes: ponllMuralBloom.railYard)
+        let ponllPaintMist = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralBloom.paintMist)
+        let bruCiuColorSplash = PonllyponllTornEdge.flckinkChippedPaint(ponllMuralBloom.colorSplash)
+        let flckinkRollerPaste = PonllybruCiuUtilityBoxView(
+            ponllSketchLean: ponllMuralBloom.alleyCanvas,
+            bruCiuPaintTwist: ponllMuralBloom.railYard,
+            paintMist: ponllPaintMist.aerosolDream,
+            colorSplash: bruCiuColorSplash.aerosolDream
+        )
         flckinkRollerPaste.heightAnchor.constraint(equalToConstant: 42).isActive = true
         aerErstPaintBloom = flckinkRollerPaste
         flckinkMarkerFlash.addArrangedSubview(flckinkRollerPaste)
@@ -192,12 +199,16 @@ final class PbruCiuStencilLabController: UIViewController {
         let flckinkDays = ponllHours / 24
         let aerErstHours = ponllHours % 24
         if flckinkDays > 0 && aerErstHours > 0 {
-            return "\(flckinkDays)d \(aerErstHours)h left"
+            return String(
+                format: "%xdYdq V%zdRhk LlmeNfptT".ponllPaintaerErstHours,
+                flckinkDays,
+                aerErstHours
+            )
         }
         if flckinkDays > 0 {
-            return "\(flckinkDays)d left"
+            return String(format: "%xdYdq VlzeRfktL".ponllPaintaerErstHours, flckinkDays)
         }
-        return "\(aerErstHours)h left"
+        return String(format: "%xdYhq VlzeRfktL".ponllPaintaerErstHours, aerErstHours)
     }
 
     private func aerErstRemainingHours() -> Int {
@@ -364,10 +375,16 @@ final class PbruCiuStencilLabController: UIViewController {
         bruCiuSidewalkEdge.distribution = .fillEqually
         let aPercent = ponllMuralBloom.alleyCanvas * 100 / max(ponllMuralBloom.alleyCanvas + ponllMuralBloom.railYard, 1)
         let bPercent = 100 - aPercent
-        let flckinkCurbLine = PonllyNeonButton("Support A\n\(aPercent)%", PonllyPalette.pink)
+        let flckinkCurbLine = PonllyNeonButton(
+            String(format: "SxuYpqpVozrRtk LAm\nN%pdT%s%U".ponllPaintaerErstHours, aPercent),
+            PonllyPalette.pink
+        )
         flckinkCurbLine.titleLabel?.numberOfLines = 2
         flckinkCurbLine.setTitleColor(.white, for: .normal)
-        let aerErstDrainCover = PonllyNeonButton("Support B\n\(bPercent)%", PonllyPalette.cyan)
+        let aerErstDrainCover = PonllyNeonButton(
+            String(format: "SxuYpqpVozrRtk LBm\nN%pdT%s%U".ponllPaintaerErstHours, bPercent),
+            PonllyPalette.cyan
+        )
         aerErstDrainCover.titleLabel?.numberOfLines = 2
         flckinkCurbLine.addTarget(self, action: #selector(bruCiuChromeNoise), for: .touchUpInside)
         aerErstDrainCover.addTarget(self, action: #selector(bruCiuChromeNoise), for: .touchUpInside)
@@ -417,7 +434,10 @@ final class PbruCiuStencilLabController: UIViewController {
         aerErstConcreteColumn.axis = .horizontal
         aerErstConcreteColumn.distribution = .equalSpacing
         let flckinkUnderpassBeam = UILabel()
-        flckinkUnderpassBeam.text = "Arena Chat (\(ponllMuralBloom.underpassMural.count))"
+        flckinkUnderpassBeam.text = String(
+            format: "AxrYeqnVaz RCkhLamtN p(T%sdU)a".ponllPaintaerErstHours,
+            ponllMuralBloom.underpassMural.count
+        )
         flckinkUnderpassBeam.textColor = .white
         flckinkUnderpassBeam.font = PonllyFonts.muralForgepon(neonLab: 16)
         bruCiuTextureTrail = flckinkUnderpassBeam
@@ -606,7 +626,10 @@ final class PbruCiuStencilLabController: UIViewController {
     }
 
     private func ponllPainaerErstGlossFinish() {
-        bruCiuTextureTrail?.text = "Arena Chat (\(ponllMuralBloom.underpassMural.count))"
+        bruCiuTextureTrail?.text = String(
+            format: "AxrYeqnVaz RCkhLamtN p(T%sdU)a".ponllPaintaerErstHours,
+            ponllMuralBloom.underpassMural.count
+        )
         guard let ponllNeonTrace else { return }
         while ponllNeonTrace.arrangedSubviews.count > 1 {
             guard let row = ponllNeonTrace.arrangedSubviews.last else { break }

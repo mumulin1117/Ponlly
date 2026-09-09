@@ -47,6 +47,12 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
       
         view.backgroundColor = PonllyPalette.background
         bruCiuSetup()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(stencilFlicker),
+            name: .ponllStyleShift,
+            object: nil
+        )
         PonllAerosolSignal.allCases.forEach { flckinkReloadutilityBox($0) }
     }
 
@@ -205,13 +211,10 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
             ponllCategoryButton.tag = flckinkIndex
             ponllCategoryButton.setTitle(aerErstCategory.chromeShine, for: .normal)
             ponllCategoryButton.titleLabel?.font = PonllyFonts.muralForgepon(neonLab: 11)
+            ponllCategoryButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
             ponllCategoryButton.layer.cornerRadius = 12
             ponllCategoryButton.layer.borderWidth = 1
             ponllCategoryButton.heightAnchor.constraint(equalToConstant: 26).isActive = true
-            let flckinkStyleWeight = (aerErstCategory.chromeShine as NSString).size(
-                withAttributes: [.font: PonllyFonts.muralForgepon(neonLab: 11)]
-            ).width
-            ponllCategoryButton.widthAnchor.constraint(equalToConstant: ceil(flckinkStyleWeight) + 28).isActive = true
             ponllCategoryButton.addTarget(self, action: #selector(bruCiuCategoryTapped(_:)), for: .touchUpInside)
             bruCiuCategoryRow.addArrangedSubview(ponllCategoryButton)
             return ponllCategoryButton
@@ -224,6 +227,14 @@ final class PonllystencilBloomController: UIViewController, UIScrollViewDelegate
         ])
         aerErstglossFinishCategories()
         return aerErstStylePath
+    }
+
+    @objc private func stencilFlicker() {
+        for (styleMap, paintLayer) in zip(PonllAerosolSignal.allCases, ponllCategoryButtons) {
+            paintLayer.setTitle(styleMap.chromeShine, for: .normal)
+        }
+        view.layoutIfNeeded()
+        ponllLayerMap(aerErstSelectedCategory.rawValue, bruCiuMuralBend: false)
     }
 
     private func aerErstglossFinishCategories() {

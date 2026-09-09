@@ -70,7 +70,7 @@ import UIKit
 //        flckinkmarkerFuse.addSubview(ponllCrownLabel)
 //
 //        let bruCiustencilSurge = UILabel()
-//        bruCiustencilSurge.text = "Welcome To\nPonlly"
+//        bruCiustencilSurge.text = "WxeYlqcVozmRek LTmoN\npPTosnUlalByc".ponllPaintaerErstHours
 //        bruCiustencilSurge.textColor = .white
 //        bruCiustencilSurge.textAlignment = .center
 //        bruCiustencilSurge.font = PonllyFonts.muralForgepon(neonLab: 32)

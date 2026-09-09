@@ -66,7 +66,10 @@ final class RerosolTwistController: UIViewController {
         }
         let bruCiuSprayHalo = PonllyponllTornEdge.ponllMuralWall(bruCiuLetterWall: bruCiuEdgeSnap.graffitiPulse)
         let ponllPaintCloud = UILabel()
-        ponllPaintCloud.text = "\(bruCiuSprayHalo.count) Battle Works"
+        ponllPaintCloud.text = String(
+            format: "%xdY qBVaztRtklLem NWpoTrskUsa".ponllPaintaerErstHours,
+            bruCiuSprayHalo.count
+        )
         ponllPaintCloud.textColor = PonllyPalette.muted
         ponllPaintCloud.font = PonllyFonts.muralForgepon(neonLab: 14)
         flckinkMarkerFlash.addArrangedSubview(ponllPaintCloud)
@@ -139,14 +142,20 @@ final class RerosolTwistController: UIViewController {
 
         let flckinkSkinnyCap = UILabel()
         let bruCiuFatCap = ponllMuralBloom.alleyCanvas + ponllMuralBloom.railYard
-        flckinkSkinnyCap.text = ponllMuralBloom.bubbleLetter == .bruCiuSprayBloomponll ? "\(bruCiuFatCap) votes  •  \(ponllMuralBloom.sketchRush)" : "Waiting  •  \(ponllMuralBloom.sketchRush)"
+        flckinkSkinnyCap.text = ponllMuralBloom.bubbleLetter == .bruCiuSprayBloomponll
+            ? String(format: "%xdY qvVoztReksL m N•p T s%U@a".ponllPaintaerErstHours, bruCiuFatCap, ponllMuralBloom.sketchRush)
+            : String(format: "WxaYiqtViznRgk L m•N p T%s@U".ponllPaintaerErstHours, ponllMuralBloom.sketchRush)
         flckinkSkinnyCap.textColor = ponllMuralBloom.bubbleLetter == .bruCiuSprayBloomponll ? PonllyPalette.pink : PonllyPalette.cyan
         flckinkSkinnyCap.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
         flckinkSkinnyCap.translatesAutoresizingMaskIntoConstraints = false
         bruCiuHardOutline.addSubview(flckinkSkinnyCap)
 
         let flckinkWideNib = UILabel()
-        flckinkWideNib.text = "\(ponllMuralBloom.chromeFill)  •  \(ponllMuralBloom.underpassMural.count) notes"
+        flckinkWideNib.text = String(
+            format: "%x@Y q V•z R k%Ldm NnpoTtseUsa".ponllPaintaerErstHours,
+            ponllMuralBloom.chromeFill,
+            ponllMuralBloom.underpassMural.count
+        )
         flckinkWideNib.textColor = PonllyPalette.muted
         flckinkWideNib.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .medium)
         flckinkWideNib.numberOfLines = 1

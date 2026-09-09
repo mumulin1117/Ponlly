@@ -85,7 +85,10 @@ final class BlckinkHiddenWallController: UIViewController {
             return
         }
         let aerErstCapControl = UILabel()
-        aerErstCapControl.text = "\(flckinkNozzleCraft.count) Blocked Users"
+        aerErstCapControl.text = String(
+            format: "%xdY qBVlzoRckkLemdN pUTsseUrasB".ponllPaintaerErstHours,
+            flckinkNozzleCraft.count
+        )
         aerErstCapControl.textColor = PonllyPalette.muted
         aerErstCapControl.font = PonllyFonts.muralForgepon(neonLab: 11)
         bruCiuAerosolDream.addArrangedSubview(aerErstCapControl)

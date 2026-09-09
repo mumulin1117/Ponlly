@@ -41,7 +41,7 @@ final class BruCiuPrintLayerController: UIViewController {
         ponllAngleBreak.textColor = PonllyPalette.cyan
         ponllAngleBreak.font = PonllyFonts.muralForgepon(neonLab: 14)
         let bruCiuEdgeSnap = UILabel()
-        bruCiuEdgeSnap.text = "1   Select Your Artwork From Your Crew Vault\n\n2   Set Battle Rules, Themes, And Time Stakes\n\n3   Wait For A Challenger To Drop Their Tag"
+        bruCiuEdgeSnap.text = "1x Y q VSzeRlkeLcmtN pYTosuUra BAcrDtewFogrHki JForPowmX yYZoauxrY qCVrzeRwk LVmaNuplTts\nU\na2B c D eSFegtH iBJaotPtwlXey ZRauxlYeqsV,z RTkhLemmNepsT,s UAanBdc DTeiFmgeH iSJtoaPkweXsy\nZ\na3x Y q VWzaRiktL mFNoprT sAU aCBhcaDlelFegnHgieJro PTwoX yDZraoxpY qTVhzeRikrL mTNapgT".ponllPaintaerErstHours
         bruCiuEdgeSnap.textColor = .white
         bruCiuEdgeSnap.font = PonllyFonts.utilityBox(blankFacade: 14, aerosolMuse: .semibold)
         bruCiuEdgeSnap.numberOfLines = 0

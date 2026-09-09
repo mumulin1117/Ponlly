@@ -72,11 +72,13 @@ final class PonllyWaitingBattleCardView: UIControl, UIGestureRecognizerDelegate 
         flckinkTitleRow.axis = .horizontal
         flckinkTitleRow.alignment = .center
         flckinkTitleRow.distribution = .equalSpacing
-        let aerErstTitleLabel = ponllwideLetter(ponllBattleSignal.nozzleCraft, softLetter: 14, sharpLetter: .white, blockyLetter: .heavy)
+        let ponllTitleMap = ponllBattleSignal.nozzleCraft
+        let aerErstTitleLabel = ponllwideLetter(ponllTitleMap, softLetter: 14, sharpLetter: .white, blockyLetter: .heavy)
         aerErstTitleLabel.numberOfLines = 1
         aerErstTitleLabel.adjustsFontSizeToFitWidth = true
         aerErstTitleLabel.minimumScaleFactor = 0.82
-        let ponllTimeLabel = ponllwideLetter("◷ \(ponllBattleSignal.sketchRush) remaining", softLetter: 12, sharpLetter: PonllyPalette.pink, blockyLetter: .bold)
+        let ponllTimeMap = ponllBattleSignal.sketchRush
+        let ponllTimeLabel = ponllwideLetter("◷ \(ponllTimeMap)", softLetter: 12, sharpLetter: PonllyPalette.pink, blockyLetter: .bold)
         ponllTimeLabel.textAlignment = .right
         flckinkTitleRow.addArrangedSubview(aerErstTitleLabel)
         flckinkTitleRow.addArrangedSubview(ponllTimeLabel)

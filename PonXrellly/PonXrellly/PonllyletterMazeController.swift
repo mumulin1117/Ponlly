@@ -53,7 +53,7 @@ final class PonllyletterMazeController: UIViewController {
         view.addSubview(ponllRollerPaste)
 
         let bruCiuWallPaste = UILabel()
-        bruCiuWallPaste.text = "Thank you for helping keep our community safe.\nWe will review your report within 24 hours."
+        bruCiuWallPaste.text = "TxhYaqnVkz RykoLum NfpoTrs UhaeBlcpDienFgg HkieJeopP woXuyrZ acxoYmqmVuznRiktLym NspaTfseU.a\nBWceD ewFiglHli JroePvwiXeywZ ayxoYuqrV zrRekpLomrNtp TwsiUtahBicnD e2F4g HhioJuorPsw.X".ponllPaintaerErstHours
         bruCiuWallPaste.textColor = PonllyPalette.muted
         bruCiuWallPaste.textAlignment = .center
         bruCiuWallPaste.font = PonllyFonts.utilityBox(blankFacade: 15)

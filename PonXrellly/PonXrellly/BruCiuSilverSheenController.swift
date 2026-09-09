@@ -39,7 +39,7 @@ final class BruCiuSilverSheenController: UIViewController {
         let ponllCyanGlow = PbruCiuClearCoatView(ponllPaintTrace: ponllRoughFill.neonDrip)
         ponllCyanGlow.heightAnchor.constraint(equalToConstant: 190).isActive = true
         let bruCiuMagentaBurst = UILabel()
-        bruCiuMagentaBurst.text = "VS\n\nUpload Your Artwork"
+        bruCiuMagentaBurst.text = "VxSY\nq\nVUzpRlkoLamdN pYTosuUra BAcrDtewFogrHki".ponllPaintaerErstHours
         bruCiuMagentaBurst.textColor = .white
         bruCiuMagentaBurst.textAlignment = .center
         bruCiuMagentaBurst.numberOfLines = 0

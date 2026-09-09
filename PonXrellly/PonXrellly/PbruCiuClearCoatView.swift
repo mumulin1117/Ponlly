@@ -235,7 +235,12 @@ final class PbruCiuClearCoatView: UIView {
               bruCiuNeonFlicker.bounds.width > 0,
               bruCiuNeonFlicker.bounds.height > 0 else { return }
         let aerErstWallMap = bruCiuNeonFlicker.convert(bruCiuNeonFlicker.bounds, to: bruCiuCanvasWall)
-        guard bruCiuCanvasWall.bounds.intersects(aerErstWallMap) else { return }
+        let ponllPaintRipple = bruCiuCanvasWall.bounds.intersection(aerErstWallMap)
+        let flckinkPaintContrast = aerErstWallMap.width * aerErstWallMap.height
+        let bruCiuPaintContrast = ponllPaintRipple.width * ponllPaintRipple.height
+        guard !ponllPaintRipple.isNull,
+              flckinkPaintContrast > 0,
+              bruCiuPaintContrast / flckinkPaintContrast >= 0.16 else { return }
         var ponllPaintVeil: UIView? = self
         while let flckinkPaintLayer = ponllPaintVeil {
             guard !flckinkPaintLayer.isHidden, flckinkPaintLayer.alpha > 0.05 else { return }

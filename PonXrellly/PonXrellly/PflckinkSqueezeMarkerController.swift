@@ -675,14 +675,12 @@ final class PflckinkSqueezeMarkerController: UIViewController, UITextFieldDelega
     }
 
     @objc private func bruCiuCbruCiuPressureFlow() {
-        let flckinkFanSpray = SmuralLeanController()
-        flckinkFanSpray.title = "TAeBrCmDsE FOGfH ISJeKrLvMiNcOeP".ponllPaintaerErstHours
+        let flckinkFanSpray = SmuralLeanController(muralPlan: .sketchWall)
         navigationController?.pushViewController(flckinkFanSpray, animated: true)
     }
 
     @objc private func flckinkNeonRhythm() {
-        let ponllLineSpray = SmuralLeanController()
-        ponllLineSpray.title = "EQURLSAT UAVgWrXeYeZm0e1n2t3".ponllPaintaerErstHours
+        let ponllLineSpray = SmuralLeanController(muralPlan: .letterWall)
         navigationController?.pushViewController(ponllLineSpray, animated: true)
     }
 
@@ -1039,7 +1037,7 @@ private final class PonllGraffitiDraftController: UIViewController, UIImagePicke
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flckinkLetterDraft = (ponllPaintDraft[indexPath.item] as NSString).size(withAttributes: [.font: PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)]).width
+        let flckinkLetterDraft = (PonllGraffitiMuse.graffitiPulse.paintMotion(ponllPaintDraft[indexPath.item]) as NSString).size(withAttributes: [.font: PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)]).width
         return CGSize(width: ceil(flckinkLetterDraft) + 32, height: 36)
     }
 
@@ -1173,7 +1171,7 @@ private final class PonllStencilDraftCell: UICollectionViewCell {
     }
 
     func ponllMuralDraft(_ bruCiuLetterDraft: String, bruCiuPaintDraft: Bool) {
-        ponllOutlineDraft.text = bruCiuLetterDraft
+        ponllOutlineDraft.text = PonllGraffitiMuse.graffitiPulse.paintMotion(bruCiuLetterDraft)
         ponllOutlineDraft.textColor = bruCiuPaintDraft ? UIColor(red: 255/255, green: 45/255, blue: 120/255, alpha: 1) : .white
         ponllOutlineDraft.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: bruCiuPaintDraft ? .bold : .medium)
         contentView.backgroundColor = bruCiuPaintDraft ? UIColor(red: 45/255, green: 19/255, blue: 35/255, alpha: 1) : PonllyPalette.panel.withAlphaComponent(0.92)

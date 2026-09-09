@@ -11,17 +11,21 @@ final class PonllybruCiuUtilityBoxView: UIView {
     private let aerErstMarkerTexture = UILabel()
     private let aerErstWallDepth: CGFloat
     private let ponllLetterDepth: Int
+    private let paintMist: String
+    private let colorSplash: String
     private var flckinkPaintFlowline: NSLayoutConstraint?
     private var aerErstPaintRhythm: CADisplayLink?
     private var ponllPaintSignal: CFTimeInterval = 0
     private var ponllPaintMotion = false
     private var bruCiuPaintSignal = false
 
-    init(aVotes ponllSketchLean: Int, bVotes bruCiuPaintTwist: Int) {
+    init(ponllSketchLean: Int, bruCiuPaintTwist: Int, paintMist: String, colorSplash: String) {
         let flckinkInkWeave = max(ponllSketchLean + bruCiuPaintTwist, 1)
         let aerErstPaintDepth = CGFloat(ponllSketchLean) / CGFloat(flckinkInkWeave)
         aerErstWallDepth = aerErstPaintDepth
         ponllLetterDepth = Int(aerErstPaintDepth * 100)
+        self.paintMist = paintMist
+        self.colorSplash = colorSplash
         super.init(frame: .zero)
         ponllAerosolGlow.backgroundColor = PonllyPalette.cyan
         ponllAerosolGlow.layer.cornerRadius = 6
@@ -33,10 +37,10 @@ final class PonllybruCiuUtilityBoxView: UIView {
         ponllAerosolGlow.addSubview(bruCiuMuralGrit)
         flckinkPaintFlowline = bruCiuMuralGrit.widthAnchor.constraint(equalToConstant: 0)
         flckinkPaintFlowline?.isActive = true
-        flckinkStencilNoise.text = "Kai 0%"
+        flckinkStencilNoise.text = "\(paintMist) 0%"
         flckinkStencilNoise.textColor = .white
         flckinkStencilNoise.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .bold)
-        aerErstMarkerTexture.text = "Nova 100%"
+        aerErstMarkerTexture.text = "\(colorSplash) 100%"
         aerErstMarkerTexture.textColor = .white
         aerErstMarkerTexture.font = PonllyFonts.utilityBox(blankFacade: 11, aerosolMuse: .bold)
         aerErstMarkerTexture.textAlignment = .right
@@ -132,8 +136,8 @@ final class PonllybruCiuUtilityBoxView: UIView {
     private func flckinkLetterMotion(_ aerErstPaintDepth: CGFloat) {
         let ponllLetterMotion = Int(round(CGFloat(ponllLetterDepth) * aerErstPaintDepth))
         let bruCiuLetterMotion = 100 - ponllLetterMotion
-        flckinkStencilNoise.text = "Kai \(ponllLetterMotion)%"
-        aerErstMarkerTexture.text = "Nova \(bruCiuLetterMotion)%"
+        flckinkStencilNoise.text = "\(paintMist) \(ponllLetterMotion)%"
+        aerErstMarkerTexture.text = "\(colorSplash) \(bruCiuLetterMotion)%"
     }
 
     private func aerErstAerosolBurst() {

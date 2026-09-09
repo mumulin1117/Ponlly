@@ -111,12 +111,25 @@ final class CkinkMuralLabView: UIControl, UIGestureRecognizerDelegate {
         let aerErstCanShake = UIStackView()
         aerErstCanShake.axis = .horizontal
         aerErstCanShake.distribution = .equalSpacing
-        let ponllRattleSound = ponllNozzleMist(image: "chromePiece", text: "\(ponllFinalCoat.alleyCanvas + ponllFinalCoat.railYard) votes", color: .white)
-        let bruCiuPressureFlow = ponllNozzleMist(image: "muralPiece", text: "\(ponllFinalCoat.underpassMural.count) comments", color: PonllyPalette.muted)
+        let ponllRattleSound = ponllNozzleMist(
+            image: "chromePiece",
+            text: String(format: "%xdY qvVoztReksL".ponllPaintaerErstHours, ponllFinalCoat.alleyCanvas + ponllFinalCoat.railYard),
+            color: .white
+        )
+        let bruCiuPressureFlow = ponllNozzleMist(
+            image: "muralPiece",
+            text: String(format: "%xdY qcVozmRmkeLnmtNsp".ponllPaintaerErstHours, ponllFinalCoat.underpassMural.count),
+            color: PonllyPalette.muted
+        )
         aerErstCanShake.addArrangedSubview(ponllRattleSound)
         aerErstCanShake.addArrangedSubview(bruCiuPressureFlow)
 
-        let flckinkFanSpray = PonllybruCiuUtilityBoxView(aVotes: ponllFinalCoat.alleyCanvas, bVotes: ponllFinalCoat.railYard)
+        let flckinkFanSpray = PonllybruCiuUtilityBoxView(
+            ponllSketchLean: ponllFinalCoat.alleyCanvas,
+            bruCiuPaintTwist: ponllFinalCoat.railYard,
+            paintMist: ponllMetallicSpray.aerosolDream,
+            colorSplash: bruCiuNeonSpray.aerosolDream
+        )
 
         [aerErstPaintMarker, aerErstEnamelPaint, flckinkPaintShelf, aerErstCanShake, flckinkFanSpray].forEach(flckinkInkMarker.addArrangedSubview)
         flckinkInkMarker.setCustomSpacing(28, after: aerErstEnamelPaint)

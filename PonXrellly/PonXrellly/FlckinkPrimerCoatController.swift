@@ -148,8 +148,8 @@ final class FlckinkPrimerCoatController: UIViewController {
         let aerErstSkinnyLetter = PbruCiuClearCoatView(ponllPaintTrace: ponllPaintMuse.first ?? PonllyaerErstSolidMarkerk(
             graffitiPulse: "\(flckinkCornerPiece.graffitiPulse)_profile_empty",
             markerStroke: flckinkCornerPiece.graffitiPulse,
-            nozzleCraft: "Wqarlslt uSvtwuxdyyz".ponllPaintaerErstHours,
-            capControl: "GArBaCfDfEiFtGiH".ponllPaintaerErstHours,
+            nozzleCraft: "벽x Y연q구V".ponllPaintaerErstHours,
+            capControl: "그x래Y피q티V".ponllPaintaerErstHours,
             stencilBloom: nil,
             inkDrift: flckinkCornerPiece.inkDrift
         ))
@@ -458,7 +458,9 @@ final class FlckinkPrimerCoatController: UIViewController {
         for bruCiuStyleNoise in ponllStyleGrit {
             let flckinkStyleTexture = bruCiuStyleNoise.paintMist == flckinkCornerPiece.graffitiPulse ? bruCiuStyleNoise.neonDrip : (bruCiuStyleNoise.concreteMuse ?? bruCiuStyleNoise.neonDrip)
             let aerErstStyleContrast = max(bruCiuStyleNoise.alleyCanvas + bruCiuStyleNoise.railYard, 1)
-            let ponllStylelayerBlend = bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll ? "\(aerErstStyleContrast) votes  •  \(bruCiuStyleNoise.sketchRush)" : "Waiting  •  \(bruCiuStyleNoise.sketchRush)"
+            let ponllStylelayerBlend = bruCiuStyleNoise.bubbleLetter == .bruCiuSprayBloomponll
+                ? String(format: "%xdY qvVoztReksL m N•p T s%U@a".ponllPaintaerErstHours, aerErstStyleContrast, bruCiuStyleNoise.sketchRush)
+                : String(format: "WxaYiqtViznRgk L m•N p T%s@U".ponllPaintaerErstHours, bruCiuStyleNoise.sketchRush)
             let bruCiuStyleRhythm = bruCiuPaintQuest(
                     artwork: flckinkStyleTexture,
                     title: bruCiuStyleNoise.nozzleCraft,

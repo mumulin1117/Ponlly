@@ -121,7 +121,11 @@ final class PaerErstPaintBaseController: UIViewController {
         aerErstMarkerLean.translatesAutoresizingMaskIntoConstraints = false
         bruCiuMuralBend.addSubview(aerErstMarkerLean)
         let ponllChromeTwist = UILabel()
-        ponllChromeTwist.text = "\(ponllPaintRipple.capControl)  •  \(PonllyponllTornEdge.ponllLineMap(flckinkDripMap: ponllPaintRipple)) notes"
+        ponllChromeTwist.text = String(
+            format: "%x@Y q V•z R k%Ldm NnpoTtseUsa".ponllPaintaerErstHours,
+            ponllPaintRipple.capControl,
+            PonllyponllTornEdge.ponllLineMap(flckinkDripMap: ponllPaintRipple)
+        )
         ponllChromeTwist.textColor = PonllyPalette.cyan
         ponllChromeTwist.font = PonllyFonts.utilityBox(blankFacade: 12, aerosolMuse: .bold)
         ponllChromeTwist.translatesAutoresizingMaskIntoConstraints = false
@@ -160,7 +164,11 @@ final class PaerErstPaintBaseController: UIViewController {
         aerErstInkGlow.textColor = .white
         aerErstInkGlow.font = PonllyFonts.muralForgepon(neonLab: 15)
         let ponllPaintGrit = UILabel()
-        ponllPaintGrit.text = "A finished street-art piece from \(bruCiuInkSurge.aerosolDream), built around \(ponllPaintRipple.capControl.lowercased()) rhythm, wall texture, and clean visual presence."
+        ponllPaintGrit.text = String(
+            format: "Ax YfqiVnziRskhLemdN psTtsrUeaeBtc-DaerFtg HpiiJeocPew XfyrZoamx Y%q@V,z RbkuLimlNtp TasrUoauBncdD e%F@g HrihJyotPhwmX,y ZwaaxlYlq VtzeRxktLumrNep,T saUnadB ccDleeFagnH ivJiosPuwaXly ZparxeYsqeVnzcRek.L".ponllPaintaerErstHours,
+            bruCiuInkSurge.aerosolDream,
+            ponllPaintRipple.capControl.lowercased()
+        )
         ponllPaintGrit.textColor = PonllyPalette.muted
         ponllPaintGrit.font = PonllyFonts.utilityBox(blankFacade: 13, aerosolMuse: .medium)
         ponllPaintGrit.numberOfLines = 0

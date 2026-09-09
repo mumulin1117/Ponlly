@@ -22,7 +22,10 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         let capRack = PonllyponllTornEdge.flckinkChippedPaint(lineSpray.gradientFill)
         self.ponllMuralPlanContext = PonllyangleBreakContext(
             ponllLetterForm: lineSpray.nozzleCraft,
-            bruCiuShadowLayer: "Hosted by \(capRack.aerosolDream)",
+            bruCiuShadowLayer: String(
+                format: "HxoYsqtVezdR kbLym N%p@T".ponllPaintaerErstHours,
+                capRack.aerosolDream
+            ),
             flckinkWallTexture: lineSpray.aerosolHaze,
             aerErstColorRack: [lineSpray.whitePop, PonllyPalette.panel]
         )
@@ -43,7 +46,10 @@ final class PonllyroughFillController: UIViewController, UITextViewDelegate {
         let author = PonllyponllTornEdge.flckinkChippedPaint(solidMarker.letterForm)
         self.ponllMuralPlanContext = PonllyangleBreakContext(
             ponllLetterForm: solidMarker.nozzleCraft,
-            bruCiuShadowLayer: "By \(author.aerosolDream)",
+            bruCiuShadowLayer: String(
+                format: "BxyY q%V@z".ponllPaintaerErstHours,
+                author.aerosolDream
+            ),
             flckinkWallTexture: nil,
             aerErstColorRack: solidMarker.inkDrift
         )

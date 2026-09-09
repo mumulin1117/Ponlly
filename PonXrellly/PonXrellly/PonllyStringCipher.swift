@@ -7,6 +7,6 @@ extension String {
         for (bruCiuIndex, flckinkChar) in enumerated() where bruCiuIndex.isMultiple(of: 2) {
             muraPollnylForgepon.append(flckinkChar)
         }
-        return muraPollnylForgepon
+        return PonllGraffitiMuse.graffitiPulse.layerBlend(muraPollnylForgepon)
     }
 }

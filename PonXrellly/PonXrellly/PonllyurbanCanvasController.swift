@@ -69,7 +69,12 @@ final class PonllyurbanCanvasController: UIViewController {
         ponllSummaryPanel.layer.borderColor = PonllyPalette.line.cgColor
         ponllSummaryPanel.translatesAutoresizingMaskIntoConstraints = false
         let bruCiuSummaryLabel = UILabel()
-        bruCiuSummaryLabel.text = "Room Name                         \(ponllshutterPiece.flckinkPrimerCoatpon)\nRoom Category                   \(ponllshutterPiece.ponllWhiteEdgepon)\nTheme                                   \(bruCiualleyPiecePlan.bruCiuMagentaBurstpobn)"
+        bruCiuSummaryLabel.text = String(
+            format: "RxoYoqmV zNRakmLem N p T s U a B c D e F g H i J o P w X y Z a x Y q%V@z\nRRkoLommN pCTastUeagBocrDye F g H i J o P w X y Z a x Y q V z R k%L@m\nNTphTesmUea B c D e F g H i J o P w X y Z a x Y q V z R k L m N p T s U a B c D e%F@g".ponllPaintaerErstHours,
+            ponllshutterPiece.flckinkPrimerCoatpon,
+            ponllshutterPiece.ponllWhiteEdgepon,
+            bruCiualleyPiecePlan.bruCiuMagentaBurstpobn
+        )
         bruCiuSummaryLabel.textColor = .white
         bruCiuSummaryLabel.numberOfLines = 0
         bruCiuSummaryLabel.font = PonllyFonts.steelGate(rollingShutter: 12)
@@ -98,7 +103,7 @@ final class PonllyurbanCanvasController: UIViewController {
             graffitiPulse: "created_\(UUID().uuidString)",
             nozzleCraft: ponllshutterPiece.flckinkPrimerCoatpon,
             chromeShine: .ponllGritSurface,
-            colorFade: ponllshutterPiece.bruCiuSilverSheenpon.isEmpty ? "FErFeGsHhI JrKoLoMmN OfPoQrR SwTaUlVlW XcYrZi0t1i2q3u4e5 6a7n8d9 asbtcrdeeeftg hairjtk lpmrnoocpeqsrss ttuavlwkx".ponllPaintaerErstHours : ponllshutterPiece.bruCiuSilverSheenpon,
+            colorFade: ponllshutterPiece.bruCiuSilverSheenpon.isEmpty ? "벽x화Y q비V평z R및k L스m트N리p트T s아U트a B제c작D e과F정g에H i대J한o P이w야X기y를Z a나x눌Y q수V z있R는k L새m로N운p T방s이U a생B성c되D었e습F니g다H.i".ponllPaintaerErstHours : ponllshutterPiece.bruCiuSilverSheenpon,
             gradientFill: PonllyponllTornEdge.cnowpaintokwinId,
             paintCloud: [.init(wheatpasteLayer: PonllyponllTornEdge.cnowpaintokwinId, wallMark: false)],
             sprayHalo: ["u02", "u05", "u17"],
@@ -106,8 +111,8 @@ final class PonllyurbanCanvasController: UIViewController {
             muralMuse: bruCiualleyPiecePlan.aerErstTwoToneFill,
             whitePop: bruCiualleyPiecePlan.flckinkSplitFill,
             nozzleMist: [
-                .init(wheatpasteLayer: PonllyponllTornEdge.cnowpaintokwinId, pasteupEcho: "nyozwA".ponllPaintaerErstHours, muralGrid: "RBoCoDmE FiGsH IoJpKeLnM.N OBPrQiRnSgT UaV WwXaYlZl0 1n2o3t4e5 6o7r8 9aa bpcrdoecfegshsi jqkulemsntoipoqnr.s".ponllPaintaerErstHours),
-                .init(wheatpasteLayer: "u02", pasteupEcho: "ntouwv".ponllPaintaerErstHours, muralGrid: "Iw xaymz ArBeCaDdEyF GtHoI JcKoLmMpNaOrPeQ RoSuTtUlViWnXeYsZ 0a1n2d3 4t5e6x7t8u9raeb ccdheofigcheisj.k".ponllPaintaerErstHours)
+                .init(wheatpasteLayer: PonllyponllTornEdge.cnowpaintokwinId, pasteupEcho: "방x금Y".ponllPaintaerErstHours, muralGrid: "방x이Y q열V렸z습R니k다L.m벽N화p에T s대U한a B메c모D나e F제g작H i과J정o에P w대X한y Z질a문x을Y q남V겨z주R세k요L.m".ponllPaintaerErstHours),
+                .init(wheatpasteLayer: "u02", pasteupEcho: "방x금Y".ponllPaintaerErstHours, muralGrid: "윤x곽Y선q과V z질R감k L선m택N에p T대s해U a이B야c기D e나F눌g H준i비J가o P되w었X습y니Z다a.x".ponllPaintaerErstHours)
             ],
             graffitiPiece: ponllshutterPiece.aerErstBlackOutlinepon,
             ponllStenciloutlineLab: bruCiualleyPiecePlan.ponllStencilurbanForge

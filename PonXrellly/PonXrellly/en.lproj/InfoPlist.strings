@@ -1,0 +1,3 @@
+"NSCameraUsageDescription" = "Ponlly needs camera access so you can join graffiti video calls.";
+"NSMicrophoneUsageDescription" = "Ponlly needs microphone access so you can speak after taking a seat in voice rooms and during graffiti calls.";
+"NSPhotoLibraryUsageDescription" = "Ponlly needs photo library access so you can upload profile photos and cover images, publish graffiti challenge posts, and send graffiti images in conversations.";

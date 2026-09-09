@@ -11,8 +11,18 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        PonllGraffitiMuse.graffitiPulse.aerosolVeil()
         flckinkMuralSignal()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(aerErstStyleShift),
+            name: .ponllStyleShift,
+            object: nil
+        )
+        bruCiuMuralBurst()
+    }
 
+    private func bruCiuMuralBurst() {
         let aerErstPaintQuest = PonllPaintFlowController(rootViewController: PbruCiuColorPlanController())
         aerErstPaintQuest.tabBarItem = UITabBarItem(
                 title: "FvEwExDy".ponllPaintaerErstHours,
@@ -47,8 +57,100 @@ final class PoaerErstWeatheredPaperController: UITabBarController {
             selectedImage:UIImage(named: "urbanPatina")?.withRenderingMode(.alwaysOriginal)
         )
         viewControllers = [aerErstPaintQuest, ponllInkCue, bruCiuWallSeed, aerErstMarkerMood, ponllChromePath]
+    }
 
-      
+    @objc private func aerErstStyleShift() {
+        PonllGraffitiMuse.graffitiPulse.aerosolVeil()
+        viewControllers?.forEach { paintFlow in
+            paintFlow.tabBarItem.title = ponllStyleShift(paintFlow.tabBarItem.title)
+            if let muralPlan = paintFlow as? UINavigationController {
+                muralPlan.viewControllers.forEach { colorPlan in
+                    colorPlan.loadViewIfNeeded()
+                    colorPlan.title = ponllStyleShift(colorPlan.title)
+                    colorPlan.navigationItem.title = ponllStyleShift(colorPlan.navigationItem.title)
+                    colorPlan.navigationItem.leftBarButtonItem?.title = ponllStyleShift(colorPlan.navigationItem.leftBarButtonItem?.title)
+                    colorPlan.navigationItem.rightBarButtonItem?.title = ponllStyleShift(colorPlan.navigationItem.rightBarButtonItem?.title)
+                    colorPlan.navigationItem.leftBarButtonItems?.forEach { paintLayer in
+                        paintLayer.title = ponllStyleShift(paintLayer.title)
+                    }
+                    colorPlan.navigationItem.rightBarButtonItems?.forEach { paintLayer in
+                        paintLayer.title = ponllStyleShift(paintLayer.title)
+                    }
+                    colorPlan.navigationItem.backBarButtonItem?.title = ponllStyleShift(colorPlan.navigationItem.backBarButtonItem?.title)
+                    ponllStyleShift(colorPlan.view)
+                }
+            }
+        }
+    }
+
+    private func ponllStyleShift(_ paintLayer: String?) -> String? {
+        guard let paintLayer else { return nil }
+        return PonllGraffitiMuse.graffitiPulse.paintMotion(paintLayer)
+    }
+
+    private func ponllStyleShift(_ paintLayer: UIView) {
+        if let muralPlan = paintLayer.accessibilityLabel {
+            paintLayer.accessibilityLabel = ponllStyleShift(muralPlan)
+        }
+        if let muralPlan = paintLayer.accessibilityHint {
+            paintLayer.accessibilityHint = ponllStyleShift(muralPlan)
+        }
+        if let muralPlan = paintLayer.accessibilityValue {
+            paintLayer.accessibilityValue = ponllStyleShift(muralPlan)
+        }
+
+        if let muralPlan = paintLayer as? UILabel, let colorPlan = muralPlan.text {
+            let styleMap = PonllGraffitiMuse.graffitiPulse.paintMotion(colorPlan)
+            if styleMap != colorPlan, let paintMap = muralPlan.attributedText, paintMap.length > 0 {
+                muralPlan.attributedText = NSAttributedString(
+                    string: styleMap,
+                    attributes: paintMap.attributes(at: 0, effectiveRange: nil)
+                )
+            } else {
+                muralPlan.text = styleMap
+            }
+        } else if let muralPlan = paintLayer as? UIButton {
+            if var colorPlan = muralPlan.configuration, let styleMap = colorPlan.title {
+                colorPlan.title = PonllGraffitiMuse.graffitiPulse.paintMotion(styleMap)
+                muralPlan.configuration = colorPlan
+            }
+            [UIControl.State.normal, .selected, .disabled, .highlighted].forEach { colorPlan in
+                guard let styleMap = muralPlan.title(for: colorPlan) else { return }
+                muralPlan.setTitle(PonllGraffitiMuse.graffitiPulse.paintMotion(styleMap), for: colorPlan)
+            }
+        } else if let muralPlan = paintLayer as? UITextField, let colorPlan = muralPlan.placeholder {
+            muralPlan.placeholder = PonllGraffitiMuse.graffitiPulse.paintMotion(colorPlan)
+        } else if let muralPlan = paintLayer as? UITextView, !muralPlan.isEditable {
+            let colorPlan = muralPlan.text ?? ""
+            let styleMap = PonllGraffitiMuse.graffitiPulse.paintMotion(colorPlan)
+            if styleMap != colorPlan, let paintMap = muralPlan.attributedText, paintMap.length > 0 {
+                muralPlan.attributedText = NSAttributedString(
+                    string: styleMap,
+                    attributes: paintMap.attributes(at: 0, effectiveRange: nil)
+                )
+            } else {
+                muralPlan.text = styleMap
+            }
+        } else if let muralPlan = paintLayer as? UISegmentedControl {
+            for paintFlow in 0..<muralPlan.numberOfSegments {
+                guard let colorPlan = muralPlan.titleForSegment(at: paintFlow) else { continue }
+                muralPlan.setTitle(PonllGraffitiMuse.graffitiPulse.paintMotion(colorPlan), forSegmentAt: paintFlow)
+            }
+        }
+
+        if let muralPlan = paintLayer as? UITableView {
+            let colorPlan = muralPlan.contentOffset
+            muralPlan.reloadData()
+            muralPlan.layoutIfNeeded()
+            muralPlan.setContentOffset(colorPlan, animated: false)
+        } else if let muralPlan = paintLayer as? UICollectionView {
+            let colorPlan = muralPlan.contentOffset
+            muralPlan.reloadData()
+            muralPlan.layoutIfNeeded()
+            muralPlan.setContentOffset(colorPlan, animated: false)
+        }
+
+        paintLayer.subviews.forEach(ponllStyleShift)
     }
 
 

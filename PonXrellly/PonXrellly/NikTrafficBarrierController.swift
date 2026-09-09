@@ -37,7 +37,7 @@ final class NikTrafficBarrierController: UIViewController {
         ponllChromeEcho.clipsToBounds = true
         ponllChromeEcho.heightAnchor.constraint(equalToConstant: 58).isActive = true
         let bruCiuNeonSignal = UILabel()
-        bruCiuNeonSignal.text = "Theme                                      Wildstyle\nStakes Duration                         24 Hours\nOpponent Acceptance Deadline       11 Hours Left"
+        bruCiuNeonSignal.text = "TxhYeqmVez R k L m N p T s U a B c D e F g H i J o P w X y Z a x Y q V z R k L m N p TWsiUladBsctDyelFeg\nHSitJaokPewsX yDZuarxaYtqiVoznR k L m N p T s U a B c D e F g H i J o P w X y Z a2x4Y qHVozuRrksL\nmONpppTosnUeanBtc DAecFcgeHpitJaonPcweX yDZeaaxdYlqiVnzeR k L m N p T s1U1a BHcoDuerFsg HLieJfotP".ponllPaintaerErstHours
         bruCiuNeonSignal.textColor = .white
         bruCiuNeonSignal.numberOfLines = 0
         bruCiuNeonSignal.font = PonllyFonts.steelGate(rollingShutter: 12)
